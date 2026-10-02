@@ -14,72 +14,68 @@ export function SiteFooter() {
             <div className="footer-brand">
               <Link className="brand" href="/" aria-label={`${site.name} — Anasayfa`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="brand-logo" src="/assets/img/logo-full-light.webp" alt={site.name} width={142} height={52} loading="lazy" />
+                <img className="brand-logo" src="/assets/img/logo-full-light.webp" alt={site.name} width={163} height={52} loading="lazy" />
               </Link>
-              <p>
-                ISO 27001 Bilgi Güvenliği Yönetim Sistemi, KVKK uyum ve sızma testi (pentest)
-                süreçlerinde çözüm ortağınız. Sektörde tecrübeli uzman ekibimiz ve kendi geliştirdiğimiz platformlarla
-                verilerinizi ve itibarınızı koruma altına alıyoruz.
-              </p>
-              <div className="footer-social">
-                <a href={site.social.instagram} target="_blank" rel="noopener" aria-label="Instagram (yeni sekmede açılır)">
-                  <svg width={16} height={16} aria-hidden="true"><use href="#i-instagram" /></svg>
-                </a>
-                <a href={site.social.x} target="_blank" rel="noopener" aria-label="X (yeni sekmede açılır)">
-                  <svg width={16} height={16} aria-hidden="true"><use href="#i-x" /></svg>
-                </a>
-                {/* Shown only once a company page URL is set in lib/site.ts. */}
-                {site.social.linkedin && (
-                  <a href={site.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn (yeni sekmede açılır)">
-                    <svg width={16} height={16} aria-hidden="true"><use href="#i-linkedin" /></svg>
-                  </a>
-                )}
-              </div>
+              <p>{site.description}</p>
+              {/* Each icon shows only once its URL is set in lib/site.ts. */}
+              {Object.values(site.social).some(Boolean) && (
+                <div className="footer-social">
+                  {site.social.instagram && (
+                    <a href={site.social.instagram} target="_blank" rel="noopener" aria-label="Instagram (yeni sekmede açılır)">
+                      <svg width={16} height={16} aria-hidden="true"><use href="#i-instagram" /></svg>
+                    </a>
+                  )}
+                  {site.social.x && (
+                    <a href={site.social.x} target="_blank" rel="noopener" aria-label="X (yeni sekmede açılır)">
+                      <svg width={16} height={16} aria-hidden="true"><use href="#i-x" /></svg>
+                    </a>
+                  )}
+                  {site.social.linkedin && (
+                    <a href={site.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn (yeni sekmede açılır)">
+                      <svg width={16} height={16} aria-hidden="true"><use href="#i-linkedin" /></svg>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
             <div>
-              <h2 className="footer-h">Hızlı Erişim</h2>
+              <h2 className="footer-h">Hizmetler</h2>
               <ul className="footer-links">
-                <li><Link href="/">Anasayfa</Link></li>
-                <li><Link href="/hakkimizda/">Hakkımızda</Link></li>
-                <li><Link href="/danismanlik-hizmetleri/">Danışmanlık Hizmetleri</Link></li>
-                <li><Link href="/siber-guvenlik-hizmetleri/">Siber Güvenlik Hizmetleri</Link></li>
-                <li><Link href="/egitim-hizmetleri/">Eğitim Hizmetleri</Link></li>
-                <li><Link href="/blog/">Blog</Link></li>
-                <li><Link href="/iletisim/">İletişim</Link></li>
+                <li><Link href="/siber-guvenlik-hizmetleri/">Siber Güvenlik</Link></li>
+                <li><Link href="/sizma-testi-penetrasyon-testi/">Sızma Testi</Link></li>
+                <li><Link href="/ag-ve-sistem-altyapi-cozumleri/">Ağ ve Sistem Altyapısı</Link></li>
+                <li><Link href="/sunucu-ve-veri-merkezi-hizmetleri/">Sunucu ve Veri Merkezi</Link></li>
+                <li><Link href="/bulut-ve-yedekleme-cozumleri/">Bulut ve Yedekleme</Link></li>
+                <li><Link href="/it-destek-ve-danismanlik/">IT Destek ve Danışmanlık</Link></li>
+                <li><Link href="/hizmetler/">Tüm Hizmetler</Link></li>
               </ul>
             </div>
             <div>
               <h2 className="footer-h">Kurumsal</h2>
               <ul className="footer-links">
-                <li><Link href="/vizyonumuz/">Vizyonumuz</Link></li>
-                <li><Link href="/misyonumuz/">Misyonumuz</Link></li>
-                <li><Link href="/bilgi-guvenligi-politikasi/">Bilgi Güvenliği Politikası</Link></li>
-                <li><Link href="/kisisel-verilerin-korunmasi-politikasi/">KVKK Aydınlatma Metni</Link></li>
+                <li><Link href="/hakkimizda/">Hakkımızda</Link></li>
+                <li><Link href="/blog/">Blog</Link></li>
+                <li><Link href="/iletisim/">İletişim</Link></li>
+                <li><Link href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</Link></li>
                 <li><Link href="/cerez-politikasi/">Çerez Politikası</Link></li>
-                <li><Link href="/kullanim-kosullari/">Kullanım Koşulları</Link></li>
               </ul>
             </div>
             <div>
               <h2 className="footer-h">İletişim Bilgileri</h2>
               <p>{site.address}</p>
               <p><a href={site.phone.href}>{site.phone.display}</a></p>
+              <p><a href={site.mobile.href}>{site.mobile.display}</a></p>
               <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
             </div>
           </div>
           <div className="footer-bottom">
             <span>
-              &copy; {new Date().getFullYear()} {site.name},{" "}
-              <a href={site.parent.url} target="_blank" rel="noopener">
-                {site.parent.name}
-                <span className="visually-hidden"> (yeni sekmede açılır)</span>
-              </a> markasıdır. Tüm hakları
-              saklıdır. Yazı ve görseller izinsiz ve kaynak gösterilmeden kopyalanamaz.
+              &copy; {new Date().getFullYear()} {site.name} — {site.legalName}. Tüm hakları saklıdır.
             </span>
             <span>
-              <Link href="/kisisel-verilerin-korunmasi-politikasi/">KVKK Aydınlatma Metni</Link> ·{" "}
+              <Link href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</Link> ·{" "}
               <Link href="/cerez-politikasi/">Çerez Politikası</Link> ·{" "}
-              <button type="button" className="footer-link-btn" id="cookie-prefs">Çerez Tercihleri</button> ·{" "}
-              <Link href="/kullanim-kosullari/">Kullanım Koşulları</Link>
+              <button type="button" className="footer-link-btn" id="cookie-prefs">Çerez Tercihleri</button>
             </span>
           </div>
         </div>

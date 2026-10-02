@@ -144,8 +144,8 @@ function PostBody({ page, related }: { page: Page; related: Page[] }) {
 
       <aside>
         <div className="side-cta">
-          <h2 className="side-h">Ücretsiz Ön Görüşme</h2>
-          <p>ISO 27001, KVKK ve sızma testi süreçleriniz için hemen görüşün.</p>
+          <h2 className="side-h">Ücretsiz Keşif Görüşmesi</h2>
+          <p>Siber güvenlik, altyapı ve IT destek ihtiyaçlarınız için hemen görüşün.</p>
           <Link className="btn btn-on-navy btn-block" href="/#teklif">
             İletişime Geçin
           </Link>
@@ -180,8 +180,8 @@ function CoreBody({ page }: { page: Page }) {
       </div>
       <CtaBand
         style={{ marginTop: 56 }}
-        title="ISO 27001 Sürecinize Bugün Başlayalım"
-        text="Kurumunuza özel yol haritasını ücretsiz keşif görüşmesiyle netleştirelim."
+        title="Projenizi Birlikte Planlayalım"
+        text="İhtiyacınızı ücretsiz keşif görüşmesiyle netleştirelim, size özel teklifimizi hazırlayalım."
         cta="Ücretsiz Teklif Alın"
       />
     </>

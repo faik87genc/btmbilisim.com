@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | ISO 27001, KVKK ve Sızma Testi`,
+    default: `${site.name} | Siber Güvenlik, Ağ Altyapısı ve IT Çözümleri`,
     template: `%s`,
   },
   description: site.description,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: site.name,
-    images: ["/assets/img/iso-27001.webp"],
+    images: ["/assets/img/og-default.jpg"],
   },
   twitter: { card: "summary_large_image" },
   icons: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#153355",
+  themeColor: "#0b2a4a",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

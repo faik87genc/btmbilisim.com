@@ -53,7 +53,7 @@ function whatsappHref(v: Values): string {
     `E-posta: ${v.email}`,
     `Çalışan sayısı: ${v.employees || "-"}`,
     `Lokasyon sayısı: ${v.locations || "-"}`,
-    `Hedef tarih: ${v.target || "-"}`,
+    `Başlangıç: ${v.target || "-"}`,
     `Hizmetler: ${v.services.length ? v.services.join(", ") : "-"}`,
   ];
   if (v.message) lines.push(`Not: ${v.message}`);
@@ -162,7 +162,7 @@ export function QuoteForm() {
         </div>
       </div>
       <div className="form-field">
-        <label htmlFor="q-target">Hedef Belge Tarihi</label>
+        <label htmlFor="q-target">Ne Zaman Başlamak İstersiniz?</label>
         <select id="q-target" name="target" defaultValue="">
           <option value="">Seçiniz</option>
           {options.targets.map((o) => (

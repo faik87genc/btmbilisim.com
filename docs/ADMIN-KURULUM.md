@@ -5,7 +5,7 @@ Bu rehber `/admin` yönetim panelini canlıya almak için gereken adımları sı
 **İşaretler:**
 
 - **[SAHİBİ]**: Bu adımı site sahibi kendisi yapar. Hesap açma, şifre belirleme, ücretli plan seçme ve gizli anahtarları girme bu gruptadır. Bu adımları ekip ya da bir yapay zekâ ajanı yapmaz.
-- **[TERMİNAL]**: Proje klasöründe (`iso27001danismanlik.com`) çalıştırılacak komut.
+- **[TERMİNAL]**: Proje klasöründe (`btmbilisim.com`) çalıştırılacak komut.
 - **[BİLGİ]**: Yalnızca açıklama, işlem gerekmez.
 
 > **[BİLGİ] Veritabanı bağlanana kadar ne olur?**
@@ -114,16 +114,16 @@ npm run content:migrate -- --dry-run
 npm run content:migrate
 ```
 
-- Kaynak dosya `scripts/data/legacy-pages.json`, depoda hazır bulunur.
+- Kaynak dosya `lib/data/fallback-pages.json` (eski WordPress sitesinden aktarılan içerik), depoda hazır bulunur.
 - Veritabanında **zaten bulunan** sayfalar varsayılan olarak **atlanır**. Böylece panelde yaptığınız düzenlemeler ezilmez.
 - `--update` bayrağı mevcut kayıtların üzerine yazar. **Dikkat:** panelde yapılan değişiklikleri siler. Yalnızca bilerek kullanın.
-- Statik sitede içerik değiştiyse önce `npm run content:export` komutuyla JSON dosyalarını yenileyin, sonra aktarımı tekrarlayın.
+- WordPress içeriği yeniden alınacaksa önce `npm run content:import -- --fetch` komutuyla JSON dosyasını yenileyin, sonra aktarımı tekrarlayın.
 
 ---
 
 ## 6. İlk giriş **[SAHİBİ]**
 
-1. Redeploy tamamlandıktan sonra `https://www.iso27001danismanlik.com/admin/` adresini açın.
+1. Redeploy tamamlandıktan sonra `https://www.btmbilisim.com/admin/` adresini açın.
 2. Giriş sayfası açılır. Sayfada "Admin girişi henüz yapılandırılmamış" uyarısı görünüyorsa listede adı geçen değişkeni düzeltip yeniden dağıtın.
 3. 3. adımda belirlediğiniz şifreyle giriş yapın.
 4. Panelde **Blog** ve **Sayfalar** sayıları görünmelidir. "Veritabanı bağlı değil" ekranı çıkıyorsa `DATABASE_URL` eksiktir. "Veritabanına ulaşılamıyor" ekranı çıkıyorsa adres hatalıdır ya da Neon projesi askıdadır.

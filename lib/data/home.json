@@ -1,393 +1,180 @@
 {
+ "metaTitle": "BTM Bilişim | Siber Güvenlik, Ağ Altyapısı ve IT Çözümleri",
+ "metaDescription": "BTM Bilişim; sızma testi, siber güvenlik, ağ ve sistem altyapısı, sunucu, bulut yedekleme ve IT danışmanlık hizmetleriyle Gebze ve Kocaeli'de işletmelere uçtan uca destek verir.",
  "pillars": [
   {
-   "title": "Denetçi Gözüyle Hazırlık",
-   "desc": "Denetimin nasıl yürüdüğünü bilen deneyimli ekibimizle sisteminizi denetçinin arayacağı kanıtlar üzerinden kuruyoruz; Ek-A kontrollerini de 2010'dan beri sahada bizzat uyguluyoruz — sadece teoride değil."
+   "title": "Önce Keşif, Sonra Teklif",
+   "desc": "Altyapınızı yerinde inceleyip ihtiyacı netleştiriyoruz; teklif, gerçek ihtiyaca göre ve kalem kalem hazırlanır."
   },
   {
-   "title": "Tek Muhatapla Çalışırsınız",
-   "desc": "İlk görüşmeden belgelendirmeye kadar süreç boyunca dönen bir ekip değil, aynı sorumlu uzmanla muhatap olursunuz."
+   "title": "Tek Muhatap",
+   "desc": "Ağdan sunucuya, yedeklemeden güvenliğe kadar tüm bilişim işleriniz için tek bir ekiple çalışırsınız."
   },
   {
-   "title": "Hukuki ve Teknik Uyum",
-   "desc": "KVKK uyum süreçlerinde hem hukuki hem teknik tedbirler konusunda danışmanlık sağlıyoruz."
+   "title": "Güvenlik Odaklı Kurulum",
+   "desc": "Her kurulumu sızma testi deneyimimizin ışığında, sıkılaştırılmış ve dokümante edilmiş şekilde teslim ediyoruz."
   },
   {
-   "title": "Şeffaf Süreç",
-   "desc": "Net zaman planı ve şeffaf fiyatlandırma ile sürpriz maliyet olmadan çalışıyoruz."
+   "title": "Kesintisiz Destek",
+   "desc": "Devreye almadan sonra da yanınızdayız: izleme, bakım ve arıza anında hızlı müdahale."
   }
  ],
  "serviceGroups": [
   {
-   "title": "Danışmanlık Hizmetleri",
+   "title": "Siber Güvenlik",
    "items": [
     {
-     "title": "ISO 27001 Danışmanlık Hizmeti",
-     "short": "BGYS kurulumu ve belgelendirme",
-     "desc": "Bilgi Güvenliği Yönetim Sistemi'nin kuruluşundan Stage 1-2 denetimine kadar uçtan uca danışmanlık.",
-     "href": "/iso-27001-danismanlik-hizmeti/"
+     "title": "Siber Güvenlik Hizmetleri",
+     "short": "Risk analizi, izleme ve olay müdahalesi",
+     "desc": "Güvenlik duvarı, uç nokta koruması, ağ segmentasyonu ve 7/24 izleme ile altyapınızı tehditlere karşı koruyoruz.",
+     "href": "/siber-guvenlik-hizmetleri/"
     },
     {
-     "title": "BGYS Danışmanlık",
-     "short": "Politika ve dokümantasyon desteği",
-     "desc": "Bilgi güvenliği politikaları, varlık envanteri ve risk değerlendirme dokümantasyonunun hazırlanması.",
-     "href": "/bgys-danismanlik/"
-    },
-    {
-     "title": "ISO 27701 Kişisel Veri Yönetim Sistemi",
-     "short": "KVKK ile entegre uyum",
-     "desc": "Kişisel Veri Yönetim Sistemi kurarak KVKK ve GDPR uyumunuzu ISO 27001 ile bütünleştiriyoruz.",
-     "href": "/iso-27701-kisisel-veri-yonetim-sistemi/"
-    },
-    {
-     "title": "KVKK Uyum Danışmanlığı",
-     "short": "Envanter, VERBİS ve sözleşmeler",
-     "desc": "Veri envanteri, VERBİS, aydınlatma ve açık rıza metinleri, veri işleyen sözleşmeleri ve Madde 12 tedbirleri.",
-     "href": "/kvkk-danismanligi/"
-    },
-    {
-     "title": "ISO 22301 İş Sürekliliği Yönetim Sistemi",
-     "short": "Kriz ve felaket senaryolarına hazırlık",
-     "desc": "Operasyonel sürekliliğinizi güvence altına alan İş Sürekliliği Yönetim Sistemi kurulumu.",
-     "href": "/iso22301-is-surekliligi-yonetim-sistemi/"
-    },
-    {
-     "title": "ISO 20000-1 BT Hizmet Yönetim Sistemi",
-     "short": "BT süreçlerinde standardizasyon",
-     "desc": "Bilgi teknolojileri hizmet süreçlerinizi uluslararası standartlara taşıyoruz.",
-     "href": "/iso20000-1-bilgi-teknolojileri-hizmet-yonetim-sistemi/"
+     "title": "Sızma Testi (Penetrasyon Testi)",
+     "short": "Saldırgan gözüyle zafiyet tespiti",
+     "desc": "Web, ağ ve sistemlerinizdeki güvenlik açıklarını gerçek saldırı senaryolarıyla tespit edip raporluyoruz.",
+     "href": "/sizma-testi-penetrasyon-testi/"
     }
    ]
   },
   {
-   "title": "Siber Güvenlik Hizmetleri",
+   "title": "Altyapı ve Sunucu",
    "items": [
     {
-     "title": "Sızma Testi (Pentest) Hizmeti",
-     "short": "Saldırı öncesi zafiyet tespiti",
-     "desc": "Web, mobil ve ağ altyapınızda gerçek saldırı senaryolarıyla güvenlik açıklarını tespit ediyoruz.",
-     "href": "/sizma-testi-pentest-hizmeti/"
+     "title": "Ağ ve Sistem Altyapı Çözümleri",
+     "short": "Kablolama, switch, kablosuz ağ",
+     "desc": "İşletmenizin ağını güvenli, hızlı ve kesintisiz çalışacak şekilde projelendirip kuruyoruz.",
+     "href": "/ag-ve-sistem-altyapi-cozumleri/"
     },
     {
-     "title": "White Box Pentest",
-     "short": "Kaynak koda tam erişimle test",
-     "desc": "Kaynak kod ve sistem mimarisine tam erişimle derinlemesine güvenlik analizi.",
-     "href": "/white-box/"
+     "title": "Sunucu ve Veri Merkezi Hizmetleri",
+     "short": "Sunucu kurulumu ve kabinet düzeni",
+     "desc": "Yüksek performanslı, yedekli ve verimli sunucu ve veri merkezi altyapıları kuruyor ve yönetiyoruz.",
+     "href": "/sunucu-ve-veri-merkezi-hizmetleri/"
     },
     {
-     "title": "Grey Box Pentest",
-     "short": "Sınırlı bilgiyle dengeli test",
-     "desc": "Kurumsal yapılar için verimliliği ve gerçekçiliği dengeleyen sızma testi yaklaşımı.",
-     "href": "/grey-box/"
+     "title": "Sanallaştırma Hizmetleri",
+     "short": "VMware, Hyper-V, Proxmox",
+     "desc": "Donanımınızı verimli kullanan, esnek ve ölçeklenebilir sanallaştırma altyapıları kuruyoruz.",
+     "href": "/sanallastirma-hizmetleri/"
     },
     {
-     "title": "E-posta Oltalama Tatbikatı",
-     "short": "Phishing simülasyonu ve farkındalık",
-     "desc": "İzinli ve kapsamı belirli oltalama kampanyasıyla personel dayanıklılığını ölçer, eğitimle destekleriz.",
-     "href": "/oltalama-tatbikati/"
+     "title": "Sistem Entegrasyonu",
+     "short": "Farklı sistemlerin uyumlu çalışması",
+     "desc": "Ağ, sunucu, yazılım ve güvenlik bileşenlerinizi birbiriyle uyumlu, tek bir bütün olarak çalıştırıyoruz.",
+     "href": "/sistem-entegrasyonu/"
     },
     {
-     "title": "Black Box Pentest",
-     "short": "Saldırgan bakış açısıyla test",
-     "desc": "Sistem hakkında ön bilgi olmadan, gerçek bir saldırganın bakış açısıyla test ediyoruz.",
-     "href": "/black-box/"
+     "title": "Kurulum Hizmeti",
+     "short": "Donanım ve yazılım kurulumları",
+     "desc": "Sunucu, ağ cihazı, güvenlik kamerası ve iş istasyonu kurulumlarını yerinde ve dokümante ederek yapıyoruz.",
+     "href": "/kurulum-hizmeti/"
     }
    ]
   },
   {
-   "title": "Eğitim Hizmetleri",
+   "title": "Bulut ve Veri",
    "items": [
     {
-     "title": "İç Tetkikçi Eğitimi",
-     "short": "Kurum içi denetim yetkinliği",
-     "desc": "Kurum içi denetim mekanizmalarını profesyonelce kuracak yetkin iç denetçiler yetiştiriyoruz.",
-     "href": "/ic-tetkikci-egitimi/"
+     "title": "Bulut ve Yedekleme Çözümleri",
+     "short": "3-2-1 yedekleme, felaket kurtarma",
+     "desc": "Verilerinizi otomatik, şifreli ve test edilmiş yedekleme senaryolarıyla güvence altına alıyoruz.",
+     "href": "/bulut-ve-yedekleme-cozumleri/"
     },
     {
-     "title": "KVKK Farkındalık Eğitimi",
-     "short": "Yasal uyum kültürü",
-     "desc": "Kişisel verilerin güvenliği ve yasal süreçler hakkında kurum genelinde tam bir uyum kültürü oluşturuyoruz.",
-     "href": "/kvkk-farkindalik-egitimi/"
+     "title": "Cloud Hizmetleri",
+     "short": "Buluta geçiş ve yönetim",
+     "desc": "Uygulama ve sunucularınızı buluta taşıyor, maliyet ve performans dengesini birlikte kuruyoruz.",
+     "href": "/cloud-hizmetleri/"
     },
     {
-     "title": "Bilgi Güvenliği Temel Eğitimi",
-     "short": "ISO 27001 temel prensipleri",
-     "desc": "ISO 27001 standartlarının temel prensiplerini ve teknik gereksinimlerini profesyonel düzeyde aktarıyoruz.",
-     "href": "/bilgi-guvenligi-temel-egitimi/"
+     "title": "Veri Kurtarma Hizmetleri",
+     "short": "Disk, RAID ve sunucu veri kurtarma",
+     "desc": "Kaybolan veya hasar gören verileri profesyonel yöntemlerle kurtarmak için hızlı müdahale ediyoruz.",
+     "href": "/veri-kurtarma-hizmetleri/"
+    }
+   ]
+  },
+  {
+   "title": "Destek, Yazılım ve Lisans",
+   "items": [
+    {
+     "title": "IT Destek ve Danışmanlık",
+     "short": "Sözleşmeli BT desteği",
+     "desc": "BT projelerinizi planlıyor, günlük destek ihtiyaçlarınızı karşılıyor ve altyapınızı sürekli iyileştiriyoruz.",
+     "href": "/it-destek-ve-danismanlik/"
     },
     {
-     "title": "Bilgi Güvenliği Farkındalık Eğitimi",
-     "short": "Personel farkındalığı",
-     "desc": "İnsan odaklı güvenlik açıklarını kapatmak adına personelin bilinç düzeyini en üst seviyeye yükseltiyoruz.",
-     "href": "/bilgi-guvenligi-farkindalik-egitimi/"
+     "title": "Lisanslama Hizmetleri",
+     "short": "Microsoft ve kurumsal yazılım lisansları",
+     "desc": "Doğru lisans modelini seçmenize, lisanslarınızı yasal ve güncel tutmanıza yardımcı oluyoruz.",
+     "href": "/lisanslama-hizmetleri/"
+    },
+    {
+     "title": "Yazılım Hizmetleri",
+     "short": "İşletmeye özel yazılım",
+     "desc": "İş süreçlerinizi otomatikleştiren, ihtiyacınıza özel yazılım ve veritabanı çözümleri geliştiriyoruz.",
+     "href": "/yazilim-hizmetleri/"
+    },
+    {
+     "title": "Web Tasarım Hizmetleri",
+     "short": "Kurumsal, mobil uyumlu web siteleri",
+     "desc": "Hızlı, güvenli ve arama motoru dostu kurumsal web siteleri tasarlıyor ve yayına alıyoruz.",
+     "href": "/web-tasarim-hizmetleri/"
     }
    ]
   }
  ],
  "processSteps": [
   {
-   "title": "Mevcut Durum (Gap) Analizi",
-   "output": "Kapsam tanımı, mevcut durum raporu ve proje planı."
+   "title": "Keşif ve Analiz",
+   "output": "Mevcut altyapının yerinde incelenmesi ve ihtiyaç listesi."
   },
   {
-   "title": "Risk Analizi",
-   "output": "Risk kayıtları, değerlendirme kriterleri ve risk işleme planı."
+   "title": "Projelendirme",
+   "output": "Çözüm mimarisi, malzeme listesi ve kalem kalem teklif."
   },
   {
-   "title": "BGYS Kurulumu",
-   "output": "Politikalar, prosedürler ve Uygulanabilirlik Bildirgesi (SoA)."
+   "title": "Kurulum ve Entegrasyon",
+   "output": "Cihaz, sunucu ve yazılımların kurulumu, mevcut sistemlerle entegrasyon."
   },
   {
-   "title": "İç Tetkik",
-   "output": "İç tetkik raporu ve düzeltici faaliyet kayıtları."
+   "title": "Güvenlik Sıkılaştırma",
+   "output": "Yapılandırmaların güvenlik açısından gözden geçirilmesi ve testleri."
   },
   {
-   "title": "Yönetimin Gözden Geçirmesi",
-   "output": "YGG kararları ve iyileştirme aksiyonları."
+   "title": "Teslim ve Dokümantasyon",
+   "output": "Ağ şeması, erişim bilgileri ve kullanıcı eğitimi."
   },
   {
-   "title": "Stage 1 ve Stage 2 Denetimi",
-   "output": "Belgelendirme kuruluşunun iki aşamalı denetimi; uygunluk halinde ISO 27001 sertifikası."
-  }
- ],
- "isoBasics": [
-  {
-   "title": "ISO 27001 nedir?",
-   "desc": "ISO/IEC 27001, bilgi güvenliği yönetim sisteminin (BGYS) kurulması, işletilmesi ve sürekli iyileştirilmesi için şartları tanımlayan uluslararası standarttır. Güncel sürüm ISO/IEC 27001:2022'dir.",
-   "link": "ISO 27001 nedir, neyi kapsar?",
-   "href": "/iso-27001-nedir/"
-  },
-  {
-   "title": "Kimler almalı?",
-   "desc": "Müşteri verisi işleyen, yazılım veya BT hizmeti sunan ya da kurumsal müşterilere tedarikçi olan kuruluşlar için uygundur. Genel bir yasal zorunluluk yoktur; sözleşme, tedarikçi veya ihale şartları belgeyi gündeme getirebilir.",
-   "link": "ISO 27001 şartları",
-   "href": "/iso-27001-sartlari/"
-  },
-  {
-   "title": "Ne kadar sürer?",
-   "desc": "Süre; kapsama, çalışan ve lokasyon sayısına ve mevcut hazırlık düzeyine bağlıdır. BGYS'nin belgelendirme denetiminden önce bir süre işletilip kayıt üretmesi gerekir.",
-   "link": "ISO 27001 kaç günde alınır?",
-   "href": "/iso-27001-kac-gunde-alinir/"
-  },
-  {
-   "title": "Maliyeti neye bağlı?",
-   "desc": "Kapsam, personel ve lokasyon sayısı, mevcut dokümantasyon ve teknik altyapı ile denetim gün sayısı belirleyicidir. Danışmanlık ücreti ve belgelendirme kuruluşu ücreti ayrı kalemlerdir.",
-   "link": "ISO 27001 belgesi fiyatı",
-   "href": "/iso-27001-belgesi-fiyati/"
-  }
- ],
- "isoRoles": [
-  {
-   "title": "Danışmanlık firması",
-   "desc": "BGYS'yi kurumunuzla birlikte kurar: kapsam, risk analizi, SoA, politika ve prosedürler, iç tetkik ve yönetimin gözden geçirmesi. Denetim öncesinde hazırlığı yönetir ve bulguların kapatılmasına destek verir; sertifika düzenlemez."
-  },
-  {
-   "title": "Belgelendirme kuruluşu",
-   "desc": "Bağımsız üçüncü taraf olarak Stage 1 ve Stage 2 denetimlerini yapar, uygunluk halinde sertifikayı düzenler ve yıllık gözetim denetimlerini yürütür. Tarafsızlık gereği denetlediği kuruluşa danışmanlık vermez."
-  }
- ],
- "metaTitle": "ISO 27001 Danışmanlık | Belgelendirme, KVKK ve Pentest",
- "metaDescription": "ISO 27001 danışmanlık hizmeti: gap analizinden Stage 1 ve Stage 2 denetimine kadar ISO 27001:2022 belgelendirme hazırlığı, KVKK uyumu ve sızma testi.",
- "testimonials": [
-  {
-   "text": "Özellikle siber güvenlik testleri ve ISO 27001 risk analizi konusundaki titiz çalışmaları, teknik altyapımızı çok daha dirençli hale getirdi.",
-   "role": "Güvenlik Sorumlusu",
-   "sector": "Teknoloji Sektörü"
-  },
-  {
-   "text": "Bilgi Güvenliği Yönetim Sistemi kurulumunda dokümantasyon desteği harikaydı. Süreçleri çok sade bir dille aktardılar.",
-   "role": "Kalite Yöneticisi",
-   "sector": "İmalat Sektörü"
-  },
-  {
-   "text": "ISO 27001 denetimimizi sıfır uygunsuzlukla tamamladık. Profesyonel rehberlikleri için teşekkür ederiz.",
-   "role": "IT Direktörü",
-   "sector": "Finans Sektörü"
-  },
-  {
-   "text": "Eğitim süreçleri son derece verimli geçti. Personel farkındalık eğitimleri sayesinde dijital güvenlik bilincimiz ön plana çıktı.",
-   "role": "İnsan Kaynakları Müdürü",
-   "sector": "Lojistik Sektörü"
-  },
-  {
-   "text": "KVKK uyum süreci ve veri güvenliği konusundaki uzmanlıkları sayesinde karmaşık yasal gereklilikleri hızla tamamladık.",
-   "role": "Hukuk Müşaviri",
-   "sector": "Sağlık Sektörü"
-  },
-  {
-   "text": "Sızma testleri sonrası sundukları çözüm önerileri operasyonel verimliliğimizi artırırken risklerimizi minimize etti.",
-   "role": "Sistem Yöneticisi",
-   "sector": "Telekomünikasyon Sektörü"
-  }
- ],
- "trainings": [
-  {
-   "title": "İç Tetkikçi Eğitimi",
-   "desc": "Kurum içi denetim mekanizmalarını profesyonelce kuracak yetkin iç denetçiler yetiştiriyoruz.",
-   "href": "/ic-tetkikci-egitimi/"
-  },
-  {
-   "title": "KVKK Farkındalık Eğitimi",
-   "desc": "Kişisel verilerin güvenliği ve yasal süreçler hakkında kurum genelinde tam bir uyum kültürü oluşturuyoruz.",
-   "href": "/kvkk-farkindalik-egitimi/"
-  },
-  {
-   "title": "Bilgi Güvenliği Temel Eğitimi",
-   "desc": "ISO 27001 standartlarının temel prensiplerini ve teknik gereksinimlerini profesyonel düzeyde aktarıyoruz.",
-   "href": "/bilgi-guvenligi-temel-egitimi/"
-  },
-  {
-   "title": "Bilgi Güvenliği Farkındalık Eğitimi",
-   "desc": "İnsan odaklı güvenlik açıklarını kapatmak adına personelin bilinç düzeyini en üst seviyeye yükseltiyoruz.",
-   "href": "/bilgi-guvenligi-farkindalik-egitimi/"
+   "title": "Destek ve Bakım",
+   "output": "İzleme, periyodik bakım ve arıza anında hızlı müdahale."
   }
  ],
  "faqs": [
   {
-   "q": "ISO 27001 Nedir ve Neyi Hedefler?",
-   "a": "ISO/IEC 27001, bilgi güvenliği yönetim sisteminin (BGYS) kurulması, uygulanması, sürdürülmesi ve sürekli iyileştirilmesi için şartları belirleyen uluslararası standarttır. Amacı, bilginin gizliliğini, bütünlüğünü ve erişilebilirliğini risk temelli bir yaklaşımla korumaktır."
+   "q": "Hangi bölgelere hizmet veriyorsunuz?",
+   "a": "Merkezimiz Gebze'dedir. Gebze, Darıca, Dilovası, Çayırova ve Kocaeli genelinin yanı sıra Tuzla ve İstanbul Anadolu yakasına yerinde hizmet veriyoruz. Uzaktan yürütülebilen işler için Türkiye'nin her yerinden çalışıyoruz."
   },
   {
-   "q": "ISO 27001 Belgesi Almak Zorunlu mu?",
-   "a": "Genel bir yasal zorunluluk yoktur. Bazı sektörlerde mevzuat, müşteri sözleşmeleri, tedarikçi şartları veya ihale koşulları nedeniyle ISO 27001 belgesi aranabilir. Belgenin aranmadığı durumlarda da bilgi güvenliğinin bağımsız bir denetimle doğrulandığını müşterilere göstermenin yaygın bir yoludur."
+   "q": "Keşif ve teklif için ücret alıyor musunuz?",
+   "a": "İlk keşif görüşmesi ve teklif hazırlığı ücretsizdir. Altyapınızı inceledikten sonra ihtiyaca göre kalem kalem bir teklif sunarız."
   },
   {
-   "q": "Ek-A (Annex-A) Kontrolleri Nelerdir?",
-   "a": "Ek-A, risk değerlendirmesi sonucunda seçilebilecek bilgi güvenliği kontrollerinin listesidir. ISO/IEC 27001:2022'de 93 kontrol dört temada toplanır: organizasyonel (37), insan (8), fiziksel (14) ve teknolojik (34). Hangi kontrollerin uygulanacağı risk analizine göre belirlenir ve Uygulanabilirlik Bildirgesi'nde (SoA) gerekçelendirilir."
+   "q": "Sızma testi ne kadar sürer?",
+   "a": "Süre kapsama göre değişir: tek bir web uygulaması için birkaç gün, birden fazla sistem ve ağ segmenti içeren kurumsal testlerde birkaç hafta sürebilir. Kapsamı birlikte belirler, takvimi teklifte netleştiririz."
   },
   {
-   "q": "BGYS Sürecinde Risk Analizi Nasıl Yapılır?",
-   "a": "Önce kapsam dahilindeki bilgi varlıkları ve süreçler belirlenir. Ardından tehditler ve açıklıklar değerlendirilerek her risk için olasılık ve etkiye göre bir seviye hesaplanır. Kabul kriterini aşan riskler için risk işleme planı hazırlanır ve uygun Ek-A kontrolleri seçilir."
+   "q": "Sadece kurulum değil, sonrasında destek de veriyor musunuz?",
+   "a": "Evet. Kurulumdan sonra sözleşmeli IT destek, periyodik bakım ve uzaktan izleme hizmeti veriyoruz; arıza anında hızlı müdahale ediyoruz."
   },
   {
-   "q": "SoA (Uygulanabilirlik Bildirgesi) Belgesi Nedir?",
-   "a": "Açılımı Statement of Applicability olan SoA, Ek-A'daki kontrollerin her biri için uygulanıp uygulanmadığını, gerekçesini ve uygulama durumunu gösteren zorunlu bir dokümandır. Risk işleme planıyla tutarlı olması gerekir ve denetimlerde en ayrıntılı incelenen kayıtlardan biridir."
+   "q": "Verilerimizi nasıl yedeklemeliyiz?",
+   "a": "En az bir kopyası farklı bir ortamda, bir kopyası da şirket dışında (bulutta) duran 3-2-1 yedekleme kuralını öneriyoruz. Yedeklerin düzenli olarak geri yükleme testinden geçirilmesi de en az yedek almak kadar önemlidir."
   },
   {
-   "q": "ISO 27001:2022 Yeni Versiyon Farkı Nedir?",
-   "a": "ISO/IEC 27001:2022'de Ek-A kontrol sayısı 114'ten 93'e indi ve kontroller 14 başlık yerine 4 temada (organizasyonel, insan, fiziksel, teknolojik) toplandı. Bazı kontroller birleştirildi; tehdit istihbaratı, bulut hizmetlerinin güvenliği, veri maskeleme ve güvenli kodlama gibi 11 yeni kontrol eklendi."
-  },
-  {
-   "q": "Belgelendirme Süreci Ne Kadar Sürer?",
-   "a": "Süre; kapsama, çalışan ve lokasyon sayısına ve kurumun mevcut hazırlık düzeyine bağlıdır. Hazırlık aşaması çoğu kurumda 3 ila 6 ay sürer. Ardından belgelendirme kuruluşu iki aşamalı denetim yapar: Stage 1'de dokümantasyon ve hazırlık, Stage 2'de sistemin uygulamadaki etkinliği değerlendirilir."
-  },
-  {
-   "q": "Danışmanlık Firması ile Belgelendirme Kuruluşu Arasındaki Fark Nedir?",
-   "a": "Danışmanlık firması BGYS'yi kurumunuzla birlikte kurar ve sizi belgelendirme denetimine hazırlar; sertifika düzenlemez. Belgelendirme kuruluşu ise bağımsız üçüncü taraf olarak Stage 1 ve Stage 2 denetimlerini yapar ve uygunluk halinde sertifikayı düzenler. Tarafsızlık gereği bir belgelendirme kuruluşu, denetlediği kuruluşa danışmanlık veremez."
-  },
-  {
-   "q": "ISO 27001 Sertifikası Maliyeti Neye Bağlıdır?",
-   "a": "Maliyet; kapsamın genişliği, personel ve lokasyon sayısı, süreçlerin karmaşıklığı, mevcut dokümantasyon ve teknik altyapı ile belgelendirme kuruluşunun belirlediği denetim gün sayısına göre değişir. Danışmanlık ücreti ile belgelendirme kuruluşunun denetim ücreti ayrı kalemlerdir."
-  },
-  {
-   "q": "Sızma Testi (Pentest) ISO 27001 İçin Şart mı?",
-   "a": "Standart sızma testini adıyla zorunlu tutmaz; ancak Ek-A 8.8 kontrolü teknik açıklıkların düzenli olarak tespit edilip yönetilmesini ister. Kurumların çoğu bu kanıtı düzenli sızma testiyle sağlar; sıklık risk değerlendirmenize göre belirlenir ve sonuçlar risk analizi süreçlerinizle eşleştirilir."
-  },
-  {
-   "q": "ISO 27001 Belgesi Kaç Yıl Geçerlidir?",
-   "a": "Sertifika 3 yıl geçerlidir. Bu süre içinde belgelendirme kuruluşu her yıl bir gözetim denetimi yapar; üçüncü yılın sonunda yeniden belgelendirme denetimiyle yeni bir 3 yıllık döngü başlar."
-  },
-  {
-   "q": "BGYS Kurulumunda Üst Yönetimin Rolü Nedir?",
-   "a": "Standardın 5. maddesi üst yönetimden liderlik ve taahhüt ister: bilgi güvenliği politikasını onaylamak, hedefleri belirlemek, rol ve sorumlulukları atamak, kaynak sağlamak ve yönetimin gözden geçirmesini yapmak. Bu sorumlulukların yerine getirildiğine dair kanıtlar denetimde doğrudan incelenir."
-  }
- ],
- "ekaControls": [
-  {
-   "icon": "file",
-   "control": "Varlık Envanteri",
-   "ref": "Ek-A 5.9",
-   "product": "Orbit",
-   "product_sub": "BT envanter ve IT operasyon",
-   "desc": "Donanım, yazılım ve lisans envanteri; garanti ve bakım süreleri tek merkezden takip edilir."
-  },
-  {
-   "icon": "search",
-   "control": "Teknik Açıklık Yönetimi",
-   "ref": "Ek-A 8.8",
-   "product": "PentForce",
-   "product_sub": "Otonom AI pentest",
-   "desc": "38 fazlı metodolojiyle web, ağ, IoT/OT ve bulut testleri; uzman ekibimizin doğruladığı bulgu raporu."
-  },
-  {
-   "icon": "check",
-   "control": "Güvenli Geliştirme ve Test",
-   "ref": "Ek-A 8.28 / 8.29",
-   "product": "PentForce SAST",
-   "product_sub": "Kaynak kod analizi",
-   "desc": "Kaynak kodda zafiyet ve gömülü gizli anahtar taraması; bulgular geliştirme sürecine geri beslenir."
-  },
-  {
-   "icon": "chart",
-   "control": "Loglama ve İzleme",
-   "ref": "Ek-A 8.15 / 8.16",
-   "product": "CyberWare",
-   "product_sub": "SOC ve tehdit izleme",
-   "desc": "Uç nokta ve ağ trafiği gerçek zamanlı izlenir; tehditler otomatik bildirilir ve olay panosunda takip edilir."
-  },
-  {
-   "icon": "lock",
-   "control": "Ayrıcalıklı Erişim",
-   "ref": "Ek-A 8.2",
-   "product": "FORNET Enterprise",
-   "product_sub": "PAM ve merkezi izleme",
-   "desc": "Guacamole + Vault tabanlı yetkili erişim yönetimi; kritik sistemlere erişim tek noktadan kontrol edilir."
-  },
-  {
-   "icon": "shield",
-   "control": "Ağ Güvenliği",
-   "ref": "Ek-A 8.20 / 8.21",
-   "product": "FORNET Enterprise",
-   "product_sub": "VPN otomasyonu",
-   "desc": "Fortinet, Palo Alto, Cisco, Check Point ve Sophos için çok markalı VPN otomasyonu ve merkezi alarm."
-  },
-  {
-   "icon": "users",
-   "control": "Misafir Ağı ve Erişim Kaydı",
-   "ref": "Ek-A 8.5 / 8.15 · 5651",
-   "product": "CyberHost",
-   "product_sub": "Wi-Fi hotspot yönetimi",
-   "desc": "Kimlik doğrulamalı misafir Wi-Fi; 5651 uyumlu, hash zincirli ve değiştirilemez erişim kaydı."
-  },
-  {
-   "icon": "mail",
-   "control": "Farkındalık ve Oltalama Testi",
-   "ref": "Ek-A 6.3",
-   "product": "Oltalama Tatbikatı",
-   "product_sub": "E-posta phishing simülasyonu",
-   "desc": "Gerçekçi oltalama e-postalarıyla personel dayanıklılığı ölçülür; tıklama ve bildirim oranları raporlanır, eğitimle desteklenir."
-  }
- ],
- "platforms": [
-  {
-   "name": "PentForce",
-   "tag": "AI Pentest",
-   "desc": "Web, ağ, IoT/OT ve buluta kadar 38 fazlı otonom sızma testi. İnternete kapalı (air-gapped) ağlarda da çalışır.",
-   "href": "https://ensakurumsal.com/yazilim-urunlerimiz/pentforce"
-  },
-  {
-   "name": "CyberWare",
-   "tag": "SOC",
-   "desc": "Uç nokta ve ağ trafiğini gerçek zamanlı izleyen, tehditleri otomatik bildiren kurumsal siber güvenlik çözümü.",
-   "href": "https://ensakurumsal.com/yazilim-urunlerimiz/cyberware"
-  },
-  {
-   "name": "FORNET Enterprise",
-   "tag": "MSP · PAM",
-   "desc": "Merkezi izleme, çok markalı VPN otomasyonu ve Vault tabanlı yetkili erişim yönetimi tek platformda.",
-   "href": "https://ensakurumsal.com/yazilim-urunlerimiz/fornet-enterprise"
-  },
-  {
-   "name": "Orbit",
-   "tag": "BT Envanter",
-   "desc": "Donanım, yazılım ve lisans envanteri ile IT talep ve arıza süreçlerini tek merkezden yönetin.",
-   "href": "https://ensakurumsal.com/yazilim-urunlerimiz/orbit"
-  },
-  {
-   "name": "CyberHost",
-   "tag": "Wi-Fi · 5651",
-   "desc": "Captive portal, çoklu kimlik doğrulama ve 5651 uyumlu değiştirilemez loglama ile misafir Wi-Fi yönetimi.",
-   "href": "https://ensakurumsal.com/yazilim-urunlerimiz/cyberhost"
+   "q": "Güvenlik kamerası (IP kamera) kurulumu yapıyor musunuz?",
+   "a": "Evet. Fabrika, depo, OSB ve işyerleri için IP kamera projelendirme, kurulum, kayıt ve uzaktan izleme altyapısını kuruyor, bakımını yapıyoruz."
   }
  ]
 }

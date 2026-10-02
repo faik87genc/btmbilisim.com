@@ -13,17 +13,30 @@
   "10+"
  ],
  "targets": [
-  "3 ay içinde",
-  "3–6 ay",
-  "6–12 ay",
+  "Acil (bu hafta)",
+  "1 ay içinde",
+  "1–3 ay",
   "Henüz belirsiz"
  ],
  "services": [
-  "ISO 27001 Belgelendirme Danışmanlığı",
-  "Sızma Testi",
-  "KVKK Uyumu ve Sözleşmeler",
-  "E-posta Oltalama Tatbikatı",
-  "Ek-A Teknik Kontrol Kurulumu"
+  "Siber Güvenlik / Sızma Testi",
+  "Ağ ve Sistem Altyapısı",
+  "Sunucu, Sanallaştırma ve Veri Merkezi",
+  "Bulut ve Yedekleme",
+  "Güvenlik Kamerası (IP Kamera)",
+  "IT Destek ve Danışmanlık",
+  "Yazılım / Web Tasarım",
+  "Lisanslama"
  ],
- "whatsapp": "905333700143"
+ "topics": [
+  "Siber Güvenlik ve Sızma Testi",
+  "Ağ ve Sistem Altyapısı",
+  "Sunucu ve Veri Merkezi",
+  "Bulut ve Yedekleme",
+  "Güvenlik Kamerası Sistemleri",
+  "IT Destek ve Danışmanlık",
+  "Yazılım ve Web Tasarım",
+  "Diğer"
+ ],
+ "whatsapp": "905437309132"
 }

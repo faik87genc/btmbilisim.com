@@ -14,7 +14,7 @@ import { assertPublicHost, BlockedHostError } from "@/lib/publicHost";
 const MAX_BYTES = 3 * 1024 * 1024; // 3 MB of HTML is plenty for an article
 const TIMEOUT_MS = 15_000;
 const UA =
-  "Mozilla/5.0 (compatible; Iso27001NewsBot/1.0; +https://iso27001danismanlik.com/blog)";
+  "Mozilla/5.0 (compatible; BtmNewsBot/1.0; +https://www.btmbilisim.com/blog/)";
 
 export type FetchedArticle = {
   url: string;

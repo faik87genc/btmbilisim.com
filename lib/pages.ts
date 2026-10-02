@@ -4,15 +4,15 @@ import { pages, type Page } from "@/lib/db/schema";
 import { slugifyTr } from "@/lib/slug";
 import { fallbackPages } from "@/lib/fallbackPages";
 
-// Generic/domain words that appear in almost every title on an ISO 27001 /
-// pentest consulting site — without stripping them, "related" scoring would
+// Generic/domain words that appear in almost every title on an IT services
+// site — without stripping them, "related" scoring would
 // match nearly everything to everything purely on shared boilerplate terms.
 const RELATED_STOPWORDS = new Set([
   "ve", "ile", "icin", "nedir", "nasil", "bir", "bu", "ne", "kadar",
   "mi", "mu", "danismanlik", "danismanligi", "hizmeti", "hizmetleri",
   "cozumleri", "cozumu", "rehberi", "guncel", "sistemi", "kurulur",
-  "yonetimi", "iso", "27001", "bgys", "sirketler", "kurumlar", "kurumsal",
-  "2026",
+  "yonetimi", "sistemleri", "sirketler", "isletmeler", "kurumlar", "kurumsal",
+  "btm", "bilisim", "kocaeli", "gebze", "2025", "2026",
 ]);
 
 function relatedTokens(text: string): Set<string> {

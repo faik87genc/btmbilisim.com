@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tag, pages: matched } = getPagesByTagSlug(postLikePages(await getPublishedPages()), slug);
   if (matched.length === 0) return {};
   const title = `${tag} Yazıları${site.titleSuffix}`;
-  const description = `${tag} konusunda ${matched.length} rehber ve yazı: ISO 27001, bilgi güvenliği ve KVKK süreçleri, maliyetler ve uygulama ipuçları.`;
+  const description = `${tag} konusunda ${matched.length} rehber ve yazı: BTM Bilişim'den uygulamalı bilişim ve güvenlik rehberleri.`;
   const url = absoluteUrl(`/blog/etiket/${slug}/`);
   return {
     title,

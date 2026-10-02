@@ -1,5 +1,5 @@
 {
-  "name": "iso27001danismanlik-web",
+  "name": "btmbilisim-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "hash-password": "node scripts/hash-password.mjs",
-    "content:export": "python scripts/export-legacy-data.py && node scripts/migrate-legacy-content.mjs --fallback",
+    "content:import": "node scripts/import-wordpress.mjs",
+    "brand:assets": "node scripts/build-brand-assets.mjs",
     "content:migrate": "node scripts/migrate-legacy-content.mjs"
   },
   "dependencies": {

@@ -28,43 +28,32 @@ export type LinkSuggestion = {
 /** Legal/about pages that are never useful contextual link targets. */
 const NEVER_LINK = new Set([
   "cerez-politikasi",
-  "kullanim-kosullari",
-  "kisisel-verilerin-korunmasi-politikasi",
-  "misyonumuz",
-  "vizyonumuz",
+  "kvkk-aydinlatma-metni",
 ]);
 
 /** Route paths that exist outside the pages table. */
-const STATIC_LINKABLE = new Set(["", "blog", "iletisim", "iso-27001-danismanlik-hizmeti"]);
+const STATIC_LINKABLE = new Set(["", "blog", "iletisim"]);
 
 /**
- * "Money pages": the consulting, penetration-test and training service pages
- * every article must link to (at least {@link MIN_MONEY_LINKS}, in context).
- * Real slugs (nav + pages table). Price/guide pages are deliberately not
- * here — they are articles, not conversion targets.
+ * "Money pages": the service pages every article must link to (at least
+ * {@link MIN_MONEY_LINKS}, in context). Real slugs (nav + pages table).
  */
-export const MONEY_PAGES: { slug: string; group: "danışmanlık" | "sızma testi" | "eğitim" }[] = [
-  // Hub / money page for "ISO 27001 sertifikası + belgesi".
-  { slug: "iso-27001-belgesi", group: "danışmanlık" },
-  { slug: "iso-27001-danismanlik-hizmeti", group: "danışmanlık" },
-  { slug: "danismanlik-hizmetleri", group: "danışmanlık" },
-  { slug: "bgys-danismanlik", group: "danışmanlık" },
-  { slug: "kvkk-danismanligi", group: "danışmanlık" },
-  { slug: "iso-27701-kisisel-veri-yonetim-sistemi", group: "danışmanlık" },
-  { slug: "iso22301-is-surekliligi-yonetim-sistemi", group: "danışmanlık" },
-  { slug: "iso20000-1-bilgi-teknolojileri-hizmet-yonetim-sistemi", group: "danışmanlık" },
-  { slug: "siber-guvenlik-hizmetleri", group: "danışmanlık" },
-  { slug: "cerez-yonetimi", group: "danışmanlık" },
-  { slug: "oltalama-tatbikati", group: "danışmanlık" },
-  { slug: "sizma-testi-pentest-hizmeti", group: "sızma testi" },
-  { slug: "black-box", group: "sızma testi" },
-  { slug: "grey-box", group: "sızma testi" },
-  { slug: "white-box", group: "sızma testi" },
-  { slug: "egitim-hizmetleri", group: "eğitim" },
-  { slug: "bilgi-guvenligi-farkindalik-egitimi", group: "eğitim" },
-  { slug: "bilgi-guvenligi-temel-egitimi", group: "eğitim" },
-  { slug: "kvkk-farkindalik-egitimi", group: "eğitim" },
-  { slug: "ic-tetkikci-egitimi", group: "eğitim" },
+export const MONEY_PAGES: { slug: string; group: "güvenlik" | "altyapı" | "yazılım" }[] = [
+  { slug: "hizmetler", group: "altyapı" },
+  { slug: "siber-guvenlik-hizmetleri", group: "güvenlik" },
+  { slug: "sizma-testi-penetrasyon-testi", group: "güvenlik" },
+  { slug: "ag-ve-sistem-altyapi-cozumleri", group: "altyapı" },
+  { slug: "sunucu-ve-veri-merkezi-hizmetleri", group: "altyapı" },
+  { slug: "bulut-ve-yedekleme-cozumleri", group: "altyapı" },
+  { slug: "cloud-hizmetleri", group: "altyapı" },
+  { slug: "sanallastirma-hizmetleri", group: "altyapı" },
+  { slug: "sistem-entegrasyonu", group: "altyapı" },
+  { slug: "kurulum-hizmeti", group: "altyapı" },
+  { slug: "it-destek-ve-danismanlik", group: "altyapı" },
+  { slug: "lisanslama-hizmetleri", group: "altyapı" },
+  { slug: "veri-kurtarma-hizmetleri", group: "altyapı" },
+  { slug: "yazilim-hizmetleri", group: "yazılım" },
+  { slug: "web-tasarim-hizmetleri", group: "yazılım" },
 ];
 
 export const MONEY_PAGE_SLUGS: ReadonlySet<string> = new Set(MONEY_PAGES.map((p) => p.slug));
@@ -81,8 +70,8 @@ export function moneyLinksIn(content: string, selfSlug?: string | null): string[
 
 const STOP = new Set([
   "ve", "ile", "icin", "nedir", "nasil", "bir", "bu", "ne", "kadar", "mi", "mu",
-  "iso", "27001", "2022", "rehberi", "rehber", "guncel", "hizmeti", "hizmetleri",
-  "danismanlik", "danismanligi", "2025", "2026", "2027",
+  "rehberi", "rehber", "guncel", "hizmeti", "hizmetleri", "cozumleri", "sistemi", "sistemleri",
+  "danismanlik", "danismanligi", "kurumsal", "btm", "bilisim", "2025", "2026", "2027",
 ]);
 
 function tokens(s: string): Set<string> {

@@ -2,21 +2,16 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 import { rateLimit } from "@/lib/rate-limit";
+import { site } from "@/lib/site";
+import quoteForm from "@/lib/data/quote-form.json";
 
 // nodemailer needs the Node.js runtime (not Edge).
 export const runtime = "nodejs";
 
-// Keep in sync with the <select> options in components/ContactForm.tsx, plus
-// QUOTE_TOPIC sent by components/QuoteForm.tsx.
+// Same list as the <select> in components/ContactForm.tsx (lib/data/quote-form.json),
+// plus QUOTE_TOPIC sent by components/QuoteForm.tsx.
 const QUOTE_TOPIC = "Teklif Talebi";
-const allowedTopics = [
-  "ISO 27001 Danışmanlık",
-  "Sızma Testi (Pentest)",
-  "KVKK Uyum Danışmanlığı",
-  "Eğitim Hizmetleri",
-  "Diğer",
-  QUOTE_TOPIC,
-];
+const allowedTopics = [...quoteForm.topics, QUOTE_TOPIC];
 
 // Single-line fields: fold CR/LF and other control characters into a space.
 // Nothing here reaches a mail header (topic is whitelisted, Reply-To is a
@@ -166,7 +161,7 @@ export async function POST(request: Request) {
 
   try {
     await transport.sendMail({
-      from: `ISO 27001 Danışmanlık Web Sitesi <${from}>`,
+      from: `${site.name} Web Sitesi <${from}>`,
       to,
       ...(bcc && bcc.length > 0 ? { bcc } : {}),
       replyTo: email,

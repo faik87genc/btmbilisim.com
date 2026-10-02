@@ -61,7 +61,7 @@ export const ArticleDraftSchema = z.object({
       z.object({
         slug: z
           .string()
-          .describe("İç Sayfa Kataloğu'ndaki GERÇEK yol, ör. '/iso-27001-nedir/'. Uydurma yok."),
+          .describe("İç Sayfa Kataloğu'ndaki GERÇEK yol, ör. '/siber-guvenlik-hizmetleri/'. Uydurma yok."),
         anchor: z.string().describe("Önerilen doğal çapa metni (2–6 kelime)."),
         reason: z.string().describe("Bu linkin okuyucuya neden faydalı olduğu, tek cümle."),
       }),

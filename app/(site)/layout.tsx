@@ -16,7 +16,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       {/* RSS autodiscovery (app/feed.xml). React hoists <link> into <head>.
           Not set via metadata `alternates.types`: a page's own `alternates`
           (its canonical) replaces the layout's wholesale. */}
-      <link rel="alternate" type="application/rss+xml" title="ISO 27001 Danışmanlık Blog" href="/feed.xml" />
+      <link rel="alternate" type="application/rss+xml" title="BTM Bilişim Blog" href="/feed.xml" />
       <IconSprite />
       <a className="skip-link" href="#main">
         İçeriğe geç

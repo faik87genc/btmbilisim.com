@@ -12,7 +12,7 @@ import { Breadcrumbs, JsonLd, PostCard, type CardPost } from "@/components/site/
 
 const PER_PAGE = 9;
 const BLOG_DESC =
-  "ISO 27001, KVKK ve siber güvenlik hakkında uzman rehberler, güncel mevzuat analizleri ve pratik tavsiyeler.";
+  "Siber güvenlik, ağ altyapısı, sunucu, bulut yedekleme ve güvenlik kamerası sistemleri hakkında uygulamalı rehberler.";
 
 export function toCard(p: Page): CardPost {
   return { href: pageHref(p), title: p.title, excerpt: p.excerpt, heroImg: p.coverImageUrl, tag: postTag(p) };
@@ -55,12 +55,11 @@ export async function BlogIndex({ pageNum }: { pageNum: number }) {
         <section className="section-navy" style={{ padding: "56px 0" }}>
           <div className="wrap text-center">
             <span className="eyebrow" style={{ background: "rgba(255,255,255,.12)", color: "#fff" }}>
-              Bilgi Güvenliği Rehberi
+              Bilişim Rehberi
             </span>
-            <h1>ISO 27001, KVKK ve Siber Güvenlik Blogu</h1>
+            <h1>BTM Bilişim Blog</h1>
             <p style={{ color: "#c9d3f2", maxWidth: 640, margin: "0 auto" }}>
-              Bilgi güvenliği yönetim sistemi, sızma testi ve KVKK uyumu hakkında uzman rehberler, güncel mevzuat
-              analizleri ve pratik tavsiyeler.
+              Siber güvenlik, ağ ve sistem altyapısı, yedekleme ve kamera sistemleri üzerine uygulamalı rehberler.
             </p>
           </div>
         </section>

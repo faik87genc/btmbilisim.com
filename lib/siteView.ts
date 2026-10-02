@@ -18,7 +18,7 @@ export function isPost(p: Pick<Page, "kind" | "tags">): boolean {
 }
 
 export function postTag(p: Pick<Page, "tags">): string {
-  return p.tags[0] ?? "ISO 27001";
+  return p.tags[0] ?? "Bilişim";
 }
 
 /** build.py: titles longer than 46 chars skip the brand suffix. */

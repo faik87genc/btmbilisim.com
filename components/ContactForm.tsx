@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { FieldError, Req, RequiredNote, useFieldErrors } from "@/components/FieldErrors";
+import quoteForm from "@/lib/data/quote-form.json";
 import { site } from "@/lib/site";
 
 // Markup/fields match the static site's contact.html form. Submission goes to
@@ -12,7 +13,7 @@ import { site } from "@/lib/site";
 // nothing navigates away without the visitor choosing it.
 
 // Keep in sync with `allowedTopics` in app/api/contact/route.ts.
-const TOPICS = ["ISO 27001 Danışmanlık", "Sızma Testi (Pentest)", "KVKK Uyum Danışmanlığı", "Eğitim Hizmetleri", "Diğer"];
+const TOPICS = quoteForm.topics;
 
 type Values = { name: string; company: string; email: string; phone: string; topic: string; message: string; website: string };
 

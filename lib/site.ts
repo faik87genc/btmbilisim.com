@@ -1,60 +1,63 @@
 export const site = {
-  name: "ISO 27001 Danışmanlık",
-  legalName: "Ensa Kurumsal Danışmanlık Hizmetleri Limited Şirketi",
-  parent: { name: "Ensa Kurumsal Danışmanlık", url: "https://ensakurumsal.com" },
-  domain: "iso27001danismanlik.com",
-  email: "info@iso27001danismanlik.com",
-  phone: { display: "0533 370 01 43", href: "tel:+905333700143" },
+  name: "BTM Bilişim",
+  legalName: "BTM Bilgi Teknolojileri Merkezi",
+  domain: "btmbilisim.com",
+  email: "oguzhanbatum@btmbilisim.com",
+  phone: { display: "0850 840 02 86", href: "tel:+908508400286" },
+  // Mobil hat — WhatsApp buradan.
+  mobile: { display: "0543 730 91 32", href: "tel:+905437309132" },
   whatsapp: {
-    display: "+90 533 370 01 43",
-    href: "https://wa.me/905333700143?text=" +
+    display: "+90 543 730 91 32",
+    href: "https://wa.me/905437309132?text=" +
       encodeURIComponent("Merhaba, web sitenizden yazıyorum. Teklif almak istiyorum."),
   },
-  address: "Yenikent Mah. Dicle Cd. G Blok No:16 Gebze / Kocaeli",
+  address: "Hacı Halil Mah. 1207. Sk. No:1 Match Plaza K:4, Gebze / Kocaeli",
   // Yapılandırılmış adres (JSON-LD PostalAddress). `address` ile aynı yer;
   // NAP tutarlılığı için ikisi birlikte güncellenmeli.
   postalAddress: {
-    streetAddress: "Yenikent Mah. Dicle Cd. G Blok No:16",
+    streetAddress: "Hacı Halil Mah. 1207. Sk. No:1 Match Plaza K:4",
     addressLocality: "Gebze",
     addressRegion: "Kocaeli",
+    postalCode: "41400",
     addressCountry: "TR",
   },
-  // Konum: eski sitenin (scripts/raw/*.html) gömülü Google Haritalar
-  // işletme kartındaki koordinat (ISO 27001 DANIŞMANLIK, place 0x2eb9d8bd24e25266).
-  geo: { latitude: 40.8244147, longitude: 29.4182057 },
-  // Aynı Google işletme kaydının CID bağlantısı (0x2eb9d8bd24e25266 = 3366960503315386982).
-  mapsUrl: "https://www.google.com/maps?cid=3366960503315386982",
-  // İletişim sayfasındaki "Pazartesi – Cuma, 09:00 – 18:00" ile aynı.
+  // Eski sitenin iletişim sayfasındaki Google Haritalar bağlantısındaki koordinat.
+  geo: { latitude: 40.7955844, longitude: 29.4347848 },
+  mapsUrl:
+    "https://www.google.com/maps/place/Hac%C4%B1halil,+1207.+Sk.+No:1+K:4,+41400+Gebze%2FKocaeli/@40.7955844,29.4347848,17z",
   hours: { label: "Pazartesi – Cuma, 09:00 – 18:00", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
   // Yerinde hizmet verilen bölgeler (merkez Gebze) + uzaktan tüm Türkiye.
   areaServed: [
     { type: "City", name: "Gebze" },
+    { type: "City", name: "Darıca" },
+    { type: "City", name: "Dilovası" },
+    { type: "City", name: "Tuzla" },
     { type: "AdministrativeArea", name: "Kocaeli" },
     { type: "City", name: "İstanbul" },
     { type: "Country", name: "Türkiye" },
   ],
+  // Boş bırakılan hesaplar footer'da gösterilmez.
   social: {
-    instagram: "https://www.instagram.com/iso27001danismanlik/",
-    x: "https://x.com/iso27001belge",
+    instagram: "",
+    x: "",
     linkedin: "",
   },
-  tagline: "Bilgi güvenliğinde güvenilir danışmanlık ortağınız.",
+  tagline: "Dijital geleceğinizi güvenle şekillendirin.",
   // Sitenin genel tanıtım metni: kök layout'un varsayılan OG/Twitter kartı,
   // PWA manifest'i ve Footer'daki tanıtım paragrafı buradan besleniyor.
   description:
-    "ISO 27001 Danışmanlık; ISO 27001 belgelendirme, BGYS kurulumu, sızma testi (pentest), KVKK uyumu ve bilgi güvenliği eğitimleri alanında Gebze, Kocaeli ve İstanbul'da hizmet veren uzman danışmanlık firmasıdır.",
+    "BTM Bilişim; sızma testi, siber güvenlik, ağ ve sistem altyapısı, sunucu ve veri merkezi, bulut ve yedekleme, güvenlik kamerası ve IT danışmanlık hizmetleriyle Gebze, Kocaeli ve İstanbul'daki işletmelere uçtan uca bilişim çözümleri sunar.",
   // --- Admin / AI içerik sistemi ---
-  shortName: "ISO 27001",
-  // Canonical origin — the static site has always served (and Google has
-  // indexed) the www host.
-  baseUrl: "https://www.iso27001danismanlik.com",
-  // Kök layout'taki title template (`%s | ${name}`) ile aynı olmalı: SEO
-  // asistanı ve AI metaTitle uzunluğunu bu sonek dahil hesaplıyor.
-  titleSuffix: " | ISO 27001 Danışmanlık",
+  shortName: "BTM Bilişim",
+  // Canonical origin — eski WordPress sitesi www altında yayında.
+  baseUrl: "https://www.btmbilisim.com",
+  // Kök layout'taki title template ile aynı olmalı: SEO asistanı ve AI
+  // metaTitle uzunluğunu bu sonek dahil hesaplıyor.
+  titleSuffix: " | BTM Bilişim",
   // AI system prompt'larındaki şirket tarifi.
   aiPersona:
-    "ISO 27001 Danışmanlık — Türkiye'de ISO 27001/27701/22301/20000-1 belgelendirme danışmanlığı, BGYS kurulumu, sızma testi/pentest, KVKK uyumu ve bilgi güvenliği eğitimleri veren bir firma",
-  adminCookie: "iso27001_admin_session",
+    "BTM Bilişim — Gebze/Kocaeli merkezli; sızma testi, siber güvenlik, ağ ve sistem altyapısı, sunucu/veri merkezi, bulut ve yedekleme, sanallaştırma, lisanslama, güvenlik kamerası (IP kamera) kurulumu, yazılım, web tasarım ve IT danışmanlık hizmetleri veren bir bilişim firması",
+  adminCookie: "btm_admin_session",
 } as const;
 
 /** Toplam <title> 60 karakteri geçmesin diye metaTitle'ın (marka hariç) sınırları. */

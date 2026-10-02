@@ -47,7 +47,7 @@ export async function GET() {
 <channel>
 <title>${xml(site.name)} Blog</title>
 <link>${xml(absoluteUrl("/blog/"))}</link>
-<description>${xml("ISO 27001, KVKK, sızma testi ve bilgi güvenliği üzerine rehberler.")}</description>
+<description>${xml("Siber güvenlik, ağ altyapısı, sunucu, yedekleme ve kamera sistemleri üzerine rehberler.")}</description>
 <language>tr-TR</language>
 <lastBuildDate>${lastBuild.toUTCString()}</lastBuildDate>
 <atom:link href="${xml(feedUrl)}" rel="self" type="application/rss+xml"/>

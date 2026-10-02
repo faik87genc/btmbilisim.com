@@ -39,7 +39,7 @@ export const NewsDraftSchema = z.object({
     .min(2)
     .max(4)
     .describe(
-      "2–4 konu etiketi (ör. 'ISO 27001', 'KVKK', 'Mevzuat'). Türkçe, Baş Harf Büyük, tekil.",
+      "2–4 konu etiketi (ör. 'Siber Güvenlik', 'Yedekleme', 'Mevzuat'). Türkçe, Baş Harf Büyük, tekil.",
     ),
   content: z
     .string()

@@ -11,7 +11,7 @@ import { DEFAULT_OG_IMAGE, organizationJsonLd } from "@/lib/structuredData";
 
 const TITLE = `İletişim${site.titleSuffix}`;
 const DESCRIPTION =
-  "ISO 27001, KVKK ve sızma testi danışmanlığı için bizimle iletişime geçin. Telefon, e-posta ve adres bilgilerimiz.";
+  "Siber güvenlik, sızma testi, ağ altyapısı, sunucu, bulut ve IT destek ihtiyaçlarınız için BTM Bilişim ile iletişime geçin. Telefon, e-posta ve adres bilgilerimiz.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -34,7 +34,8 @@ export default function ContactPage() {
                 Bize <em>ulaşın</em>.
               </h1>
               <p className="lead">
-                ISO 27001, KVKK ve sızma testi süreçleriniz için ücretsiz ön görüşme talep edin. 24 saat içinde size
+                Siber güvenlik, ağ ve sistem altyapısı, sunucu, bulut ve IT destek ihtiyaçlarınız için ücretsiz keşif
+                görüşmesi talep edin. En geç bir iş günü içinde size
                 dönüş yapılır.
               </p>
             </div>
@@ -46,6 +47,10 @@ export default function ContactPage() {
                   <li>
                     <div className="ic"><Icon id="phone" size={18} /></div>
                     <div><b>Destek Hattı</b><a href={site.phone.href}>{site.phone.display}</a></div>
+                  </li>
+                  <li>
+                    <div className="ic"><Icon id="whatsapp" size={18} /></div>
+                    <div><b>Mobil / WhatsApp</b><a href={site.mobile.href}>{site.mobile.display}</a></div>
                   </li>
                   <li>
                     <div className="ic"><Icon id="mail" size={18} /></div>
@@ -62,7 +67,7 @@ export default function ContactPage() {
                 </ul>
 
                 <div style={{ borderRadius: "var(--radius)", overflow: "hidden", border: "1px solid var(--line)" }}>
-                  <ConsentMap query="Yenikent Mah. Dicle Cd. G Blok No:16 Gebze/Kocaeli" />
+                  <ConsentMap query="Hacıhalil Mah. 1207. Sk. No:1 Match Plaza, 41400 Gebze/Kocaeli" />
                 </div>
               </div>
 

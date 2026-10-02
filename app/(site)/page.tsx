@@ -11,24 +11,24 @@ import { toCard } from "@/components/site/BlogIndex";
 import { QuoteForm } from "@/components/QuoteForm";
 import { showTrust, trust, trustQuotes } from "@/lib/data/trust";
 
-// Port of _legacy-static-site/templates/home.html. Section copy comes from
-// lib/data/home.json, exported from the static site's build.py
-// (scripts/export-legacy-data.py).
-//
-// Order: the first half answers the "ISO 27001 danışmanlık / sertifika" intent
-// (what it is, who needs it, steps, duration, cost, consultancy vs.
-// certification body, how we work, FAQ); the wider service portfolio follows.
+// Section copy lives in lib/data/home.json (service cards there also feed the
+// Organization/Service JSON-LD in lib/structuredData.ts).
 
 export const revalidate = 300;
 
 const QUOTE_BULLETS = [
-  "Kapsam, süre ve maliyet netliği",
-  "Belgelendirme kuruluşu ücreti ayrı ve şeffaf",
-  "Gap analizinden belgelendirme denetimine net yol haritası",
+  "Ücretsiz keşif ve ihtiyaç analizi",
+  "Kalem kalem, şeffaf teklif",
+  "Kurulumdan sonra bakım ve destek",
 ];
 
-// Primary keyword "ISO 27001 danışmanlık"; the /iso-27001-belgesi/ hub owns
-// "ISO 27001 sertifikası". Same strings as HOME_META_* in build.py.
+const HERO_POINTS = [
+  "Sızma testi deneyimiyle güvenlik odaklı kurulum",
+  "Ağ, sunucu, bulut ve yedekleme tek ekipte",
+  "Gebze merkezli, Kocaeli ve İstanbul'da yerinde servis",
+  "Kurulum sonrası bakım, izleme ve hızlı müdahale",
+];
+
 const TITLE = home.metaTitle;
 const DESCRIPTION = home.metaDescription;
 
@@ -52,101 +52,91 @@ export default async function HomePage() {
         <section className="hero">
           <div className="wrap hero-grid">
             <div>
-              <span className="eyebrow">ISO 27001 Danışmanlık ve Belgelendirme</span>
+              <span className="eyebrow">Bilgi Teknolojileri Merkezi</span>
               <h1>
-                ISO 27001 Danışmanlık ve Sertifika Sürecinde <em>güvendiğiniz</em> ortak.
+                İşletmenizin bilişim altyapısında <em>güvendiğiniz</em> ortak.
               </h1>
               <p className="sub">
-                ISO 27001:2022 belgelendirme sürecinizi gap analizinden Stage 1 ve Stage 2 denetimine kadar birlikte
-                yönetiyoruz. Risk analizi, SoA, politikalar ve iç tetkik tek ekipte; KVKK ve sızma testi ihtiyaçlarınız
-                da aynı çatı altında.
+                Siber güvenlik ve sızma testinden ağ altyapısına, sunucu ve sanallaştırmadan bulut yedeklemeye kadar
+                tüm bilişim ihtiyaçlarınızı tek ekiple planlıyor, kuruyor ve ayakta tutuyoruz.
               </p>
               <div className="hero-cta">
-                <Link className="btn btn-primary btn-lg" href="/iletisim/">
-                  Ücretsiz ISO 27001 Ön Analizi <Icon id="arrow" size={16} />
+                <Link className="btn btn-primary btn-lg" href="#teklif">
+                  Ücretsiz Keşif Talep Edin <Icon id="arrow" size={16} />
                 </Link>
-                <Link className="btn btn-ghost btn-lg" href="/iso-27001-belgesi/">
-                  ISO 27001 Sertifikası Rehberi
+                <Link className="btn btn-ghost btn-lg" href="/hizmetler/">
+                  Hizmetlerimiz
                 </Link>
               </div>
               <div className="hero-badges">
-                <div><strong>2010</strong><span>Yılından Beri Sahada</span></div>
-                <div><strong>Uzman Ekip</strong><span>BGYS · Pentest · KVKK</span></div>
-                <div><strong>7/24</strong><span>Uzman Destek Hattı</span></div>
+                <div><strong>7/24</strong><span>Teknik Destek</span></div>
+                <div><strong>Uçtan Uca</strong><span>Keşif · Kurulum · Bakım</span></div>
+                <div><strong>Gebze</strong><span>Merkezli Yerinde Servis</span></div>
               </div>
             </div>
             <div className="hero-card">
-              <h2 className="hero-card-h2">Neden Bizi Tercih Etmelisiniz?</h2>
+              <h2 className="hero-card-h2">Neden BTM Bilişim?</h2>
               <ul>
-                {[
-                  "Sektörde tecrübeli danışman, pentest ve sistem uzmanlarından oluşan ekip",
-                  "Uçtan uca BGYS kurulumu ve dokümantasyon desteği",
-                  "KVKK uyum süreçlerinde hukuki ve teknik tedbir danışmanlığı",
-                  "Şeffaf fiyatlandırma, net zaman planı",
-                ].map((t) => (
+                {HERO_POINTS.map((t) => (
                   <li key={t}>
                     <Icon id="check" size={18} /> {t}
                   </li>
                 ))}
               </ul>
-              <Link className="btn btn-primary btn-block" href="/danismanlik-hizmetleri/">
-                Hizmetlerimizi İnceleyin
+              <Link className="btn btn-primary btn-block" href="/hakkimizda/">
+                Bizi Tanıyın
               </Link>
             </div>
           </div>
         </section>
 
-        <div className="stats">
-          <div className="stats-in">
-            <div className="stat"><b>2010</b><span>yılından beri sahada</span></div>
-            <div className="stat"><b>Uzman Ekip</b><span>danışman · pentester · mühendis</span></div>
-            <div className="stat"><b>7/24</b><span>uzman destek hattı</span></div>
-            <div className="stat"><b>15+</b><span>sektörde ISO 27001 projesi</span></div>
-          </div>
-        </div>
-
-        <section className="section" id="iso-27001">
+        <section className="section" id="hizmetler">
           <div className="wrap">
             <div className="sec-head">
-              <span className="eyebrow">ISO 27001 Sertifikası</span>
+              <span className="eyebrow">Hizmetlerimiz</span>
               <h2>
-                ISO 27001 hakkında <em>kısa yanıtlar</em>
+                Bilişim altyapınız için <em>uçtan uca</em> çözümler
               </h2>
               <p>
-                Belgelendirmeye başlamadan önce en çok sorulan dört konu. Tüm ayrıntılar için{" "}
-                <Link href="/iso-27001-belgesi/">ISO 27001 sertifikası nasıl alınır</Link> rehberimize göz atın.
+                Güvenlikten altyapıya, buluttan yazılıma kadar ihtiyacınız olan her alanda deneyimli bir ekip. Tüm
+                hizmetleri <Link href="/hizmetler/">hizmetler sayfamızda</Link> inceleyebilirsiniz.
               </p>
             </div>
-            <div className="svc-scope">
-              {home.isoBasics.map((b) => (
-                <div className="svc-scope-card" key={b.href}>
-                  <h3>{b.title}</h3>
-                  <p>{b.desc}</p>
-                  <Link className="more" style={{ display: "inline-block", marginTop: 12 }} href={b.href}>
-                    {b.link} <Icon id="arrow" size={12} />
-                  </Link>
+            {home.serviceGroups.map((group) => (
+              <div className="grp" key={group.title}>
+                <div className="grp-h">
+                  <h3>{group.title}</h3>
+                  <span>{group.items.length} hizmet alanı</span>
                 </div>
-              ))}
-            </div>
+                <div className="svc-scope">
+                  {group.items.map((item) => (
+                    <div className="svc-scope-card" key={item.href}>
+                      <h4 className="svc-card-h">{item.title}</h4>
+                      <p>{item.desc}</p>
+                      <Link className="more" href={item.href}>
+                        Detaylar<span className="visually-hidden">: {item.title}</span> <Icon id="arrow" size={12} />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="section section-ice" id="surec">
           <div className="wrap">
             <div className="sec-head">
-              <span className="eyebrow">Süreç</span>
-              <h2>ISO 27001 sertifikası nasıl alınır?</h2>
-              <p>
-                <Link href="/iso-27001-belgelendirme-sureci/">ISO 27001 belgelendirme süreci</Link> gap analiziyle
-                başlar, belgelendirme kuruluşunun Stage 1 ve Stage 2 denetimleriyle tamamlanır.
-              </p>
+              <span className="eyebrow">Çalışma Sürecimiz</span>
+              <h2>Keşiften desteğe, adım adım</h2>
+              <p>Her projede aynı disiplinle ilerliyoruz; her adımın sonunda elinizde somut bir çıktı olur.</p>
             </div>
             <div className="steps">
               {home.processSteps.map((s) => (
                 <div className="step" key={s.title}>
                   <h3 className="step-h">{s.title}</h3>
                   <p className="step-output">
-                    <strong>Beklenen çıktı:</strong> {s.output}
+                    <strong>Çıktı:</strong> {s.output}
                   </p>
                 </div>
               ))}
@@ -157,38 +147,8 @@ export default async function HomePage() {
         <section className="section">
           <div className="wrap">
             <div className="sec-head">
-              <span className="eyebrow">Roller</span>
-              <h2>Danışmanlık firması mı, belgelendirme kuruluşu mu?</h2>
-              <p>Sertifikayı yalnızca bağımsız belgelendirme kuruluşu düzenler; danışmanlık firması sizi bu denetime hazırlar.</p>
-            </div>
-            <div className="grid grid-2">
-              {home.isoRoles.map((r) => (
-                <div className="pillar" key={r.title}>
-                  <h3>{r.title}</h3>
-                  <p>{r.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="svc-callout">
-              <h3>Denetime Hazırlık</h3>
-              <p>
-                Denetim öncesinde mevcut durum analizi, iç tetkik ve düzeltici faaliyetlerle kurumunuzu belgelendirme
-                denetimine hazırlarız. Belgelendirme kararı bağımsız belgelendirme kuruluşuna aittir.
-              </p>
-              <p>
-                <Link className="more" href="/iso-27001-danismanlik-hizmeti/">
-                  ISO 27001 danışmanlık hizmeti kapsamı <Icon id="arrow" size={12} />
-                </Link>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-ice">
-          <div className="wrap">
-            <div className="sec-head">
               <span className="eyebrow">Nasıl Çalışıyoruz</span>
-              <h2>ISO 27001 danışmanlığında dört ilkemiz</h2>
+              <h2>Dört ilkemiz</h2>
             </div>
             <div className="grid grid-4">
               {home.pillars.map((p, i) => (
@@ -203,7 +163,7 @@ export default async function HomePage() {
         </section>
 
         {showTrust && (
-          <section className="section" id="sahadan">
+          <section className="section section-ice" id="sahadan">
             <div className="wrap">
               <div className="sec-head">
                 <span className="eyebrow">Sahadan</span>
@@ -249,27 +209,16 @@ export default async function HomePage() {
           </section>
         )}
 
-        <section className="section" id="sss">
-          <div className="wrap">
-            <div className="sec-head">
-              <span className="eyebrow">S.S.S.</span>
-              <h2>ISO 27001 sıkça sorulan sorular</h2>
-              <p>ISO 27001 belgelendirme ve Bilgi Güvenliği Yönetim Sistemi (BGYS) süreçleri hakkında sık sorulanlar.</p>
-            </div>
-            <FaqList items={home.faqs} />
-          </div>
-        </section>
-
         <section className="section section-navy quote-sec" id="teklif">
           <div className="wrap quote-wrap">
             <div className="quote-intro">
               <span className="eyebrow">Hızlı Teklif</span>
               <h2>
-                ISO 27001 teklifinizi <em>aynı gün</em> alın
+                İhtiyacınızı anlatın, <em>aynı gün</em> dönelim
               </h2>
               <p>
-                Birkaç bilgiyle kapsamınızı anlayalım; danışmanlık kapsamı, proje takvimi ve belgelendirme adımlarını
-                içeren teklifimizi hızla iletelim.
+                Birkaç bilgiyle ihtiyacınızı anlayalım; keşif randevusu ve teklif için en kısa sürede sizinle iletişime
+                geçelim.
               </p>
               <ul>
                 {QUOTE_BULLETS.map((b) => (
@@ -289,72 +238,22 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section className="section">
+        <section className="section" id="sss">
           <div className="wrap">
             <div className="sec-head">
-              <span className="eyebrow">Hizmet Portföyü</span>
-              <h2>ISO 27001&apos;in yanında diğer hizmetlerimiz</h2>
-              <p>KVKK, sızma testi, diğer ISO standartları ve eğitimler. Kapsamı görmek için başlığa dokunun.</p>
+              <span className="eyebrow">S.S.S.</span>
+              <h2>Sıkça sorulan sorular</h2>
             </div>
-            {home.serviceGroups.map((group) => (
-              <div className="grp" key={group.title}>
-                <div className="grp-h">
-                  <h3>{group.title}</h3>
-                  <span>{group.items.length} hizmet alanı</span>
-                </div>
-                {group.items.map((item) => (
-                  <details className="svc" key={item.href}>
-                    <summary>
-                      <span className="t">
-                        <b>{item.title}</b>
-                        <small>{item.short}</small>
-                      </span>
-                      <span className="chev">
-                        <Icon id="plus" size={14} />
-                      </span>
-                    </summary>
-                    <div className="svc-body">
-                      <p>{item.desc}</p>
-                      <Link className="more" href={item.href}>
-                        Detayları İnceleyin<span className="visually-hidden">: {item.title}</span> <Icon id="arrow" size={12} />
-                      </Link>
-                    </div>
-                  </details>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="section section-ice manifesto">
-          <div className="wrap">
-            <span className="eyebrow">Hakkımızda</span>
-            <h2 style={{ maxWidth: "20ch" }}>
-              ISO 27001 Belgelendirme ve <em>Danışmanlık</em>.
-            </h2>
-            <p>
-              Uluslararası Standardizasyon Örgütü (ISO), 1947&apos;den beri uluslararası standartlar yayımlayan
-              kuruluştur; 170&apos;i aşkın ülkenin ulusal standart kuruluşu ISO&apos;ya üyedir. ISO/IEC 27001 de bu
-              standartlardan biridir ve bilgi güvenliği için ortak bir dil sunar.
-            </p>
-            <p>
-              ISO 27001 danışmanlık hizmetimizle risk yönetimi süreçlerinizi standardın şartlarına göre kuruyor,
-              sürdürülebilir bir bilgi güvenliği yönetim sistemi oluşturmanıza destek oluyoruz. Hazırladığımız proje
-              planıyla belgelendirme denetimine hazırlığı adım adım yönetiyoruz.
-            </p>
-            <p className="mani-sig">— ISO 27001 Danışmanlık Ekibi</p>
-            <Link className="btn btn-ghost" href="/hakkimizda/">
-              Hakkımızda Daha Fazla
-            </Link>
+            <FaqList items={home.faqs} />
           </div>
         </section>
 
         {latest.length > 0 && (
-          <section className="section">
+          <section className="section section-ice">
             <div className="wrap">
               <div className="sec-head">
-                <span className="eyebrow">Bloglarımız</span>
-                <h2>Bilgi güvenliği rehberi</h2>
+                <span className="eyebrow">Blog</span>
+                <h2>Bilişim ve güvenlik rehberi</h2>
               </div>
               <div className="grid grid-3">
                 {latest.map((p) => (
@@ -373,10 +272,10 @@ export default async function HomePage() {
         <section className="section section-navy">
           <div className="wrap text-center">
             <h2>
-              Bilgi güvenliğinde <em>çözüm ortağınız</em>.
+              Dijital geleceğinizi <em>güvenle</em> şekillendirin.
             </h2>
             <p style={{ color: "#C9D8E8", maxWidth: 600, margin: "0 auto 28px" }}>
-              ISO 27001 süreçleriniz ve siber güvenlik ihtiyaçlarınız için profesyonel destek almaya hazır mısınız?
+              Altyapınızı birlikte değerlendirelim; ihtiyacınıza uygun çözümü ve net bir yol haritasını sunalım.
             </p>
             <Link className="btn btn-on-navy btn-lg" href="#teklif">
               Hemen İletişime Geçin

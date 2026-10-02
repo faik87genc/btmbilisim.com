@@ -6,8 +6,8 @@ import { Wand2, Upload, Check, RotateCcw } from "lucide-react";
 import { draftUrl, parseTopicCsv, type TopicRow } from "@/lib/topicQueue";
 import { slugifyTr } from "@/lib/slug";
 
-const CSV_KEY = "iso27001_admin_topic_csv";
-const DONE_KEY = "iso27001_admin_topic_done";
+const CSV_KEY = "btm_admin_topic_csv";
+const DONE_KEY = "btm_admin_topic_done";
 
 function load(key: string): string {
   try {

@@ -33,9 +33,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="wrap header-row">
-        <Link className="brand" href="/" aria-label="ISO 27001 Danışmanlık — Anasayfa">
+        <Link className="brand" href="/" aria-label="BTM Bilişim — Anasayfa">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-logo" src="/assets/img/logo-full.webp" alt="ISO 27001 Danışmanlık" width={142} height={52} />
+          <img className="brand-logo" src="/assets/img/logo-full.webp" alt="BTM Bilişim — Bilgi Teknolojileri Merkezi" width={163} height={52} />
         </Link>
         <nav className="main-nav" id="ana-menu" aria-label="Ana menü">
           <ul>

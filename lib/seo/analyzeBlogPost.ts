@@ -35,7 +35,7 @@ export type SeoAnalysis = {
     keywordDensity: number; // percent
     headings: { level: number; text: string }[];
     internalLinks: number;
-    /** Distinct money pages (consulting / pentest / training) linked. */
+    /** Distinct money pages (BTM service pages) linked. */
     moneyLinks: number;
     externalLinks: number;
     imagesTotal: number;
@@ -231,7 +231,7 @@ function jaccard(a: Set<string>, b: Set<string>): number {
 }
 
 /** Paths that are real routes but not DB rows ("" = home). */
-const STATIC_PATHS = new Set(["", "blog", "iletisim", "iso-27001-danismanlik-hizmeti"]);
+const STATIC_PATHS = new Set(["", "blog", "iletisim"]);
 
 /** Content internal links as normalised slugs ("" = home). */
 function internalLinkTargets(md: string): string[] {
@@ -572,7 +572,7 @@ export function analyzeBlogPost(input: BlogSeoInput): SeoAnalysis {
           ? `Bağlanan hizmet sayfaları: ${moneyLinks.map((s) => `/${s}/`).join(", ")}.`
           : `${moneyLinks.length} hizmet sayfasına link var${
               moneyLinks.length ? ` (${moneyLinks.map((s) => `/${s}/`).join(", ")})` : ""
-            }. En az ${MIN_MONEY_LINKS} farklı danışmanlık / sızma testi / eğitim sayfasına ilgili cümlenin içinde link ver — ör. /iso-27001-danismanlik-hizmeti/, /sizma-testi-pentest-hizmeti/, /bilgi-guvenligi-farkindalik-egitimi/ (düz /slug/ biçimi; /#teklif sayılmaz).`,
+            }. En az ${MIN_MONEY_LINKS} farklı hizmet sayfasına ilgili cümlenin içinde link ver — ör. /siber-guvenlik-hizmetleri/, /sizma-testi-penetrasyon-testi/, /bulut-ve-yedekleme-cozumleri/ (düz /slug/ biçimi; /#teklif sayılmaz).`,
     });
 
     add({
@@ -889,7 +889,7 @@ export function analyzeBlogPost(input: BlogSeoInput): SeoAnalysis {
     id: "citations",
     group: "compliance",
     weight: citationIssues.some((c) => c.severity === "bad") ? 3 : 1,
-    label: "ISO 27001:2022 / KVKK madde atıfları",
+    label: "Standart / mevzuat atıfları",
     status: citationIssues.some((c) => c.severity === "bad")
       ? "bad"
       : citationIssues.length

@@ -5,7 +5,7 @@
 export type ContentBrief = {
   /** Arama niyeti: "Bilgi", "Bilgi→Ticari", "Ticari"… */
   intent?: string;
-  /** Konu kümesi, e.g. "ISO 27001 > Ek-A (PILLAR)". */
+  /** Konu kümesi, e.g. "Yedekleme > Felaket Kurtarma (PILLAR)". */
   cluster?: string;
   /** Planned slug (the calendar's "Onerilen slug"). */
   slug?: string;

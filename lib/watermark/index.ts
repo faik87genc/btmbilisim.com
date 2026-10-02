@@ -3,7 +3,7 @@ import sharp from "sharp";
 import { WATERMARK_PNG_BASE64 } from "./mark";
 
 /**
- * Stamps "iso27001danismanlik.com" into the bottom-right corner of every image
+ * Stamps "btmbilisim.com" into the bottom-right corner of every image
  * the admin stores (upload, import, AI generation), so a copied or
  * screenshotted picture still carries the source. Inset from the edge so it
  * can't be cropped off without cutting into the picture itself.

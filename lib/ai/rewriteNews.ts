@@ -6,7 +6,7 @@ import { site, META_TITLE_MAX, META_TITLE_MIN } from "@/lib/site";
 export type { NewsDraft } from "./newsDraft";
 
 const MAX_TOKENS = 8000;
-const SCHEMA_NAME = "iso27001_news_item";
+const SCHEMA_NAME = "btm_news_item";
 
 const SYSTEM = `Sen şu şirketin haber editörüsün: ${site.aiPersona}. Sana bir KAYNAK HABER metni verilir; görevin bu haberi şirketin blog/haber akışı için KISA ve ÖZGÜN biçimde yeniden yazmak.
 

@@ -640,7 +640,7 @@ const DB_MISSING_ERROR =
 // Top-level segments owned by real routes/files: a flat page with one of these
 // slugs would be saved but never reachable (the static route wins).
 const RESERVED_PAGE_SLUGS = new Set([
-  "admin", "api", "blog", "iletisim", "iso-27001-danismanlik-hizmeti",
+  "admin", "api", "blog", "iletisim", "wp-content",
   "sitemap-xml", "robots-txt", "assets", "_next",
 ]);
 
@@ -747,7 +747,7 @@ export async function savePage(
       return { error: "Düzenlenen kayıt bulunamadı (silinmiş olabilir)." };
     }
   }
-  // Migrated rows may already sit on a reserved slug (e.g. the ISO 27001
+  // Migrated rows may already sit on a reserved slug (e.g. the old WP
   // service page, which has its own route); only block *moving to* one.
   if (!existing || existing.slug !== slug || existing.kind !== kind) {
     const reserved = reservedSlugReason(kind, slug);

@@ -6,7 +6,7 @@ import home from "@/lib/data/home.json";
 
 // JSON-LD builders — same entities and fields as build.py's *_jsonld().
 
-export const DEFAULT_OG_IMAGE = absoluteUrl("/assets/img/iso-27001.webp");
+export const DEFAULT_OG_IMAGE = absoluteUrl("/assets/img/og-default.jpg");
 
 // Stable node ids: Service and WebSite point at the one organization node.
 const ORG_ID = absoluteUrl("/#organization");
@@ -26,19 +26,24 @@ const OPENING_HOURS = {
   closes: site.hours.closes,
 };
 
+const SAME_AS = Object.values(site.social).filter(Boolean);
+
 const TELEPHONE = site.phone.href.replace("tel:", "");
 
 // build.py KNOWS_ABOUT — subject names only, no credential claims.
 const KNOWS_ABOUT = [
-  "ISO/IEC 27001:2022",
-  "Bilgi Güvenliği Yönetim Sistemi (BGYS)",
-  "ISO/IEC 27701",
-  "ISO 22301",
-  "ISO/IEC 20000-1",
-  "Sızma testi (pentest)",
-  "KVKK uyumu",
-  "Bilgi güvenliği farkındalık eğitimi",
-  "E-posta oltalama tatbikatı",
+  "Sızma testi (penetrasyon testi)",
+  "Siber güvenlik",
+  "Ağ ve sistem altyapısı",
+  "Sunucu ve veri merkezi",
+  "Bulut ve yedekleme çözümleri",
+  "Sanallaştırma",
+  "Yazılım lisanslama",
+  "IP kamera ve güvenlik kamerası sistemleri",
+  "Veri kurtarma",
+  "Veritabanı yönetimi ve SQL optimizasyonu",
+  "Web tasarım ve yazılım geliştirme",
+  "IT destek ve danışmanlık",
 ];
 
 type ServiceItem = (typeof home.serviceGroups)[number]["items"][number];
@@ -96,8 +101,7 @@ export function organizationJsonLd() {
     openingHoursSpecification: [OPENING_HOURS],
     areaServed: AREA_SERVED,
     legalName: site.legalName,
-    parentOrganization: { "@type": "Organization", name: site.parent.name, url: site.parent.url },
-    sameAs: [site.social.instagram, site.social.x],
+    ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
     priceRange: "$$",
     contactPoint: {
       "@type": "ContactPoint",
@@ -177,7 +181,6 @@ export function articleJsonLd(p: Page, description: string) {
       "@type": "Organization",
       "@id": ORG_ID,
       name: site.name,
-      // The brand's legal owner (Ensa Kurumsal), same as the org node.
       legalName: site.legalName,
       url: absoluteUrl("/"),
       logo: { "@type": "ImageObject", url: absoluteUrl("/assets/img/logo.png") },

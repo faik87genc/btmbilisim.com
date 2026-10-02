@@ -207,7 +207,7 @@ export function PageForm({
     (c) => c.group === "compliance" && c.status === "bad",
   );
 
-  // What Google sees: meta title (or H1) + the " | ISO 27001 Danışmanlık" suffix.
+  // What Google sees: meta title (or H1) + the site.titleSuffix (" | BTM Bilişim").
   const titleLen = analysis.stats.effectiveTitle.length;
   const descLen = (metaDescription || excerpt).length;
 
@@ -396,7 +396,7 @@ export function PageForm({
               name="tags"
               value={tagsRaw}
               onChange={(e) => setTagsRaw(e.target.value)}
-              placeholder="ISO 27001, KVKK, Sızma Testi"
+              placeholder="Siber Güvenlik, Yedekleme, IP Kamera"
               className={field}
             />
             {tags.length > 0 && (

@@ -28,7 +28,7 @@ export async function liveLinkTargets(): Promise<LinkTarget[]> {
 /**
  * A compact catalogue of real internal pages the model may link to, so drafts
  * contain genuine internal links instead of invented URLs. Money pages
- * (consulting / pentest / training services) come first as the mandatory
+ * (BTM service pages) come first as the mandatory
  * link targets; other core pages are listed in full (they are few); articles
  * are ranked by topical overlap with the brief and capped, which keeps the
  * prompt short (faster, cheaper) and the suggestions relevant.
@@ -39,10 +39,10 @@ export function internalLinkCatalogue(
   maxArticles = 30,
 ): string {
   const bySlug = new Map(targets.map((t) => [t.slug, t]));
-  // The static service route is not a pages row; keep it listed regardless.
-  const money = MONEY_PAGES.filter(
-    (m) => bySlug.has(m.slug) || m.slug === "iso-27001-danismanlik-hizmeti",
-  ).map((m) => ({ ...m, title: bySlug.get(m.slug)?.title ?? "ISO 27001 Danışmanlık Hizmeti" }));
+  const money = MONEY_PAGES.filter((m) => bySlug.has(m.slug)).map((m) => ({
+    ...m,
+    title: bySlug.get(m.slug)!.title,
+  }));
   const services = targets.filter(
     (t) => t.kind === "service" && !MONEY_PAGE_SLUGS.has(t.slug),
   );
