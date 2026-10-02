@@ -1,41 +1,50 @@
-// Ana sayfadaki "Sahadan" güven bölümünün verisi. Bölüm, aşağıdaki listeler
-// boşken hiç görünmez; yalnızca gerçek ve doğrulanabilir veri girildiğinde çıkar.
+// Social proof shown on the site: customer testimonials, reference logos and
+// the team page. Every list starts empty and each section stays hidden until
+// real entries are added here — never placeholder people, quotes or logos.
 //
-// Kurallar (sahte yorumlar 2026-09-26'da kaldırıldı; tekrar olmasın):
-// - Alıntılar: müşterinin YAZILI izni olmadan eklenmez. Kişi adı, firma adı ve
-//   logo yok; sadece unvan + sektör. `consent` alanı boşsa alıntı gösterilmez.
-// - Denetçilik tarafsızlığı: belgelendirme denetimine katıldığınız bir kuruluşun
-//   alıntısı hiç eklenmez (ISO/IEC 17021-1).
-// - Rakamlar: kayıtlarla gösterilebilecek değerler. "%100 başarı", "garanti",
-//   "ilk denetimde kesin geçiş" gibi ifadeler yok.
+// Rules:
+// - Testimonials only with the customer's WRITTEN permission; record when and
+//   how it was given in `consent` (an entry with an empty `consent` is not shown).
+// - Reference logos only for actual customers who agreed to be listed. Put the
+//   file under public/referanslar/ (PNG/SVG, transparent background).
+// - Team members only with their consent; a photo is optional.
+// - No unverifiable figures ("100+ müşteri", "%100 başarı", "garanti").
 
-export type TrustStat = {
-  /** Kısa değer, ör. "4–5 ay" */
-  value: string;
-  /** Değerin ne olduğu, ör. "orta ölçekli firmalarda ortalama proje süresi" */
-  label: string;
-};
-
-export type TrustQuote = {
+export type Testimonial = {
   text: string;
-  /** Unvan, ör. "BT Müdürü" */
+  /** Kişinin adı, ör. "Ahmet Y." (soyadı kısaltılabilir) */
+  name: string;
+  /** Unvan, ör. "Bilgi İşlem Müdürü" */
   role: string;
-  /** Sektör ve ölçek, ör. "Lojistik firması, 150 çalışan" */
-  org: string;
-  /** Yazılı iznin alındığı tarih ve kanal, ör. "2026-10-02 e-posta". Boşsa gösterilmez. */
+  /** Firma adı */
+  company: string;
+  /** Yazılı iznin tarihi ve kanalı, ör. "2026-10-02 e-posta". Boşsa gösterilmez. */
   consent: string;
 };
 
-export const trust = {
-  stats: [] as TrustStat[],
-  quotes: [] as TrustQuote[],
-  google: {
-    // Google işletme kaydı (lib/site.ts mapsUrl ile aynı CID).
-    reviewsUrl: "https://www.google.com/maps?cid=3366960503315386982",
-    // Görünür yorum sayısı; 0 iken Google bağlantısı gösterilmez.
-    reviewCount: 0,
-  },
+export type Reference = {
+  name: string;
+  /** /referanslar/<dosya>.png */
+  logo: string;
+  /** Sektör, ör. "Üretim" (referanslar sayfasında gruplanır) */
+  sector?: string;
+  url?: string;
 };
 
-export const trustQuotes = trust.quotes.filter((q) => q.consent.trim() && q.text.trim());
-export const showTrust = trust.stats.length > 0 || trustQuotes.length > 0 || trust.google.reviewCount > 0;
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  /** /ekip/<dosya>.jpg — yoksa baş harfler gösterilir */
+  photo?: string;
+  email?: string;
+  linkedin?: string;
+};
+
+export const testimonials: Testimonial[] = [];
+
+export const references: Reference[] = [];
+
+export const team: TeamMember[] = [];
+
+export const liveTestimonials = testimonials.filter((t) => t.consent.trim() && t.text.trim());

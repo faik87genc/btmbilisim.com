@@ -27,6 +27,7 @@ import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { Button } from "@/components/ensa/Button";
 import { QuoteForm } from "@/components/QuoteForm";
+import { PhishingDemoBand, ReferenceStrip, RiskTestBand, SecurityShowcase, Testimonials } from "@/components/btm/HomeSections";
 import { JsonLd } from "@/components/site/Parts";
 import { serviceCategoryList } from "@/lib/services";
 import { servicePagesContent } from "@/lib/servicePages";
@@ -346,6 +347,10 @@ export default function Home() {
         </Container>
       </section>
 
+      <SecurityShowcase />
+
+      <PhishingDemoBand />
+
       {/* Field services (the old BTM service pages) */}
       <section className="bg-white py-20 md:py-24">
         <Container className="lg:max-w-7xl">
@@ -469,6 +474,10 @@ export default function Home() {
         </Container>
       </section>
 
+      <ReferenceStrip />
+
+      <Testimonials />
+
       {/* Free analysis band */}
       <section className="relative overflow-hidden bg-brand-gradient py-16 md:py-20">
         <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
@@ -507,6 +516,8 @@ export default function Home() {
           </ul>
         </Container>
       </section>
+
+      <RiskTestBand />
 
       {/* Quote form — #teklif: header CTA, article CTAs and AI-written posts link here. */}
       <section id="teklif" className="scroll-mt-28 bg-paper-50 py-16 md:py-24">

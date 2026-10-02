@@ -9,7 +9,10 @@ import {
   Building2,
   ChevronDown,
   ChevronRight,
+  Award,
   Cookie,
+  Gauge,
+  Users,
   FileLock2,
   LayoutGrid,
   Mail,
@@ -26,6 +29,7 @@ import { serviceCategoryList } from "@/lib/services";
 import { servicePagesContent } from "@/lib/servicePages";
 import { products } from "@/lib/products";
 import { categoryIcons, productIcons, serviceIcon } from "@/lib/serviceIcons";
+import { references, team } from "@/lib/data/trust";
 
 // Mega-menu header (layout modelled on invekor.com.tr): "Hizmetler" opens all
 // six service areas with their sub-services, "Ürünler" the software products,
@@ -48,7 +52,11 @@ const areas = serviceCategoryList.map((c) => ({
 
 const corporate: { label: string; href: string; icon: LucideIcon; note: string }[] = [
   { label: "Şirket", href: "/hakkimizda/", icon: Building2, note: "BTM Bilişim'i tanıyın" },
+  // Team and references appear once lib/data/trust.ts has real entries.
+  ...(team.length ? [{ label: "Ekibimiz", href: "/ekibimiz/", icon: Users, note: "Uzman kadromuz" }] : []),
+  ...(references.length ? [{ label: "Referanslar", href: "/referanslar/", icon: Award, note: "Bize güvenen kurumlar" }] : []),
   { label: "Hizmet Rehberi", href: "/hizmet-rehberi/", icon: BookOpen, note: "Sahadaki hizmet sayfalarımız" },
+  { label: "Risk Skoru Testi", href: "/risk-skoru-testi/", icon: Gauge, note: "8 soruda güvenlik risk seviyeniz" },
   { label: "KVKK Aydınlatma Metni", href: "/kvkk-aydinlatma-metni/", icon: FileLock2, note: "Kişisel verilerin korunması" },
   { label: "Çerez Politikası", href: "/cerez-politikasi/", icon: Cookie, note: "Çerez kullanımı ve tercihler" },
 ];

@@ -6,6 +6,7 @@ import { pageDates } from "@/lib/structuredData";
 import { serviceCategoryList } from "@/lib/services";
 import { servicePageParams } from "@/lib/servicePages";
 import { products } from "@/lib/products";
+import { references, team } from "@/lib/data/trust";
 
 // Same URL set as the static site's sitemap.xml (home, /iletisim/, /blog/ +
 // its /blog/sayfa-N/ pages, every content page) plus the Next-only
@@ -55,6 +56,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...Array.from({ length: blogPages - 1 }, (_, i) => entry(`/blog/sayfa-${i + 2}/`, newestPost)),
     ...all.map((p) => entry(pageHref(p), modified(p))),
     entry("/hizmet-rehberi/", CODED_LASTMOD),
+    entry("/risk-skoru-testi/", CODED_LASTMOD),
+    ...(references.length ? [entry("/referanslar/", CODED_LASTMOD)] : []),
+    ...(team.length ? [entry("/ekibimiz/", CODED_LASTMOD)] : []),
     ...serviceCategoryList.map((c) => entry(`/${c.slug}/`, CODED_LASTMOD)),
     ...servicePageParams().map(({ category, service }) => entry(`/${category}/${service}/`, CODED_LASTMOD)),
     entry("/yazilim-urunlerimiz/", CODED_LASTMOD),
