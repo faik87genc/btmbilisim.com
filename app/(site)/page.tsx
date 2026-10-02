@@ -27,7 +27,16 @@ import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { Button } from "@/components/ensa/Button";
 import { QuoteForm } from "@/components/QuoteForm";
-import { PhishingDemoBand, ReferenceStrip, RiskTestBand, SecurityShowcase, Testimonials } from "@/components/btm/HomeSections";
+import {
+  PentestScope,
+  PhishingDemoBand,
+  ReferenceStrip,
+  RiskTestBand,
+  Sectors,
+  SecurityShowcase,
+  Testimonials,
+} from "@/components/btm/HomeSections";
+import { HeroTabs } from "@/components/btm/HeroTabs";
 import { JsonLd } from "@/components/site/Parts";
 import { serviceCategoryList } from "@/lib/services";
 import { servicePagesContent } from "@/lib/servicePages";
@@ -55,13 +64,6 @@ export const metadata: Metadata = {
 
 // Latest posts are read from the DB (HomeBlogSection); 5-min backstop.
 export const revalidate = 300;
-
-const HERO_POINTS = [
-  "Sızma testi deneyimiyle güvenlik odaklı kurulum",
-  "Ağ, sunucu, bulut ve yedekleme tek ekipte",
-  "Gebze merkezli, Kocaeli ve İstanbul'da yerinde servis",
-  "Kurulum sonrası bakım, izleme ve hızlı müdahale",
-];
 
 const QUICK_TILES = [
   { title: "Siber Güvenlik & Sızma Testi", href: "/siber-guvenlik/", icon: ShieldCheck },
@@ -193,23 +195,7 @@ export default function Home() {
             </dl>
           </div>
 
-          <div className="rounded-2xl bg-white p-7 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.5)]">
-            <h2 className="font-display text-xl font-bold text-navy-800">Neden BTM Bilişim?</h2>
-            <ul className="mt-5 space-y-3.5">
-              {HERO_POINTS.map((t) => (
-                <li key={t} className="flex items-start gap-3 text-[15px] text-ink-900">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" aria-hidden="true" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/hakkimizda/"
-              className="mt-7 flex items-center justify-center gap-2 rounded-lg bg-navy-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
-            >
-              Bizi Tanıyın <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
+          <HeroTabs />
         </Container>
       </section>
 
@@ -348,6 +334,10 @@ export default function Home() {
       </section>
 
       <SecurityShowcase />
+
+      <PentestScope />
+
+      <Sectors />
 
       <PhishingDemoBand />
 

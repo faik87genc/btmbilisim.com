@@ -7,7 +7,6 @@ import { Container } from "@/components/ensa/Container";
 import { PageHero } from "@/components/ensa/PageHero";
 import { BlogCard } from "@/components/ensa/BlogCard";
 import { Button } from "@/components/ensa/Button";
-import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { pageHref, tagSlug } from "@/lib/pages";
 import { site } from "@/lib/site";
 import { IMG_SIZES, imageInfo } from "@/lib/imageVariants";
@@ -106,30 +105,6 @@ function ContactBox() {
         </a>
       </div>
     </div>
-  );
-}
-
-function CtaBand() {
-  return (
-    <section className="bg-navy-950 py-16">
-      <Container>
-        <SectionHeading
-          tone="dark"
-          align="center"
-          title="Projenizi birlikte planlayalım."
-          description="İhtiyacınızı ücretsiz keşif görüşmesiyle netleştirelim, size özel teklifimizi hazırlayalım."
-        />
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button href="/iletisim/#teklif" variant="primary">
-            Teklif Alın
-          </Button>
-          <Button href={site.phone.href} variant="ghost-dark">
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            {site.phone.display}
-          </Button>
-        </div>
-      </Container>
-    </section>
   );
 }
 
@@ -239,7 +214,6 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
         </section>
       )}
 
-      <CtaBand />
     </>
   );
 }
@@ -270,7 +244,6 @@ function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof brea
           )}
         </Container>
       </section>
-      <CtaBand />
     </>
   );
 }

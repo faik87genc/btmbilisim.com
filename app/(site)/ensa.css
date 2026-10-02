@@ -1,4 +1,13 @@
-@import "tailwindcss";
+/* Scan only what the public site renders (admin has its own app/globals.css). */
+@import "tailwindcss" source(none);
+@source "./";
+@source "../../components/ensa";
+@source "../../components/btm";
+@source "../../components/site";
+@source "../../components/ContactForm.tsx";
+@source "../../components/QuoteForm.tsx";
+@source "../../components/FieldErrors.tsx";
+@source "../../lib";
 
 /* Design system from ensakurumsal.com. The "gold" accent scale carries the
    BTM logo orange (#e8812f = gold-500) and the "navy" scale the logo blue
@@ -631,4 +640,33 @@
     background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);
     background-size: 22px 22px;
   }
+}
+
+/* Scroll reveal (components/ensa/MotionReveal.tsx). */
+.reveal {
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-hidden {
+  opacity: 0;
+}
+.reveal-hidden.reveal-up {
+  transform: translateY(24px);
+}
+.reveal-hidden.reveal-down {
+  transform: translateY(-24px);
+}
+.reveal-hidden.reveal-left {
+  transform: translateX(24px);
+}
+.reveal-hidden.reveal-right {
+  transform: translateX(-24px);
+}
+.reveal-hidden.reveal-blur {
+  filter: blur(10px);
+}
+.reveal-hover:hover {
+  transform: translateY(-6px);
 }

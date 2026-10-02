@@ -1,6 +1,7 @@
 import { Container } from "@/components/ensa/Container";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { BlogCardSlider } from "@/components/ensa/BlogCardSlider";
+import { toCardPost } from "@/components/ensa/BlogCard";
 import { Button } from "@/components/ensa/Button";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { getPublishedPages, postLikePages } from "@/lib/pages";
@@ -33,7 +34,7 @@ export async function HomeBlogSection() {
         </div>
 
         <div className="mt-12">
-          <BlogCardSlider posts={posts} />
+          <BlogCardSlider posts={posts.map(toCardPost)} />
         </div>
       </Container>
     </section>

@@ -1,22 +1,19 @@
-"use client";
-
-import { m, useReducedMotion } from "framer-motion";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right";
 type Tag = "div" | "li" | "ul" | "section" | "span";
 
-const offsets: Record<Direction, { x?: number; y?: number }> = {
-  up: { y: 24 },
-  down: { y: -24 },
-  left: { x: 24 },
-  right: { x: -24 },
-};
-
 /**
- * Fades + slides its children into view once, respecting
- * `prefers-reduced-motion`. Optional directional entry, entry blur, and a
- * hover/press lift for interactive cards.
+ * Fades + slides its children in once they scroll into view.
+ *
+ * Deliberately NOT a client component: it only marks the element
+ * (`data-reveal` + classes) and the single <RevealObserver/> in the site
+ * layout does the work. A client wrapper here made every revealed block a
+ * client boundary — its children were shipped twice (HTML + RSC payload) and
+ * hydrated one by one, which dominated main-thread time on long pages.
+ *
+ * Content renders visible; the observer hides only elements that start below
+ * the first screen, so above-the-fold content never waits for JavaScript.
  */
 export function MotionReveal({
   children,
@@ -35,26 +32,12 @@ export function MotionReveal({
   blur?: boolean;
   hover?: boolean;
 }) {
-  const reduceMotion = useReducedMotion();
-  const Component = m[as];
-
-  if (reduceMotion) {
-    return <Component className={className}>{children}</Component>;
-  }
-
-  const { x = 0, y = 0 } = offsets[direction];
-  const hoverProps = hover
-    ? { whileHover: { y: -6, transition: { duration: 0.2 } }, whileTap: { y: -2 } }
-    : {};
-
+  const Component = as;
   return (
     <Component
-      className={className}
-      initial={{ opacity: 0, x, y, ...(blur ? { filter: "blur(10px)" } : {}) }}
-      whileInView={{ opacity: 1, x: 0, y: 0, ...(blur ? { filter: "blur(0px)" } : {}) }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-      {...hoverProps}
+      data-reveal=""
+      className={`reveal reveal-${direction}${blur ? " reveal-blur" : ""}${hover ? " reveal-hover" : ""} ${className}`}
+      style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
     </Component>

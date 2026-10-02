@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useReducedMotion } from "framer-motion";
+import { usePrefersReducedMotion } from "./useReducedMotion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BlogCard } from "./BlogCard";
-import type { Page } from "@/lib/db/schema";
+import type { CardPost } from "./BlogCard";
 
 const AUTOPLAY_MS = 5000;
 
@@ -14,11 +14,11 @@ const AUTOPLAY_MS = 5000;
  * no transform math to keep in sync with card width) — the JS layer only
  * drives the autoplay timer, the arrow buttons, and which dot is lit.
  */
-export function BlogCardSlider({ posts }: { posts: Page[] }) {
+export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = usePrefersReducedMotion();
   const multi = posts.length > 1;
 
   const cardWidth = useCallback(() => {

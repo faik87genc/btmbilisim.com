@@ -7,16 +7,16 @@ import { Footer } from "@/components/ensa/Footer";
 import { FloatingContact } from "@/components/ensa/FloatingContact";
 import { ScrollProgress } from "@/components/ensa/ScrollProgress";
 import { CookieBanner } from "@/components/ensa/CookieBanner";
-import { MotionProvider } from "@/components/ensa/MotionProvider";
 import { SiteBehavior } from "@/components/site/SiteBehavior";
 import { ContentGuard } from "@/components/site/ContentGuard";
+import { RevealObserver } from "@/components/ensa/RevealObserver";
 
 // Public site: design from ensakurumsal.com (Tailwind, components/ensa),
 // content and data layer from this project (lib/pages.ts, the admin panel).
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
-    <MotionProvider>
+    <>
       {/* RSS autodiscovery (app/feed.xml). React hoists <link> into <head>. */}
       <link rel="alternate" type="application/rss+xml" title="BTM Bilişim Blog" href="/feed.xml" />
       <a
@@ -36,9 +36,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <FloatingContact />
       <SiteBehavior />
       <ContentGuard />
+      <RevealObserver />
       {/* Cookieless page-view counts (no consent needed); GA4 in SiteBehavior
           still loads only after cookie consent. Public pages only, not /admin. */}
       <Analytics />
-    </MotionProvider>
+    </>
   );
 }

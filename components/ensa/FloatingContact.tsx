@@ -27,7 +27,7 @@ export function FloatingContact() {
         href={site.phone.href}
         aria-label={`Hemen arayın — ${site.phone.display}`}
         title={`Hemen arayın — ${site.phone.display}`}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-navy-950 text-paper-50 shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-navy-800 focus-visible:scale-105"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-navy-800 text-paper-50 shadow-lg ring-2 ring-white/40 transition-transform duration-200 hover:scale-105 hover:bg-navy-800 focus-visible:scale-105"
       >
         <Phone className="h-5 w-5" />
       </a>

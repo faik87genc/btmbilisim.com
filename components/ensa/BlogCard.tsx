@@ -2,6 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, ArrowUpRight, Newspaper } from "lucide-react";
 import type { Page } from "@/lib/db/schema";
+
+/** Only what a card shows — keeps client payloads (BlogCardSlider) small. */
+export type CardPost = Pick<Page, "id" | "slug" | "title" | "excerpt" | "coverImageUrl" | "tags" | "publishedAt">;
+
+export function toCardPost(p: CardPost): CardPost {
+  return {
+    id: p.id,
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    coverImageUrl: p.coverImageUrl,
+    tags: p.tags.slice(0, 1),
+    publishedAt: p.publishedAt,
+  };
+}
 import { MotionReveal } from "./MotionReveal";
 
 /**
@@ -15,7 +30,7 @@ export function BlogCard({
   delay = 0,
   priority = false,
 }: {
-  post: Page;
+  post: CardPost;
   delay?: number;
   /** Pass true for above-the-fold cards (first row) to skip lazy-loading. */
   priority?: boolean;

@@ -26,7 +26,6 @@ import {
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { serviceCategoryList } from "@/lib/services";
-import { servicePagesContent } from "@/lib/servicePages";
 import { products } from "@/lib/products";
 import { categoryIcons, productIcons, serviceIcon } from "@/lib/serviceIcons";
 import { references, team } from "@/lib/data/trust";
@@ -39,15 +38,13 @@ import { references, team } from "@/lib/data/trust";
 /** Sub-services shown per area in the desktop mega menu; the rest sit behind "Tümü". */
 const MEGA_ITEMS = 5;
 
-const detailSlug = new Map(servicePagesContent.map((s) => [`${s.categorySlug}/${s.serviceKey}`, s.slug]));
 const areas = serviceCategoryList.map((c) => ({
   slug: c.slug,
   title: c.shortTitle,
   icon: categoryIcons[c.slug],
-  services: c.services.map((s) => {
-    const slug = detailSlug.get(`${c.slug}/${s.key}`);
-    return { key: s.key, name: s.name, href: slug ? `/${c.slug}/${slug}/` : `/${c.slug}/` };
-  }),
+  // Detail pages live at /{category}/{key}/ (lib/servicePages.ts keeps slug === serviceKey;
+  // importing that file here would ship every page body to the browser).
+  services: c.services.map((s) => ({ key: s.key, name: s.name, href: `/${c.slug}/${s.key}/` })),
 }));
 
 const corporate: { label: string; href: string; icon: LucideIcon; note: string }[] = [

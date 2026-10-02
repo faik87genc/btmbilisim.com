@@ -1,170 +1,149 @@
 import Link from "next/link";
-import { ChevronRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, ChevronRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Container } from "./Container";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
+import { serviceCategoryList } from "@/lib/services";
+import { references, team } from "@/lib/data/trust";
 
-const quickLinks = [
+// Corporate footer: contact strip, site map columns (service areas, products,
+// corporate pages) and the legal bar. Logo-blue ground, orange accents.
+
+const corporate = [
   { label: "Hakkımızda", href: "/hakkimizda/" },
-  { label: "Hizmetlerimiz", href: "/hizmetler/" },
+  ...(team.length ? [{ label: "Ekibimiz", href: "/ekibimiz/" }] : []),
+  ...(references.length ? [{ label: "Referanslar", href: "/referanslar/" }] : []),
   { label: "Hizmet Rehberi", href: "/hizmet-rehberi/" },
-  { label: "Yazılım Ürünlerimiz", href: "/yazilim-urunlerimiz/" },
+  { label: "Risk Skoru Testi", href: "/risk-skoru-testi/" },
   { label: "Blog", href: "/blog/" },
   { label: "İletişim", href: "/iletisim/" },
 ];
 
-const legalLinks = [
+const legal = [
   { label: "KVKK Aydınlatma Metni", href: "/kvkk-aydinlatma-metni/" },
   { label: "Çerez Politikası", href: "/cerez-politikasi/" },
 ];
 
-const contactRows = [
-  { icon: Phone, label: "Sabit Telefon", value: site.phone.display, href: site.phone.href },
-  { icon: MessageCircle, label: "WhatsApp", value: site.whatsapp.display, href: site.whatsapp.href },
-  { icon: Mail, label: "Mail Adresimiz", value: site.email, href: `mailto:${site.email}` },
-  { icon: MapPin, label: "Konumumuz", value: "Gebze / Kocaeli", href: "/iletisim/" },
-];
-
-const brandPillars = ["SİBER GÜVENLİK", "ALTYAPI", "YAZILIM"];
-
-function FooterHeading({ children }: { children: React.ReactNode }) {
+function Heading({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-gold-800">
-      <span className="h-px w-6 bg-gold-600" />
+    <h2 className="flex items-center gap-2.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">
+      <span className="h-0.5 w-5 rounded-full bg-gold-500" aria-hidden="true" />
       {children}
-    </div>
+    </h2>
+  );
+}
+
+function LinkList({ items }: { items: { label: string; href: string }[] }) {
+  return (
+    <ul className="mt-5 space-y-2.5">
+      {items.map((l) => (
+        <li key={l.href}>
+          <Link href={l.href} className="group flex items-center gap-1.5 text-sm text-slate-300 transition-colors hover:text-white">
+            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-gold-400 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            {l.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-navy-950/10 bg-paper-100">
-      <span
-        className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold-700 via-gold-400 to-gold-700"
-        aria-hidden="true"
-      />
+    <footer className="relative overflow-hidden bg-navy-950 text-slate-300">
+      <div className="bg-dots pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
 
-      <Container className="relative py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.15fr_0.85fr_0.85fr_0.95fr]">
+      {/* Contact strip */}
+      <div className="relative border-b border-white/10">
+        <Container className="flex flex-col items-start justify-between gap-5 py-8 md:flex-row md:items-center lg:max-w-7xl">
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/assets/img/logo-full.webp"
-              alt="BTM Bilişim — Bilgi Teknolojileri Merkezi"
-              width={375}
-              height={120}
-              loading="lazy"
-              className="h-12 w-auto"
-            />
-            <p className="mt-5 font-display text-lg font-semibold">
-              <span className="bg-gradient-to-r from-gold-700 to-gold-600 bg-clip-text text-transparent">
-                Dijital geleceğinizi güvenle şekillendirin.
-              </span>
-            </p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">
-              {site.description}
-            </p>
+            <p className="font-display text-2xl font-bold text-white">Projenizi birlikte planlayalım.</p>
+            <p className="mt-1 text-sm text-slate-300">Ücretsiz keşif ve teklif için bize ulaşın; aynı gün dönüş yapalım.</p>
           </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/#teklif"
+              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-950 transition-colors hover:bg-gold-400"
+            >
+              Teklif Alın <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <a
+              href={site.phone.href}
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-gold-300 hover:text-gold-300"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
+            </a>
+          </div>
+        </Container>
+      </div>
 
-          <div>
-            <FooterHeading>Hızlı Menü</FooterHeading>
-            <ul className="mt-5 space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group flex items-center gap-1.5 text-sm text-ink-900 transition-colors hover:text-gold-600"
-                  >
-                    <ChevronRight
-                      className="h-3.5 w-3.5 shrink-0 text-gold-500 transition-transform duration-200 group-hover:translate-x-0.5"
-                      aria-hidden="true"
-                    />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <FooterHeading>Yazılım Ürünlerimiz</FooterHeading>
-            <ul className="mt-5 space-y-3">
-              {products.map((product) => (
-                <li key={product.slug}>
-                  <Link
-                    href={`/yazilim-urunlerimiz/${product.slug}/`}
-                    className="group flex items-center gap-1.5 text-sm text-ink-900 transition-colors hover:text-gold-600"
-                  >
-                    <ChevronRight
-                      className="h-3.5 w-3.5 shrink-0 text-gold-500 transition-transform duration-200 group-hover:translate-x-0.5"
-                      aria-hidden="true"
-                    />
-                    {product.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <FooterHeading>İletişim Bilgilerimiz</FooterHeading>
-            <ul className="mt-5 space-y-4">
-              {contactRows.map((row) => (
-                <li key={row.label} className="flex items-start gap-3">
-                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-600">
-                    <row.icon className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-slate-500">
-                      {row.label}
-                    </div>
-                    <a
-                      href={row.href}
-                      className="text-sm font-medium text-ink-900 transition-colors hover:text-gold-600"
-                    >
-                      {row.value}
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <Container className="relative grid gap-10 py-14 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/img/logo-full-light.webp"
+            alt="BTM Bilişim — Bilgi Teknolojileri Merkezi"
+            width={375}
+            height={120}
+            loading="lazy"
+            className="h-14 w-auto"
+          />
+          <p className="mt-5 max-w-sm text-sm leading-relaxed">{site.description}</p>
+          <ul className="mt-6 space-y-3 text-sm">
+            <li>
+              <a href={site.phone.href} className="flex items-center gap-3 hover:text-white">
+                <Phone className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.phone.display}
+              </a>
+            </li>
+            <li>
+              <a href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white">
+                <MessageCircle className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.mobile.display} (WhatsApp)
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all hover:text-white">
+                <Mail className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.email}
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.address}
+            </li>
+          </ul>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-navy-950/10 pt-6 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3 text-xs text-slate-500 md:flex-row md:items-center md:gap-5">
-            <span>
-              © {new Date().getFullYear()} {site.name} — {site.legalName}. Tüm hakları
-              saklıdır.
-            </span>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="transition-colors hover:text-ink-900"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <button type="button" id="cookie-prefs" className="transition-colors hover:text-ink-900">
-                Çerez Tercihleri
-              </button>
-            </div>
-          </div>
+        <div>
+          <Heading>Hizmet Alanları</Heading>
+          <LinkList items={serviceCategoryList.map((c) => ({ label: c.shortTitle, href: `/${c.slug}/` }))} />
+        </div>
 
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] uppercase tracking-[0.18em] text-gold-800">
-            {brandPillars.map((pillar, i) => (
-              <span key={pillar} className="flex items-center gap-3">
-                {pillar}
-                {i < brandPillars.length - 1 && (
-                  <span className="h-1 w-1 rounded-full bg-gold-500/60" />
-                )}
-              </span>
-            ))}
-          </div>
+        <div>
+          <Heading>Yazılım Ürünleri</Heading>
+          <LinkList items={products.map((p) => ({ label: p.name, href: `/yazilim-urunlerimiz/${p.slug}/` }))} />
+        </div>
+
+        <div>
+          <Heading>Kurumsal</Heading>
+          <LinkList items={corporate} />
         </div>
       </Container>
+
+      <div className="relative border-t border-white/10">
+        <Container className="flex flex-col gap-3 py-6 text-xs text-slate-300 md:flex-row md:items-center md:justify-between lg:max-w-7xl">
+          <span>
+            © {new Date().getFullYear()} {site.name} — {site.legalName}. Tüm hakları saklıdır.
+          </span>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            {legal.map((l) => (
+              <Link key={l.href} href={l.href} className="hover:text-white">
+                {l.label}
+              </Link>
+            ))}
+            <button type="button" id="cookie-prefs" className="hover:text-white">
+              Çerez Tercihleri
+            </button>
+          </div>
+        </Container>
+      </div>
     </footer>
   );
 }
