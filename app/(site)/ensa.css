@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 /* Design system from ensakurumsal.com. The "gold" accent scale carries the
-   BTM logo orange (#e8812f = gold-500); swap these seven values back to
+   BTM logo orange (#e8812f = gold-500) and the "navy" scale the logo blue
+   (#0e4a8b = navy-800); swap these values back to
    Ensa's gold (#6e5714 … #f3e6bb) to restore the original accent.
    Text tones (600–800) are dark enough for AA contrast on paper/white. */
 :root {
-  --navy-950: #0a1628;
-  --navy-900: #0d1d33;
-  --navy-800: #13294a;
-  --navy-700: #1b3a66;
+  --navy-950: #072b55;
+  --navy-900: #0a3a70;
+  --navy-800: #0e4a8b;
+  --navy-700: #1763b3;
   --gold-800: #7a3c0b;
   --gold-700: #8f480f;
   --gold-600: #a85512;
@@ -16,11 +17,11 @@
   --gold-400: #ee9650;
   --gold-300: #f4b47e;
   --gold-100: #fbe3cc;
-  --paper-50: #f7f5f1;
-  --paper-100: #efeae1;
-  --ink-900: #12151c;
-  --slate-500: #5a6470;
-  --slate-300: #a4acb5;
+  --paper-50: #f6f8fc;
+  --paper-100: #e9eff8;
+  --ink-900: #0f1b2d;
+  --slate-500: #51607a;
+  --slate-300: #c3d1e6;
 
   --background: var(--paper-50);
   --foreground: var(--ink-900);
@@ -618,5 +619,16 @@
     background: transparent;
     padding: 0;
     color: inherit;
+  }
+}
+
+/* Brand surfaces (logo blue): hero / CTA gradient and a faint dot grid. */
+@layer utilities {
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+  }
+  .bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);
+    background-size: 22px 22px;
   }
 }

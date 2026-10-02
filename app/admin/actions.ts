@@ -640,7 +640,7 @@ const DB_MISSING_ERROR =
 // Top-level segments owned by real routes/files: a flat page with one of these
 // slugs would be saved but never reachable (the static route wins).
 const RESERVED_PAGE_SLUGS = new Set([
-  "admin", "api", "blog", "iletisim", "wp-content", "hizmet-rehberi", "yazilim-urunlerimiz",
+  "admin", "api", "blog", "iletisim", "wp-content", "hizmet-rehberi", "yazilim-urunlerimiz", "anasayfa-2",
   // Service categories (lib/services.ts) — static routes with /{category}/{service}/ below them.
   "danismanlik", "siber-guvenlik", "sistem-network", "bulut-yedekleme", "yazilim-dijital", "lisanslama",
   "sitemap-xml", "robots-txt", "assets", "_next",
