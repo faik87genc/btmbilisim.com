@@ -1,0 +1,4 @@
+Contact: mailto:info@iso27001danismanlik.com
+Expires: 2027-09-26T00:00:00.000Z
+Preferred-Languages: tr, en
+Canonical: https://www.iso27001danismanlik.com/.well-known/security.txt

@@ -1,0 +1,188 @@
+[
+ {
+  "text": "Anasayfa",
+  "href": "/"
+ },
+ {
+  "text": "Kurumsal",
+  "href": "/hakkimizda/",
+  "children": [
+   {
+    "text": "Hakkımızda",
+    "href": "/hakkimizda/"
+   },
+   {
+    "text": "Vizyonumuz",
+    "href": "/vizyonumuz/"
+   },
+   {
+    "text": "Misyonumuz",
+    "href": "/misyonumuz/"
+   },
+   {
+    "text": "Bilgi Güvenliği Politikası",
+    "href": "/bilgi-guvenligi-politikasi/"
+   },
+   {
+    "text": "Kişisel Verilerin Korunması Politikası",
+    "href": "/kisisel-verilerin-korunmasi-politikasi/"
+   },
+   {
+    "text": "Çerez Politikası",
+    "href": "/cerez-politikasi/"
+   },
+   {
+    "text": "Kullanım Koşulları",
+    "href": "/kullanim-kosullari/"
+   }
+  ]
+ },
+ {
+  "text": "ISO 27001",
+  "href": "/iso-27001/",
+  "children": [
+   {
+    "text": "ISO 27001 Nedir",
+    "href": "/iso-27001-nedir/"
+   },
+   {
+    "text": "ISO 27001 Belgesi",
+    "href": "/iso-27001-belgesi/"
+   },
+   {
+    "text": "ISO 27001 Danışmanlık",
+    "href": "/"
+   },
+   {
+    "text": "ISO 27001 Şartları",
+    "href": "/iso-27001-sartlari/"
+   },
+   {
+    "text": "ISO 27001 Belgesi Nasıl Alınır?",
+    "href": "/iso-27001-belgesi-nasil-alinir/"
+   },
+   {
+    "text": "ISO 27001 Kaç Günde Alınır?",
+    "href": "/iso-27001-kac-gunde-alinir/"
+   },
+   {
+    "text": "ISO 27001 Danışmanlık Fiyatı",
+    "href": "/iso-27001-danismanlik-fiyati/"
+   },
+   {
+    "text": "ISO 27001 Belgesi Fiyatı",
+    "href": "/iso-27001-belgesi-fiyati/"
+   },
+   {
+    "text": "ISO 27001 Danışmanlık Firması",
+    "href": "/iso-27001-danismanlik-firmasi/"
+   }
+  ]
+ },
+ {
+  "text": "Danışmanlık",
+  "href": "/danismanlik-hizmetleri/",
+  "children": [
+   {
+    "text": "ISO 27001 Danışmanlık Hizmeti",
+    "href": "/iso-27001-danismanlik-hizmeti/"
+   },
+   {
+    "text": "Bilgi ve İletişim Güvenliği Rehberi",
+    "href": "/bilgi-ve-iletisim-guvenligi-rehberi/"
+   },
+   {
+    "text": "Bilgi Güvenliği Yönetim Sistemi",
+    "href": "/bilgi-guvenligi-yonetim-sistemi/"
+   },
+   {
+    "text": "BGYS Danışmanlık",
+    "href": "/bgys-danismanlik/"
+   },
+   {
+    "text": "ISO 27701 Kişisel Veri Yönetim Sistemi",
+    "href": "/iso-27701-kisisel-veri-yonetim-sistemi/"
+   },
+   {
+    "text": "ISO20000-1 Bilgi Teknolojileri Hizmet Yönetim Sistemi",
+    "href": "/iso20000-1-bilgi-teknolojileri-hizmet-yonetim-sistemi/"
+   },
+   {
+    "text": "ISO22301 İş Sürekliliği Yönetim Sistemi",
+    "href": "/iso22301-is-surekliligi-yonetim-sistemi/"
+   },
+   {
+    "text": "KVKK Danışmanlığı",
+    "href": "/kvkk-danismanligi/"
+   }
+  ]
+ },
+ {
+  "text": "Siber Güvenlik",
+  "href": "/siber-guvenlik-hizmetleri/",
+  "children": [
+   {
+    "text": "Sızma Testi (Pentest) Hizmeti",
+    "href": "/sizma-testi-pentest-hizmeti/",
+    "children": [
+     {
+      "text": "White Box",
+      "href": "/white-box/"
+     },
+     {
+      "text": "Grey Box",
+      "href": "/grey-box/"
+     },
+     {
+      "text": "Black Box",
+      "href": "/black-box/"
+     }
+    ]
+   },
+   {
+    "text": "Oltalama Tatbikatı",
+    "href": "/oltalama-tatbikati/"
+   }
+  ]
+ },
+ {
+  "text": "Eğitim",
+  "href": "/egitim-hizmetleri/",
+  "children": [
+   {
+    "text": "İç Tetkikçi Eğitimi",
+    "href": "/ic-tetkikci-egitimi/"
+   },
+   {
+    "text": "KVKK Farkındalık Eğitimi",
+    "href": "/kvkk-farkindalik-egitimi/",
+    "children": [
+     {
+      "text": "İdari Tedbirler",
+      "href": "/idari-tedbirler/"
+     },
+     {
+      "text": "Teknik Tedbirler",
+      "href": "/teknik-tedbirler/"
+     },
+     {
+      "text": "Hukuki Tedbirler",
+      "href": "/hukuki-tedbirler/"
+     }
+    ]
+   },
+   {
+    "text": "Bilgi Güvenliği Temel Eğitimi",
+    "href": "/bilgi-guvenligi-temel-egitimi/"
+   },
+   {
+    "text": "Bilgi Güvenliği Farkındalık Eğitimi",
+    "href": "/bilgi-guvenligi-farkindalik-egitimi/"
+   }
+  ]
+ },
+ {
+  "text": "İletişim",
+  "href": "/iletisim/"
+ }
+]

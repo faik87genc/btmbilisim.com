@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+/*
+ * Color tokens keep the same NAMES as the source project's admin UI (navy-*,
+ * gold-*, paper-*, ink-*, slate-*) so every admin component ported verbatim
+ * from that project renders correctly with zero markup changes — only the
+ * underlying hex values change, mapped from this site's actual extracted
+ * brand palette (see _legacy-static-site/assets/css/style.css :root).
+ * "gold-*" here is the site's royal-blue/sky accent, not literal gold.
+ */
+:root {
+  --navy-950: #153355;
+  --navy-900: #1a3d63;
+  --navy-800: #204971;
+  --navy-700: #29578a;
+
+  --gold-800: #1f5c99;
+  --gold-700: #2665ab;
+  --gold-600: #2d6ebc;
+  --gold-500: #3773c2;
+  --gold-400: #4fb0e7;
+  --gold-300: #7cc3ed;
+  --gold-100: #eff6fc;
+  --gold-50: #f5faff;
+
+  --teal-700: #16805f;
+  --teal-600: #1f9d74;
+  --teal-500: #29b585;
+
+  --paper-50: #ffffff;
+  --paper-100: #eff6fc;
+  --ink-900: #1f2e42;
+  --slate-500: #55677e;
+  --slate-300: #9db1c4;
+
+  --background: var(--paper-50);
+  --foreground: var(--ink-900);
+}
+
+@theme inline {
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-700: var(--gold-700);
+  --color-gold-600: var(--gold-600);
+  --color-gold-500: var(--gold-500);
+  --color-gold-400: var(--gold-400);
+  --color-gold-300: var(--gold-300);
+  --color-gold-100: var(--gold-100);
+  --color-gold-50: var(--gold-50);
+  --color-teal-700: var(--teal-700);
+  --color-teal-600: var(--teal-600);
+  --color-teal-500: var(--teal-500);
+  --color-paper-50: var(--paper-50);
+  --color-paper-100: var(--paper-100);
+  --color-ink-900: var(--ink-900);
+  --color-slate-500: var(--slate-500);
+  --color-slate-300: var(--slate-300);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--paper-100);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--gold-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* Long-form body copy (pages, blog posts) rendered from Markdown. */
+@layer components {
+  .markdown-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--slate-500);
+  }
+  .markdown-content > * + * {
+    margin-top: 1.25rem;
+  }
+  .markdown-content > p:first-of-type {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--ink-900);
+  }
+  .markdown-content h2 {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    padding-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-900);
+  }
+  .markdown-content h2::before {
+    content: "";
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    background: var(--gold-500);
+  }
+  .markdown-content h3 {
+    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--ink-900);
+  }
+  .markdown-content strong {
+    color: var(--ink-900);
+    font-weight: 600;
+  }
+  .markdown-content ul {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  .markdown-content ul > li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .markdown-content ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    height: 0.375rem;
+    width: 0.375rem;
+    border-radius: 9999px;
+    background: var(--gold-500);
+  }
+  .markdown-content ol {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    counter-reset: step;
+  }
+  .markdown-content ol > li {
+    position: relative;
+    min-height: 2rem;
+    padding-left: 3rem;
+    counter-increment: step;
+  }
+  .markdown-content ol > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: var(--gold-500);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+  }
+  .markdown-content a {
+    color: var(--gold-700);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .markdown-content a:hover {
+    color: var(--ink-900);
+  }
+  .markdown-content blockquote {
+    border-left: 2px solid var(--gold-500);
+    padding-left: 1rem;
+    font-style: italic;
+  }
+  .markdown-content code {
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--navy-950) 5%, transparent);
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .markdown-content th,
+  .markdown-content td {
+    border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .form-input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 15%, transparent);
+    background: white;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9375rem;
+    color: var(--ink-900);
+    transition: border-color 0.2s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--gold-500);
+  }
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
