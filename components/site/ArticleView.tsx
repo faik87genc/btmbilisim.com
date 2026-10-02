@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { ArrowUpRight, CalendarDays, Clock, Mail, MessageCircle, Phone, User } from "lucide-react";
 import type { Page } from "@/lib/db/schema";
-import { Icon } from "@/components/site/Icon";
 import { SiteMarkdown } from "@/components/site/SiteMarkdown";
-import { Breadcrumbs, CtaBand, JsonLd } from "@/components/site/Parts";
-import { pageHref } from "@/lib/pages";
+import { JsonLd } from "@/components/site/Parts";
+import { Container } from "@/components/ensa/Container";
+import { PageHero } from "@/components/ensa/PageHero";
+import { BlogCard } from "@/components/ensa/BlogCard";
+import { Button } from "@/components/ensa/Button";
+import { SectionHeading } from "@/components/ensa/SectionHeading";
+import { pageHref, tagSlug } from "@/lib/pages";
+import { site } from "@/lib/site";
 import { IMG_SIZES, imageInfo } from "@/lib/imageVariants";
 import { articleJsonLd, faqPageJsonLd, organizationJsonLd, serviceJsonLd } from "@/lib/structuredData";
 import {
@@ -12,74 +18,39 @@ import {
   faqPairs,
   formatDateTr,
   isPost,
-  postTag,
   readingTimeMinutes,
-  splitAtFirstH2,
   type TocEntry,
 } from "@/lib/siteView";
 
-// One page of content (DB row) in the static site's page.html layout: posts
-// get the two-column article with TOC + sidebar, core pages a centred column.
+// One page of content (DB row, or the imported WordPress copy) in the
+// ensakurumsal.com design: posts get the article layout with TOC + sidebar,
+// core pages (old service pages, legal texts, about) a single column.
 
-function TocBox({ toc }: { toc: TocEntry[] }) {
+function Toc({ toc }: { toc: TocEntry[] }) {
   return (
-    <details className="toc-box" open>
-      <summary>
-        <span className="toc-title">İçerik</span> <span className="toc-toggle" aria-hidden="true" />
-      </summary>
-      <nav aria-label="İçindekiler">
-        <ol className="toc">
-          {toc.map((t, i) => (
-            <li key={t.id}>
-              <a href={`#${t.id}`}>
-                <span className="toc-n">{i + 1}</span> {t.text}
-              </a>
-              {t.children.length > 0 && (
-                <ol>
-                  {t.children.map((c, j) => (
-                    <li key={c.id}>
-                      <a href={`#${c.id}`}>
-                        <span className="toc-n">
-                          {i + 1}.{j + 1}
-                        </span>{" "}
-                        {c.text}
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              )}
-            </li>
-          ))}
-        </ol>
-      </nav>
-    </details>
-  );
-}
-
-export function ArticleView({ page, related, draftNote }: { page: Page; related: Page[]; draftNote?: string | null }) {
-  const post = isPost(page);
-  const description = page.metaDescription || page.excerpt;
-  const faqs = post ? faqPairs(page.content) : [];
-  const service = post ? null : serviceJsonLd(pageHref(page));
-
-  return (
-    <>
-      {!draftNote && <JsonLd data={organizationJsonLd()} />}
-      {!draftNote && post && <JsonLd data={articleJsonLd(page, description)} />}
-      {!draftNote && service && <JsonLd data={service} />}
-      {!draftNote && faqs.length > 0 && <JsonLd data={faqPageJsonLd(faqs)} />}
-      {draftNote && (
-        <div style={{ background: "#f59e0b", color: "#0c1e33", padding: "8px 16px", textAlign: "center", fontSize: 14, fontWeight: 600 }}>
-          {draftNote}
-        </div>
-      )}
-      <Breadcrumbs crumbs={breadcrumbsFor(page)} />
-      <main id="main" tabIndex={-1}>
-        <article className="section">
-          <div className="wrap">{post ? <PostBody page={page} related={related} /> : <CoreBody page={page} />}</div>
-        </article>
-      </main>
-    </>
+    <nav aria-label="İçindekiler" className="mb-10 rounded-sm border border-navy-950/10 bg-white p-5">
+      <div className="mb-2 text-xs font-medium uppercase tracking-wider text-slate-500">İçindekiler</div>
+      <ol className="space-y-1.5 text-sm">
+        {toc.map((t, i) => (
+          <li key={t.id}>
+            <a href={`#${t.id}`} className="text-slate-600 underline-offset-2 hover:text-gold-700 hover:underline">
+              <span className="mr-1 text-slate-400">{i + 1}.</span> {t.text}
+            </a>
+            {t.children.length > 0 && (
+              <ol className="mt-1.5 space-y-1.5 pl-5">
+                {t.children.map((c) => (
+                  <li key={c.id}>
+                    <a href={`#${c.id}`} className="text-slate-500 underline-offset-2 hover:text-gold-700 hover:underline">
+                      {c.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
   );
 }
 
@@ -90,7 +61,7 @@ function CoverImage({ src, alt }: { src: string; alt: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className="post-hero-img"
+      className="mb-10 aspect-[16/9] w-full rounded-sm border border-navy-950/10 object-cover"
       src={info?.src ?? src}
       srcSet={info?.srcSet}
       sizes={info?.srcSet ? IMG_SIZES.cover : undefined}
@@ -104,86 +75,202 @@ function CoverImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-function PostBody({ page, related }: { page: Page; related: Page[] }) {
-  const toc = buildNestedToc(page.content);
-  const [intro, rest] = toc.length ? splitAtFirstH2(page.content) : [page.content, ""];
-  const date = page.publishedAt ?? page.createdAt;
-
+function ContactBox() {
   return (
-    <div className="post-layout">
-      <div>
-        <span className="tag">{postTag(page)}</span>
-        <h1>{page.title}</h1>
-        <div className="post-meta">
-          <span>
-            <Icon id="user" size={14} /> {page.authorName || "Uzman Ekibimiz"}
-          </span>
-          <span>
-            <Icon id="calendar" size={14} /> {formatDateTr(date)}
-          </span>
-          <span>
-            <Icon id="clock" size={14} /> {readingTimeMinutes(page.content)} dk okuma
-          </span>
-        </div>
-        {page.coverImageUrl && <CoverImage src={page.coverImageUrl} alt={page.title} />}
-
-        <div className="entry-content">
-          {/* Without a cover, the first in-content image is the likely LCP element. */}
-          <SiteMarkdown content={intro} eagerFirstImage={!page.coverImageUrl} />
-          {toc.length > 0 && <TocBox toc={toc} />}
-          {rest && <SiteMarkdown content={rest} />}
-        </div>
-
-        <CtaBand
-          style={{ marginTop: 48 }}
-          title="Ücretsiz Danışmanlık Teklifi Alın"
-          text="24 saat içinde sizinle iletişime geçilsin."
-          cta="Hemen Teklif Alın"
-        />
+    <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Hemen Başlayalım</p>
+      <h2 className="mt-3 font-display text-xl font-semibold text-ink-900">Ücretsiz keşif görüşmesi</h2>
+      <p className="mt-2 text-sm leading-relaxed text-slate-500">
+        İhtiyacınızı anlatın; ekibimiz durumunuzu ilk görüşmede netleştirsin.
+      </p>
+      <Button href="/iletisim/#teklif" variant="primary" className="mt-5 w-full">
+        Teklif Alın
+      </Button>
+      <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
+        <a href={site.phone.href} className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700">
+          <Phone className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          {site.phone.display}
+        </a>
+        <a
+          href={site.whatsapp.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700"
+        >
+          <MessageCircle className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          WhatsApp
+        </a>
+        <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
+          <Mail className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          {site.email}
+        </a>
       </div>
-
-      <aside>
-        <div className="side-cta">
-          <h2 className="side-h">Ücretsiz Keşif Görüşmesi</h2>
-          <p>Siber güvenlik, altyapı ve IT destek ihtiyaçlarınız için hemen görüşün.</p>
-          <Link className="btn btn-on-navy btn-block" href="/#teklif">
-            İletişime Geçin
-          </Link>
-        </div>
-        {related.length > 0 && (
-          <div className="side-box">
-            <h2 className="side-h">İlgili Yazılar</h2>
-            <ul className="related-list">
-              {related.map((r) => (
-                <li key={r.id}>
-                  <Link href={pageHref(r)}>{r.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </aside>
     </div>
   );
 }
 
-function CoreBody({ page }: { page: Page }) {
+function CtaBand() {
+  return (
+    <section className="bg-navy-950 py-16">
+      <Container>
+        <SectionHeading
+          tone="dark"
+          align="center"
+          title="Projenizi birlikte planlayalım."
+          description="İhtiyacınızı ücretsiz keşif görüşmesiyle netleştirelim, size özel teklifimizi hazırlayalım."
+        />
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Button href="/iletisim/#teklif" variant="primary">
+            Teklif Alın
+          </Button>
+          <Button href={site.phone.href} variant="ghost-dark">
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            {site.phone.display}
+          </Button>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+export function ArticleView({ page, related, draftNote }: { page: Page; related: Page[]; draftNote?: string | null }) {
+  const post = isPost(page);
+  const description = page.metaDescription || page.excerpt;
+  const faqs = post ? faqPairs(page.content) : [];
+  const service = post ? null : serviceJsonLd(pageHref(page));
+  const crumbs = breadcrumbsFor(page);
+
   return (
     <>
-      <div className="sec-head" style={{ maxWidth: 820 }}>
-        <h1>{page.title}</h1>
-      </div>
-      <div className="entry-content" style={{ maxWidth: 820, margin: "0 auto" }}>
-        {/* Core pages have no separate hero image; the first content image sits
-            right under the H1 and is usually the LCP element. */}
-        <SiteMarkdown content={page.content} eagerFirstImage />
-      </div>
-      <CtaBand
-        style={{ marginTop: 56 }}
-        title="Projenizi Birlikte Planlayalım"
-        text="İhtiyacınızı ücretsiz keşif görüşmesiyle netleştirelim, size özel teklifimizi hazırlayalım."
-        cta="Ücretsiz Teklif Alın"
-      />
+      {!draftNote && <JsonLd data={organizationJsonLd()} />}
+      {!draftNote && post && <JsonLd data={articleJsonLd(page, description)} />}
+      {!draftNote && service && <JsonLd data={service} />}
+      {!draftNote && faqs.length > 0 && <JsonLd data={faqPageJsonLd(faqs)} />}
+      {draftNote && (
+        <div className="bg-amber-500 px-4 py-2 text-center text-sm font-medium text-navy-950">{draftNote}</div>
+      )}
+      {post ? <PostBody page={page} related={related} crumbs={crumbs} /> : <CoreBody page={page} crumbs={crumbs} />}
+    </>
+  );
+}
+
+function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crumbs: ReturnType<typeof breadcrumbsFor> }) {
+  const toc = buildNestedToc(page.content);
+  const date = page.publishedAt ?? page.createdAt;
+
+  return (
+    <>
+      <PageHero title={page.title} crumbs={[{ text: "Blog", href: "/blog/" }, ...crumbs]}>
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.15em] text-gold-300">
+          <span className="flex items-center gap-2">
+            <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
+            {formatDateTr(date)}
+          </span>
+          <span className="flex items-center gap-2">
+            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+            {readingTimeMinutes(page.content)} dk okuma
+          </span>
+          <span className="flex items-center gap-2">
+            <User className="h-3.5 w-3.5" aria-hidden="true" />
+            {page.authorName || "BTM Bilişim Ekibi"}
+          </span>
+        </div>
+        {page.tags.length > 0 && (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {page.tags.map((t) => (
+              <Link
+                key={t}
+                href={`/blog/etiket/${tagSlug(t)}/`}
+                className="rounded-full border border-paper-50/15 px-3 py-1 text-xs font-medium text-slate-300 hover:border-gold-300/50 hover:text-gold-100"
+              >
+                {t}
+              </Link>
+            ))}
+          </div>
+        )}
+      </PageHero>
+
+      <section className="bg-paper-50 py-16 md:py-20">
+        <Container className="max-w-6xl">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+            <article className="min-w-0">
+              {page.coverImageUrl && <CoverImage src={page.coverImageUrl} alt={page.title} />}
+              {toc.length > 0 && <Toc toc={toc} />}
+              <div className="markdown-content">
+                {/* Without a cover, the first in-content image is the likely LCP element. */}
+                <SiteMarkdown content={page.content} eagerFirstImage={!page.coverImageUrl} />
+              </div>
+            </article>
+            <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
+              <ContactBox />
+              {related.length > 0 && (
+                <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Blog</p>
+                  <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili yazılar</h2>
+                  <ul className="mt-4 space-y-3">
+                    {related.map((r) => (
+                      <li key={r.id}>
+                        <Link href={pageHref(r)} className="group flex items-start justify-between gap-3">
+                          <span className="text-sm leading-snug text-slate-600 transition-colors group-hover:text-ink-900">
+                            {r.title}
+                          </span>
+                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-500" aria-hidden="true" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </aside>
+          </div>
+        </Container>
+      </section>
+
+      {related.length > 0 && (
+        <section className="border-t border-navy-950/10 bg-white py-16 md:py-20">
+          <Container>
+            <h2 className="font-display text-2xl font-semibold text-ink-900">Bunlar da ilginizi çekebilir</h2>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((r, i) => (
+                <BlogCard key={r.id} post={r} delay={i * 0.05} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      <CtaBand />
+    </>
+  );
+}
+
+function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof breadcrumbsFor> }) {
+  // The old WordPress service pages carry a side contact box; legal texts and
+  // other single pages read better as one centred column.
+  const guide = crumbs.some((c) => c.href === "/hizmet-rehberi/");
+  return (
+    <>
+      <PageHero title={page.title} lead={page.excerpt !== page.title ? page.excerpt : null} crumbs={crumbs} />
+      <section className="bg-paper-50 py-16 md:py-20">
+        <Container className={guide ? "max-w-6xl" : "max-w-3xl"}>
+          {guide ? (
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+              <div className="markdown-content min-w-0">
+                <SiteMarkdown content={page.content} eagerFirstImage />
+              </div>
+              <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
+                <ContactBox />
+              </aside>
+            </div>
+          ) : (
+            <div className="markdown-content">
+              {/* Core pages have no separate hero image; the first content image is the likely LCP element. */}
+              <SiteMarkdown content={page.content} eagerFirstImage />
+            </div>
+          )}
+        </Container>
+      </section>
+      <CtaBand />
     </>
   );
 }

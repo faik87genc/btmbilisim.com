@@ -1,88 +1,23 @@
 [
  {
-  "text": "Anasayfa",
-  "href": "/"
- },
- {
-  "text": "Hakkımızda",
-  "href": "/hakkimizda/"
- },
- {
-  "text": "Hizmetler",
-  "href": "/hizmetler/",
+  "text": "Hizmet Rehberi",
+  "href": "/hizmet-rehberi/",
   "children": [
-   {
-    "text": "Ağ ve Sistem Altyapı Çözümleri",
-    "href": "/ag-ve-sistem-altyapi-cozumleri/"
-   },
-   {
-    "text": "IT Destek ve Danışmanlık",
-    "href": "/it-destek-ve-danismanlik/"
-   },
-   {
-    "text": "Bulut ve Yedekleme Çözümleri",
-    "href": "/bulut-ve-yedekleme-cozumleri/"
-   },
-   {
-    "text": "Sunucu ve Veri Merkezi Hizmetleri",
-    "href": "/sunucu-ve-veri-merkezi-hizmetleri/"
-   },
-   {
-    "text": "Sanallaştırma Hizmetleri",
-    "href": "/sanallastirma-hizmetleri/"
-   },
-   {
-    "text": "Lisanslama Hizmetleri",
-    "href": "/lisanslama-hizmetleri/"
-   },
-   {
-    "text": "Cloud Hizmetleri",
-    "href": "/cloud-hizmetleri/"
-   },
-   {
-    "text": "Sistem Entegrasyonu",
-    "href": "/sistem-entegrasyonu/"
-   },
-   {
-    "text": "Kurulum Hizmeti",
-    "href": "/kurulum-hizmeti/"
-   },
-   {
-    "text": "Veri Kurtarma Hizmetleri",
-    "href": "/veri-kurtarma-hizmetleri/"
-   }
+   { "text": "Hizmetlerimiz", "href": "/hizmetler/" },
+   { "text": "Siber Güvenlik Hizmetleri", "href": "/siber-guvenlik-hizmetleri/" },
+   { "text": "Sızma Testi (Penetrasyon Testi)", "href": "/sizma-testi-penetrasyon-testi/" },
+   { "text": "Ağ ve Sistem Altyapı Çözümleri", "href": "/ag-ve-sistem-altyapi-cozumleri/" },
+   { "text": "Sunucu ve Veri Merkezi Hizmetleri", "href": "/sunucu-ve-veri-merkezi-hizmetleri/" },
+   { "text": "Sanallaştırma Hizmetleri", "href": "/sanallastirma-hizmetleri/" },
+   { "text": "Sistem Entegrasyonu", "href": "/sistem-entegrasyonu/" },
+   { "text": "Kurulum Hizmeti", "href": "/kurulum-hizmeti/" },
+   { "text": "IT Destek ve Danışmanlık", "href": "/it-destek-ve-danismanlik/" },
+   { "text": "Bulut ve Yedekleme Çözümleri", "href": "/bulut-ve-yedekleme-cozumleri/" },
+   { "text": "Cloud Hizmetleri", "href": "/cloud-hizmetleri/" },
+   { "text": "Veri Kurtarma Hizmetleri", "href": "/veri-kurtarma-hizmetleri/" },
+   { "text": "Lisanslama Hizmetleri", "href": "/lisanslama-hizmetleri/" },
+   { "text": "Yazılım Hizmetleri", "href": "/yazilim-hizmetleri/" },
+   { "text": "Web Tasarım Hizmetleri", "href": "/web-tasarim-hizmetleri/" }
   ]
- },
- {
-  "text": "Siber Güvenlik",
-  "href": "/siber-guvenlik-hizmetleri/",
-  "children": [
-   {
-    "text": "Siber Güvenlik Hizmetleri",
-    "href": "/siber-guvenlik-hizmetleri/"
-   },
-   {
-    "text": "Sızma Testi (Penetrasyon Testi)",
-    "href": "/sizma-testi-penetrasyon-testi/"
-   }
-  ]
- },
- {
-  "text": "Yazılım & Web",
-  "href": "/yazilim-hizmetleri/",
-  "children": [
-   {
-    "text": "Yazılım Hizmetleri",
-    "href": "/yazilim-hizmetleri/"
-   },
-   {
-    "text": "Web Tasarım Hizmetleri",
-    "href": "/web-tasarim-hizmetleri/"
-   }
-  ]
- },
- {
-  "text": "İletişim",
-  "href": "/iletisim/"
  }
 ]

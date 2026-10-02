@@ -1,0 +1,622 @@
+@import "tailwindcss";
+
+/* Design system from ensakurumsal.com. The "gold" accent scale carries the
+   BTM logo orange (#e8812f = gold-500); swap these seven values back to
+   Ensa's gold (#6e5714 … #f3e6bb) to restore the original accent.
+   Text tones (600–800) are dark enough for AA contrast on paper/white. */
+:root {
+  --navy-950: #0a1628;
+  --navy-900: #0d1d33;
+  --navy-800: #13294a;
+  --navy-700: #1b3a66;
+  --gold-800: #7a3c0b;
+  --gold-700: #8f480f;
+  --gold-600: #a85512;
+  --gold-500: #e8812f;
+  --gold-400: #ee9650;
+  --gold-300: #f4b47e;
+  --gold-100: #fbe3cc;
+  --paper-50: #f7f5f1;
+  --paper-100: #efeae1;
+  --ink-900: #12151c;
+  --slate-500: #5a6470;
+  --slate-300: #a4acb5;
+
+  --background: var(--paper-50);
+  --foreground: var(--ink-900);
+}
+
+@theme inline {
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-700: var(--gold-700);
+  --color-gold-600: var(--gold-600);
+  --color-gold-500: var(--gold-500);
+  --color-gold-400: var(--gold-400);
+  --color-gold-300: var(--gold-300);
+  --color-gold-100: var(--gold-100);
+  --color-paper-50: var(--paper-50);
+  --color-paper-100: var(--paper-100);
+  --color-ink-900: var(--ink-900);
+  --color-slate-500: var(--slate-500);
+  --color-slate-300: var(--slate-300);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-line-grow: line-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes line-grow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes aurora-drift {
+    0% {
+      transform: translate3d(-6%, -2%, 0) scale(1);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translate3d(6%, 3%, 0) scale(1.12);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translate3d(-6%, -2%, 0) scale(1);
+      opacity: 0.55;
+    }
+  }
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.08);
+    }
+  }
+  @keyframes float-y {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--paper-100);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--gold-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* Long-form body copy (service pages, blog posts) rendered from Markdown.
+   Centralized here rather than as a wall of Tailwind arbitrary selectors so
+   the counter-based numbered steps and dot bullets stay readable. */
+@layer components {
+  .markdown-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--slate-500);
+  }
+  .markdown-content > * + * {
+    margin-top: 1.25rem;
+  }
+  .markdown-content > p:first-of-type {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--ink-900);
+  }
+  .markdown-content h2 {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    padding-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-900);
+  }
+  .markdown-content h2::before {
+    content: "";
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    background: var(--gold-500);
+  }
+  .markdown-content h3 {
+    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--ink-900);
+  }
+  .markdown-content strong {
+    color: var(--ink-900);
+    font-weight: 600;
+  }
+  .markdown-content ul {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  .markdown-content ul > li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .markdown-content ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    height: 0.375rem;
+    width: 0.375rem;
+    border-radius: 9999px;
+    background: var(--gold-500);
+  }
+  .markdown-content ol {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    counter-reset: step;
+  }
+  .markdown-content ol > li {
+    position: relative;
+    min-height: 2rem;
+    padding-left: 3rem;
+    counter-increment: step;
+  }
+  .markdown-content ol > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: var(--gold-500);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--navy-950);
+  }
+  .markdown-content a {
+    color: var(--gold-700);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .markdown-content a:hover {
+    color: var(--ink-900);
+  }
+  .markdown-content blockquote {
+    border-left: 2px solid var(--gold-500);
+    padding-left: 1rem;
+    font-style: italic;
+  }
+  .markdown-content code {
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--navy-950) 5%, transparent);
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .markdown-content th,
+  .markdown-content td {
+    border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .form-input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 15%, transparent);
+    background: white;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9375rem;
+    color: var(--ink-900);
+    transition: border-color 0.2s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--gold-500);
+  }
+  .bg-grain {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--gold-300) 14%, transparent) 1px,
+      transparent 0
+    );
+    background-size: 22px 22px;
+  }
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Slow drifting gold "aurora" glow for dark hero sections. Decorative,
+     GPU-friendly (transform/opacity only), and disabled under reduced motion. */
+  .hero-aurora {
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 130%;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        40% 55% at 20% 25%,
+        color-mix(in srgb, var(--gold-500) 22%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        35% 50% at 80% 15%,
+        color-mix(in srgb, var(--gold-300) 16%, transparent),
+        transparent 70%
+      );
+    filter: blur(28px);
+    animation: aurora-drift 18s ease-in-out infinite;
+  }
+  .animate-glow-pulse {
+    animation: glow-pulse 6s ease-in-out infinite;
+  }
+  .animate-float-y {
+    animation: float-y 7s ease-in-out infinite;
+  }
+}
+
+/* Route-change enter transition — see app/(site)/template.tsx. Kept very short
+   and opacity-only: a transform would create a containing block that traps the
+   `position: fixed` lightbox (ImageCarousel / LightboxImage) rendered inside
+   page content, and a longer opacity fade delayed when Chrome counts the hero
+   image as "painted". At 0.15s with front-loaded easing the LCP cost is ~1
+   frame. */
+.page-enter {
+  animation: page-enter 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Reading-progress bar — pure CSS scroll-driven animation, no JS.
+   Browsers without scroll-timeline support simply don't render it. */
+.scroll-progress {
+  display: none;
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 60;
+    display: block;
+    height: 2px;
+    background: var(--gold-500);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+  @keyframes scroll-progress {
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress {
+    display: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   BTM: classes used by this project's own components (forms in
+   components/ContactForm.tsx, QuoteForm.tsx, FieldErrors.tsx, ConsentMap.tsx,
+   and the Markdown renderer components/site/SiteMarkdown.tsx), styled to
+   match the Ensa design system above.
+   ------------------------------------------------------------------------- */
+@layer components {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  }
+  .btn-primary {
+    background: var(--gold-500);
+    color: var(--navy-950);
+  }
+  .btn-primary:hover {
+    background: var(--gold-300);
+  }
+  .btn-ghost {
+    border-color: color-mix(in srgb, var(--navy-950) 15%, transparent);
+    color: var(--ink-900);
+    background: white;
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in srgb, var(--navy-950) 40%, transparent);
+  }
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+  .btn-lg {
+    padding: 0.875rem 1.75rem;
+  }
+  .btn-block {
+    width: 100%;
+  }
+
+  .form-card {
+    border-radius: 2px;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    background: white;
+    padding: 1.75rem;
+    color: var(--ink-900);
+  }
+  .form-field {
+    margin-bottom: 1.1rem;
+  }
+  .form-field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--ink-900);
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 22%, transparent);
+    background: white;
+    padding: 0.65rem 0.85rem;
+    font-size: 1rem;
+    color: var(--ink-900);
+    transition: border-color 0.2s ease;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: 2px solid color-mix(in srgb, var(--gold-500) 35%, transparent);
+    border-color: var(--gold-600);
+  }
+  .form-field [aria-invalid="true"] {
+    border-color: #b42318;
+  }
+  .field-err {
+    margin-top: 0.35rem;
+    font-size: 0.8125rem;
+    color: #b42318;
+  }
+  .form-note {
+    margin-top: 0.6rem;
+    font-size: 0.8125rem;
+    color: var(--slate-500);
+  }
+  .req-note {
+    margin: 0 0 1rem;
+  }
+  .form-fallback {
+    margin-top: 1rem;
+    border-left: 2px solid var(--gold-500);
+    background: var(--paper-50);
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: var(--ink-900);
+  }
+  .form-fallback .btn {
+    margin-top: 0.75rem;
+  }
+
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 1rem;
+  }
+  @media (max-width: 600px) {
+    .quote-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .quote-services {
+    margin: 0 0 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border: 0;
+    padding: 0;
+  }
+  .quote-services legend {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--ink-900);
+  }
+  .quote-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 18%, transparent);
+    background: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8125rem;
+    color: var(--ink-900);
+  }
+  .quote-chip:has(input:checked) {
+    border-color: var(--gold-500);
+    background: color-mix(in srgb, var(--gold-500) 10%, white);
+    font-weight: 500;
+  }
+  .quote-chip:has(input:focus-visible) {
+    outline: 2px solid var(--gold-500);
+    outline-offset: 2px;
+  }
+  .quote-chip input {
+    margin: 0;
+    accent-color: var(--gold-600);
+  }
+  .quote-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  @media (max-width: 600px) {
+    .quote-actions .btn {
+      width: 100%;
+    }
+  }
+
+  .map-consent {
+    display: grid;
+    gap: 0.75rem;
+    background: var(--paper-100);
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--slate-500);
+  }
+  .map-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Markdown body extras (SiteMarkdown): responsive images, scrollable
+     tables, GFM task-list checkboxes. */
+  .markdown-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    border: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+  }
+  .markdown-content .table-wrap {
+    overflow-x: auto;
+  }
+  .markdown-content li.task-list-item {
+    padding-left: 0;
+  }
+  .markdown-content li.task-list-item::before {
+    display: none;
+  }
+  .markdown-content li.task-list-item input {
+    margin-right: 0.5rem;
+    accent-color: var(--gold-600);
+  }
+  .markdown-content pre {
+    overflow-x: auto;
+    border-radius: 2px;
+    background: var(--navy-950);
+    padding: 1rem;
+    color: var(--paper-50);
+  }
+  .markdown-content pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+}

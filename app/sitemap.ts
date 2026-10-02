@@ -3,6 +3,9 @@ import type { Page } from "@/lib/db/schema";
 import { getPublishedPages, getAllTags, pageHref, postLikePages, tagSlug } from "@/lib/pages";
 import { absoluteUrl } from "@/lib/siteView";
 import { pageDates } from "@/lib/structuredData";
+import { serviceCategoryList } from "@/lib/services";
+import { servicePageParams } from "@/lib/servicePages";
+import { products } from "@/lib/products";
 
 // Same URL set as the static site's sitemap.xml (home, /iletisim/, /blog/ +
 // its /blog/sayfa-N/ pages, every content page) plus the Next-only
@@ -19,7 +22,10 @@ const PER_PAGE = 9;
 // /iletisim/ is a hand-written route with no DB row; bump this when its
 // content changes. (Using "now" made the value change on every regeneration,
 // which teaches crawlers to ignore lastmod.)
-const CONTACT_LASTMOD = new Date("2026-09-25T00:00:00Z");
+const CONTACT_LASTMOD = new Date("2026-10-02T00:00:00Z");
+// Same for the coded service/product pages (lib/services.ts, lib/servicePages.ts,
+// lib/products.ts, app/(site)/yazilim-urunlerimiz/*, /hizmet-rehberi/).
+const CODED_LASTMOD = new Date("2026-10-02T00:00:00Z");
 
 const modified = (p: Page) => pageDates(p).modified;
 
@@ -48,7 +54,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/blog/", newestPost),
     ...Array.from({ length: blogPages - 1 }, (_, i) => entry(`/blog/sayfa-${i + 2}/`, newestPost)),
     ...all.map((p) => entry(pageHref(p), modified(p))),
-    ...getAllTags(posts).map((t) =>
+    entry("/hizmet-rehberi/", CODED_LASTMOD),
+    ...serviceCategoryList.map((c) => entry(`/${c.slug}/`, CODED_LASTMOD)),
+    ...servicePageParams().map(({ category, service }) => entry(`/${category}/${service}/`, CODED_LASTMOD)),
+    entry("/yazilim-urunlerimiz/", CODED_LASTMOD),
+    ...products.map((p) => entry(`/yazilim-urunlerimiz/${p.slug}/`, CODED_LASTMOD)),
+    // Single-post tags are noindex (app/(site)/blog/etiket/[tag]/page.tsx).
+    ...getAllTags(posts).filter((t) => t.count >= 2).map((t) =>
       entry(`/blog/etiket/${t.slug}/`, newestOf(posts.filter((p) => p.tags.some((x) => tagSlug(x) === t.slug)), newestPost)),
     ),
   ];

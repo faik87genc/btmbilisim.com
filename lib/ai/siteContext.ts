@@ -1,6 +1,7 @@
 import "server-only";
 import { getPublishedPages, postLikePages } from "@/lib/pages";
 import {
+  CODED_PAGES,
   MIN_MONEY_LINKS,
   MONEY_PAGES,
   MONEY_PAGE_SLUGS,
@@ -39,9 +40,9 @@ export function internalLinkCatalogue(
   maxArticles = 30,
 ): string {
   const bySlug = new Map(targets.map((t) => [t.slug, t]));
-  const money = MONEY_PAGES.filter((m) => bySlug.has(m.slug)).map((m) => ({
+  const money = MONEY_PAGES.filter((m) => bySlug.has(m.slug) || CODED_PAGES.has(m.slug)).map((m) => ({
     ...m,
-    title: bySlug.get(m.slug)!.title,
+    title: bySlug.get(m.slug)?.title ?? CODED_PAGES.get(m.slug)!,
   }));
   const services = targets.filter(
     (t) => t.kind === "service" && !MONEY_PAGE_SLUGS.has(t.slug),
@@ -62,6 +63,11 @@ export function internalLinkCatalogue(
   lines.push("");
   lines.push("KONUYLA İLGİLİ MEVCUT YAZILAR (en ilgili olanlar üstte):");
   for (const p of articles) lines.push(`- /${p.slug}/ — ${p.title}`);
+  lines.push("");
+  lines.push("HİZMET DETAY SAYFALARI (konuyla ilgiliyse link verilebilir):");
+  for (const [path, title] of CODED_PAGES) {
+    if (path.includes("/") && !money.some((m) => m.slug === path)) lines.push(`- /${path}/ — ${title}`);
+  }
   lines.push("");
   lines.push("TEKLİF / İLETİŞİM: /#teklif (teklif formu), /iletisim/ (iletişim)");
   return lines.join("\n");

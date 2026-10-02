@@ -4,8 +4,9 @@ import { getPublishedPages, getPagesByTagSlug, postLikePages } from "@/lib/pages
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/siteView";
 import { DEFAULT_OG_IMAGE } from "@/lib/structuredData";
-import { toCard } from "@/components/site/BlogIndex";
-import { Breadcrumbs, PostCard } from "@/components/site/Parts";
+import { Container } from "@/components/ensa/Container";
+import { PageHero } from "@/components/ensa/PageHero";
+import { BlogCard } from "@/components/ensa/BlogCard";
 
 export const revalidate = 300;
 
@@ -28,6 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
+    // A tag that groups a single post is a thin duplicate of that post.
+    robots: matched.length < 2 ? { index: false, follow: true } : undefined,
     openGraph: { type: "website", title, description, url, images: [DEFAULT_OG_IMAGE] },
     twitter: { card: "summary_large_image", title, description },
   };
@@ -40,22 +43,21 @@ export default async function TagArchivePage({ params }: Props) {
 
   return (
     <>
-      <Breadcrumbs crumbs={[{ text: "Blog", href: "/blog/" }, { text: tag }]} />
-      <main id="main" tabIndex={-1}>
-        <section className="section">
-          <div className="wrap">
-            <div className="sec-head">
-              <span className="eyebrow">Etiket</span>
-              <h1>{tag} Yazıları</h1>
-            </div>
-            <div className="grid grid-3">
-              {matched.map((p, i) => (
-                <PostCard key={p.id} post={toCard(p)} priority={i === 0} />
-              ))}
-            </div>
+      <PageHero
+        title={`${tag} yazıları`}
+        eyebrow="Etiket"
+        lead={`${matched.length} yazı`}
+        crumbs={[{ text: "Blog", href: "/blog/" }, { text: tag }]}
+      />
+      <section className="bg-paper-50 py-16 md:py-20">
+        <Container>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {matched.map((p, i) => (
+              <BlogCard key={p.id} post={p} delay={(i % 3) * 0.05} priority={i < 3} />
+            ))}
           </div>
-        </section>
-      </main>
+        </Container>
+      </section>
     </>
   );
 }

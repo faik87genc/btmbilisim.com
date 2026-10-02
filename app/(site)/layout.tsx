@@ -1,35 +1,44 @@
-import "./site.css";
+import "./ensa.css";
 import "./content-guard.css";
 import { Analytics } from "@vercel/analytics/next";
-import { SiteHeader } from "@/components/SiteHeader";
-import { CookieBanner, SiteFooter } from "@/components/SiteFooter";
-import { IconSprite } from "@/components/site/IconSprite";
+import { TopBar } from "@/components/ensa/TopBar";
+import { Header } from "@/components/ensa/Header";
+import { Footer } from "@/components/ensa/Footer";
+import { FloatingContact } from "@/components/ensa/FloatingContact";
+import { ScrollProgress } from "@/components/ensa/ScrollProgress";
+import { CookieBanner } from "@/components/ensa/CookieBanner";
+import { MotionProvider } from "@/components/ensa/MotionProvider";
 import { SiteBehavior } from "@/components/site/SiteBehavior";
 import { ContentGuard } from "@/components/site/ContentGuard";
 
-// site.css is _legacy-static-site/assets/css/style.css copied verbatim: the
-// static site is the design master and every public page reuses its markup.
+// Public site: design from ensakurumsal.com (Tailwind, components/ensa),
+// content and data layer from this project (lib/pages.ts, the admin panel).
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      {/* RSS autodiscovery (app/feed.xml). React hoists <link> into <head>.
-          Not set via metadata `alternates.types`: a page's own `alternates`
-          (its canonical) replaces the layout's wholesale. */}
+    <MotionProvider>
+      {/* RSS autodiscovery (app/feed.xml). React hoists <link> into <head>. */}
       <link rel="alternate" type="application/rss+xml" title="BTM Bilişim Blog" href="/feed.xml" />
-      <IconSprite />
-      <a className="skip-link" href="#main">
+      <a
+        href="#main"
+        className="absolute -left-[9999px] top-0 z-[100] bg-navy-950 px-5 py-3 text-paper-50 focus:left-0"
+      >
         İçeriğe geç
       </a>
+      <ScrollProgress />
       <CookieBanner />
-      <SiteHeader />
-      {children}
-      <SiteFooter />
+      <TopBar />
+      <Header />
+      <main id="main" tabIndex={-1} className="flex-1 outline-none">
+        {children}
+      </main>
+      <Footer />
+      <FloatingContact />
       <SiteBehavior />
       <ContentGuard />
       {/* Cookieless page-view counts (no consent needed); GA4 in SiteBehavior
           still loads only after cookie consent. Public pages only, not /admin. */}
       <Analytics />
-    </>
+    </MotionProvider>
   );
 }

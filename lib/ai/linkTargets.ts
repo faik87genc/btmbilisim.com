@@ -4,6 +4,9 @@
 // unit-tested with plain data.
 
 import { slugifyTr } from "@/lib/slug";
+import { serviceCategoryList } from "@/lib/services";
+import { servicePagesContent } from "@/lib/servicePages";
+import { products } from "@/lib/products";
 
 export type LinkTarget = {
   slug: string;
@@ -31,14 +34,36 @@ const NEVER_LINK = new Set([
   "kvkk-aydinlatma-metni",
 ]);
 
+/**
+ * Hand-coded routes outside the pages table (service categories and their
+ * detail pages, software products, the service guide), path without slashes
+ * -> title. Linkable like DB pages.
+ */
+export const CODED_PAGES: ReadonlyMap<string, string> = new Map([
+  ["hizmet-rehberi", "Hizmet Rehberi"],
+  ["yazilim-urunlerimiz", "Yazılım Ürünlerimiz"],
+  ...products.map((p) => [`yazilim-urunlerimiz/${p.slug}`, `${p.name} — ${p.tagline}`] as const),
+  ...serviceCategoryList.map((c) => [c.slug, c.title] as const),
+  ...servicePagesContent.map((s) => [`${s.categorySlug}/${s.slug}`, s.title] as const),
+]);
+
 /** Route paths that exist outside the pages table. */
-const STATIC_LINKABLE = new Set(["", "blog", "iletisim"]);
+const STATIC_LINKABLE = new Set(["", "blog", "iletisim", ...CODED_PAGES.keys()]);
 
 /**
  * "Money pages": the service pages every article must link to (at least
  * {@link MIN_MONEY_LINKS}, in context). Real slugs (nav + pages table).
  */
 export const MONEY_PAGES: { slug: string; group: "güvenlik" | "altyapı" | "yazılım" }[] = [
+  // Service categories and products (coded routes, always live).
+  { slug: "siber-guvenlik", group: "güvenlik" },
+  { slug: "siber-guvenlik/sizma-testi-penetrasyon-testi", group: "güvenlik" },
+  { slug: "sistem-network", group: "altyapı" },
+  { slug: "bulut-yedekleme", group: "altyapı" },
+  { slug: "lisanslama", group: "altyapı" },
+  { slug: "yazilim-dijital", group: "yazılım" },
+  { slug: "danismanlik", group: "yazılım" },
+  { slug: "yazilim-urunlerimiz", group: "yazılım" },
   { slug: "hizmetler", group: "altyapı" },
   { slug: "siber-guvenlik-hizmetleri", group: "güvenlik" },
   { slug: "sizma-testi-penetrasyon-testi", group: "güvenlik" },

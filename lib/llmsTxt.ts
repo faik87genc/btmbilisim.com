@@ -1,6 +1,8 @@
 import home from "@/lib/data/home.json";
 import { site } from "@/lib/site";
 import { fallbackPages } from "@/lib/fallbackPages";
+import { serviceCategoryList } from "@/lib/services";
+import { products } from "@/lib/products";
 
 // Text for /llms.txt and /llms-full.txt, built from the same data the site
 // renders (lib/site.ts, the homepage service cards and the imported pages),
@@ -12,7 +14,7 @@ function intro(): string[] {
   return [
     `# ${site.name}`,
     "",
-    `> ${site.name} (${site.baseUrl.replace("https://", "")}) — ${site.description}`,
+    `> ${site.description} (${site.baseUrl.replace("https://", "")})`,
     "",
     "- Sitenin dili Türkçedir; tüm sayfalar Türkçe içeriktir.",
     `- Merkez: ${site.address}. Telefon: ${site.phone.display}. E-posta: ${site.email}.`,
@@ -23,6 +25,14 @@ function intro(): string[] {
 
 function services(): string[] {
   const out: string[] = [];
+  for (const c of serviceCategoryList) {
+    out.push(`## ${c.title}`, "", `${c.summary} [Kategori sayfası](${abs(`/${c.slug}/`)})`, "");
+    for (const s of c.services) out.push(`- [${s.name}](${abs(`/${c.slug}/${s.key}/`)}): ${s.description}`);
+    out.push("");
+  }
+  out.push("## Yazılım Ürünleri", "");
+  for (const p of products) out.push(`- [${p.name}](${abs(`/yazilim-urunlerimiz/${p.slug}/`)}): ${p.tagline} ${p.description}`);
+  out.push("", "## Hizmet Rehberi (sahadaki hizmet sayfaları)", "");
   for (const g of home.serviceGroups) {
     out.push(`## ${g.title}`, "");
     for (const it of g.items) out.push(`- [${it.title}](${abs(it.href)}): ${it.desc}`);

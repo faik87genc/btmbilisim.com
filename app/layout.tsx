@@ -1,13 +1,40 @@
 import type { Metadata, Viewport } from "next";
+import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { site } from "@/lib/site";
 
-// Styles are per area: the public site loads the static site's stylesheet
-// (app/(site)/layout.tsx), the admin panel loads Tailwind (app/admin/layout.tsx).
-// Keeping them apart stops Tailwind's reset from touching the site design.
+// Styles are per area: the public site loads app/(site)/ensa.css, the admin
+// panel loads app/globals.css (app/admin/layout.tsx). Both are Tailwind; the
+// public one carries the brand tokens and long-form content styles.
+
+// Only the display face is preloaded — it renders the hero <h1>. Plex
+// Sans/Mono load at normal priority; `display: "swap"` paints body text in the
+// fallback immediately.
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin", "latin-ext"],
+  weight: ["600", "700"],
+  display: "swap",
+});
+
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500"],
+  display: "swap",
+  preload: false,
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400"],
+  display: "swap",
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Siber Güvenlik, Ağ Altyapısı ve IT Çözümleri`,
+    default: `${site.name} | Siber Güvenlik, Altyapı ve Yazılım Çözümleri`,
     template: `%s`,
   },
   description: site.description,
@@ -31,13 +58,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b2a4a",
+  themeColor: "#0a1628",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" data-scroll-behavior="smooth">
-      <body>{children}</body>
+    <html
+      lang="tr"
+      data-scroll-behavior="smooth"
+      className={`${spaceGrotesk.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }

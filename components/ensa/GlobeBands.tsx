@@ -1,0 +1,67 @@
+export function GlobeBands({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 520 520"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle
+        cx="260"
+        cy="260"
+        r="230"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.18"
+      />
+      <ellipse
+        cx="260"
+        cy="260"
+        rx="230"
+        ry="80"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.28"
+      />
+      <ellipse
+        cx="260"
+        cy="180"
+        rx="230"
+        ry="60"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.22"
+      />
+      <ellipse
+        cx="260"
+        cy="340"
+        rx="230"
+        ry="60"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.22"
+      />
+      <path
+        d="M30 260C30 260 145 130 260 130C375 130 490 260 490 260"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.3"
+      />
+      <path
+        d="M30 260C30 260 145 390 260 390C375 390 490 260 490 260"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.3"
+      />
+      <line
+        x1="260"
+        y1="30"
+        x2="260"
+        y2="490"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.15"
+      />
+    </svg>
+  );
+}

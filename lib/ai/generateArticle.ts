@@ -92,7 +92,7 @@ KESİN YASAKLAR (ihlal = yayınlanamaz taslak)
 - Mevzuat/standart tarihinden emin değilsen tahmin yazma; "(yayından önce doğrulanmalı)" notu düş.
 - Marka/ürün adları yalnızca yaygın ve doğruysa, karşılaştırmalı ve tarafsız; satış broşürü dili yok.
 - "En iyi", "lider", "1 numara" iddiaları; abartılı pazarlama dili.
-- Sunulan hizmetler dışında hizmet vaadi. Sunulanlar: siber güvenlik ve sızma testi, ağ ve sistem altyapısı, sunucu ve veri merkezi, sanallaştırma, bulut ve yedekleme, veri kurtarma, lisanslama, sistem entegrasyonu ve kurulum, güvenlik kamerası (IP kamera) sistemleri, IT destek ve danışmanlık, yazılım geliştirme, veritabanı yönetimi, web tasarım.
+- Sunulan hizmetler dışında hizmet vaadi. Sunulanlar: siber güvenlik ve sızma testi, SIEM/EDR/DLP/firewall çözümleri, ağ ve sistem altyapısı, sunucu ve veri merkezi, sanallaştırma, Wi-Fi, bulut (Microsoft 365, Azure, AWS) ve yedekleme, felaket kurtarma, veri kurtarma, lisanslama (Microsoft, VMware, Veeam), sistem entegrasyonu ve kurulum, güvenlik kamerası (IP kamera) sistemleri, IT destek ve danışmanlık, ISO 27001 ve KVKK danışmanlığı, finansal/KOSGEB/TÜBİTAK danışmanlığı, Logo ERP desteği, yazılım geliştirme, veritabanı yönetimi, web tasarım. Yazılım ürünleri: Atlas, Çek Senet Programı, CyberWare, CyberQuan, CyberHost, PentForce, FORNET Enterprise, Otium, Orbit — yalnızca konu doğrudan ilgiliyse, en fazla bir kez ve tanıtım dili olmadan anılır.
 
 Çıktıyı yalnızca istenen JSON şemasında ver.`;
 
