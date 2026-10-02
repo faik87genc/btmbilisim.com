@@ -174,3 +174,4 @@ body:has(#cookie-banner:not([hidden])) .float-wa{bottom:calc(22px + var(--cb-h,9
 .hero-badges strong{color:var(--royal)}
 .stat b,.pillar .num,.step::before{color:var(--royal)}
 @media (prefers-reduced-motion:reduce){.svc-scope-card{transition:none}.svc-scope-card:hover{transform:none}}
+@media (max-width:980px){.hero-card{order:0}}
