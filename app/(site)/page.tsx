@@ -40,7 +40,6 @@ export const revalidate = 300;
 const heroSlides: HeroSlide[] = [
   {
     image: "/hero/slider-1.jpg",
-    video: "/video/hero-corporate.mp4",
     imageAlt: "Şehir manzaralı kurumsal toplantı odası",
     eyebrow: "BTM Bilişim · Bilgi Teknolojileri Merkezi",
     titleLead: "Tek adres,",

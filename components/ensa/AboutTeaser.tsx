@@ -2,7 +2,6 @@ import { Check } from "lucide-react";
 import { Container } from "./Container";
 import { MotionReveal } from "./MotionReveal";
 import { Button } from "./Button";
-import { AboutMedia } from "./AboutMedia";
 import { serviceCategoryList } from "@/lib/services";
 import { products } from "@/lib/products";
 
@@ -51,10 +50,16 @@ export function AboutTeaser() {
           <MotionReveal delay={0.15} className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="absolute -inset-3 -z-10 rounded-lg border border-gold-500/30 md:-inset-4" />
             <div className="overflow-hidden rounded-lg shadow-[0_30px_70px_-30px_rgba(10,18,32,0.35)]">
-              <AboutMedia
-                video="/video/about-corporate.mp4"
-                image="/hero/slider-1.jpg"
-                alt="BTM Bilişim ekibi bir toplantıda"
+              {/* Photo from the about page of the old BTM WordPress site. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/wp-content/uploads/2025/07/admin-ajax-2.jpeg"
+                alt="BTM Bilişim teknik destek ve izleme merkezi"
+                width={600}
+                height={338}
+                loading="lazy"
+                decoding="async"
+                className="h-72 w-full object-cover md:h-96"
               />
             </div>
             <div className="absolute -bottom-6 -right-4 max-w-[220px] rounded-lg bg-navy-950 p-5 shadow-[0_20px_50px_-20px_rgba(10,18,32,0.5)] md:-right-8">
