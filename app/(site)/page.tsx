@@ -124,23 +124,7 @@ export default function Home() {
                 ),
               )}
             </ul>
-            <div className="mt-8 grid grid-cols-2 gap-3 md:hidden">
-              <a
-                href={site.mobile.href}
-                className="inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-4 py-3 text-sm font-semibold text-navy-950"
-              >
-                <Phone className="h-4 w-4" aria-hidden="true" /> Hemen Ara
-              </a>
-              <a
-                href={site.whatsapp.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-control border border-white/30 bg-white/10 px-4 py-3 text-sm font-semibold text-white"
-              >
-                <WhatsAppIcon className="h-4 w-4" /> WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
-              </a>
-            </div>
-            <div className="mt-4 md:mt-8">
+            <div className="mt-8">
               <Button href={IT_CONSULTING} className="w-full sm:w-auto">
                 IT Danışmanlık Hizmetleri <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
