@@ -27,7 +27,6 @@ const POPULAR_SERVICES = [
 ];
 
 const corporate = [
-  { label: "IT Danışmanlık", href: "/danismanlik/it-danismanlik-hizmetleri/" },
   { label: "Hakkımızda", href: "/hakkimizda/" },
   ...(team.length ? [{ label: "Ekibimiz", href: "/ekibimiz/" }] : []),
   ...(references.length ? [{ label: "Referanslar", href: "/referanslar/" }] : []),
@@ -73,7 +72,7 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-navy-950 text-slate-300">
 
       {/* Contact strip */}
-      <div className="relative border-b border-white/10">
+      <div data-footer-cta="" className="relative border-b border-white/10">
         <Container className="flex flex-col items-start justify-between gap-5 py-8 md:flex-row md:items-center lg:max-w-7xl">
           <div>
             <p className="font-display text-2xl font-bold text-white">Projenizi birlikte planlayalım.</p>
@@ -96,8 +95,8 @@ export function Footer() {
         </Container>
       </div>
 
-      <Container className="relative grid gap-10 py-14 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-3 xl:grid-cols-[1.3fr_1fr_1.2fr_1fr_1fr]">
-        <div>
+      <Container className="relative grid grid-cols-2 gap-x-6 gap-y-10 py-14 lg:max-w-7xl lg:grid-cols-3 xl:grid-cols-[1.3fr_1fr_1.2fr_1fr_1fr]">
+        <div className="col-span-2 lg:col-span-1">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/img/logo-full-light.webp"

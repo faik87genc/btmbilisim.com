@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { FieldError, Req, RequiredNote, useFieldErrors } from "@/components/FieldErrors";
 import options from "@/lib/data/quote-form.json";
+import { site } from "@/lib/site";
 
 // Quick quote form. Markup matches _legacy-static-site/templates/_quote_form.html
 // (options from QUOTE_FORM in build.py). "Teklif İste" posts to /api/contact;
@@ -44,7 +45,7 @@ function read(form: HTMLFormElement): Values {
   };
 }
 
-function whatsappHref(v: Values): string {
+function summaryLines(v: Values): string[] {
   const lines = [
     "Merhaba, web sitenizden teklif almak istiyorum.",
     `Firma: ${v.company}`,
@@ -57,12 +58,21 @@ function whatsappHref(v: Values): string {
     `Hizmetler: ${v.services.length ? v.services.join(", ") : "-"}`,
   ];
   if (v.message) lines.push(`Not: ${v.message}`);
-  return `https://wa.me/${options.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
+  return lines;
+}
+
+function whatsappHref(v: Values): string {
+  return `https://wa.me/${options.whatsapp}?text=${encodeURIComponent(summaryLines(v).join("\n"))}`;
+}
+
+function mailHref(v: Values): string {
+  return `mailto:${site.email}?subject=${encodeURIComponent(`Teklif talebi – ${v.company || v.name}`)}&body=${encodeURIComponent(summaryLines(v).join("\n"))}`;
 }
 
 export function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "wa">("idle");
   const [waHref, setWaHref] = useState("");
+  const [mailtoHref, setMailtoHref] = useState("");
   const fallbackRef = useRef<HTMLAnchorElement>(null);
   const { errors, onInvalidCapture, onInputCapture, fieldProps, clear } = useFieldErrors();
 
@@ -80,7 +90,7 @@ export function QuoteForm() {
     const v = read(form);
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...v, topic: TOPIC }),
@@ -91,6 +101,7 @@ export function QuoteForm() {
       clear();
     } catch {
       setWaHref(whatsappHref(v));
+      setMailtoHref(mailHref(v));
       setStatus("wa");
     }
   };
@@ -203,7 +214,7 @@ export function QuoteForm() {
       <p role="status" aria-live="polite" className="form-note">
         {status === "sent" && "Talebiniz alındı. Aynı gün içinde size dönüş yapacağız."}
         {status === "wa" &&
-          "Talebiniz e-postayla iletilemedi. Bilgileriniz hazır: WhatsApp ile göndermek için aşağıdaki düğmeye basın."}
+          `Talebiniz şu an iletilemedi. Bilgileriniz hazır: aşağıdaki düğmelerden biriyle gönderebilir, ${site.email} adresine yazabilir veya ${site.mobile.display} numarasından bizi arayabilirsiniz.`}
       </p>
       {status === "wa" && waHref && (
         <div className="form-fallback">
@@ -211,6 +222,11 @@ export function QuoteForm() {
             WhatsApp ile Gönder
             <span className="visually-hidden"> (yeni sekmede açılır)</span>
           </a>
+          {mailtoHref && (
+            <a className="btn btn-ghost" href={mailtoHref}>
+              E-posta ile Gönder
+            </a>
+          )}
         </div>
       )}
       <p className="form-note">

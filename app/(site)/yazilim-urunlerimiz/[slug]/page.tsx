@@ -63,7 +63,8 @@ export default async function Page({
       <ProductJsonLd product={product} />
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
         <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-        <Container className="relative max-w-3xl">
+        <Container className="relative">
+          <div className="max-w-3xl">
           <span className="inline-block rounded-sm bg-paper-50/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-gold-300">
             {product.code}
           </span>
@@ -78,6 +79,7 @@ export default async function Page({
               <DemoRequest product={product.name} />
             </div>
           </MotionReveal>
+          </div>
         </Container>
       </section>
 

@@ -102,7 +102,7 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
           <button
             type="button"
             onClick={() => scrollToIndex(active - 1)}
-            className="absolute -left-4 top-[calc(50%-1.25rem)] hidden -translate-y-1/2 rounded-full border border-navy-950/10 bg-white p-2 text-ink-900 shadow-[0_8px_24px_-12px_rgba(10,18,32,0.35)] transition-colors hover:border-gold-500/50 hover:text-gold-600 md:flex"
+            className="absolute -left-4 lg:-left-6 top-[calc(50%-1.25rem)] hidden -translate-y-1/2 rounded-full border border-navy-950/10 bg-white p-2 text-ink-900 shadow-[0_8px_24px_-12px_rgba(10,18,32,0.35)] transition-colors hover:border-gold-500/50 hover:text-gold-600 md:flex"
             aria-label="Önceki yazılar"
           >
             <ChevronLeft className="h-5 w-5" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
           <button
             type="button"
             onClick={() => scrollToIndex(active + 1)}
-            className="absolute -right-4 top-[calc(50%-1.25rem)] hidden -translate-y-1/2 rounded-full border border-navy-950/10 bg-white p-2 text-ink-900 shadow-[0_8px_24px_-12px_rgba(10,18,32,0.35)] transition-colors hover:border-gold-500/50 hover:text-gold-600 md:flex"
+            className="absolute -right-4 lg:-right-6 top-[calc(50%-1.25rem)] hidden -translate-y-1/2 rounded-full border border-navy-950/10 bg-white p-2 text-ink-900 shadow-[0_8px_24px_-12px_rgba(10,18,32,0.35)] transition-colors hover:border-gold-500/50 hover:text-gold-600 md:flex"
             aria-label="Sonraki yazılar"
           >
             <ChevronRight className="h-5 w-5" aria-hidden="true" />

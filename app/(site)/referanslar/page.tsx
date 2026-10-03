@@ -21,7 +21,7 @@ export default function ReferencesPage() {
     <>
       <PageHero title="Referanslarımız" eyebrow="Bize Güvenenler" crumbs={[{ text: "Referanslar" }]} />
       <section className="bg-paper-50 py-14 md:py-20">
-        <Container className="lg:max-w-6xl">
+        <Container>
           {sectors.map((sector) => (
             <div key={sector} className="mb-12 last:mb-0">
               {sectors.length > 1 && <h2 className="mb-5 font-display text-xl font-bold text-navy-800">{sector}</h2>}

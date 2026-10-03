@@ -15,7 +15,7 @@ export function ContactCta({
   description?: string;
 }) {
   return (
-    <section className="bg-navy-950 py-16">
+    <section data-contact-cta="" className="bg-navy-950 py-16">
       <Container>
         <SectionHeading tone="dark" align="center" title={title} description={description} />
         <div className="mt-8 flex flex-wrap justify-center gap-3">

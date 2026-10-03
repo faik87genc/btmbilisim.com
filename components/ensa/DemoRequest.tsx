@@ -1,4 +1,5 @@
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { site } from "@/lib/site";
 import { whatsappHref } from "@/lib/contact";
 
@@ -28,7 +29,7 @@ export function DemoRequest({ product, tone = "dark", align = "start" }: { produ
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
         >
-          <MessageCircle className="h-4 w-4" aria-hidden="true" />
+          <WhatsAppIcon className="h-4 w-4" />
           WhatsApp&apos;tan demo isteyin<span className="visually-hidden"> (yeni sekmede açılır)</span>
         </a>
         <a

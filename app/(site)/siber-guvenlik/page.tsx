@@ -7,9 +7,9 @@ import { ogMeta } from "@/lib/siteView";
 const category = serviceCategories["siber-guvenlik"];
 
 const base = {
-  title: "Sızma Testi, SIEM, EDR Siber Güvenlik | BTM Bilişim",
+  title: "Siber Güvenlik Çözümleri | Gebze, Kocaeli | BTM Bilişim",
   description:
-    "Sızma testi, SIEM, firewall, EDR ve ISO 27001 teknik güvenlik dahil sekiz alanda kurumsal siber güvenlik çözümleri sunuyoruz.",
+    "Sızma testinden SIEM ve 5651 log yönetimine, EDR, DLP ve firewall'a kurumsal siber güvenlik çözümleri. ISO 27001 baş denetçi deneyimiyle BTM Bilişim.",
   alternates: { canonical: "/siber-guvenlik/" },
 };
 

@@ -729,6 +729,18 @@
   transform: translateY(-6px);
 }
 
+/* Pages that end with the ContactCta band do not repeat the footer's strip. */
+body:has([data-contact-cta]) [data-footer-cta] {
+  display: none;
+}
+/* About / legal pages: tall photos are capped. */
+.core-page img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Header dropdowns (components/ensa/Header.tsx). Hover intent without JS:
    - open after 150ms, so sweeping across a trigger on the way to a panel
      does not switch menus;
@@ -737,7 +749,7 @@
    - when another trigger is hovered for 150ms, the previous panel closes.
    Keyboard focus (:focus-visible) opens at once. visibility:hidden keeps
    closed panels out of the tab order and the accessibility tree.
-   Verified with real pointer paths (scratchpad menutest.mjs). */
+   Verified with real pointer paths in headless Chrome. */
 #site-header .mega-panel {
   visibility: hidden;
   opacity: 0;
@@ -753,6 +765,20 @@
   opacity: 1;
   transition: none;
 }
+/* Keyboard moved to another dropdown: the previous panel goes at once. */
+#site-header nav:has(:focus-visible) [data-menu-group]:not(:has(:focus-visible)):not(:hover) > .mega-panel {
+  visibility: hidden;
+  opacity: 0;
+  transition: none;
+}
+/* Browsers without :has(): keyboard focus still opens the panel. */
+@supports not selector(:has(*)) {
+  #site-header [data-menu-group]:focus-within > .mega-panel {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* Pointer moved onto another dropdown trigger: the previous panel goes at once. */
 #site-header nav:has([data-menu-group]:hover) [data-menu-group]:not(:hover):not(:has(:focus-visible)) > .mega-panel {
   visibility: hidden;
   opacity: 0;

@@ -16,6 +16,7 @@ import { absoluteUrl, ogMeta } from "@/lib/siteView";
 import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
 import { ContactCta } from "@/components/ensa/ContactCta";
+import { WhyBtm } from "@/components/ensa/WhyBtm";
 import { ServiceContactButtons } from "@/components/ensa/ServiceContactButtons";
 import { serviceWhatsAppHref } from "@/lib/contact";
 
@@ -291,6 +292,8 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
           </div>
         </Container>
       </section>
+
+      <WhyBtm />
 
       {page.faq.length > 0 && <FaqSection items={page.faq} />}
 

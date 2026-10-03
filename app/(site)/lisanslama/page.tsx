@@ -8,7 +8,7 @@ const category = serviceCategories["lisanslama"];
 const base = {
   title: "Microsoft, VMware, Veeam Lisanslama | BTM Bilişim",
   description:
-    "Microsoft, VMware, Veeam ve siber güvenlik ürünleri dahil kurumsal yazılım lisanslarınızı tek noktadan tedarik eder, yönetiriz.",
+    "Microsoft 365, Windows Server, SQL Server, VMware, Veeam ve güvenlik ürünleri için doğru lisans modeli, tedarik ve yenileme takibi. BTM Bilişim, Gebze/Kocaeli.",
   alternates: { canonical: "/lisanslama/" },
 };
 

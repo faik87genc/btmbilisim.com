@@ -7,7 +7,7 @@ import { ogMeta } from "@/lib/siteView";
 const category = serviceCategories["yazilim-dijital"];
 
 const base = {
-  title: "Özel Yazılım ve Web Tasarım Hizmetleri | BTM Bilişim",
+  title: "Yazılım, Entegrasyon ve Otomasyon Çözümleri | BTM Bilişim",
   description:
     "Kendi yazılım ekibimizle özel yazılım geliştirme, mobil uyumlu kurumsal web tasarım, ERP entegrasyonu ve iş süreci otomasyonu. Analizden bakıma uçtan uca.",
   alternates: { canonical: "/yazilim-dijital/" },

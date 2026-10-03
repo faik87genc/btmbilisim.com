@@ -28,13 +28,15 @@ export function FaqSection({
 
   return (
     <section className={isDark ? "cv-auto bg-navy-950 py-20 md:py-24" : "cv-auto bg-paper-50 py-20 md:py-24"}>
-      <Container className="max-w-3xl">
-        <SectionHeading
-          eyebrow="Sıkça Sorulan Sorular"
-          title="Merak edilenler"
-          tone={tone}
-        />
-        <div className="mt-10 space-y-3">
+      <Container className="lg:grid lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHeading
+            eyebrow="Sıkça Sorulan Sorular"
+            title="Merak edilenler"
+            tone={tone}
+          />
+        </div>
+        <div className="mt-10 space-y-3 lg:mt-0">
           {items.map((item) => (
             <MotionReveal key={item.question}>
               <details

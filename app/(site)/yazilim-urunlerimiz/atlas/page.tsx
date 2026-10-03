@@ -304,7 +304,7 @@ export default function Page() {
             ))}
           </MotionReveal>
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
-            <div className="grid gap-5">
+            <div className="grid content-start gap-5">
               {erpFeatures.map((feature, i) => (
                 <MotionReveal key={feature.title} delay={i * 0.08}>
                   <div className="group/f flex h-full items-start gap-4 rounded-card border border-paper-50/10 bg-paper-50/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">

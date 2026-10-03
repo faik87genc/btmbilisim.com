@@ -82,7 +82,7 @@ function ContactBox() {
       <p className="mt-2 text-sm leading-relaxed text-slate-500">
         İhtiyacınızı anlatın; ekibimiz durumunuzu ilk görüşmede netleştirsin.
       </p>
-      <Button href="/iletisim/#teklif" variant="primary" className="mt-5 w-full">
+      <Button href="/#teklif" variant="primary" className="mt-5 w-full">
         Teklif Alın
       </Button>
       <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
@@ -170,7 +170,7 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
       </PageHero>
 
       <section className="bg-paper-50 py-16 md:py-20">
-        <Container className="max-w-6xl">
+        <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
             <article className="min-w-0">
               {page.coverImageUrl && <CoverImage src={page.coverImageUrl} alt={page.title} />}
@@ -223,15 +223,14 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
 }
 
 function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof breadcrumbsFor> }) {
-  // Single pages (about, legal texts) read best as one centred column. (The
-  // old WordPress service pages that had a side contact box now 301 to the
-  // new service pages.)
+  // Single pages (about, legal texts): one readable text column, aligned with
+  // the logo like the rest of the site.
   return (
     <>
       <PageHero title={page.title} lead={page.excerpt !== page.title ? page.excerpt : null} crumbs={crumbs} />
       <section className="bg-paper-50 py-16 md:py-20">
-        <Container className="max-w-3xl">
-          <div className="markdown-content">
+        <Container>
+          <div className="markdown-content core-page max-w-3xl">
             {/* Core pages have no separate hero image; the first content image is the likely LCP element. */}
             <SiteMarkdown content={page.content} eagerFirstImage />
           </div>

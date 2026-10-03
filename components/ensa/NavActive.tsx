@@ -41,7 +41,8 @@ export function NavActive() {
     // header (then pointerleave lifts it), so the panel does not pop back
     // over the new page under a pointer that just clicked a trigger.
     const header = document.getElementById("site-header");
-    if (header && !header.matches(":hover")) header.removeAttribute("data-menus-off");
+    const canHover = window.matchMedia("(hover: hover)").matches;
+    if (header && !(canHover && header.matches(":hover"))) header.removeAttribute("data-menus-off");
   }, [pathname]);
 
   useEffect(() => {
@@ -49,13 +50,27 @@ export function NavActive() {
     if (!header) return;
 
     const openGroups = () => header.querySelectorAll<HTMLElement>("[data-menu-group]");
+    // Pointer left the header: lift the suppression. A group dismissed with
+    // Escape stays closed while it still holds focus (WCAG 1.4.13); moving
+    // focus elsewhere (onFocusIn) re-enables it.
     const release = () => {
       header.removeAttribute("data-menus-off");
-      openGroups().forEach((g) => g.removeAttribute("data-closed"));
+      const focused = document.activeElement;
+      openGroups().forEach((g) => {
+        if (!g.contains(focused)) g.removeAttribute("data-closed");
+      });
+    };
+
+    // Touch: pointerleave fires before click, so a tap would set menus-off
+    // after release() already ran and leave the menus locked. Taps are left alone.
+    let lastPointer = "mouse";
+    const onPointerDown = (e: PointerEvent) => {
+      lastPointer = e.pointerType;
     };
 
     const onClick = (e: MouseEvent) => {
       if (e.detail === 0) return; // keyboard "click" (Enter)
+      if (lastPointer !== "mouse") return;
       const link = (e.target as Element).closest("a");
       // A link in a panel, or a dropdown trigger itself: shut the panels.
       if (!link || !link.closest("[data-menu-panel], [data-menu-group]")) return;
@@ -78,11 +93,13 @@ export function NavActive() {
       });
     };
 
+    header.addEventListener("pointerdown", onPointerDown);
     header.addEventListener("click", onClick);
     header.addEventListener("pointerleave", release);
     header.addEventListener("focusin", onFocusIn);
     document.addEventListener("keydown", onKey);
     return () => {
+      header.removeEventListener("pointerdown", onPointerDown);
       header.removeEventListener("click", onClick);
       header.removeEventListener("pointerleave", release);
       header.removeEventListener("focusin", onFocusIn);

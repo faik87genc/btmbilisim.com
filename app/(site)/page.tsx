@@ -121,7 +121,7 @@ export default function Home() {
           </div>
 
           {/* Direct line */}
-          <div className="rounded-card bg-white p-6 shadow-lift md:p-7">
+          <div className="hidden rounded-card bg-white p-6 shadow-lift md:block md:p-7">
             <h2 className="font-display text-xl font-semibold text-navy-800">Bize doğrudan ulaşın</h2>
             <p className="mt-1 text-sm text-slate-600">Arayın veya WhatsApp&apos;tan yazın; ihtiyacınızı uzmanla birlikte netleştirin.</p>
             <div className="mt-5 space-y-3">
@@ -310,7 +310,7 @@ export default function Home() {
       <section id="teklif" className="scroll-mt-28 bg-white py-16 md:py-24">
         <Container className="max-w-7xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
-            <div>
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Ücretsiz Keşif & Teklif"
                 title="İhtiyacınızı yazın, size dönelim."

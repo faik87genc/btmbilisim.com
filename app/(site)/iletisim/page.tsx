@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
-import { QuoteForm } from "@/components/QuoteForm";
 import { ConsentMap } from "@/components/site/ConsentMap";
 import { JsonLd } from "@/components/site/Parts";
 import { Container } from "@/components/ensa/Container";
 import { PageHero } from "@/components/ensa/PageHero";
-import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/siteView";
 import { DEFAULT_OG_IMAGE, organizationJsonLd } from "@/lib/structuredData";
@@ -23,8 +21,9 @@ export const metadata: Metadata = {
 };
 
 const rows = [
-  { icon: Phone, label: "Destek Hattı", value: site.phone.display, href: site.phone.href },
-  { icon: MessageCircle, label: "Mobil / WhatsApp", value: site.mobile.display, href: site.whatsapp.href, external: true },
+  { icon: Phone, label: "Doğrudan Hat (Ara)", value: site.mobile.display, href: site.mobile.href },
+  { icon: MessageCircle, label: "WhatsApp", value: site.mobile.display, href: site.whatsapp.href, external: true },
+  { icon: Phone, label: "Sabit Hat", value: site.phone.display, href: site.phone.href },
   { icon: Mail, label: "E-Posta", value: site.email, href: `mailto:${site.email}` },
   { icon: Mail, label: "7/24 Teknik Destek", value: site.supportEmail.address, href: `mailto:${site.supportEmail.address}` },
   { icon: MapPin, label: "Adres", value: site.address },
@@ -80,20 +79,6 @@ export default function ContactPage() {
               <h2 className="mb-5 font-display text-2xl font-semibold text-ink-900">Mesaj gönderin</h2>
               <ContactForm />
             </div>
-          </div>
-        </Container>
-      </section>
-
-      <section id="teklif" className="scroll-mt-28 bg-navy-950 py-16 md:py-24">
-        <Container>
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
-            <SectionHeading
-              tone="dark"
-              eyebrow="Hızlı Teklif"
-              title="İhtiyacınızı anlatın, aynı gün dönelim."
-              description="Birkaç bilgiyle kapsamınızı anlayalım; keşif randevusu ve teklif için en kısa sürede sizinle iletişime geçelim."
-            />
-            <QuoteForm />
           </div>
         </Container>
       </section>

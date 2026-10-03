@@ -112,7 +112,7 @@ export async function BlogIndex({ pageNum }: { pageNum: number }) {
       <section className="bg-paper-50 py-16 md:py-20">
         <Container>
           {pageNum === 1 && tags.length > 0 && (
-            <div className="mb-10 flex flex-wrap gap-2">
+            <div className="-mx-6 mb-10 flex gap-2 overflow-x-auto px-6 pb-2 md:mx-0 md:flex-wrap md:overflow-visible md:px-0 md:pb-0">
               {tags.map((t) => (
                 <Link
                   key={t.slug}

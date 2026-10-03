@@ -47,7 +47,7 @@ const heroSlides: HeroSlide[] = [
     titleAccent: "altı uzmanlık.",
     description:
       "Siber güvenlik, sistem ve network, bulut ve yedekleme, yazılım, lisanslama ve danışmanlık süreçlerinizi ayrı tedarikçiler yerine tek bir ekiple yönetin.",
-    primaryCta: { label: "Ücretsiz Keşif Talep Edin", href: "/iletisim/#teklif" },
+    primaryCta: { label: "Ücretsiz Keşif Talep Edin", href: "/#teklif" },
     secondaryCta: { label: "Hizmetlerimizi İnceleyin", href: "/hizmetler/" },
   },
   {

@@ -79,10 +79,10 @@ export function MobileMenu({
           className="absolute inset-x-0 top-full max-h-[calc(100vh-72px)] overflow-y-auto border-t border-navy-950/10 bg-white shadow-[0_24px_40px_-24px_rgba(7,43,85,0.35)] lg:hidden"
         >
           <Container className="flex flex-col gap-1 py-4">
-            <Link href="/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
               Ana Sayfa
             </Link>
-            <Link href="/danismanlik/it-danismanlik-hizmetleri/" className="rounded-sm px-2 py-3 text-base font-semibold text-navy-800">
+            <Link onClick={() => setOpen(false)} href="/danismanlik/it-danismanlik-hizmetleri/" className="rounded-sm px-2 py-3 text-base font-semibold text-navy-800">
               IT Danışmanlık
             </Link>
 
@@ -101,11 +101,11 @@ export function MobileMenu({
                         <ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" aria-hidden="true" />
                       </summary>
                       <div className="mt-1 flex flex-col">
-                        <Link href={`/${a.slug}/`} className="px-2 py-2 text-sm font-medium text-gold-700">
+                        <Link onClick={() => setOpen(false)} href={`/${a.slug}/`} className="px-2 py-2 text-sm font-medium text-gold-700">
                           Tüm {a.title} hizmetleri
                         </Link>
                         {a.services.map((s) => (
-                          <Link key={s.key} href={s.href} className="px-2 py-2 text-sm text-slate-600">
+                          <Link key={s.key} onClick={() => setOpen(false)} href={s.href} className="px-2 py-2 text-sm text-slate-600">
                             {s.name}
                           </Link>
                         ))}
@@ -113,7 +113,7 @@ export function MobileMenu({
                     </details>
                   );
                 })}
-                <Link href="/hizmetler/" className="block py-1.5 text-sm font-semibold text-navy-800">
+                <Link onClick={() => setOpen(false)} href="/hizmetler/" className="block py-1.5 text-sm font-semibold text-navy-800">
                   Tüm Hizmetler
                 </Link>
               </div>
@@ -122,11 +122,11 @@ export function MobileMenu({
             {group("urunler", "Ürünler")}
             {section === "urunler" && (
               <div id="mm-urunler" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
-                <Link href="/yazilim-urunlerimiz/" className="px-2 py-2 text-sm font-medium text-gold-700">
+                <Link onClick={() => setOpen(false)} href="/yazilim-urunlerimiz/" className="px-2 py-2 text-sm font-medium text-gold-700">
                   Tüm ürünler
                 </Link>
                 {products.map((p) => (
-                  <Link key={p.slug} href={`/yazilim-urunlerimiz/${p.slug}/`} className="px-2 py-2 text-sm text-slate-600">
+                  <Link key={p.slug} onClick={() => setOpen(false)} href={`/yazilim-urunlerimiz/${p.slug}/`} className="px-2 py-2 text-sm text-slate-600">
                     {p.name}
                   </Link>
                 ))}
@@ -137,17 +137,17 @@ export function MobileMenu({
             {section === "kurumsal" && (
               <div id="mm-kurumsal" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
                 {corporate.map((c) => (
-                  <Link key={c.href} href={c.href} className="px-2 py-2 text-sm text-slate-600">
+                  <Link key={c.href} onClick={() => setOpen(false)} href={c.href} className="px-2 py-2 text-sm text-slate-600">
                     {c.label}
                   </Link>
                 ))}
               </div>
             )}
 
-            <Link href="/blog/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/blog/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
               Blog
             </Link>
-            <Link href="/iletisim/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/iletisim/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
               İletişim
             </Link>
             <Link

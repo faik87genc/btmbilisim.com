@@ -20,13 +20,9 @@ export type ServicePageContent = {
 };
 
 /**
- * Editorial content for the sub-service detail pages (`/{category}/{service}`).
- *
- * These pages are normally served from the `service_pages` table (authored in
- * the admin panel). This list is the seed source for that table
- * (`scripts/seed-service-pages.ts`) and also the fallback the route renders when
- * the database has no matching row yet — mirroring how `lib/blog.ts`
- * `fallbackPosts` backs the blog. Once a row exists in the DB, it takes over.
+ * Editorial content for the sub-service detail pages (`/{category}/{service}`),
+ * rendered by app/(site)/[slug]/[service]/page.tsx. This list is the source of
+ * truth: edit the copy here (title, metaTitle, metaDescription, content, faq).
  */
 export const servicePagesContent: ServicePageContent[] = [
   // ─────────────────────────────────────────────────────────────────────────
@@ -38,7 +34,7 @@ export const servicePagesContent: ServicePageContent[] = [
     slug: "iso-27001-bilgi-guvenligi-danismanligi",
     title: "ISO 27001 Bilgi Güvenliği Danışmanlığı",
     metaDescription:
-      "ISO 27001 Bilgi Güvenliği Yönetim Sistemi kurulumu, risk analizi, dokümantasyon ve sertifikasyon denetimine hazırlık. BTM Bilişim ile belgelendirmeye hazır olun.",
+      "ISO 27001 Bilgi Güvenliği Yönetim Sistemi kurulumu, risk analizi, dokümantasyon ve sertifikasyon denetimine hazırlık.",
     content: `ISO 27001 danışmanlığımız, kurumunuzda yalnızca sertifika almayı değil, işleyen bir Bilgi Güvenliği Yönetim Sistemi (BGYS) kurmayı hedefler. Denetimde sorulan şey belgelerin varlığı değil, bilgi güvenliğini nasıl yönettiğinizdir.
 
 ## ISO 27001 nedir?
@@ -117,6 +113,13 @@ Yeni bir yazılım, yeni bir tedarikçi ya da yeni bir kampanya, veri işleme en
 - İlgili kişi başvuru kanalı ve 30 günlük yanıt süreci
 - Çalışan farkındalık eğitimi
 
+## Kimler için?
+
+- Müşteri, personel veya hasta verisi işleyen her ölçekte işletme
+- VERBİS kaydı, aydınlatma metni ve açık rıza süreçlerini netleştirmek isteyen kurumlar
+- Kişisel veriyi bulutta veya üçüncü taraf yazılımlarda saklayan şirketler
+- Bir veri ihlali sonrasında süreçlerini yeniden kurgulaması gereken ekipler
+
 ## Nasıl çalışıyoruz?
 
 1. **Envanter ve mevcut durum** — Hangi veriyi, neden, nerede ve ne kadar süre işlediğiniz haritalanır.
@@ -130,6 +133,8 @@ Yeni bir yazılım, yeni bir tedarikçi ya da yeni bir kampanya, veri işleme en
 - İlgili kişi başvurularına düzenli, süresinde yanıt
 - Tedarikçi ve iş ortağı sözleşmelerinde net veri sorumluluğu
 - ISO 27001 kontrolleriyle örtüşen, denetime hazır bir yapı
+
+KVKK'nın teknik tedbirlerini altyapınıza uygulamak için [IT danışmanlık hizmetlerimizden](/danismanlik/it-danismanlik-hizmetleri/), bilgi güvenliği yönetim sistemi için [ISO 27001 danışmanlığından](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/), veri sızıntısını önlemek için [DLP çözümlerinden](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) yararlanabilirsiniz.
 
 Kurumunuzun uyum düzeyini bir saatlik bir değerlendirme görüşmesinde birlikte çıkarabiliriz. [İletişime geçin.](/iletisim/)`,
     faq: [
@@ -156,7 +161,7 @@ Kurumunuzun uyum düzeyini bir saatlik bir değerlendirme görüşmesinde birlik
     slug: "it-danismanlik-hizmetleri",
     title: "IT Danışmanlık Hizmetleri",
     related: ["sistem-network/sistem-ve-network-danismanligi","siber-guvenlik/siber-guvenlik-danismanligi","sistem-network/it-bakim-ve-destek-hizmetleri","danismanlik/iso-27001-bilgi-guvenligi-danismanligi","danismanlik/kvkk-danismanligi"],
-    metaTitle: "IT Danışmanlık Hizmetleri ve Firması | Gebze, Kocaeli | BTM Bilişim",
+    metaTitle: "IT Danışmanlık Hizmetleri ve Firması | Gebze | BTM Bilişim",
     metaDescription:
       "IT danışmanlık firması BTM Bilişim: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, dış kaynak IT müdürü. 2010'dan beri Gebze ve Kocaeli.",
     content: `IT danışmanlık hizmetlerimiz, işletmenizin bilgi teknolojilerini (BT) iş hedeflerinize hizmet eden, güvenli ve ölçülebilir bir yapıya dönüştürür. BTM Bilişim'de yaptığımız her işin temelinde IT danışmanlığı vardır: önce ihtiyacı ve riski netleştirir, sonra altyapıyı, güvenliği ve yazılımı buna göre kurar ve yönetiriz. 2010'dan bu yana farklı ölçekte kurumların ağ, sunucu, güvenlik, bulut ve yazılım projelerini sahada bizzat yürütüyoruz.
@@ -223,7 +228,7 @@ Tam zamanlı bir IT müdürü istihdam etmeden, düzenli toplantılar, raporlama
 
 ## Sektörlere göre IT danışmanlık
 
-- **Üretim ve OSB:** Üretim (OT) ağının ofis ağından ayrılması, makine ve PLC erişimlerinin güvenliği, kesintisiz üretim için yedekli altyapı ve kamera sistemleri.
+- **Üretim ve OSB:** Üretim (OT) ağının ofis ağından ayrılması, makine ve PLC erişimlerinin güvenliği, kesintisiz üretim için yedekli altyapı ve [kamera sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/).
 - **Lojistik ve depo:** Geniş alanlarda kararlı kablosuz ağ, el terminalleri, depo yönetim yazılımı entegrasyonu ve şubeler arası güvenli bağlantı.
 - **Sağlık:** Hasta verisinin KVKK'ya uygun korunması, erişim yetkileri, şifreli yedekleme ve kesinti planı.
 - **Finans ve profesyonel hizmetler:** Sıkı erişim kontrolü, loglama, sızma testi ve denetime hazır dokümantasyon.
@@ -516,6 +521,8 @@ Bulgulara göre [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/), 
 - Denetim ve müşteri sorularına hazır kanıt
 - Tek tedarikçiye bağımlı olmayan, gerekçeli kararlar
 
+Güvenlik önceliklerini tüm teknoloji yatırımlarınızla birlikte planlamak için [kurumsal IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) hizmetimizle çalışabilirsiniz.
+
 Güvenlik olgunluğunuzu ölçmek için [bizimle iletişime geçin.](/iletisim/)`,
     faq: [
       {
@@ -559,6 +566,13 @@ Zafiyet taraması otomatik araçlarla bilinen açıkları listeler; hızlı ve g
 - **Kablosuz ağ testi** — Wi-Fi yapılandırması ve erişim kontrolü
 - **Sosyal mühendislik / kimlik avı simülasyonu** — Kullanıcı farkındalığı
 
+## Kimler için?
+
+- Müşteri veya denetim (ISO 27001, KVKK, PCI DSS) gereği yıllık sızma testi yaptırması gereken kurumlar
+- İnternete açık web uygulaması, portal veya API işleten işletmeler
+- Yeni bir sistemi canlıya almadan önce güvenliğini doğrulamak isteyen ekipler
+- Fidye yazılımı riskini somut bulgularla görmek isteyen yöneticiler
+
 ## Nasıl çalışıyoruz?
 
 1. **Kapsam ve yetkilendirme** — Hedefler, zaman penceresi ve kurallar yazılı olarak belirlenir.
@@ -578,8 +592,20 @@ Yılda bir testin yanında sürekli bir program için yapay zekâ destekli otono
 - Yönetime iş diliyle yazılmış risk özeti
 - Düzeltmelerin retest ile kanıtlanması
 
+Testten önce geniş bir tarama için [zafiyet taraması ve güvenlik açığı analizi](/siber-guvenlik/guvenlik-acigi-ve-zafiyet-analizi/), bulguların kalıcı olarak kapatılması için [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) hizmetlerimizle devam edebilirsiniz.
+
 Test kapsamınızı ve takviminizi konuşmak için [bizimle iletişime geçin.](/iletisim/)`,
     faq: [
+      {
+        question: "Sızma testi ne sıklıkla yapılmalı?",
+        answer:
+          "En az yılda bir kez ve her büyük değişiklikten (yeni uygulama, altyapı geçişi, birleşme) sonra yapılmasını öneriyoruz. Denetim veya müşteri şartı varsa sıklık bu gereksinime göre belirlenir.",
+      },
+      {
+        question: "Sızma testi ücreti neye göre belirlenir?",
+        answer:
+          "Ücret; test edilecek IP, uygulama ve API sayısına, test türüne (dış ağ, iç ağ, web, mobil), kara/gri kutu yaklaşımına ve kapsamın genişliğine göre belirlenir. Kapsam görüşmesinden sonra kalem kalem teklif sunarız.",
+      },
       {
         question: "Test sistemlerimize zarar verir mi?",
         answer:
@@ -663,7 +689,7 @@ Kapsamınızı ve tarama sıklığınızı planlamak için [bizimle iletişime g
     slug: "firewall-ve-ag-guvenligi",
     title: "Firewall ve Ağ Güvenliği",
     metaDescription:
-      "Yeni nesil güvenlik duvarı kurulumu, kural optimizasyonu, segmentasyon ve ağ trafiği izleme. BTM Bilişim ile ağ sınırınızı ve iç trafiğinizi kontrol altına alın.",
+      "Yeni nesil güvenlik duvarı kurulumu, kural optimizasyonu, segmentasyon ve ağ trafiği izleme. Ağ sınırınızı ve iç trafiğinizi kontrol altına alın.",
     content: `Firewall ve ağ güvenliği hizmetimiz, kurumsal ağınızın sınırını ve iç trafiğini kontrol altına alır. Yeni nesil güvenlik duvarlarını doğru kurgular, kural setinizi sadeleştirir ve trafiği sürekli izleriz.
 
 ## Yaygın sorunlar
@@ -723,7 +749,7 @@ Mevcut güvenlik duvarı kurulumunuzu birlikte gözden geçirelim. [İletişime 
     slug: "edr-antivirus-cozumleri",
     title: "Kurumsal Antivirüs ve EDR Çözümleri",
     metaDescription:
-      "Uç nokta tehdit tespiti ve müdahale (EDR), merkezi antivirüs yönetimi ve fidye yazılımı koruması. BTM Bilişim ile uç noktalarınızı görünür ve savunulabilir kılın.",
+      "Uç nokta tehdit tespiti ve müdahale (EDR), merkezi antivirüs yönetimi ve fidye yazılımı koruması. Uç noktalarınızı görünür ve savunulabilir kılın.",
     content: `EDR ve antivirüs çözümlerimiz, kullanıcı bilgisayarları ve sunucularınızı yalnızca bilinen zararlılara karşı değil, davranışsal olarak yeni ve hedefli saldırılara karşı da korur.
 
 Tek bir markaya bağlı değiliz: tüm önde gelen antivirüs ve EDR markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
@@ -785,7 +811,7 @@ Uç nokta koruma ihtiyacınızı konuşmak için [bizimle iletişime geçin.](/i
     slug: "dlp-veri-kaybi-onleme-cozumleri",
     title: "DLP – Veri Kaybı Önleme Çözümleri",
     metaDescription:
-      "Hassas verinin e-posta, USB, bulut ve web kanallarından sızmasını engelleyen DLP politikaları. BTM Bilişim ile veri sınıflandırma ve kaçak önlemeyi birlikte kurun.",
+      "Hassas verinin e-posta, USB, bulut ve web kanallarından sızmasını engelleyen DLP politikaları. Veri sınıflandırma ve kaçak önleme birlikte.",
     content: `DLP (Data Loss Prevention) çözümlerimiz, kurumunuzun hassas verisinin izinsiz biçimde dışarı çıkmasını engeller. Finansal bilgi, müşteri verisi, sözleşme ve fikri mülkiyet gibi içeriklerin kanallarını politika ile kontrol altına alırız.
 
 Tek bir markaya bağlı değiliz: tüm önde gelen DLP markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
@@ -847,7 +873,7 @@ Veri sızıntısı risklerinizi birlikte değerlendirelim. [İletişime geçin.]
     slug: "siem-ve-log-yonetimi",
     title: "SIEM ve 5651 Log Yönetimi",
     metaDescription:
-      "Merkezi log toplama, korelasyon, alarm ve uyum raporlaması. BTM Bilişim ile güvenlik olaylarını erken görün, denetim için gereken kaydı eksiksiz tutun.",
+      "5651 uyumlu log saklama ve zaman damgası, merkezi SIEM, korelasyon ve alarm. BTM Bilişim ile olayları erken görün, denetim kaydını eksiksiz tutun.",
     content: `SIEM ve log yönetimi hizmetimiz, dağınık sistemlerinizin kayıtlarını tek merkezde toplar, ilişkilendirir ve anlamlı alarmlara dönüştürür. Böylece bir saldırıyı olduktan sonra değil, gelişirken fark edersiniz.
 
 ## Neden merkezi log?
@@ -944,6 +970,8 @@ Yönetim sistemi tarafı için [ISO 27001 bilgi güvenliği danışmanlığı](/
 - KVKK teknik tedbirleriyle tek seferde örtüşme
 - Belgelendirme sonrası da sürdürülebilir bir kontrol seti
 
+Teslim öncesinde güvenliği [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile doğrulayabiliriz.
+
 Teknik kontrol boşluklarınızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
     faq: [
       {
@@ -1009,6 +1037,8 @@ Sık yaşanan kesintiler, yavaşlayan uygulamalar, dolan disk ve lisans sınırl
 - Belgelenmiş, devredilebilir bir altyapı
 - Büyümeye hazır bir mimari
 
+Altyapı kararlarınızı güvenlik ve bütçeyle birlikte ele almak isterseniz kapsamlı [IT danışmanlık hizmetlerimiz](/danismanlik/it-danismanlik-hizmetleri/) ile bütünsel bir yol haritası çıkarıyoruz.
+
 Altyapınızı birlikte gözden geçirmek için [iletişime geçin.](/iletisim/)`,
     faq: [
       {
@@ -1033,6 +1063,7 @@ Altyapınızı birlikte gözden geçirmek için [iletişime geçin.](/iletisim/)
     serviceKey: "ag-altyapisi-kurulum-ve-yonetimi",
     slug: "ag-altyapisi-kurulum-ve-yonetimi",
     title: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
+    metaTitle: "Network Kurulumu ve Ağ Altyapısı | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
       "Kurumsal LAN/WAN tasarımı, switch ve router yapılandırması, VLAN, SD-WAN ve sürekli ağ yönetimi. BTM Bilişim ile hızlı, kararlı ve yönetilebilir bir ağ kurun.",
     content: `Ağ altyapısı kurulum ve yönetimi hizmetimiz, kurumsal ağınızı baştan tasarlar veya mevcut ağınızı kararlı, güvenli ve yönetilebilir bir yapıya taşır.
@@ -1069,6 +1100,8 @@ Ağ sınırı güvenliği için [firewall ve VPN çözümleri](/sistem-network/f
 - Segmentasyonla azalan güvenlik riski
 - Belgelenmiş, devredilebilir yapılandırma
 - Sorunların kullanıcıdan önce alarmla fark edilmesi
+
+Güvenlik kameraları için ayrı bir ağ segmenti ve PoE altyapısı gerekiyorsa [IP kamera ve güvenlik kamerası sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) hizmetimizle birlikte planlıyoruz.
 
 Ağ altyapınızı planlamak için [bizimle iletişime geçin.](/iletisim/)`,
     faq: [
@@ -1112,6 +1145,13 @@ Elle kurulmuş, birbirinden farklı yapılandırılmış sunucular; ertelenen g�
 - İzleme, alarm ve kapasite raporlaması
 - Yedekleme entegrasyonu ve geri yükleme testleri
 - Standart kurulum şablonları ve belgeleme
+
+## Kimler için?
+
+- Yeni sunucu alımı veya mevcut sunucusunu yenilemeyi planlayan işletmeler
+- ERP, dosya paylaşımı ve veritabanı gibi kritik uygulamaları yerinde çalıştıran kurumlar
+- Eskiyen fiziksel sunucularını sanallaştırmaya taşımak isteyenler
+- Sunucu odası, yedekleme ve kesintisiz güç altyapısını düzene sokmak isteyen ekipler
 
 ## Nasıl çalışıyoruz?
 
@@ -1170,7 +1210,7 @@ Plansız büyüyen sunucu odaları; yetersiz soğutma, dağınık kablolama, tek
 - Enerji yedekliliği: UPS, jeneratör devreye alma senaryoları
 - Soğutma ve sıcak/soğuk koridor planlaması
 - Yapılandırılmış kablolama ve etiketleme standardı
-- Fiziksel erişim kontrolü, kamera ve çevre izleme (sıcaklık, nem, sızıntı)
+- Fiziksel erişim kontrolü, [kamera ve çevre izleme](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) (sıcaklık, nem, sızıntı)
 - Colocation seçimi ve veri merkezi taşıma projeleri
 
 ## Nasıl çalışıyoruz?
@@ -1276,7 +1316,7 @@ Sanallaştırma yol haritanızı birlikte çıkaralım. [İletişime geçin.](/i
     slug: "wifi-ve-kablosuz-ag-cozumleri",
     title: "Wi-Fi ve Kablosuz Ağ Çözümleri",
     metaDescription:
-      "Kurumsal Wi-Fi tasarımı, kapsama (site survey) ölçümü, denetleyici tabanlı yönetim, misafir ağı ve 802.1X güvenlik. BTM Bilişim ile her noktada kararlı kablosuz.",
+      "Kurumsal Wi-Fi tasarımı, kapsama (site survey) ölçümü, denetleyici tabanlı yönetim, misafir ağı ve 802.1X güvenlik.",
     content: `Wi-Fi ve kablosuz ağ çözümlerimiz, ofis, depo, üretim alanı ve kampüs ortamlarında kesintisiz, güvenli ve yönetilebilir bir kablosuz ağ kurar.
 
 ## Kötü Wi-Fi'nin nedeni genellikle plansızlıktır
@@ -1336,9 +1376,9 @@ Kablosuz ağ ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/ileti
     serviceKey: "ip-kamera-guvenlik-kamerasi-sistemleri",
     slug: "ip-kamera-guvenlik-kamerasi-sistemleri",
     title: "IP Kamera ve Güvenlik Kamerası Sistemleri",
-    metaTitle: "IP Kamera ve Güvenlik Kamerası Kurulumu | Gebze, Kocaeli | BTM Bilişim",
+    metaTitle: "Güvenlik Kamerası ve IP Kamera Kurulumu | Gebze | BTM Bilişim",
     metaDescription:
-      "Gebze, Kocaeli ve Tuzla'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. BTM Bilişim ile kör nokta bırakmayın.",
+      "Gebze, Kocaeli ve Tuzla'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. Keşif ücretsiz.",
     content: `IP kamera ve güvenlik kamerası sistemlerimiz; fabrika, OSB, depo, işyeri, apartman ve siteler için keşiften kuruluma, kayıttan uzaktan izlemeye kadar uçtan uca planlanır. Kamera sistemini ayrı bir cihaz yığını olarak değil, ağ altyapınızın güvenli bir parçası olarak kuruyoruz.
 
 ## Kamera sistemleri neden beklenen faydayı sağlamaz?
@@ -1392,6 +1432,11 @@ Kamera ağı için [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-alt
 Kamera sisteminizi birlikte planlayalım; keşif ve teklif ücretsizdir. [Teklif isteyin.](/#teklif)`,
     faq: [
       {
+        question: "Kamera kurulum fiyatı neye göre değişir?",
+        answer:
+          "Kamera sayısı ve modeli, kablo mesafesi, NVR ve disk kapasitesi, montaj koşulları ve PoE switch ihtiyacına göre değişir. Yerinde keşiften sonra kalem kalem teklif veriyoruz; keşif ücretsizdir.",
+      },
+      {
         question: "IP kamera mı, analog (AHD) kamera mı seçmeliyim?",
         answer:
           "Yeni kurulumlarda genellikle IP kamerayı öneriyoruz: daha yüksek çözünürlük, PoE ile tek kablodan güç ve veri, merkezi yönetim ve genişletme kolaylığı sağlar. Mevcut koaksiyel kablolaması olan küçük sistemlerde AHD hâlâ ekonomik bir seçenek olabilir.",
@@ -1417,9 +1462,9 @@ Kamera sisteminizi birlikte planlayalım; keşif ve teklif ücretsizdir. [Teklif
     categorySlug: "sistem-network",
     serviceKey: "firewall-ve-vpn-cozumleri",
     slug: "firewall-ve-vpn-cozumleri",
-    title: "Firewall ve VPN Çözümleri",
+    title: "Kurumsal VPN ve Uzaktan Erişim Çözümleri",
     metaDescription:
-      "Güvenlik duvarı kurulumu, site-to-site ve uzaktan erişim VPN, ZTNA ve çok faktörlü kimlik doğrulama. BTM Bilişim ile uzaktan erişimi güvenli ve yönetilebilir kılın.",
+      "Güvenlik duvarı kurulumu, site-to-site ve uzaktan erişim VPN, ZTNA ve çok faktörlü kimlik doğrulama. Güvenli ve yönetilebilir uzaktan erişim.",
     content: `Firewall ve VPN çözümlerimiz, kurumsal ağınızın sınır güvenliğini ve uzaktan erişimini birlikte kurgular. Şubeler arası bağlantılar ve dışarıdan çalışan kullanıcılar için güvenli, izlenebilir erişim sağlarız.
 
 ## Uzaktan erişim neden dikkatli kurgulanmalı?
@@ -1454,6 +1499,8 @@ Tehdit önleme ve trafik görünürlüğü için [firewall ve ağ güvenliği](/
 - Şubeler arası şifreli, kararlı bağlantı
 - Erişim olaylarında tam kayıt
 - Kullanılmayan kuralların ve hesapların temizlenmesi
+
+Kamera kayıtlarına uzaktan güvenli erişim için [IP kamera sistemlerini](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) VPN altyapısıyla birlikte kuruyoruz.
 
 Uzaktan erişim ve sınır güvenliği kurgunuzu birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
     faq: [
@@ -1566,6 +1613,13 @@ Reaktif "bir şey bozulunca ara" modeli pahalıdır; kesintiler iş kaybına dö
 | Yardımcı ekip | Mevcut ekibe destek ve nöbet | Küçük IT ekibi olanlar |
 | Proje + destek | Kurulum sonrası bakım | Belirli bir sistem için |
 
+## Kimler için?
+
+- Kendi IT personeli olmayan ya da tek kişilik IT ekibiyle çalışan KOBİ'ler
+- Fabrika, depo ve çok şubeli yapılarda kesintisiz çalışması gereken işletmeler
+- Arıza oldukça çözüm arayan, düzenli bakıma geçmek isteyen kurumlar
+- Mesai dışında da ulaşılabilir 7/24 teknik destek hattına ihtiyaç duyanlar
+
 ## Nasıl çalışıyoruz?
 
 1. **Devralma** — Envanter, erişimler ve mevcut sorunlar dökümante edilir.
@@ -1583,6 +1637,8 @@ Talep ve envanter yönetimini şeffaflaştırmak için [Orbit IT operasyon platf
 - Kesintilerin azalması, sorunların kök nedenle çözülmesi
 - Personel giriş/çıkışında düzenli erişim yönetimi
 - Yönetim için aylık, ölçülebilir hizmet raporu
+
+Günlük desteğin ötesinde teknoloji yol haritası ve bütçe planlaması için [IT danışmanlık firması](/danismanlik/it-danismanlik-hizmetleri/) olarak da yanınızdayız.
 
 Destek ihtiyacınızı ve mevcut kapsamınızı birlikte konuşalım. [İletişime geçin.](/iletisim/)`,
     faq: [
@@ -1647,6 +1703,8 @@ Platform seçildiğinde [Microsoft Azure çözümleri](/bulut-yedekleme/microsof
 - Sürprizsiz, alarmlı bir bulut maliyeti
 - Kimlik ve güvenliğin baştan doğru kurulması
 - Esnek kapasite ve hızlı ortam oluşturma
+
+Hangi iş yükünün buluta taşınacağına karar vermeden önce [IT danışmanlık](/danismanlik/it-danismanlik-hizmetleri/) kapsamında maliyet, performans ve güvenlik değerlendirmesi yapıyoruz.
 
 Bulut yol haritanızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
     faq: [
@@ -1856,7 +1914,7 @@ AWS ortamınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
     slug: "veri-yedekleme-cozumleri",
     title: "Veri Yedekleme (Backup) Çözümleri",
     metaDescription:
-      "3-2-1 yedekleme kurgusu, sunucu/uygulama/M365 yedeği, değiştirilemez (immutable) kopya ve düzenli geri yükleme testi. BTM Bilişim ile yedekleriniz gerçekten çalışsın.",
+      "3-2-1 yedekleme kurgusu, sunucu/uygulama/M365 yedeği, değiştirilemez (immutable) kopya ve düzenli geri yükleme testi.",
     content: `Veri yedekleme çözümlerimiz, verinizin yalnızca alınmasını değil; doğru saklanmasını, korunmasını ve geri yüklenebilir olduğunun düzenli olarak kanıtlanmasını sağlar.
 
 ## "Yedeğimiz var" yeterli değil
@@ -2038,7 +2096,7 @@ Teknik geri dönüş için [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-
     slug: "veri-kurtarma-hizmetleri",
     title: "Veri Kurtarma Hizmetleri",
     metaDescription:
-      "Silinen, bozulan veya erişilemeyen verinin kurtarılması: disk, RAID, sunucu, veritabanı ve sanal makine. BTM Bilişim ile veri kaybında hızlı ve kontrollü müdahale.",
+      "Silinen, bozulan veya erişilemeyen verinin kurtarılması: disk, RAID, sunucu, veritabanı ve sanal makine. Veri kaybında hızlı müdahale.",
     content: `Veri kurtarma hizmetimiz; kaza sonucu silinen, bozulan ya da erişilemez hâle gelen verinin kurtarılması için kontrollü, önceliklendirilmiş bir müdahale sağlar.
 
 ## İlk adım: durumu kötüleştirmemek
@@ -2102,7 +2160,7 @@ Bir veri kaybı durumundaysanız aygıtı kullanmayı durdurun ve [hemen bizimle
     slug: "ozel-yazilim-gelistirme",
     title: "Özel Yazılım Geliştirme",
     metaDescription:
-      "İş süreçlerinize birebir uyan, entegre ve ölçeklenebilir özel yazılım geliştirme. BTM Bilişim ile paket çözümlerin dışında kalan ihtiyaçlarınızı yazılıma dönüştürün.",
+      "İş süreçlerinize birebir uyan, entegre ve ölçeklenebilir özel yazılım geliştirme. Paket çözümlerin karşılamadığı ihtiyaçlar için.",
     content: `Özel yazılım geliştirme hizmetimiz; hazır paketlerin karşılamadığı, kurumunuza özgü iş süreçlerini uçtan uca bir yazılıma dönüştürür. Analizden devreye almaya ve sonrasındaki bakıma kadar tek sorumlulukla çalışırız.
 
 ## Ne zaman özel yazılım?
@@ -2144,6 +2202,8 @@ Geliştirdiğimiz ürünler arasında çok firmalı İK izin platformu [Otium](/
 - **Sahayı bilen yazılım:** IT danışmanlığı ve altyapı deneyimimiz sayesinde yazılım; sunucu, ağ, yedekleme ve güvenlik tarafıyla birlikte planlanır.
 - **Güvenli geliştirme:** OWASP kontrolleri, yetkilendirme ve loglama tasarımın parçasıdır; gerekirse sızma testiyle doğrularız.
 - **Kanıtlanmış ürünler:** Atlas, Orbit ve PentForce gibi kendi kurumsal ürünlerimizi geliştiren ekip, projenizde de çalışır.
+
+Teslim öncesinde güvenliği [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile doğrulayabiliriz.
 
 Fikrinizi ya da mevcut sürecinizi birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
     faq: [
@@ -2232,7 +2292,7 @@ Web uygulaması ihtiyacınızı birlikte konuşalım. [İletişime geçin.](/ile
     title: "Kurumsal Web Tasarım",
     metaTitle: "Web Tasarım Hizmetleri | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
-      "Kurumsal kimliğinize uygun, hızlı, SEO uyumlu ve yönetilebilir web sitesi tasarımı ve geliştirmesi. BTM Bilişim ile sitenizi bir vitrin değil, bir kazanım kanalı yapın.",
+      "Kurumsal kimliğinize uygun, hızlı, SEO uyumlu ve yönetilebilir web sitesi tasarımı ve geliştirmesi. Siteniz bir vitrin değil, kazanım kanalı olsun.",
     content: `Web tasarım ve kurumsal web sitesi hizmetimiz; markanızı doğru anlatan, arama motorlarında bulunan, hızlı açılan ve içeriğini kendiniz yönetebileceğiniz bir site kurar.
 
 ## İyi bir kurumsal site neye benzer?
@@ -2260,7 +2320,7 @@ Hızlı açılır (Core Web Vitals), mobilde kusursuz çalışır, arama motoru 
 ## Neden BTM Bilişim ile web sitesi?
 
 - **Kendi yazılım ekibimiz:** Tasarımdan kodlamaya, yayından bakıma işi dışarı vermeden kendimiz yaparız.
-- **Güvenlik önce:** Sızma testi deneyimimizle siteyi güvenlik başlıkları, güncel bileşenler ve korumalı yönetim paneliyle teslim ederiz.
+- **Güvenlik önce:** [Sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) deneyimimizle siteyi güvenlik başlıkları, güncel bileşenler ve korumalı yönetim paneliyle teslim ederiz.
 - **Mobil öncelikli:** Ziyaretçilerin çoğu telefondan gelir; tasarımı önce mobil için kurgular, tüm ekranlarda test ederiz.
 - **KVKK uyumlu:** Çerez onayı, aydınlatma metni ve form verilerinin güvenli işlenmesi baştan kurgulanır.
 - **Doğrudan iletişim:** Telefon, WhatsApp ve teklif formu ziyaretçinin her sayfada tek dokunuşla ulaşabileceği yerde olur.
@@ -2299,7 +2359,7 @@ Sitenizin yenilenmesi ya da sıfırdan kurulması için [bizimle iletişime geç
     categorySlug: "yazilim-dijital",
     serviceKey: "api-ve-sistem-entegrasyonlari",
     slug: "api-ve-sistem-entegrasyonlari",
-    title: "API ve Sistem Entegrasyonları",
+    title: "API Entegrasyon Hizmetleri",
     metaDescription:
       "Sistemleriniz arasında güvenli, izlenebilir veri akışı: REST/SOAP API, webhook, ETL ve entegrasyon katmanı. BTM Bilişim ile kopuk sistemleri birbirine bağlayın.",
     content: `API ve sistem entegrasyonları hizmetimiz, birbirinden habersiz çalışan sistemlerinizi güvenli ve izlenebilir bir veri akışıyla birbirine bağlar. Manuel veri kopyalama ve mutabakat işleri ortadan kalkar.
@@ -2423,7 +2483,7 @@ Mevcut ERP entegrasyon ihtiyaçlarınızı birlikte çıkaralım. [İletişime g
     slug: "is-sureci-otomasyonlari",
     title: "İş Süreci Otomasyonları",
     metaDescription:
-      "Onay akışları, veri aktarımı, raporlama ve tekrarlayan görevlerin otomasyonu (workflow, RPA, entegrasyon). BTM Bilişim ile manuel emeği azaltın, hata payını düşürün.",
+      "Onay akışları, veri aktarımı, raporlama ve tekrarlayan görevlerin otomasyonu (workflow, RPA, entegrasyon). Manuel emeği ve hata payını azaltın.",
     content: `İş süreci otomasyonları hizmetimiz; tekrarlayan, kural bazlı ve manuel emek gerektiren işleri yazılıma devrederek ekiplerinizin zamanını katma değerli işlere ayırmasını sağlar.
 
 ## Hangi süreçler otomasyona uygun?
@@ -2608,6 +2668,7 @@ Lisans yapınızı bir envanter çalışmasıyla birlikte gözden geçirelim. [�
     serviceKey: "microsoft-365-lisanslama",
     slug: "microsoft-365-lisanslama",
     title: "Microsoft 365 Lisanslama",
+    metaTitle: "Microsoft 365 Lisans Satın Alma ve Plan Seçimi | BTM Bilişim",
     metaDescription:
       "Business ve Enterprise planları, E3/E5 ve eklenti kararları, kullanıcı bazlı optimizasyon ve CSP tedariki. BTM Bilişim ile Microsoft 365'te doğru planı seçin.",
     content: `Microsoft 365 lisanslama hizmetimiz; kullanıcı profillerinize göre doğru plan karmasını belirler, gereksiz üst paketleri ayıklar ve tedarik ile yenilemeyi yönetir.
@@ -2730,7 +2791,7 @@ Sunucu lisans yapınızı bir envanter çalışmasıyla doğrulayalım. [İleti�
     slug: "vmware-lisanslama",
     title: "VMware Lisanslama",
     metaDescription:
-      "VMware vSphere ve VCF abonelik modeli, çekirdek bazlı lisanslama, yenileme ve alternatif değerlendirmesi. BTM Bilişim ile sanallaştırma lisanslarınızı planlayın.",
+      "VMware vSphere ve VCF abonelik modeli, çekirdek bazlı lisanslama, yenileme ve alternatif değerlendirmesi. Sanallaştırma lisanslarınızı planlayın.",
     content: `VMware lisanslama hizmetimiz; değişen abonelik modeli ve çekirdek bazlı lisanslama kuralları içinde sanallaştırma altyapınızın lisans ihtiyacını doğru hesaplar, yenileme ve alternatif kararlarında yol gösterir.
 
 ## VMware lisanslamada son dönem değişiklikleri
@@ -2850,7 +2911,7 @@ Veeam lisans ihtiyacınızı bir envanterle netleştirelim. [İletişime geçin.
     slug: "siber-guvenlik-urunleri-lisanslama",
     title: "Siber Güvenlik Ürünleri Lisanslama",
     metaDescription:
-      "Güvenlik duvarı, EDR/XDR, e-posta güvenliği, DLP ve SIEM ürünleri için doğru lisans modeli, boyutlandırma ve yenileme yönetimiyle lisanslarınızı tek elden yönetin.",
+      "Güvenlik duvarı, EDR/XDR, e-posta güvenliği, DLP ve SIEM ürünleri için doğru lisans modeli, boyutlandırma ve yenileme yönetimi tek elden.",
     content: `Siber güvenlik ürünleri lisanslama hizmetimiz; güvenlik duvarından EDR'ye, e-posta güvenliğinden SIEM'e kadar farklı üreticilerin lisans modellerini tek elden yönetmenizi sağlar.
 
 ## Güvenlik lisanslamasının zorluğu
@@ -2910,7 +2971,7 @@ Güvenlik lisans envanterinizi birlikte çıkaralım. [İletişime geçin.](/ile
     slug: "kurumsal-yazilim-lisanslama",
     title: "Kurumsal Yazılım Lisanslama",
     metaDescription:
-      "Tüm yazılım lisanslarınızın tek noktadan yönetimi: envanter, uyumluluk (SAM), yenileme takvimi ve maliyet optimizasyonu. BTM Bilişim ile lisans yönetimini düzene sokun.",
+      "Tüm yazılım lisanslarınızın tek noktadan yönetimi: envanter, uyumluluk (SAM), yenileme takvimi ve maliyet optimizasyonu.",
     content: `Kurumsal yazılım lisanslama hizmetimiz; kurumunuzun ihtiyaç duyduğu tüm yazılım lisanslarını (işletim sistemi, üretkenlik, sanallaştırma, yedekleme, güvenlik, veritabanı, tasarım ve sektörel uygulamalar) tek bir envanter ve takvim altında yönetmenizi sağlar.
 
 ## Dağınık lisans yönetiminin bedeli
@@ -2945,6 +3006,8 @@ Lisanslar farklı kişiler tarafından, farklı zamanlarda, farklı kanallardan 
 - Yenileme tarihlerinin tek takvimde toplanması
 - Atıl ve mükerrer lisansların maliyetten çıkması
 - Üretici denetimlerine hazırlıklı, savunulabilir bir yapı
+
+Lisans kararlarını genel teknoloji planınızla birlikte vermek için [BT danışmanlık hizmetimizden](/danismanlik/it-danismanlik-hizmetleri/) destek alabilirsiniz.
 
 Lisans yönetiminizi düzene sokmak için bir envanter çalışmasıyla başlayalım. [İletişime geçin.](/iletisim/)`,
     faq: [

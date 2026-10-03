@@ -300,7 +300,8 @@ export default function Page() {
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
         <div className="hero-aurora" aria-hidden="true" />
         <ParallaxGlobe className="pointer-events-none absolute -right-32 -top-24 h-[460px] w-[460px] text-gold-500/15" />
-        <Container className="relative max-w-3xl">
+        <Container className="relative">
+          <div className="max-w-3xl">
           <MotionReveal blur>
             <span className="inline-block rounded-sm bg-paper-50/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-gold-300">
               {product.code}
@@ -338,6 +339,7 @@ export default function Page() {
               </MotionStaggerItem>
             ))}
           </MotionStagger>
+          </div>
         </Container>
       </section>
 

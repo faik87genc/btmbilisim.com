@@ -35,7 +35,7 @@ export default function TeamPage() {
         crumbs={[{ text: "Hakkımızda", href: "/hakkimizda/" }, { text: "Ekibimiz" }]}
       />
       <section className="bg-paper-50 py-14 md:py-20">
-        <Container className="lg:max-w-6xl">
+        <Container>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
               <li key={m.name} className="flex flex-col rounded-2xl border border-navy-950/10 bg-white p-6 shadow-[0_18px_40px_-30px_rgba(7,43,85,0.35)]">
