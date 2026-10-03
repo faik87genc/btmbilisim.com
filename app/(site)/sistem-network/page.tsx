@@ -8,7 +8,7 @@ const category = serviceCategories["sistem-network"];
 const base = {
   title: "Sistem, Ağ ve Sunucu Altyapı Çözümleri | BTM Bilişim",
   description:
-    "Ağ altyapısı, sunucu yönetimi, sanallaştırma ve IT destek dahil dokuz alanda kurumsal sistem ve network çözümleri sunuyoruz.",
+    "Ağ altyapısı, sunucu yönetimi, sanallaştırma ve IT destek dahil on alanda kurumsal sistem ve network çözümleri sunuyoruz.",
   alternates: { canonical: "/sistem-network/" },
 };
 

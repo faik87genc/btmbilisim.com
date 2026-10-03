@@ -262,6 +262,7 @@
   }
   .markdown-content a {
     color: var(--gold-700);
+    overflow-wrap: anywhere;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -434,12 +435,11 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 2px;
+    border-radius: var(--radius-control);
     border: 1px solid transparent;
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-weight: 600;
     cursor: pointer;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   }
@@ -448,7 +448,11 @@
     color: var(--navy-950);
   }
   .btn-primary:hover {
-    background: var(--gold-300);
+    background: var(--gold-400);
+  }
+  .btn[aria-disabled="true"] {
+    cursor: progress;
+    opacity: 0.7;
   }
   .btn-ghost {
     border-color: color-mix(in srgb, var(--navy-950) 15%, transparent);

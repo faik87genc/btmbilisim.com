@@ -26,7 +26,7 @@ export function PillarCard({
     <MotionReveal delay={delay} className="group h-full">
       <Link
         href={href}
-        className={`group/card relative flex h-full flex-col justify-between overflow-hidden rounded-sm border p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 ${
+        className={`group/card relative flex h-full flex-col justify-between overflow-hidden rounded-card border p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 ${
           isDark
             ? "border-paper-50/10 bg-navy-800"
             : "border-navy-950/10 bg-white shadow-[0_18px_40px_-24px_rgba(10,18,32,0.25)]"

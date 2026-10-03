@@ -226,7 +226,7 @@ export function Header() {
 
         <Link
           href="/#teklif"
-          className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-md bg-gold-500 px-4 py-2.5 text-[13px] xl:px-5 font-bold uppercase tracking-wide text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 lg:inline-flex"
+          className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-4 py-2.5 text-sm xl:px-5 font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 lg:inline-flex"
         >
           <Send className="h-4 w-4" aria-hidden="true" />
           Hemen Teklif Al

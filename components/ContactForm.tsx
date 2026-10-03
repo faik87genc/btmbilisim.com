@@ -61,6 +61,9 @@ export function ContactForm() {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // aria-disabled (not disabled) keeps the button focusable while sending, so
+    // focus is not lost; a second submit is ignored here instead.
+    if (status === "sending") return;
     const form = e.currentTarget;
     const data = new FormData(form);
     const v = Object.fromEntries(
@@ -142,7 +145,7 @@ export function ContactForm() {
           <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
-      <button className="btn btn-primary btn-block btn-lg" type="submit" disabled={status === "sending"}>
+      <button className="btn btn-primary btn-block btn-lg" type="submit" aria-disabled={status === "sending"}>
         {status === "sending" ? "Gönderiliyor…" : "Mesajı Gönder"}
       </button>
       <p role="status" aria-live="polite" className="form-note">

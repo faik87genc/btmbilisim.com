@@ -51,7 +51,6 @@ function LinkList({ items }: { items: { label: string; href: string }[] }) {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-slate-300">
-      <div className="bg-dots pointer-events-none absolute inset-0 opacity-50" aria-hidden="true" />
 
       {/* Contact strip */}
       <div className="relative border-b border-white/10">

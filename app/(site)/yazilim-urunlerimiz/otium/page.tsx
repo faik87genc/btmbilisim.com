@@ -204,7 +204,7 @@ export default function Page() {
               <MotionStaggerItem
                 key={problem}
                 as="div"
-                className="flex items-start gap-3 rounded-sm border border-navy-950/10 bg-white p-4 transition-colors duration-300 hover:border-gold-500/40"
+                className="flex items-start gap-3 rounded-card border border-navy-950/10 bg-white p-4 transition-colors duration-300 hover:border-gold-500/40"
               >
                 <Check
                   className="mt-0.5 h-4 w-4 shrink-0 text-gold-500"
@@ -228,7 +228,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {coreFeatures.map((feature) => (
               <MotionStaggerItem key={feature.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <feature.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
@@ -264,7 +264,7 @@ export default function Page() {
               />
             </MotionReveal>
             <MotionReveal delay={0.1} direction="left" blur>
-              <div className="rounded-sm border border-paper-50/10 bg-paper-50/5 p-8">
+              <div className="rounded-card border border-paper-50/10 bg-paper-50/5 p-8">
                 <div className="font-mono text-sm leading-relaxed text-gold-300">
                   kalan = hak ediş + devreden
                   <br />
@@ -290,7 +290,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 sm:grid-cols-2">
             {securityFeatures.map((feature) => (
               <MotionStaggerItem key={feature.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <feature.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"

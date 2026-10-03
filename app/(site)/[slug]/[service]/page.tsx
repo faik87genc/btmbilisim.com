@@ -138,7 +138,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
             </div>
 
             <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
-              <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+              <div className="rounded-card border border-navy-950/10 bg-white p-6">
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Hemen Başlayalım</p>
                 <h2 className="mt-3 font-display text-xl font-semibold text-ink-900">Bu hizmeti konuşalım</h2>
                 <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -149,7 +149,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                 </Button>
                 <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
                   <a href={site.phone.href} className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700">
-                    <Phone className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                    <Phone className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
                     {site.phone.display}
                   </a>
                   <a
@@ -158,18 +158,18 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700"
                   >
-                    <MessageCircle className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                    <MessageCircle className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
                     WhatsApp
                   </a>
                   <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
-                    <Mail className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                    <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
                     {site.email}
                   </a>
                 </div>
               </div>
 
               {relatedServices.length > 0 && (
-                <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+                <div className="rounded-card border border-navy-950/10 bg-white p-6">
                   <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">{categoryInfo.shortTitle}</p>
                   <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili hizmetler</h2>
                   <ul className="mt-4 space-y-3">
@@ -177,7 +177,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                       <li key={s.key}>
                         <Link href={`/${category}/${s.slug}/`} className="group flex items-center justify-between gap-3">
                           <span className="text-sm text-slate-600 transition-colors group-hover:text-ink-900">{s.name}</span>
-                          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gold-500 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         </Link>
                       </li>
                     ))}
@@ -192,7 +192,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
               )}
 
               {relatedPosts.length > 0 && (
-                <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+                <div className="rounded-card border border-navy-950/10 bg-white p-6">
                   <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Blog</p>
                   <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili yazılar</h2>
                   <ul className="mt-4 space-y-3">
@@ -200,7 +200,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                       <li key={p.id}>
                         <Link href={pageHref(p)} className="group flex items-start justify-between gap-3">
                           <span className="text-sm leading-snug text-slate-600 transition-colors group-hover:text-ink-900">{p.title}</span>
-                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-500 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         </Link>
                       </li>
                     ))}

@@ -47,7 +47,7 @@ function Img({ src, alt = "", ...rest }: ComponentPropsWithoutRef<"img">) {
       alt={alt}
       loading="lazy"
       decoding="async"
-      className="my-6 w-full rounded-sm border border-navy-950/10"
+      className="my-6 w-full rounded-card border border-navy-950/10"
       {...rest}
     />
   );

@@ -37,12 +37,12 @@ export function BlogFaq({ items }: { items: FaqItem[] }) {
         {items.map((item) => (
           <details
             key={item.question}
-            className="group rounded-sm border border-navy-950/10 bg-white p-5"
+            className="group rounded-card border border-navy-950/10 bg-white p-5"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base font-semibold text-ink-900 marker:content-none">
               {item.question}
               <ChevronDown
-                className="h-4 w-4 shrink-0 text-gold-500 transition-transform duration-200 group-open:rotate-180"
+                className="h-4 w-4 shrink-0 text-gold-600 transition-transform duration-200 group-open:rotate-180"
                 aria-hidden="true"
               />
             </summary>

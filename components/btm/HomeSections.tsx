@@ -2,54 +2,48 @@ import Link from "next/link";
 import {
   AppWindow,
   ArrowRight,
+  Ban,
   Building,
   CloudCog,
+  Cpu,
+  Eye,
   Factory,
+  FileText,
+  Fish,
+  Gauge,
   Globe2,
   GraduationCap,
   HeartPulse,
   Hotel,
   KeyRound,
   Landmark,
-  Network,
-  Radar,
-  Store,
-  Warehouse,
-  Wifi,
-  Ban,
-  Cpu,
-  Eye,
-  Fish,
-  Gauge,
   LockKeyhole,
   MailWarning,
   MonitorCheck,
+  Network,
   Quote,
   ScanSearch,
   Server,
   ShieldCheck,
+  Store,
   Usb,
   Users,
+  Warehouse,
+  Wifi,
 } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
+import { Button } from "@/components/ensa/Button";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
+import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { liveTestimonials, references } from "@/lib/data/trust";
 
-// Home/landing sections modelled on invekor.com.tr, filled with BTM's own
-// services. Testimonials and references render nothing until real entries
-// exist in lib/data/trust.ts.
+// Home/landing sections, filled with BTM's own services. Layout rules (design
+// review): one card radius (rounded-card), one heading (SectionHeading), one
+// button (Button); orange only for primary actions and arrows; dotted texture
+// on the hero only. Testimonials and references render nothing until real
+// entries exist in lib/data/trust.ts.
 
-function Eyebrow({ children, tone = "light" }: { children: React.ReactNode; tone?: "light" | "dark" }) {
-  return (
-    <span
-      className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider ${
-        tone === "dark" ? "bg-white/10 text-gold-300 ring-1 ring-white/15" : "bg-gold-500/10 text-gold-700 ring-1 ring-gold-500/25"
-      }`}
-    >
-      {children}
-    </span>
-  );
-}
+const CARD = "rounded-card border border-navy-950/10 bg-white shadow-card";
 
 const SHOWCASE = [
   {
@@ -80,136 +74,117 @@ const SHOWCASE = [
   },
 ];
 
+// What the phishing-simulation report contains — section names only, no
+// sample figures (nothing here may look like a real customer's result).
+const PHISHING_REPORT = [
+  "Kullanılan senaryo ve gönderim takvimi",
+  "Açılma, tıklama ve bilgi girişi oranları",
+  "Departman bazında risk kırılımı",
+  "Bildirim (raporlama) davranışı",
+  "Eğitim ve iyileştirme önerileri",
+];
+
+/** DLP + EDR cards and the social-engineering (phishing) demo card. */
 export function SecurityShowcase() {
   return (
     <section className="cv-auto bg-paper-50 py-20 md:py-24">
-      <Container className="lg:max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Siber Güvenlik Vitrini</Eyebrow>
-          <h2 className="mt-4 text-balance font-display text-4xl font-bold tracking-tight text-ink-900 md:text-5xl">
-            Verileriniz ve sistemleriniz koruma altında
-          </h2>
-          <p className="mt-4 text-slate-500">
-            Hassas veri sızıntılarını önleyen DLP sistemleri ve merkezi yönetilen uç nokta korumasıyla işinizi risklere karşı
-            güçlendirin.
-          </p>
-        </div>
+      <Container className="max-w-7xl">
+        <SectionHeading
+          align="center"
+          eyebrow="Siber Güvenlik Vitrini"
+          title="Verileriniz ve sistemleriniz koruma altında"
+          description="Hassas veri sızıntılarını önleyen DLP sistemleri, merkezi yönetilen uç nokta koruması ve çalışan farkındalığını ölçen testlerle işinizi risklere karşı güçlendirin."
+        />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {SHOWCASE.map((s, i) => (
             <MotionReveal key={s.title} delay={i * 0.08} className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-navy-950/10 bg-white p-7 shadow-[0_18px_40px_-30px_rgba(7,43,85,0.35)]">
+              <div className={`${CARD} flex h-full flex-col p-6 md:p-7`}>
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-600">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
                     <s.icon className="h-6 w-6" aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-ink-900">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-500">{s.text}</p>
+                    <h3 className="font-display text-xl font-semibold text-ink-900">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.text}</p>
                   </div>
                 </div>
-                <ul className="mb-7 mt-6 grid grid-cols-2 gap-2">
+                <ul className="mb-7 mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {s.chips.map((c) => (
-                    <li key={c.label} className="flex items-center gap-2 rounded-md bg-paper-50 px-3 py-2 text-xs font-medium text-slate-600">
-                      <c.icon className="h-3.5 w-3.5 shrink-0 text-gold-600" aria-hidden="true" />
+                    <li key={c.label} className="flex items-center gap-2 rounded-control bg-paper-50 px-3 py-2 text-xs font-medium text-slate-700">
+                      <c.icon className="h-3.5 w-3.5 shrink-0 text-navy-700" aria-hidden="true" />
                       {c.label}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={s.href}
-                  className="mt-auto flex items-center justify-between rounded-lg border border-gold-500/30 px-4 py-3 text-sm font-semibold text-gold-700 transition-colors hover:bg-gold-500/10"
+                  className="mt-auto flex items-center justify-between rounded-control bg-paper-50 px-4 py-3 text-sm font-semibold text-navy-800 transition-colors hover:bg-paper-100"
                 >
-                  {s.cta} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  {s.cta} <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
                 </Link>
               </div>
             </MotionReveal>
           ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
 
-export function PhishingDemoBand() {
-  return (
-    <section className="cv-auto relative overflow-hidden bg-brand-gradient py-16 md:py-20">
-      <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
-      <Container className="relative grid items-center gap-10 lg:max-w-6xl lg:grid-cols-[1.3fr_0.7fr]">
-        <div className="rounded-2xl bg-white/5 p-7 ring-1 ring-white/15 backdrop-blur md:p-9">
-          <Eyebrow tone="dark">
-            <Fish className="h-3.5 w-3.5" aria-hidden="true" /> Sızma Testi Demosu
-          </Eyebrow>
-          <h2 className="mt-4 font-display text-3xl font-bold text-white md:text-4xl">Sosyal mühendislik testi demosu</h2>
-          <p className="mt-3 leading-relaxed text-slate-300">
-            Gerçekçi oltalama (phishing) senaryolarıyla çalışanlarınızın farkındalığını ölçün, riski somut verilerle görün.
-            Küçük bir pilot grupla, ek altyapı gerektirmeden kampanyayı sizin için kurguluyoruz.
-          </p>
-          <ul className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-white">
-            {[
-              { icon: MailWarning, label: "Gerçekçi senaryolar" },
-              { icon: Users, label: "Pilot kullanıcı grubu" },
-              { icon: Gauge, label: "Farkındalık skoru" },
-              { icon: ShieldCheck, label: "Sonuç ve eğitim önerisi" },
-            ].map((c) => (
-              <li key={c.label} className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 ring-1 ring-white/15">
-                <c.icon className="h-3.5 w-3.5 text-gold-300" aria-hidden="true" /> {c.label}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Link
-              href="/#teklif"
-              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-950 hover:bg-gold-400"
-            >
-              Demo talep edin <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link
-              href="/siber-guvenlik/sizma-testi-penetrasyon-testi/"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:border-gold-300 hover:text-gold-300"
-            >
-              Hizmet detayları
-            </Link>
-          </div>
-        </div>
-        <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_70%_80%,rgba(232,129,47,0.35),transparent_55%),linear-gradient(160deg,#04172e,#072b55)] ring-1 ring-white/15">
-          <span className="absolute left-4 top-4 rounded-full bg-emerald-500/15 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 ring-1 ring-emerald-400/30">
-            ● Pilot kampanya
-          </span>
-          <div className="flex h-full flex-col items-center justify-center text-center">
-            <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
-              <Fish className="h-8 w-8 text-gold-300" aria-hidden="true" />
-            </span>
-            <p className="mt-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-white">Sosyal Mühendislik</p>
-            <p className="mt-1 text-xs text-slate-300">Phishing • Farkındalık Skoru</p>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function RiskTestBand() {
-  return (
-    <section className="cv-auto bg-white py-14">
-      <Container className="lg:max-w-6xl">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-navy-950/10 bg-paper-50 p-7 md:flex-row md:items-center md:p-9">
-          <div className="flex items-start gap-4">
-            <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-navy-800 text-white">
-              <Gauge className="h-7 w-7" aria-hidden="true" />
-            </span>
-            <div>
-              <h2 className="font-display text-2xl font-bold text-ink-900">Bilgi güvenliği risk skoru</h2>
-              <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-500">
-                Kurumunuzun siber güvenlik risk seviyesini ve KVKK hazırlığını 8 soruda, 2 dakikada değerlendirin.
-              </p>
+          {/* Social-engineering demo (was a dark band of its own) */}
+          <MotionReveal className="md:col-span-2">
+            <div className={`${CARD} grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center`}>
+              <div>
+                <div className="flex items-start gap-4">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
+                    <Fish className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-ink-900">Sosyal mühendislik testi demosu</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      Gerçekçi oltalama (phishing) senaryolarıyla çalışanlarınızın farkındalığını ölçün, riski somut
+                      verilerle görün. Küçük bir pilot grupla, ek altyapı gerektirmeden kampanyayı sizin için kurguluyoruz.
+                    </p>
+                  </div>
+                </div>
+                <ul className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                  {[
+                    { icon: MailWarning, label: "Gerçekçi senaryolar" },
+                    { icon: Users, label: "Pilot kullanıcı grubu" },
+                    { icon: Gauge, label: "Farkındalık skoru" },
+                    { icon: ShieldCheck, label: "Sonuç ve eğitim önerisi" },
+                  ].map((c) => (
+                    <li key={c.label} className="inline-flex items-center gap-1.5 rounded-control bg-paper-50 px-3 py-1.5">
+                      <c.icon className="h-3.5 w-3.5 text-navy-700" aria-hidden="true" /> {c.label}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Button href="/#teklif">
+                    Demo talep edin <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Button>
+                  <Button href="/siber-guvenlik/sizma-testi-penetrasyon-testi/" variant="ghost-light">
+                    Hizmet detayları
+                  </Button>
+                </div>
+              </div>
+              <figure className="rounded-card border border-navy-950/10 bg-paper-50 p-5">
+                <figcaption className="flex items-center justify-between gap-3 border-b border-navy-950/10 pb-3">
+                  <span className="flex items-center gap-2 font-display text-sm font-semibold text-navy-800">
+                    <FileText className="h-4 w-4" aria-hidden="true" /> Rapor içeriği
+                  </span>
+                  <span className="rounded-control bg-white px-2 py-0.5 text-[11px] font-medium text-slate-600 ring-1 ring-navy-950/10">
+                    Örnek başlıklar
+                  </span>
+                </figcaption>
+                <ol className="mt-3 space-y-2 text-sm text-slate-700">
+                  {PHISHING_REPORT.map((r, i) => (
+                    <li key={r} className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-800 text-[11px] font-semibold text-white">
+                        {i + 1}
+                      </span>
+                      {r}
+                    </li>
+                  ))}
+                </ol>
+              </figure>
             </div>
-          </div>
-          <Link
-            href="/risk-skoru-testi/"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-950 hover:bg-gold-400"
-          >
-            Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
+          </MotionReveal>
         </div>
       </Container>
     </section>
@@ -225,67 +200,59 @@ function initials(name: string) {
     .toLocaleUpperCase("tr");
 }
 
-/** Renders nothing until lib/data/trust.ts has consented testimonials. */
-export function Testimonials() {
-  if (liveTestimonials.length === 0) return null;
+/**
+ * References + testimonials in one white section. Renders nothing until
+ * lib/data/trust.ts has entries (and testimonials have recorded consent).
+ */
+export function TrustSection() {
+  if (references.length === 0 && liveTestimonials.length === 0) return null;
   return (
-    <section className="cv-auto bg-paper-50 py-20 md:py-24">
-      <Container className="lg:max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Müşteri Yorumları</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-navy-800 md:text-5xl">Müşterilerimiz ne diyor?</h2>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {liveTestimonials.map((t, i) => (
-            <MotionReveal key={t.name + t.company} delay={(i % 3) * 0.06} className="h-full">
-              <figure className="flex h-full flex-col rounded-2xl border border-navy-950/10 bg-white p-7 shadow-[0_18px_40px_-30px_rgba(7,43,85,0.35)]">
-                <Quote className="h-7 w-7 text-gold-500/60" aria-hidden="true" />
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-600">{t.text}</blockquote>
-                <figcaption className="mt-6 flex items-center gap-3 border-t border-navy-950/10 pt-5">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy-800 text-sm font-bold text-white">
-                    {initials(t.name)}
-                  </span>
-                  <span>
-                    <span className="block font-semibold text-ink-900">{t.name}</span>
-                    <span className="block text-xs text-slate-500">{t.role}</span>
-                    <span className="block text-xs font-semibold text-navy-700">{t.company}</span>
-                  </span>
-                </figcaption>
-              </figure>
-            </MotionReveal>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-/** Renders nothing until lib/data/trust.ts lists references. */
-export function ReferenceStrip() {
-  if (references.length === 0) return null;
-  return (
-    <section className="cv-auto bg-white py-16 md:py-20">
-      <Container className="lg:max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Referanslarımız</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-navy-800">Bize güvenenler</h2>
-        </div>
-        <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {references.slice(0, 12).map((r) => (
-            <li key={r.name} className="flex h-24 items-center justify-center rounded-xl border border-navy-950/10 bg-white p-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain grayscale transition hover:grayscale-0" />
-            </li>
-          ))}
-        </ul>
-        <div className="mt-8 text-center">
-          <Link
-            href="/referanslar/"
-            className="inline-flex items-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-semibold text-white hover:bg-navy-700"
-          >
-            Tüm referansları inceleyin <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
-        </div>
+    <section className="cv-auto bg-white py-20 md:py-24">
+      <Container className="max-w-7xl">
+        <SectionHeading
+          align="center"
+          eyebrow={liveTestimonials.length ? "Müşteri Yorumları" : "Referanslarımız"}
+          title={liveTestimonials.length ? "Müşterilerimiz ne diyor?" : "Bize güvenenler"}
+        />
+        {references.length > 0 && (
+          <>
+            <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+              {references.slice(0, 12).map((r) => (
+                <li key={r.name} className="flex h-24 items-center justify-center rounded-card border border-navy-950/10 bg-white p-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain grayscale transition hover:grayscale-0" />
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 text-center">
+              <Button href="/referanslar/" variant="ghost-light">
+                Tüm referansları inceleyin <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
+              </Button>
+            </div>
+          </>
+        )}
+        {liveTestimonials.length > 0 && (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {liveTestimonials.map((t, i) => (
+              <MotionReveal key={t.name + t.company} delay={(i % 3) * 0.06} className="h-full">
+                <figure className={`${CARD} flex h-full flex-col p-7`}>
+                  <Quote className="h-7 w-7 text-navy-800/40" aria-hidden="true" />
+                  <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700">{t.text}</blockquote>
+                  <figcaption className="mt-6 flex items-center gap-3 border-t border-navy-950/10 pt-5">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy-800 text-sm font-bold text-white">
+                      {initials(t.name)}
+                    </span>
+                    <span>
+                      <span className="block font-semibold text-ink-900">{t.name}</span>
+                      <span className="block text-xs text-slate-600">{t.role}</span>
+                      <span className="block text-xs font-semibold text-navy-700">{t.company}</span>
+                    </span>
+                  </figcaption>
+                </figure>
+              </MotionReveal>
+            ))}
+          </div>
+        )}
       </Container>
     </section>
   );
@@ -302,45 +269,47 @@ const PENTEST_SCOPE = [
   { icon: Fish, title: "Sosyal Mühendislik", text: "Oltalama senaryolarıyla çalışan farkındalığını ölçüyoruz." },
 ];
 
-/** Dark pentest-scope grid (idea from szutestteknoloji.com.tr, reworked). */
+/** Dark pentest-scope grid with the risk-score test CTA. */
 export function PentestScope() {
   return (
-    <section className="cv-auto relative overflow-hidden bg-navy-950 py-20 md:py-24">
-      <div className="bg-dots pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
-      <div
-        className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-gold-500/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <Container className="relative lg:max-w-6xl">
+    <section className="cv-auto bg-navy-950 py-20 md:py-24">
+      <Container className="max-w-7xl">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-2xl">
-            <Eyebrow tone="dark">
-              <Radar className="h-3.5 w-3.5" aria-hidden="true" /> Sızma Testi Kapsamımız
-            </Eyebrow>
-            <h2 className="mt-4 text-balance font-display text-4xl font-bold tracking-tight text-white md:text-5xl">
-              Açıkları saldırganlardan <span className="text-gold-300">önce</span> bulun.
-            </h2>
-            <p className="mt-4 text-slate-300">
-              Ağdan uygulamaya, buluttan üretim hattına kadar her katmanı test ediyor; bulguları önceliklendirilmiş bir
-              raporla ve kapatma önerileriyle teslim ediyoruz.
-            </p>
-          </div>
-          <Link
-            href="/siber-guvenlik/sizma-testi-penetrasyon-testi/"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:border-gold-300 hover:text-gold-300"
-          >
+          <SectionHeading
+            tone="dark"
+            eyebrow="Sızma Testi Kapsamımız"
+            title="Açıkları saldırganlardan önce bulun."
+            description="Ağdan uygulamaya, buluttan üretim hattına kadar her katmanı test ediyor; bulguları önceliklendirilmiş bir raporla ve kapatma önerileriyle teslim ediyoruz."
+          />
+          <Button href="/siber-guvenlik/sizma-testi-penetrasyon-testi/" variant="ghost-dark">
             Sızma testi hizmeti <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
+          </Button>
         </div>
-        <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid gap-px overflow-hidden rounded-card bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {PENTEST_SCOPE.map((p) => (
-            <li key={p.title} className="group bg-navy-950/90 p-6 transition-colors hover:bg-navy-900">
-              <p.icon className="h-7 w-7 text-gold-300 transition-transform group-hover:-translate-y-0.5" aria-hidden="true" />
+            <li key={p.title} className="bg-navy-950 p-6 transition-colors hover:bg-navy-900">
+              <p.icon className="h-7 w-7 text-gold-300" aria-hidden="true" />
               <h3 className="mt-4 font-display text-base font-semibold text-white">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{p.text}</p>
             </li>
           ))}
         </ul>
+        <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-card bg-white/5 p-6 ring-1 ring-white/15 md:flex-row md:items-center md:p-7">
+          <div className="flex items-start gap-4">
+            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-white/10 text-white ring-1 ring-white/20">
+              <Gauge className="h-6 w-6" aria-hidden="true" />
+            </span>
+            <div>
+              <h3 className="font-display text-xl font-semibold text-white">Bilgi güvenliği risk skorunuzu öğrenin</h3>
+              <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-300">
+                Siber güvenlik risk seviyenizi ve KVKK hazırlığınızı 8 soruda, yaklaşık 2 dakikada değerlendirin.
+              </p>
+            </div>
+          </div>
+          <Button href="/risk-skoru-testi/" className="shrink-0">
+            Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Button>
+        </div>
       </Container>
     </section>
   );
@@ -357,34 +326,32 @@ const SECTORS = [
   { icon: Building, title: "Site & Apartman", text: "Kamera sistemleri, kayıt ve uzaktan izleme.", href: "/apartman-ve-site-kamera-sistemleri-kurulumu/" },
 ];
 
-/** Sector solutions grid (idea from lidernetwork.com.tr, reworked). */
+/** Sector solutions grid. */
 export function Sectors() {
   return (
     <section className="cv-auto bg-white py-20 md:py-24">
-      <Container className="lg:max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Sektörel Çözümler</Eyebrow>
-          <h2 className="mt-4 text-balance font-display text-4xl font-bold tracking-tight text-navy-800 md:text-5xl">
-            Her sektöre özel bilişim çözümleri
-          </h2>
-          <p className="mt-4 text-slate-500">
-            İşletmenizin sektörüne göre öncelikleri biliyor, çözümü ona göre kuruyoruz.
-          </p>
-        </div>
-        <ul className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <Container className="max-w-7xl">
+        <SectionHeading
+          align="center"
+          eyebrow="Sektörel Çözümler"
+          title="Her sektöre özel bilişim çözümleri"
+          description="İşletmenizin sektörüne göre öncelikleri biliyor, çözümü ona göre kuruyoruz."
+        />
+        <ul className="mt-12 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
           {SECTORS.map((s, i) => (
             <MotionReveal key={s.title} as="li" delay={(i % 4) * 0.05} className="h-full">
               <Link
                 href={s.href}
-                className="group flex h-full flex-col rounded-2xl border border-navy-950/10 bg-paper-50 p-5 transition-all hover:-translate-y-1 hover:border-gold-500/50 hover:bg-white hover:shadow-[0_20px_44px_-28px_rgba(7,43,85,0.45)]"
+                className="group flex h-full flex-col rounded-card border border-navy-950/10 bg-paper-50 p-5 transition-all hover:-translate-y-1 hover:border-navy-800/30 hover:bg-white hover:shadow-lift"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-navy-800 text-white transition-colors group-hover:bg-gold-500 group-hover:text-navy-950">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-control bg-navy-800 text-white transition-colors group-hover:bg-navy-700">
                   <s.icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <h3 className="mt-4 font-display text-base font-bold text-ink-900">{s.title}</h3>
-                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-slate-500">{s.text}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold-700">
-                  Çözümü inceleyin <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                <h3 className="mt-4 font-display text-base font-semibold text-ink-900">{s.title}</h3>
+                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-slate-600">{s.text}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-navy-800">
+                  Çözümü inceleyin{" "}
+                  <ArrowRight className="h-3.5 w-3.5 text-gold-600 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
               </Link>
             </MotionReveal>

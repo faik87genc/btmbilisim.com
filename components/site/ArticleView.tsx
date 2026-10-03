@@ -27,7 +27,7 @@ import {
 
 function Toc({ toc }: { toc: TocEntry[] }) {
   return (
-    <nav aria-label="İçindekiler" className="mb-10 rounded-sm border border-navy-950/10 bg-white p-5">
+    <nav aria-label="İçindekiler" className="mb-10 rounded-card border border-navy-950/10 bg-white p-5">
       <div className="mb-2 text-xs font-medium uppercase tracking-wider text-slate-500">İçindekiler</div>
       <ol className="space-y-1.5 text-sm">
         {toc.map((t, i) => (
@@ -60,7 +60,7 @@ function CoverImage({ src, alt }: { src: string; alt: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className="mb-10 aspect-[16/9] w-full rounded-sm border border-navy-950/10 object-cover"
+      className="mb-10 aspect-[16/9] w-full rounded-card border border-navy-950/10 object-cover"
       src={info?.src ?? src}
       srcSet={info?.srcSet}
       sizes={info?.srcSet ? IMG_SIZES.cover : undefined}
@@ -76,7 +76,7 @@ function CoverImage({ src, alt }: { src: string; alt: string }) {
 
 function ContactBox() {
   return (
-    <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+    <div className="rounded-card border border-navy-950/10 bg-white p-6">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Hemen Başlayalım</p>
       <h2 className="mt-3 font-display text-xl font-semibold text-ink-900">Ücretsiz keşif görüşmesi</h2>
       <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -87,7 +87,7 @@ function ContactBox() {
       </Button>
       <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
         <a href={site.phone.href} className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700">
-          <Phone className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          <Phone className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
           {site.phone.display}
         </a>
         <a
@@ -96,11 +96,11 @@ function ContactBox() {
           rel="noopener noreferrer"
           className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700"
         >
-          <MessageCircle className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          <MessageCircle className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
           WhatsApp
         </a>
         <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
-          <Mail className="h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+          <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
           {site.email}
         </a>
       </div>
@@ -179,7 +179,7 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
             <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
               <ContactBox />
               {related.length > 0 && (
-                <div className="rounded-sm border border-navy-950/10 bg-white p-6">
+                <div className="rounded-card border border-navy-950/10 bg-white p-6">
                   <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Blog</p>
                   <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili yazılar</h2>
                   <ul className="mt-4 space-y-3">
@@ -189,7 +189,7 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
                           <span className="text-sm leading-snug text-slate-600 transition-colors group-hover:text-ink-900">
                             {r.title}
                           </span>
-                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-500" aria-hidden="true" />
+                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" aria-hidden="true" />
                         </Link>
                       </li>
                     ))}

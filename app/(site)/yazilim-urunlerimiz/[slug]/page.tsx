@@ -90,7 +90,7 @@ export default async function Page({
             {product.features.map((feature) => (
               <li
                 key={feature}
-                className="flex items-start gap-3 rounded-sm border border-navy-950/10 bg-white p-4"
+                className="flex items-start gap-3 rounded-card border border-navy-950/10 bg-white p-4"
               >
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
                 <span className="text-sm leading-relaxed text-ink-900">

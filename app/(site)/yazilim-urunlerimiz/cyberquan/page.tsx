@@ -352,7 +352,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
               <MotionStaggerItem key={pillar.title}>
-                <div className="group/f flex h-full flex-col gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full flex-col gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <pillar.icon
                     className="h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
@@ -382,7 +382,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {deviceLayers.map((layer) => (
               <MotionStaggerItem key={layer.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <layer.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
@@ -417,7 +417,7 @@ export default function Page() {
           <div className="mt-10 grid gap-4">
             {architectureLayers.map((layer, i) => (
               <MotionReveal key={layer.tier} delay={i * 0.05}>
-                <div className="flex items-start gap-5 rounded-sm border border-paper-50/10 bg-paper-50/5 p-6 transition-colors duration-300 hover:border-gold-500/40">
+                <div className="flex items-start gap-5 rounded-card border border-paper-50/10 bg-paper-50/5 p-6 transition-colors duration-300 hover:border-gold-500/40">
                   <span className="font-display text-2xl font-bold text-gold-300">
                     {layer.tier}
                   </span>
@@ -446,7 +446,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 lg:grid-cols-3">
             {flows.map((flow) => (
               <MotionStaggerItem key={flow.title}>
-                <div className="flex h-full flex-col gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="flex h-full flex-col gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <flow.icon className="h-5 w-5 shrink-0 text-gold-500" aria-hidden="true" />
                   <h3 className="font-display text-base font-semibold text-ink-900">
                     {flow.title}
@@ -461,7 +461,7 @@ export default function Page() {
           </MotionStagger>
 
           <MotionReveal delay={0.1}>
-            <div className="mt-8 rounded-sm border border-navy-950/10 bg-navy-950 p-6">
+            <div className="mt-8 rounded-card border border-navy-950/10 bg-navy-950 p-6">
               <p className="mb-4 font-mono text-[11px] uppercase tracking-wider text-gold-300">
                 Üretim Akışı
               </p>
@@ -494,7 +494,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {modules.map((mod) => (
               <MotionStaggerItem key={mod.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <mod.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
@@ -556,7 +556,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item) => (
               <MotionStaggerItem key={item.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                   <item.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"

@@ -38,7 +38,7 @@ export function ImageCarousel({
   return (
     <div>
       <div
-        className={`group relative overflow-hidden rounded-sm border shadow-[0_24px_60px_-30px_rgba(10,18,32,0.4)] ${frameHeight} ${
+        className={`group relative overflow-hidden rounded-card border shadow-[0_24px_60px_-30px_rgba(10,18,32,0.4)] ${frameHeight} ${
           isDark
             ? "border-paper-50/10 bg-navy-900"
             : "border-navy-950/10 bg-paper-100"

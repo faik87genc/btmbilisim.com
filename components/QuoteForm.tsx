@@ -73,6 +73,9 @@ export function QuoteForm() {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // aria-disabled (not disabled) keeps the button focusable while sending, so
+    // focus is not lost; a second submit is ignored here instead.
+    if (status === "sending") return;
     const form = e.currentTarget;
     const v = read(form);
     setStatus("sending");
@@ -190,7 +193,7 @@ export function QuoteForm() {
         </label>
       </div>
       <div className="quote-actions">
-        <button className="btn btn-primary btn-lg" type="submit" disabled={status === "sending"}>
+        <button className="btn btn-primary btn-lg" type="submit" aria-disabled={status === "sending"}>
           {status === "sending" ? "Gönderiliyor…" : "Teklif İste"}
         </button>
         <button className="btn btn-ghost btn-lg" type="button" onClick={onWhatsApp}>

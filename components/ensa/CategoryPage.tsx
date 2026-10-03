@@ -48,14 +48,14 @@ export function CategoryPage({ category }: { category: ServiceCategory }) {
               const slug = slugByKey.get(service.key);
               const number = String(i + 1).padStart(2, "0");
               const cardClass =
-                "group relative flex h-full flex-col overflow-hidden rounded-sm border border-navy-950/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_24px_48px_-28px_rgba(10,18,32,0.3)]";
+                "group relative flex h-full flex-col overflow-hidden rounded-card border border-navy-950/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-lift";
               const body = (
                 <>
                   <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-300 group-hover:scale-x-100" />
                   <div className="flex items-start justify-between">
                     <span className="font-mono text-xs text-navy-950/30">{number}</span>
                     {slug && (
-                      <ArrowUpRight className="h-4 w-4 text-gold-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <ArrowUpRight className="h-4 w-4 text-gold-600 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     )}
                   </div>
                   <h3 className="mt-5 font-display text-lg font-semibold text-ink-900">

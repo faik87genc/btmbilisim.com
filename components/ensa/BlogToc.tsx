@@ -6,7 +6,7 @@ export function BlogToc({ items }: { items: Heading[] }) {
   return (
     <nav
       aria-label="İçindekiler"
-      className="mb-10 rounded-sm border border-navy-950/10 bg-white p-5"
+      className="mb-10 rounded-card border border-navy-950/10 bg-white p-5"
     >
       <div className="mb-2 text-xs font-medium uppercase tracking-wider text-slate-400">
         İçindekiler

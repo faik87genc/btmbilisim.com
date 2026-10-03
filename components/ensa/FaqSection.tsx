@@ -38,7 +38,7 @@ export function FaqSection({
           {items.map((item) => (
             <MotionReveal key={item.question}>
               <details
-                className={`group rounded-sm border p-5 ${
+                className={`group rounded-card border p-5 ${
                   isDark
                     ? "border-paper-50/10 bg-paper-50/5"
                     : "border-navy-950/10 bg-white"
@@ -51,7 +51,7 @@ export function FaqSection({
                 >
                   {item.question}
                   <ChevronDown
-                    className="h-4 w-4 shrink-0 text-gold-500 transition-transform duration-200 group-open:rotate-180"
+                    className={`h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 ${isDark ? "text-gold-300" : "text-gold-600"}`}
                     aria-hidden="true"
                   />
                 </summary>

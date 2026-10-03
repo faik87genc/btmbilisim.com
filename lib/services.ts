@@ -169,7 +169,7 @@ export const serviceCategoryList: ServiceCategory[] = [
     eyebrow: "03 — Sistem & Network",
     summary: "Ağ altyapınızdan sunucularınıza kadar operasyonunuzun temelini kurar ve yönetiriz.",
     intro:
-      "Ağ altyapısından sunucu ve veri merkezi yönetimine kadar, teknoloji operasyonunuzun temelini oluşturan dokuz çözüm alanı.",
+      "Ağ altyapısından sunucu ve veri merkezi yönetimine kadar, teknoloji operasyonunuzun temelini oluşturan on çözüm alanı.",
     services: [
       {
         key: "sistem-ve-network-danismanligi",
@@ -206,6 +206,12 @@ export const serviceCategoryList: ServiceCategory[] = [
         name: "Wi-Fi ve Kablosuz Ağ Çözümleri",
         description:
           "Kurumsal kablosuz ağ planlaması, kurulumu ve güvenliği.",
+      },
+      {
+        key: "ip-kamera-guvenlik-kamerasi-sistemleri",
+        name: "IP Kamera ve Güvenlik Kamerası Sistemleri",
+        description:
+          "Fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, kayıt ve uzaktan izleme.",
       },
       {
         key: "firewall-ve-vpn-cozumleri",

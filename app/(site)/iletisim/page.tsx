@@ -70,7 +70,7 @@ export default function ContactPage() {
                 ))}
               </ul>
 
-              <div className="mt-10 overflow-hidden rounded-sm border border-navy-950/10">
+              <div className="mt-10 overflow-hidden rounded-card border border-navy-950/10">
                 <ConsentMap query="Hacıhalil Mah. 1207. Sk. No:1 Match Plaza, 41400 Gebze/Kocaeli" />
               </div>
             </div>

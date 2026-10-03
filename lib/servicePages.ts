@@ -1368,6 +1368,87 @@ Kablosuz ağ ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/ileti
   },
   {
     categorySlug: "sistem-network",
+    serviceKey: "ip-kamera-guvenlik-kamerasi-sistemleri",
+    slug: "ip-kamera-guvenlik-kamerasi-sistemleri",
+    title: "IP Kamera ve Güvenlik Kamerası Sistemleri",
+    metaDescription:
+      "Gebze, Kocaeli ve Tuzla'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. BTM Bilişim ile kör nokta bırakmayın.",
+    content: `IP kamera ve güvenlik kamerası sistemlerimiz; fabrika, OSB, depo, işyeri, apartman ve siteler için keşiften kuruluma, kayıttan uzaktan izlemeye kadar uçtan uca planlanır. Kamera sistemini ayrı bir cihaz yığını olarak değil, ağ altyapınızın güvenli bir parçası olarak kuruyoruz.
+
+## Kamera sistemleri neden beklenen faydayı sağlamaz?
+
+En sık karşılaştığımız sorunlar kamera modelinden değil plansızlıktan kaynaklanır: kör noktalar, gece görüntüsünün işe yaramaması, yetersiz kayıt süresi, elektrik kesintisinde kapanan kayıt cihazı ve internete varsayılan şifreyle açılmış kameralar. Doğru projelendirme ve ağ tasarımı bu sorunların hepsini kurulumdan önce çözer.
+
+## Kapsamımız
+
+- Yerinde keşif, kamera yerleşim planı ve görüş açısı hesabı
+- IP kamera, gece görüşlü, PTZ ve dış ortam (IP66/67) kamera seçimi
+- PoE switch, kablolama ve kamera ağının kurumsal ağdan ayrılması (VLAN)
+- NVR kayıt cihazı, disk kapasitesi ve kayıt süresi planlaması
+- Mobil uygulama ve web üzerinden güvenli uzaktan izleme
+- UPS ile kayıt ve ağ cihazlarının elektrik kesintisinde çalışmaya devam etmesi
+- Varsayılan şifrelerin değiştirilmesi, firmware güncelleme ve erişim yetkileri
+- Periyodik bakım, arıza tespiti ve teknik servis
+
+## Nasıl çalışıyoruz?
+
+1. **Keşif** — Alan yerinde incelenir; kritik noktalar, ışık koşulları ve kablo güzergâhları belirlenir.
+2. **Projelendirme** — Kamera sayısı, modeli, konumu ve kayıt kapasitesi kalem kalem tekliflendirilir.
+3. **Kurulum** — Kablolama, montaj, NVR ve ağ yapılandırması yapılır; görüş açıları ayarlanır.
+4. **Teslim** — Uzaktan izleme kurulur, kullanıcılar eğitilir, kamera yerleşim planı dokümante edilir.
+
+## Hangi alanlarda kuruyoruz?
+
+- **Fabrika ve OSB:** Geniş alan, üretim hattı ve çevre güvenliği; Gebze, Dilovası ve TOSB bölgeleri
+- **Depo ve lojistik:** Rampa, raf koridorları ve giriş-çıkış noktaları
+- **İşyeri ve mağaza:** Kasa, giriş ve çok şubeli merkezi izleme
+- **Apartman ve site:** Otopark, giriş kapıları ve ortak alanlar
+
+## Rehber yazılarımız
+
+- [Kamera sistemi projelendirme rehberi](/gebze-kamera-projelendirme/)
+- [IP kamera ile analog sistemlerin karşılaştırması](/ip-kamera-teknolojisi-vs-analog-karsilastirma/)
+- [NVR, DVR ve bulut kayıt farkları](/kamera-kayit-sistemleri-depolama-cozumleri/)
+- [Kamera sistemlerinde ağ altyapısı nasıl olmalı?](/kocaeli-kamera-sistemleri-ag-altyapisi-rehberi/)
+- [Kamera sistemi için UPS ve güç yedekleme](/kamera-sistemi-ups-ve-yedekleme/)
+
+## İlgili çözümler
+
+Kamera ağı için [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/), geniş alanlarda [Wi-Fi ve kablosuz ağ çözümleri](/sistem-network/wifi-ve-kablosuz-ag-cozumleri/), uzaktan erişimin güvenliği için [firewall ve VPN çözümleri](/sistem-network/firewall-ve-vpn-cozumleri/) ile birlikte planlanır.
+
+## Kurumunuza kazandırdıkları
+
+- Kritik noktalarda kör nokta bırakmayan kapsama
+- Gece ve düşük ışıkta kullanılabilir görüntü
+- İhtiyaca uygun kayıt süresi ve elektrik kesintisinde kesintisiz kayıt
+- İnternete güvenli şekilde açılmış, yetkilendirilmiş uzaktan izleme
+
+Kamera sisteminizi birlikte planlayalım; keşif ve teklif ücretsizdir. [Teklif isteyin.](/#teklif)`,
+    faq: [
+      {
+        question: "IP kamera mı, analog (AHD) kamera mı seçmeliyim?",
+        answer:
+          "Yeni kurulumlarda genellikle IP kamerayı öneriyoruz: daha yüksek çözünürlük, PoE ile tek kablodan güç ve veri, merkezi yönetim ve genişletme kolaylığı sağlar. Mevcut koaksiyel kablolaması olan küçük sistemlerde AHD hâlâ ekonomik bir seçenek olabilir.",
+      },
+      {
+        question: "Kayıtlar kaç gün saklanır?",
+        answer:
+          "Kamera sayısına, çözünürlüğe, kayıt moduna (sürekli veya hareketle) ve disk kapasitesine bağlıdır. İhtiyacınız olan saklama süresini baştan belirliyor, NVR ve disk kapasitesini buna göre hesaplıyoruz.",
+      },
+      {
+        question: "Kameraları cep telefonundan izleyebilir miyim?",
+        answer:
+          "Evet. Mobil uygulama veya web arayüzü üzerinden uzaktan izleme kuruyoruz. Bunu yaparken varsayılan şifreleri değiştiriyor, cihazları doğrudan internete açmak yerine güvenli erişim yöntemleri kullanıyoruz.",
+      },
+      {
+        question: "Kurulumdan sonra bakım ve servis veriyor musunuz?",
+        answer:
+          "Evet. Periyodik bakım, lens temizliği, disk ve kayıt kontrolü, firmware güncellemesi ve arıza durumunda teknik servis hizmeti veriyoruz.",
+      },
+    ],
+  },
+  {
+    categorySlug: "sistem-network",
     serviceKey: "firewall-ve-vpn-cozumleri",
     slug: "firewall-ve-vpn-cozumleri",
     title: "Firewall ve VPN Çözümleri",

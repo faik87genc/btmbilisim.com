@@ -207,7 +207,7 @@ export default function Page() {
             <div className="grid gap-5">
               {overviewFeatures.map((feature, i) => (
                 <MotionReveal key={feature.title} delay={i * 0.08}>
-                  <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                  <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                     <feature.icon
                       className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                       aria-hidden="true"
@@ -225,7 +225,7 @@ export default function Page() {
               ))}
             </div>
             <MotionReveal delay={0.16}>
-              <div className="overflow-hidden rounded-sm border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+              <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/gosterge-paneli.png"
                   alt="Atlas gösterge paneli"
@@ -307,7 +307,7 @@ export default function Page() {
             <div className="grid gap-5">
               {erpFeatures.map((feature, i) => (
                 <MotionReveal key={feature.title} delay={i * 0.08}>
-                  <div className="group/f flex h-full items-start gap-4 rounded-sm border border-paper-50/10 bg-paper-50/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+                  <div className="group/f flex h-full items-start gap-4 rounded-card border border-paper-50/10 bg-paper-50/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                     <feature.icon
                       className="mt-0.5 h-5 w-5 shrink-0 text-gold-300 transition-colors duration-300 group-hover/f:text-paper-50"
                       aria-hidden="true"
@@ -326,7 +326,7 @@ export default function Page() {
             </div>
             <div className="grid gap-6">
               <MotionReveal delay={0.16}>
-                <div className="overflow-hidden rounded-sm border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
+                <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                   <LightboxImage
                     src="/products/atlas/detayli-satinalmalar.png"
                     alt="Atlas detaylı satınalmalar raporu"
@@ -340,7 +340,7 @@ export default function Page() {
               </MotionReveal>
               <div className="grid gap-6 sm:grid-cols-2">
                 <MotionReveal delay={0.2}>
-                  <div className="overflow-hidden rounded-sm border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
+                  <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                     <LightboxImage
                       src="/products/atlas/satinalma-butcesi-karsilastirma.png"
                       alt="Atlas satınalma bütçesi filtreleri"
@@ -353,7 +353,7 @@ export default function Page() {
                   </p>
                 </MotionReveal>
                 <MotionReveal delay={0.24}>
-                  <div className="overflow-hidden rounded-sm border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
+                  <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                     <LightboxImage
                       src="/products/atlas/coklu-firma.png"
                       alt="Atlas çoklu firma seçimi"
@@ -380,7 +380,7 @@ export default function Page() {
           />
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <MotionReveal>
-              <div className="overflow-hidden rounded-sm border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+              <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/manuel-veri-girisi.png"
                   alt="Atlas manuel veri girişi ekranı"
@@ -393,7 +393,7 @@ export default function Page() {
               </p>
             </MotionReveal>
             <MotionReveal delay={0.1}>
-              <div className="overflow-hidden rounded-sm border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+              <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/toplu-veri-aktarimi.png"
                   alt="Atlas toplu veri aktarımı ekranı"
@@ -421,7 +421,7 @@ export default function Page() {
               />
             </MotionReveal>
             <MotionReveal delay={0.1}>
-              <div className="overflow-hidden rounded-sm border border-paper-50/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
+              <div className="overflow-hidden rounded-card border border-paper-50/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                 <LightboxImage
                   src="/products/atlas/finansal-raporlar.png"
                   alt="Atlas esnek rapor kartları"
@@ -444,7 +444,7 @@ export default function Page() {
             <div className="grid gap-5">
               {securityFeatures.map((feature, i) => (
                 <MotionReveal key={feature.title} delay={i * 0.08}>
-                  <div className="group/f flex h-full items-start gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                  <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
                     <feature.icon
                       className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                       aria-hidden="true"
@@ -462,7 +462,7 @@ export default function Page() {
               ))}
             </div>
             <MotionReveal delay={0.16}>
-              <div className="overflow-hidden rounded-sm border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+              <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/kullanici-yonetimi.png"
                   alt="Atlas kullanıcı yönetimi ekranı"

@@ -33,8 +33,8 @@ export function SectionHeading({
         </div>
       )}
       <h2
-        className={`text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl ${
-          isDark ? "text-paper-50" : "text-ink-900"
+        className={`text-balance font-display text-3xl font-semibold leading-[1.1] tracking-tight md:text-[2.75rem] ${
+          isDark ? "text-white" : "text-navy-800"
         }`}
       >
         {title}

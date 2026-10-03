@@ -18,7 +18,7 @@ export async function HomeBlogSection() {
   if (posts.length === 0) return null;
 
   return (
-    <section className="cv-auto bg-paper-50 py-20 md:py-28">
+    <section className="cv-auto bg-white py-20 md:py-28">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading

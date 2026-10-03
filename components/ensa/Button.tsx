@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "ghost-light" | "ghost-dark";
+type Variant = "primary" | "navy" | "ghost-light" | "ghost-dark";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-gold-500 text-navy-950 hover:bg-gold-300 focus-visible:bg-gold-300",
+    "bg-gold-500 text-navy-950 hover:bg-gold-400 focus-visible:bg-gold-400",
+  navy: "bg-navy-800 text-white hover:bg-navy-700",
   "ghost-light":
-    "border border-navy-950/15 text-ink-900 hover:border-navy-950/40",
+    "border border-navy-950/15 text-navy-800 hover:border-navy-800/50 hover:bg-paper-50",
   "ghost-dark":
-    "border border-paper-50/25 text-paper-50 hover:border-gold-500 hover:text-gold-300",
+    "border border-white/30 text-white hover:border-gold-300 hover:text-gold-300",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3 text-sm font-medium tracking-wide transition-[color,background-color,border-color,transform] duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]";
+  "inline-flex items-center justify-center gap-2 rounded-control px-6 py-3 text-sm font-semibold transition-[color,background-color,border-color,transform] duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]";
 
 export function Button({
   children,
