@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: absoluteUrl("/hizmet-rehberi/") },
-  openGraph: { type: "website", title: TITLE, description: DESCRIPTION, url: absoluteUrl("/hizmet-rehberi/"), images: [DEFAULT_OG_IMAGE] },
+  openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title: TITLE, description: DESCRIPTION, url: absoluteUrl("/hizmet-rehberi/"), images: [DEFAULT_OG_IMAGE] },
 };
 
 const GROUPS: { title: string; slugs: string[] }[] = [

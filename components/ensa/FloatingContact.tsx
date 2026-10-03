@@ -35,9 +35,9 @@ export function FloatingContact() {
         href={site.whatsapp.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp'tan yazın"
+        aria-label="WhatsApp'tan yazın (yeni sekmede açılır)"
         title="WhatsApp'tan yazın"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#1fbd5a] focus-visible:scale-105"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#128C4A] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#0f7a40] focus-visible:scale-105"
       >
         <WhatsAppIcon className="h-6 w-6" />
       </a>

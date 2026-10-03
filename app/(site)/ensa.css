@@ -37,6 +37,11 @@
 }
 
 @theme inline {
+  /* One card radius, one control radius, two elevation levels (site-wide). */
+  --radius-card: 0.625rem;
+  --radius-control: 0.5rem;
+  --shadow-card: 0 18px 40px -30px rgb(7 43 85 / 0.35);
+  --shadow-lift: 0 24px 50px -28px rgb(7 43 85 / 0.45);
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
   --color-navy-800: var(--navy-800);
@@ -145,9 +150,14 @@
     letter-spacing: -0.01em;
   }
   :focus-visible {
-    outline: 2px solid var(--gold-500);
-    outline-offset: 3px;
+    outline: 2px solid var(--navy-800);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px #fff;
     border-radius: 2px;
+  }
+  /* Keep focused elements clear of the sticky header (WCAG 2.4.11). */
+  html {
+    scroll-padding-top: 6.5rem;
   }
 }
 
@@ -491,8 +501,9 @@
   .form-field input:focus,
   .form-field select:focus,
   .form-field textarea:focus {
-    outline: 2px solid color-mix(in srgb, var(--gold-500) 35%, transparent);
-    border-color: var(--gold-600);
+    outline: 2px solid var(--navy-800);
+    outline-offset: 1px;
+    border-color: var(--navy-800);
   }
   .form-field [aria-invalid="true"] {
     border-color: #b42318;
@@ -564,7 +575,7 @@
     font-weight: 500;
   }
   .quote-chip:has(input:focus-visible) {
-    outline: 2px solid var(--gold-500);
+    outline: 2px solid var(--navy-800);
     outline-offset: 2px;
   }
   .quote-chip input {
@@ -634,7 +645,7 @@
 /* Brand surfaces (logo blue): hero / CTA gradient and a faint dot grid. */
 @layer utilities {
   .bg-brand-gradient {
-    background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+    background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 50%, var(--navy-800) 100%);
   }
   .bg-dots {
     background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);
@@ -673,6 +684,7 @@
 
 /* Header: a menu link was just clicked — keep hover panels shut until the
    pointer leaves the header (components/ensa/NavActive.tsx). */
+#site-header [data-menu-group][data-closed] .mega-panel,
 #site-header[data-menus-off] .mega-panel {
   display: none !important;
 }

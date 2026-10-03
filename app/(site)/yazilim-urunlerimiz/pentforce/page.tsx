@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/siteView";
 import {
   Activity,
   Bomb,
@@ -38,7 +39,8 @@ const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
 export const metadata: Metadata = {
   title: `${product.name} — ${product.tagline}`,
   description: product.metaDescription,
-  alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}` },
+  alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}/` },
+  ...ogMeta({ title: `${product.name} — ${product.tagline.replace(/\.$/, "")}`, description: product.metaDescription, path: `/yazilim-urunlerimiz/${product.slug}/` }),
 };
 
 const stats = [
@@ -421,7 +423,7 @@ export default function Page() {
           </MotionReveal>
           <MotionReveal delay={0.05} blur>
             <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
-              {product.name}
+              {product.name}{" "}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
                 Otonom AI pentest platformu
               </span>
@@ -571,7 +573,7 @@ export default function Page() {
             {airGappedSteps.map((s) => (
               <MotionStaggerItem key={s.step}>
                 <div className="flex h-full flex-col gap-4 rounded-sm border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
-                  <span className="font-display text-3xl font-bold text-gold-500">{s.step}</span>
+                  <span className="font-display text-3xl font-bold text-gold-700">{s.step}</span>
                   <div>
                     <h3 className="font-display text-base font-semibold text-ink-900">
                       {s.title}

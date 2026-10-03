@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: absoluteUrl("/risk-skoru-testi/") },
-  openGraph: { type: "website", title: TITLE, description: DESCRIPTION, url: absoluteUrl("/risk-skoru-testi/"), images: [DEFAULT_OG_IMAGE] },
+  openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title: TITLE, description: DESCRIPTION, url: absoluteUrl("/risk-skoru-testi/"), images: [DEFAULT_OG_IMAGE] },
 };
 
 export default function RiskScorePage() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, RotateCcw, ShieldAlert, ShieldCheck, ShieldQuestion } from "lucide-react";
 
@@ -86,6 +86,16 @@ function band(score: number) {
 export function RiskQuiz() {
   const [answers, setAnswers] = useState<(Answer | null)[]>(() => QUESTIONS.map(() => null));
   const [done, setDone] = useState(false);
+  const [missing, setMissing] = useState<number[]>([]);
+  const resultHeading = useRef<HTMLHeadingElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const restarted = useRef(false);
+
+  // Move focus with the view change (the form/result swap would otherwise drop it to <body>).
+  useEffect(() => {
+    if (done) resultHeading.current?.focus();
+    else if (restarted.current) formRef.current?.querySelector<HTMLInputElement>("input")?.focus();
+  }, [done]);
   const answered = answers.filter((a) => a !== null).length;
 
   const score = Math.round((answers.reduce<number>((s, a) => s + (a ?? 2), 0) / (QUESTIONS.length * 2)) * 100);
@@ -94,7 +104,10 @@ export function RiskQuiz() {
 
   if (done) {
     return (
-      <div className="rounded-2xl border border-navy-950/10 bg-white p-6 shadow-[0_24px_50px_-30px_rgba(7,43,85,0.4)] md:p-8" aria-live="polite">
+      <div className="rounded-card border border-navy-950/10 bg-white p-6 shadow-lift md:p-8">
+        <h2 ref={resultHeading} tabIndex={-1} className="mb-5 font-display text-2xl font-semibold text-navy-800 outline-none">
+          Risk skorunuz: {score} / 100
+        </h2>
         <div className="flex flex-wrap items-center gap-5">
           <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-paper-100">
             <svg viewBox="0 0 36 36" className="absolute inset-0 h-full w-full -rotate-90" aria-hidden="true">
@@ -125,7 +138,7 @@ export function RiskQuiz() {
 
         {gaps.length > 0 && (
           <div className="mt-7">
-            <h3 className="font-display text-lg font-bold text-ink-900">Öncelikli başlıklar</h3>
+            <h3 className="font-display text-lg font-semibold text-ink-900">Öncelikli başlıklar</h3>
             <ul className="mt-3 divide-y divide-navy-950/5">
               {gaps.map((g) => (
                 <li key={g.q} className="flex flex-wrap items-center justify-between gap-3 py-3">
@@ -149,7 +162,9 @@ export function RiskQuiz() {
           <button
             type="button"
             onClick={() => {
+              restarted.current = true;
               setAnswers(QUESTIONS.map(() => null));
+              setMissing([]);
               setDone(false);
             }}
             className="inline-flex items-center gap-2 rounded-full border border-navy-950/15 px-6 py-3 text-sm font-semibold text-ink-900 hover:border-navy-950/40"
@@ -163,9 +178,17 @@ export function RiskQuiz() {
 
   return (
     <form
-      className="rounded-2xl border border-navy-950/10 bg-white p-6 shadow-[0_24px_50px_-30px_rgba(7,43,85,0.4)] md:p-8"
+      ref={formRef}
+      noValidate
+      className="rounded-card border border-navy-950/10 bg-white p-6 shadow-lift md:p-8"
       onSubmit={(e) => {
         e.preventDefault();
+        const empty = answers.flatMap((a, i) => (a === null ? [i] : []));
+        setMissing(empty);
+        if (empty.length) {
+          formRef.current?.querySelector<HTMLInputElement>(`input[name="q${empty[0]}"]`)?.focus();
+          return;
+        }
         setDone(true);
       }}
     >
@@ -180,23 +203,25 @@ export function RiskQuiz() {
       <ol className="space-y-6">
         {QUESTIONS.map((item, i) => (
           <li key={item.q}>
-            <fieldset>
+            <fieldset aria-describedby={`q${i}-hint`}>
               <legend className="font-display text-base font-semibold text-ink-900">
                 <span className="mr-2 text-gold-600">{i + 1}.</span>
                 {item.q}
               </legend>
-              <p className="mt-1 text-xs text-slate-500">{item.hint}</p>
+              <p id={`q${i}-hint`} className="mt-1 text-xs text-slate-500">
+                {item.hint}
+              </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {CHOICES.map((c) => (
                   <label
                     key={c.value}
-                    className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-navy-950/15 px-4 py-2 text-sm text-ink-900 transition-colors has-[:checked]:border-navy-800 has-[:checked]:bg-navy-800 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-gold-500"
+                    className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-navy-950/15 px-4 py-2 text-sm text-ink-900 transition-colors has-[:checked]:border-navy-800 has-[:checked]:bg-navy-800 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-navy-800"
                   >
                     <input
                       type="radio"
                       name={`q${i}`}
                       value={c.value}
-                      required
+                     
                       className="sr-only"
                       checked={answers[i] === c.value}
                       onChange={() => setAnswers((a) => a.map((v, j) => (j === i ? c.value : v)))}
@@ -210,6 +235,11 @@ export function RiskQuiz() {
           </li>
         ))}
       </ol>
+      {missing.length > 0 && (
+        <p role="alert" className="mt-6 rounded-control border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          Lütfen şu soruları yanıtlayın: {missing.map((i) => i + 1).join(", ")}.
+        </p>
+      )}
       <button
         type="submit"
         className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3.5 text-sm font-bold text-navy-950 hover:bg-gold-400 sm:w-auto"

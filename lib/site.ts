@@ -30,6 +30,7 @@ export const site = {
   areaServed: [
     { type: "City", name: "Gebze" },
     { type: "City", name: "Darıca" },
+    { type: "City", name: "Çayırova" },
     { type: "City", name: "Dilovası" },
     { type: "City", name: "Tuzla" },
     { type: "AdministrativeArea", name: "Kocaeli" },

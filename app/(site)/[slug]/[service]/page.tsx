@@ -13,7 +13,7 @@ import { serviceCategories } from "@/lib/services";
 import { getServicePageContent, servicePageParams, servicePagesContent } from "@/lib/servicePages";
 import { getPublishedPages, pageHref, postLikePages } from "@/lib/pages";
 import { slugifyTr } from "@/lib/slug";
-import { absoluteUrl } from "@/lib/siteView";
+import { absoluteUrl, ogMeta } from "@/lib/siteView";
 import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: `${page.title}${site.titleSuffix}`,
     description: page.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: "website", title: page.title, description: page.metaDescription, url },
+    ...ogMeta({ title: page.title, description: page.metaDescription, path: `/${category}/${service}/` }),
   };
 }
 
@@ -96,8 +96,8 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
     description: page.metaDescription,
     url,
     serviceType: page.title,
-    areaServed: "TR",
-    provider: { "@type": "Organization", "@id": absoluteUrl("/#organization"), name: site.name, url: absoluteUrl("/") },
+    areaServed: site.areaServed.map((a) => ({ "@type": a.type, name: a.name })),
+    provider: { "@id": absoluteUrl("/#organization") },
     category: categoryInfo.shortTitle,
   };
 

@@ -32,12 +32,15 @@ const cspBaseline = [
   "form-action 'self'",
 ];
 
-const cspEnforced = cspBaseline.join("; ");
+// script-src is enforced too: 'unsafe-inline' stays (Next's inline bootstrap,
+// JSON-LD), but scripts can only load from this origin and GA4.
+const scriptSrc = `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`;
+const cspEnforced = [...cspBaseline, scriptSrc].join("; ");
 
 const cspReportOnly = [
   "default-src 'self'",
   ...cspBaseline,
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`,
+  scriptSrc,
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: blob: ${BLOB_HOST} https://*.google-analytics.com https://*.googletagmanager.com`,
   "font-src 'self' data:",
@@ -97,7 +100,7 @@ const LEGACY_WP_PATTERNS: [string, string][] = [
   ["/tag/:path*", "/blog/"],
   ["/author/:path*", "/hakkimizda/"],
   ["/portfolio/:path*", "/hizmetler/"],
-  ["/blog/page/:n", "/blog/"],
+  ["/blog/page/:n", "/blog/sayfa-:n/"],
   ["/page/:n", "/blog/"],
   ["/feed", "/feed.xml"],
   ["/:slug/feed", "/:slug/"],

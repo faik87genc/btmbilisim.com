@@ -31,6 +31,20 @@ export function absoluteUrl(path: string): string {
   return `${site.baseUrl}${path}`;
 }
 
+/**
+ * openGraph + twitter for a page. Next.js replaces (doesn't merge) a parent's
+ * openGraph, so every page that sets one must repeat siteName/locale/image —
+ * this keeps them in one place.
+ */
+export function ogMeta(o: { title: string; description: string; path: string; image?: string | null; type?: "website" | "article" }) {
+  const url = absoluteUrl(o.path);
+  const image = o.image ? (o.image.startsWith("http") ? o.image : absoluteUrl(o.image)) : absoluteUrl("/assets/img/og-default.jpg");
+  return {
+    openGraph: { type: o.type ?? "website", locale: "tr_TR", siteName: site.name, title: o.title, description: o.description, url, images: [image] },
+    twitter: { card: "summary_large_image" as const, title: o.title, description: o.description, images: [image] },
+  };
+}
+
 const MONTHS_TR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
 export function formatDateTr(d: Date): string {

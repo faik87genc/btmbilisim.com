@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/rate-limit";
+import { clientIpFrom } from "@/lib/clientIp";
 
 // Collects Content-Security-Policy(-Report-Only) violation reports so the
 // report-only policy in next.config.ts can be checked in the Vercel logs before
@@ -60,8 +61,7 @@ function extract(payload: unknown): Violation[] {
 }
 
 function clientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return forwarded || request.headers.get("x-real-ip")?.trim() || "unknown";
+  return clientIpFrom(request.headers);
 }
 
 export async function POST(request: Request) {

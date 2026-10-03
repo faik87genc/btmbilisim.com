@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/siteView";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 import { GlobeBands } from "@/components/ensa/GlobeBands";
@@ -39,9 +40,10 @@ export async function generateMetadata({
   const product = getProductBySlug(slug);
   if (!product) return {};
   return {
-    title: `${product.name} — ${product.tagline}`,
+    title: `${product.name} — ${product.tagline.replace(/\.$/, "")}`,
     description: product.metaDescription,
-    alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}` },
+    alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}/` },
+    ...ogMeta({ title: product.name, description: product.metaDescription, path: `/yazilim-urunlerimiz/${product.slug}/` }),
   };
 }
 

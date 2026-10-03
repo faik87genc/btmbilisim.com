@@ -75,7 +75,7 @@ export function CategoryPage({ category }: { category: ServiceCategory }) {
               return (
                 <MotionReveal key={service.key} delay={(i % 3) * 0.06} className={cardClass}>
                   {slug ? (
-                    <Link href={`/${category.slug}/${slug}`} className="flex h-full flex-col">
+                    <Link href={`/${category.slug}/${slug}/`} className="flex h-full flex-col">
                       {body}
                     </Link>
                   ) : (

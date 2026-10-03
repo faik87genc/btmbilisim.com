@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
-    // A tag that groups a single post is a thin duplicate of that post.
-    robots: matched.length < 2 ? { index: false, follow: true } : undefined,
-    openGraph: { type: "website", title, description, url, images: [DEFAULT_OG_IMAGE] },
+    // Small tag archives are thin near-duplicates of their posts.
+    robots: matched.length < 5 ? { index: false, follow: true } : undefined,
+    openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title, description, url, images: [DEFAULT_OG_IMAGE] },
     twitter: { card: "summary_large_image", title, description },
   };
 }

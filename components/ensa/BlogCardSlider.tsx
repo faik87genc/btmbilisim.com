@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePrefersReducedMotion } from "./useReducedMotion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { BlogCard } from "./BlogCard";
 import type { CardPost } from "./BlogCard";
 
@@ -18,6 +18,8 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  // Explicit stop from the visible pause button (WCAG 2.2.2); hover/focus pause is temporary.
+  const [stopped, setStopped] = useState(false);
   const reduceMotion = usePrefersReducedMotion();
   const multi = posts.length > 1;
 
@@ -62,7 +64,7 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
   // Auto-advance, one card at a time — paused on hover/focus and skipped
   // entirely for prefers-reduced-motion (manual arrows/dots/swipe still work).
   useEffect(() => {
-    if (!multi || reduceMotion || paused) return;
+    if (!multi || reduceMotion || paused || stopped) return;
     const id = setInterval(() => {
       const track = trackRef.current;
       if (!track) return;
@@ -71,7 +73,7 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
       track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + w, behavior: "smooth" });
     }, AUTOPLAY_MS);
     return () => clearInterval(id);
-  }, [cardWidth, multi, paused, reduceMotion]);
+  }, [cardWidth, multi, paused, stopped, reduceMotion]);
 
   return (
     <div
@@ -114,20 +116,31 @@ export function BlogCardSlider({ posts }: { posts: CardPost[] }) {
             <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>
 
-          <div className="mt-6 flex justify-center gap-1.5">
+          <div className="mt-6 flex items-center justify-center gap-1.5">
+            {!reduceMotion && (
+              <button
+                type="button"
+                onClick={() => setStopped((v) => !v)}
+                aria-label={stopped ? "Otomatik kaydırmayı başlat" : "Otomatik kaydırmayı durdur"}
+                className="mr-2 inline-flex h-7 w-7 items-center justify-center rounded-full border border-navy-950/15 text-slate-600 hover:text-navy-800"
+              >
+                {stopped ? <Play className="h-3.5 w-3.5" aria-hidden="true" /> : <Pause className="h-3.5 w-3.5" aria-hidden="true" />}
+              </button>
+            )}
             {posts.map((post, i) => (
               <button
                 key={post.id}
                 type="button"
                 onClick={() => scrollToIndex(i)}
                 aria-label={`${i + 1}. yazıya git`}
+                aria-current={i === active ? "true" : undefined}
                 className="group flex h-6 w-6 items-center justify-center"
               >
                 <span
                   className={`block h-1.5 rounded-full transition-all duration-300 ${
                     i === active
                       ? "w-6 bg-gold-500"
-                      : "w-1.5 bg-navy-950/15 group-hover:bg-navy-950/30"
+                      : "w-1.5 bg-navy-950/45 group-hover:bg-navy-950/70"
                   }`}
                 />
               </button>

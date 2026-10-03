@@ -28,10 +28,9 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: absoluteUrl("/") },
-  // Alternative homepage design (slider). Same content as "/", kept out of the index.
+  // Alternative homepage design (slider), kept out of the index.
   robots: { index: false, follow: true },
-  openGraph: { type: "website", title: TITLE, description: DESCRIPTION, url: absoluteUrl("/"), images: [DEFAULT_OG_IMAGE] },
+  openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title: TITLE, description: DESCRIPTION, url: absoluteUrl("/"), images: [DEFAULT_OG_IMAGE] },
 };
 
 // Latest posts are read from the DB (HomeBlogSection); 5-min backstop.

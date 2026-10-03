@@ -42,7 +42,7 @@ export function blogIndexMetadata(n: number): Metadata {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { type: "website", title, description, url, images: [DEFAULT_OG_IMAGE] },
+    openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title, description, url, images: [DEFAULT_OG_IMAGE] },
   };
 }
 

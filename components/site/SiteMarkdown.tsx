@@ -91,12 +91,18 @@ function Table({ node: _node, ...rest }: WithNode<"table">) {
   );
 }
 
+// The page template owns the only <h1>; a "# " line in the body becomes an <h2>.
+function H1AsH2({ node: _node, ...rest }: WithNode<"h1">) {
+  void _node;
+  return <h2 {...rest} />;
+}
+
 export function SiteMarkdown({ content, eagerFirstImage = false }: { content: string; eagerFirstImage?: boolean }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       rehypePlugins={eagerFirstImage ? [rehypeHeadingIds, rehypeEagerFirstImage] : [rehypeHeadingIds]}
-      components={{ a: Anchor, img: Img, table: Table }}
+      components={{ a: Anchor, img: Img, table: Table, h1: H1AsH2 }}
     >
       {content}
     </ReactMarkdown>

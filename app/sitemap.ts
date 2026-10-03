@@ -63,8 +63,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...servicePageParams().map(({ category, service }) => entry(`/${category}/${service}/`, CODED_LASTMOD)),
     entry("/yazilim-urunlerimiz/", CODED_LASTMOD),
     ...products.map((p) => entry(`/yazilim-urunlerimiz/${p.slug}/`, CODED_LASTMOD)),
-    // Single-post tags are noindex (app/(site)/blog/etiket/[tag]/page.tsx).
-    ...getAllTags(posts).filter((t) => t.count >= 2).map((t) =>
+    // Tags with fewer than 5 posts are noindex (app/(site)/blog/etiket/[tag]/page.tsx).
+    ...getAllTags(posts).filter((t) => t.count >= 5).map((t) =>
       entry(`/blog/etiket/${t.slug}/`, newestOf(posts.filter((p) => p.tags.some((x) => tagSlug(x) === t.slug)), newestPost)),
     ),
   ];

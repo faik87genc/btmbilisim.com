@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 import { rateLimit } from "@/lib/rate-limit";
+import { clientIpFrom } from "@/lib/clientIp";
 import { site } from "@/lib/site";
 import quoteForm from "@/lib/data/quote-form.json";
 
@@ -64,8 +65,7 @@ const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 
 function clientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return forwarded || request.headers.get("x-real-ip")?.trim() || "unknown";
+  return clientIpFrom(request.headers);
 }
 
 function getTransport() {

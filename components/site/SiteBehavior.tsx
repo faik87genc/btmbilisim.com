@@ -1,64 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 
-// Port of _legacy-static-site/assets/js/main.js: mobile menu, tap-to-open
-// dropdowns, one-open-at-a-time FAQ groups and the cookie banner / GA4 gate.
-// Uses document-level delegation so it keeps working across client-side
-// navigations (main.js only ever saw one page load).
+// Page-wide behaviour that isn't tied to one component: the cookie banner and
+// the GA4 consent gate (markup: components/ensa/CookieBanner.tsx; footer
+// "Çerez Tercihleri" button #cookie-prefs), plus one-open-at-a-time FAQ groups.
+// Navigation menus have their own components (Header/NavActive/MobileMenu).
 
-const MOBILE_MAX = 1080;
 const CONSENT_KEY = "cookie-consent";
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "";
-// Page regions made inert while the mobile menu panel is open, so focus and
-// the screen reader's virtual cursor stay inside the menu.
-const INERT_WHEN_MENU_OPEN = "main, .breadcrumbs, .site-footer, .float-wa, #cookie-banner";
-
-function isMobile() {
-  return window.innerWidth <= MOBILE_MAX;
-}
-
-function navParts() {
-  const nav = document.querySelector<HTMLElement>(".main-nav");
-  const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
-  const links = nav ? Array.from(nav.querySelectorAll<HTMLAnchorElement>("a")) : [];
-  return { nav, toggle, links };
-}
-
-/** Parent links whose first tap (mobile) opens a submenu. */
-function parentLinks(): HTMLAnchorElement[] {
-  return Array.from(document.querySelectorAll<HTMLAnchorElement>(".main-nav li > a")).filter(
-    (a) => a.parentElement?.querySelector(":scope > .dropdown"),
-  );
-}
-
-/**
- * Keeps menu state in the DOM: tabindex for hidden mobile links, aria-expanded
- * on submenu parents (mobile only — on desktop the dropdown opens on hover /
- * focus and the links navigate), and `inert` on the page behind an open panel.
- */
-function syncMenu() {
-  const { nav, links } = navParts();
-  if (!nav) return;
-  const mobile = isMobile();
-  const open = nav.classList.contains("is-open");
-  links.forEach((a) => (mobile && !open ? a.setAttribute("tabindex", "-1") : a.removeAttribute("tabindex")));
-  parentLinks().forEach((a) => {
-    if (mobile) a.setAttribute("aria-expanded", a.parentElement?.classList.contains("open") ? "true" : "false");
-    else a.removeAttribute("aria-expanded");
-  });
-  const inert = mobile && open;
-  document.querySelectorAll(INERT_WHEN_MENU_OPEN).forEach((el) => el.toggleAttribute("inert", inert));
-}
-
-function closeMenu() {
-  const { nav, toggle } = navParts();
-  nav?.classList.remove("is-open");
-  toggle?.setAttribute("aria-expanded", "false");
-  document.querySelectorAll(".main-nav li.open").forEach((li) => li.classList.remove("open"));
-  syncMenu();
-}
 
 function loadAnalytics() {
   const w = window as unknown as { __gaLoaded?: boolean; dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
@@ -78,72 +28,7 @@ function loadAnalytics() {
 }
 
 export function SiteBehavior() {
-  const pathname = usePathname();
-
-  // Close the mobile menu after every navigation.
   useEffect(() => {
-    closeMenu();
-  }, [pathname]);
-
-  useEffect(() => {
-    const onClick = (e: MouseEvent) => {
-      const target = e.target as Element;
-      const { nav, toggle, links } = navParts();
-      if (!nav || !toggle) return;
-
-      if (toggle.contains(target)) {
-        const open = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        if (!open) document.querySelectorAll(".main-nav li.open").forEach((li) => li.classList.remove("open"));
-        syncMenu();
-        if (open) links[0]?.focus();
-        return;
-      }
-
-      // Mobile: first tap on a parent item opens its submenu instead of navigating.
-      const link = target.closest(".main-nav li > a");
-      const li = link?.parentElement;
-      if (li && isMobile() && li.querySelector(":scope > .dropdown") && !li.classList.contains("open")) {
-        e.preventDefault();
-        li.parentElement?.querySelectorAll(":scope > li.open").forEach((o) => {
-          o.classList.remove("open");
-          o.querySelectorAll("li.open").forEach((d) => d.classList.remove("open"));
-        });
-        li.classList.add("open");
-        syncMenu();
-        return;
-      }
-
-      if (nav.classList.contains("is-open") && !nav.contains(target)) closeMenu();
-    };
-
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      const { nav, toggle } = navParts();
-      if (nav?.classList.contains("is-open")) {
-        closeMenu();
-        toggle?.focus();
-        return;
-      }
-      // Desktop: Escape hides a hover/focus dropdown (WCAG 1.4.13) until the
-      // pointer or focus leaves that menu item.
-      if (isMobile()) return;
-      const active = document.activeElement as HTMLElement | null;
-      const hovered = document.querySelector(".main-nav > ul > li:hover");
-      const li = active?.closest(".main-nav > ul > li") ?? hovered;
-      if (!li || !li.querySelector(":scope > .dropdown")) return;
-      li.classList.add("dd-closed");
-      if (li.contains(active)) li.querySelector<HTMLElement>(":scope > a")?.focus();
-      const reopen = (ev: Event) => {
-        if (ev.type === "focusout" && li.contains((ev as FocusEvent).relatedTarget as Node | null)) return;
-        li.classList.remove("dd-closed");
-        li.removeEventListener("focusout", reopen);
-        li.removeEventListener("mouseleave", reopen);
-      };
-      li.addEventListener("focusout", reopen);
-      li.addEventListener("mouseleave", reopen);
-    };
-
     // FAQ groups: opening one item closes its siblings. `toggle` does not
     // bubble, so listen in the capture phase.
     const onToggle = (e: Event) => {
@@ -157,7 +42,7 @@ export function SiteBehavior() {
 
     // Cookie banner. While it is on screen, reserve its height at the bottom
     // of the viewport so focused elements are not hidden behind it (WCAG
-    // 2.4.11) and the floating WhatsApp button sits above it.
+    // 2.4.11) and the floating buttons sit above it.
     const banner = document.getElementById("cookie-banner");
     const root = document.documentElement;
     const reserveBanner = () => {
@@ -169,18 +54,9 @@ export function SiteBehavior() {
       root.style.scrollPaddingBottom = `${banner.offsetHeight + 16}px`;
       root.style.setProperty("--cb-h", `${banner.offsetHeight}px`);
     };
-    const onResize = () => {
-      syncMenu();
-      reserveBanner();
-    };
 
-    syncMenu();
-    // Capture phase: must run before next/link's own click handler, so the
-    // preventDefault() on a first mobile tap actually stops the navigation.
-    document.addEventListener("click", onClick, true);
-    document.addEventListener("keydown", onKey);
     document.addEventListener("toggle", onToggle, true);
-    window.addEventListener("resize", onResize);
+    window.addEventListener("resize", reserveBanner);
 
     let stored: string | null = null;
     try {
@@ -219,10 +95,8 @@ export function SiteBehavior() {
     } else if (stored === "accepted") loadAnalytics();
 
     return () => {
-      document.removeEventListener("click", onClick, true);
-      document.removeEventListener("keydown", onKey);
       document.removeEventListener("toggle", onToggle, true);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", reserveBanner);
       accept?.removeEventListener("click", onAccept);
       reject?.removeEventListener("click", onReject);
       prefs?.removeEventListener("click", onPrefs);

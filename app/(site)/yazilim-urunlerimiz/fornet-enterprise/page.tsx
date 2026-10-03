@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/siteView";
 import {
   Activity,
   Boxes,
@@ -37,7 +38,8 @@ const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
 export const metadata: Metadata = {
   title: `${product.name} — ${product.tagline}`,
   description: product.metaDescription,
-  alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}` },
+  alternates: { canonical: `/yazilim-urunlerimiz/${product.slug}/` },
+  ...ogMeta({ title: `${product.name} — ${product.tagline.replace(/\.$/, "")}`, description: product.metaDescription, path: `/yazilim-urunlerimiz/${product.slug}/` }),
 };
 
 const stats = [

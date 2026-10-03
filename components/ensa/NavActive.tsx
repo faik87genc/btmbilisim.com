@@ -8,9 +8,11 @@ import { usePathname } from "next/navigation";
  * - marks the top-level item for the current section (`data-active`, styled in
  *   ensa.css) — each `[data-nav]` link lists the path prefixes it owns in
  *   `data-nav`, space separated;
- * - when a link inside a hover menu is clicked, shuts the menus until the
- *   pointer leaves the header (the cursor is still over the panel, so CSS
- *   :hover would otherwise keep it open on top of the new page).
+ * - Escape closes an open hover/focus menu (WCAG 1.4.13) and returns focus to
+ *   its trigger;
+ * - a POINTER click on a menu link shuts the menus until the pointer leaves the
+ *   header (the cursor is still over the panel, so :hover would keep it open
+ *   over the new page). Keyboard activation is left alone.
  */
 export function NavActive() {
   const pathname = usePathname();
@@ -24,23 +26,52 @@ export function NavActive() {
       if (hit) el.setAttribute("aria-current", "true");
       else el.removeAttribute("aria-current");
     });
+    // A new page: never keep menus suppressed across navigations.
+    document.getElementById("site-header")?.removeAttribute("data-menus-off");
   }, [pathname]);
 
   useEffect(() => {
     const header = document.getElementById("site-header");
     if (!header) return;
-    const release = () => header.removeAttribute("data-menus-off");
+
+    const openGroups = () => header.querySelectorAll<HTMLElement>("[data-menu-group]");
+    const release = () => {
+      header.removeAttribute("data-menus-off");
+      openGroups().forEach((g) => g.removeAttribute("data-closed"));
+    };
+
     const onClick = (e: MouseEvent) => {
+      if (e.detail === 0) return; // keyboard "click" (Enter)
       const link = (e.target as Element).closest("a");
       if (!link || !link.closest("[data-menu-panel]")) return;
       header.setAttribute("data-menus-off", "");
-      link.blur();
     };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      const group = (document.activeElement as Element | null)?.closest<HTMLElement>("[data-menu-group]") ??
+        header.querySelector<HTMLElement>("[data-menu-group]:hover");
+      if (!group) return;
+      group.setAttribute("data-closed", "");
+      group.querySelector<HTMLElement>("[data-nav]")?.focus();
+    };
+
+    // Re-open on the next hover or when focus moves to another item.
+    const onFocusIn = (e: FocusEvent) => {
+      openGroups().forEach((g) => {
+        if (!g.contains(e.target as Node)) g.removeAttribute("data-closed");
+      });
+    };
+
     header.addEventListener("click", onClick);
     header.addEventListener("pointerleave", release);
+    header.addEventListener("focusin", onFocusIn);
+    document.addEventListener("keydown", onKey);
     return () => {
       header.removeEventListener("click", onClick);
       header.removeEventListener("pointerleave", release);
+      header.removeEventListener("focusin", onFocusIn);
+      document.removeEventListener("keydown", onKey);
     };
   }, []);
 

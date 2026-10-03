@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: absoluteUrl("/iletisim/") },
-  openGraph: { type: "website", title: TITLE, description: DESCRIPTION, url: absoluteUrl("/iletisim/"), images: [DEFAULT_OG_IMAGE] },
+  openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title: TITLE, description: DESCRIPTION, url: absoluteUrl("/iletisim/"), images: [DEFAULT_OG_IMAGE] },
 };
 
 const rows = [

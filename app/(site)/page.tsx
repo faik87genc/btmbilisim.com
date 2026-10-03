@@ -53,13 +53,13 @@ import home from "@/lib/data/home.json";
 
 const TITLE = "BTM Bilişim | Siber Güvenlik, Altyapı ve Yazılım Çözümleri";
 const DESCRIPTION =
-  "BTM Bilişim; siber güvenlik, sızma testi, ağ ve sunucu altyapısı, bulut yedekleme, lisanslama ve kurumsal yazılım ürünleriyle Gebze, Kocaeli ve Türkiye genelinde hizmet verir.";
+  "Gebze merkezli BTM Bilişim: sızma testi, siber güvenlik, ağ ve sunucu altyapısı, bulut yedekleme, lisanslama ve kurumsal yazılım ürünleri.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: absoluteUrl("/") },
-  openGraph: { type: "website", title: TITLE, description: DESCRIPTION, url: absoluteUrl("/"), images: [DEFAULT_OG_IMAGE] },
+  openGraph: { type: "website", locale: "tr_TR", siteName: site.name, title: TITLE, description: DESCRIPTION, url: absoluteUrl("/"), images: [DEFAULT_OG_IMAGE] },
 };
 
 // Latest posts are read from the DB (HomeBlogSection); 5-min backstop.

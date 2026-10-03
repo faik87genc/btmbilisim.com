@@ -127,7 +127,7 @@ export function organizationJsonLd() {
 
 /** Last crumb is the current page: its `item` URL is omitted (Google guideline). */
 export function breadcrumbJsonLd(crumbs: Crumb[]) {
-  const all: Crumb[] = [{ text: "Anasayfa", href: "/" }, ...crumbs];
+  const all: Crumb[] = [{ text: "Ana Sayfa", href: "/" }, ...crumbs];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

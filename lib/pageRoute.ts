@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { cache } from "react";
 import { cookies } from "next/headers";
+import { site } from "@/lib/site";
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { pages, type Page } from "@/lib/db/schema";
@@ -79,6 +80,8 @@ export function contentMetadata(page: Page): Metadata {
       : { index: true, follow: true, "max-image-preview": "large" },
     openGraph: {
       type: post ? "article" : "website",
+      locale: "tr_TR",
+      siteName: site.name,
       title,
       description,
       url,

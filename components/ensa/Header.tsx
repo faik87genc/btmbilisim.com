@@ -49,7 +49,7 @@ const corporatePrefixes = navCorporate
   .join(" ");
 
 const topLink =
-  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2.5 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800";
+  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2.5 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
 
 // Desktop dropdown panel: display:none until its trigger group is hovered or
 // focused, so closed menus cost no layout on any page
@@ -72,8 +72,8 @@ export function Header() {
 
         <nav aria-label="Ana menü" className="hidden items-center gap-1 lg:flex">
           {/* Hizmetler — mega menu */}
-          <div className="group">
-            <Link href="/hizmetler/" className={topLink} data-nav={servicePrefixes} aria-haspopup="true">
+          <div className="group" data-menu-group="">
+            <Link href="/hizmetler/" className={topLink} data-nav={servicePrefixes}>
               <LayoutGrid className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Hizmetler
               <ChevronDown className={chevron} aria-hidden="true" />
@@ -118,7 +118,7 @@ export function Header() {
                                 href={`/${a.slug}/`}
                                 className="flex items-center gap-1 px-2 py-1.5 text-[12.5px] font-semibold text-gold-700 hover:text-gold-600"
                               >
-                                Tümü ({a.services.length}) <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+                                Tümü ({a.services.length})<span className="visually-hidden"> {a.title} hizmetleri</span> <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
                               </Link>
                             </li>
                           )}
@@ -147,8 +147,8 @@ export function Header() {
           </div>
 
           {/* Ürünler */}
-          <div className="group relative">
-            <Link href="/yazilim-urunlerimiz/" className={topLink} data-nav="/yazilim-urunlerimiz/" aria-haspopup="true">
+          <div className="group relative" data-menu-group="">
+            <Link href="/yazilim-urunlerimiz/" className={topLink} data-nav="/yazilim-urunlerimiz/">
               <Package className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Ürünler
               <ChevronDown className={chevron} aria-hidden="true" />
@@ -186,8 +186,8 @@ export function Header() {
           </div>
 
           {/* Hakkımızda */}
-          <div className="group relative">
-            <Link href="/hakkimizda/" className={topLink} data-nav={corporatePrefixes} aria-haspopup="true">
+          <div className="group relative" data-menu-group="">
+            <Link href="/hakkimizda/" className={topLink} data-nav={corporatePrefixes}>
               <Building2 className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Hakkımızda
               <ChevronDown className={chevron} aria-hidden="true" />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, Send, X } from "lucide-react";
@@ -35,11 +35,16 @@ export function MobileMenu({
   // Escape closes the panel.
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenOn(null);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      setOpenOn(null);
+      toggleRef.current?.focus();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const toggle = (name: string) => setSection((s) => (s === name ? null : name));
   const group = (name: string, label: string) => (
     <button
@@ -56,6 +61,7 @@ export function MobileMenu({
   return (
     <>
       <button
+        ref={toggleRef}
         type="button"
         className="inline-flex items-center justify-center rounded-sm p-2 text-ink-900 lg:hidden"
         aria-label={open ? "Menüyü kapat" : "Menüyü aç"}

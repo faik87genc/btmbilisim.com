@@ -17,6 +17,7 @@ import {
   SESSION_MAX_AGE_SECONDS,
 } from "@/lib/auth";
 import { rateLimit } from "@/lib/rate-limit";
+import { clientIpFrom } from "@/lib/clientIp";
 import { slugifyTr as slugify } from "@/lib/slug";
 import { improveArticle } from "@/lib/ai/generateArticle";
 import { aiProviderAvailable, redactSecrets } from "@/lib/ai/providers";
@@ -57,12 +58,7 @@ async function requireSession(): Promise<void> {
 }
 
 async function clientIp(): Promise<string> {
-  const h = await headers();
-  return (
-    h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    h.get("x-real-ip")?.trim() ||
-    "unknown"
-  );
+  return clientIpFrom(await headers());
 }
 
 // --- Auth ---
@@ -78,10 +74,12 @@ export async function login(formData: FormData) {
   }
 
   // Throttle brute-force attempts: 10 tries per IP per 10 minutes, plus a
-  // global ceiling so rotating IPs can't multiply the budget indefinitely.
+  // global ceiling so rotating IPs can't multiply the budget indefinitely. The
+  // ceiling is deliberately high: anyone hitting it also locks the real admin
+  // out, so it should only trip under a distributed attack.
   const perIp = await rateLimit(`admin-login:${await clientIp()}`, 10, LOGIN_WINDOW_MS);
   const global = perIp.ok
-    ? await rateLimit("admin-login:global", 60, LOGIN_WINDOW_MS)
+    ? await rateLimit("admin-login:global", 200, LOGIN_WINDOW_MS)
     : perIp;
   if (!perIp.ok || !global.ok) {
     redirect("/admin/login/?error=rate");
