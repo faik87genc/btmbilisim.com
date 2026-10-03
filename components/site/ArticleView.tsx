@@ -103,6 +103,10 @@ function ContactBox() {
           <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
           {site.email}
         </a>
+        <a href={`mailto:${site.supportEmail.address}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
+          <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
+          {site.supportEmail.address} <span className="text-xs text-slate-500">({site.supportEmail.label})</span>
+        </a>
       </div>
     </div>
   );
@@ -122,7 +126,7 @@ export function ArticleView({ page, related, draftNote }: { page: Page; related:
       {!draftNote && service && <JsonLd data={service} />}
       {!draftNote && faqs.length > 0 && <JsonLd data={faqPageJsonLd(faqs)} />}
       {draftNote && (
-        <div className="bg-amber-500 px-4 py-2 text-center text-sm font-medium text-navy-950">{draftNote}</div>
+        <div className="bg-gold-500 px-4 py-2 text-center text-sm font-medium text-navy-950">{draftNote}</div>
       )}
       {post ? <PostBody page={page} related={related} crumbs={crumbs} /> : <CoreBody page={page} crumbs={crumbs} />}
     </>

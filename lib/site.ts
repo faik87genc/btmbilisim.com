@@ -3,6 +3,10 @@ export const site = {
   legalName: "BTM Bilgi Teknolojileri Merkezi",
   domain: "btmbilisim.com",
   email: "oguzhanbatum@btmbilisim.com",
+  // 7/24 teknik destek hattının e-postası.
+  supportEmail: { address: "teknik@btmbilisim.com", label: "7/24 Teknik Destek" },
+  // Kısa hizmet bölgesi etiketi (hero kartları vb.).
+  areaLabel: "Gebze · Kocaeli · İstanbul",
   phone: { display: "0850 840 02 86", href: "tel:+908508400286" },
   // Mobil hat — WhatsApp buradan.
   mobile: { display: "0543 730 91 32", href: "tel:+905437309132" },

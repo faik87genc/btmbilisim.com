@@ -17,7 +17,7 @@ function intro(): string[] {
     `> ${site.description} (${site.baseUrl.replace("https://", "")})`,
     "",
     "- Sitenin dili Türkçedir; tüm sayfalar Türkçe içeriktir.",
-    `- Merkez: ${site.address}. Telefon: ${site.phone.display}. E-posta: ${site.email}.`,
+    `- Merkez: ${site.address}. Telefon: ${site.phone.display}. E-posta: ${site.email}. 7/24 teknik destek: ${site.supportEmail.address}.`,
     "- Sabit fiyat listesi yoktur. Kapsam ve ücret, ücretsiz keşif görüşmesinden sonra ihtiyaca göre belirlenir.",
     "",
   ];

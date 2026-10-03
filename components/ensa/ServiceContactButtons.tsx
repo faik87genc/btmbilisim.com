@@ -1,4 +1,5 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { site } from "@/lib/site";
 import { serviceWhatsAppHref } from "@/lib/contact";
 
@@ -12,9 +13,9 @@ export function ServiceContactButtons({ service, note = true }: { service: strin
           href={serviceWhatsAppHref(service)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-control bg-[#0f7a40] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0b6434]"
+          className="inline-flex items-center justify-center gap-2 rounded-control px-5 py-3 text-sm font-semibold transition-colors border border-white/30 bg-white/10 text-white hover:border-gold-300 hover:bg-white/20"
         >
-          <MessageCircle className="h-4 w-4" aria-hidden="true" />
+          <WhatsAppIcon className="h-4 w-4" />
           WhatsApp&apos;tan teklif isteyin<span className="visually-hidden"> (yeni sekmede açılır)</span>
         </a>
         <a

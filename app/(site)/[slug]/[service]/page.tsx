@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowUpRight, ChevronRight, Mail, MessageCircle, Phone } from "lucide-react";
+import { ArrowUpRight, Check, ChevronRight, Headphones, Mail, MessageCircle, Phone } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
 import { GlobeBands } from "@/components/ensa/GlobeBands";
 import { MarkdownRenderer } from "@/components/ensa/MarkdownRenderer";
@@ -17,6 +17,7 @@ import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
 import { ContactCta } from "@/components/ensa/ContactCta";
 import { ServiceContactButtons } from "@/components/ensa/ServiceContactButtons";
+import { serviceWhatsAppHref } from "@/lib/contact";
 
 // Sub-service detail pages (/{category}/{service}/), content from
 // lib/servicePages.ts. The first segment is named `slug` only because Next
@@ -53,6 +54,28 @@ function titleFor(title: string): string {
 
 const STOP = new Set(["ve", "ile", "icin", "hizmetleri", "hizmeti", "cozumleri", "danismanligi", "yonetimi"]);
 const tokens = (s: string) => new Set(slugifyTr(s).split("-").filter((t) => t.length > 2 && !STOP.has(t)));
+
+/** Up to five items of the page's scope section (an H2 containing "kapsam"):
+ * its bullets, or its H3 headings when the section is split into subsections.
+ * Falls back to the first bullet list. Plain text, for the hero card. */
+function scopeItems(md: string, limit = 5): string[] {
+  const clean = (t: string) =>
+    t.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\*\*|__/g, "").replace(/^\d+\.\s*/, "").trim();
+  const lines = md.split("\n");
+  const start = lines.findIndex((l) => /^## /.test(l) && /kapsam/i.test(l));
+  const section: string[] = [];
+  if (start >= 0) {
+    for (const l of lines.slice(start + 1)) {
+      if (/^## /.test(l)) break;
+      section.push(l);
+    }
+  }
+  const pick = (src: string[], re: RegExp) => src.map((l) => l.match(re)?.[1]).filter((x): x is string => !!x).map(clean);
+  let items = pick(section, /^[-*] (.+)/);
+  if (items.length === 0) items = pick(section, /^### (.+)/);
+  if (items.length === 0) items = pick(lines, /^[-*] (.+)/);
+  return items.slice(0, limit);
+}
 
 /** Posts that share the most words with the service title (at least one). */
 function relatedPostsFor(posts: Page[], title: string, limit = 4): Page[] {
@@ -93,6 +116,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
         .slice(0, 5)
         .map((s) => ({ ...s, href: `/${category}/${relatedSlugByKey.get(s.key)!}/` }));
 
+  const scope = scopeItems(page.content);
   const relatedPosts = relatedPostsFor(postLikePages(await getPublishedPages()), page.title);
 
   const url = absoluteUrl(`/${category}/${service}/`);
@@ -132,7 +156,8 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
 
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
         <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-        <Container className="relative max-w-3xl">
+        <Container className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-14">
+          <div>
           <nav
             aria-label="İçerik yolu"
             className="mb-6 flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300"
@@ -154,13 +179,31 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
           <div className="mt-8">
             <ServiceContactButtons service={page.title} />
           </div>
+          </div>
+
+          {scope.length > 0 && (
+            <div className="rounded-card bg-white/5 p-6 ring-1 ring-white/15 md:p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Hizmet kapsamı</p>
+              <ul className="mt-4 space-y-3">
+                {scope.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-slate-200">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 border-t border-white/15 pt-4 text-xs text-slate-300">
+                Ücretsiz keşif · 7/24 teknik destek · {site.areaLabel}
+              </p>
+            </div>
+          )}
         </Container>
       </section>
 
       <section className="bg-paper-50 py-20 md:py-24">
-        <Container className="max-w-5xl">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
-            <div className="min-w-0">
+        <Container>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+            <div className="min-w-0 max-w-3xl">
               <MarkdownRenderer content={page.content} />
             </div>
 
@@ -171,26 +214,33 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                 <p className="mt-2 text-sm leading-relaxed text-slate-500">
                   Ekibimiz ihtiyacınızı ve uygunluk durumunuzu ilk görüşmede netleştirir.
                 </p>
-                <Button href="/iletisim/" variant="primary" className="mt-5 w-full">
-                  Görüşme Talep Edin
+                <Button href={site.mobile.href} variant="primary" className="mt-5 w-full">
+                  <Phone className="h-4 w-4" aria-hidden="true" /> {site.mobile.display}
                 </Button>
                 <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
                   <a href={site.phone.href} className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700">
                     <Phone className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    {site.phone.display}
+                    {site.phone.display} <span className="text-slate-500">(sabit hat)</span>
                   </a>
                   <a
-                    href={site.whatsapp.href}
+                    href={serviceWhatsAppHref(page.title)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700"
                   >
                     <MessageCircle className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    WhatsApp
+                    WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
                   </a>
                   <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
                     <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
                     {site.email}
+                  </a>
+                  <a href={`mailto:${site.supportEmail.address}`} className="flex items-start gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
+                    <Headphones className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
+                    <span>
+                      {site.supportEmail.address}
+                      <span className="block text-xs text-slate-500">{site.supportEmail.label}</span>
+                    </span>
                   </a>
                 </div>
               </div>

@@ -105,7 +105,22 @@ export function organizationJsonLd() {
     foundingDate: "2010",
     ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
     priceRange: "$$",
-    contactPoint: {
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "technical support",
+        email: site.supportEmail.address,
+        telephone: site.mobile.href.replace("tel:", ""),
+        areaServed: "TR",
+        availableLanguage: ["Turkish"],
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      },
+      {
       "@type": "ContactPoint",
       contactType: "sales",
       telephone: TELEPHONE,
@@ -114,6 +129,7 @@ export function organizationJsonLd() {
       availableLanguage: ["Turkish"],
       hoursAvailable: OPENING_HOURS,
     },
+    ],
     knowsAbout: KNOWS_ABOUT,
     hasOfferCatalog: {
       "@type": "OfferCatalog",

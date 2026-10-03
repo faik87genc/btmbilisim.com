@@ -55,6 +55,10 @@
 }
 
 @theme inline {
+  --color-slate-200: #dbe4f1;
+  --color-slate-400: #8796b0;
+  --color-slate-600: #3f4d66;
+  --color-slate-700: #2f3b52;
   /* One card radius, one control radius, two elevation levels (site-wide). */
   --radius-card: 0.625rem;
   --radius-control: 0.5rem;
@@ -294,10 +298,12 @@
     color: var(--navy-950);
   }
   .markdown-content a {
-    color: var(--gold-700);
+    color: var(--navy-800);
     overflow-wrap: anywhere;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, var(--gold-500) 70%, transparent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
   }
   .markdown-content a:hover {
     color: var(--ink-900);
@@ -494,6 +500,8 @@
   }
   .btn-ghost:hover {
     border-color: color-mix(in srgb, var(--navy-950) 40%, transparent);
+    color: var(--navy-800);
+    background: var(--paper-50);
   }
   .btn-sm {
     padding: 0.5rem 1rem;
@@ -682,7 +690,9 @@
 /* Brand surfaces (logo blue): hero / CTA gradient and a faint dot grid. */
 @layer utilities {
   .bg-brand-gradient {
-    background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 50%, var(--navy-800) 100%);
+    background:
+      radial-gradient(60% 80% at 100% 0%, rgb(232 129 47 / 0.14), transparent 60%),
+      linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 50%, var(--navy-800) 100%);
   }
   .bg-dots {
     background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);

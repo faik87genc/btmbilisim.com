@@ -24,7 +24,8 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
     <>
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
         <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-        <Container className="relative max-w-3xl">
+        <Container className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-14">
+          <div>
           <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
             <span className="h-px w-8 bg-gold-300" />
             {category.eyebrow}
@@ -38,6 +39,28 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
           <div className="mt-8">
             <ServiceContactButtons service={category.title} />
           </div>
+          </div>
+
+          <nav aria-label={`${category.shortTitle} hizmetleri`} className="rounded-card bg-white/5 p-6 ring-1 ring-white/15 md:p-7">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Bu alandaki hizmetler</p>
+            <ul className="mt-4 space-y-2.5">
+              {category.services.map((s) => {
+                const slug = slugByKey.get(s.key);
+                return (
+                  <li key={s.key}>
+                    {slug ? (
+                      <Link href={`/${category.slug}/${slug}/`} className="group flex items-center justify-between gap-3 text-sm text-slate-200 hover:text-white">
+                        {s.name}
+                        <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gold-300" aria-hidden="true" />
+                      </Link>
+                    ) : (
+                      <span className="text-sm text-slate-200">{s.name}</span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </Container>
       </section>
 

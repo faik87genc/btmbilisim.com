@@ -36,7 +36,7 @@ export function AboutTeaser() {
             <ul className="mt-7 grid gap-3">
               {checklist.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
                   <span className="text-sm leading-relaxed text-ink-900">{item}</span>
                 </li>
               ))}

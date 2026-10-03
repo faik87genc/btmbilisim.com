@@ -324,6 +324,21 @@ IT altyapınızı birlikte değerlendirelim; ilk görüşme ve keşif ücretsizd
           "Küçük ve orta ölçekli bir işletmede keşif, analiz ve yol haritası genellikle birkaç hafta içinde tamamlanır. Uygulama süresi yol haritasındaki işlerin kapsamına bağlıdır; aylık sözleşmeli modelde danışmanlık süreklidir.",
       },
       {
+        question: "Bir IT firması hangi hizmetleri sunar?",
+        answer:
+          "Kapsamlı bir IT firması; IT danışmanlığı, ağ ve sunucu altyapısı, siber güvenlik ve sızma testi, bulut ve yedekleme, lisanslama, yazılım ve sürekli teknik destek hizmetlerini bir arada sunar. BTM Bilişim olarak bu hizmetlerin tamamını tek ekiple, danışmanlıktan uygulamaya kadar yürütüyoruz.",
+      },
+      {
+        question: "Bir IT firmasıyla çalışmanın avantajları nelerdir?",
+        answer:
+          "Tek muhatapla çalışırsınız, arızalar ve güvenlik riskleri azalır, teknoloji yatırımları plana dayanır ve tam zamanlı bir IT ekibi istihdam etmenin maliyetine katlanmazsınız. İhtiyaç anında uzman kadroya, sözleşmeli müşterilerimiz için 7/24 teknik desteğe ulaşırsınız.",
+      },
+      {
+        question: "IT firmasıyla uzun vadeli destek anlaşması yapılabilir mi?",
+        answer:
+          "Evet. Aylık sözleşmeli IT danışmanlık ve destek modelimizde düzenli bakım, uzaktan izleme, öncelikli müdahale ve periyodik gözden geçirme toplantıları yer alır. Kapsamı kullanıcı ve sistem sayınıza göre birlikte belirleriz.",
+      },
+      {
         question: "Belirli bir marka veya ürünü mü öneriyorsunuz?",
         answer:
           "Hayır. Önerilerimizi satıcıdan bağımsız yaparız; tüm önde gelen markalarla çalışabiliyoruz. İhtiyaç, bütçe ve mevcut altyapıya göre alternatifleri karşılaştırır, kararı gerekçeleriyle size bırakırız.",

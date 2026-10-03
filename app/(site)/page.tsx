@@ -8,7 +8,6 @@ import {
   Code2,
   Gauge,
   Headphones,
-  MessageCircle,
   MonitorSmartphone,
   Phone,
   Route,
@@ -23,6 +22,7 @@ import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { Button } from "@/components/ensa/Button";
 import { QuoteForm } from "@/components/QuoteForm";
 import { TrustSection } from "@/components/btm/HomeSections";
+import { WhatsAppIcon } from "@/components/ensa/WhatsAppIcon";
 import { JsonLd } from "@/components/site/Parts";
 import { serviceCategoryList } from "@/lib/services";
 import { categoryIcons } from "@/lib/serviceIcons";
@@ -139,9 +139,9 @@ export default function Home() {
                 href={site.whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-control bg-[#0f7a40] px-4 py-3.5 text-white transition-colors hover:bg-[#0b6434]"
+                className="flex items-center gap-4 rounded-control bg-navy-800 px-4 py-3.5 text-white transition-colors hover:bg-navy-900"
               >
-                <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
+                <WhatsAppIcon className="h-5 w-5 shrink-0" />
                 <span>
                   <span className="block text-xs font-medium">
                     WhatsApp&apos;tan yazın<span className="visually-hidden"> (yeni sekmede açılır)</span>

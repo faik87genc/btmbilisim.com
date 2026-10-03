@@ -26,6 +26,7 @@ const rows = [
   { icon: Phone, label: "Destek Hattı", value: site.phone.display, href: site.phone.href },
   { icon: MessageCircle, label: "Mobil / WhatsApp", value: site.mobile.display, href: site.whatsapp.href, external: true },
   { icon: Mail, label: "E-Posta", value: site.email, href: `mailto:${site.email}` },
+  { icon: Mail, label: "7/24 Teknik Destek", value: site.supportEmail.address, href: `mailto:${site.supportEmail.address}` },
   { icon: MapPin, label: "Adres", value: site.address },
   { icon: Clock, label: "Çalışma Saatleri", value: site.hours.label },
 ];

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { site } from "@/lib/site";
 import { Container } from "./Container";
 import { SectionHeading } from "./SectionHeading";
@@ -28,9 +29,9 @@ export function ContactCta({
             href={site.whatsapp.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-control bg-[#0f7a40] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0b6434]"
+            className="inline-flex items-center justify-center gap-2 rounded-control px-6 py-3 text-sm font-semibold transition-colors border border-white/30 bg-white/10 text-white hover:border-gold-300 hover:bg-white/20"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            <WhatsAppIcon className="h-4 w-4" />
             WhatsApp&apos;tan yazın<span className="visually-hidden"> (yeni sekmede açılır)</span>
           </a>
         </div>

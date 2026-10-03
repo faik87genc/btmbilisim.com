@@ -65,14 +65,14 @@ function band(score: number) {
     return {
       label: "Düşük risk",
       icon: ShieldCheck,
-      tone: "text-emerald-700 bg-emerald-50 ring-emerald-600/20",
+      tone: "text-navy-800 bg-paper-100 ring-navy-800/20",
       text: "Temel önlemleriniz büyük ölçüde yerinde. Düzenli test ve bakımla bu seviyeyi koruyabilirsiniz.",
     };
   if (score <= 55)
     return {
       label: "Orta risk",
       icon: ShieldQuestion,
-      tone: "text-amber-800 bg-amber-50 ring-amber-600/20",
+      tone: "text-gold-800 bg-gold-100 ring-gold-500/30",
       text: "Bazı önemli açıklar var. Aşağıdaki başlıklar öncelikli olarak ele alınmalı.",
     };
   return {
@@ -117,7 +117,7 @@ export function RiskQuiz() {
                 cy="18"
                 r="15.5"
                 fill="none"
-                stroke={score > 55 ? "#b42318" : score > 25 ? "#b45309" : "#047857"}
+                stroke={score > 55 ? "#b42318" : score > 25 ? "var(--gold-600)" : "var(--navy-800)"}
                 strokeWidth="3"
                 strokeDasharray={`${(score / 100) * 97.4} 97.4`}
                 strokeLinecap="round"

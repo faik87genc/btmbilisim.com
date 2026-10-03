@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, ChevronRight, Mail, MapPin, MessageCircle, Phone, Headphones } from "lucide-react";
 import { Container } from "./Container";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
@@ -8,6 +8,23 @@ import { references, team } from "@/lib/data/trust";
 
 // Corporate footer: contact strip, site map columns (service areas, products,
 // corporate pages) and the legal bar. Logo-blue ground, orange accents.
+
+// Sitewide links to the main service pages: they help crawlers reach and
+// weigh these pages (in-content links still matter more).
+const POPULAR_SERVICES = [
+  { label: "IT Danışmanlık Hizmetleri", href: "/danismanlik/it-danismanlik-hizmetleri/" },
+  { label: "Sızma Testi (Penetrasyon Testi)", href: "/siber-guvenlik/sizma-testi-penetrasyon-testi/" },
+  { label: "Siber Güvenlik Danışmanlığı", href: "/siber-guvenlik/siber-guvenlik-danismanligi/" },
+  { label: "ISO 27001 Danışmanlığı", href: "/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/" },
+  { label: "KVKK Danışmanlığı", href: "/danismanlik/kvkk-danismanligi/" },
+  { label: "Network (Ağ) Altyapısı Kurulumu", href: "/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/" },
+  { label: "Sunucu Kurulumu ve Yönetimi", href: "/sistem-network/sunucu-kurulum-ve-yonetimi/" },
+  { label: "IP Kamera Sistemleri", href: "/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/" },
+  { label: "IT Destek ve Bakım", href: "/sistem-network/it-bakim-ve-destek-hizmetleri/" },
+  { label: "Veri Yedekleme (Backup)", href: "/bulut-yedekleme/veri-yedekleme-cozumleri/" },
+  { label: "Microsoft 365 Çözümleri", href: "/bulut-yedekleme/microsoft-365-cozumleri/" },
+  { label: "Kurumsal Web Tasarım", href: "/yazilim-dijital/web-tasarim-ve-kurumsal-web-sitesi/" },
+];
 
 const corporate = [
   { label: "IT Danışmanlık", href: "/danismanlik/it-danismanlik-hizmetleri/" },
@@ -65,13 +82,13 @@ export function Footer() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/#teklif"
-              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-950 transition-colors hover:bg-gold-400"
+              className="inline-flex items-center gap-2 rounded-control bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
             >
               Teklif Alın <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <a
               href={site.phone.href}
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-gold-300 hover:text-gold-300"
+              className="inline-flex items-center gap-2 rounded-control border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-gold-300 hover:text-gold-300"
             >
               <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
             </a>
@@ -79,7 +96,7 @@ export function Footer() {
         </Container>
       </div>
 
-      <Container className="relative grid gap-10 py-14 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+      <Container className="relative grid gap-10 py-14 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-3 xl:grid-cols-[1.3fr_1fr_1.2fr_1fr_1fr]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -107,6 +124,15 @@ export function Footer() {
                 <Mail className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.email}
               </a>
             </li>
+            <li>
+              <a href={`mailto:${site.supportEmail.address}`} className="flex items-start gap-3 break-all hover:text-white">
+                <Headphones className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
+                <span>
+                  {site.supportEmail.address}
+                  <span className="block text-xs text-slate-400">{site.supportEmail.label}</span>
+                </span>
+              </a>
+            </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.address}
             </li>
@@ -116,6 +142,11 @@ export function Footer() {
         <div>
           <Heading>Hizmet Alanları</Heading>
           <LinkList items={serviceCategoryList.map((c) => ({ label: c.shortTitle, href: `/${c.slug}/` }))} />
+        </div>
+
+        <div>
+          <Heading>Popüler Hizmetler</Heading>
+          <LinkList items={POPULAR_SERVICES} />
         </div>
 
         <div>

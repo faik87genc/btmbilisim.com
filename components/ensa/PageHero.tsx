@@ -28,7 +28,8 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden bg-navy-950 py-16 md:py-24">
       <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-      <Container className="relative max-w-3xl">
+      <Container className="relative">
+        <div className="max-w-3xl">
         {crumbs && crumbs.length > 0 && (
           <>
             <JsonLd data={breadcrumbJsonLd(crumbs)} />
@@ -65,6 +66,7 @@ export function PageHero({
         <h1 className="text-balance font-display text-4xl font-semibold leading-tight text-paper-50 md:text-5xl">{title}</h1>
         {lead && <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">{lead}</p>}
         {children}
+        </div>
       </Container>
     </section>
   );
