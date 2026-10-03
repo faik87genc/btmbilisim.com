@@ -47,7 +47,9 @@ Thumbs.db
 Desktop.ini
 
 # AI tool configs
-.claude/
+# Local Claude Code state stays out; shared agent definitions are versioned.
+/.claude/*
+!/.claude/agents/
 CLAUDE.md
 AGENTS.md
 
