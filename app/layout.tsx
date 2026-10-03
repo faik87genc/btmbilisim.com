@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { site } from "@/lib/site";
 
 // Styles are per area: the public site loads app/(site)/ensa.css, the admin
 // panel loads app/globals.css (app/admin/layout.tsx). Both are Tailwind; the
 // public one carries the brand tokens and long-form content styles.
 
-// Only the display face is preloaded — it renders the hero <h1>. Plex
-// Sans/Mono load at normal priority; `display: "swap"` paints body text in the
-// fallback immediately.
+// Only the display face is preloaded — it renders the hero <h1>. The body face,
+// IBM Plex Sans, is self-hosted (public/fonts, @font-face in ensa.css): Google
+// now serves it as a variable font that the Turbopack next/font/google loader
+// fails to build. `swap` paints body text in the fallback immediately.
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin", "latin-ext"],
@@ -16,13 +17,6 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-const plexSans = IBM_Plex_Sans({
-  variable: "--font-plex-sans",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500"],
-  display: "swap",
-  preload: false,
-});
 
 
 export const metadata: Metadata = {
@@ -59,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="tr"
       data-scroll-behavior="smooth"
-      className={`${spaceGrotesk.variable} ${plexSans.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>

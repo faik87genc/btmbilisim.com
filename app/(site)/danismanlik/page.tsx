@@ -6,9 +6,9 @@ import { ogMeta } from "@/lib/siteView";
 const category = serviceCategories["danismanlik"];
 
 const base = {
-  title: "Finansal, KOSGEB, TÜBİTAK Danışmanlığı | BTM Bilişim",
+  title: "Kurumsal Danışmanlık: IT, ISO 27001, KVKK ve Hibe | BTM Bilişim",
   description:
-    "Finansal ve stratejik danışmanlık, KOSGEB/TÜBİTAK hibe teşvik, ISO 27001 ve KVKK dahil sekiz alanda uçtan uca kurumsal danışmanlık hizmeti sunuyoruz.",
+    "IT danışmanlık, ISO 27001 ve KVKK uyumu, dijital dönüşüm, Logo ERP, KOSGEB/TÜBİTAK hibe ve finansal danışmanlık dahil sekiz alanda kurumsal danışmanlık.",
   alternates: { canonical: "/danismanlik/" },
 };
 

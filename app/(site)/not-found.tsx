@@ -26,8 +26,8 @@ export default function NotFound() {
           <Button href="/" variant="primary">
             Ana Sayfaya Dön
           </Button>
-          <Button href="/hizmet-rehberi/" variant="ghost-light">
-            Hizmet Rehberi
+          <Button href="/hizmetler/" variant="ghost-light">
+            Hizmetlerimiz
           </Button>
           <Button href="/blog/" variant="ghost-light">
             Blog

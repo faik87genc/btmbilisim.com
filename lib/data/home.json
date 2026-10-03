@@ -25,13 +25,13 @@
      "title": "Siber Güvenlik Hizmetleri",
      "short": "Risk analizi, izleme ve olay müdahalesi",
      "desc": "Güvenlik duvarı, uç nokta koruması, ağ segmentasyonu ve 7/24 izleme ile altyapınızı tehditlere karşı koruyoruz.",
-     "href": "/siber-guvenlik-hizmetleri/"
+     "href": "/siber-guvenlik/"
     },
     {
      "title": "Sızma Testi (Penetrasyon Testi)",
      "short": "Saldırgan gözüyle zafiyet tespiti",
      "desc": "Web, ağ ve sistemlerinizdeki güvenlik açıklarını gerçek saldırı senaryolarıyla tespit edip raporluyoruz.",
-     "href": "/sizma-testi-penetrasyon-testi/"
+     "href": "/siber-guvenlik/sizma-testi-penetrasyon-testi/"
     }
    ]
   },
@@ -42,31 +42,31 @@
      "title": "Ağ ve Sistem Altyapı Çözümleri",
      "short": "Kablolama, switch, kablosuz ağ",
      "desc": "İşletmenizin ağını güvenli, hızlı ve kesintisiz çalışacak şekilde projelendirip kuruyoruz.",
-     "href": "/ag-ve-sistem-altyapi-cozumleri/"
+     "href": "/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/"
     },
     {
      "title": "Sunucu ve Veri Merkezi Hizmetleri",
      "short": "Sunucu kurulumu ve kabinet düzeni",
      "desc": "Yüksek performanslı, yedekli ve verimli sunucu ve veri merkezi altyapıları kuruyor ve yönetiyoruz.",
-     "href": "/sunucu-ve-veri-merkezi-hizmetleri/"
+     "href": "/sistem-network/sunucu-kurulum-ve-yonetimi/"
     },
     {
      "title": "Sanallaştırma Hizmetleri",
      "short": "VMware, Hyper-V, Proxmox",
      "desc": "Donanımınızı verimli kullanan, esnek ve ölçeklenebilir sanallaştırma altyapıları kuruyoruz.",
-     "href": "/sanallastirma-hizmetleri/"
+     "href": "/sistem-network/sanallastirma-cozumleri/"
     },
     {
      "title": "Sistem Entegrasyonu",
      "short": "Farklı sistemlerin uyumlu çalışması",
      "desc": "Ağ, sunucu, yazılım ve güvenlik bileşenlerinizi birbiriyle uyumlu, tek bir bütün olarak çalıştırıyoruz.",
-     "href": "/sistem-entegrasyonu/"
+     "href": "/sistem-network/sistem-entegrasyonu/"
     },
     {
      "title": "Kurulum Hizmeti",
      "short": "Donanım ve yazılım kurulumları",
      "desc": "Sunucu, ağ cihazı, güvenlik kamerası ve iş istasyonu kurulumlarını yerinde ve dokümante ederek yapıyoruz.",
-     "href": "/kurulum-hizmeti/"
+     "href": "/sistem-network/"
     }
    ]
   },
@@ -77,19 +77,19 @@
      "title": "Bulut ve Yedekleme Çözümleri",
      "short": "3-2-1 yedekleme, felaket kurtarma",
      "desc": "Verilerinizi otomatik, şifreli ve test edilmiş yedekleme senaryolarıyla güvence altına alıyoruz.",
-     "href": "/bulut-ve-yedekleme-cozumleri/"
+     "href": "/bulut-yedekleme/"
     },
     {
      "title": "Cloud Hizmetleri",
      "short": "Buluta geçiş ve yönetim",
      "desc": "Uygulama ve sunucularınızı buluta taşıyor, maliyet ve performans dengesini birlikte kuruyoruz.",
-     "href": "/cloud-hizmetleri/"
+     "href": "/bulut-yedekleme/bulut-cozumleri/"
     },
     {
      "title": "Veri Kurtarma Hizmetleri",
      "short": "Disk, RAID ve sunucu veri kurtarma",
      "desc": "Kaybolan veya hasar gören verileri profesyonel yöntemlerle kurtarmak için hızlı müdahale ediyoruz.",
-     "href": "/veri-kurtarma-hizmetleri/"
+     "href": "/bulut-yedekleme/veri-kurtarma-hizmetleri/"
     }
    ]
   },
@@ -100,25 +100,25 @@
      "title": "IT Destek ve Danışmanlık",
      "short": "Sözleşmeli BT desteği",
      "desc": "BT projelerinizi planlıyor, günlük destek ihtiyaçlarınızı karşılıyor ve altyapınızı sürekli iyileştiriyoruz.",
-     "href": "/it-destek-ve-danismanlik/"
+     "href": "/danismanlik/it-danismanlik-hizmetleri/"
     },
     {
      "title": "Lisanslama Hizmetleri",
      "short": "Microsoft ve kurumsal yazılım lisansları",
      "desc": "Doğru lisans modelini seçmenize, lisanslarınızı yasal ve güncel tutmanıza yardımcı oluyoruz.",
-     "href": "/lisanslama-hizmetleri/"
+     "href": "/lisanslama/"
     },
     {
      "title": "Yazılım Hizmetleri",
      "short": "İşletmeye özel yazılım",
      "desc": "İş süreçlerinizi otomatikleştiren, ihtiyacınıza özel yazılım ve veritabanı çözümleri geliştiriyoruz.",
-     "href": "/yazilim-hizmetleri/"
+     "href": "/yazilim-dijital/ozel-yazilim-gelistirme/"
     },
     {
      "title": "Web Tasarım Hizmetleri",
      "short": "Kurumsal, mobil uyumlu web siteleri",
      "desc": "Hızlı, güvenli ve arama motoru dostu kurumsal web siteleri tasarlıyor ve yayına alıyoruz.",
-     "href": "/web-tasarim-hizmetleri/"
+     "href": "/yazilim-dijital/web-tasarim-ve-kurumsal-web-sitesi/"
     }
    ]
   }
@@ -150,6 +150,14 @@
   }
  ],
  "faqs": [
+  {
+   "q": "IT danışmanlık hizmetiniz neleri kapsıyor?",
+   "a": "Altyapı ve güvenlik değerlendirmesi, teknoloji yol haritası, bulut ve yedekleme planlaması, lisans optimizasyonu, ISO 27001 ve KVKK teknik uyumu ile sanal IT müdürü (vCIO) hizmetini kapsar. Önerdiğimiz işleri kendi ekibimizle uygular, sonrasında destek ve bakımla sürdürürüz."
+  },
+  {
+   "q": "Size en hızlı nasıl ulaşabilirim?",
+   "a": "0850 840 02 86 numaralı hattımızı arayabilir ya da 0543 730 91 32 numarasından WhatsApp ile yazabilirsiniz. Çağrı merkezi yoktur; doğrudan uzman ekibe ulaşırsınız."
+  },
   {
    "q": "Hangi bölgelere hizmet veriyorsunuz?",
    "a": "Merkezimiz Gebze'dedir. Gebze, Darıca, Dilovası, Çayırova ve Kocaeli genelinin yanı sıra Tuzla ve İstanbul Anadolu yakasına yerinde hizmet veriyoruz. Uzaktan yürütülebilen işler için Türkiye'nin her yerinden çalışıyoruz."

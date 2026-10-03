@@ -1,4 +1,3 @@
-import home from "@/lib/data/home.json";
 import { site } from "@/lib/site";
 import { fallbackPages } from "@/lib/fallbackPages";
 import { serviceCategoryList } from "@/lib/services";
@@ -32,12 +31,7 @@ function services(): string[] {
   }
   out.push("## Yazılım Ürünleri", "");
   for (const p of products) out.push(`- [${p.name}](${abs(`/yazilim-urunlerimiz/${p.slug}/`)}): ${p.tagline} ${p.description}`);
-  out.push("", "## Hizmet Rehberi (sahadaki hizmet sayfaları)", "");
-  for (const g of home.serviceGroups) {
-    out.push(`## ${g.title}`, "");
-    for (const it of g.items) out.push(`- [${it.title}](${abs(it.href)}): ${it.desc}`);
-    out.push("");
-  }
+  out.push("");
   return out;
 }
 

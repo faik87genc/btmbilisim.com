@@ -27,7 +27,7 @@ import { ParallaxGlobe } from "@/components/ensa/ParallaxGlobe";
 import { CountUp } from "@/components/ensa/CountUp";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { FaqSection } from "@/components/ensa/FaqSection";
-import { Button } from "@/components/ensa/Button";
+import { DemoRequest } from "@/components/ensa/DemoRequest";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { ProductJsonLd } from "@/components/ensa/ProductJsonLd";
 import { getProductBySlug, products } from "@/lib/products";
@@ -323,9 +323,7 @@ export default function Page() {
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <div className="mt-8">
-              <Button href="/iletisim/" variant="primary">
-                Demo Talep Edin
-              </Button>
+              <DemoRequest product="CyberQuan" tone="dark" align="center" />
             </div>
           </MotionReveal>
 
@@ -608,9 +606,7 @@ export default function Page() {
             description="Cihaz entegrasyonundan ISO uyumluluğuna kadar tüm adımlarda yanınızdayız."
           />
           <div className="mt-8 flex justify-center">
-            <Button href="/iletisim/" variant="primary">
-              Demo Talep Edin
-            </Button>
+            <DemoRequest product="CyberQuan" tone="dark" align="center" />
           </div>
         </Container>
       </section>

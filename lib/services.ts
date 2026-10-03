@@ -12,13 +12,19 @@ export type ServiceCategory = {
 export const serviceCategoryList: ServiceCategory[] = [
   {
     slug: "danismanlik",
-    title: "Danışmanlık Hizmetleri",
+    title: "IT ve Kurumsal Danışmanlık",
     shortTitle: "Danışmanlık",
     eyebrow: "01 — Danışmanlık",
-    summary: "Finansal, hukuki ve dijital dönüşüm süreçlerinizi uçtan uca yönetiriz.",
+    summary: "IT danışmanlığından ISO 27001 ve KVKK uyumuna, dijital dönüşümden hibe süreçlerine kadar yanınızdayız.",
     intro:
-      "Finans, süreç, uyum ve yazılım tarafında kurumunuzun yanında duran sekiz uzmanlık alanı. Her biri, kendi alanında uçtan uca sorumluluk alan bir ekip tarafından yürütülür.",
+      "Tüm süreçlerimizin temelinde IT danışmanlığı var. Teknoloji, güvenlik, uyum ve finans tarafında kurumunuzun yanında duran sekiz uzmanlık alanı.",
     services: [
+      {
+        key: "it-danismanlik-hizmetleri",
+        name: "IT Danışmanlık Hizmetleri",
+        description:
+          "Teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, sanal IT müdürü ve sözleşmeli IT desteği.",
+      },
       {
         key: "finansal-ve-stratejik-danismanlik",
         name: "Finansal ve Stratejik Danışmanlık",
@@ -48,12 +54,6 @@ export const serviceCategoryList: ServiceCategory[] = [
         name: "KVKK Danışmanlığı",
         description:
           "Kişisel veri envanteri çıkarma, aydınlatma metinleri hazırlama ve uyum süreçlerinin yönetimi.",
-      },
-      {
-        key: "bilgi-teknolojileri-it-danismanligi",
-        name: "Bilgi Teknolojileri (IT) Danışmanlığı",
-        description:
-          "Teknoloji yol haritası oluşturma, sistem seçimi ve dijital dönüşüm stratejisi geliştirme.",
       },
       {
         key: "logo-erp-destek-ve-danismanlik",

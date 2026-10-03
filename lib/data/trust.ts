@@ -16,8 +16,10 @@ export type Testimonial = {
   name: string;
   /** Unvan, ör. "Bilgi İşlem Müdürü" */
   role: string;
-  /** Firma adı */
-  company: string;
+  /** Firma adı — isteğe bağlı; yazılmazsa `sector` gösterilir. */
+  company?: string;
+  /** Firma adı yerine, ör. "Üretim firması, Gebze" veya "Lojistik, Tuzla" */
+  sector?: string;
   /** Yazılı iznin tarihi ve kanalı, ör. "2026-10-02 e-posta". Boşsa gösterilmez. */
   consent: string;
 };

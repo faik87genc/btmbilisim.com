@@ -3,7 +3,6 @@ import {
   AppWindow,
   ArrowRight,
   Ban,
-  Building,
   CloudCog,
   Cpu,
   Eye,
@@ -12,11 +11,7 @@ import {
   Fish,
   Gauge,
   Globe2,
-  GraduationCap,
-  HeartPulse,
-  Hotel,
   KeyRound,
-  Landmark,
   LockKeyhole,
   MailWarning,
   MonitorCheck,
@@ -25,10 +20,8 @@ import {
   ScanSearch,
   Server,
   ShieldCheck,
-  Store,
   Usb,
   Users,
-  Warehouse,
   Wifi,
 } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
@@ -44,6 +37,7 @@ import { liveTestimonials, references } from "@/lib/data/trust";
 // entries exist in lib/data/trust.ts.
 
 const CARD = "rounded-card border border-navy-950/10 bg-white shadow-card";
+const CARD_ON_WHITE = "rounded-card border border-navy-950/10 bg-paper-50";
 
 const SHOWCASE = [
   {
@@ -87,18 +81,18 @@ const PHISHING_REPORT = [
 /** DLP + EDR cards and the social-engineering (phishing) demo card. */
 export function SecurityShowcase() {
   return (
-    <section className="cv-auto bg-paper-50 py-20 md:py-24">
+    <section className="cv-auto bg-white py-20 md:py-24">
       <Container className="max-w-7xl">
         <SectionHeading
           align="center"
           eyebrow="Siber Güvenlik Vitrini"
           title="Verileriniz ve sistemleriniz koruma altında"
-          description="Hassas veri sızıntılarını önleyen DLP sistemleri, merkezi yönetilen uç nokta koruması ve çalışan farkındalığını ölçen testlerle işinizi risklere karşı güçlendirin."
+          description="Hassas veri sızıntılarını önleyen DLP sistemleri, merkezi yönetilen uç nokta koruması ve çalışan farkındalığını ölçen testlerle işinizi risklere karşı güçlendirin. Tüm önde gelen markalarla uyumlu çalışıyor, ihtiyacınıza göre ürün bağımsız öneri yapıyoruz."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {SHOWCASE.map((s, i) => (
             <MotionReveal key={s.title} delay={i * 0.08} className="h-full">
-              <div className={`${CARD} flex h-full flex-col p-6 md:p-7`}>
+              <div className={`${CARD_ON_WHITE} flex h-full flex-col p-6 md:p-7`}>
                 <div className="flex items-start gap-4">
                   <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
                     <s.icon className="h-6 w-6" aria-hidden="true" />
@@ -110,7 +104,7 @@ export function SecurityShowcase() {
                 </div>
                 <ul className="mb-7 mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {s.chips.map((c) => (
-                    <li key={c.label} className="flex items-center gap-2 rounded-control bg-paper-50 px-3 py-2 text-xs font-medium text-slate-700">
+                    <li key={c.label} className="flex items-center gap-2 rounded-control bg-white px-3 py-2 text-xs font-medium text-slate-700">
                       <c.icon className="h-3.5 w-3.5 shrink-0 text-navy-700" aria-hidden="true" />
                       {c.label}
                     </li>
@@ -118,7 +112,7 @@ export function SecurityShowcase() {
                 </ul>
                 <Link
                   href={s.href}
-                  className="mt-auto flex items-center justify-between rounded-control bg-paper-50 px-4 py-3 text-sm font-semibold text-navy-800 transition-colors hover:bg-paper-100"
+                  className="mt-auto flex items-center justify-between rounded-control bg-white px-4 py-3 text-sm font-semibold text-navy-800 ring-1 ring-navy-950/10 transition-colors hover:bg-paper-100"
                 >
                   {s.cta} <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
                 </Link>
@@ -128,7 +122,7 @@ export function SecurityShowcase() {
 
           {/* Social-engineering demo (was a dark band of its own) */}
           <MotionReveal className="md:col-span-2">
-            <div className={`${CARD} grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center`}>
+            <div className={`${CARD_ON_WHITE} grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center`}>
               <div>
                 <div className="flex items-start gap-4">
                   <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
@@ -149,7 +143,7 @@ export function SecurityShowcase() {
                     { icon: Gauge, label: "Farkındalık skoru" },
                     { icon: ShieldCheck, label: "Sonuç ve eğitim önerisi" },
                   ].map((c) => (
-                    <li key={c.label} className="inline-flex items-center gap-1.5 rounded-control bg-paper-50 px-3 py-1.5">
+                    <li key={c.label} className="inline-flex items-center gap-1.5 rounded-control bg-white px-3 py-1.5">
                       <c.icon className="h-3.5 w-3.5 text-navy-700" aria-hidden="true" /> {c.label}
                     </li>
                   ))}
@@ -163,12 +157,12 @@ export function SecurityShowcase() {
                   </Button>
                 </div>
               </div>
-              <figure className="rounded-card border border-navy-950/10 bg-paper-50 p-5">
+              <figure className="rounded-card border border-navy-950/10 bg-white p-5">
                 <figcaption className="flex items-center justify-between gap-3 border-b border-navy-950/10 pb-3">
                   <span className="flex items-center gap-2 font-display text-sm font-semibold text-navy-800">
                     <FileText className="h-4 w-4" aria-hidden="true" /> Rapor içeriği
                   </span>
-                  <span className="rounded-control bg-white px-2 py-0.5 text-[11px] font-medium text-slate-600 ring-1 ring-navy-950/10">
+                  <span className="rounded-control bg-paper-50 px-2 py-0.5 text-[11px] font-medium text-slate-600 ring-1 ring-navy-950/10">
                     Örnek başlıklar
                   </span>
                 </figcaption>
@@ -234,7 +228,7 @@ export function TrustSection() {
         {liveTestimonials.length > 0 && (
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {liveTestimonials.map((t, i) => (
-              <MotionReveal key={t.name + t.company} delay={(i % 3) * 0.06} className="h-full">
+              <MotionReveal key={t.name + t.consent} delay={(i % 3) * 0.06} className="h-full">
                 <figure className={`${CARD} flex h-full flex-col p-7`}>
                   <Quote className="h-7 w-7 text-navy-800/40" aria-hidden="true" />
                   <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700">{t.text}</blockquote>
@@ -245,7 +239,7 @@ export function TrustSection() {
                     <span>
                       <span className="block font-semibold text-ink-900">{t.name}</span>
                       <span className="block text-xs text-slate-600">{t.role}</span>
-                      <span className="block text-xs font-semibold text-navy-700">{t.company}</span>
+                      <span className="block text-xs font-semibold text-navy-700">{t.company ?? t.sector}</span>
                     </span>
                   </figcaption>
                 </figure>
@@ -310,53 +304,6 @@ export function PentestScope() {
             Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
         </div>
-      </Container>
-    </section>
-  );
-}
-
-const SECTORS = [
-  { icon: Factory, title: "Üretim & OSB", text: "OT/IT ağ ayrımı, IP kamera, üretim izleme.", href: "/yazilim-urunlerimiz/cyberquan/" },
-  { icon: Warehouse, title: "Lojistik & Depo", text: "Geniş alan Wi-Fi, kamera ve envanter takibi.", href: "/sistem-network/wifi-ve-kablosuz-ag-cozumleri/" },
-  { icon: HeartPulse, title: "Sağlık", text: "KVKK uyumu, hasta verisi güvenliği, yedekleme.", href: "/danismanlik/kvkk-danismanligi/" },
-  { icon: GraduationCap, title: "Eğitim", text: "5651 uyumlu misafir Wi-Fi ve içerik filtreleme.", href: "/yazilim-urunlerimiz/cyberhost/" },
-  { icon: Hotel, title: "Turizm & Otel", text: "Misafir internet, loglama ve kesintisiz ağ.", href: "/yazilim-urunlerimiz/cyberhost/" },
-  { icon: Landmark, title: "Finans & Kurumsal", text: "Sızma testi, SIEM ve bütçe raporlama.", href: "/yazilim-urunlerimiz/atlas/" },
-  { icon: Store, title: "Perakende & Mağaza", text: "Çok şubeli ağ, kamera ve merkezi yönetim.", href: "/kurulum-hizmeti/" },
-  { icon: Building, title: "Site & Apartman", text: "Kamera sistemleri, kayıt ve uzaktan izleme.", href: "/apartman-ve-site-kamera-sistemleri-kurulumu/" },
-];
-
-/** Sector solutions grid. */
-export function Sectors() {
-  return (
-    <section className="cv-auto bg-white py-20 md:py-24">
-      <Container className="max-w-7xl">
-        <SectionHeading
-          align="center"
-          eyebrow="Sektörel Çözümler"
-          title="Her sektöre özel bilişim çözümleri"
-          description="İşletmenizin sektörüne göre öncelikleri biliyor, çözümü ona göre kuruyoruz."
-        />
-        <ul className="mt-12 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
-          {SECTORS.map((s, i) => (
-            <MotionReveal key={s.title} as="li" delay={(i % 4) * 0.05} className="h-full">
-              <Link
-                href={s.href}
-                className="group flex h-full flex-col rounded-card border border-navy-950/10 bg-paper-50 p-5 transition-all hover:-translate-y-1 hover:border-navy-800/30 hover:bg-white hover:shadow-lift"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-control bg-navy-800 text-white transition-colors group-hover:bg-navy-700">
-                  <s.icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <h3 className="mt-4 font-display text-base font-semibold text-ink-900">{s.title}</h3>
-                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-slate-600">{s.text}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-navy-800">
-                  Çözümü inceleyin{" "}
-                  <ArrowRight className="h-3.5 w-3.5 text-gold-600 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                </span>
-              </Link>
-            </MotionReveal>
-          ))}
-        </ul>
       </Container>
     </section>
   );

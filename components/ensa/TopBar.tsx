@@ -1,4 +1,4 @@
-import { Boxes, Headphones, LayoutGrid, MapPin, Phone, SearchCheck } from "lucide-react";
+import { BadgeCheck, Boxes, Headphones, LayoutGrid, Phone, SearchCheck } from "lucide-react";
 import { Container } from "./Container";
 import { site } from "@/lib/site";
 import { serviceCategoryList } from "@/lib/services";
@@ -7,9 +7,9 @@ import { products } from "@/lib/products";
 // Trust strip above the header. Only statements that are true for BTM —
 // counts come from the data files, no invented customer/year figures.
 const badges = [
+  { icon: BadgeCheck, label: "2010'dan Beri IT Danışmanlık" },
   { icon: Headphones, label: "7/24 Teknik Destek" },
   { icon: SearchCheck, label: "Ücretsiz Keşif" },
-  { icon: MapPin, label: "Gebze Merkezli Yerinde Servis" },
   { icon: LayoutGrid, label: `${serviceCategoryList.length} Uzmanlık Alanı` },
   { icon: Boxes, label: `${products.length} Yazılım Ürünü` },
 ];

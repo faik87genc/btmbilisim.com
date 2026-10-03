@@ -11,9 +11,10 @@ import {
   Gauge,
   LayoutGrid,
   Mail,
+  MonitorCog,
   Newspaper,
   Package,
-  Send,
+  Phone,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -23,6 +24,7 @@ import { MobileMenu } from "./MobileMenu";
 import { NavActive } from "./NavActive";
 import { categoryIcons, productIcons, serviceIcon } from "@/lib/serviceIcons";
 import { navAreas, navCorporate, navProducts, type CorporateKey } from "@/lib/navigation";
+import { site } from "@/lib/site";
 
 // Mega-menu header (layout modelled on invekor.com.tr). Server-rendered: the
 // desktop menus open on hover/focus with CSS only, so none of this markup is
@@ -36,15 +38,13 @@ const corporateIcons: Record<CorporateKey, LucideIcon> = {
   sirket: Building2,
   ekip: Users,
   referans: Award,
-  rehber: BookOpen,
   risk: Gauge,
   kvkk: FileLock2,
   cerez: Cookie,
 };
 
-const servicePrefixes = [...navAreas.map((a) => `/${a.slug}/`), "/hizmet-rehberi/", "/hizmetler/"].join(" ");
+const servicePrefixes = [...navAreas.map((a) => `/${a.slug}/`), "/hizmetler/"].join(" ");
 const corporatePrefixes = navCorporate
-  .filter((c) => c.key !== "rehber")
   .map((c) => c.href)
   .join(" ");
 
@@ -71,6 +71,11 @@ export function Header() {
         <Logo />
 
         <nav aria-label="Ana menü" className="hidden items-center gap-1 lg:flex">
+          <Link href="/danismanlik/it-danismanlik-hizmetleri/" className={topLink} data-nav="/danismanlik/it-danismanlik-hizmetleri/">
+            <MonitorCog className="hidden h-4 w-4 xl:block" aria-hidden="true" />
+            IT Danışmanlık
+          </Link>
+
           {/* Hizmetler — mega menu */}
           <div className="group" data-menu-group="">
             <Link href="/hizmetler/" className={topLink} data-nav={servicePrefixes}>
@@ -128,15 +133,15 @@ export function Header() {
                   })}
                 </div>
                 <Link
-                  href="/hizmet-rehberi/"
+                  href="/hizmetler/"
                   className="mt-7 flex items-center justify-between rounded-md bg-paper-50 px-4 py-3 transition-colors hover:bg-paper-100"
                 >
                   <span className="flex items-center gap-3">
                     <BookOpen className="h-5 w-5 text-gold-600" aria-hidden="true" />
                     <span>
-                      <span className="block text-sm font-semibold text-ink-900">Hizmet Rehberi</span>
+                      <span className="block text-sm font-semibold text-ink-900">Tüm Hizmetler</span>
                       <span className="block text-xs text-slate-500">
-                        Ağ, sunucu, kamera, yedekleme ve güvenlik — sahadaki hizmet sayfalarımız
+                        IT danışmanlıktan lisanslamaya tüm hizmetlerimiz tek sayfada
                       </span>
                     </span>
                   </span>
@@ -224,19 +229,22 @@ export function Header() {
           </Link>
         </nav>
 
-        <Link
-          href="/#teklif"
-          className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-4 py-2.5 text-sm xl:px-5 font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 lg:inline-flex"
-        >
-          <Send className="h-4 w-4" aria-hidden="true" />
-          Hemen Teklif Al
-        </Link>
+        <div className="flex items-center gap-1">
+          <a
+            href={site.phone.href}
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-3 py-2.5 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 xl:px-5"
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            <span className="hidden xl:inline">{site.phone.display}</span>
+            <span className="xl:hidden">Hemen Ara</span>
+          </a>
 
-        <MobileMenu
+          <MobileMenu
           areas={navAreas}
           products={navProducts.map(({ slug, name }) => ({ slug, name }))}
           corporate={navCorporate.map(({ label, href }) => ({ label, href }))}
-        />
+          />
+        </div>
       </Container>
     </header>
   );

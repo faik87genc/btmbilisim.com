@@ -81,6 +81,9 @@ export function MobileMenu({
             <Link href="/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
               Ana Sayfa
             </Link>
+            <Link href="/danismanlik/it-danismanlik-hizmetleri/" className="rounded-sm px-2 py-3 text-base font-semibold text-navy-800">
+              IT Danışmanlık
+            </Link>
 
             {group("hizmetler", "Hizmetler")}
             {section === "hizmetler" && (
@@ -109,8 +112,8 @@ export function MobileMenu({
                     </details>
                   );
                 })}
-                <Link href="/hizmet-rehberi/" className="block py-1.5 text-sm font-semibold text-navy-800">
-                  Hizmet Rehberi
+                <Link href="/hizmetler/" className="block py-1.5 text-sm font-semibold text-navy-800">
+                  Tüm Hizmetler
                 </Link>
               </div>
             )}
@@ -149,10 +152,10 @@ export function MobileMenu({
             <Link
               href="/#teklif"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-md bg-gold-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-navy-950"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950"
             >
               <Send className="h-4 w-4" aria-hidden="true" />
-              Hemen Teklif Al
+              Ücretsiz Keşif İsteyin
             </Link>
           </Container>
         </div>

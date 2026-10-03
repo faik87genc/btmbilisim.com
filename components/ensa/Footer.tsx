@@ -10,13 +10,16 @@ import { references, team } from "@/lib/data/trust";
 // corporate pages) and the legal bar. Logo-blue ground, orange accents.
 
 const corporate = [
+  { label: "IT Danışmanlık", href: "/danismanlik/it-danismanlik-hizmetleri/" },
   { label: "Hakkımızda", href: "/hakkimizda/" },
   ...(team.length ? [{ label: "Ekibimiz", href: "/ekibimiz/" }] : []),
   ...(references.length ? [{ label: "Referanslar", href: "/referanslar/" }] : []),
-  { label: "Hizmet Rehberi", href: "/hizmet-rehberi/" },
+  { label: "Tüm Hizmetler", href: "/hizmetler/" },
   { label: "Risk Skoru Testi", href: "/risk-skoru-testi/" },
   { label: "Blog", href: "/blog/" },
   { label: "İletişim", href: "/iletisim/" },
+  // Sister site: full ISO 27001 certification consulting.
+  { label: "iso27001danismanlik.com", href: "https://www.iso27001danismanlik.com/" },
 ];
 
 const legal = [

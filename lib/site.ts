@@ -47,7 +47,7 @@ export const site = {
   // Sitenin genel tanıtım metni: kök layout'un varsayılan OG/Twitter kartı,
   // PWA manifest'i ve Footer'daki tanıtım paragrafı buradan besleniyor.
   description:
-    "BTM Bilişim; siber güvenlik ve sızma testi, sistem ve network altyapısı, bulut ve yedekleme, yazılım, lisanslama ve danışmanlık alanlarında ve kendi geliştirdiği kurumsal yazılım ürünleriyle Gebze, Kocaeli ve Türkiye genelinde uçtan uca bilişim çözümleri sunar.",
+    "BTM Bilişim; 2010'dan bu yana IT danışmanlık temelinde siber güvenlik ve sızma testi, sistem ve network altyapısı, bulut ve yedekleme, yazılım ve lisanslama hizmetlerini ve kendi geliştirdiği kurumsal yazılım ürünlerini Gebze, Kocaeli, İstanbul ve Türkiye genelinde sunar.",
   // --- Admin / AI içerik sistemi ---
   shortName: "BTM Bilişim",
   // Canonical origin — eski WordPress sitesi www altında yayında.
@@ -57,7 +57,7 @@ export const site = {
   titleSuffix: " | BTM Bilişim",
   // AI system prompt'larındaki şirket tarifi.
   aiPersona:
-    "BTM Bilişim — Gebze/Kocaeli merkezli; sızma testi, siber güvenlik, ağ ve sistem altyapısı, sunucu/veri merkezi, bulut ve yedekleme, sanallaştırma, lisanslama, güvenlik kamerası (IP kamera) kurulumu, yazılım, web tasarım, ISO 27001/KVKK ve IT danışmanlık hizmetleri veren; Atlas, Orbit, PentForce, CyberHost gibi kurumsal yazılım ürünleri geliştiren bir bilişim firması",
+    "BTM Bilişim — 2010'dan beri IT danışmanlık temelinde çalışan, ISO 27001 baş denetçi deneyimine sahip; sızma testi, siber güvenlik, ağ ve sistem altyapısı, sunucu/veri merkezi, bulut ve yedekleme, sanallaştırma, lisanslama, güvenlik kamerası (IP kamera) kurulumu, yazılım, web tasarım, ISO 27001/KVKK ve IT danışmanlık hizmetleri veren; Atlas, Orbit, PentForce, CyberHost gibi kurumsal yazılım ürünleri geliştiren bir bilişim firması",
   adminCookie: "btm_admin_session",
 } as const;
 

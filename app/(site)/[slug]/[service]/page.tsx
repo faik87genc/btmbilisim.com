@@ -6,7 +6,6 @@ import { Container } from "@/components/ensa/Container";
 import { GlobeBands } from "@/components/ensa/GlobeBands";
 import { MarkdownRenderer } from "@/components/ensa/MarkdownRenderer";
 import { FaqSection } from "@/components/ensa/FaqSection";
-import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { Button } from "@/components/ensa/Button";
 import { JsonLd } from "@/components/site/Parts";
 import { serviceCategories } from "@/lib/services";
@@ -16,6 +15,7 @@ import { slugifyTr } from "@/lib/slug";
 import { absoluteUrl, ogMeta } from "@/lib/siteView";
 import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
+import { ContactCta } from "@/components/ensa/ContactCta";
 
 // Sub-service detail pages (/{category}/{service}/), content from
 // lib/servicePages.ts. The first segment is named `slug` only because Next
@@ -132,7 +132,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container className="max-w-5xl">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
             <div className="min-w-0">
               <MarkdownRenderer content={page.content} />
             </div>
@@ -217,21 +217,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
 
       {page.faq.length > 0 && <FaqSection items={page.faq} />}
 
-      <section className="bg-navy-950 py-16">
-        <Container>
-          <SectionHeading
-            tone="dark"
-            align="center"
-            title="Bu hizmeti kurumunuz için değerlendirelim."
-            description="Ekibimiz, uygunluk durumunuzu ve süreç adımlarını ilk görüşmede netleştirir."
-          />
-          <div className="mt-8 flex justify-center">
-            <Button href="/iletisim/" variant="primary">
-              Görüşme Talep Edin
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <ContactCta title="Bu hizmeti kurumunuz için değerlendirelim." />
     </>
   );
 }

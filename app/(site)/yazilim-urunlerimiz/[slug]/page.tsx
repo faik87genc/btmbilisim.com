@@ -7,7 +7,7 @@ import { Container } from "@/components/ensa/Container";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { FaqSection } from "@/components/ensa/FaqSection";
-import { Button } from "@/components/ensa/Button";
+import { DemoRequest } from "@/components/ensa/DemoRequest";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { ProductJsonLd } from "@/components/ensa/ProductJsonLd";
 import { getProductBySlug, products } from "@/lib/products";
@@ -75,9 +75,7 @@ export default async function Page({
           </p>
           <MotionReveal>
             <div className="mt-8">
-              <Button href="/iletisim/" variant="primary">
-                Demo Talep Edin
-              </Button>
+              <DemoRequest product={product.name} />
             </div>
           </MotionReveal>
         </Container>

@@ -40,7 +40,7 @@ const NEVER_LINK = new Set([
  * -> title. Linkable like DB pages.
  */
 export const CODED_PAGES: ReadonlyMap<string, string> = new Map([
-  ["hizmet-rehberi", "Hizmet Rehberi"],
+  ["hizmetler", "Hizmetlerimiz"],
   ["yazilim-urunlerimiz", "Yazılım Ürünlerimiz"],
   ...products.map((p) => [`yazilim-urunlerimiz/${p.slug}`, `${p.name} — ${p.tagline}`] as const),
   ...serviceCategoryList.map((c) => [c.slug, c.title] as const),
@@ -65,20 +65,16 @@ export const MONEY_PAGES: { slug: string; group: "güvenlik" | "altyapı" | "yaz
   { slug: "danismanlik", group: "yazılım" },
   { slug: "yazilim-urunlerimiz", group: "yazılım" },
   { slug: "hizmetler", group: "altyapı" },
-  { slug: "siber-guvenlik-hizmetleri", group: "güvenlik" },
-  { slug: "sizma-testi-penetrasyon-testi", group: "güvenlik" },
-  { slug: "ag-ve-sistem-altyapi-cozumleri", group: "altyapı" },
-  { slug: "sunucu-ve-veri-merkezi-hizmetleri", group: "altyapı" },
-  { slug: "bulut-ve-yedekleme-cozumleri", group: "altyapı" },
-  { slug: "cloud-hizmetleri", group: "altyapı" },
-  { slug: "sanallastirma-hizmetleri", group: "altyapı" },
-  { slug: "sistem-entegrasyonu", group: "altyapı" },
-  { slug: "kurulum-hizmeti", group: "altyapı" },
-  { slug: "it-destek-ve-danismanlik", group: "altyapı" },
-  { slug: "lisanslama-hizmetleri", group: "altyapı" },
-  { slug: "veri-kurtarma-hizmetleri", group: "altyapı" },
-  { slug: "yazilim-hizmetleri", group: "yazılım" },
-  { slug: "web-tasarim-hizmetleri", group: "yazılım" },
+  { slug: "danismanlik/it-danismanlik-hizmetleri", group: "altyapı" },
+  { slug: "sistem-network/ag-altyapisi-kurulum-ve-yonetimi", group: "altyapı" },
+  { slug: "sistem-network/sunucu-kurulum-ve-yonetimi", group: "altyapı" },
+  { slug: "sistem-network/sanallastirma-cozumleri", group: "altyapı" },
+  { slug: "sistem-network/it-bakim-ve-destek-hizmetleri", group: "altyapı" },
+  { slug: "sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri", group: "altyapı" },
+  { slug: "bulut-yedekleme/veri-yedekleme-cozumleri", group: "altyapı" },
+  { slug: "bulut-yedekleme/veri-kurtarma-hizmetleri", group: "altyapı" },
+  { slug: "yazilim-dijital/ozel-yazilim-gelistirme", group: "yazılım" },
+  { slug: "yazilim-dijital/web-tasarim-ve-kurumsal-web-sitesi", group: "yazılım" },
 ];
 
 export const MONEY_PAGE_SLUGS: ReadonlySet<string> = new Set(MONEY_PAGES.map((p) => p.slug));

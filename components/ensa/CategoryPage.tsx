@@ -5,11 +5,11 @@ import { Container } from "./Container";
 import { MotionReveal } from "./MotionReveal";
 import { SectionHeading } from "./SectionHeading";
 import { FaqSection } from "./FaqSection";
-import { Button } from "./Button";
 import { ServiceCategory } from "@/lib/services";
 import { servicePagesContent } from "@/lib/servicePages";
+import { ContactCta } from "./ContactCta";
 
-export function CategoryPage({ category }: { category: ServiceCategory }) {
+export function CategoryPage({ category, children }: { category: ServiceCategory; children?: React.ReactNode }) {
   // A sub-service card links to its detail page when lib/servicePages carries
   // editorial content for it.
   const slugByKey = new Map<string, string>();
@@ -88,23 +88,11 @@ export function CategoryPage({ category }: { category: ServiceCategory }) {
         </Container>
       </section>
 
+      {children}
+
       <FaqSection items={category.faq} />
 
-      <section className="bg-navy-950 py-16">
-        <Container>
-          <SectionHeading
-            tone="dark"
-            align="center"
-            title="Bu alanda ihtiyacınızı konuşalım."
-            description="Ekibimiz, uygunluk durumunuzu ve süreç adımlarını ilk görüşmede netleştirir."
-          />
-          <div className="mt-8 flex justify-center">
-            <Button href="/iletisim/" variant="primary">
-              Görüşme Talep Edin
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <ContactCta title="Bu alanda ihtiyacınızı konuşalım." />
     </>
   );
 }

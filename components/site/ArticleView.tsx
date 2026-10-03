@@ -167,7 +167,7 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
 
       <section className="bg-paper-50 py-16 md:py-20">
         <Container className="max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
             <article className="min-w-0">
               {page.coverImageUrl && <CoverImage src={page.coverImageUrl} alt={page.title} />}
               {toc.length > 0 && <Toc toc={toc} />}
@@ -221,14 +221,14 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
 function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof breadcrumbsFor> }) {
   // The old WordPress service pages carry a side contact box; legal texts and
   // other single pages read better as one centred column.
-  const guide = crumbs.some((c) => c.href === "/hizmet-rehberi/");
+  const guide = crumbs.some((c) => c.href === "/hizmetler/");
   return (
     <>
       <PageHero title={page.title} lead={page.excerpt !== page.title ? page.excerpt : null} crumbs={crumbs} />
       <section className="bg-paper-50 py-16 md:py-20">
         <Container className={guide ? "max-w-6xl" : "max-w-3xl"}>
           {guide ? (
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
               <div className="markdown-content min-w-0">
                 <SiteMarkdown content={page.content} eagerFirstImage />
               </div>

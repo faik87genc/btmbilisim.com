@@ -43,6 +43,7 @@ const KNOWS_ABOUT = [
   "Veri kurtarma",
   "Veritabanı yönetimi ve SQL optimizasyonu",
   "Web tasarım ve yazılım geliştirme",
+  "IT danışmanlık",
   "IT destek ve danışmanlık",
 ];
 
@@ -101,6 +102,7 @@ export function organizationJsonLd() {
     openingHoursSpecification: [OPENING_HOURS],
     areaServed: AREA_SERVED,
     legalName: site.legalName,
+    foundingDate: "2010",
     ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
     priceRange: "$$",
     contactPoint: {

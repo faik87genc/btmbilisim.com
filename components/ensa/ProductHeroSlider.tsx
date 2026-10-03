@@ -64,7 +64,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
       <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
 
       <Container className="relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <div key={index} className={`max-w-xl ${entrance}`}>
             <div className="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
               <span className="h-px w-8 bg-gold-300" />

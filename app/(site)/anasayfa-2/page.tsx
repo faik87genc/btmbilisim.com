@@ -148,13 +148,13 @@ const heroSlides: HeroSlide[] = [
   {
     image: "/hero/slider-4.jpg",
     imageAlt: "Ofis binası girişi",
-    eyebrow: "Gebze Merkezli · Türkiye Geneli",
+    eyebrow: "2010'dan Beri · IT Danışmanlık",
     titleLead: "Gebze'den Türkiye'ye,",
     titleAccent: "aynı standartta hizmet.",
     description:
       "Kocaeli ve İstanbul'da yerinde, Türkiye genelinde uzaktan destek modelleriyle aynı kalitede kurulum ve teknik destek sunuyoruz.",
     primaryCta: { label: "Görüşme Talep Edin", href: "/iletisim/" },
-    secondaryCta: { label: "Hizmet Rehberi", href: "/hizmet-rehberi/" },
+    secondaryCta: { label: "Hizmetlerimiz", href: "/hizmetler/" },
   },
 ];
 
@@ -255,12 +255,12 @@ export default function Home() {
               Ağ, sunucu, kamera ve yedekleme hizmetlerimizin tamamı
             </p>
             <p className="mt-1 text-sm text-slate-500">
-              Kurulumdan bakıma, sahada verdiğimiz hizmetlerin ayrıntılı sayfaları Hizmet Rehberi&apos;nde.
+              IT danışmanlıktan kurulum ve bakıma, tüm hizmetlerimiz tek sayfada.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button href="/hizmet-rehberi/" variant="ghost-light">
-              Hizmet Rehberi
+            <Button href="/hizmetler/" variant="ghost-light">
+              Tüm Hizmetler
             </Button>
             <Button href="/iletisim/" variant="primary">
               Ekibimizle Konuşun
@@ -272,7 +272,7 @@ export default function Home() {
       {/* #teklif: header "Teklif Al", article CTAs and AI-written posts link here. */}
       <section id="teklif" className="scroll-mt-28 bg-navy-950 py-16 md:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
             <div>
               <SectionHeading
                 tone="dark"

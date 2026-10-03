@@ -51,7 +51,7 @@ export default async function TagArchivePage({ params }: Props) {
       />
       <section className="bg-paper-50 py-16 md:py-20">
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {matched.map((p, i) => (
               <BlogCard key={p.id} post={p} delay={(i % 3) * 0.05} priority={i < 3} />
             ))}

@@ -10,8 +10,8 @@ import { products } from "@/lib/products";
 // yerde daha güçlü bir vurguyla toparlanıyor.
 const topValues = [
   {
-    title: "Gebze Merkezli",
-    description: "Kocaeli ve İstanbul'da yerinde servis, Türkiye genelinde uzaktan destek.",
+    title: "2010'dan Beri",
+    description: "IT danışmanlığından kuruluma, sahada yürüttüğümüz kurumsal projelerin deneyimi.",
   },
   {
     title: "ISO 27001 & KVKK",
@@ -57,7 +57,7 @@ export function OfferingCards() {
     <section className="bg-paper-50">
       <div className="border-y border-navy-950/10 bg-white">
         <Container>
-          <div className="grid divide-y divide-navy-950/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          <div className="grid grid-cols-1 divide-y divide-navy-950/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {topValues.map((value, i) => (
               <MotionReveal
                 key={value.title}
@@ -78,7 +78,7 @@ export function OfferingCards() {
 
       <div className="bg-paper-100 py-20 md:py-28">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
             <MotionReveal>
               <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-800">
                 <span className="h-px w-8 bg-gold-500" />

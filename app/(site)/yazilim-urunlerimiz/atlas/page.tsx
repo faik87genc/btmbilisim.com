@@ -22,7 +22,7 @@ import {
   type ProductHeroSlide,
 } from "@/components/ensa/ProductHeroSlider";
 import { HeroSlider, type HeroSlide } from "@/components/ensa/HeroSlider";
-import { Button } from "@/components/ensa/Button";
+import { DemoRequest, demoWhatsAppHref } from "@/components/ensa/DemoRequest";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { ProductJsonLd } from "@/components/ensa/ProductJsonLd";
 import { getProductBySlug, products } from "@/lib/products";
@@ -152,7 +152,7 @@ const atlasBannerSlides: HeroSlide[] = [
     titleAccent: "ofiste de aynı kontrol.",
     description:
       "Depodan merkez ofise, Atlas'ın gösterge paneli her ekipte aynı güncel veriyi gösterir — kararlarınız hep aynı kaynaktan beslenir.",
-    primaryCta: { label: "Demo Talep Edin", href: "/iletisim/" },
+    primaryCta: { label: "Demo İsteyin", href: demoWhatsAppHref("Atlas") },
     secondaryCta: { label: "Diğer Ürünlerimiz", href: "/yazilim-urunlerimiz/" },
     overlay: "light",
   },
@@ -164,7 +164,7 @@ const atlasBannerSlides: HeroSlide[] = [
     titleAccent: "kararları yönetin.",
     description:
       "Atlas, ham veriyi otomatik olarak anlamlı bütçe içgörülerine dönüştürür; ekibiniz raporlamayla değil, kararla vakit geçirsin.",
-    primaryCta: { label: "Demo Talep Edin", href: "/iletisim/" },
+    primaryCta: { label: "Demo İsteyin", href: demoWhatsAppHref("Atlas") },
     secondaryCta: { label: "Diğer Ürünlerimiz", href: "/yazilim-urunlerimiz/" },
     overlay: "light",
   },
@@ -338,7 +338,7 @@ export default function Page() {
                   Detaylı Satınalmalar
                 </p>
               </MotionReveal>
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <MotionReveal delay={0.2}>
                   <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                     <LightboxImage
@@ -411,7 +411,7 @@ export default function Page() {
 
       <section className="bg-navy-950 py-20 md:py-24">
         <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <MotionReveal>
               <SectionHeading
                 tone="dark"
@@ -488,9 +488,7 @@ export default function Page() {
             description="Kurulum sürecinden entegrasyona kadar tüm adımlarda yanınızdayız."
           />
           <div className="mt-8 flex justify-center">
-            <Button href="/iletisim/" variant="primary">
-              Demo Talep Edin
-            </Button>
+            <DemoRequest product="Atlas" tone="dark" align="center" />
           </div>
         </Container>
       </section>

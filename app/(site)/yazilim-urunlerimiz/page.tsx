@@ -3,7 +3,7 @@ import { GlobeBands } from "@/components/ensa/GlobeBands";
 import { Container } from "@/components/ensa/Container";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
-import { Button } from "@/components/ensa/Button";
+import { DemoRequest } from "@/components/ensa/DemoRequest";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (
               <ProductCard key={product.slug} product={product} delay={(i % 3) * 0.08} />
             ))}
@@ -52,9 +52,7 @@ export default function Page() {
             description="Standart sürümden başlayıp, ihtiyaç duyduğunuz entegrasyon ve modüllerle genişletiyoruz."
           />
           <div className="mt-8 flex justify-center">
-            <Button href="/iletisim/" variant="primary">
-              Demo Talep Edin
-            </Button>
+            <DemoRequest product="yazılım ürünleriniz" tone="dark" align="center" />
           </div>
         </Container>
       </section>

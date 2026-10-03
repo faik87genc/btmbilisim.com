@@ -8,14 +8,14 @@ import { products } from "@/lib/products";
 const checklist = [
   "Uçtan uca sorumluluk — keşiften kuruluma, bakıma kadar tek ekip",
   "Güvenlik odaklı kurulum: sızma testi deneyimiyle sıkılaştırılmış sistemler",
-  "Gebze merkezli, Kocaeli ve İstanbul'da yerinde servis",
+  "2010'dan beri kurumsal IT danışmanlığı ve saha projeleri",
 ];
 
 export function AboutTeaser() {
   return (
     <section className="bg-paper-50 py-20 md:py-28">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <MotionReveal>
             <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-800">
               <span className="h-px w-8 bg-gold-500" />

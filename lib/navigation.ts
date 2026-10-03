@@ -20,7 +20,7 @@ export const navAreas: NavArea[] = serviceCategoryList.map((c) => ({
 
 export const navProducts = products.map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline }));
 
-export type CorporateKey = "sirket" | "ekip" | "referans" | "rehber" | "risk" | "kvkk" | "cerez";
+export type CorporateKey = "sirket" | "ekip" | "referans" | "risk" | "kvkk" | "cerez";
 
 export const navCorporate: { key: CorporateKey; label: string; href: string; note: string }[] = [
   { key: "sirket", label: "Şirket", href: "/hakkimizda/", note: "BTM Bilişim'i tanıyın" },
@@ -29,7 +29,6 @@ export const navCorporate: { key: CorporateKey; label: string; href: string; not
   ...(references.length
     ? [{ key: "referans" as const, label: "Referanslar", href: "/referanslar/", note: "Bize güvenen kurumlar" }]
     : []),
-  { key: "rehber", label: "Hizmet Rehberi", href: "/hizmet-rehberi/", note: "Sahadaki hizmet sayfalarımız" },
   { key: "risk", label: "Risk Skoru Testi", href: "/risk-skoru-testi/", note: "8 soruda güvenlik risk seviyeniz" },
   { key: "kvkk", label: "KVKK Aydınlatma Metni", href: "/kvkk-aydinlatma-metni/", note: "Kişisel verilerin korunması" },
   { key: "cerez", label: "Çerez Politikası", href: "/cerez-politikasi/", note: "Çerez kullanımı ve tercihler" },

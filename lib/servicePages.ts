@@ -333,61 +333,158 @@ Kurumunuzun uyum düzeyini bir saatlik bir değerlendirme görüşmesinde birlik
   },
   {
     categorySlug: "danismanlik",
-    serviceKey: "bilgi-teknolojileri-it-danismanligi",
-    slug: "bilgi-teknolojileri-it-danismanligi",
-    title: "Bilgi Teknolojileri (IT) Danışmanlığı",
+    serviceKey: "it-danismanlik-hizmetleri",
+    slug: "it-danismanlik-hizmetleri",
+    title: "IT Danışmanlık Hizmetleri",
     metaDescription:
-      "Teknoloji yol haritası, sistem seçimi, IT bütçesi ve altyapı değerlendirmesi. BTM Bilişim ile bilgi teknolojisi kararlarınızı iş hedeflerinize hizalayın.",
-    content: `Bilgi teknolojileri danışmanlığımız, IT'yi bir masraf kalemi olmaktan çıkarıp iş hedeflerinize hizmet eden bir yatırım hâline getirmenize yardımcı olur. Mevcut altyapınızı değerlendirir, önceliklendirilmiş bir yol haritası çıkarırız.
+      "Kurumsal IT danışmanlık: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, sanal IT müdürü (vCIO) ve sözleşmeli IT desteği. 2010'dan beri BTM Bilişim.",
+    content: `IT danışmanlık hizmetlerimiz, işletmenizin bilgi teknolojilerini (BT) iş hedeflerinize hizmet eden, güvenli ve ölçülebilir bir yapıya dönüştürür. BTM Bilişim'de yaptığımız her işin temelinde IT danışmanlığı vardır: önce ihtiyacı ve riski netleştirir, sonra altyapıyı, güvenliği ve yazılımı buna göre kurar ve yönetiriz. 2010'dan bu yana farklı ölçekte kurumların ağ, sunucu, güvenlik, bulut ve yazılım projelerini sahada bizzat yürütüyoruz.
 
-## Ne zaman IT danışmanlığına ihtiyaç duyulur?
+## IT danışmanlık nedir?
 
-Büyüyen kullanıcı sayısı, birbirine konuşmayan sistemler, artan destek yükü, belirsiz IT bütçesi ve "bir sonraki yatırım ne olmalı?" sorusuna net cevap verilememesi tipik işaretlerdir. Bu noktada tarafsız, satıcıdan bağımsız bir değerlendirme kararları hızlandırır.
+IT danışmanlık (bilgi teknolojileri danışmanlığı ya da BT danışmanlığı), bir kurumun teknoloji altyapısını, yazılımlarını, güvenliğini ve IT süreçlerini bağımsız bir gözle değerlendirip; iş hedefleriyle uyumlu, bütçelenmiş ve önceliklendirilmiş bir yol haritası çıkarma ve bu yol haritasının uygulanmasına eşlik etme hizmetidir.
 
-## Kapsamımız
+İyi bir IT danışmanı yalnızca "hangi cihazı alalım?" sorusunu cevaplamaz. Şu soruların cevabını birlikte bulur:
 
-- Mevcut altyapı, uygulama ve lisans envanterinin değerlendirilmesi
-- Teknoloji yol haritası ve 12-24 aylık yatırım planı
-- Satıcıdan bağımsız sistem/yazılım seçimi ve karşılaştırma
-- IT bütçesi ve toplam sahip olma maliyeti (TCO) analizi
-- Bulut mu, yerinde mi kararı için mimari değerlendirme
-- Bilgi güvenliği ve yedekleme olgunluğunun gözden geçirilmesi
-- IT organizasyonu, süreçleri ve dış kaynak stratejisi
+- Mevcut altyapımız büyümemizi taşır mı, darboğaz nerede?
+- Siber güvenlik açısından en büyük riskimiz ne ve önce neyi kapatmalıyız?
+- Verilerimiz bir fidye yazılımı saldırısında ya da donanım arızasında geri gelir mi?
+- IT bütçemiz doğru yere mi harcanıyor, hangi lisans ve hizmetler gereksiz?
+- Bulut mu, yerinde sunucu mu, yoksa ikisinin birleşimi mi bize uygun?
+- KVKK ve ISO 27001 gereksinimlerini teknik olarak nasıl karşılarız?
 
-## Nasıl çalışıyoruz?
+## Kimler için uygun?
 
-1. **Değerlendirme** — Altyapı, uygulamalar, maliyetler ve ekip yapısı incelenir.
-2. **Boşluk ve risk analizi** — İş hedefleriyle mevcut durum arasındaki fark ortaya konur.
-3. **Yol haritası** — Önceliklendirilmiş, bütçelenmiş bir eylem planı sunulur.
-4. **Uygulama desteği** — İsteğe bağlı olarak seçim, geçiş ve tedarikçi yönetiminde eşlik edilir.
+- **Kendi IT ekibi olmayan KOBİ'ler:** Bilişim işleri bir çalışanın "yan görevi" olan, arıza oldukça çözüm arayan işletmeler
+- **Küçük IT ekibi olan kurumlar:** Günlük destek yükü altında strateji, güvenlik ve projeye zaman ayıramayan ekipler
+- **Fabrika ve OSB işletmeleri:** Üretim (OT) ağı ile ofis ağının ayrılması, kesintisiz üretim ve kamera altyapısı ihtiyacı olan tesisler
+- **Çok şubeli işletmeler:** Şubeler arası bağlantı, merkezi yönetim ve standart kurulum isteyen yapılar
+- **Büyüyen veya yeniden yapılanan şirketler:** Taşınma, birleşme, yeni tesis ya da yeni ERP geçişi öncesinde doğru kararı vermek isteyenler
+- **Denetime hazırlanan kurumlar:** ISO 27001, KVKK veya müşteri güvenlik denetimleri öncesinde teknik eksiklerini görmek isteyenler
 
-## İlgili hizmetler
+## IT danışmanlık hizmetlerimizin kapsamı
 
-Yol haritası çıktıktan sonra uygulama tarafında [sistem ve network danışmanlığı](/sistem-network/sistem-ve-network-danismanligi/), [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/) ve [Logo ERP danışmanlığı](/danismanlik/logo-erp-destek-ve-danismanlik/) ile devam edebiliriz. Envanter ve talep yönetimini kalıcı hâle getirmek için [Orbit IT operasyon platformu](/yazilim-urunlerimiz/orbit/) değerlendirilebilir.
+### 1. IT stratejisi ve teknoloji yol haritası
 
-## Kurumunuza kazandırdıkları
+Mevcut durumunuzu çıkarır, 12-24 aylık, bütçelenmiş ve önceliklendirilmiş bir teknoloji yol haritası hazırlarız. Yatırımlar "acil ihtiyaç" baskısıyla değil, plana göre yapılır.
 
-- Yatırım kararlarının "acil ihtiyaç" yerine plana dayanması
-- Gereksiz lisans ve altyapı maliyetlerinin görünür olması
-- Sistem seçimlerinde tek bir tedarikçinin görüşüne bağımlı kalmama
-- IT ile iş birimleri arasındaki dilin ortaklaşması
+### 2. Altyapı değerlendirmesi (IT check-up)
 
-Mevcut IT tablonuzu ve önümüzdeki yıl planınızı birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Ağ, sunucu, sanallaştırma, depolama, yedekleme, lisans ve kullanıcı cihazlarınızın envanterini ve sağlığını inceleriz. Tek arıza noktalarını, ömrünü tamamlamış donanımları ve performans darboğazlarını raporlarız. Uygulama tarafında [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) ile [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/) hizmetlerimizle devam ederiz.
+
+### 3. Siber güvenlik danışmanlığı
+
+Saldırgan gözüyle bakarız: dışarıya açık servisler, zayıf parolalar, yamalanmamış sistemler, yetki karmaşası ve yedeklerin güvenliği. İhtiyaç olduğunda [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile bulguları doğrular, firewall, EDR ve DLP gibi koruma katmanlarını ürün bağımsız olarak kurgularız. Ayrıntılar için [siber güvenlik çözümlerimiz](/siber-guvenlik/).
+
+### 4. Yedekleme ve iş sürekliliği
+
+3-2-1 kuralına uygun, şifreli ve düzenli olarak geri yükleme testi yapılan bir yedekleme mimarisi kurarız. Kritik sistemler için kabul edilebilir kesinti süresini (RTO) ve veri kaybını (RPO) birlikte belirler, [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) planına dönüştürürüz.
+
+### 5. Bulut ve Microsoft 365 danışmanlığı
+
+Hangi iş yükünün bulutta, hangisinin yerinde kalması gerektiğini maliyet, performans ve güvenlik açısından değerlendiririz. [Microsoft 365](/bulut-yedekleme/microsoft-365-cozumleri/), Azure ve AWS geçişlerini planlar ve uygularız.
+
+### 6. Lisans ve maliyet optimizasyonu
+
+Microsoft, sanallaştırma, yedekleme ve güvenlik lisanslarınızı gerçek kullanımla karşılaştırır; eksik (yasal risk) ve fazla (gereksiz maliyet) lisansları ortaya çıkarırız. Doğru lisans modeli için [lisanslama hizmetlerimiz](/lisanslama/).
+
+### 7. ISO 27001 ve KVKK teknik uyum
+
+ISO 27001 baş denetçi bakış açısıyla, standardın ve KVKK'nın teknik kontrollerini (erişim yönetimi, loglama, yedekleme, şifreleme, zafiyet yönetimi) altyapınıza uygularız. Belgelendirme sürecinin tamamı için kardeş kuruluşumuz [iso27001danismanlik.com](https://www.iso27001danismanlik.com/) ile birlikte çalışırız.
+
+### 8. Yazılım ve sistem seçimi
+
+ERP, CRM, yedekleme, güvenlik veya sanallaştırma platformu seçerken satıcıdan bağımsız karşılaştırma yaparız. İhtiyaca özel çözüm gerekiyorsa yazılım ekibimizle [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/) tarafında devreye gireriz.
+
+### 9. Sanal IT müdürü (vCIO) ve dış kaynak IT departmanı
+
+Tam zamanlı bir IT müdürü istihdam etmeden, düzenli toplantılar, raporlama, bütçe ve tedarikçi yönetimiyle IT'nizin yönetimini üstleniriz. Günlük destek ve izleme için [IT bakım ve destek hizmetlerimiz](/sistem-network/it-bakim-ve-destek-hizmetleri/) ile uzaktan ve yerinde destek veririz.
+
+## IT danışmanlık sürecimiz
+
+1. **Ücretsiz ön görüşme** — İşletmenizi, öncelik ve sorunlarınızı dinleriz; kapsam ve takvimi netleştiririz.
+2. **Keşif ve envanter** — Altyapınızı yerinde ve uzaktan inceler, cihaz, yazılım, lisans ve erişim envanterini çıkarırız.
+3. **Risk ve boşluk analizi** — Güvenlik, süreklilik, performans ve maliyet açısından mevcut durum ile hedef arasındaki farkı ortaya koyarız.
+4. **Yol haritası ve teklif** — Önceliklendirilmiş, kalem kalem bütçelenmiş bir eylem planı sunar, yönetime birlikte aktarırız.
+5. **Uygulama** — Kurulum, geçiş ve sıkılaştırma işlerini kendi ekibimizle, minimum kesintiyle yaparız.
+6. **Sürekli iyileştirme** — Düzenli raporlama, izleme ve periyodik gözden geçirmelerle yol haritasını güncel tutarız.
+
+## Hizmet modellerimiz
+
+- **Proje bazlı danışmanlık:** Belirli bir ihtiyaç için (ör. altyapı yenileme, buluta geçiş, güvenlik değerlendirmesi) başı ve sonu belli çalışma
+- **Aylık sözleşmeli IT danışmanlığı:** Sanal IT müdürü, düzenli gözden geçirme ve öncelikli destek içeren sürekli hizmet
+- **Denetim öncesi hızlı değerlendirme:** ISO 27001, KVKK veya müşteri denetimi öncesinde teknik eksiklerin kısa sürede raporlanması
+
+## Bu çalışmanın size somut çıktıları
+
+- Mevcut durum raporu: envanter, ağ şeması ve sistem sağlık değerlendirmesi
+- Önceliklendirilmiş risk listesi ve her risk için önerilen aksiyon
+- Bütçelenmiş 12-24 aylık teknoloji yol haritası
+- Yedekleme, erişim ve güvenlik politikaları için uygulanabilir öneriler
+- Yönetime sunulabilir özet
+
+## Neden BTM Bilişim?
+
+- **2010'dan bu yana sahada:** Danışmanlığını yaptığımız projeleri kendimiz kurar ve yönetiriz; öneriler teoride kalmaz.
+- **Güvenlik önce:** Sızma testi ve ISO 27001 denetim deneyimi her öneriye yansır.
+- **Satıcıdan bağımsız:** Tek bir markaya bağlı değiliz; ihtiyaca ve bütçeye göre alternatifleri karşılaştırırız.
+- **Tek muhatap:** Danışmanlık, kurulum, güvenlik, yedekleme, lisans ve yazılım tek ekipte.
+- **Kendi yazılım ürünlerimiz:** Envanter ve IT operasyonu için [Orbit](/yazilim-urunlerimiz/orbit/), güvenlik testleri için [PentForce](/yazilim-urunlerimiz/pentforce/) gibi ürünlerimizi projelerde kullanabilirsiniz.
+- **Hızlı ulaşım:** Telefon veya WhatsApp ile doğrudan uzman ekibe ulaşırsınız; çağrı merkezi yoktur.
+
+## IT danışmanlık firması seçerken nelere dikkat edilmeli?
+
+- Danışmanlığın yanında uygulamayı da yapabiliyor mu, yoksa raporu verip çekiliyor mu?
+- Belirli bir markanın bayisi olarak mı, yoksa bağımsız olarak mı öneri yapıyor?
+- Siber güvenlik konusunda gerçek test ve denetim deneyimi var mı?
+- Çıktılar yazılı, ölçülebilir ve önceliklendirilmiş mi?
+- Arıza anında ulaşılabilir mi, yerinde müdahale edebiliyor mu?
+
+## Hizmet bölgelerimiz
+
+Gebze, Darıca, Çayırova, Dilovası ve Kocaeli genelinde ve İstanbul Anadolu yakasında (Tuzla, Pendik, Kartal) yerinde; Türkiye'nin her yerinde uzaktan IT danışmanlık hizmeti veriyoruz.
+
+IT altyapınızı birlikte değerlendirelim; ilk görüşme ve keşif ücretsizdir. [Hemen teklif isteyin](/#teklif) ya da [bize ulaşın](/iletisim/).`,
     faq: [
+      {
+        question: "IT danışmanlık hizmeti ne işe yarar?",
+        answer:
+          "IT danışmanlık; altyapınızı, güvenliğinizi ve IT maliyetlerinizi bağımsız bir gözle değerlendirip iş hedeflerinize uygun, önceliklendirilmiş bir yol haritası çıkarır ve bu planın uygulanmasına eşlik eder. Sonuç olarak arızalar azalır, güvenlik riskleri kapanır ve teknoloji yatırımları plana dayanır.",
+      },
+      {
+        question: "IT danışmanlık ücretleri neye göre belirlenir?",
+        answer:
+          "Ücret; kullanıcı ve cihaz sayısına, lokasyon sayısına, kapsamın genişliğine (yalnızca değerlendirme mi, uygulama da mı) ve hizmet modeline (proje bazlı veya aylık sözleşmeli) göre belirlenir. İlk görüşme ve keşif ücretsizdir; teklif kalem kalem hazırlanır.",
+      },
+      {
+        question: "Kendi IT çalışanımız var, yine de IT danışmanlığına ihtiyacımız olur mu?",
+        answer:
+          "Çoğu zaman evet. IT ekipleri günlük destek yükü altında strateji, güvenlik ve projeye zaman ayıramaz. Danışmanlık ekibinizi ikame etmez; yol haritası, güvenlik uzmanlığı ve yoğun dönemlerde ek kapasite sağlayarak güçlendirir.",
+      },
+      {
+        question: "IT danışmanlık ile IT destek hizmeti arasındaki fark nedir?",
+        answer:
+          "IT destek, arızaların ve kullanıcı taleplerinin günlük olarak çözülmesidir. IT danışmanlık ise neyin, neden ve hangi sırayla yapılacağına karar vermektir. BTM Bilişim'de ikisini birlikte sunuyoruz: danışmanlıkla planı çıkarır, destek ve bakımla sistemi ayakta tutarız.",
+      },
+      {
+        question: "Yerinde mi, uzaktan mı hizmet veriyorsunuz?",
+        answer:
+          "Her ikisi de. Gebze, Kocaeli ve İstanbul Anadolu yakasında yerinde; Türkiye genelinde uzaktan çalışıyoruz. Keşif ve kurulum gibi işleri yerinde, izleme ve günlük desteği çoğunlukla uzaktan yürütüyoruz.",
+      },
+      {
+        question: "IT danışmanlık süreci ne kadar sürer?",
+        answer:
+          "Küçük ve orta ölçekli bir işletmede keşif, analiz ve yol haritası genellikle birkaç hafta içinde tamamlanır. Uygulama süresi yol haritasındaki işlerin kapsamına bağlıdır; aylık sözleşmeli modelde danışmanlık süreklidir.",
+      },
       {
         question: "Belirli bir marka veya ürünü mü öneriyorsunuz?",
         answer:
-          "Hayır. Değerlendirmeyi satıcıdan bağımsız yaparız; ihtiyaç, bütçe ve mevcut altyapıya göre alternatifleri karşılaştırır, kararı gerekçeleriyle size bırakırız.",
+          "Hayır. Önerilerimizi satıcıdan bağımsız yaparız; tüm önde gelen markalarla çalışabiliyoruz. İhtiyaç, bütçe ve mevcut altyapıya göre alternatifleri karşılaştırır, kararı gerekçeleriyle size bırakırız.",
       },
       {
-        question: "Küçük bir IT ekibimiz var, danışmanlık bizi ikame eder mi?",
+        question: "Siber güvenlik ve KVKK de IT danışmanlığın kapsamında mı?",
         answer:
-          "Hayır. Amaç ekibinizi güçlendirmektir: yol haritası, öncelik ve süreç disiplini sağlar, yoğun dönemlerde ya da uzmanlık gerektiren kararlarda destek oluruz.",
-      },
-      {
-        question: "Çıktı olarak ne alıyoruz?",
-        answer:
-          "Mevcut durum raporu, risk ve boşluk analizi ve önceliklendirilmiş, bütçelenmiş bir teknoloji yol haritası. İsterseniz sunum formatında yönetime birlikte aktarırız.",
+          "Evet. Güvenlik her değerlendirmenin parçasıdır. KVKK ve ISO 27001'in teknik kontrollerini altyapınıza uygular, gerekirse sızma testiyle doğrularız. Belgelendirme sürecinin tamamı için iso27001danismanlik.com ile birlikte çalışırız.",
       },
     ],
   },
@@ -766,6 +863,8 @@ Mevcut güvenlik duvarı kurulumunuzu birlikte gözden geçirelim. [İletişime 
       "Uç nokta tehdit tespiti ve müdahale (EDR), merkezi antivirüs yönetimi ve fidye yazılımı koruması. BTM Bilişim ile uç noktalarınızı görünür ve savunulabilir kılın.",
     content: `EDR ve antivirüs çözümlerimiz, kullanıcı bilgisayarları ve sunucularınızı yalnızca bilinen zararlılara karşı değil, davranışsal olarak yeni ve hedefli saldırılara karşı da korur.
 
+Tek bir markaya bağlı değiliz: tüm önde gelen antivirüs ve EDR markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
+
 ## Antivirüs neden tek başına yetmez?
 
 Klasik antivirüs imza tabanlıdır: bilmediği zararlıyı kaçırır. Fidye yazılımları ve "dosyasız" saldırılar tam olarak bunu hedefler. EDR, uç noktadaki süreç, komut ve ağ davranışını izleyerek şüpheli zinciri yakalar ve otomatik yanıt verebilir.
@@ -825,6 +924,8 @@ Uç nokta koruma ihtiyacınızı konuşmak için [bizimle iletişime geçin.](/i
     metaDescription:
       "Hassas verinin e-posta, USB, bulut ve web kanallarından sızmasını engelleyen DLP politikaları. BTM Bilişim ile veri sınıflandırma ve kaçak önlemeyi birlikte kurun.",
     content: `DLP (Data Loss Prevention) çözümlerimiz, kurumunuzun hassas verisinin izinsiz biçimde dışarı çıkmasını engeller. Finansal bilgi, müşteri verisi, sözleşme ve fikri mülkiyet gibi içeriklerin kanallarını politika ile kontrol altına alırız.
+
+Tek bir markaya bağlı değiliz: tüm önde gelen DLP markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
 
 ## DLP hangi sorunu çözer?
 
@@ -2172,6 +2273,13 @@ Geliştirdiğimiz ürünler arasında çok firmalı İK izin platformu [Otium](/
 - Sistemler arası otomatik veri akışı
 - Kaynak kodun ve verinin sizde kalması
 
+## Neden BTM Bilişim ile yazılım?
+
+- **Kendi yazılım ekibimiz:** Analiz, geliştirme, test ve bakım tek ekipte; muhatabınız değişmez.
+- **Sahayı bilen yazılım:** IT danışmanlığı ve altyapı deneyimimiz sayesinde yazılım; sunucu, ağ, yedekleme ve güvenlik tarafıyla birlikte planlanır.
+- **Güvenli geliştirme:** OWASP kontrolleri, yetkilendirme ve loglama tasarımın parçasıdır; gerekirse sızma testiyle doğrularız.
+- **Kanıtlanmış ürünler:** Atlas, Orbit ve PentForce gibi kendi kurumsal ürünlerimizi geliştiren ekip, projenizde de çalışır.
+
 Fikrinizi ya da mevcut sürecinizi birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
     faq: [
       {
@@ -2282,6 +2390,14 @@ Hızlı açılır (Core Web Vitals), mobilde kusursuz çalışır, arama motoru 
 2. **Tasarım** — Sayfa şablonları ve arayüz tasarlanıp onaylanır.
 3. **Geliştirme** — Site hızlı ve SEO uyumlu biçimde kodlanır, içerik girilir.
 4. **Yayın ve ölçüm** — Site yayınlanır, analitik ve arama konsolu kurulur, ilk optimizasyonlar yapılır.
+
+## Neden BTM Bilişim ile web sitesi?
+
+- **Kendi yazılım ekibimiz:** Tasarımdan kodlamaya, yayından bakıma işi dışarı vermeden kendimiz yaparız.
+- **Güvenlik önce:** Sızma testi deneyimimizle siteyi güvenlik başlıkları, güncel bileşenler ve korumalı yönetim paneliyle teslim ederiz.
+- **Mobil öncelikli:** Ziyaretçilerin çoğu telefondan gelir; tasarımı önce mobil için kurgular, tüm ekranlarda test ederiz.
+- **KVKK uyumlu:** Çerez onayı, aydınlatma metni ve form verilerinin güvenli işlenmesi baştan kurgulanır.
+- **Doğrudan iletişim:** Telefon, WhatsApp ve teklif formu ziyaretçinin her sayfada tek dokunuşla ulaşabileceği yerde olur.
 
 ## İlgili hizmetler
 

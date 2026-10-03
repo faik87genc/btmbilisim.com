@@ -7,6 +7,7 @@ import { serviceCategoryList } from "@/lib/services";
 import { servicePageParams } from "@/lib/servicePages";
 import { products } from "@/lib/products";
 import { references, team } from "@/lib/data/trust";
+import { REDIRECTED_SLUGS } from "@/lib/legacyRedirects";
 
 // Same URL set as the static site's sitemap.xml (home, /iletisim/, /blog/ +
 // its /blog/sayfa-N/ pages, every content page) plus the Next-only
@@ -25,7 +26,7 @@ const PER_PAGE = 9;
 // which teaches crawlers to ignore lastmod.)
 const CONTACT_LASTMOD = new Date("2026-10-02T00:00:00Z");
 // Same for the coded service/product pages (lib/services.ts, lib/servicePages.ts,
-// lib/products.ts, app/(site)/yazilim-urunlerimiz/*, /hizmet-rehberi/).
+// lib/products.ts, app/(site)/yazilim-urunlerimiz/*, /hizmetler/).
 const CODED_LASTMOD = new Date("2026-10-02T00:00:00Z");
 
 const modified = (p: Page) => pageDates(p).modified;
@@ -36,7 +37,9 @@ function newestOf(items: Page[], fallback: Date): Date {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const rows = await getPublishedPages();
-  const all = rows.filter((p) => !p.noindex);
+  // Redirected pages (lib/legacyRedirects.ts) and /hizmetler/ (a coded hub
+  // that shadows the old WordPress row of the same slug) are left out here.
+  const all = rows.filter((p) => !p.noindex && !REDIRECTED_SLUGS.has(p.slug) && p.slug !== "hizmetler");
   const posts = postLikePages(all);
   // Listings change whenever any post is added or edited.
   const newest = newestOf(all, CONTACT_LASTMOD);
@@ -55,7 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/blog/", newestPost),
     ...Array.from({ length: blogPages - 1 }, (_, i) => entry(`/blog/sayfa-${i + 2}/`, newestPost)),
     ...all.map((p) => entry(pageHref(p), modified(p))),
-    entry("/hizmet-rehberi/", CODED_LASTMOD),
+    entry("/hizmetler/", CODED_LASTMOD),
     entry("/risk-skoru-testi/", CODED_LASTMOD),
     ...(references.length ? [entry("/referanslar/", CODED_LASTMOD)] : []),
     ...(team.length ? [entry("/ekibimiz/", CODED_LASTMOD)] : []),

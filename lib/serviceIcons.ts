@@ -64,7 +64,7 @@ const serviceIconMap: Record<string, LucideIcon> = {
   "proje-danismanligi": FolderKanban,
   "iso-27001-bilgi-guvenligi-danismanligi": Award,
   "kvkk-danismanligi": FileLock2,
-  "bilgi-teknolojileri-it-danismanligi": MonitorCog,
+  "it-danismanlik-hizmetleri": MonitorCog,
   "logo-erp-destek-ve-danismanlik": Briefcase,
   "yazilim-ve-dijital-donusum-danismanligi": Workflow,
   "siber-guvenlik-danismanligi": ShieldCheck,

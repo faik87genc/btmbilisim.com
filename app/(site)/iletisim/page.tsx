@@ -43,7 +43,7 @@ export default function ContactPage() {
 
       <section className="bg-paper-50 py-16 md:py-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
             <div>
               <h2 className="visually-hidden">İletişim bilgileri</h2>
               <ul className="grid gap-5">
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
       <section id="teklif" className="scroll-mt-28 bg-navy-950 py-16 md:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
             <SectionHeading
               tone="dark"
               eyebrow="Hızlı Teklif"
