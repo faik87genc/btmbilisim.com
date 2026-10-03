@@ -101,6 +101,7 @@ const LEGACY_WP_PATTERNS: [string, string][] = [
   ["/tag/:path*", "/blog/"],
   ["/author/:path*", "/hakkimizda/"],
   ["/portfolio/:path*", "/hizmetler/"],
+  ["/blog/page/1", "/blog/"],
   ["/blog/page/:n", "/blog/sayfa-:n/"],
   ["/page/:n", "/blog/"],
   ["/feed", "/feed.xml"],

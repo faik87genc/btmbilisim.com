@@ -1,4 +1,5 @@
 import "server-only";
+import { isRetiredSlug } from "@/lib/legacyRedirects";
 import { getPublishedPages, postLikePages } from "@/lib/pages";
 import {
   CODED_PAGES,
@@ -16,7 +17,8 @@ export type { LinkTarget } from "./linkTargets";
  * articles (migrated guides + admin posts), all at their flat /slug/ URL.
  */
 export async function liveLinkTargets(): Promise<LinkTarget[]> {
-  const all = (await getPublishedPages()).filter((p) => !p.noindex);
+  // Redirected / shadowed rows would only produce links to 301s.
+  const all = (await getPublishedPages()).filter((p) => !p.noindex && !isRetiredSlug(p.slug));
   const postSlugs = new Set(postLikePages(all).map((p) => p.slug));
   return all.map((p) => ({
     slug: p.slug,

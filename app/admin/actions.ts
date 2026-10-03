@@ -1,5 +1,6 @@
 "use server";
 
+import { REDIRECTED_SLUGS } from "@/lib/legacyRedirects";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
@@ -638,11 +639,13 @@ const DB_MISSING_ERROR =
 // Top-level segments owned by real routes/files: a flat page with one of these
 // slugs would be saved but never reachable (the static route wins).
 const RESERVED_PAGE_SLUGS = new Set([
-  "admin", "api", "blog", "iletisim", "wp-content", "hizmet-rehberi", "yazilim-urunlerimiz", "anasayfa-2",
+  "admin", "api", "blog", "iletisim", "wp-content", "hizmetler", "yazilim-urunlerimiz", "anasayfa-2",
   "risk-skoru-testi", "referanslar", "ekibimiz",
   // Service categories (lib/services.ts) — static routes with /{category}/{service}/ below them.
   "danismanlik", "siber-guvenlik", "sistem-network", "bulut-yedekleme", "yazilim-dijital", "lisanslama",
   "sitemap-xml", "robots-txt", "assets", "_next",
+  // Old service pages that now 301 to the new ones (lib/legacyRedirects.ts).
+  ...[...REDIRECTED_SLUGS].filter((s) => !s.includes("/")),
 ]);
 
 /** Why `slug` can't be used for this `kind`, or null if it's fine. */

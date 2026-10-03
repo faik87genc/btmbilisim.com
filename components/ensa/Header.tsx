@@ -49,7 +49,7 @@ const corporatePrefixes = navCorporate
   .join(" ");
 
 const topLink =
-  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2.5 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
+  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
 
 // Desktop dropdown panel: display:none until its trigger group is hovered or
 // focused, so closed menus cost no layout on any page
@@ -68,9 +68,9 @@ export function Header() {
     >
       <NavActive />
       <Container className="relative flex items-center justify-between gap-6 py-3 lg:max-w-7xl">
-        <Logo />
+        <Logo className="shrink-0" />
 
-        <nav aria-label="Ana menü" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Ana menü" className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           <Link href="/danismanlik/it-danismanlik-hizmetleri/" className={topLink} data-nav="/danismanlik/it-danismanlik-hizmetleri/">
             <MonitorCog className="hidden h-4 w-4 xl:block" aria-hidden="true" />
             IT Danışmanlık
@@ -231,11 +231,11 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <a
-            href={site.phone.href}
-            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-3 py-2.5 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 xl:px-5"
+            href={site.mobile.href}
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-3 py-2.5 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 md:inline-flex xl:px-5"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden xl:inline">{site.phone.display}</span>
+            <span className="hidden xl:inline">{site.mobile.display}</span>
             <span className="xl:hidden">Hemen Ara</span>
           </a>
 

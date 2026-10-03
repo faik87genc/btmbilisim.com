@@ -219,29 +219,18 @@ function PostBody({ page, related, crumbs }: { page: Page; related: Page[]; crum
 }
 
 function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof breadcrumbsFor> }) {
-  // The old WordPress service pages carry a side contact box; legal texts and
-  // other single pages read better as one centred column.
-  const guide = crumbs.some((c) => c.href === "/hizmetler/");
+  // Single pages (about, legal texts) read best as one centred column. (The
+  // old WordPress service pages that had a side contact box now 301 to the
+  // new service pages.)
   return (
     <>
       <PageHero title={page.title} lead={page.excerpt !== page.title ? page.excerpt : null} crumbs={crumbs} />
       <section className="bg-paper-50 py-16 md:py-20">
-        <Container className={guide ? "max-w-6xl" : "max-w-3xl"}>
-          {guide ? (
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
-              <div className="markdown-content min-w-0">
-                <SiteMarkdown content={page.content} eagerFirstImage />
-              </div>
-              <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
-                <ContactBox />
-              </aside>
-            </div>
-          ) : (
-            <div className="markdown-content">
-              {/* Core pages have no separate hero image; the first content image is the likely LCP element. */}
-              <SiteMarkdown content={page.content} eagerFirstImage />
-            </div>
-          )}
+        <Container className="max-w-3xl">
+          <div className="markdown-content">
+            {/* Core pages have no separate hero image; the first content image is the likely LCP element. */}
+            <SiteMarkdown content={page.content} eagerFirstImage />
+          </div>
         </Container>
       </section>
     </>

@@ -12,7 +12,7 @@ export type ServiceCategory = {
 export const serviceCategoryList: ServiceCategory[] = [
   {
     slug: "danismanlik",
-    title: "IT ve Kurumsal Danışmanlık",
+    title: "Kurumsal Danışmanlık Hizmetleri",
     shortTitle: "Danışmanlık",
     eyebrow: "01 — Danışmanlık",
     summary: "IT danışmanlığından ISO 27001 ve KVKK uyumuna, dijital dönüşümden hibe süreçlerine kadar yanınızdayız.",

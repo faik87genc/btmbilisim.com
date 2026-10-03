@@ -173,9 +173,24 @@
     box-shadow: 0 0 0 4px #fff;
     border-radius: 2px;
   }
-  /* Keep focused elements clear of the sticky header (WCAG 2.4.11). */
+  /* Keep focused elements clear of the sticky header (WCAG 2.4.11) and, on
+     phones, of the fixed call / WhatsApp bar (FloatingContact). */
   html {
     scroll-padding-top: 6.5rem;
+  }
+  @media (max-width: 767px) {
+    html {
+      scroll-padding-bottom: 5rem;
+    }
+  }
+  /* Ring/shadow utilities replace the white focus halo; on dark grounds use a
+     light outline instead (gold-300 on navy-950 is 7.9:1). White cards inside
+     dark bands get the navy outline back. */
+  :is(.bg-navy-950, .bg-navy-900, .bg-brand-gradient) :focus-visible {
+    outline-color: var(--gold-300);
+  }
+  :is(.bg-white, .bg-paper-50) :focus-visible {
+    outline-color: var(--navy-800);
   }
 }
 

@@ -19,9 +19,20 @@ export function NavActive() {
 
   useEffect(() => {
     const path = pathname.endsWith("/") ? pathname : `${pathname}/`;
-    document.querySelectorAll<HTMLElement>("[data-nav]").forEach((el) => {
-      const prefixes = (el.dataset.nav ?? "").split(" ").filter(Boolean);
-      const hit = prefixes.some((p) => (p === "/" ? path === "/" : path.startsWith(p)));
+    // Longest matching prefix wins, so a page owned by a specific item (e.g.
+    // the IT consulting link) does not also light up its broader parent.
+    const links = [...document.querySelectorAll<HTMLElement>("[data-nav]")];
+    const score = (el: HTMLElement) =>
+      Math.max(
+        -1,
+        ...(el.dataset.nav ?? "")
+          .split(" ")
+          .filter(Boolean)
+          .map((p) => ((p === "/" ? path === "/" : path.startsWith(p)) ? p.length : -1)),
+      );
+    const best = Math.max(-1, ...links.map(score));
+    links.forEach((el) => {
+      const hit = best >= 0 && score(el) === best;
       el.toggleAttribute("data-active", hit);
       if (hit) el.setAttribute("aria-current", "true");
       else el.removeAttribute("aria-current");

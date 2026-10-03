@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/site/Parts";
 // old WordPress "Hizmetler" page (same URL, so its rankings carry over) and the
 // interim /hizmet-rehberi/ list (now a 301 to here — lib/legacyRedirects.ts).
 
-const TITLE = `Hizmetlerimiz: IT Danışmanlık, Siber Güvenlik ve Altyapı${site.titleSuffix}`;
+const TITLE = `Hizmetlerimiz${site.titleSuffix}`;
 const DESCRIPTION =
   "BTM Bilişim hizmetleri: IT danışmanlık, siber güvenlik ve sızma testi, sistem ve network altyapısı, bulut ve yedekleme, yazılım ve lisanslama. Tüm hizmetler tek sayfada.";
 const PATH = "/hizmetler/";

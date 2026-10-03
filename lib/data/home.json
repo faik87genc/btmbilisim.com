@@ -97,7 +97,7 @@
    "title": "Destek, Yazılım ve Lisans",
    "items": [
     {
-     "title": "IT Destek ve Danışmanlık",
+     "title": "IT Danışmanlık Hizmetleri",
      "short": "Sözleşmeli BT desteği",
      "desc": "BT projelerinizi planlıyor, günlük destek ihtiyaçlarınızı karşılıyor ve altyapınızı sürekli iyileştiriyoruz.",
      "href": "/danismanlik/it-danismanlik-hizmetleri/"
@@ -151,12 +151,12 @@
  ],
  "faqs": [
   {
-   "q": "IT danışmanlık hizmetiniz neleri kapsıyor?",
-   "a": "Altyapı ve güvenlik değerlendirmesi, teknoloji yol haritası, bulut ve yedekleme planlaması, lisans optimizasyonu, ISO 27001 ve KVKK teknik uyumu ile sanal IT müdürü (vCIO) hizmetini kapsar. Önerdiğimiz işleri kendi ekibimizle uygular, sonrasında destek ve bakımla sürdürürüz."
+   "q": "Neden her işe IT danışmanlığıyla başlıyorsunuz?",
+   "a": "Çünkü doğru çözüm, ihtiyacın ve riskin net olmasına bağlı. Önce altyapınızı ve güvenliğinizi inceleyip önceliklendirilmiş bir yol haritası çıkarıyor, ardından kurulum, güvenlik ve yazılım işlerini bu plana göre kendi ekibimizle uyguluyoruz. Ayrıntılar IT danışmanlık hizmetleri sayfamızda."
   },
   {
    "q": "Size en hızlı nasıl ulaşabilirim?",
-   "a": "0850 840 02 86 numaralı hattımızı arayabilir ya da 0543 730 91 32 numarasından WhatsApp ile yazabilirsiniz. Çağrı merkezi yoktur; doğrudan uzman ekibe ulaşırsınız."
+   "a": "0543 730 91 32 numarasından doğrudan arayabilir ya da WhatsApp ile yazabilirsiniz; sabit hattımız 0850 840 02 86. Ulaştığınız kişi doğrudan uzman ekibimizdir."
   },
   {
    "q": "Hangi bölgelere hizmet veriyorsunuz?",
@@ -167,20 +167,8 @@
    "a": "İlk keşif görüşmesi ve teklif hazırlığı ücretsizdir. Altyapınızı inceledikten sonra ihtiyaca göre kalem kalem bir teklif sunarız."
   },
   {
-   "q": "Sızma testi ne kadar sürer?",
-   "a": "Süre kapsama göre değişir: tek bir web uygulaması için birkaç gün, birden fazla sistem ve ağ segmenti içeren kurumsal testlerde birkaç hafta sürebilir. Kapsamı birlikte belirler, takvimi teklifte netleştiririz."
-  },
-  {
    "q": "Sadece kurulum değil, sonrasında destek de veriyor musunuz?",
    "a": "Evet. Kurulumdan sonra sözleşmeli IT destek, periyodik bakım ve uzaktan izleme hizmeti veriyoruz; arıza anında hızlı müdahale ediyoruz."
-  },
-  {
-   "q": "Verilerimizi nasıl yedeklemeliyiz?",
-   "a": "En az bir kopyası farklı bir ortamda, bir kopyası da şirket dışında (bulutta) duran 3-2-1 yedekleme kuralını öneriyoruz. Yedeklerin düzenli olarak geri yükleme testinden geçirilmesi de en az yedek almak kadar önemlidir."
-  },
-  {
-   "q": "Güvenlik kamerası (IP kamera) kurulumu yapıyor musunuz?",
-   "a": "Evet. Fabrika, depo, OSB ve işyerleri için IP kamera projelendirme, kurulum, kayıt ve uzaktan izleme altyapısını kuruyor, bakımını yapıyoruz."
   }
  ]
 }

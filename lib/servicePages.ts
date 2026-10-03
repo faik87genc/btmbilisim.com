@@ -7,6 +7,11 @@ export type ServicePageContent = {
   slug: string;
   /** Page <h1> and, with the layout template, the <title>. */
   title: string;
+  /** Full <title> when it should differ from `title` (keyword + location). */
+  metaTitle?: string;
+  /** Sidebar "related services" as "category/key" paths, when the default
+   * (siblings in the same category) is not the best fit. */
+  related?: string[];
   /** <meta name="description"> and the visible hero sub-headline. ~150-160 chars. */
   metaDescription: string;
   /** Body copy as Markdown (GFM). No FAQ section — that is rendered from `faq`. */
@@ -336,13 +341,15 @@ Kurumunuzun uyum düzeyini bir saatlik bir değerlendirme görüşmesinde birlik
     serviceKey: "it-danismanlik-hizmetleri",
     slug: "it-danismanlik-hizmetleri",
     title: "IT Danışmanlık Hizmetleri",
+    related: ["sistem-network/sistem-ve-network-danismanligi","siber-guvenlik/siber-guvenlik-danismanligi","sistem-network/it-bakim-ve-destek-hizmetleri","danismanlik/iso-27001-bilgi-guvenligi-danismanligi","danismanlik/kvkk-danismanligi"],
+    metaTitle: "IT Danışmanlık Hizmetleri ve Firması | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
-      "Kurumsal IT danışmanlık: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, sanal IT müdürü (vCIO) ve sözleşmeli IT desteği. 2010'dan beri BTM Bilişim.",
+      "IT danışmanlık firması BTM Bilişim: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, dış kaynak IT müdürü. 2010'dan beri Gebze ve Kocaeli.",
     content: `IT danışmanlık hizmetlerimiz, işletmenizin bilgi teknolojilerini (BT) iş hedeflerinize hizmet eden, güvenli ve ölçülebilir bir yapıya dönüştürür. BTM Bilişim'de yaptığımız her işin temelinde IT danışmanlığı vardır: önce ihtiyacı ve riski netleştirir, sonra altyapıyı, güvenliği ve yazılımı buna göre kurar ve yönetiriz. 2010'dan bu yana farklı ölçekte kurumların ağ, sunucu, güvenlik, bulut ve yazılım projelerini sahada bizzat yürütüyoruz.
 
 ## IT danışmanlık nedir?
 
-IT danışmanlık (bilgi teknolojileri danışmanlığı ya da BT danışmanlığı), bir kurumun teknoloji altyapısını, yazılımlarını, güvenliğini ve IT süreçlerini bağımsız bir gözle değerlendirip; iş hedefleriyle uyumlu, bütçelenmiş ve önceliklendirilmiş bir yol haritası çıkarma ve bu yol haritasının uygulanmasına eşlik etme hizmetidir.
+IT danışmanlık (bilgi teknolojileri danışmanlığı, BT danışmanlık ya da bilişim danışmanlığı), bir kurumun teknoloji altyapısını, yazılımlarını, güvenliğini ve IT süreçlerini bağımsız bir gözle değerlendirip; iş hedefleriyle uyumlu, bütçelenmiş ve önceliklendirilmiş bir yol haritası çıkarma ve bu yol haritasının uygulanmasına eşlik etme hizmetidir.
 
 İyi bir IT danışmanı yalnızca "hangi cihazı alalım?" sorusunu cevaplamaz. Şu soruların cevabını birlikte bulur:
 
@@ -374,7 +381,7 @@ Ağ, sunucu, sanallaştırma, depolama, yedekleme, lisans ve kullanıcı cihazla
 
 ### 3. Siber güvenlik danışmanlığı
 
-Saldırgan gözüyle bakarız: dışarıya açık servisler, zayıf parolalar, yamalanmamış sistemler, yetki karmaşası ve yedeklerin güvenliği. İhtiyaç olduğunda [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile bulguları doğrular, firewall, EDR ve DLP gibi koruma katmanlarını ürün bağımsız olarak kurgularız. Ayrıntılar için [siber güvenlik çözümlerimiz](/siber-guvenlik/).
+[Siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) kapsamında saldırgan gözüyle bakarız: dışarıya açık servisler, zayıf parolalar, yamalanmamış sistemler, yetki karmaşası ve yedeklerin güvenliği. İhtiyaç olduğunda [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile bulguları doğrular, firewall, EDR ve DLP gibi koruma katmanlarını ürün bağımsız olarak kurgularız. Ayrıntılar için [siber güvenlik çözümlerimiz](/siber-guvenlik/).
 
 ### 4. Yedekleme ve iş sürekliliği
 
@@ -400,6 +407,22 @@ ERP, CRM, yedekleme, güvenlik veya sanallaştırma platformu seçerken satıcı
 
 Tam zamanlı bir IT müdürü istihdam etmeden, düzenli toplantılar, raporlama, bütçe ve tedarikçi yönetimiyle IT'nizin yönetimini üstleniriz. Günlük destek ve izleme için [IT bakım ve destek hizmetlerimiz](/sistem-network/it-bakim-ve-destek-hizmetleri/) ile uzaktan ve yerinde destek veririz.
 
+## Sektörlere göre IT danışmanlık
+
+- **Üretim ve OSB:** Üretim (OT) ağının ofis ağından ayrılması, makine ve PLC erişimlerinin güvenliği, kesintisiz üretim için yedekli altyapı ve kamera sistemleri.
+- **Lojistik ve depo:** Geniş alanlarda kararlı kablosuz ağ, el terminalleri, depo yönetim yazılımı entegrasyonu ve şubeler arası güvenli bağlantı.
+- **Sağlık:** Hasta verisinin KVKK'ya uygun korunması, erişim yetkileri, şifreli yedekleme ve kesinti planı.
+- **Finans ve profesyonel hizmetler:** Sıkı erişim kontrolü, loglama, sızma testi ve denetime hazır dokümantasyon.
+- **Eğitim, turizm ve perakende:** 5651 uyumlu misafir interneti, çok şubeli merkezi yönetim ve yoğun kullanıcıya dayanıklı ağ.
+
+## Tipik IT danışmanlık projeleri
+
+- Taşınma veya yeni tesis öncesi ağ, sunucu ve güvenlik altyapısının sıfırdan projelendirilmesi
+- Eskiyen sunucuların sanallaştırma veya buluta taşınması ve lisansların yeniden yapılandırılması
+- Fidye yazılımı riskine karşı yedekleme, EDR ve erişim yönetiminin elden geçirilmesi
+- ISO 27001 veya müşteri denetimi öncesi teknik eksik analizi ve kapatılması
+- Kendi IT ekibi olmayan işletmelere aylık sözleşmeli kurumsal IT danışmanlığı ve destek
+
 ## IT danışmanlık sürecimiz
 
 1. **Ücretsiz ön görüşme** — İşletmenizi, öncelik ve sorunlarınızı dinleriz; kapsam ve takvimi netleştiririz.
@@ -423,7 +446,7 @@ Tam zamanlı bir IT müdürü istihdam etmeden, düzenli toplantılar, raporlama
 - Yedekleme, erişim ve güvenlik politikaları için uygulanabilir öneriler
 - Yönetime sunulabilir özet
 
-## Neden BTM Bilişim?
+## Neden BTM Bilişim? Bir IT danışmanlık firmasından fazlası
 
 - **2010'dan bu yana sahada:** Danışmanlığını yaptığımız projeleri kendimiz kurar ve yönetiriz; öneriler teoride kalmaz.
 - **Güvenlik önce:** Sızma testi ve ISO 27001 denetim deneyimi her öneriye yansır.
@@ -470,6 +493,16 @@ IT altyapınızı birlikte değerlendirelim; ilk görüşme ve keşif ücretsizd
         question: "Yerinde mi, uzaktan mı hizmet veriyorsunuz?",
         answer:
           "Her ikisi de. Gebze, Kocaeli ve İstanbul Anadolu yakasında yerinde; Türkiye genelinde uzaktan çalışıyoruz. Keşif ve kurulum gibi işleri yerinde, izleme ve günlük desteği çoğunlukla uzaktan yürütüyoruz.",
+      },
+      {
+        question: "KOBİ'ler de IT danışmanlık hizmeti alabilir mi?",
+        answer:
+          "Evet, en çok fayda gören işletmeler genellikle kendi IT ekibi olmayan KOBİ'lerdir. Hizmeti kullanıcı sayınıza ve ihtiyacınıza göre ölçeklendiriyor; küçük bir işletme için de büyük bir kurum için de önceliği risk ve bütçeye göre belirliyoruz.",
+      },
+      {
+        question: "Acil bir IT arızasında ne yapmalıyım?",
+        answer:
+          "Bizi telefonla arayın ya da WhatsApp'tan yazın. Sözleşmeli müşterilerimize öncelikli müdahale ediyor, sorunu önce uzaktan, gerekirse yerinde çözüyoruz. Arızanın ardından kök nedeni inceleyip tekrarlamaması için önlem öneriyoruz.",
       },
       {
         question: "IT danışmanlık süreci ne kadar sürer?",
@@ -678,6 +711,7 @@ Güvenlik olgunluğunuzu ölçmek için [bizimle iletişime geçin.](/iletisim/)
     serviceKey: "sizma-testi-penetrasyon-testi",
     slug: "sizma-testi-penetrasyon-testi",
     title: "Sızma Testi (Penetrasyon Testi)",
+    metaTitle: "Sızma Testi (Penetrasyon Testi) Hizmeti | BTM Bilişim",
     metaDescription:
       "Web, mobil, ağ ve dış/iç altyapı sızma testleri. BTM Bilişim ile zafiyetleri gerçek saldırgan bakışıyla tespit edin, kanıtlı raporla kapatın, yeniden test edin.",
     content: `Sızma testi hizmetimiz, sistemlerinizi gerçek bir saldırganın bakış açısıyla, açıkları zincirleyerek hedefe ulaşmaya çalışan uzmanlarca test eder. Amaç açık saymak değil, iş etkisini göstermektir.
@@ -1472,6 +1506,7 @@ Kablosuz ağ ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/ileti
     serviceKey: "ip-kamera-guvenlik-kamerasi-sistemleri",
     slug: "ip-kamera-guvenlik-kamerasi-sistemleri",
     title: "IP Kamera ve Güvenlik Kamerası Sistemleri",
+    metaTitle: "IP Kamera ve Güvenlik Kamerası Kurulumu | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
       "Gebze, Kocaeli ve Tuzla'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. BTM Bilişim ile kör nokta bırakmayın.",
     content: `IP kamera ve güvenlik kamerası sistemlerimiz; fabrika, OSB, depo, işyeri, apartman ve siteler için keşiften kuruluma, kayıttan uzaktan izlemeye kadar uçtan uca planlanır. Kamera sistemini ayrı bir cihaz yığını olarak değil, ağ altyapınızın güvenli bir parçası olarak kuruyoruz.
@@ -2365,6 +2400,7 @@ Web uygulaması ihtiyacınızı birlikte konuşalım. [İletişime geçin.](/ile
     serviceKey: "web-tasarim-ve-kurumsal-web-sitesi",
     slug: "web-tasarim-ve-kurumsal-web-sitesi",
     title: "Web Tasarım ve Kurumsal Web Sitesi",
+    metaTitle: "Web Tasarım Hizmetleri | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
       "Kurumsal kimliğinize uygun, hızlı, SEO uyumlu ve yönetilebilir web sitesi tasarımı ve geliştirmesi. BTM Bilişim ile sitenizi bir vitrin değil, bir kazanım kanalı yapın.",
     content: `Web tasarım ve kurumsal web sitesi hizmetimiz; markanızı doğru anlatan, arama motorlarında bulunan, hızlı açılan ve içeriğini kendiniz yönetebileceğiniz bir site kurar.

@@ -7,7 +7,7 @@ import { serviceCategoryList } from "@/lib/services";
 import { servicePageParams } from "@/lib/servicePages";
 import { products } from "@/lib/products";
 import { references, team } from "@/lib/data/trust";
-import { REDIRECTED_SLUGS } from "@/lib/legacyRedirects";
+import { isRetiredSlug } from "@/lib/legacyRedirects";
 
 // Same URL set as the static site's sitemap.xml (home, /iletisim/, /blog/ +
 // its /blog/sayfa-N/ pages, every content page) plus the Next-only
@@ -37,9 +37,9 @@ function newestOf(items: Page[], fallback: Date): Date {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const rows = await getPublishedPages();
-  // Redirected pages (lib/legacyRedirects.ts) and /hizmetler/ (a coded hub
-  // that shadows the old WordPress row of the same slug) are left out here.
-  const all = rows.filter((p) => !p.noindex && !REDIRECTED_SLUGS.has(p.slug) && p.slug !== "hizmetler");
+  // Redirected or shadowed rows (lib/legacyRedirects.ts) are left out; the
+  // coded /hizmetler/ hub is listed below.
+  const all = rows.filter((p) => !p.noindex && !isRetiredSlug(p.slug));
   const posts = postLikePages(all);
   // Listings change whenever any post is added or edited.
   const newest = newestOf(all, CONTACT_LASTMOD);

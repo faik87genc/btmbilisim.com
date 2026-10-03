@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!page) return {};
   const url = absoluteUrl(`/${category}/${service}/`);
   return {
-    title: `${page.title}${site.titleSuffix}`,
+    title: { absolute: page.metaTitle ?? `${page.title}${site.titleSuffix}` },
     description: page.metaDescription,
     alternates: { canonical: url },
     ...ogMeta({ title: page.title, description: page.metaDescription, path: `/${category}/${service}/` }),
@@ -72,10 +72,18 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
   for (const entry of servicePagesContent) {
     if (entry.categorySlug === category) relatedSlugByKey.set(entry.serviceKey, entry.slug);
   }
-  const relatedServices = categoryInfo.services
-    .filter((s) => s.key !== service && relatedSlugByKey.has(s.key))
-    .slice(0, 5)
-    .map((s) => ({ ...s, slug: relatedSlugByKey.get(s.key)! }));
+  // Sidebar links: the page's own list when it has one, else siblings.
+  const relatedServices = page.related
+    ? page.related.flatMap((path) => {
+        const [cat, key] = path.split("/");
+        const hit = serviceCategories[cat]?.services.find((s) => s.key === key);
+        const entry = servicePagesContent.find((e) => e.categorySlug === cat && e.serviceKey === key);
+        return hit && entry ? [{ ...hit, href: `/${cat}/${entry.slug}/` }] : [];
+      })
+    : categoryInfo.services
+        .filter((s) => s.key !== service && relatedSlugByKey.has(s.key))
+        .slice(0, 5)
+        .map((s) => ({ ...s, href: `/${category}/${relatedSlugByKey.get(s.key)!}/` }));
 
   const relatedPosts = relatedPostsFor(postLikePages(await getPublishedPages()), page.title);
 
@@ -97,7 +105,15 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
     url,
     serviceType: page.title,
     areaServed: site.areaServed.map((a) => ({ "@type": a.type, name: a.name })),
-    provider: { "@id": absoluteUrl("/#organization") },
+    "@id": `${url}#service`,
+    provider: {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": absoluteUrl("/#organization"),
+      name: site.name,
+      url: absoluteUrl("/"),
+      telephone: site.phone.href.replace("tel:", ""),
+      address: { "@type": "PostalAddress", ...site.postalAddress },
+    },
     category: categoryInfo.shortTitle,
   };
 
@@ -175,7 +191,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                   <ul className="mt-4 space-y-3">
                     {relatedServices.map((s) => (
                       <li key={s.key}>
-                        <Link href={`/${category}/${s.slug}/`} className="group flex items-center justify-between gap-3">
+                        <Link href={s.href} className="group flex items-center justify-between gap-3">
                           <span className="text-sm text-slate-600 transition-colors group-hover:text-ink-900">{s.name}</span>
                           <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                         </Link>

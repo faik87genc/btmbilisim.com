@@ -19,16 +19,16 @@ export function ContactCta({
         <SectionHeading tone="dark" align="center" title={title} description={description} />
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
-            href={site.phone.href}
+            href={site.mobile.href}
             className="inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
           >
-            <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
+            <Phone className="h-4 w-4" aria-hidden="true" /> {site.mobile.display}
           </a>
           <a
             href={site.whatsapp.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-control bg-[#128C4A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0f7a40]"
+            className="inline-flex items-center justify-center gap-2 rounded-control bg-[#0f7a40] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0b6434]"
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
             WhatsApp&apos;tan yazın<span className="visually-hidden"> (yeni sekmede açılır)</span>

@@ -6,7 +6,8 @@ import { site } from "@/lib/site";
 // person — WhatsApp (prefilled) or e-mail — instead of a generic form.
 
 export function demoWhatsAppHref(product: string) {
-  return `https://wa.me/905437309132?text=${encodeURIComponent(`Merhaba, ${product} için demo talep etmek istiyorum.`)}`;
+  const number = site.mobile.href.replace(/\D/g, "");
+  return `https://wa.me/${number}?text=${encodeURIComponent(`Merhaba, ${product} için demo talep etmek istiyorum.`)}`;
 }
 
 export function demoMailHref(product: string) {

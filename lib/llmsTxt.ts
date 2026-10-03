@@ -2,6 +2,7 @@ import { site } from "@/lib/site";
 import { fallbackPages } from "@/lib/fallbackPages";
 import { serviceCategoryList } from "@/lib/services";
 import { products } from "@/lib/products";
+import { isRetiredSlug } from "@/lib/legacyRedirects";
 
 // Text for /llms.txt and /llms-full.txt, built from the same data the site
 // renders (lib/site.ts, the homepage service cards and the imported pages),
@@ -52,7 +53,7 @@ export const LLMS_TXT: string = [
 export const LLMS_FULL_TXT: string = [
   ...intro(),
   ...fallbackPages()
-    .filter((p) => p.kind === "page" && p.tags.length === 0)
+    .filter((p) => p.kind === "page" && p.tags.length === 0 && !isRetiredSlug(p.slug))
     .flatMap((p) => [`## ${p.title}`, "", `Adres: ${abs(`/${p.slug}/`)}`, "", p.content, ""]),
 ].join("\n");
 

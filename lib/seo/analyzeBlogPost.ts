@@ -572,7 +572,7 @@ export function analyzeBlogPost(input: BlogSeoInput): SeoAnalysis {
           ? `Bağlanan hizmet sayfaları: ${moneyLinks.map((s) => `/${s}/`).join(", ")}.`
           : `${moneyLinks.length} hizmet sayfasına link var${
               moneyLinks.length ? ` (${moneyLinks.map((s) => `/${s}/`).join(", ")})` : ""
-            }. En az ${MIN_MONEY_LINKS} farklı hizmet sayfasına ilgili cümlenin içinde link ver — ör. /siber-guvenlik-hizmetleri/, /sizma-testi-penetrasyon-testi/, /bulut-ve-yedekleme-cozumleri/ (düz /slug/ biçimi; /#teklif sayılmaz).`,
+            }. En az ${MIN_MONEY_LINKS} farklı hizmet sayfasına ilgili cümlenin içinde link ver — ör. /danismanlik/it-danismanlik-hizmetleri/, /siber-guvenlik/sizma-testi-penetrasyon-testi/, /bulut-yedekleme/ (/#teklif sayılmaz).`,
     });
 
     add({

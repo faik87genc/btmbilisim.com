@@ -1,8 +1,9 @@
 // Old WordPress service pages that duplicated the new service pages (same
 // topic, competing for the same searches). Each one now 301-redirects to its
 // replacement so its rankings and backlinks consolidate there. Used by
-// next.config.ts (the redirects), the sitemap and the AI link targets (so
-// neither lists a URL that redirects). No imports: next.config.ts loads this.
+// next.config.ts (the redirects) and, through isRetiredSlug(), by the sitemap,
+// llms-full.txt, the AI link targets and the admin slug check, so none of them
+// lists or accepts a URL that redirects. No imports: next.config.ts loads this.
 
 export const LEGACY_SERVICE_REDIRECTS: Readonly<Record<string, string>> = {
   "it-destek-ve-danismanlik": "/danismanlik/it-danismanlik-hizmetleri/",
@@ -27,6 +28,15 @@ export const LEGACY_SERVICE_REDIRECTS: Readonly<Record<string, string>> = {
 
 /** Pages-table slugs that redirect (never listed, linked or put in the sitemap). */
 export const REDIRECTED_SLUGS: ReadonlySet<string> = new Set(Object.keys(LEGACY_SERVICE_REDIRECTS));
+
+/** Pages-table rows whose URL is served by a coded route instead (the old
+ * WordPress "Hizmetler" page; /hizmetler/ is now app/(site)/hizmetler). */
+export const SHADOWED_SLUGS: ReadonlySet<string> = new Set(["hizmetler"]);
+
+/** True when a pages-table row with this slug is never shown at /slug/. */
+export function isRetiredSlug(slug: string): boolean {
+  return REDIRECTED_SLUGS.has(slug) || SHADOWED_SLUGS.has(slug);
+}
 
 /** Rewrites an internal href that points at a redirected page to its target. */
 export function resolveLegacyHref(href: string): string {

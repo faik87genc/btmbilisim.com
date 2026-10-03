@@ -51,6 +51,7 @@ export function MobileMenu({
       type="button"
       onClick={() => toggle(name)}
       aria-expanded={section === name}
+      aria-controls={`mm-${name}`}
       className="flex items-center justify-between rounded-sm px-2 py-3 text-base font-medium text-ink-900"
     >
       {label}
@@ -87,7 +88,7 @@ export function MobileMenu({
 
             {group("hizmetler", "Hizmetler")}
             {section === "hizmetler" && (
-              <div className="mb-2 space-y-3 border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-hizmetler" className="mb-2 space-y-3 border-l-2 border-gold-500/40 pl-3">
                 {areas.map((a) => {
                   const Icon = categoryIcons[a.slug];
                   return (
@@ -120,7 +121,7 @@ export function MobileMenu({
 
             {group("urunler", "Ürünler")}
             {section === "urunler" && (
-              <div className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-urunler" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
                 <Link href="/yazilim-urunlerimiz/" className="px-2 py-2 text-sm font-medium text-gold-700">
                   Tüm ürünler
                 </Link>
@@ -134,7 +135,7 @@ export function MobileMenu({
 
             {group("kurumsal", "Hakkımızda")}
             {section === "kurumsal" && (
-              <div className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-kurumsal" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
                 {corporate.map((c) => (
                   <Link key={c.href} href={c.href} className="px-2 py-2 text-sm text-slate-600">
                     {c.label}
