@@ -163,7 +163,7 @@ export function ContactForm() {
       )}
       <p className="form-note">
         Paylaştığınız bilgiler yalnızca talebinize dönüş yapmak için,{" "}
-        <Link href="/kisisel-verilerin-korunmasi-politikasi/">KVKK Aydınlatma Metni</Link>{" "}
+        <Link href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</Link>{" "}
         kapsamında işlenir.
       </p>
     </form>

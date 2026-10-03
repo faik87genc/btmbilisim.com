@@ -15,14 +15,10 @@ import {
   Monitor,
   Network,
   Package,
-  Radar,
   Radio,
   RefreshCw,
-  Server,
-  Shield,
   ShieldAlert,
   Target,
-  Terminal,
 } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
 import { MotionReveal } from "@/components/ensa/MotionReveal";

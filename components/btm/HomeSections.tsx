@@ -82,7 +82,7 @@ const SHOWCASE = [
 
 export function SecurityShowcase() {
   return (
-    <section className="bg-paper-50 py-20 md:py-24">
+    <section className="cv-auto bg-paper-50 py-20 md:py-24">
       <Container className="lg:max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Siber Güvenlik Vitrini</Eyebrow>
@@ -132,7 +132,7 @@ export function SecurityShowcase() {
 
 export function PhishingDemoBand() {
   return (
-    <section className="relative overflow-hidden bg-brand-gradient py-16 md:py-20">
+    <section className="cv-auto relative overflow-hidden bg-brand-gradient py-16 md:py-20">
       <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
       <Container className="relative grid items-center gap-10 lg:max-w-6xl lg:grid-cols-[1.3fr_0.7fr]">
         <div className="rounded-2xl bg-white/5 p-7 ring-1 ring-white/15 backdrop-blur md:p-9">
@@ -190,7 +190,7 @@ export function PhishingDemoBand() {
 
 export function RiskTestBand() {
   return (
-    <section className="bg-white py-14">
+    <section className="cv-auto bg-white py-14">
       <Container className="lg:max-w-6xl">
         <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-navy-950/10 bg-paper-50 p-7 md:flex-row md:items-center md:p-9">
           <div className="flex items-start gap-4">
@@ -229,7 +229,7 @@ function initials(name: string) {
 export function Testimonials() {
   if (liveTestimonials.length === 0) return null;
   return (
-    <section className="bg-paper-50 py-20 md:py-24">
+    <section className="cv-auto bg-paper-50 py-20 md:py-24">
       <Container className="lg:max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Müşteri Yorumları</Eyebrow>
@@ -264,7 +264,7 @@ export function Testimonials() {
 export function ReferenceStrip() {
   if (references.length === 0) return null;
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="cv-auto bg-white py-16 md:py-20">
       <Container className="lg:max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Referanslarımız</Eyebrow>
@@ -305,7 +305,7 @@ const PENTEST_SCOPE = [
 /** Dark pentest-scope grid (idea from szutestteknoloji.com.tr, reworked). */
 export function PentestScope() {
   return (
-    <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+    <section className="cv-auto relative overflow-hidden bg-navy-950 py-20 md:py-24">
       <div className="bg-dots pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
       <div
         className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-gold-500/10 blur-3xl"
@@ -360,7 +360,7 @@ const SECTORS = [
 /** Sector solutions grid (idea from lidernetwork.com.tr, reworked). */
 export function Sectors() {
   return (
-    <section className="bg-white py-20 md:py-24">
+    <section className="cv-auto bg-white py-20 md:py-24">
       <Container className="lg:max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Sektörel Çözümler</Eyebrow>

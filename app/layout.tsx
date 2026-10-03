@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import { site } from "@/lib/site";
 
 // Styles are per area: the public site loads app/(site)/ensa.css, the admin
@@ -24,13 +24,6 @@ const plexSans = IBM_Plex_Sans({
   preload: false,
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400"],
-  display: "swap",
-  preload: false,
-});
 
 export const metadata: Metadata = {
   title: {
@@ -66,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="tr"
       data-scroll-behavior="smooth"
-      className={`${spaceGrotesk.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${plexSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>

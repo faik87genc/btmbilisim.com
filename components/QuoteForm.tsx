@@ -212,7 +212,7 @@ export function QuoteForm() {
       )}
       <p className="form-note">
         Paylaştığınız bilgiler yalnızca teklif hazırlamak için,{" "}
-        <Link href="/kisisel-verilerin-korunmasi-politikasi/">KVKK Aydınlatma Metni</Link> kapsamında işlenir.
+        <Link href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</Link> kapsamında işlenir.
       </p>
     </form>
   );

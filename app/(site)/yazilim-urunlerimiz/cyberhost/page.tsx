@@ -11,7 +11,6 @@ import {
   Palette,
   PackageSearch,
   RefreshCw,
-  Server,
   ShieldCheck,
   Users,
   Wallet,

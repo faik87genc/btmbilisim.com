@@ -27,7 +27,7 @@ export function FaqSection({
   };
 
   return (
-    <section className={isDark ? "bg-navy-950 py-20 md:py-24" : "bg-paper-50 py-20 md:py-24"}>
+    <section className={isDark ? "cv-auto bg-navy-950 py-20 md:py-24" : "cv-auto bg-paper-50 py-20 md:py-24"}>
       <Container className="max-w-3xl">
         <SectionHeading
           eyebrow="Sıkça Sorulan Sorular"

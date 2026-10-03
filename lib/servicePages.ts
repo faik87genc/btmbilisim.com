@@ -59,7 +59,7 @@ Birçok işletme kâğıt üzerinde kârlı göründüğü hâlde nakit sıkış
 
 ## Excel'den panele geçiş
 
-Bütçe–gerçekleşme takibini elle Excel'de yürütmek yavaş ve kırılgandır. Süreç olgunlaştığında aynı işi canlı ERP verisiyle yapan [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) ile panele taşıyabilir, sapmayı ay içinde hesap kalemi düzeyinde görebilirsiniz. Konuyu ayrıntılı ele aldığımız [bütçe yönetimi yazılımı rehberimize](/blog/butce-yonetimi-yazilimi-rehberi/) de göz atabilirsiniz.
+Bütçe–gerçekleşme takibini elle Excel'de yürütmek yavaş ve kırılgandır. Süreç olgunlaştığında aynı işi canlı ERP verisiyle yapan [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) ile panele taşıyabilir, sapmayı ay içinde hesap kalemi düzeyinde görebilirsiniz.
 
 ## Yatırımlarınız için hibe ve teşvik fırsatları
 
@@ -245,7 +245,7 @@ ISO 27001, bilgi varlıklarınızı gizlilik, bütünlük ve erişilebilirlik a�
 
 ## Sık yapılan hatalar
 
-Kapsamı ilk sertifikasyonda tüm kuruma yaymak, risk analizini tamamen dışarıya bırakmak ve kimsenin okumadığı otuz sayfalık politikalar yazmak en yaygın hatalardır. KVKK uyumuyla karıştırılması da bunlardan biri — [KVKK ve ISO 27001 farkını ele aldığımız yazımızda](/blog/kvkk-iso-27001-farki/) ikisinin nerede ayrıştığını anlattık. Teknik kontrollerin kurulumu için [ISO 27001 teknik güvenlik çözümlerimizle](/siber-guvenlik/iso-27001-teknik-guvenlik-cozumleri/) birlikte ilerleyebiliriz.
+Kapsamı ilk sertifikasyonda tüm kuruma yaymak, risk analizini tamamen dışarıya bırakmak ve kimsenin okumadığı otuz sayfalık politikalar yazmak en yaygın hatalardır. KVKK uyumuyla karıştırılması da bunlardan biri; ikisinin farkı için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) sayfamıza bakabilirsiniz. Teknik kontrollerin kurulumu için [ISO 27001 teknik güvenlik çözümlerimizle](/siber-guvenlik/iso-27001-teknik-guvenlik-cozumleri/) birlikte ilerleyebiliriz.
 
 ## Kurumunuza kazandırdıkları
 
@@ -284,7 +284,7 @@ Belgelendirme hedefinizi ve takviminizi konuşmak için [bizimle iletişime geç
 
 ## KVKK uyumu neden bir süreçtir?
 
-Yeni bir yazılım, yeni bir tedarikçi ya da yeni bir kampanya, veri işleme envanterinizi değiştirir. Bu nedenle uyum, bir kez kurulup bırakılan değil; yılda en az bir kez gözden geçirilen canlı bir yapıdır. Sürecin ilk ve en görünür adımı için [KVKK aydınlatma metni nasıl hazırlanır yazımıza](/blog/kvkk-aydinlatma-metni-nasil-hazirlanir/) bakabilirsiniz.
+Yeni bir yazılım, yeni bir tedarikçi ya da yeni bir kampanya, veri işleme envanterinizi değiştirir. Bu nedenle uyum, bir kez kurulup bırakılan değil; yılda en az bir kez gözden geçirilen canlı bir yapıdır. Sürecin ilk ve en görünür adımı, veri işleme faaliyetlerinizi doğru anlatan bir aydınlatma metnidir.
 
 ## Kapsamımız
 
@@ -587,7 +587,7 @@ Güvenlik olgunluğunuzu ölçmek için [bizimle iletişime geçin.](/iletisim/)
 
 ## Tarama mı, test mi?
 
-Zafiyet taraması otomatik araçlarla bilinen açıkları listeler; hızlı ve geniştir ama bağlamı yoktur. Sızma testi ise bir uzmanın manuel çalışmasıdır: hangi açığın gerçekten sömürülebilir olduğunu ve nereye kadar gidilebildiğini gösterir. Yıllık tek seferlik testin yetersiz kaldığı durumlar için [otonom sızma testi yazımıza](/blog/otonom-sizma-testi/) göz atabilirsiniz.
+Zafiyet taraması otomatik araçlarla bilinen açıkları listeler; hızlı ve geniştir ama bağlamı yoktur. Sızma testi ise bir uzmanın manuel çalışmasıdır: hangi açığın gerçekten sömürülebilir olduğunu ve nereye kadar gidilebildiğini gösterir. Yıllık tek seferlik testin yetersiz kaldığı durumlar için [PentForce otonom sızma testi platformumuza](/yazilim-urunlerimiz/pentforce/) göz atabilirsiniz.
 
 ## Test kapsamları
 
@@ -2426,7 +2426,7 @@ Otomasyona uygun süreçlerinizi birlikte tespit edelim. [İletişime geçin.](/
 
 ## Excel raporlamanın sınırı
 
-Ay sonunda elle hazırlanan raporlar; geç gelir, kişiye bağımlıdır ve iki kişi aynı raporu farklı sonuçlarla üretebilir. Panelde toplanan canlı veri bu üç sorunu birden çözer. [Bu konuyu bütçe yönetimi yazılımı rehberimizde](/blog/butce-yonetimi-yazilimi-rehberi/) ayrıntılı ele aldık.
+Ay sonunda elle hazırlanan raporlar; geç gelir, kişiye bağımlıdır ve iki kişi aynı raporu farklı sonuçlarla üretebilir. Panelde toplanan canlı veri bu üç sorunu birden çözer. [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) bu işi canlı veriyle tek panelde yapar.
 
 ## Kapsamımız
 

@@ -83,6 +83,13 @@ const noIndexHeaders = [{ key: "X-Robots-Tag", value: "noindex, nofollow" }];
 const REDIRECTS: [string, string][] = [
   ["anasayfa", "/"],
   ["portfolio", "/hizmetler/"],
+  // Linked from old posts, never existed as pages on the WordPress site.
+  ["is-surekliligi", "/bulut-yedekleme/is-surekliligi-cozumleri/"],
+  ["veritabani-yonetimi", "/veritabani-yonetimi-hizmeti/"],
+  ["bulut-cozumleri", "/bulut-yedekleme/bulut-cozumleri/"],
+  ["yonetilen-hizmetler", "/sistem-network/it-bakim-ve-destek-hizmetleri/"],
+  ["bilgi-guvenligi-ve-siber-guvenlik", "/siber-guvenlik/"],
+  ["kisisel-verilerin-korunmasi-politikasi", "/kvkk-aydinlatma-metni/"],
 ];
 
 const LEGACY_WP_PATTERNS: [string, string][] = [

@@ -58,7 +58,7 @@
 
   --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-plex-sans);
-  --font-mono: var(--font-plex-mono);
+  --font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, monospace;
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-line-grow: line-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -669,4 +669,18 @@
 }
 .reveal-hover:hover {
   transform: translateY(-6px);
+}
+
+/* Header: a menu link was just clicked — keep hover panels shut until the
+   pointer leaves the header (components/ensa/NavActive.tsx). */
+#site-header[data-menus-off] .mega-panel {
+  display: none !important;
+}
+
+/* Below-the-fold sections: skip style/layout/paint until they near the
+   viewport (big win on the long homepage). The intrinsic size keeps the
+   scrollbar stable before a section has been rendered once. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }

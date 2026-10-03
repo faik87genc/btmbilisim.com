@@ -222,7 +222,7 @@ export default function Home() {
       </Container>
 
       {/* Service areas — invekor-style intro panel + category cards with sub-service chips */}
-      <section className="bg-paper-50 py-20 md:py-24" id="hizmetler">
+      <section className="cv-auto bg-paper-50 py-20 md:py-24" id="hizmetler">
         <Container className="lg:max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>Hizmetlerimiz</Eyebrow>
@@ -311,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* Software products */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="cv-auto relative overflow-hidden bg-navy-950 py-20 md:py-24">
         <div className="bg-dots pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
         <Container className="relative lg:max-w-7xl">
           <div className="flex flex-wrap items-end justify-between gap-6">
@@ -341,51 +341,36 @@ export default function Home() {
 
       <PhishingDemoBand />
 
-      {/* Field services (the old BTM service pages) */}
-      <section className="bg-white py-20 md:py-24">
+      {/* Field services (the old BTM service pages): compact strip, full list on /hizmet-rehberi/ */}
+      <section className="cv-auto border-y border-navy-950/10 bg-white py-12">
         <Container className="lg:max-w-7xl">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
               <Eyebrow>Hizmet Rehberi</Eyebrow>
-              <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight text-navy-800 md:text-4xl">
-                Sahada verdiğimiz hizmetler
-              </h2>
-              <p className="mt-3 text-slate-500">
-                Ağ, sunucu, yedekleme ve güvenlik hizmetlerimizin ayrıntılı sayfaları; kurulumdan bakıma kadar.
-              </p>
+              <h2 className="mt-3 font-display text-2xl font-bold text-navy-800">Sahada verdiğimiz hizmetler</h2>
             </div>
             <Button href="/hizmet-rehberi/" variant="ghost-light">
-              <BookOpen className="h-4 w-4" aria-hidden="true" /> Hizmet Rehberi
+              <BookOpen className="h-4 w-4" aria-hidden="true" /> Tümünü görün
             </Button>
           </div>
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            {home.serviceGroups.map((g) => (
-              <div key={g.title}>
-                <div className="flex items-baseline justify-between border-b-2 border-navy-800 pb-2">
-                  <h3 className="font-display text-lg font-bold text-ink-900">{g.title}</h3>
-                  <span className="text-xs font-medium uppercase tracking-wider text-slate-500">{g.items.length} hizmet</span>
-                </div>
-                <ul className="mt-3 divide-y divide-navy-950/5">
-                  {g.items.map((it) => (
-                    <li key={it.href}>
-                      <Link href={it.href} className="group flex items-start justify-between gap-4 py-3">
-                        <span>
-                          <span className="block text-[15px] font-semibold text-ink-900 group-hover:text-navy-700">{it.title}</span>
-                          <span className="block text-sm text-slate-500">{it.short}</span>
-                        </span>
-                        <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {home.serviceGroups.flatMap((g) => g.items).map((it) => (
+              <li key={it.href}>
+                <Link
+                  href={it.href}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-navy-950/10 bg-paper-50 px-3.5 py-1.5 text-sm text-ink-900 transition-colors hover:border-gold-500/50 hover:text-navy-700"
+                >
+                  {it.title}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-gold-600" aria-hidden="true" />
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </section>
 
       {/* How we work */}
-      <section className="bg-paper-50 py-20 md:py-24">
+      <section className="cv-auto bg-paper-50 py-20 md:py-24">
         <Container className="lg:max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Çalışma Sürecimiz</Eyebrow>
@@ -436,7 +421,7 @@ export default function Home() {
       </section>
 
       {/* Why BTM */}
-      <section className="bg-white py-20 md:py-24">
+      <section className="cv-auto bg-white py-20 md:py-24">
         <Container className="lg:max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Neden Biz?</Eyebrow>
@@ -469,7 +454,7 @@ export default function Home() {
       <Testimonials />
 
       {/* Free analysis band */}
-      <section className="relative overflow-hidden bg-brand-gradient py-16 md:py-20">
+      <section className="cv-auto relative overflow-hidden bg-brand-gradient py-16 md:py-20">
         <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
         <Container className="relative max-w-3xl text-center">
           <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
