@@ -54,8 +54,15 @@ export function BlogCard({
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-900 to-navy-700">
-              <Newspaper className="h-9 w-9 text-gold-500/40" aria-hidden="true" />
+            <div className="relative flex h-full w-full flex-col justify-end bg-brand-gradient p-5">
+              <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
+              <Newspaper className="absolute right-5 top-5 h-10 w-10 text-gold-300/60" aria-hidden="true" />
+              <span className="relative line-clamp-2 font-display text-lg font-semibold leading-snug text-white" aria-hidden="true">
+                {post.title}
+              </span>
+              <span className="relative mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-gold-300" aria-hidden="true">
+                BTM Bilişim Blog
+              </span>
             </div>
           )}
           {primaryTag && (

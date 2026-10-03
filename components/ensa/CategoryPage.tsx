@@ -23,6 +23,7 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
   return (
     <>
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
+        <div className="bg-dots pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
         <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
         <Container className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-14">
           <div>

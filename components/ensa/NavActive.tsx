@@ -79,11 +79,14 @@ export function NavActive() {
 
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
-      const group = (document.activeElement as Element | null)?.closest<HTMLElement>("[data-menu-group]") ??
-        header.querySelector<HTMLElement>("[data-menu-group]:hover");
+      // Keyboard user (focus in a menu): close it and return focus to its
+      // trigger. Pointer user (menu open by hover): just close it; leaving the
+      // header (release) lets the next hover open it again.
+      const focused = (document.activeElement as Element | null)?.closest<HTMLElement>("[data-menu-group]");
+      const group = focused ?? header.querySelector<HTMLElement>("[data-menu-group]:hover");
       if (!group) return;
       group.setAttribute("data-closed", "");
-      group.querySelector<HTMLElement>("[data-nav]")?.focus();
+      if (focused) group.querySelector<HTMLElement>("[data-nav]")?.focus();
     };
 
     // Re-open on the next hover or when focus moves to another item.

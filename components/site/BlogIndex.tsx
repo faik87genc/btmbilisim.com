@@ -117,7 +117,7 @@ export async function BlogIndex({ pageNum }: { pageNum: number }) {
                 <Link
                   key={t.slug}
                   href={`/blog/etiket/${t.slug}/`}
-                  className="rounded-full border border-navy-950/10 bg-white px-3 py-1 text-sm text-slate-600 transition-colors hover:border-gold-500/40 hover:text-ink-900"
+                  className="shrink-0 whitespace-nowrap rounded-full border border-navy-950/10 bg-white px-3 py-1 text-sm text-slate-600 transition-colors hover:border-gold-500/40 hover:text-ink-900"
                 >
                   {t.tag} <span className="text-slate-500">{t.count}</span>
                 </Link>

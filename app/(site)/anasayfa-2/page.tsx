@@ -7,7 +7,6 @@ import { HeroSlider, type HeroSlide } from "@/components/ensa/HeroSlider";
 import { HomeBlogSection } from "@/components/ensa/HomeBlogSection";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { OfferingCards } from "@/components/ensa/OfferingCards";
-import { PartnerLogos } from "@/components/ensa/PartnerLogos";
 import { PillarCard } from "@/components/ensa/PillarCard";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
@@ -296,7 +295,6 @@ export default function Home() {
         </Container>
       </section>
 
-      <PartnerLogos />
 
       <FaqSection items={homeFaq} />
 

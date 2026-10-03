@@ -39,7 +39,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <RevealObserver />
       {/* Cookieless page-view counts (no consent needed); GA4 in SiteBehavior
           still loads only after cookie consent. Public pages only, not /admin. */}
-      <Analytics />
+      {/* Vercel Web Analytics only exists on Vercel; elsewhere its script 404s. */}
+      {process.env.VERCEL ? <Analytics /> : null}
     </>
   );
 }

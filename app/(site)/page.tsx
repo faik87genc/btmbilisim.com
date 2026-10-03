@@ -22,6 +22,7 @@ import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { Button } from "@/components/ensa/Button";
 import { QuoteForm } from "@/components/QuoteForm";
 import { TrustSection } from "@/components/btm/HomeSections";
+import { ProofStrip } from "@/components/ensa/ProofStrip";
 import { WhatsAppIcon } from "@/components/ensa/WhatsAppIcon";
 import { JsonLd } from "@/components/site/Parts";
 import { serviceCategoryList } from "@/lib/services";
@@ -93,18 +94,28 @@ export default function Home() {
         <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
         <Container className="relative grid max-w-7xl grid-cols-1 items-center gap-10 py-12 md:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
           <div>
-            <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-              <span className="h-px w-8 bg-gold-300" aria-hidden="true" />
-              2010&apos;dan beri · Gebze · Kocaeli · İstanbul
-            </p>
+            <ul className="flex flex-wrap gap-2" aria-label="Öne çıkanlar">
+              <li className="inline-flex items-center gap-1.5 rounded-full bg-gold-500 px-3 py-1.5 text-xs font-semibold text-navy-950">
+                <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" /> ISO 27001 baş denetçi deneyimi
+              </li>
+              <li className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white">
+                2010&apos;dan beri
+              </li>
+              <li className="hidden items-center rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white sm:inline-flex">
+                Gebze · Kocaeli · İstanbul
+              </li>
+            </ul>
             <h1 className="mt-6 text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-[3.5rem]">
               IT danışmanlıktan siber güvenliğe, <span className="text-gold-300">bilişiminizin tek muhatabı.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-              İşletmenizin IT altyapısını planlıyor, kuruyor ve güvence altına alıyoruz. ISO 27001 baş denetçi
-              deneyimiyle her projeye önce güvenlik gözüyle bakıyor, önerdiğimiz işi sahada kendimiz uyguluyoruz.
+              İşletmenizin IT altyapısını planlıyor, kuruyor ve güvence altına alıyoruz.
+              <span className="hidden md:inline">
+                {" "}ISO 27001 baş denetçi deneyimiyle her projeye önce güvenlik gözüyle bakıyor, önerdiğimiz işi sahada
+                kendimiz uyguluyoruz.
+              </span>
             </p>
-            <ul className="mt-7 space-y-2.5 text-sm text-slate-200">
+            <ul className="mt-7 hidden space-y-2.5 text-sm text-slate-200 sm:block">
               {["Satıcıdan bağımsız teknoloji yol haritası", "Sızma testi ve siber güvenlik", "Ağ, sunucu, bulut ve yedekleme"].map(
                 (t) => (
                   <li key={t} className="flex items-center gap-2">
@@ -113,15 +124,31 @@ export default function Home() {
                 ),
               )}
             </ul>
-            <div className="mt-8">
-              <Button href={IT_CONSULTING}>
+            <div className="mt-8 grid grid-cols-2 gap-3 md:hidden">
+              <a
+                href={site.mobile.href}
+                className="inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-4 py-3 text-sm font-semibold text-navy-950"
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" /> Hemen Ara
+              </a>
+              <a
+                href={site.whatsapp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-control border border-white/30 bg-white/10 px-4 py-3 text-sm font-semibold text-white"
+              >
+                <WhatsAppIcon className="h-4 w-4" /> WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
+              </a>
+            </div>
+            <div className="mt-4 md:mt-8">
+              <Button href={IT_CONSULTING} className="w-full sm:w-auto">
                 IT Danışmanlık Hizmetleri <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
           </div>
 
           {/* Direct line */}
-          <div className="hidden rounded-card bg-white p-6 shadow-lift md:block md:p-7">
+          <div className="hidden rounded-card border-t-4 border-gold-500 bg-white p-6 shadow-lift md:block md:p-7">
             <h2 className="font-display text-xl font-semibold text-navy-800">Bize doğrudan ulaşın</h2>
             <p className="mt-1 text-sm text-slate-600">Arayın veya WhatsApp&apos;tan yazın; ihtiyacınızı uzmanla birlikte netleştirin.</p>
             <div className="mt-5 space-y-3">
@@ -150,7 +177,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
-            <p className="mt-4 text-sm text-slate-600">
+            <p className="mt-4 flex items-center gap-2 text-sm text-slate-600">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#0f7a40]" aria-hidden="true" />
+              7/24 teknik destek · ilk görüşme ücretsiz
+            </p>
+            <p className="mt-1.5 text-sm text-slate-600">
               Sabit hat:{" "}
               <a href={site.phone.href} className="font-semibold text-navy-800 hover:text-navy-700">
                 {site.phone.display}
@@ -159,6 +190,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <ProofStrip />
 
       {/* IT consulting: the base of every engagement, with the lead-auditor credential */}
       <section className="cv-auto bg-white py-20 md:py-24">
@@ -251,17 +284,17 @@ export default function Home() {
 
           <Link
             href="/risk-skoru-testi/"
-            className="mt-6 flex flex-col items-start justify-between gap-3 rounded-card border border-navy-950/10 bg-white p-5 transition-shadow hover:shadow-lift sm:flex-row sm:items-center"
+            className="mt-6 flex flex-col items-start justify-between gap-4 rounded-card border border-gold-300 bg-gold-100 p-5 transition-shadow hover:shadow-lift sm:flex-row sm:items-center md:p-6"
           >
             <span className="flex items-center gap-3">
               <Gauge className="h-6 w-6 shrink-0 text-navy-800" aria-hidden="true" />
               <span>
-                <span className="block font-display text-base font-semibold text-ink-900">Siber güvenlik risk skorunuzu öğrenin</span>
-                <span className="block text-sm text-slate-600">8 soru, yaklaşık 2 dakika, ücretsiz.</span>
+                <span className="block font-display text-lg font-semibold text-ink-900">Ücretsiz siber güvenlik risk skorunuzu öğrenin</span>
+                <span className="block text-sm text-slate-700">8 soru, yaklaşık 2 dakika. Sonuçta öncelikli önlem listesi.</span>
               </span>
             </span>
-            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-800">
-              Testi başlat <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
+            <span className="inline-flex items-center gap-1.5 rounded-control bg-navy-800 px-4 py-2.5 text-sm font-semibold text-white">
+              Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </span>
           </Link>
         </Container>
