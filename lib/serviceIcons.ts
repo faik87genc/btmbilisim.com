@@ -1,7 +1,6 @@
 import {
   Award,
   BadgeCheck,
-  Banknote,
   BarChart3,
   Boxes,
   Briefcase,
@@ -15,11 +14,9 @@ import {
   DatabaseBackup,
   Factory,
   FileLock2,
-  FolderKanban,
   Globe,
   HardDrive,
   KeyRound,
-  Landmark,
   Layers,
   LifeBuoy,
   Lightbulb,
@@ -59,9 +56,6 @@ export const categoryIcons: Record<string, LucideIcon> = {
 };
 
 const serviceIconMap: Record<string, LucideIcon> = {
-  "finansal-ve-stratejik-danismanlik": Banknote,
-  "kosgeb-tubitak-hibe-tesvik-danismanligi": Landmark,
-  "proje-danismanligi": FolderKanban,
   "iso-27001-bilgi-guvenligi-danismanligi": Award,
   "kvkk-danismanligi": FileLock2,
   "it-danismanlik-hizmetleri": MonitorCog,

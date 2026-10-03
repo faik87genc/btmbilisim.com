@@ -37,8 +37,11 @@ export function NavActive() {
       if (hit) el.setAttribute("aria-current", "true");
       else el.removeAttribute("aria-current");
     });
-    // A new page: never keep menus suppressed across navigations.
-    document.getElementById("site-header")?.removeAttribute("data-menus-off");
+    // A new page: lift the suppression unless the pointer is still on the
+    // header (then pointerleave lifts it), so the panel does not pop back
+    // over the new page under a pointer that just clicked a trigger.
+    const header = document.getElementById("site-header");
+    if (header && !header.matches(":hover")) header.removeAttribute("data-menus-off");
   }, [pathname]);
 
   useEffect(() => {
@@ -54,7 +57,8 @@ export function NavActive() {
     const onClick = (e: MouseEvent) => {
       if (e.detail === 0) return; // keyboard "click" (Enter)
       const link = (e.target as Element).closest("a");
-      if (!link || !link.closest("[data-menu-panel]")) return;
+      // A link in a panel, or a dropdown trigger itself: shut the panels.
+      if (!link || !link.closest("[data-menu-panel], [data-menu-group]")) return;
       header.setAttribute("data-menus-off", "");
     };
 

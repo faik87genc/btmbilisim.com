@@ -51,11 +51,11 @@ const corporatePrefixes = navCorporate
 const topLink =
   "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
 
-// Desktop dropdown panel: display:none until its trigger group is hovered or
-// focused, so closed menus cost no layout on any page
-// (and never while #site-header has data-menus-off, see NavActive).
-const panel =
-  "mega-panel absolute top-full z-50 hidden pt-3 group-hover:block group-focus-within:block";
+// Desktop dropdown panel. Open/close timing lives in ensa.css (.mega-panel):
+// a short open delay and a longer close delay, so moving the pointer
+// diagonally from the trigger to a far column of the panel does not close it.
+// Never shown while #site-header has data-menus-off (see NavActive).
+const panel = "mega-panel absolute top-full z-50 pt-3";
 const panelBox = "rounded-lg border border-navy-950/10 bg-white shadow-[0_28px_60px_-28px_rgba(7,43,85,0.35)]";
 
 const chevron = "h-3.5 w-3.5 transition-transform duration-200 group-hover:-rotate-180";

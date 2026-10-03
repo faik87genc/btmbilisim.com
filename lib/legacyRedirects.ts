@@ -22,6 +22,10 @@ export const LEGACY_SERVICE_REDIRECTS: Readonly<Record<string, string>> = {
   "web-tasarim-hizmetleri": "/yazilim-dijital/web-tasarim-ve-kurumsal-web-sitesi/",
   // The service guide (which listed the pages above) became the /hizmetler/ hub.
   "hizmet-rehberi": "/hizmetler/",
+  // Consulting services no longer offered.
+  "danismanlik/finansal-ve-stratejik-danismanlik": "/danismanlik/",
+  "danismanlik/kosgeb-tubitak-hibe-tesvik-danismanligi": "/danismanlik/",
+  "danismanlik/proje-danismanligi": "/danismanlik/",
   // IT consulting moved to a keyword-matching URL.
   "danismanlik/bilgi-teknolojileri-it-danismanligi": "/danismanlik/it-danismanlik-hizmetleri/",
 };

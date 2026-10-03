@@ -1,13 +1,13 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { site } from "@/lib/site";
+import { whatsappHref } from "@/lib/contact";
 
 // "Demo isteyin" for the software products: every product has a live demo
 // panel that the team shows on request, so the request goes straight to a
 // person — WhatsApp (prefilled) or e-mail — instead of a generic form.
 
 export function demoWhatsAppHref(product: string) {
-  const number = site.mobile.href.replace(/\D/g, "");
-  return `https://wa.me/${number}?text=${encodeURIComponent(`Merhaba, ${product} için demo talep etmek istiyorum.`)}`;
+  return whatsappHref(`Merhaba, ${product} için demo talep etmek istiyorum.`);
 }
 
 export function demoMailHref(product: string) {

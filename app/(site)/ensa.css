@@ -719,6 +719,36 @@
   transform: translateY(-6px);
 }
 
+/* Header dropdowns (components/ensa/Header.tsx). Hover intent without JS:
+   - open after 150ms, so sweeping across a trigger on the way to a panel
+     does not switch menus;
+   - stay open 350ms after the pointer leaves (a diagonal path to a far column
+     of the wide services panel crosses the header outside the trigger);
+   - when another trigger is hovered for 150ms, the previous panel closes.
+   Keyboard focus (:focus-visible) opens at once. visibility:hidden keeps
+   closed panels out of the tab order and the accessibility tree.
+   Verified with real pointer paths (scratchpad menutest.mjs). */
+#site-header .mega-panel {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s ease 0.2s, visibility 0s linear 0.35s;
+}
+#site-header [data-menu-group]:hover > .mega-panel {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.12s ease 0.15s, visibility 0s linear 0.15s;
+}
+#site-header [data-menu-group]:has(:focus-visible) > .mega-panel {
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+}
+#site-header nav:has([data-menu-group]:hover) [data-menu-group]:not(:hover):not(:has(:focus-visible)) > .mega-panel {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease 0.15s, visibility 0s linear 0.25s;
+}
+
 /* Header: a menu link was just clicked — keep hover panels shut until the
    pointer leaves the header (components/ensa/NavActive.tsx). */
 #site-header [data-menu-group][data-closed] .mega-panel,

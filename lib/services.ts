@@ -15,33 +15,15 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Kurumsal Danışmanlık Hizmetleri",
     shortTitle: "Danışmanlık",
     eyebrow: "01 — Danışmanlık",
-    summary: "IT danışmanlığından ISO 27001 ve KVKK uyumuna, dijital dönüşümden hibe süreçlerine kadar yanınızdayız.",
+    summary: "IT danışmanlığından ISO 27001 ve KVKK uyumuna, ERP ve dijital dönüşüme kadar yanınızdayız.",
     intro:
-      "Tüm süreçlerimizin temelinde IT danışmanlığı var. Teknoloji, güvenlik, uyum ve finans tarafında kurumunuzun yanında duran sekiz uzmanlık alanı.",
+      "Tüm süreçlerimizin temelinde IT danışmanlığı var. Teknoloji, bilgi güvenliği, KVKK uyumu ve dijital dönüşümde kurumunuzun yanında duran beş uzmanlık alanı.",
     services: [
       {
         key: "it-danismanlik-hizmetleri",
         name: "IT Danışmanlık Hizmetleri",
         description:
           "Teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, sanal IT müdürü ve sözleşmeli IT desteği.",
-      },
-      {
-        key: "finansal-ve-stratejik-danismanlik",
-        name: "Finansal ve Stratejik Danışmanlık",
-        description:
-          "Nakit akışı yönetimi, bütçeleme ve stratejik planlama süreçlerinde uçtan uca danışmanlık.",
-      },
-      {
-        key: "kosgeb-tubitak-hibe-tesvik-danismanligi",
-        name: "KOSGEB, TÜBİTAK ve Hibe Teşvik Danışmanlığı",
-        description:
-          "KOSGEB ve TÜBİTAK destek programları ile yatırım teşvik başvurularında uçtan uca danışmanlık.",
-      },
-      {
-        key: "proje-danismanligi",
-        name: "Proje Danışmanlığı",
-        description:
-          "Kurumsal projelerin planlanması, kaynak yönetimi ve zamanında teslimi için metodolojik proje yönetimi.",
       },
       {
         key: "iso-27001-bilgi-guvenligi-danismanligi",
@@ -72,7 +54,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       {
         question: "Hangi danışmanlık hizmetlerini sunuyorsunuz?",
         answer:
-          "Finansal ve stratejik danışmanlıktan KOSGEB/TÜBİTAK hibe ve teşvik danışmanlığına, proje yönetiminden ISO 27001 ve KVKK uyumluluğuna kadar sekiz farklı alanda hizmet veriyoruz. İhtiyacınıza göre tek bir hizmeti ya da birkaçını bir arada alabilirsiniz.",
+          "IT danışmanlığı, ISO 27001 bilgi güvenliği danışmanlığı, KVKK danışmanlığı, Logo ERP destek ve danışmanlığı ile yazılım ve dijital dönüşüm danışmanlığı veriyoruz. İhtiyacınıza göre tek bir hizmeti ya da birkaçını bir arada alabilirsiniz.",
       },
       {
         question: "Danışmanlık süreci nasıl işliyor?",
@@ -109,7 +91,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "guvenlik-acigi-ve-zafiyet-analizi",
-        name: "Güvenlik Açığı ve Zafiyet Analizi",
+        name: "Zafiyet Taraması ve Güvenlik Açığı Analizi",
         description:
           "Sistemlerinizdeki zafiyetleri tarar, önceliklendirilmiş bulgu raporları sunarız.",
       },
@@ -121,7 +103,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "edr-antivirus-cozumleri",
-        name: "EDR / Antivirüs Çözümleri",
+        name: "Kurumsal Antivirüs ve EDR Çözümleri",
         description:
           "Uç nokta tehdit tespiti ve otomatik müdahale sağlayan koruma çözümleri.",
       },
@@ -133,7 +115,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "siem-ve-log-yonetimi",
-        name: "SIEM ve Log Yönetimi",
+        name: "SIEM ve 5651 Log Yönetimi",
         description:
           "Güvenlik olaylarının merkezi toplanması, korelasyonu ve raporlanması.",
       },
@@ -179,13 +161,13 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "ag-altyapisi-kurulum-ve-yonetimi",
-        name: "Ağ Altyapısı Kurulum ve Yönetimi",
+        name: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
         description:
           "Kurumsal ağ altyapısının kurulumu, yapılandırılması ve sürekli yönetimi.",
       },
       {
         key: "sunucu-kurulum-ve-yonetimi",
-        name: "Sunucu Kurulum ve Yönetimi",
+        name: "Sunucu Kurulumu ve Yönetimi",
         description:
           "Fiziksel ve sanal sunucu altyapısının kurulumu ve işletilmesi.",
       },
@@ -227,7 +209,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "it-bakim-ve-destek-hizmetleri",
-        name: "IT Bakım ve Destek Hizmetleri",
+        name: "IT Destek ve Bakım Hizmetleri",
         description:
           "Altyapınız için sürekli izleme, bakım ve teknik destek hizmeti.",
       },
@@ -261,7 +243,7 @@ export const serviceCategoryList: ServiceCategory[] = [
     services: [
       {
         key: "bulut-cozumleri",
-        name: "Bulut Çözümleri",
+        name: "Bulut Bilişim Çözümleri",
         description:
           "İhtiyacınıza uygun bulut mimarisinin planlanması ve geçiş sürecinin yönetimi.",
       },
@@ -285,7 +267,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "veri-yedekleme-cozumleri",
-        name: "Veri Yedekleme Çözümleri",
+        name: "Veri Yedekleme (Backup) Çözümleri",
         description:
           "Otomatik, düzenli ve doğrulanabilir yedekleme sistemlerinin kurulumu.",
       },
@@ -347,7 +329,7 @@ export const serviceCategoryList: ServiceCategory[] = [
       },
       {
         key: "web-tasarim-ve-kurumsal-web-sitesi",
-        name: "Web Tasarım ve Kurumsal Web Sitesi",
+        name: "Kurumsal Web Tasarım",
         description:
           "Kurumsal kimliğinize uygun, performanslı web sitesi tasarımı ve geliştirmesi.",
       },

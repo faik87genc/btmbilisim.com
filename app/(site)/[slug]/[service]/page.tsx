@@ -16,6 +16,7 @@ import { absoluteUrl, ogMeta } from "@/lib/siteView";
 import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
 import { ContactCta } from "@/components/ensa/ContactCta";
+import { ServiceContactButtons } from "@/components/ensa/ServiceContactButtons";
 
 // Sub-service detail pages (/{category}/{service}/), content from
 // lib/servicePages.ts. The first segment is named `slug` only because Next
@@ -36,11 +37,18 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!page) return {};
   const url = absoluteUrl(`/${category}/${service}/`);
   return {
-    title: { absolute: page.metaTitle ?? `${page.title}${site.titleSuffix}` },
+    title: { absolute: page.metaTitle ?? titleFor(page.title) },
     description: page.metaDescription,
     alternates: { canonical: url },
     ...ogMeta({ title: page.title, description: page.metaDescription, path: `/${category}/${service}/` }),
   };
+}
+
+// "<Hizmet> | Gebze, Kocaeli | BTM Bilişim" when it fits in ~65 characters
+// (local intent: most searches add the city), else "<Hizmet> | BTM Bilişim".
+function titleFor(title: string): string {
+  const local = `${title} | Gebze, Kocaeli${site.titleSuffix}`;
+  return local.length <= 65 ? local : `${title}${site.titleSuffix}`;
 }
 
 const STOP = new Set(["ve", "ile", "icin", "hizmetleri", "hizmeti", "cozumleri", "danismanligi", "yonetimi"]);
@@ -143,6 +151,9 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
             {page.title}
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">{page.metaDescription}</p>
+          <div className="mt-8">
+            <ServiceContactButtons service={page.title} />
+          </div>
         </Container>
       </section>
 

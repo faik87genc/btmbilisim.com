@@ -6,9 +6,9 @@ import { ogMeta } from "@/lib/siteView";
 const category = serviceCategories["danismanlik"];
 
 const base = {
-  title: "Kurumsal Danışmanlık: IT, ISO 27001, KVKK ve Hibe | BTM Bilişim",
+  title: "Kurumsal Danışmanlık: IT, ISO 27001, KVKK ve ERP | BTM Bilişim",
   description:
-    "IT danışmanlık, ISO 27001 ve KVKK uyumu, dijital dönüşüm, Logo ERP, KOSGEB/TÜBİTAK hibe ve finansal danışmanlık dahil sekiz alanda kurumsal danışmanlık.",
+    "IT danışmanlık, ISO 27001 bilgi güvenliği ve KVKK danışmanlığı, Logo ERP desteği ve dijital dönüşüm danışmanlığı. 2010'dan beri Gebze ve Kocaeli'de BTM Bilişim.",
   alternates: { canonical: "/danismanlik/" },
 };
 

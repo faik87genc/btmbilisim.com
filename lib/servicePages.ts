@@ -34,192 +34,6 @@ export const servicePagesContent: ServicePageContent[] = [
   // ─────────────────────────────────────────────────────────────────────────
   {
     categorySlug: "danismanlik",
-    serviceKey: "finansal-ve-stratejik-danismanlik",
-    slug: "finansal-ve-stratejik-danismanlik",
-    title: "Finansal ve Stratejik Danışmanlık",
-    metaDescription:
-      "Nakit akışı yönetimi, bütçeleme, kârlılık analizi ve büyüme stratejisi. BTM Bilişim ile finansal kararlarınızı veriye dayalı, sürdürülebilir bir zemine oturtun.",
-    content: `Finansal ve stratejik danışmanlık hizmetimiz; nakit akışınızı, bütçe sürecinizi ve büyüme planınızı birbirine bağlı tek bir bütün olarak ele alır. Amacımız, günü kurtaran kararların yerine kurumunuzu orta ve uzun vadede ayakta tutacak bir finansal disiplin kurmaktır.
-
-## Finansal yönetim neden kritik?
-
-Birçok işletme kâğıt üzerinde kârlı göründüğü hâlde nakit sıkışıklığı yaşar; çünkü kâr ile nakit aynı şey değildir. Bütçe ile gerçekleşen arasındaki sapma çoğu zaman ay kapanışından günler sonra, karar penceresi kapandıktan sonra fark edilir. Doğru kurgulanmış bir finansal yönetim bu görme kaybını ortadan kaldırır ve yönetime zamanında, tekrar üretilebilir sayı sağlar.
-
-## Kapsamımız
-
-- Nakit akışı modellemesi ve 13 haftalık nakit projeksiyonu
-- Yıllık gelir/gider bütçesinin hazırlanması ve hesap kalemi bazında takibi
-- Bütçe–gerçekleşme sapma analizi ve raporlama düzeninin kurulması
-- Ürün, müşteri ve kanal bazında maliyet ve kârlılık analizi
-- Fiyatlama ve iskonto politikasının gözden geçirilmesi
-- Yatırım ve finansman kararları için fizibilite ve senaryo analizi
-- Şirket değerleme, ortaklık ve büyüme süreçlerine finansal hazırlık
-
-## Nasıl çalışıyoruz?
-
-1. **Mevcut durum analizi** — Mali tablolar, nakit döngüsü ve kullandığınız raporlama düzeni incelenir.
-2. **Model kurulumu** — Kurumunuza özel bütçe ve nakit akışı modeli oluşturulur.
-3. **Raporlama düzeni** — Yönetimin her ay aynı formatta, aynı sonucu veren raporu almasını sağlayan akış tanımlanır.
-4. **İzleme ve revizyon** — Sapmalar birlikte yorumlanır, bütçe dönem içinde revize edilir.
-
-## Excel'den panele geçiş
-
-Bütçe–gerçekleşme takibini elle Excel'de yürütmek yavaş ve kırılgandır. Süreç olgunlaştığında aynı işi canlı ERP verisiyle yapan [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) ile panele taşıyabilir, sapmayı ay içinde hesap kalemi düzeyinde görebilirsiniz.
-
-## Yatırımlarınız için hibe ve teşvik fırsatları
-
-Büyüme veya Ar-Ge yatırımı planlıyorsanız, bu yatırımı kısmen KOSGEB ve TÜBİTAK destekleriyle finanse etmek mümkün olabilir. [KOSGEB, TÜBİTAK ve hibe teşvik danışmanlığı hizmetimizle](/danismanlik/kosgeb-tubitak-hibe-tesvik-danismanligi/) uygun olduğunuz destek programlarını birlikte değerlendirebiliriz.
-
-## Kurumunuza kazandırdıkları
-
-- Nakit sıkışıklığını önceden görüp önlem alma imkânı
-- Yönetim kararlarının tahmine değil veriye dayanması
-- Bütçe tartışmalarının rakamdan aksiyona kayması
-- Bankalar ve yatırımcılarla hazırlıklı, güçlü bir masaya oturma
-
-Finansal görünürlüğünüzü artırmak için mevcut bütçe ve nakit akışı sürecinizi kısa bir görüşmede birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
-    faq: [
-      {
-        question: "Finansal danışmanlık için belirli bir şirket büyüklüğü gerekiyor mu?",
-        answer:
-          "Hayır. Hizmet, KOBİ'lerden orta ölçekli gruplara kadar farklı büyüklüklere uyarlanır. Küçük ekiplerde temel nakit akışı ve bütçe disiplinine, büyük yapılarda kârlılık kırılımı ve senaryo analizine odaklanırız.",
-      },
-      {
-        question: "Mali müşavirimizin yerini mi alıyorsunuz?",
-        answer:
-          "Hayır. Mali müşaviriniz yasal kayıt ve beyan tarafını yürütür; biz bu verinin üzerine yönetim raporlaması, bütçe ve strateji katmanını kurarız. İki taraf birbirini tamamlar.",
-      },
-      {
-        question: "Sonuçları ne kadar sürede görürüz?",
-        answer:
-          "İlk nakit akışı projeksiyonu ve bütçe taslağı genellikle 3-4 hafta içinde devreye girer. Sapma analizinin anlamlı hâle gelmesi için ise en az bir tam raporlama dönemi gerekir.",
-      },
-    ],
-  },
-  {
-    categorySlug: "danismanlik",
-    serviceKey: "kosgeb-tubitak-hibe-tesvik-danismanligi",
-    slug: "kosgeb-tubitak-hibe-tesvik-danismanligi",
-    title: "KOSGEB, TÜBİTAK ve Hibe Teşvik Danışmanlığı",
-    metaDescription:
-      "KOSGEB ve TÜBİTAK destek programları, yatırım teşvik belgesi başvurusu ve raporlama süreçlerinde uçtan uca danışmanlık. Fırsatları birlikte değerlendirin.",
-    content: `Hibe ve teşvik danışmanlığı hizmetimiz; KOSGEB, TÜBİTAK ve yatırım teşvik mevzuatındaki destek programlarını kurumunuzun yatırım ve Ar-Ge planlarıyla eşleştirir, başvurudan raporlamaya kadar süreci sizin adınıza yürütür.
-
-## Hibe ve teşvik danışmanlığı neden gerekli?
-
-Destek programlarının sayısı, kapsamı ve şartları her yıl değişir; doğru programı seçmek, başvuru dokümanını mevzuata uygun hazırlamak ve süreci zamanında raporlamak ayrı bir uzmanlık gerektirir. Çoğu işletme ya uygun olduğu desteği bilmediği için başvurmaz ya da eksik hazırlanan bir başvuru yüzünden hak ettiği desteği kaçırır.
-
-## Kapsamımız
-
-- KOSGEB destek programlarına (KOBİ Gelişim Destek Programı, Girişimcilik Destek Programı, Ar-Ge ve İnovasyon Destek Programı, Dijital ve Yeşil Dönüşüm Destek Programı) uygunluk analizi ve başvuru danışmanlığı
-- TÜBİTAK TEYDEB destek programları (1501 Sanayi Ar-Ge, 1507 KOBİ Ar-Ge Başlangıç, 1509 Uluslararası Ortaklı Ar-Ge) için proje önerisi hazırlığı
-- Yatırım Teşvik Belgesi başvurusu ve teşvik unsurlarının (vergi indirimi, SGK primi desteği, faiz/kâr payı desteği vb.) değerlendirilmesi
-- Bütçe ve iş planının destek programının şartlarına göre kurgulanması
-- Başvuru dokümantasyonunun mevzuata uygun hazırlanması
-- Onay sonrası dönemsel raporlama, harcama belgelendirme ve izleme ziyaretlerine eşlik
-- Ret durumunda itiraz süreci ve yeniden başvuru değerlendirmesi
-
-## Nasıl çalışıyoruz?
-
-1. **Uygunluk analizi** — Faaliyet alanınız, ölçeğiniz ve yatırım/Ar-Ge planınıza göre hangi programlara uygun olduğunuz belirlenir.
-2. **Başvuru hazırlığı** — Proje önerisi, bütçe ve gerekli dokümantasyon mevzuata uygun biçimde hazırlanır.
-3. **Başvuru ve takip** — Başvuru yapılır, kurum ile yazışmalar ve ek bilgi talepleri sizin adınıza yürütülür.
-4. **Raporlama ve izleme** — Destek onaylandıktan sonra dönemsel raporlama ve harcama belgelendirme süreçleri yönetilir.
-
-## Finansmandan uygulamaya
-
-Onaylanan bir destek ya da teşvikin bütçeye doğru yansıtılması için [finansal ve stratejik danışmanlık hizmetimizle](/danismanlik/finansal-ve-stratejik-danismanlik/) birlikte ilerleyebiliriz. Destek kapsamındaki yatırımın veya Ar-Ge projesinin zamanında ve bütçesi içinde tamamlanması için [proje danışmanlığı hizmetimiz](/danismanlik/proje-danismanligi/) devreye girer.
-
-## Kurumunuza kazandırdıkları
-
-- Uygun olduğunuz destek ve teşvik programlarının tamamının görülmesi
-- Başvuru sürecinde mevzuata aykırılık nedeniyle ret riskinin azaltılması
-- Onay sonrası raporlama yükümlülüklerinin zamanında ve eksiksiz yerine getirilmesi
-- Hibe ve teşvik unsurlarının yatırım/Ar-Ge bütçesine doğru yansıtılması
-
-Kurumunuzun hangi destek ve teşvik programlarına uygun olduğunu kısa bir ön değerlendirmeyle birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
-    faq: [
-      {
-        question: "KOSGEB ve TÜBİTAK desteklerinden hangi işletmeler yararlanabilir?",
-        answer:
-          "Uygunluk, işletmenizin ölçeğine, faaliyet alanına ve başvurduğunuz programın şartlarına göre değişir. KOSGEB destekleri ağırlıklı olarak KOBİ'lere yöneliktir; TÜBİTAK Ar-Ge destekleri ise ölçekten bağımsız olarak Ar-Ge/inovasyon faaliyeti yürüten işletmelere açıktır. Ön değerlendirmede kurumunuz için uygun programları netleştiririz.",
-      },
-      {
-        question: "Danışmanlık ücreti başvuru onaylanmazsa ne oluyor?",
-        answer:
-          "Ücretlendirme modelini görüşme sırasında netleştiriyoruz; hiçbir destek programı için onayı garanti edemeyiz, zira nihai karar ilgili kurumun değerlendirmesine bağlıdır. Amacımız başvuruyu mevzuata en uygun ve eksiksiz şekilde hazırlayarak başarı ihtimalini en üst düzeye çıkarmaktır.",
-      },
-      {
-        question: "Onay sonrası süreçte de destek alabilir miyiz?",
-        answer:
-          "Evet. Dönemsel raporlama, harcama belgelendirme ve izleme ziyaretlerine hazırlık gibi onay sonrası yükümlülüklerin tamamında eşlik ediyoruz; bu adımların eksik yürütülmesi de desteğin iptaline yol açabilir.",
-      },
-    ],
-  },
-  {
-    categorySlug: "danismanlik",
-    serviceKey: "proje-danismanligi",
-    slug: "proje-danismanligi",
-    title: "Proje Danışmanlığı",
-    metaDescription:
-      "Kurumsal projelerinizin planlanması, kaynak yönetimi ve zamanında teslimi için metodolojik proje yönetimi danışmanlığı. BTM Bilişim ile projeleriniz kontrol altında.",
-    content: `Proje danışmanlığı hizmetimiz, kurumsal projelerinizi baştan sona öngörülebilir hâle getirir. Kapsam, zaman, bütçe ve risk dört ayrı başlık değil; birlikte yönetilmesi gereken tek bir denge olarak ele alınır.
-
-## Projeler neden rayından çıkar?
-
-Gecikmelerin çoğu teknik değil yönetişim kaynaklıdır: net olmayan kapsam, sahipsiz görevler, geç fark edilen bağımlılıklar ve raporlanmayan riskler. Metodolojik bir proje yönetimi bu boşlukları kapatır; herkesin aynı planı, aynı önceliği ve aynı durumu görmesini sağlar.
-
-## Kapsamımız
-
-- Proje başlatma: kapsam, hedef, paydaş ve başarı ölçütlerinin tanımlanması
-- İş kırılım yapısı, zaman çizelgesi ve kaynak planı
-- Bütçe planlaması ve gerçekleşme takibi
-- Risk ve sorun (issue) kaydının kurulması ve düzenli gözden geçirilmesi
-- Haftalık ilerleme raporlaması ve yönlendirme komitesi toplantıları
-- Tedarikçi ve alt yüklenici koordinasyonu
-- Proje kapanışı, kazanılan dersler ve devreye alma dokümantasyonu
-
-## Nasıl çalışıyoruz?
-
-1. **Keşif** — Projenin gerekçesi, kısıtları ve paydaşları netleştirilir.
-2. **Planlama** — Kapsam, takvim, bütçe ve risk planı birlikte oluşturulur.
-3. **Yürütme ve kontrol** — İlerleme haftalık izlenir, sapmalar erken müdahaleyle yönetilir.
-4. **Kapanış** — Teslimatlar kabul edilir, süreç ve dersler belgelenir.
-
-## Yaklaşımımız
-
-İhtiyaca göre klasik (şelale), çevik (Scrum/Kanban) veya hibrit bir yaklaşım kullanırız. Yöntem seçimi projeye bağlıdır; kurumunuza yapay bir metodoloji dayatmayız. Yazılım ağırlıklı projelerde [yazılım ve dijital dönüşüm danışmanlığımız](/danismanlik/yazilim-ve-dijital-donusum-danismanligi/) ile birlikte yürütülür.
-
-Proje bir KOSGEB veya TÜBİTAK desteği kapsamında yürütülüyorsa, [hibe teşvik danışmanlığı hizmetimizle](/danismanlik/kosgeb-tubitak-hibe-tesvik-danismanligi/) raporlama ve izleme yükümlülüklerini de proje planına entegre ederiz.
-
-## Kurumunuza kazandırdıkları
-
-- Teslim tarihlerinin gerçekçi kurulması ve korunması
-- Bütçe aşımlarının erken görülmesi
-- Risklerin sürpriz olmaktan çıkması
-- Yönetimin tek bir güvenilir durum raporuyla karar vermesi
-
-Devam eden ya da başlamak üzere olan bir projeniz varsa mevcut planı birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
-    faq: [
-      {
-        question: "Kendi proje ekibimiz var, yine de danışmanlık alır mıyız?",
-        answer:
-          "Evet. Çoğu projede ekip zaten mevcuttur; biz yönetişim, planlama disiplini ve raporlama düzenini kurar, proje yöneticinize metodolojik destek veririz. İsterseniz geçici proje yöneticiliği de üstlenebiliriz.",
-      },
-      {
-        question: "Hangi proje yönetimi metodolojisini kullanıyorsunuz?",
-        answer:
-          "Projeye göre klasik, çevik veya hibrit. Kapsamı net ve sabit projelerde şelale; belirsizliğin yüksek olduğu yazılım projelerinde çevik yaklaşımlar daha iyi sonuç verir.",
-      },
-      {
-        question: "Raporlama ne sıklıkta yapılıyor?",
-        answer:
-          "Standart olarak haftalık ilerleme raporu ve iki haftada bir yönlendirme komitesi toplantısı öneririz. Kritik fazlarda bu sıklık artırılır.",
-      },
-    ],
-  },
-  {
-    categorySlug: "danismanlik",
     serviceKey: "iso-27001-bilgi-guvenligi-danismanligi",
     slug: "iso-27001-bilgi-guvenligi-danismanligi",
     title: "ISO 27001 Bilgi Güvenliği Danışmanlığı",
@@ -614,7 +428,7 @@ Dönüşüm çoğu zaman araç alarak başlar, süreç tasarlanmadan uygulanır 
 
 ## Uygulama tarafı
 
-Karar aşamasından sonra geliştirme ihtiyacında [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/), [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/) ve [raporlama ve dashboard çözümleri](/yazilim-dijital/raporlama-ve-dashboard-cozumleri/) hizmetlerimizle devam edilebilir. Program yönetimi için [proje danışmanlığı](/danismanlik/proje-danismanligi/) ile birlikte yürütülür.
+Karar aşamasından sonra geliştirme ihtiyacında [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/), [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/) ve [raporlama ve dashboard çözümleri](/yazilim-dijital/raporlama-ve-dashboard-cozumleri/) hizmetlerimizle devam edilebilir.
 
 ## Kurumunuza kazandırdıkları
 
@@ -772,7 +586,7 @@ Test kapsamınızı ve takviminizi konuşmak için [bizimle iletişime geçin.](
     categorySlug: "siber-guvenlik",
     serviceKey: "guvenlik-acigi-ve-zafiyet-analizi",
     slug: "guvenlik-acigi-ve-zafiyet-analizi",
-    title: "Güvenlik Açığı ve Zafiyet Analizi",
+    title: "Zafiyet Taraması ve Güvenlik Açığı Analizi",
     metaDescription:
       "Düzenli zafiyet taraması, kimlik doğrulamalı analiz ve önceliklendirilmiş bulgu raporlama. BTM Bilişim ile açıkları büyümeden görün ve kapatma sürecini yönetin.",
     content: `Güvenlik açığı ve zafiyet analizi hizmetimiz, sistemlerinizdeki bilinen açıkları düzenli olarak tarar, doğrular ve iş etkisine göre önceliklendirilmiş raporlarla kapatma sürecinizi besler.
@@ -892,7 +706,7 @@ Mevcut güvenlik duvarı kurulumunuzu birlikte gözden geçirelim. [İletişime 
     categorySlug: "siber-guvenlik",
     serviceKey: "edr-antivirus-cozumleri",
     slug: "edr-antivirus-cozumleri",
-    title: "EDR / Antivirüs Çözümleri",
+    title: "Kurumsal Antivirüs ve EDR Çözümleri",
     metaDescription:
       "Uç nokta tehdit tespiti ve müdahale (EDR), merkezi antivirüs yönetimi ve fidye yazılımı koruması. BTM Bilişim ile uç noktalarınızı görünür ve savunulabilir kılın.",
     content: `EDR ve antivirüs çözümlerimiz, kullanıcı bilgisayarları ve sunucularınızı yalnızca bilinen zararlılara karşı değil, davranışsal olarak yeni ve hedefli saldırılara karşı da korur.
@@ -1016,7 +830,7 @@ Veri sızıntısı risklerinizi birlikte değerlendirelim. [İletişime geçin.]
     categorySlug: "siber-guvenlik",
     serviceKey: "siem-ve-log-yonetimi",
     slug: "siem-ve-log-yonetimi",
-    title: "SIEM ve Log Yönetimi",
+    title: "SIEM ve 5651 Log Yönetimi",
     metaDescription:
       "Merkezi log toplama, korelasyon, alarm ve uyum raporlaması. BTM Bilişim ile güvenlik olaylarını erken görün, denetim için gereken kaydı eksiksiz tutun.",
     content: `SIEM ve log yönetimi hizmetimiz, dağınık sistemlerinizin kayıtlarını tek merkezde toplar, ilişkilendirir ve anlamlı alarmlara dönüştürür. Böylece bir saldırıyı olduktan sonra değil, gelişirken fark edersiniz.
@@ -1027,6 +841,7 @@ Sunucu, güvenlik duvarı, EDR, kimlik sistemi ve uygulamalar ayrı ayrı log tu
 
 ## Kapsamımız
 
+- 5651 sayılı Kanun kapsamında internet erişim loglarının saklanması ve zaman damgalı imzalanması
 - Log kaynaklarının envanteri ve entegrasyonu (sunucu, ağ, güvenlik, kimlik, uygulama)
 - Merkezi toplama, normalize etme ve saklama politikası
 - Korelasyon kuralları ve önceliklendirilmiş alarm setinin kurulması
@@ -1202,7 +1017,7 @@ Altyapınızı birlikte gözden geçirmek için [iletişime geçin.](/iletisim/)
     categorySlug: "sistem-network",
     serviceKey: "ag-altyapisi-kurulum-ve-yonetimi",
     slug: "ag-altyapisi-kurulum-ve-yonetimi",
-    title: "Ağ Altyapısı Kurulum ve Yönetimi",
+    title: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
     metaDescription:
       "Kurumsal LAN/WAN tasarımı, switch ve router yapılandırması, VLAN, SD-WAN ve sürekli ağ yönetimi. BTM Bilişim ile hızlı, kararlı ve yönetilebilir bir ağ kurun.",
     content: `Ağ altyapısı kurulum ve yönetimi hizmetimiz, kurumsal ağınızı baştan tasarlar veya mevcut ağınızı kararlı, güvenli ve yönetilebilir bir yapıya taşır.
@@ -1263,7 +1078,7 @@ Ağ altyapınızı planlamak için [bizimle iletişime geçin.](/iletisim/)`,
     categorySlug: "sistem-network",
     serviceKey: "sunucu-kurulum-ve-yonetimi",
     slug: "sunucu-kurulum-ve-yonetimi",
-    title: "Sunucu Kurulum ve Yönetimi",
+    title: "Sunucu Kurulumu ve Yönetimi",
     metaDescription:
       "Fiziksel ve sanal sunucu kurulumu, Windows/Linux yönetimi, Active Directory, yamalama ve izleme. BTM Bilişim ile sunucu ortamınızı kararlı ve güncel tutun.",
     content: `Sunucu kurulum ve yönetimi hizmetimiz, fiziksel ve sanal sunucu ortamınızı kurar, sıkılaştırır ve sürekli işletir. Windows ve Linux tarafında kurulumdan yamaya, yedekten izlemeye kadar operasyonu üstleniriz.
@@ -1708,7 +1523,7 @@ Planladığınız altyapı projesini birlikte değerlendirelim. [İletişime ge�
     categorySlug: "sistem-network",
     serviceKey: "it-bakim-ve-destek-hizmetleri",
     slug: "it-bakim-ve-destek-hizmetleri",
-    title: "IT Bakım ve Destek Hizmetleri",
+    title: "IT Destek ve Bakım Hizmetleri",
     metaDescription:
       "SLA'lı yerinde ve uzaktan IT desteği, proaktif izleme, yamalama ve envanter yönetimi. BTM Bilişim ile IT operasyonunuzu dışarıya güvenle emanet edin.",
     content: `IT bakım ve destek hizmetlerimiz, kurumsal altyapınızın günlük operasyonunu üstlenir: kullanıcı destek taleplerinden sunucu bakımına, izlemeden yamaya kadar. Tanımlı hizmet seviyeleri (SLA) ile çalışırız.
@@ -1781,7 +1596,7 @@ Destek ihtiyacınızı ve mevcut kapsamınızı birlikte konuşalım. [İletişi
     categorySlug: "bulut-yedekleme",
     serviceKey: "bulut-cozumleri",
     slug: "bulut-cozumleri",
-    title: "Bulut Çözümleri",
+    title: "Bulut Bilişim Çözümleri",
     metaDescription:
       "Bulut mimarisi tasarımı, göç planlaması, maliyet optimizasyonu ve hibrit kurgu. BTM Bilişim ile buluta plansız değil, ölçülü ve geri dönüşü hesaplanmış geçin.",
     content: `Bulut çözümlerimiz, iş yüklerinizi buluta taşımanın gerçekten mantıklı olduğu yerlerde, doğru mimariyle ve maliyeti kontrol altında tutarak taşınmanıza yardımcı olur.
@@ -2024,7 +1839,7 @@ AWS ortamınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
     categorySlug: "bulut-yedekleme",
     serviceKey: "veri-yedekleme-cozumleri",
     slug: "veri-yedekleme-cozumleri",
-    title: "Veri Yedekleme Çözümleri",
+    title: "Veri Yedekleme (Backup) Çözümleri",
     metaDescription:
       "3-2-1 yedekleme kurgusu, sunucu/uygulama/M365 yedeği, değiştirilemez (immutable) kopya ve düzenli geri yükleme testi. BTM Bilişim ile yedekleriniz gerçekten çalışsın.",
     content: `Veri yedekleme çözümlerimiz, verinizin yalnızca alınmasını değil; doğru saklanmasını, korunmasını ve geri yüklenebilir olduğunun düzenli olarak kanıtlanmasını sağlar.
@@ -2399,7 +2214,7 @@ Web uygulaması ihtiyacınızı birlikte konuşalım. [İletişime geçin.](/ile
     categorySlug: "yazilim-dijital",
     serviceKey: "web-tasarim-ve-kurumsal-web-sitesi",
     slug: "web-tasarim-ve-kurumsal-web-sitesi",
-    title: "Web Tasarım ve Kurumsal Web Sitesi",
+    title: "Kurumsal Web Tasarım",
     metaTitle: "Web Tasarım Hizmetleri | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
       "Kurumsal kimliğinize uygun, hızlı, SEO uyumlu ve yönetilebilir web sitesi tasarımı ve geliştirmesi. BTM Bilişim ile sitenizi bir vitrin değil, bir kazanım kanalı yapın.",

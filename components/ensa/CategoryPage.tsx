@@ -8,6 +8,7 @@ import { FaqSection } from "./FaqSection";
 import { ServiceCategory } from "@/lib/services";
 import { servicePagesContent } from "@/lib/servicePages";
 import { ContactCta } from "./ContactCta";
+import { ServiceContactButtons } from "./ServiceContactButtons";
 
 export function CategoryPage({ category, children }: { category: ServiceCategory; children?: React.ReactNode }) {
   // A sub-service card links to its detail page when lib/servicePages carries
@@ -34,6 +35,9 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
             {category.intro}
           </p>
+          <div className="mt-8">
+            <ServiceContactButtons service={category.title} />
+          </div>
         </Container>
       </section>
 
@@ -66,7 +70,7 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
                   </p>
                   {slug && (
                     <span className="mt-5 inline-block text-xs font-medium uppercase tracking-wider text-gold-800">
-                      Detaylı bilgi
+                      İncele ve teklif al
                     </span>
                   )}
                 </>
@@ -84,6 +88,13 @@ export function CategoryPage({ category, children }: { category: ServiceCategory
                 </MotionReveal>
               );
             })}
+          </div>
+          <div className="mt-10 flex flex-col items-start justify-between gap-5 rounded-card bg-navy-950 p-6 md:flex-row md:items-center md:p-7">
+            <div>
+              <p className="font-display text-xl font-semibold text-white">Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?</p>
+              <p className="mt-1 text-sm text-slate-300">Durumunuzu anlatın; doğru çözümü birlikte seçelim.</p>
+            </div>
+            <ServiceContactButtons service={category.title} note={false} />
           </div>
         </Container>
       </section>
