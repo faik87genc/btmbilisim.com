@@ -475,7 +475,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <HeroSlider slides={atlasBannerSlides} size="tall" />
+      <HeroSlider slides={atlasBannerSlides} size="tall" headingLevel={2} />
 
       <FaqSection items={product.faq} />
 

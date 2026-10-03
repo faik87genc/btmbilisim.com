@@ -5,6 +5,21 @@ import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { DemoRequest } from "@/components/ensa/DemoRequest";
 import { products } from "@/lib/products";
+import { JsonLd } from "@/components/site/Parts";
+import { absoluteUrl } from "@/lib/siteView";
+import { breadcrumbJsonLd } from "@/lib/structuredData";
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "BTM Bilişim Yazılım Ürünleri",
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: p.name,
+    url: absoluteUrl(`/yazilim-urunlerimiz/${p.slug}/`),
+  })),
+};
 
 export const metadata: Metadata = {
   title: "Kurumsal Yazılım Ürünlerimiz | BTM Bilişim",
@@ -16,9 +31,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ text: "Yazılım Ürünlerimiz" }])} />
+      <JsonLd data={itemListJsonLd} />
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
         <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-        <Container className="relative max-w-3xl">
+        <Container className="relative">
+          <div className="max-w-3xl">
           <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
             <span className="h-px w-8 bg-gold-300" />
             Yazılım Ürünlerimiz
@@ -30,6 +48,7 @@ export default function Page() {
             Finans operasyonlarından siber güvenliğe kadar, danışmanlık
             tecrübemizi yazılıma dönüştürdüğümüz ürün ailesi.
           </p>
+          </div>
         </Container>
       </section>
 

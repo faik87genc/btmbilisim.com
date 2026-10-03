@@ -47,10 +47,14 @@ const noopSubscribe = () => () => {};
 export function HeroSlider({
   slides,
   size = "default",
+  headingLevel = 1,
 }: {
   slides: HeroSlide[];
   size?: "default" | "tall";
+  /** 2 when the slider is a banner further down a page that has its own <h1>. */
+  headingLevel?: 1 | 2;
 }) {
+  const Heading = headingLevel === 1 ? "h1" : "h2";
   const [index, setIndex] = useState(0);
   // Slides 2..n are held back until the visitor engages (or a slow fallback
   // timer) so a cold mobile load gives the first (LCP) hero image the whole
@@ -230,12 +234,12 @@ export function HeroSlider({
             <span className="h-px w-8 bg-gold-300" />
             {slide.eyebrow}
           </div>
-          <h1 className="text-balance font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white [text-shadow:0_2px_18px_rgb(3_7_18_/_0.6)] md:text-[4rem]">
+          <Heading className="text-balance font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white [text-shadow:0_2px_18px_rgb(3_7_18_/_0.6)] md:text-[4rem]">
             {slide.titleLead}{" "}
             <span className="text-gold-400 [text-shadow:0_2px_18px_rgb(3_7_18_/_0.55)]">
               {slide.titleAccent}
             </span>
-          </h1>
+          </Heading>
           <p className="mt-6 max-w-xl text-balance text-lg font-medium leading-relaxed text-slate-100 [text-shadow:0_1px_10px_rgb(3_7_18_/_0.7)] md:text-xl">
             {slide.description}
           </p>
