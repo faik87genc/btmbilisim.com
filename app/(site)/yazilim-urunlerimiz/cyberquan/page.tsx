@@ -43,38 +43,38 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 3, suffix: "", label: "cihaz tipi: sensör, PLC, kamera" },
-  { value: 7, suffix: "", label: "rol bazlı yetki seviyesi" },
-  { value: 14, suffix: "", label: "frontend modülü" },
+  { value: 3, suffix: "", label: "bağlanabilen cihaz türü (sensör, PLC, kamera)" },
+  { value: 7, suffix: "", label: "ayrı kullanıcı rolü" },
+  { value: 14, suffix: "", label: "ekran modülü" },
 ];
 
 const heroTags = [
   "IoT Sensörler",
   "PLC / Modbus",
   "IP Kamera / HLS",
-  "Gerçek Zamanlı Dashboard",
-  "Otomatik Alarmlar",
+  "Canlı Dashboard",
+  "Eşik Alarmları",
   "ISO & DPP",
 ];
 
 const pillars = [
   {
     icon: Factory,
-    title: "Üretim uçtan uca izlenir",
+    title: "Lotun yolculuğu baştan sona kayıtlı",
     description:
-      "Lot bazlı takip: hammadde kabul, torna işleme, ısıl işlem, kalite kontrol ve sevkiyat. Her adımda sensör verisi, kamera görüntüsü ve fotoğraf kanıtı otomatik kaydedilir.",
+      "Hammadde girişinden tornaya, ısıl işlemden kalite kontrole ve sevkiyata kadar her lot ayrı izlenir. O adımda üretilen sensör ölçümleri, kamera kayıtları ve fotoğraflar lota kendiliğinden bağlanır.",
   },
   {
     icon: ShieldAlert,
-    title: "Sorun oluşmadan uyarı gelir",
+    title: "Değer sınırı aştığı an haberiniz olur",
     description:
-      "Her cihaza min/max eşik tanımlanır; gelen telemetri eşiği aşınca sistem otomatik kritik veya uyarı alarmı üretir ve dashboard'da anlık kırmızı gösterir.",
+      "Cihaz başına alt ve üst sınır belirlersiniz. Ölçüm bu aralığın dışına çıktığında sistem kendiliğinden uyarı ya da kritik alarm açar, ilgili kart dashboard'da kırmızıya döner.",
   },
   {
     icon: Layers,
-    title: "Sensör, PLC ve kamera tek panelde",
+    title: "Üç ayrı sistem yerine bir ekran",
     description:
-      "MQTT, Modbus TCP ve HLS tek birleşik cihaz modelinde toplanır. Ayrı sistemler yerine tüm üretim verisi aynı platformdan izlenir ve raporlanır.",
+      "MQTT ile gelen sensör verisi, Modbus TCP ile okunan makine değerleri ve HLS kamera yayını ortak bir cihaz yapısında buluşur. İzleme de raporlama da aynı yerden yapılır.",
   },
 ];
 
@@ -83,25 +83,25 @@ const deviceLayers = [
     icon: Thermometer,
     title: "IoT Sensör Entegrasyonu",
     description:
-      "Sıcaklık, titreşim, nem, gürültü ve basınç. MQTT protokolüyle gerçek zamanlı veri toplama; eşik aşımında otomatik kritik/uyarı alarmı.",
+      "Sıcaklık, titreşim, nem, gürültü ve basınç sensörleri MQTT üzerinden anlık veri gönderir. Tanımlı sınır aşılırsa uyarı veya kritik alarm kendiliğinden oluşur.",
   },
   {
     icon: Cpu,
     title: "PLC / Makine Verisi",
     description:
-      "Modbus TCP ile PLC'lerden register okuma: makine sıcaklığı, devir hızı (RPM), basınç. Manuel veya periyodik okuma desteği.",
+      "PLC register'ları Modbus TCP ile okunur; makine sıcaklığı, devir (RPM) ve basınç bilgisi gelir. Okumayı elle başlatabilir ya da belirli aralıklarla tekrarlatabilirsiniz.",
   },
   {
     icon: Video,
     title: "IP Kamera Sistemi",
     description:
-      "HLS protokolüyle tarayıcıda canlı kamera izleme. Üretim hattı, fırın ve kalite istasyonu için lot bazlı kamera atama.",
+      "Kamera yayınları HLS ile doğrudan tarayıcıda açılır. Hat, fırın ya da kalite istasyonundaki kamerayı ilgili lota bağlayabilirsiniz.",
   },
   {
     icon: Camera,
     title: "Webcam Fotoğraf Kanıtı",
     description:
-      "Operatör, tarayıcı webcam (getUserMedia) ile fotoğraf çeker; kanıt ilgili lot dosyasına eklenir ve izlenebilirlik zincirinde görünür.",
+      "Operatör ek bir uygulama kurmadan, tarayıcının webcam erişimiyle (getUserMedia) fotoğraf alır. Fotoğraf lota kanıt olarak eklenir ve izlenebilirlik ekranında yerini alır.",
   },
 ];
 
@@ -109,30 +109,30 @@ const architectureLayers = [
   {
     tier: "1",
     title: "IoT Cihaz Katmanı",
-    description: "Sensörler, PLC, IP kameralar, webcam ve veri toplama gateway'i.",
+    description: "Sahadaki sensörler, PLC'ler, IP kameralar, webcam ve verileri toplayan gateway.",
   },
   {
     tier: "2",
     title: "Protokol Katmanı",
-    description: "MQTT Broker, Modbus TCP, HLS Stream, HTTP REST API ve JWT Auth.",
+    description: "Cihazlarla konuşan katman: MQTT Broker, Modbus TCP, HLS Stream, HTTP REST API, JWT Auth.",
   },
   {
     tier: "3",
     title: "Backend — Python FastAPI",
     description:
-      "REST API, RBAC, telemetri işleme, eşik kontrolü, otomatik alarm ve kanıt yönetimi. SQLAlchemy ORM, Pydantic, async, multi-tenant.",
+      "Telemetriyi işleyen, sınırları denetleyen, alarmları ve kanıtları yöneten REST API ile RBAC burada çalışır. Async yapı, multi-tenant, SQLAlchemy ORM ve Pydantic.",
   },
   {
     tier: "4",
     title: "Veritabanı Katmanı",
     description:
-      "PostgreSQL (tenant/kullanıcı), ClickHouse/SQLite (IoT/operasyonel), uploads/ (kanıt dosyaları) ve opsiyonel Redis.",
+      "Firma ve kullanıcı bilgisi PostgreSQL'de, IoT ve operasyon verisi ClickHouse ya da SQLite'ta, kanıt dosyaları uploads/ klasöründe durur; Redis isteğe bağlıdır.",
   },
   {
     tier: "5",
     title: "Frontend — React + TypeScript",
     description:
-      "Dashboard, IoT panel, kamera, terminal, kalite, izlenebilirlik, satış ve ISO ekranları; TailwindCSS ile mobil uyumlu.",
+      "Dashboard, IoT, kamera, terminal, kalite, izlenebilirlik, satış ve ISO ekranları. TailwindCSS sayesinde telefonda da düzgün görünür.",
   },
 ];
 
@@ -142,21 +142,21 @@ const flows = [
     title: "Sensör → Telemetri → Alarm",
     steps: "Sensör ölçüm → MQTT publish → Backend → Telemetri kayıt → Eşik kontrolü → Alarm",
     example:
-      "Örnek: Gürültü sensörü 91 dB ölçtü, eşik 85 dB → kritik alarm oluştu ve dashboard'da kırmızı gösterildi.",
+      "Örneğin sınırı 85 dB olan gürültü sensörü 91 dB okuyunca kritik alarm açılır ve dashboard'daki kart kırmızı yanar.",
   },
   {
     icon: Camera,
     title: "Webcam → Fotoğraf → Kanıt → Lot",
     steps: "Lot seç → Webcam başlat → Fotoğraf çek → base64 encode → API'ye gönder → Kanıt",
     example:
-      "Operatör webcam ile fotoğraf çeker; kanıt lot dosyasına eklenir ve izlenebilirlik zincirinde görünür.",
+      "Çekilen kare lotun kanıtları arasına girer; lotun geçmişine bakan herkes o fotoğrafı görür.",
   },
   {
     icon: Cpu,
     title: "PLC Modbus Okuma → Telemetri",
     steps: "Cihaz seç → Modbus connect → Register oku → Telemetri kayıt → Eşik kontrolü → Panel",
     example:
-      "PLC register'ları (sıcaklık, RPM, basınç) okunur, telemetriye kaydedilir ve dashboard'da canlı gösterilir.",
+      "Sıcaklık, RPM ve basınç register'ları telemetri olarak saklanır ve panelde anlık izlenir.",
   },
 ];
 
@@ -171,102 +171,102 @@ const productionFlow = [
 ];
 
 const modules = [
-  { icon: LineChart, title: "Dashboard", description: "KPI'lar, grafikler, son aktiviteler ve özet panel." },
-  { icon: Layers, title: "Lot Yönetimi", description: "Üretim lot listesi, detay, süreç adımları ve soy ağacı." },
+  { icon: LineChart, title: "Dashboard", description: "Göstergeler, grafikler ve son hareketler bir bakışta." },
+  { icon: Layers, title: "Lot Yönetimi", description: "Lotların listesi, ayrıntısı, geçtiği adımlar ve soy ağacı." },
   {
     icon: Factory,
     title: "Üretim Terminali",
-    description: "Mobil uyumlu: lot seç, kamera, webcam ve adım ilerlet.",
+    description: "Atölyede telefon veya tabletten lot seçme, kamera, webcam ve adım ilerletme.",
   },
-  { icon: Video, title: "Kamera Yönetimi", description: "IP kamera CRUD ve HLS canlı önizleme." },
+  { icon: Video, title: "Kamera Yönetimi", description: "IP kameraları ekleme, düzenleme, silme ve HLS ile canlı izleme." },
   {
     icon: Activity,
     title: "IoT Dashboard",
-    description: "Gerçek zamanlı cihaz durumu, telemetri ve alarm paneli.",
+    description: "Cihazların o anki durumu, gelen ölçümler ve açık alarmlar.",
   },
   {
     icon: Gauge,
     title: "IoT Cihaz Yönetimi",
-    description: "Sensör/PLC/kamera ekle, eşik ayarla ve Modbus oku.",
+    description: "Sensör, PLC veya kamera tanımlama, sınır belirleme, Modbus okuma.",
   },
   {
     icon: ClipboardCheck,
     title: "Kalite Kontrol",
-    description: "Test sonuçları, NCR (uygunsuzluk) ve CAPA yönetimi.",
+    description: "Test kayıtları, uygunsuzluk (NCR) bildirimleri ve CAPA takibi.",
   },
   {
     icon: Truck,
     title: "Satış & Sevkiyat",
-    description: "Sipariş CRUD, durum yönetimi ve sevkiyat takibi (takip no, lot bağlantısı).",
+    description: "Siparişlerin açılıp güncellenmesi, durumları ve takip numarası ile lota bağlanan sevkiyatlar.",
   },
   {
     icon: FileCheck2,
     title: "ISO Uyumluluk",
-    description: "ISO 9001/14001 madde takibi, risk seviyesi ve denetim yönetimi.",
+    description: "ISO 9001 ve 14001 maddelerinin durumu, risk derecesi ve denetim planı.",
   },
   {
     icon: Network,
     title: "İzlenebilirlik",
-    description: "Lot genealogy grafiği ile hammadde → ürün zinciri.",
+    description: "Hammaddeden bitmiş ürüne uzanan zinciri gösteren lot soy ağacı grafiği.",
   },
   {
     icon: QrCode,
     title: "Dijital Ürün Pasaportu (DPP)",
-    description: "Malzeme, geri dönüşüm bilgisi ve QR kod ile AB regülasyon uyumu.",
+    description: "Malzeme ve geri dönüşüm bilgisini QR kodla sunarak AB düzenlemelerine uyum.",
   },
   {
     icon: Users,
     title: "Kullanıcı & Rol Yönetimi",
-    description: "7 rollü RBAC, JWT auth ve sayfa bazlı erişim kontrolü.",
+    description: "Yedi rollü RBAC, JWT ile oturum ve her sayfa için ayrı erişim izni.",
   },
 ];
 
 const roles = [
-  { role: "Admin", scope: "Tüm yetkiler; ayarlar ve kullanıcı yönetimi" },
-  { role: "Satış", scope: "Siparişler, müşteriler, sevkiyat ve DPP" },
-  { role: "Üretim", scope: "Terminal, lotlar, IoT cihaz ve kamera" },
-  { role: "Kalite", scope: "Kalite kontrol, NCR/CAPA, ISO ve IoT" },
-  { role: "Tedarikçi", scope: "Tedarikçi bilgileri ve izlenebilirlik" },
-  { role: "Sevkiyat", scope: "Sevkiyatlar ve müşteriler" },
-  { role: "Viewer", scope: "Tüm sayfaları görüntüleme (salt okuma)" },
+  { role: "Admin", scope: "Sınırsız erişim, ayarlar ve kullanıcılar" },
+  { role: "Satış", scope: "Sipariş, müşteri, sevkiyat ve DPP ekranları" },
+  { role: "Üretim", scope: "Üretim terminali, lotlar, IoT cihazları, kameralar" },
+  { role: "Kalite", scope: "Kalite kontrol, NCR/CAPA, ISO ve IoT ekranları" },
+  { role: "Tedarikçi", scope: "Tedarikçi kayıtları ve izlenebilirlik" },
+  { role: "Sevkiyat", scope: "Sevkiyat ve müşteri ekranları" },
+  { role: "Viewer", scope: "Her sayfayı görür, hiçbir şeyi değiştiremez" },
 ];
 
 const benefits = [
   {
     icon: LineChart,
-    title: "Fire & hata azaltma",
+    title: "Daha az fire, daha az hata",
     description:
-      "Gerçek zamanlı sensör verisi ve eşik uyarılarıyla sorun oluşmadan müdahale; otomatik alarm sistemiyle fire oranında ciddi düşüş.",
+      "Sensör değerleri sınırı aştığında alarm hemen geldiği için hatalı parçalar çoğalmadan makineye müdahale edebilirsiniz; bu da fireyi aşağı çeker.",
   },
   {
     icon: Network,
-    title: "Şeffaf üretim",
+    title: "Her lotun hesabı verilebilir",
     description:
-      "Her lot için tam izlenebilirlik — hammadde → üretim → sevkiyat. Kamera kayıtları ve fotoğraf kanıtlarıyla her adım belgelenir.",
+      "Hammaddeden sevkiyata kadar bir lotun nereden geçtiği bellidir. Kamera kayıtları ve fotoğraflar her adımın belgesi olarak saklanır.",
   },
   {
     icon: Activity,
-    title: "Hızlı müdahale",
+    title: "Beklemeden aksiyon",
     description:
-      "Kritik alarm anında dashboard'da görünür; PLC'den okunan makine verisiyle anlık durum analizi yapılır.",
+      "Kritik alarm ekrana düştüğü anda PLC'den gelen makine değerlerine bakarak durumu yerinde değerlendirirsiniz.",
   },
   {
     icon: BadgeCheck,
-    title: "ISO & regülasyon uyumu",
+    title: "ISO ve AB düzenlemelerine hazırlık",
     description:
-      "ISO 9001/14001 madde bazlı takip, denetim yönetimi ve risk değerlendirmesi; DPP ile AB regülasyon uyumu.",
+      "ISO 9001 ve 14001 maddeleri tek tek izlenir, denetimler ve risk değerlendirmeleri planlanır. Dijital Ürün Pasaportu, AB tarafındaki yükümlülüklere uyum için kullanılır.",
   },
   {
     icon: ClipboardCheck,
-    title: "Maliyet kontrolü",
+    title: "Maliyetler göz önünde",
     description:
-      "Satış siparişi, sevkiyat takibi ve kalite maliyeti (NCR/CAPA) tek platformda; manuel kayıt ve raporlama süresinde belirgin azalma.",
+      "Siparişler, sevkiyatlar ve NCR/CAPA kaynaklı kalite maliyetleri aynı sistemde toplanır; elle kayıt tutmak ve rapor derlemek için harcanan zaman kısalır.",
   },
   {
     icon: ShieldCheck,
-    title: "Güvenli & ölçeklenebilir",
+    title: "Büyüdükçe genişleyen, güvenli yapı",
     description:
-      "Multi-tenant mimari, 7 rollü yetkilendirme ve JWT güvenlik. Bulut veya on-premise kurulum; sınırsız cihaz ekleme.",
+      "Multi-tenant mimari, yedi rollü yetki yapısı ve JWT oturum güvenliği. Bulutta ya da kendi sunucunuzda çalışır, cihaz sayısında sınır yoktur.",
   },
 ];
 
@@ -301,15 +301,15 @@ export default function Page() {
             <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
               {product.name}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
-                Endüstriyel IoT & üretim izleme sistemi
+                Fabrikanız için IoT tabanlı üretim takibi
               </span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.12}>
             <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
-              Sensör, PLC ve IP kamera entegrasyonuyla gerçek zamanlı üretim takibi, kalite kontrol,
-              lot bazlı izlenebilirlik ve otomatik alarm sistemi. Üretiminizi tek panelde şeffaf,
-              ölçülebilir ve güvenli hale getirin.
+              Sahadaki sensörleri, PLC&apos;leri ve IP kameraları birbirine bağlayan CyberQuan, hattınızda
+              olup biteni anında gösterir. Kalite kontrol kayıtları, lot geçmişi ve sınır aşımı
+              alarmları aynı ekranda; üretimde neyin ne zaman, nerede olduğunu tahmin etmek yerine görürsünüz.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.16} className="mt-6 flex flex-wrap gap-2">
@@ -346,8 +346,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Neden CyberQuan"
-            title="Sensörden sevkiyata, tüm üretim verisi tek panelde birleşir."
-            description="Sensör, PLC ve kamera verileri ortak bir cihaz ve lot modeli üzerinde çalışır; veri bir kez toplanır, dashboard'dan izlenebilirliğe her ekranda kullanılır."
+            title="Hat başındaki ölçümden sevkiyata kadar aynı kayıt."
+            description="Cihazlar ve lotlar ortak bir yapı üzerinde tanımlıdır. Sahadan gelen bir değer bir kere kaydedilir; dashboard, kalite ve izlenebilirlik ekranları aynı veriyi kullanır."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -375,9 +375,9 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="IoT Cihaz Sistemi"
-            title="Sensör, PLC ve kamera aynı platformda."
-            description="Farklı cihaz tipleri tek birleşik modelde toplanır; her biri kendi protokolüyle bağlanır ve aynı telemetri/alarm akışına yazar."
+            eyebrow="Bağlanan Cihazlar"
+            title="Dört veri kaynağı, ortak bir alarm mantığı."
+            description="Her cihaz türü kendine uygun protokolle bağlanır, ama ölçümler ve alarmlar aynı yolu izler."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {deviceLayers.map((layer) => (
@@ -411,8 +411,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="Sistem Mimarisi"
-            title="Cihazdan kullanıcıya beş katmanlı veri akışı."
-            description="IoT cihazlardan toplanan veri, protokol katmanı ve FastAPI backend üzerinden işlenir, veritabanına yazılır ve React arayüzde canlı gösterilir."
+            title="Sahadan ekrana beş katman."
+            description="Ölçüm cihazdan çıkar, protokol katmanını geçer, FastAPI tarafında işlenir, veritabanına kaydedilir ve React arayüzünde anlık olarak belirir."
           />
           <div className="mt-10 grid gap-4">
             {architectureLayers.map((layer, i) => (
@@ -439,9 +439,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Veri Akış Senaryoları"
-            title="Sensör verisinden alarma, kameradan kanıta."
-            description="Sistem, telemetri toplama, eşik kontrolü ve kanıt yönetimini otomatik akışlarla yürütür."
+            eyebrow="Örnek Akışlar"
+            title="Arka planda neler oluyor?"
+            description="Ölçüm toplama, sınır denetimi ve kanıt ekleme, kimse elle tetiklemeden aşağıdaki sırayla ilerler."
           />
           <MotionStagger className="mt-10 grid gap-5 lg:grid-cols-3">
             {flows.map((flow) => (
@@ -488,8 +488,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Modüller"
-            title="Dashboard'dan Dijital Ürün Pasaportu'na kadar tek arayüz."
-            description="React + TypeScript ile geliştirilmiş, mobil uyumlu modüller; her rol yalnızca yetkili olduğu ekranları görür."
+            title="Fabrikanın her masası için bir ekran."
+            description="React + TypeScript ile yazılan modüller telefonda da çalışır. Kullanıcı, rolünün izin verdiği ekranlardan fazlasını görmez."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {modules.map((mod) => (
@@ -519,8 +519,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="Rol Bazlı Erişim"
-            title="Yedi rol, JWT ile güvenli tek denetim izi."
-            description="Her kullanıcı yalnızca sorumlu olduğu ekranlara erişir; multi-tenant mimari ile firmalar birbirinden izole çalışır."
+            title="Satıştan sevkiyata, herkese kendi ekranı."
+            description="Yedi rol, JWT ile korunan oturumlar üzerinden çalışır. Multi-tenant yapı sayesinde farklı firmaların verileri birbirinden ayrı kalır."
           />
           <MotionReveal delay={0.05} className="mt-10 overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-left text-sm">
@@ -550,8 +550,8 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Müşteri Faydaları"
-            title="İşletmeye sağladığı ölçülebilir değer."
+            eyebrow="Size Kazandırdıkları"
+            title="Üretim müdürünün masasına ne gelir?"
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item) => (
@@ -581,8 +581,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="Teknoloji Stack"
-            title="FastAPI backend, React arayüz ve endüstriyel protokoller."
-            description="Python FastAPI üzerinde MQTT, Modbus ve HLS entegrasyonları; React + TypeScript arayüz; PostgreSQL/ClickHouse veri altyapısı. Bulut veya on-premise kurulum."
+            title="Açık, yaygın teknolojiler üzerine kurulu."
+            description="Sunucu tarafı Python FastAPI; MQTT, Modbus ve HLS bağlantıları bu katmanda. Arayüz React + TypeScript, veri PostgreSQL ve ClickHouse üzerinde. Bulutta ya da kendi sunucularınızda (on-premise) kurulabilir."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {techStack.map((tech) => (
@@ -604,8 +604,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="CyberQuan'ı kendi üretim hattınızda deneyin."
-            description="Cihaz entegrasyonundan ISO uyumluluğuna kadar tüm adımlarda yanınızdayız."
+            title="CyberQuan'ı kendi hattınızın verisiyle görün."
+            description="Sensör ve PLC bağlantılarını, kamera atamalarını ve ISO ekranlarını yazılım ekibimizle birlikte kuralım."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="CyberQuan" tone="dark" align="center" />
@@ -615,7 +615,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="BTM yazılım ekibinden diğer çözümler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

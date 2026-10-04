@@ -41,29 +41,29 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 20, suffix: "+", label: "MikroTik modülü" },
-  { value: 8, suffix: "", label: "captive portal teması" },
-  { value: 6, suffix: "", label: "yetki seviyesi (RBAC)" },
+  { value: 20, suffix: "+", label: "RouterOS modülü arayüzde" },
+  { value: 8, suffix: "", label: "hazır portal tasarımı" },
+  { value: 6, suffix: "", label: "RBAC rolü" },
 ];
 
 const pillars = [
   {
     icon: Wifi,
-    title: "Misafir ağı ilk saniyede karşılanır",
+    title: "Misafir, bağlanır bağlanmaz markanızı görür",
     description:
-      "8 hazır captive portal temasından birini seçin, logo ve metinlerinizle özelleştirin, RouterOS'a tek tuşla gönderin. SMS, e-posta, WhatsApp, sosyal medya, voucher, QR, LDAP veya şifreyle giriş.",
+      "Sekiz tasarımdan size uyanı alıp logonuzu ve karşılama yazınızı ekleyin; portal tek tıkla RouterOS'a yüklenir. Misafir dilerse SMS, e-posta, WhatsApp, sosyal hesap, voucher, QR, LDAP ya da şifreyle bağlanır.",
   },
   {
     icon: FileText,
-    title: "Her kayıt yasal olarak ispatlanabilir",
+    title: "5651 kayıtlarınız denetimde kendini kanıtlar",
     description:
-      "5651 logları HMAC-SHA256 hash zinciriyle birbirine bağlanır, günlük root hash TSA zaman damgasıyla mühürlenir. Kayıt silinemez; zincir kırılırsa anında tespit edilir.",
+      "Her log satırı HMAC-SHA256 ile bir önceki satıra zincirlenir; gün sonunda oluşan root hash'e TSA zaman damgası basılır. Silinen ya da oynanan bir satır zinciri bozar ve bu durum hemen görünür.",
   },
   {
     icon: Building2,
-    title: "Her firma kendi alanında",
+    title: "Müşterilerinizin verisi birbirine karışmaz",
     description:
-      "Platform → Firma → Şube → Cihaz hiyerarşisi. Her firma yalnızca kendi verisine erişir; beyaz etiket ile logo, alan adı ve tema müşterinize özel markalanır.",
+      "Yapı dört basamaklıdır: platform, firma, şube, cihaz. Bir firma başka bir firmanın kaydını göremez; beyaz etiket desteğiyle her müşteri paneli kendi logosu, alan adı ve renkleriyle açar.",
   },
 ];
 
@@ -72,177 +72,177 @@ const modules = [
     icon: Palette,
     title: "Captive Portal",
     description:
-      "8 profesyonel tema ile özelleştirilebilir giriş sayfası. SMS, e-posta, WhatsApp, sosyal medya, voucher, QR, LDAP ve şifre ile kimlik doğrulama. RouterOS'a tek tuşla push.",
+      "Sekiz tasarımdan türetilen, tamamen size göre düzenlenen karşılama sayfası. Giriş seçenekleri: SMS, e-posta, WhatsApp, sosyal hesap, voucher, QR, LDAP, şifre. Hazır sayfa RouterOS'a tek tıkla aktarılır.",
   },
   {
     icon: FileText,
     title: "5651 Loglama",
     description:
-      "HMAC-SHA256 hash zinciri ile değiştirilemez log kaydı. Her şube kendi bağımsız zincirine sahip; günlük root hash TSA zaman damgası ile mühürlenir.",
+      "HMAC-SHA256 zinciriyle sonradan düzeltilemeyen kayıt. Şubelerin zincirleri birbirinden ayrıdır; her günün root hash değeri TSA damgasıyla kapatılır.",
   },
   {
     icon: Building2,
     title: "Çoklu Kiracı (Multi-tenant)",
     description:
-      "Platform → Firma → Şube → Cihaz hiyerarşisi. Her firma kendi verilerine erişir. Beyaz etiket (logo, domain, tema) ile müşterinize özel markalama.",
+      "Platform, firma, şube ve cihaz basamaklarından oluşan yapı. Firmalar yalnızca kendi kayıtlarıyla çalışır; logo, alan adı ve tema beyaz etiketle müşteriye göre değişir.",
   },
   {
     icon: Network,
     title: "MikroTik Entegrasyonu",
     description:
-      "20'den fazla RouterOS modülü: VLAN, Bridge VLAN, DHCP, Hotspot, Firewall, NAT, Mangle, Queue, PPPoE, Wireless, Address List. DB öncelikli mimari.",
+      "VLAN, Bridge VLAN, DHCP, Hotspot, Firewall, NAT, Mangle, Queue, PPPoE, Wireless ve Address List dahil yirmiyi aşkın RouterOS modülü. Ayarlar önce veritabanına yazılır (DB öncelikli).",
   },
   {
     icon: Users,
     title: "RBAC & MFA",
     description:
-      "Süper Admin'den sadece okuma yetkisine 6 seviyeli rol. Detaylı denetim kaydıyla kim ne yaptı takibi. TOTP ile çok faktörlü kimlik doğrulama.",
+      "Süper Admin ile salt görüntüleme arasında altı rol basamağı. Hangi kullanıcının hangi değişikliği yaptığı denetim kaydında durur; girişte TOTP ile ikinci adım istenir.",
   },
   {
     icon: Activity,
     title: "İzleme & Alerting",
     description:
-      "Anlık router izleme: CPU, RAM, disk, sıcaklık ve interface trafiği. Eşik bazlı uyarılar; Telegram, e-posta, Slack ve webhook bildirimleri.",
+      "Router'ların CPU, RAM, disk, sıcaklık ve port trafiği canlı takip edilir. Belirlediğiniz eşik aşıldığında Telegram, e-posta, Slack ya da webhook üzerinden haber gelir.",
   },
   {
     icon: Layers,
     title: "Toplu İşlem (Bulk)",
     description:
-      "Tek ekrandan tüm router'lara VLAN, DHCP, firewall ve hotspot dağıtımı. Çok lokasyonlu kurumlar ve MSP'ler için zaman kazandıran toplu yönetim.",
+      "VLAN, DHCP, firewall ve hotspot ayarını tek seferde bütün router'lara gönderin. Çok şubeli işletmeler ve MSP'ler aynı değişikliği cihaz cihaz yapmaktan kurtulur.",
   },
   {
     icon: ShieldCheck,
     title: "Güvenlik & Lisans",
     description:
-      "İstemci izolasyonu, firewall, SHA256 bütünlük koruması ve anti-tamper sistemi. Lisans süresi dolduğunda API erişimi engellenir.",
+      "İstemciler birbirinden yalıtılır; firewall, SHA256 dosya bütünlüğü kontrolü ve anti-tamper koruması devrededir. Lisans bittiğinde API çağrıları kabul edilmez.",
   },
   {
     icon: Wallet,
     title: "Yedekleme & Geri Yükleme",
     description:
-      "RouterOS konfigürasyon yedeği (.backup) ve export (.rsc). Router bazında listeleme, oluşturma, silme ve geri yükleme.",
+      "Her router için .backup yedeği ve .rsc export dosyası alın; yedekleri cihaz bazında görüntüleyin, yenisini oluşturun, silin ya da geri dönün.",
   },
   {
     icon: Zap,
     title: "Hızlı Kurulum",
     description:
-      "Tek port (3001) üzerinde monolitik mimari. SQLite ile sıfır yapılandırma, 5 dakikada kurulum; üretimde PostgreSQL'e geçiş desteği.",
+      "Arayüz ve servis 3001 numaralı tek portta, monolitik yapıda çalışır. SQLite sayesinde ayar gerektirmeden 5 dakika içinde ayağa kalkar; canlı ortamda PostgreSQL'e taşınabilir.",
   },
 ];
 
 const architecture = `CyberHost Platform
-  ├── Firma A (Beyaz etiket: logo, domain, tema)
-  │     ├── Şube 1 → Router (MikroTik)
+  ├── Firma A (kendi logosu, alan adı ve teması)
+  │     ├── Şube 1 → MikroTik router
   │     │     ├── VLAN / Bridge VLAN / DHCP / PPPoE
   │     │     ├── Hotspot + Captive Portal + Voucher
   │     │     ├── Firewall (Filter + NAT + Mangle + Address List)
   │     │     ├── Queue (Simple + Tree) / Wireless
-  │     │     ├── Monitoring (CPU/RAM/Disk/Isı/Trafik)
-  │     │     └── 5651 Log + TSA Arşiv
-  │     └── Şube 2 → Router (MikroTik) ...
+  │     │     ├── İzleme (CPU/RAM/Disk/Isı/Trafik)
+  │     │     └── 5651 kayıtları + TSA arşivi
+  │     └── Şube 2 → MikroTik router ...
   ├── Firma B ...
-  └── Sistem Servisleri
+  └── Ortak servisler
         ├── RBAC (6 rol) + MFA (TOTP) + Audit Log
-        ├── SMS / E-posta (firma bazlı)
-        ├── LDAP/AD (sistem geneli)
-        ├── Alerting (Telegram/E-posta/Slack/Webhook)
-        └── Tek / Çoklu Router Modu`;
+        ├── SMS / E-posta (her firmaya ayrı)
+        ├── LDAP/AD (tüm platformda)
+        ├── Uyarılar (Telegram/E-posta/Slack/Webhook)
+        └── Tekli ya da çoklu router çalışması`;
 
 const portalThemes = [
-  { name: "Safir Premium", style: "Koyu lacivert + kırmızı aksan", use: "Otel, kurumsal" },
-  { name: "Fildişi Zarif", style: "Krem tonları + altın aksan", use: "Kafe, restoran, butik" },
-  { name: "Obsidyen Karanlık", style: "Tam siyah + kırmızı aksan", use: "Gece kulübü, bar" },
-  { name: "Neon Nights", style: "Koyu mor + cyan neon", use: "Eğlence mekânı, etkinlik" },
-  { name: "Mor İhtişam", style: "Mor gradyan + mor aksan", use: "AVM, alışveriş merkezi" },
-  { name: "Citrus Fresh", style: "Turuncu + sarı gradyan", use: "Plaj, havuz, yazlık" },
-  { name: "Okyanus Derin", style: "Lacivert + turkuaz", use: "Hastane, sağlık" },
-  { name: "Orman Premium", style: "Koyu yeşil + yeşil aksan", use: "Doğa oteli, kamp" },
+  { name: "Safir Premium", style: "Gece mavisi zemin, kırmızı vurgular", use: "Otel, kurumsal" },
+  { name: "Fildişi Zarif", style: "Krem zemin, altın detaylar", use: "Kafe, restoran, butik" },
+  { name: "Obsidyen Karanlık", style: "Simsiyah zemin, kırmızı vurgular", use: "Gece kulübü, bar" },
+  { name: "Neon Nights", style: "Koyu mor zemin, cyan neon çizgiler", use: "Eğlence mekânı, etkinlik" },
+  { name: "Mor İhtişam", style: "Mor geçişli zemin, mor vurgular", use: "AVM, alışveriş merkezi" },
+  { name: "Citrus Fresh", style: "Turuncudan sarıya geçiş", use: "Plaj, havuz, yazlık" },
+  { name: "Okyanus Derin", style: "Lacivert ve turkuaz tonlar", use: "Hastane, sağlık" },
+  { name: "Orman Premium", style: "Koyu yeşil zemin, açık yeşil vurgular", use: "Doğa oteli, kamp" },
 ];
 
 const authMethods = [
-  { title: "SMS Doğrulama", description: "Telefon numarasına tek kullanımlık şifre gönderimi." },
-  { title: "E-posta Doğrulama", description: "E-posta adresine bağlantı veya kod gönderimi." },
-  { title: "WhatsApp", description: "WhatsApp mesajı ile doğrulama kodu." },
-  { title: "Sosyal Medya", description: "Google, Facebook ve X hesabıyla giriş." },
-  { title: "Voucher", description: "Süre, kota veya hız bazlı basılı/dijital voucher." },
-  { title: "QR Kod", description: "Karekod okutarak anında bağlantı." },
-  { title: "Şifre", description: "Statik Wi-Fi şifresi ile giriş." },
-  { title: "LDAP/AD", description: "Kurumsal Active Directory ile kimlik doğrulama." },
+  { title: "SMS Doğrulama", description: "Misafirin cep telefonuna tek seferlik kod gider." },
+  { title: "E-posta Doğrulama", description: "Girilen adrese onay linki ya da kod iletilir." },
+  { title: "WhatsApp", description: "Kod, WhatsApp mesajı olarak ulaşır." },
+  { title: "Sosyal Medya", description: "Google, Facebook veya X hesabıyla bağlanma." },
+  { title: "Voucher", description: "Süreye, kotaya ya da hıza göre tanımlanan kâğıt veya dijital kupon." },
+  { title: "QR Kod", description: "Kodu telefonla okutan misafir hemen internete çıkar." },
+  { title: "Şifre", description: "Herkese verilen sabit Wi-Fi şifresiyle bağlanma." },
+  { title: "LDAP/AD", description: "Çalışanlar şirketin Active Directory hesabıyla girer." },
 ];
 
 const mikrotikModules = [
-  "VLAN Yönetimi (Interface VLAN)",
+  "Interface VLAN tanımları",
   "Bridge VLAN (Tagged/Untagged)",
-  "DHCP Server + Lease + Static",
-  "Hotspot + Kullanıcı Yönetimi",
-  "Captive Portal (8 Tema)",
-  "Firewall Filter + NAT + Mangle",
-  "Address Listeleri",
-  "Queue Simple + Tree",
-  "PPPoE Secret + Profile + Session",
-  "Wireless Registration + Access List",
+  "DHCP Server, Lease ve Static kayıtları",
+  "Hotspot ve kullanıcıları",
+  "Captive Portal, sekiz tasarımla",
+  "Firewall Filter, NAT ve Mangle",
+  "Address List yönetimi",
+  "Queue Simple ve Queue Tree",
+  "PPPoE Secret, Profile ve Session",
+  "Wireless Registration ve Access List",
   "IP Pool / DHCP Network",
-  "Sistem + Interface Monitoring",
+  "Sistem ve interface izleme",
 ];
 
 const complianceItems = [
-  "HMAC-SHA256 hash zinciri ile her log kaydı bir öncekine bağlanır",
-  "Günlük root hash TSA zaman damgası ile mühürlenir",
-  "Log kaydı silinemez, değiştirilemez — zincir kırılması anında tespit edilir",
-  "DHCP, hotspot, sistem ve istemci logları ayrı ayrı kaydedilir",
-  "Her şube kendi bağımsız hash zincirine sahiptir",
-  "Detaylı log sorgulama, doğrulama ve arşiv görüntüleme",
+  "Yeni log satırı, HMAC-SHA256 ile kendinden önceki satıra kilitlenir",
+  "Gün kapanırken root hash değerine TSA zaman damgası eklenir",
+  "Kayıtlar silinemez ve düzeltilemez; zincirdeki her kopukluk o an fark edilir",
+  "DHCP, hotspot, sistem ve istemci kayıtları ayrı tutulur",
+  "Şubelerin her birinin kendine ait hash zinciri vardır",
+  "Geçmiş kayıtlar aranabilir, doğrulanabilir ve arşivden açılabilir",
 ];
 
 const roles = [
-  { role: "Süper Admin", scope: "Tam yetki, tüm sistem, lisans yönetimi", who: "Platform sahibi" },
-  { role: "Platform Admin", scope: "Tüm firmaları yönetme", who: "Operasyon ekibi" },
-  { role: "Firma Admin", scope: "Kendi firması ve şubeleri", who: "Müşteri firma yöneticisi" },
-  { role: "Şube Admin", scope: "Kendi şubesi", who: "Şube müdürü" },
-  { role: "Operatör", scope: "Günlük işlemler (voucher, rapor)", who: "Resepsiyon, çalışan" },
-  { role: "Sadece Oku", scope: "Görüntüleme, işlem yapamaz", who: "Denetim, raporlama" },
+  { role: "Süper Admin", scope: "Sistemin tamamı ve lisans dahil her şey", who: "Platformu işleten taraf" },
+  { role: "Platform Admin", scope: "Platformdaki bütün firmalar", who: "Operasyon ekibi" },
+  { role: "Firma Admin", scope: "Yalnızca kendi firması ve bağlı şubeler", who: "Müşterideki yetkili" },
+  { role: "Şube Admin", scope: "Yalnızca sorumlu olduğu şube", who: "Şube sorumlusu" },
+  { role: "Operatör", scope: "Voucher basma, rapor alma gibi günlük işler", who: "Resepsiyon, personel" },
+  { role: "Sadece Oku", scope: "Ekranları görür, değişiklik yapamaz", who: "Denetçi, raporlama" },
 ];
 
 const securityHighlights = [
   {
     icon: ShieldCheck,
-    title: "Bütünlük koruması & anti-tamper",
+    title: "Dosya bütünlüğü ve anti-tamper",
     description:
-      "Kritik dosyalar SHA256 ile korunur. Yetkisiz değişiklik tespit edilirse sistem kapanır; lisans süresi dolduğunda tüm API istekleri engellenir.",
+      "Önemli dosyaların SHA256 özeti sürekli kontrol edilir; izinsiz bir değişiklik görülürse uygulama kendini durdurur. Lisans süresi bittiğinde API isteklerinin hiçbiri yanıtlanmaz.",
   },
   {
     icon: KeyRound,
-    title: "MFA (TOTP) & denetim kaydı",
+    title: "TOTP ile MFA, eksiksiz audit log",
     description:
-      "Google Authenticator ve Microsoft Authenticator ile çok faktörlü doğrulama. Tüm kullanıcı işlemleri detaylı audit log ile kayıt altına alınır.",
+      "Google Authenticator veya Microsoft Authenticator ile ikinci doğrulama adımı. Kullanıcıların panelde yaptığı her işlem ayrıntılarıyla denetim kaydına geçer.",
   },
 ];
 
 const monitoring = [
   {
     icon: Activity,
-    title: "Router kaynak izleme",
-    description: "CPU yükü, RAM kullanımı, disk doluluk oranı ve sıcaklık anlık izlenir.",
+    title: "Donanım kaynakları",
+    description: "İşlemci yükü, bellek, disk doluluğu ve cihaz sıcaklığı canlı olarak görünür.",
   },
   {
     icon: RefreshCw,
-    title: "Interface trafiği",
-    description: "Anlık TX/RX hızları ve toplam veri miktarı port bazında raporlanır.",
+    title: "Port trafiği",
+    description: "Her port için o anki TX/RX hızı ve toplam aktarılan veri raporlanır.",
   },
   {
     icon: Bell,
-    title: "Alert engine",
-    description: "Eşik bazlı akıllı uyarı kuralları tanımlayın (CPU > %90, RAM > %80 vb.).",
+    title: "Uyarı kuralları",
+    description: "CPU > %90 ya da RAM > %80 gibi eşikler koyun; aşıldığında kural tetiklenir.",
   },
   {
     icon: Network,
-    title: "Bildirim kanalları",
-    description: "Telegram, e-posta, Slack ve webhook entegrasyonlarıyla anında haberdar olun.",
+    title: "Haber kanalları",
+    description: "Uyarılar Telegram, e-posta, Slack veya webhook ile size ulaşır.",
   },
   {
     icon: PackageSearch,
-    title: "Geçmiş verisi",
-    description: "Tüm metrikler zaman serisi olarak saklanır ve grafiklerle görselleştirilir.",
+    title: "Metrik geçmişi",
+    description: "Ölçümler zaman serisi olarak tutulur, geriye dönük grafiklerle incelenir.",
   },
 ];
 
@@ -264,9 +264,9 @@ const deployment = [
   { label: "Bağımlılık", value: "Node.js 18+" },
   { label: "Veritabanı", value: "SQLite (geliştirme) / PostgreSQL (üretim)" },
   { label: "Port", value: "3001 (backend + frontend tek port)" },
-  { label: "Kurulum süresi", value: "5 dakikadan kısa" },
-  { label: "Kullanıcı sayısı", value: "Sınırsız (RBAC ile yönetim)" },
-  { label: "Router sayısı", value: "Sınırsız (çoklu router yönetimi)" },
+  { label: "Kurulum süresi", value: "5 dakikanın altında" },
+  { label: "Kullanıcı sayısı", value: "Limit yok, roller RBAC ile atanır" },
+  { label: "Router sayısı", value: "Limit yok, hepsi tek panelden" },
 ];
 
 const tiers = ["Professional", "MSP", "Enterprise"] as const;
@@ -274,16 +274,16 @@ const tiers = ["Professional", "MSP", "Enterprise"] as const;
 const tierMatrix: { feature: string; included: [boolean, boolean, boolean] }[] = [
   { feature: "Hotspot + Captive Portal (8 tema)", included: [true, true, true] },
   { feature: "5651 loglama + TSA", included: [true, true, true] },
-  { feature: "Voucher (süre / kota / hız / çoklu cihaz)", included: [true, true, true] },
-  { feature: "SMS / e-posta doğrulama", included: [true, true, true] },
+  { feature: "Voucher: süre, kota, hız, birden çok cihaz", included: [true, true, true] },
+  { feature: "SMS ya da e-postayla giriş", included: [true, true, true] },
   {
     feature: "Firewall + NAT + Mangle + VLAN + DHCP + PPPoE",
     included: [true, true, true],
   },
   { feature: "Wireless yönetimi", included: [false, true, true] },
   { feature: "Çoklu kiracı (multi-tenant)", included: [false, true, true] },
-  { feature: "Çoklu router + toplu işlem (bulk)", included: [false, true, true] },
-  { feature: "Router izleme + alerting", included: [false, true, true] },
+  { feature: "Birden çok router, toplu işlem (bulk)", included: [false, true, true] },
+  { feature: "Router izleme ve uyarılar", included: [false, true, true] },
   { feature: "Yedekleme & geri yükleme", included: [false, true, true] },
   { feature: "RBAC (6 rol) + audit log", included: [false, true, true] },
   { feature: "LDAP/AD entegrasyonu", included: [false, false, true] },
@@ -311,16 +311,16 @@ export default function Page() {
             <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
               {product.name}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
-                Wi-Fi hotspot ve ağ yönetim platformu
+                Misafir Wi-Fi ve MikroTik ağlarını yöneten platform
               </span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.12}>
             <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
-              CyberHost; otel, kafe, AVM, hastane ve kurumsal mekânlar için geliştirilmiş kapsamlı
-              bir Wi-Fi hotspot ve ağ yönetim platformudur. MikroTik RouterOS cihazlarıyla tam
-              uyumlu çalışır; merkezi yönetim, 5651 yasal loglama, 8 temalı captive portal, çoklu
-              kiracı mimarisi, RBAC, MFA, izleme ve alerting özelliklerini tek panelde toplar.
+              Otel lobisinde, kafede, AVM koridorunda ya da hastane bekleme salonunda misafirlerinize
+              internet açıyorsanız CyberHost bu işin tamamını üstlenir. MikroTik RouterOS cihazlarınıza
+              doğrudan bağlanır; captive portal (8 tasarım), 5651 kayıtları, çoklu kiracı yapısı, RBAC,
+              MFA, cihaz izleme ve uyarılar tek bir yönetim ekranından yürür.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.18}>
@@ -347,8 +347,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Neden CyberHost"
-            title="Misafir ağı, yasal loglama ve çoklu şube yönetimi tek panelde birleşir."
-            description="Portal tasarımı, kimlik doğrulama, firewall kuralları ve 5651 arşivi aynı veri modeli üzerinde çalışır; ayar bir kez yapılır, her şubeye uygulanır."
+            title="Hotspot, 5651 arşivi ve şube ağları için ayrı araç aramayın."
+            description="Giriş sayfası, doğrulama yöntemleri, firewall kuralları ve log arşivi ortak bir veritabanını paylaşır. Bir ayarı merkezde tanımlarsınız, istediğiniz şubelere dağıtırsınız."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -376,8 +376,8 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Temel Özellikler"
-            title="Captive portaldan yedeklemeye kadar on modül."
+            eyebrow="Modüller"
+            title="On modül, bir yönetim ekranı."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {modules.map((mod) => (
@@ -413,8 +413,8 @@ export default function Page() {
               <SectionHeading
                 tone="dark"
                 eyebrow="Sistem Mimarisi"
-                title="Platformdan cihaza kadar dört katmanlı hiyerarşi."
-                description="Her firma kendi şubelerini, her şube kendi router'ını yönetir. Sistem servisleri (RBAC, MFA, SMS/e-posta, LDAP, alerting) tüm katmanların üzerinde ortak çalışır."
+                title="Platform, firma, şube, cihaz: dört basamak."
+                description="Firmalar şubelerini, şubeler kendi router'larını görür. RBAC, MFA, SMS/e-posta, LDAP ve uyarı servisleri ise bu basamakların hepsine ortak hizmet verir."
               />
             </MotionReveal>
             <MotionReveal delay={0.1} direction="left" blur>
@@ -423,7 +423,7 @@ export default function Page() {
                   {architecture}
                 </pre>
                 <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-300">
-                  Tek / çoklu router modu · DB öncelikli mimari
+                  Tekli veya çoklu router · Önce veritabanı, sonra cihaz
                 </p>
               </div>
             </MotionReveal>
@@ -435,8 +435,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Captive Portal"
-            title="Mekânınıza uyan giriş deneyimini sekiz temadan seçin."
-            description="Her tema renk, logo ve metin düzeyinde tamamen özelleştirilebilir; hazırladığınız portal RouterOS'a tek tuşla gönderilir."
+            title="Sekiz hazır tasarım, her biri bir mekân tipine göre."
+            description="Renkleri, logoyu ve yazıları dilediğiniz gibi değiştirin. Bitirdiğiniz sayfa tek tıkla router'a yüklenir."
           />
           <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {portalThemes.map((theme) => (
@@ -457,7 +457,7 @@ export default function Page() {
           <div className="mt-16">
             <SectionHeading
               eyebrow="Kimlik Doğrulama"
-              title="Sekiz farklı yöntemle misafir girişi."
+              title="Misafir hangi yolla bağlanmak isterse."
             />
             <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {authMethods.map((method) => (
@@ -481,8 +481,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="MikroTik Modülleri"
-            title="RouterOS'un yönettiğiniz her katmanı arayüzde karşılığını bulur."
-            description="VLAN'dan queue'ya, PPPoE'den wireless erişim listelerine kadar 20'den fazla modül; değişiklikler önce veritabanına yazılır, ardından cihaza uygulanır."
+            title="RouterOS ayarlarını tarayıcıdan yönetin."
+            description="Yirmiyi aşkın modül VLAN, queue, PPPoE ve wireless erişim listeleri gibi konuları kapsar. Yaptığınız değişiklik önce veritabanına kaydedilir, sonra router'a gönderilir."
           />
           <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {mikrotikModules.map((mod) => (
@@ -504,8 +504,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="5651 Uyumluluğu"
-            title="Loglarınız kanunun aradığı bütünlükle saklanır."
-            description="CyberHost, 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi kanununa uyumlu, değiştirilemez bir loglama altyapısı sunar."
+            title="Denetçi sorduğunda kayıtlar hazır ve dokunulmamış."
+            description="CyberHost, 5651 sayılı Kanun kapsamında tutulması gereken erişim kayıtlarını sonradan oynanamayacak biçimde saklar."
           />
           <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2">
             {complianceItems.map((item) => (
@@ -526,8 +526,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Yetkilendirme & Güvenlik"
-            title="Altı rol, tek denetim izi."
-            description="Her kullanıcı yalnızca sorumlu olduğu katmanı görür; yaptığı her işlem audit log'a yazılır."
+            title="Kim neyi görür, kim neyi değiştirir."
+            description="Kullanıcılar sadece kendilerine verilen basamakta çalışır; tıkladıkları her işlem audit log'da iz bırakır."
           />
           <MotionReveal delay={0.05} className="mt-10 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-left text-sm">
@@ -583,7 +583,7 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="İzleme & Uyarı"
-            title="Router'ınız yavaşlamadan önce haberiniz olsun."
+            title="Sorunu müşteriniz değil, siz önce görün."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {monitoring.map((item) => (
@@ -613,8 +613,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="Teknik Altyapı"
-            title="Tek porttan çalışan, sıkıcı ve dayanıklı bir stack."
-            description="Node.js + Express üzerinde Prisma ORM, React + Vite arayüz ve node-routeros ile SSL/TLS korumalı RouterOS API bağlantısı. Geliştirmede SQLite ile sıfır yapılandırma, üretimde PostgreSQL."
+            title="Sade, kanıtlanmış bileşenler; tek port."
+            description="Sunucu tarafı Node.js + Express ve Prisma ORM, arayüz React + Vite ile yazıldı. Router'larla node-routeros üzerinden SSL/TLS şifreli konuşur. Test ortamında SQLite yeter, canlıda PostgreSQL kullanılır."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {techStack.map((tech) => (
@@ -646,8 +646,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Sürümler"
-            title="Tek şubeden MSP ölçeğine kadar üç sürüm."
-            description="Professional tek lokasyonlu işletmeler, MSP çok şubeli operasyonlar, Enterprise ise kurumsal kimlik ve beyaz etiket ihtiyacı olan yapılar için tasarlandı."
+            title="İhtiyacınıza göre üç paket."
+            description="Tek noktada hizmet veren işletmeye Professional, çok sayıda şube ya da müşteri yöneten ekibe MSP, kendi kimlik altyapısını ve markasını kullanmak isteyen kuruma Enterprise uygundur."
           />
           <MotionReveal delay={0.05} className="mt-10 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-left text-sm">
@@ -709,8 +709,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="CyberHost'u kendi MikroTik altyapınızda deneyin."
-            description="Kurulumdan captive portal tasarımına ve 5651 arşivine kadar tüm adımlarda yanınızdayız."
+            title="CyberHost'u kendi router'larınızla görün."
+            description="Kurulumu, portal tasarımını ve 5651 arşiv ayarlarını yazılım ekibimizle birlikte yapalım."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="CyberHost" tone="dark" align="center" />
@@ -720,7 +720,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="BTM yazılım ekibinden diğer çözümler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

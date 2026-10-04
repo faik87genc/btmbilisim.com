@@ -35,82 +35,82 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 14, suffix: "", label: "hazır izin türü" },
-  { value: 100, suffix: "%", label: "onay adımı denetim logunda" },
-  { value: 256, suffix: "-bit", label: "AES-GCM ile PII şifreleme" },
+  { value: 14, suffix: "", label: "önceden tanımlı izin türü" },
+  { value: 100, suffix: "%", label: "onay adımı kayda geçer" },
+  { value: 256, suffix: "-bit", label: "AES-GCM ile kişisel veri (PII) şifrelemesi" },
 ];
 
 const problems = [
-  "İzin bakiyeleri elle takip ediliyor, devreden izin günleri karışıyor.",
-  "Onay akışının kaydı tutulmuyor; “ben sana söylemiştim” tartışmaları çıkıyor.",
-  "Aynı holding altındaki her şirket için ayrı ayrı Excel tablosu tutuluyor.",
-  "Yıllık izin çizelgesi ve departman doluluk raporları saatler alıyor.",
-  "TC Kimlik No gibi hassas veriler dosyalarda düz metin olarak duruyor.",
+  "Kalan izinler elle hesaplanıyor; geçen yıldan devreden günler birbirine karışıyor.",
+  "Kimin neyi onayladığı kayıt altında değil; sözlü verilen onaylar sonradan tartışmaya dönüşüyor.",
+  "Grup şirketlerinin her biri için ayrı bir Excel dosyası güncelleniyor.",
+  "Yıllık izin planını ve departman doluluk raporunu hazırlamak saatlerinizi alıyor.",
+  "TC Kimlik No gibi kişisel bilgiler dosyalarda şifresiz bekliyor.",
 ];
 
 const coreFeatures = [
   {
     icon: Building2,
-    title: "Çok Firmalı Yapı (Multi-Tenant)",
+    title: "Çok Firmalı Mimari (Multi-Tenant)",
     description:
-      "Her firma yalnızca kendi verisini, temasını ve logosunu görür. Tek bir global admin hesabı tüm firmaları tek panelden yönetir ve aralarında anında geçiş yapar.",
+      "Firmalar yalnızca kendi verilerine, temalarına ve logolarına erişir. Global admin ise bütün firmaları aynı panelden yönetir ve tek tıkla firmalar arasında geçiş yapar.",
   },
   {
     icon: Mail,
-    title: "E-posta ile Tek Tıkla Onay",
+    title: "E-postadan Tek Tıkla Karar",
     description:
-      "Amir, sisteme giriş yapmadan e-postadaki Onayla / Reddet butonuyla karar verebilir. Link imzalıdır, 7 gün geçerlidir ve e-posta botları tarafından tetiklenemez.",
+      "Yönetici, uygulamaya girmeden e-postadaki Onayla veya Reddet butonuna basarak talebi sonuçlandırır. Bağlantı imzalıdır, 7 gün geçerlidir; e-posta güvenlik botlarının otomatik tıklamaları onu çalıştıramaz.",
   },
   {
     icon: RefreshCw,
-    title: "Hak Ediş ve Devreden Bakiye Otomasyonu",
+    title: "Hak Ediş ve Devir Otomasyonu",
     description:
-      "Kullanılabilir izin = bu yılki kanuni hak ediş + geçen yıldan devreden gün. Kullanım her zaman önce devredenden düşer; devreden günler yanmaz.",
+      "Kullanılabilir gün sayısı, bu yılın kanuni hakkı ile önceki yıldan aktarılan günlerin toplamıdır. İzin kullanıldıkça ilk olarak aktarılan günler düşülür ve bu günler yanmaz.",
   },
   {
     icon: Users,
-    title: "Esnek Yetkilendirme",
+    title: "Rol ve Departman Bazlı Yetki",
     description:
-      "personel, İK, admin ve global admin rollerinin yanında departman kapsamlı özel yetkiler: bir şefe yalnızca kendi ekibinin izinlerini onaylama veya raporlarını görme yetkisi tanımlanabilir.",
+      "Personel, İK, admin ve global admin rollerine ek olarak departmana özel yetkiler verilebilir; örneğin bir şef yalnızca kendi ekibinin izinlerini onaylar ya da o ekibin raporlarını görür.",
   },
   {
     icon: FileText,
-    title: "Raporlar ve Denetim Logu",
+    title: "Raporlama ve Denetim Kaydı",
     description:
-      "Yıllık izin çizelgesi, departman analizi ve izin listeleri Excel (.xls) ve PDF olarak iner. Her işlem önem düzeyli (low / normal / high) bir denetim kaydı bırakır; high kayıtlar asla silinmez.",
+      "İzin çizelgesi, departman analizi ve izin listelerini Excel (.xls) ya da PDF biçiminde indirebilirsiniz. Yapılan her işlem low / normal / high önem seviyesiyle kayda geçer; high seviyeli kayıtlar silinemez.",
   },
   {
     icon: CalendarDays,
-    title: "Kurumsal Görevlendirme Formu",
+    title: "Görevlendirme Formu",
     description:
-      "“Geçici / Dış Görevlendirme” talebinde ek form açılır; onaydan sonra hem personel hem amir, bilgilerle otomatik doldurulmuş kurumsal görevlendirme formunu PDF olarak indirir.",
+      "Talep türü olarak “Geçici / Dış Görevlendirme” seçildiğinde ek bir form açılır. Talep onaylanınca çalışan ve yöneticisi, bilgileri hazır yerleştirilmiş görevlendirme belgesini PDF olarak alabilir.",
   },
 ];
 
 const securityFeatures = [
   {
     icon: ShieldCheck,
-    title: "KVKK / PII Şifreleme",
+    title: "KVKK Uyumlu Kişisel Veri Şifreleme",
     description:
-      "TC Kimlik No, PII_ENCRYPTION_KEY ayarlandığında uygulama katmanında AES-256-GCM ile şifrelenip yazılır — canlı veritabanında da pg_dump yedeklerinde de düz metin durmaz.",
+      "PII_ENCRYPTION_KEY tanımlı olduğunda TC Kimlik No, uygulama katmanında AES-256-GCM ile şifrelenerek kaydedilir; ne canlı veritabanında ne de pg_dump yedeklerinde açık metin olarak bulunur.",
   },
   {
     icon: KeyRound,
-    title: "Hesap Koruması",
+    title: "Hesap Güvenliği",
     description:
-      "İlk girişte e-posta doğrulama zorunludur; 6 haneli kod veritabanına yazılmaz, imzalı ve 10 dk geçerli token içinde taşınır. Yeni personel ilk girişte kendi şifresini belirler.",
+      "İlk oturum açılışında e-posta adresinin doğrulanması şarttır. 6 haneli kod veritabanında tutulmaz; 10 dakika geçerli, imzalı bir token içinde taşınır. Yeni çalışanlar şifrelerini ilk girişte kendileri oluşturur.",
   },
   {
     icon: FileText,
-    title: "Yüklenen İzin Belgeleri",
+    title: "İzin Belgesi Yükleme",
     description:
-      "Rapor/mazeret belgeleri PDF/JPEG/PNG olarak (en fazla 5 MB) kalıcı diske yazılır; veritabanında yalnızca tahmin edilemeyen bir referans tutulur ve belgeyi sadece yetkili kişiler indirir.",
+      "Sağlık raporu ve mazeret belgeleri PDF, JPEG veya PNG biçiminde (en çok 5 MB) kalıcı diskte saklanır. Veritabanında sadece tahmin edilemeyen bir referans bulunur; belgeye yalnızca yetkisi olanlar erişir.",
   },
   {
     icon: MessageCircle,
-    title: "Bildirimler",
+    title: "Bildirim Kanalları",
     description:
-      "İzin talebi / onay / ret / iptal durumlarında e-posta (SMTP) ve Meta WhatsApp Cloud API üzerinden onaylı şablonlarla bildirim. Yapılandırılmadıkça hiçbir gerçek mesaj gönderilmez.",
+      "Talep, onay, ret ve iptal adımlarında SMTP ile e-posta, Meta WhatsApp Cloud API ile de onaylı şablon mesajları gönderilir. Ayarlar yapılmadan dışarıya hiçbir gerçek bildirim çıkmaz.",
   },
 ];
 
@@ -195,9 +195,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Neyi Çözüyor?"
-            title="İzin süreci hâlâ WhatsApp mesajları ve Excel tablolarıyla yürüyor."
-            description="Otium bu işi kurumsallaştırır: her talep imzalı bir kayıt bırakır, bakiyeler otomatik hesaplanır, raporlar tek tıkla iner ve hassas veriler şifreli saklanır."
+            eyebrow="Hangi Sorunu Çözer?"
+            title="İzinleri hâlâ WhatsApp yazışmaları ve Excel dosyalarıyla mı yönetiyorsunuz?"
+            description="Otium izin yönetimine düzen getirir: talepler imzalı kayıtlarla izlenir, bakiyeler kendiliğinden hesaplanır, raporlar tek tıkla hazırlanır, kişisel veriler şifrelenerek tutulur."
           />
           <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2">
             {problems.map((problem) => (
@@ -222,8 +222,8 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Öne Çıkan Özellikler"
-            title="İzin talebinden onaya, hak edişten raporlamaya tek platform."
+            eyebrow="Temel Özellikler"
+            title="Talep, onay, hak ediş ve raporlama aynı yazılımda."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {coreFeatures.map((feature) => (
@@ -258,9 +258,9 @@ export default function Page() {
             <MotionReveal direction="right">
               <SectionHeading
                 tone="dark"
-                eyebrow="Hak Ediş ve Devreden Bakiye"
-                title="Bütün ekranlarda tek ve tutarlı bir bakiye formülü."
-                description="Kullanım önce devreden günlerden düşülür, devreden günler yanmaz. Başlamış bir izin iptal edilirse geçmiş günler kullanılmış sayılır; izin otomatik düne kadar kısaltılır, yalnızca gelecekteki iş günleri bakiyeye iade edilir."
+                eyebrow="Bakiye Hesabı"
+                title="Her ekranda aynı formül, aynı bakiye."
+                description="İlk olarak önceki yıldan aktarılan günler harcanır ve bu günler kaybolmaz. Başlamış bir izni iptal ettiğinizde geride kalan günler kullanılmış kabul edilir: izin bir önceki güne kadar kısaltılır, bakiyeye yalnızca ileri tarihli iş günleri geri eklenir."
               />
             </MotionReveal>
             <MotionReveal delay={0.1} direction="left" blur>
@@ -271,9 +271,9 @@ export default function Page() {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&minus; kullanılan &minus; bekleyen
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Yıllık kanuni hak ediş her yıl otomatik işlenir; geçen yıldan
-                  kalan günler devreden bakiye olarak taşınır ve her zaman önce o
-                  günler harcanır.
+                  Kanuni yıllık hak, her yıl sistem tarafından hesaba eklenir.
+                  Önceki yıldan artan günler devreden bakiyeye aktarılır ve izin
+                  kullanımında ilk sırada bu günler düşülür.
                 </p>
               </div>
             </MotionReveal>
@@ -284,8 +284,8 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Güvenlik ve Uyum"
-            title="Hassas veriler yetkili ellerde ve şifreli kalır."
+            eyebrow="Güvenlik ve KVKK"
+            title="Kişisel veriler şifrelenir, yalnızca yetkililer görür."
           />
           <MotionStagger className="mt-10 grid gap-5 sm:grid-cols-2">
             {securityFeatures.map((feature) => (
@@ -314,8 +314,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             tone="dark"
-            eyebrow="Türkiye Mevzuatına Uygun"
-            title="Her yeni firma geniş bir varsayılan izin türü setiyle başlar."
+            eyebrow="Türk Mevzuatına Göre Hazır"
+            title="Sisteme eklenen her firma, kapsamlı bir hazır izin türü listesiyle açılır."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {leaveTypes.map((type) => (
@@ -333,9 +333,9 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Teknoloji"
-            title="Uçtan uca TypeScript, Docker ile tek komutta ayağa kalkar."
-            description="Frontend ve API tek bir Caddy servisi üzerinden HTTPS ile dışarı açılır; API container'ı doğrudan dışarıya açık değildir. backup servisi varsayılan olarak 6 saatte bir .sql.gz yedeği alır."
+            eyebrow="Teknoloji Altyapısı"
+            title="Baştan sona TypeScript; Docker ile tek komutla kurulur."
+            description="Frontend ile API, tek bir Caddy servisinin arkasından HTTPS üzerinden yayınlanır; API container'ına dışarıdan doğrudan erişilemez. backup servisi ön tanımlı ayarla her 6 saatte bir .sql.gz yedeği üretir."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {techStack.map((tech) => (
@@ -357,8 +357,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="Otium'u kendi firma yapınızla test edin."
-            description="Kurulumdan çok firmalı yapılandırmaya kadar tüm adımlarda yanınızdayız."
+            title="Otium'u kendi şirket yapınızla deneyin."
+            description="Kurulum, firma tanımları ve ilk yapılandırma dahil her adımda ekibimiz sizinle birlikte."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="Otium" tone="dark" align="center" />
@@ -368,7 +368,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Yazılımlarımız" title="Yazılım ekibimizin geliştirdiği diğer ürünler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

@@ -15,33 +15,33 @@ export const products: Product[] = [
     slug: "atlas",
     code: "BTM / ATLAS",
     name: "Atlas",
-    tagline: "Bütçe ve Raporlama Yazılımı",
+    tagline: "Bütçe planlama ve sapma raporlama yazılımı",
     category: "Finans Yazılımı",
     description:
-      "Gelir ve gider bütçelerinizi, kullandığınız ERP sisteminden gelen canlı satınalma verileriyle aynı panelde karşılaştırıp hesap kalemi düzeyinde sapma analizi yapmanızı sağlayan kurumsal bütçe ve raporlama platformu.",
+      "Planladığınız gelir ve gider rakamlarını ERP'nizden anlık akan satınalma kayıtlarıyla yan yana koyan; her hesap kaleminde planın nerede aşıldığını ya da geride kaldığını gösteren kurumsal bütçe yazılımı.",
     metaDescription:
-      "SAP, Oracle, LOGO ve Mikro gibi ERP sistemlerinizle entegre çalışan, bütçe-gerçekleşme sapmasını hesap kalemi düzeyinde gösteren akıllı bütçe paneli.",
+      "Atlas bütçe yazılımı: SAP, Oracle, LOGO, Mikro gibi ERP'lerden veriyi anlık çeker, plan ile fiili harcama arasındaki farkı her hesap kaleminde raporlar.",
     features: [
-      "Gelir/gider bütçesi – gerçekleşme sapma raporlama",
-      "SAP, Oracle, LOGO, Mikro ve diğer ERP'lerle entegrasyon",
-      "Manuel ve toplu (Excel) veri girişi",
-      "Çoklu firma ve yetki bazlı kullanıcı yönetimi",
+      "Plan ile fiili gelir/gider arasındaki farkın raporlanması",
+      "SAP, Oracle, LOGO, Mikro ve benzeri ERP'lere bağlantı",
+      "Tek tek kayıt ya da Excel dosyasıyla toplu yükleme",
+      "Birden çok şirket, rol tabanlı kullanıcı yetkileri",
     ],
     faq: [
       {
-        question: "Atlas'ı kullanmak için ERP sistemimizi değiştirmemiz gerekiyor mu?",
+        question: "Atlas'a geçerken mevcut ERP yazılımımızı bırakmak zorunda mıyız?",
         answer:
-          "Hayır. Atlas, SAP, Oracle, LOGO, Mikro ve diğer yaygın ERP sistemleriyle entegre çalışacak şekilde tasarlandı; mevcut ERP'nizi değiştirmenize gerek yok.",
+          "Hayır. Atlas, kullandığınız ERP'nin yanında çalışır; SAP, Oracle, LOGO, Mikro ve yaygın diğer sistemlere bağlanarak veriyi oradan okur. ERP tarafında bir değişiklik yapmanız gerekmez.",
       },
       {
-        question: "Veri girişini manuel mi yapmam gerekiyor?",
+        question: "Rakamları elle mi gireceğiz?",
         answer:
-          "Hayır, ERP'nizden canlı veri senkronizasyonu sağlanır. Dilerseniz ek olarak manuel veya toplu (Excel) veri girişi de yapabilirsiniz.",
+          "Gerek yok; satınalma ve harcama verisi ERP'den anlık olarak aktarılır. ERP dışında kalan kalemler için tek tek giriş yapabilir ya da bir Excel dosyasını toplu olarak yükleyebilirsiniz.",
       },
       {
-        question: "Birden fazla firmamız var, tek panelden yönetebilir miyiz?",
+        question: "Grup şirketlerimizin bütçelerini aynı ekranda görebilir miyiz?",
         answer:
-          "Evet, Atlas çoklu firma desteği ve yetki bazlı kullanıcı yönetimiyle birden fazla şirketi tek panelden yönetmenize izin verir.",
+          "Evet. Atlas'ta birden çok şirket tanımlanır ve her kullanıcıya yalnızca sorumlu olduğu şirket veya bölümü gösteren roller atanır.",
       },
     ],
   },
@@ -49,33 +49,33 @@ export const products: Product[] = [
     slug: "cek-senet-programi",
     code: "BTM / TAHSİLAT",
     name: "Çek Senet Programı",
-    tagline: "Çek-senet takip sistemi.",
+    tagline: "Çek, senet ve vade takip yazılımı",
     category: "Finans Yazılımı",
     description:
-      "Çek ve senet portföyünüzü, vade takvimini ve tahsilat risklerini tek ekrandan yöneten, erken uyarı bildirimleri veren çek ve senet yönetim sistemi.",
+      "Elinizdeki ve verdiğiniz çek ile senetleri, yaklaşan vadeleri ve tahsil edilemeyecek kâğıt riskini aynı ekranda izlemenizi sağlayan; vade gelmeden sizi uyaran tahsilat takip yazılımı.",
     metaDescription:
-      "Çek ve senet portföyünüzü, vade takvimini ve tahsilat riskini tek ekrandan yöneten, erken uyarı bildirimli çek senet yönetim sistemi.",
+      "Çek senet programı: portföydeki her kâğıdın vadesini, ciro geçmişini ve tahsilat riskini tek ekranda izleyin; vade yaklaşınca otomatik uyarı alın.",
     features: [
-      "Vade takvimi ve otomatik hatırlatmalar",
-      "Ciro ve tahsilat hareket geçmişi",
-      "Risk skoruna göre portföy görünümü",
-      "Banka hesap mutabakatı",
+      "Vade takvimi, yaklaşan ödemeler için otomatik uyarılar",
+      "Her kâğıdın ciro ve tahsil hareketlerinin kaydı",
+      "Portföyün risk puanına göre sınıflandırılması",
+      "Banka hesaplarıyla karşılıklı kontrol (mutabakat)",
     ],
     faq: [
       {
-        question: "Çek ve senet portföyümüzü tek ekrandan mı takip edebiliriz?",
+        question: "Tüm çek ve senetleri tek bir listede görebilir miyiz?",
         answer:
-          "Evet, vade takvimi, ciro/tahsilat hareketleri ve risk skoruna göre portföy görünümü tek panelde sunulur.",
+          "Evet. Vade takvimi, ciro ve tahsil hareketleri ile risk puanına göre ayrılmış portföy aynı ekranda yer alır; ayrı tablolar tutmanız gerekmez.",
       },
       {
-        question: "Vade yaklaştığında bildirim alıyor muyuz?",
+        question: "Vadesi gelen bir kâğıdı gözden kaçırmamak için ne yapıyor?",
         answer:
-          "Evet, sistem otomatik hatırlatmalarla vade tarihlerini önceden bildirir, gecikme riskini azaltır.",
+          "Program vade tarihlerini sizin yerinize izler ve tarih yaklaştığında otomatik hatırlatma gönderir. Böylece tahsilatın ya da ödemenin gecikme ihtimali düşer.",
       },
       {
-        question: "Banka hesaplarımızla mutabakat yapabiliyor muyuz?",
+        question: "Banka kayıtlarıyla eşleştirme yapılabiliyor mu?",
         answer:
-          "Evet, banka hesap mutabakatı özelliğiyle çek/senet hareketlerinizi banka kayıtlarınızla karşılaştırabilirsiniz.",
+          "Evet. Mutabakat ekranında programdaki çek ve senet hareketleri banka hesap kayıtlarınızla karşılaştırılır, tutmayan satırlar ayrıca görünür.",
       },
     ],
   },
@@ -83,33 +83,33 @@ export const products: Product[] = [
     slug: "cyberware",
     code: "BTM / SOC",
     name: "CyberWare",
-    tagline: "Kurumsal siber güvenlik çözümü.",
+    tagline: "Uç nokta ve ağ güvenliği izleme yazılımı",
     category: "Siber Güvenlik Çözümleri",
     description:
-      "Uç nokta ve ağ trafiğini gerçek zamanlı izleyen, anomalileri tespit eden ve olay müdahale ekiplerini otomatik olarak uyaran kurumsal siber güvenlik çözümü.",
+      "Bilgisayarlarınızdaki ve ağınızdaki hareketleri kesintisiz takip eden, olağan dışı davranışı yakalayınca müdahale ekibine kendiliğinden haber veren kurumsal güvenlik izleme yazılımı.",
     metaDescription:
-      "Uç nokta ve ağ trafiğini gerçek zamanlı izleyen, tehditleri otomatik bildiren kurumsal siber güvenlik ve SOC çözümü.",
+      "CyberWare: uç noktaları ve ağ trafiğini anlık izler, olağan dışı davranışı yakalar, olayı SOC ekibine otomatik iletir. Kurumsal güvenlik izleme yazılımı.",
     features: [
-      "Gerçek zamanlı tehdit izleme",
-      "Uç nokta davranış analizi",
-      "Otomatik olay bildirimi",
-      "SOC ekipleri için olay panosu",
+      "Tehditlerin anlık olarak izlenmesi",
+      "Uç noktalarda davranış tabanlı analiz",
+      "Olay anında ekibe otomatik uyarı",
+      "SOC ekibine ayrılmış olay ekranı",
     ],
     faq: [
       {
-        question: "CyberWare gerçek zamanlı mı çalışıyor?",
+        question: "CyberWare olayları ne kadar hızlı görüyor?",
         answer:
-          "Evet, uç nokta ve ağ trafiğini gerçek zamanlı izler, anomalileri anlık tespit eder.",
+          "Uç noktalardan ve ağdan gelen veriyi sürekli işler; olağan dışı bir davranış oluştuğu anda kayda geçer ve görünür hâle gelir.",
       },
       {
-        question: "Bir tehdit tespit edildiğinde ekibimiz nasıl haberdar oluyor?",
+        question: "Şüpheli bir durumda kime, nasıl haber veriliyor?",
         answer:
-          "Otomatik olay bildirimi ile ilgili ekipleriniz anında uyarılır; SOC ekipleri için ayrı bir olay panosu da sunulur.",
+          "Tanımlı ekip üyelerine otomatik uyarı gider. SOC ekibi ise olayların tek yerde toplandığı ayrı bir ekrandan takip ve müdahale yapar.",
       },
       {
-        question: "Mevcut güvenlik ürünlerimizle birlikte kullanılabilir mi?",
+        question: "Kullandığımız antivirüs ve güvenlik duvarını kaldırmamız gerekir mi?",
         answer:
-          "Evet, CyberWare mevcut güvenlik altyapınızı tamamlayacak şekilde konumlandırılabilir.",
+          "Hayır. CyberWare mevcut güvenlik ürünlerinizin yerine değil, onların yanına konumlanacak ve görünürlüğü artıracak şekilde kurgulanabilir.",
       },
     ],
   },
@@ -117,43 +117,43 @@ export const products: Product[] = [
     slug: "cyberquan",
     code: "BTM / IIoT",
     name: "CyberQuan",
-    tagline: "IoT tabanlı üretim izleme sistemi.",
+    tagline: "Endüstriyel IoT üretim takip platformu",
     category: "Endüstriyel IoT & Üretim İzleme",
     description:
-      "Sensör, PLC ve IP kamera entegrasyonuyla üretim süreçlerini uçtan uca izleyen; lot bazlı izlenebilirlik, kalite kontrol, otomatik eşik alarmı ve ISO/DPP uyumluluğunu tek panelde toplayan endüstriyel IoT (IIoT) ve üretim izleme platformu.",
+      "Sahadaki sensörleri, PLC'leri ve IP kameraları tek ekrana bağlayarak hattın her adımını görünür kılan; lot geçmişi, kalite kayıtları, eşik aşımı alarmları ve ISO/DPP gerekliliklerini bir arada yöneten endüstriyel IoT (IIoT) platformu.",
     metaDescription:
-      "Sensör, PLC ve IP kamera verilerini MQTT/Modbus/HLS ile tek panelde toplayan; lot izlenebilirliği, otomatik alarm ve ISO/DPP uyumlu IoT üretim izleme sistemi.",
+      "CyberQuan IIoT platformu: MQTT sensör, Modbus PLC ve HLS kamera verisini tek ekranda toplar; lot geçmişi, eşik alarmı ve ISO/DPP kayıtlarını yönetir.",
     features: [
-      "MQTT sensör, Modbus PLC ve HLS kamera entegrasyonu",
-      "Gerçek zamanlı telemetri ve otomatik eşik alarmları",
-      "Lot bazlı üretim izlenebilirliği ve fotoğraf/kamera kanıtı",
-      "Kalite kontrol (NCR/CAPA), ISO uyumluluk ve Dijital Ürün Pasaportu (DPP)",
+      "Sensörler için MQTT, PLC için Modbus, kameralar için HLS bağlantısı",
+      "Anlık telemetri, değer sınırı aşılınca otomatik alarm",
+      "Her lotun adım adım geçmişi, fotoğraf ve görüntü kanıtıyla",
+      "NCR/CAPA kalite süreçleri, ISO takibi ve Dijital Ürün Pasaportu (DPP)",
     ],
     faq: [
       {
-        question: "CyberQuan hangi cihaz ve protokolleri destekliyor?",
+        question: "Hangi cihazları ve iletişim protokollerini bağlayabiliriz?",
         answer:
-          "Sensörler için MQTT, PLC/makine verisi için Modbus TCP, IP kameralar için HLS/RTSP ve fotoğraf kanıtı için tarayıcı webcam (getUserMedia) desteklenir. Tüm cihazlar tek birleşik tabloda yönetilir; OPC UA altyapısı hazırdır.",
+          "Sensör verisi MQTT ile, PLC ve makine verisi Modbus TCP ile, IP kamera yayını HLS/RTSP ile alınır. Fotoğraf kanıtı için tarayıcıdaki webcam (getUserMedia) kullanılabilir. Bütün cihazlar tek bir listeden yönetilir; OPC UA desteği için altyapı hazır durumdadır.",
       },
       {
-        question: "Alarmlar nasıl oluşuyor?",
+        question: "Alarm kuralları nasıl tanımlanıyor?",
         answer:
-          "Her cihaz için min/max eşik değeri tanımlarsınız. Gelen telemetri eşiği aştığında sistem otomatik olarak kritik veya uyarı seviyesinde alarm üretir ve dashboard'da anlık gösterir. Örneğin gürültü sensörü 85 dB eşiğini aşınca kritik alarm oluşur.",
+          "Her cihaza bir alt ve üst sınır girersiniz. Ölçülen değer bu aralığın dışına çıktığında platform, uyarı ya da kritik düzeyde alarm üretip ekranda hemen gösterir. Sözgelimi gürültü sensörü için 85 dB sınırı belirlerseniz, bu değer aşıldığında kritik alarm oluşur.",
       },
       {
-        question: "Üretim izlenebilirliğini nasıl sağlıyor?",
+        question: "Bir ürünün geçmişini geriye doğru izleyebilir miyiz?",
         answer:
-          "Her lot; hammadde kabulünden torna, ısıl işlem, kalite kontrol ve sevkiyata kadar adım adım takip edilir. Her adımda sensör verileri, kamera görüntüleri ve fotoğraf kanıtları lota bağlanır; lot soy ağacı (genealogy) ile hammadde–ürün zinciri görüntülenir.",
+          "Evet. Lot; hammaddenin teslim alınmasından tornalama, ısıl işlem ve kalite kontrolden sevkiyata kadar her aşamada kayıt altındadır. Her aşamanın sensör ölçümleri, kamera kayıtları ve fotoğrafları lota iliştirilir; genealogy (soy ağacı) görünümü hangi hammaddenin hangi ürüne dönüştüğünü gösterir.",
       },
       {
-        question: "ISO ve regülasyon uyumluluğu için ne sunuyor?",
+        question: "ISO denetimleri ve AB gereklilikleri için neler var?",
         answer:
-          "ISO 9001/14001 maddelerini bazlı takip, denetim yönetimi ve risk değerlendirmesi sunar. Dijital Ürün Pasaportu (DPP) ile malzeme, geri dönüşüm bilgisi ve QR kod üzerinden AB regülasyon uyumu sağlanır.",
+          "ISO 9001 ve 14001 maddelerine göre takip, denetim kayıtları ve risk değerlendirmesi yapılır. Dijital Ürün Pasaportu (DPP) modülü malzeme ve geri dönüşüm bilgisini QR kodla erişilebilir kılarak AB düzenlemelerine uyumu destekler.",
       },
       {
-        question: "Erişim yetkileri ve çok firmalı kullanım nasıl yönetiliyor?",
+        question: "Kullanıcı yetkileri ve birden çok firma nasıl ayrılıyor?",
         answer:
-          "JWT tabanlı kimlik doğrulama ve 7 rollü (Admin, Satış, Üretim, Kalite, Tedarikçi, Sevkiyat, Viewer) yetkilendirme ile her kullanıcı yalnızca yetkili sayfaları görür. Multi-tenant mimari sayesinde bulut veya on-premise kurulumda birden fazla firma izole çalışır.",
+          "Oturumlar JWT ile doğrulanır; Admin, Satış, Üretim, Kalite, Tedarikçi, Sevkiyat ve Viewer olmak üzere 7 rol vardır ve herkes yalnızca rolüne açık ekranları görür. Multi-tenant yapı sayesinde ister bulutta ister kendi sunucunuzda (on-premise) kurulsun, her firmanın verisi diğerlerinden ayrı tutulur.",
       },
     ],
   },
@@ -161,43 +161,43 @@ export const products: Product[] = [
     slug: "cyberhost",
     code: "BTM / WIFI",
     name: "CyberHost",
-    tagline: "Wi-Fi hotspot ve ağ yönetimi.",
+    tagline: "Misafir Wi-Fi ve MikroTik yönetim platformu",
     category: "Sistem & Network Çözümleri",
     description:
-      "MikroTik RouterOS cihazlarıyla tam uyumlu çalışan; 8 temalı captive portal, 5651 uyumlu değiştirilemez loglama, çoklu kiracı mimarisi ve router izleme özelliklerini tek panelde birleştiren Wi-Fi hotspot ve ağ yönetim platformu.",
+      "MikroTik RouterOS cihazlarınızı merkezden yöneten; 8 farklı temaya sahip giriş (captive portal) sayfası, 5651'e uygun ve sonradan değiştirilemeyen kayıt tutma, çok kiracılı yapı ve router sağlık takibini bir araya getiren misafir Wi-Fi platformu.",
     metaDescription:
-      "MikroTik uyumlu, 5651 loglamalı, 8 temalı captive portal sunan çoklu kiracı Wi-Fi hotspot ve ağ yönetim platformu.",
+      "CyberHost: MikroTik routerları merkezden yönetin; 8 temalı giriş sayfası, 5651'e uygun değiştirilemez kayıt ve çok şubeli yapı sunan misafir Wi-Fi platformu.",
     features: [
-      "8 temalı captive portal ve 8 kimlik doğrulama yöntemi",
-      "5651 uyumlu, HMAC-SHA256 hash zincirli değiştirilemez loglama",
-      "20'den fazla MikroTik RouterOS modülü ve toplu (bulk) yönetim",
-      "Çoklu kiracı yapı, RBAC (6 rol), MFA ve router izleme",
+      "8 temalı giriş sayfası, 8 farklı oturum açma yöntemi",
+      "5651'e uygun, HMAC-SHA256 hash zinciriyle mühürlenen kayıtlar",
+      "20'yi aşkın RouterOS modülü, tüm cihazlara toplu ayar dağıtımı",
+      "Çok kiracılı yapı, 6 rollü RBAC, MFA ve router sağlık takibi",
     ],
     faq: [
       {
-        question: "CyberHost hangi router'larla çalışıyor?",
+        question: "CyberHost ile hangi router markasını kullanmamız gerekiyor?",
         answer:
-          "CyberHost, MikroTik RouterOS cihazlarıyla tam uyumlu çalışacak şekilde geliştirildi. VLAN, DHCP, hotspot, firewall, NAT, mangle, queue, PPPoE ve wireless dahil 20'den fazla RouterOS modülünü panel üzerinden yönetebilirsiniz.",
+          "Platform MikroTik RouterOS için geliştirildi ve bu cihazlarla tam uyumludur. VLAN, DHCP, hotspot, firewall, NAT, mangle, queue, PPPoE ve wireless gibi 20'yi aşkın RouterOS modülünü cihaza tek tek bağlanmadan panelden ayarlarsınız.",
       },
       {
-        question: "5651 loglaması nasıl yapılıyor, kayıtlar değiştirilebilir mi?",
+        question: "5651 kayıtları nasıl tutuluyor, sonradan oynanabilir mi?",
         answer:
-          "Her log kaydı HMAC-SHA256 hash zinciriyle bir öncekine bağlanır ve günlük root hash TSA zaman damgasıyla mühürlenir. Kayıtlar silinemez veya değiştirilemez; zincirde bir kırılma olursa anında tespit edilir. Her şube kendi bağımsız hash zincirine sahiptir.",
+          "Hayır. Her kayıt HMAC-SHA256 ile bir önceki kayda zincirlenir; günün sonunda oluşan kök hash TSA zaman damgasıyla mühürlenir. Bir kaydın silinmesi ya da değiştirilmesi zinciri bozar ve bu durum hemen fark edilir. Her şubenin zinciri diğerlerinden bağımsızdır.",
       },
       {
-        question: "Misafirler ağa hangi yöntemlerle giriş yapabiliyor?",
+        question: "Misafirler ağa nasıl bağlanıyor?",
         answer:
-          "SMS, e-posta, WhatsApp, sosyal medya, voucher, QR kod, statik şifre ve LDAP/AD olmak üzere sekiz yöntem desteklenir. Giriş sayfası için 8 hazır tema sunulur; renk, logo ve metinler tamamen özelleştirilebilir.",
+          "Sekiz seçenek var: SMS, e-posta, WhatsApp, sosyal medya hesabı, voucher, QR kod, sabit şifre ve LDAP/AD. Giriş ekranı için 8 hazır tema bulunur; renkleri, logoyu ve yazıları kendi markanıza göre düzenleyebilirsiniz.",
       },
       {
-        question: "Birden fazla şubemiz var, tek merkezden mi yönetiyoruz?",
+        question: "Çok sayıda şubeyi tek yerden yönetmek mümkün mü?",
         answer:
-          "Evet. Platform → Firma → Şube → Cihaz hiyerarşisiyle tüm lokasyonlarınızı tek panelden yönetirsiniz. Toplu işlem (bulk) özelliğiyle VLAN, DHCP, firewall ve hotspot ayarlarını tüm router'lara tek ekrandan dağıtabilirsiniz.",
+          "Evet. Platform, firma, şube ve cihaz şeklinde kademeli bir yapı kurulur; bütün lokasyonlar aynı panelde görünür. VLAN, DHCP, firewall ve hotspot ayarlarını toplu işlemle tüm router'lara tek seferde gönderebilirsiniz.",
       },
       {
-        question: "Router'larımızın durumunu izleyip uyarı alabiliyor muyuz?",
+        question: "Router'larda bir sorun çıkarsa haberimiz olur mu?",
         answer:
-          "Evet. CPU, RAM, disk, sıcaklık ve interface trafiği anlık izlenir; tanımladığınız eşikler aşıldığında Telegram, e-posta, Slack veya webhook üzerinden bildirim alırsınız. Tüm metrikler zaman serisi olarak saklanır.",
+          "Olur. İşlemci, bellek, disk, sıcaklık ve arayüz trafiği sürekli ölçülür; belirlediğiniz sınır aşılınca Telegram, e-posta, Slack ya da webhook ile uyarı gelir. Ölçümler zaman serisi olarak saklandığı için geçmişe dönük inceleme de yapabilirsiniz.",
       },
     ],
   },
@@ -205,43 +205,43 @@ export const products: Product[] = [
     slug: "pentforce",
     code: "BTM / AI PENTEST",
     name: "PentForce",
-    tagline: "Otonom AI pentest platformu.",
+    tagline: "Yapay zekâ destekli otonom sızma testi platformu",
     category: "Siber Güvenlik Çözümleri",
     description:
-      "Web uygulamalarından network altyapısına, IoT/OT protokollerinden SCADA sistemlerine ve kaynak kod analizinden otomatik exploitasyona kadar 38 fazlı metodolojiyi otonom yürüten; özel local AI ile air-gapped ortamlarda internetsiz çalışan otonom AI pentest platformu.",
+      "Web uygulamaları, ağ altyapısı, IoT/OT ve SCADA protokolleri, kaynak kod incelemesi ve otomatik istismar adımlarını içeren 38 fazlık test sürecini insan müdahalesi beklemeden yürüten; kendi yerel yapay zekâ modeliyle internet bağlantısı olmayan (air-gapped) ağlarda da çalışan sızma testi platformu.",
     metaDescription:
-      "38 fazlı metodoloji ve 130+ araçla web, network, IoT/OT, bulut ve kaynak kod testini otonom yürüten; air-gapped ortamlarda internetsiz çalışan AI pentest platformu.",
+      "PentForce: 38 faz ve 130'u aşkın araçla web, ağ, IoT/OT, bulut ve kaynak kod testini kendiliğinden yürüten, internetsiz ağlarda da çalışan AI pentest aracı.",
     features: [
-      "38 fazlı metodoloji ve 130+ tümleşik güvenlik aracı",
-      "Web, network, IoT/OT, bulut (CSPM) ve kaynak kod (SAST) testi",
-      "Metasploit tabanlı otomatik exploit motoru ve payload evasion (FUD)",
-      "Özel local AI ile air-gapped, internetsiz çalışma",
+      "38 fazlık test akışı, 130'u aşkın entegre güvenlik aracı",
+      "Web, ağ, IoT/OT, bulut (CSPM) ve kaynak kod (SAST) testleri",
+      "Metasploit tabanlı otomatik istismar ve payload evasion (FUD)",
+      "Yerel yapay zekâ modeliyle internetsiz (air-gapped) kullanım",
     ],
     faq: [
       {
-        question: "PentForce internete kapalı (air-gapped) ortamlarda çalışıyor mu?",
+        question: "İnternete çıkışı olmayan bir ağda PentForce'u kullanabilir miyiz?",
         answer:
-          "Evet. Özel local AI ve önbelleklenmiş template'ler sayesinde internet veya API anahtarı gerektirmez. İnternetteyken cache_templates ile araçları önbelleğe alır, offline_bundle ile USB paketi oluşturur ve kapalı ağa taşıyarak tamamen lokal çalışırsınız.",
+          "Evet. Yerel yapay zekâ modeli ve önceden indirilmiş template'ler sayesinde ne internet ne de API anahtarı gerekir. Bağlantınız varken cache_templates ile araçları önbelleğe alır, offline_bundle ile bir USB paketi hazırlar, bu paketi kapalı ağa götürüp testi tamamen yerelde yürütürsünüz.",
       },
       {
-        question: "Hangi test alanlarını kapsıyor?",
+        question: "PentForce hangi alanları test ediyor?",
         answer:
-          "Web uygulama (22 faz), network altyapı, IoT/OT ve SCADA protokolleri, kaynak kod analizi (SAST), bulut güvenliği (CSPM), Active Directory ve post-exploit ile WAF/IPS/IDS atlatma dahil 38 faz ve 130'dan fazla araçla geniş bir yelpazeyi kapsar.",
+          "22 fazı web uygulamalarına ayrılmış toplam 38 fazda; ağ altyapısı, IoT/OT ve SCADA protokolleri, kaynak kod (SAST), bulut yapılandırması (CSPM), Active Directory, istismar sonrası adımlar ve WAF/IPS/IDS atlatma denemeleri yer alır. Bu işler için 130'u aşkın araç kullanılır.",
       },
       {
-        question: "Bulunan zafiyetler otomatik olarak sömürülüyor mu?",
+        question: "Tespit edilen açıklar otomatik olarak istismar ediliyor mu?",
         answer:
-          "Evet. Metasploit entegrasyonuyla AI ajan, uygun exploit playbook'unu (EternalBlue, Log4Shell, Tomcat deploy, SSH brute, SNMP crack vb.) otomatik tetikler; özel modüller için msf_exploit ve msf_payload desteklenir.",
+          "Evet. Yapay zekâ ajanı Metasploit entegrasyonu üzerinden duruma uyan istismar senaryosunu (EternalBlue, Log4Shell, Tomcat deploy, SSH brute, SNMP crack gibi) kendisi başlatır. Özel modüller için msf_exploit ve msf_payload komutları da kullanılabilir.",
       },
       {
-        question: "Kritik altyapıda sistem çökertme riskini nasıl yönetiyor?",
+        question: "Üretim ya da kritik altyapı sistemleri test sırasında çökebilir mi?",
         answer:
-          "Akıllı scoping ile Safe/Normal/Aggressive seviyelerini siz belirlersiniz. SCADA/ICS fazlarında otomatik güvenli mod devreye girer, kritik altyapı korunur ve hedefler risk analiziyle doğrulanır.",
+          "Bu riski siz yönetirsiniz: kapsam belirlerken Safe, Normal veya Aggressive seviyesini seçersiniz. SCADA/ICS fazlarına gelindiğinde güvenli mod kendiliğinden açılır, hedefler risk analiziyle teyit edilmeden işlem yapılmaz.",
       },
       {
-        question: "PentForce insan gücüyle yapılan sızma testinin yerini mi alıyor?",
+        question: "Uzman bir ekibin yaptığı sızma testine hâlâ ihtiyaç var mı?",
         answer:
-          "PentForce, otonom tarama ile süreci hızlandırır ve sürekliliğini sağlar; kritik projelerde uzman doğrulamasıyla birlikte kullanılması önerilir.",
+          "PentForce taramaları hızlandırır ve düzenli aralıklarla tekrarlamayı kolaylaştırır. Kritik sistemlerde bulguların bir güvenlik uzmanı tarafından doğrulanmasını öneriyoruz.",
       },
     ],
   },
@@ -249,43 +249,43 @@ export const products: Product[] = [
     slug: "fornet-enterprise",
     code: "BTM / MSP",
     name: "FORNET ENTERPRISE",
-    tagline: "MSP altyapı ve güvenlik platformu.",
+    tagline: "MSP'ler için izleme, erişim ve güvenlik platformu",
     category: "Sistem & Network Çözümleri",
     description:
-      "Binlerce dağınık varlığı tek panelden izleyen; çok kiracılı (multi-tenant) konteyner mimarisiyle müşterileri kriptografik olarak izole eden, çok markalı VPN otomasyonu ve Apache Guacamole + HashiCorp Vault tabanlı yetkili erişim (PAM) sunan MSP merkezi altyapı, erişim ve güvenlik yönetim platformu.",
+      "Farklı lokasyonlara dağılmış binlerce cihazı aynı ekranda takip eden; her müşteriyi konteyner tabanlı çok kiracılı yapıda kriptografik olarak ayrı tutan, farklı markaların VPN bağlantılarını otomatikleştiren ve Apache Guacamole ile HashiCorp Vault üzerine kurulu yetkili erişim (PAM) katmanı sunan, yönetilen hizmet sağlayıcılara (MSP) yönelik merkezi yönetim platformu.",
     metaDescription:
-      "MSP ve NOC/SOC ekipleri için çok kiracılı merkezi izleme, çok markalı VPN otomasyonu ve Guacamole+Vault tabanlı yetkili erişim (PAM) sunan platform.",
+      "FORNET ENTERPRISE: MSP ve NOC/SOC ekipleri için müşteri bazında izole izleme, farklı markalarda VPN otomasyonu ve Guacamole + Vault tabanlı PAM erişimi.",
     features: [
-      "Binlerce varlık için merkezi gösterge paneli ve anlık alarm",
-      "Çok kiracılı (multi-tenant) mikro-izolasyon: ayrı Docker ağı ve volume",
-      "Çok markalı VPN otomasyonu (Fortinet, Palo Alto, Cisco, Check Point, Sophos, OpenVPN)",
-      "Guacamole + HashiCorp Vault ile tarayıcı üzerinden Zero-Trust PAM erişimi",
+      "Binlerce cihazı tek ekranda gösteren panel, anlık alarmlar",
+      "Her müşteriye ayrı Docker ağı ve volume ile çok kiracılı izolasyon",
+      "Fortinet, Palo Alto, Cisco, Check Point, Sophos ve OpenVPN için VPN otomasyonu",
+      "Guacamole + HashiCorp Vault ile tarayıcıdan Zero-Trust PAM bağlantısı",
     ],
     faq: [
       {
-        question: "Farklı müşterilerin verileri birbirinden nasıl izole ediliyor?",
+        question: "Bir müşterinin verisi diğerine nasıl karışmıyor?",
         answer:
-          "Her kiracı, sisteme eklendiği andan itibaren kendine özel kriptografik ve mantıksal katmanlarda barındırılır: ayrı Docker bridge ağı, disk seviyesinde izole volume mimarisi ve bellek/ağ katmanında yapısal olarak engellenen çapraz kiracı sızıntısı (cross-tenant leak) ile %100 mikro-izolasyon sağlanır.",
+          "Her müşteri platforma eklendiği anda kendine ait kriptografik ve mantıksal katmanlara yerleştirilir. Ayrı bir Docker bridge ağı ve disk düzeyinde ayrılmış volume kullanılır; bellek ve ağ katmanında kiracılar arası veri geçişi (cross-tenant leak) mimari olarak engellenir.",
       },
       {
-        question: "Hangi VPN ve güvenlik markalarıyla entegre çalışıyor?",
+        question: "Hangi firewall ve VPN markalarını destekliyor?",
         answer:
-          "Check Point, Fortinet, Palo Alto, Cisco AnyConnect, Sophos ve OpenVPN ile yerleşik entegrasyon sunar. Her organizasyon için arka planda müstakil, konteyner tabanlı tünel servisleri ayağa kalkar; iç ağlara erişim için dinamik SOCKS5 ve HTTP proxy kanalları atanır.",
+          "Check Point, Fortinet, Palo Alto, Cisco AnyConnect, Sophos ve OpenVPN entegrasyonu hazır gelir. Her kurum için arka planda kendine ait, konteynerde çalışan bir tünel servisi başlatılır; iç ağlara ulaşmak için dinamik SOCKS5 ve HTTP proxy kanalları tanımlanır.",
       },
       {
-        question: "Yetkili erişim yönetimi (PAM) nasıl çalışıyor?",
+        question: "Yetkili erişim (PAM) tarafında kullanıcı ne görüyor?",
         answer:
-          "Apache Guacamole ve HashiCorp Vault bileşenleriyle Zero-Trust kurallarına göre erişim verilir. Kullanıcılar hiçbir yazılım indirmeden, tarayıcı üzerinden ve şifreleri görmeden SSH, RDP ve VNC ile tek tıkla bağlanır (PAM Connect); oturumlar video olarak kaydedilir, komutlar loglanır.",
+          "Erişimler Apache Guacamole ve HashiCorp Vault üzerinden, Zero-Trust ilkelerine göre açılır. Kullanıcı bilgisayarına bir şey kurmadan, tarayıcıdan ve parolayı hiç görmeden SSH, RDP veya VNC oturumunu tek tıkla başlatır (PAM Connect). Oturumların videosu kaydedilir, çalıştırılan komutlar loglanır.",
       },
       {
-        question: "Bir cihazda güvenlik ihlali şüphesi olursa ne yapabiliyoruz?",
+        question: "Şüpheli bir cihaz fark edildiğinde ne yapılabilir?",
         answer:
-          "Anlık Karantina (Isolate) özelliğiyle şüpheli cihazı tek butonla ağdan izole edebilirsiniz. Ayrıca kopan VPN tünellerini saniyeler içinde yakalayan keep-alive/heartbeat mekanizması ve eşik ihlallerinde tetiklenen görsel alarmlar bulunur.",
+          "Anlık Karantina (Isolate) düğmesiyle cihazı tek hamlede ağdan ayırabilirsiniz. Bunun yanında keep-alive/heartbeat kontrolü düşen VPN tünellerini saniyeler içinde fark eder, eşik aşımlarında ekranda görsel alarm çıkar.",
       },
       {
-        question: "Cihaz parolaları ve konfigürasyonlar nasıl korunuyor?",
+        question: "Cihaz parolaları ve yapılandırma dosyaları nerede saklanıyor?",
         answer:
-          "Kritik cihaz parolaları ve VPN anahtarları ana veritabanında asla açık metin tutulmaz; yalnızca Vault yolları saklanır ve güncellemeler Check-And-Set (CAS) mekanizmasıyla korunur. Tüm ağ cihazlarının konfigürasyonları marka bazlı otomatik yedeklenir, versiyonlanır ve merkezi kalıcı depolamada saklanır.",
+          "Parolalar ve VPN anahtarları ana veritabanına düz metin olarak yazılmaz; orada yalnızca Vault yolu bulunur ve değişiklikler Check-And-Set (CAS) ile korunur. Ağ cihazlarının yapılandırmaları markasına göre otomatik yedeklenir, sürüm geçmişiyle birlikte merkezi kalıcı depoda tutulur.",
       },
     ],
   },
@@ -293,33 +293,33 @@ export const products: Product[] = [
     slug: "otium",
     code: "BTM / OTIUM",
     name: "Otium",
-    tagline: "Çok firmalı İK izin yönetim platformu.",
+    tagline: "Grup şirketleri için izin yönetim yazılımı",
     category: "İnsan Kaynakları Yazılımı",
     description:
-      "İzin talebinden onay akışına, yıllık hak ediş ve devreden bakiye otomasyonundan KVKK uyumlu veri korumasına kadar tüm izin sürecini tek platformda toplayan, Türkiye iş mevzuatına göre tasarlanmış çok firmalı (multi-tenant) İK izin yönetim platformu.",
+      "Çalışanın izin isteğinden yöneticinin onayına, yıllık izin hakkının hesaplanmasından bir sonraki yıla aktarılan günlere ve KVKK kapsamında kişisel verinin korunmasına kadar bütün izin işlerini toplayan; Türk iş mevzuatı esas alınarak geliştirilmiş, birden çok şirketi destekleyen (multi-tenant) İK yazılımı.",
     metaDescription:
-      "Türkiye iş mevzuatına uygun, çok firmalı İK izin yönetim platformu — izin onay akışı, yıllık hak ediş ve KVKK uyumlu veri koruma bir arada.",
+      "Otium izin yönetim yazılımı: Türk iş mevzuatına göre yıllık izin hesabı, kademeli onay akışı, KVKK'ya uygun veri saklama ve birden çok şirket desteği.",
     features: [
-      "İzin talebi ve çok kademeli onay akışı",
-      "Yıllık hak ediş ve devreden bakiye otomasyonu",
-      "Türkiye iş mevzuatına uygun izin kuralları",
-      "KVKK uyumlu veri koruma, çok firmalı (multi-tenant) yapı",
+      "İzin isteği ve birden çok aşamalı onay süreci",
+      "Yıllık izin hakkı ve sonraki yıla aktarılan günlerin otomatik hesabı",
+      "Türk iş mevzuatına göre kurgulanmış izin kuralları",
+      "KVKK'ya uygun veri saklama, çok şirketli (multi-tenant) mimari",
     ],
     faq: [
       {
-        question: "Otium birden fazla şirketimiz için tek kurulumla mı çalışıyor?",
+        question: "Grubumuzdaki farklı şirketler için ayrı kurulum gerekir mi?",
         answer:
-          "Evet, çok firmalı (multi-tenant) mimarisi sayesinde farklı şirketlerinizin izin süreçlerini tek platformda, birbirinden ayrı olarak yönetebilirsiniz.",
+          "Gerekmez. Multi-tenant mimari sayesinde tek kurulumda her şirketin izin süreçleri, verileri birbirine karışmadan ayrı ayrı yönetilir.",
       },
       {
-        question: "Yıllık izin hakları ve devreden bakiye otomatik mi hesaplanıyor?",
+        question: "Kalan izin günlerini kim hesaplıyor?",
         answer:
-          "Evet, yıllık hak ediş ve devreden bakiye otomasyonu Türkiye iş mevzuatına uygun şekilde hesaplanır.",
+          "Otium. Yıllık izin hakkı ve bir sonraki yıla aktarılan bakiye, Türk iş mevzuatındaki kurallara göre sistem tarafından otomatik hesaplanır.",
       },
       {
-        question: "İzin onay süreci kaç kademeli olabiliyor?",
+        question: "Onay akışını kendi yapımıza göre kurabilir miyiz?",
         answer:
-          "İhtiyacınıza göre tek kademeli ya da çok kademeli onay akışı tanımlanabilir.",
+          "Evet. İzin talebinin yalnızca bir yöneticiden mi yoksa sırayla birden fazla kişiden mi onay alacağını şirketinizin yapısına göre belirleyebilirsiniz.",
       },
     ],
   },
@@ -327,33 +327,33 @@ export const products: Product[] = [
     slug: "orbit",
     code: "BTM / BT",
     name: "Orbit",
-    tagline: "IT operasyon ve envanter platformu.",
+    tagline: "IT envanter ve helpdesk platformu",
     category: "Sistem & Network Çözümleri",
     description:
-      "Kurumun donanım, yazılım ve lisans envanterini tek merkezden izleyen; IT talep, arıza ve bakım süreçlerini uçtan uca yöneten çok şirketli (multi-tenant) IT operasyon ve envanter takip platformu.",
+      "Şirketinizdeki donanımları, kurulu yazılımları ve lisansları tek bir kayıtta toplayan; destek talebi, arıza ve bakım işlerini açılışından kapanışına kadar takip eden, birden çok şirketi destekleyen (multi-tenant) IT operasyon yazılımı.",
     metaDescription:
-      "Donanım, yazılım ve lisans envanterinizi tek merkezden izleyen, IT talep ve arıza süreçlerini yöneten çok şirketli IT operasyon platformu.",
+      "Orbit IT envanter yazılımı: donanım, yazılım ve lisansları tek kayıtta toplayın; destek talebi, arıza ve bakım işlerini birden çok şirket için yönetin.",
     features: [
-      "Donanım ve yazılım envanterini tek merkezden takip",
-      "Lisans, garanti ve bakım süresi takibi",
-      "IT talep ve arıza (helpdesk) süreç yönetimi",
-      "Çok şirketli yapı ile merkezi raporlama",
+      "Donanım ve yazılım varlıklarının tek kayıtta toplanması",
+      "Lisans, garanti ve bakım bitiş tarihlerinin izlenmesi",
+      "Destek talebi ve arıza kayıtları için helpdesk modülü",
+      "Birden çok şirket, tüm grubu kapsayan raporlar",
     ],
     faq: [
       {
-        question: "Orbit hangi varlıkları takip ediyor?",
+        question: "Orbit'e hangi varlıkları kaydedebiliriz?",
         answer:
-          "Kurumunuzun donanım, yazılım ve lisans envanterini tek merkezden izler.",
+          "Bilgisayar, sunucu ve diğer donanımlarınızı, bunlara kurulu yazılımları ve sahip olduğunuz lisansları tek bir envanterde tutabilirsiniz.",
       },
       {
-        question: "IT talep ve arıza süreçlerini de bu platformdan mı yönetiyoruz?",
+        question: "Kullanıcıların destek talepleri de Orbit'ten mi yürüyor?",
         answer:
-          "Evet, helpdesk süreçleri (talep, arıza, bakım) Orbit üzerinden uçtan uca yönetilir.",
+          "Evet. Talep, arıza ve bakım kayıtları helpdesk modülünde açılır, atanır ve kapatılana kadar izlenir.",
       },
       {
-        question: "Birden fazla şirket için ayrı ayrı raporlama alabiliyor muyuz?",
+        question: "Şirketlerimizi tek tek ve toplu olarak raporlayabilir miyiz?",
         answer:
-          "Evet, çok şirketli yapı sayesinde merkezi raporlama alırken şirket bazında ayrım da yapabilirsiniz.",
+          "Evet. Çok şirketli yapıda hem tüm grubu kapsayan özet raporlar hem de her şirkete özel raporlar alınabilir.",
       },
     ],
   },

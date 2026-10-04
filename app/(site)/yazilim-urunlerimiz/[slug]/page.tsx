@@ -85,7 +85,7 @@ export default async function Page({
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container className="max-w-3xl">
-          <SectionHeading eyebrow={product.category} title="Öne çıkan özellikler" />
+          <SectionHeading eyebrow={product.category} title="Neler yapabilirsiniz?" />
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {product.features.map((feature) => (
               <li
@@ -106,7 +106,7 @@ export default async function Page({
 
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer yazılımlarımız" title="Bunlara da göz atın" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

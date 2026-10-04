@@ -44,9 +44,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 38, suffix: "", label: "fazlı pentest metodolojisi" },
-  { value: 130, suffix: "+", label: "tümleşik güvenlik aracı" },
-  { value: 8, suffix: "", label: "test kategorisi" },
+  { value: 38, suffix: "", label: "adımlık sızma testi akışı" },
+  { value: 130, suffix: "+", label: "entegre güvenlik aracı" },
+  { value: 8, suffix: "", label: "ayrı test başlığı" },
 ];
 
 const heroTags = [
@@ -67,114 +67,114 @@ const heroTags = [
 const pillars = [
   {
     icon: Brain,
-    title: "Keşiften rapora otonom karar",
+    title: "İlk taramadan rapora kadar kendi karar verir",
     description:
-      "Özel Local AI, 38 fazlı metodolojiyi kendi başına yürütür: doğru aracı seçer, çıktıyı analiz eder, zafiyeti doğrular ve bir sonraki adıma karar verir.",
+      "Özel Local AI, 38 adımlık akışı baştan sona kendi işletir; uygun aracı belirler, dönen çıktıyı yorumlar, bulduğu açığı teyit eder ve hangi adıma geçeceğini kendisi seçer.",
   },
   {
     icon: Lock,
-    title: "İnternete kapalı ağlarda çalışır",
+    title: "Dış bağlantısı olmayan ağlarda devreye girer",
     description:
-      "Tüm testler yerel ağda döner; API anahtarı gerektirmez, veri dışarı çıkmaz. Askeri tesis, banka ve fabrika gibi air-gapped ortamlar için tasarlandı.",
+      "Testlerin tamamı yerel ağ içinde yürür; herhangi bir API anahtarı istemez ve hiçbir veri dışarıya aktarılmaz. Askeri tesis, banka ve üretim hattı gibi air-gapped ortamlar düşünülerek geliştirildi.",
   },
   {
     icon: Target,
-    title: "Kritik altyapıyı koruyan scoping",
+    title: "Hassas sistemleri koruyan kapsam yönetimi",
     description:
-      "Safe / Normal / Aggressive seviyeleriyle test agresifliğini yönetin. SCADA/ICS fazlarında otomatik güvenli mod devreye girerek sistem çökertme riskini engeller.",
+      "Testin sertliğini Safe / Normal / Aggressive kademeleriyle siz belirlersiniz. SCADA/ICS adımlarında güvenli mod kendiliğinden açılır ve sistemin çökme ihtimalini ortadan kaldırır.",
   },
 ];
 
 const capabilities = [
   {
     icon: Globe,
-    title: "Web Uygulama Testi",
+    title: "Web Uygulaması Testi",
     description:
-      "22 fazlı web pentest metodolojisi: SQLi, XSS, SSRF, IDOR, API, GraphQL, RCE, auth bypass ve daha fazlası.",
+      "22 adımdan oluşan web sızma akışı: SQLi, XSS, SSRF, IDOR, API, GraphQL, RCE, oturum atlatma ve dahası tek tek denenir.",
   },
   {
     icon: Network,
-    title: "Network Altyapı Testi",
+    title: "Ağ Altyapısı Testi",
     description:
-      "Switch/VLAN güvenliği, SNMP enumerasyonu, DHCP saldırıları, firewall ACL bypass ve 802.1X testleri.",
+      "Switch/VLAN sağlamlığı, SNMP enumerasyonu, DHCP saldırıları, firewall ACL atlatma ve 802.1X kontrolleri.",
   },
   {
     icon: Radio,
-    title: "IoT & OT Güvenlik Testi",
+    title: "IoT ve OT Güvenlik Testi",
     description:
-      "MQTT broker taraması, Modbus/SCADA protokol testi, CoAP/BACnet keşfi ve default credential analizi.",
+      "MQTT broker taraması, Modbus/SCADA protokol denemeleri, CoAP/BACnet keşfi ve varsayılan parola analizi.",
   },
   {
     icon: Brain,
-    title: "AI Tabanlı Otonom",
+    title: "Yapay Zekâ Destekli Otonom Akış",
     description:
-      "Özel Local AI ile akıllı karar verme; keşiften exploitasyona ve raporlamaya kadar tüm süreç otonom.",
+      "Özel Local AI karar mekanizmasını üstlenir; keşiften sömürüye ve raporlamaya kadar bütün aşamalar kendiliğinden ilerler.",
   },
   {
     icon: Monitor,
-    title: "Web UI Dashboard",
+    title: "Web Arayüzü Paneli",
     description:
-      "Canlı WebSocket telemetri, tarama yönetimi, bulgu takibi, PDF rapor oluşturma ve logo yükleme.",
+      "Canlı WebSocket telemetrisi, tarama yönetimi, bulguların izlenmesi, PDF rapor üretimi ve logo ekleme.",
   },
   {
     icon: Lock,
-    title: "Tam Lokal Çalışma",
+    title: "Baştan Sona Yerel Çalışma",
     description:
-      "Özel Local AI ile internet gerektirmez. Tüm taramalar yerel ağda; API anahtarı gerekmez, kendi modelinizi kullanın.",
+      "Özel Local AI sayesinde çevrimdışı çalışır. Taramaların tamamı yerel ağdadır; API anahtarı istemez, dilerseniz kendi modelinizi bağlarsınız.",
   },
   {
     icon: Bomb,
-    title: "Otomatik Exploit Motoru",
+    title: "Otomatik Sömürü Motoru",
     description:
-      "Metasploit entegrasyonuyla bulunan zafiyetleri otomatik sömürür: EternalBlue, Log4Shell, SSH brute, Tomcat deploy, SNMP crack.",
+      "Metasploit bağlantısıyla saptanan açıkları kendiliğinden sömürür: EternalBlue, Log4Shell, SSH brute, Tomcat deploy, SNMP crack.",
   },
   {
     icon: Microscope,
-    title: "Kaynak Kod Analizi (SAST)",
+    title: "Kaynak Kod İncelemesi (SAST)",
     description:
-      "Semgrep, Gitleaks ve TruffleHog ile statik kod taraması. Python, Java, Go, JS/TS, C#, Ruby ve PHP desteği; hardcoded secret tespiti.",
+      "Semgrep, Gitleaks ve TruffleHog ile statik kod taraması. Python, Java, Go, JS/TS, C#, Ruby ve PHP desteklenir; koda gömülü sırlar yakalanır.",
   },
   {
     icon: Package,
-    title: "Air-Gapped Desteği",
+    title: "Air-Gapped Çalışma",
     description:
-      "İnternete kapalı ortamlar için offline bundle sistemi. Nuclei template, Semgrep rule ve Exploit-DB önbelleğe alınır, USB ile taşınır.",
+      "Dış bağlantısı olmayan ortamlar için çevrimdışı paket düzeni. Nuclei template, Semgrep rule ve Exploit-DB önbelleğe alınıp USB ile aktarılır.",
   },
   {
     icon: ShieldAlert,
-    title: "WAF/IPS/IDS Evasion",
+    title: "WAF/IPS/IDS Atlatma",
     description:
-      "Cloudflare, Imperva ve F5 ASM gibi WAF'ları aşmak için proxy/Tor rotasyonu, User-Agent spoofing, akıllı gecikme ve stealth proxy zinciri.",
+      "Cloudflare, Imperva ve F5 ASM gibi WAF katmanlarını geçmek için proxy/Tor dönüşümü, User-Agent sahteleme, ölçülü gecikme ve stealth proxy zinciri.",
   },
   {
     icon: Cloud,
-    title: "Bulut Güvenliği (CSPM)",
+    title: "Bulut Güvenlik Denetimi (CSPM)",
     description:
-      "AWS/Azure/GCP güvenlik denetimi. ScoutSuite, Prowler ve CloudSplaining ile IAM, S3, K8s posture analizi ve RBAC audit.",
+      "AWS/Azure/GCP denetimi. ScoutSuite, Prowler ve CloudSplaining ile IAM, S3, K8s duruş analizi ve RBAC incelemesi.",
   },
   {
     icon: Fingerprint,
-    title: "Payload Evasion (FUD)",
+    title: "Payload Gizleme (FUD)",
     description:
-      "EDR/AV atlatma için fileless/in-memory payload, çok katmanlı şifreleme, AMSI/ETW bypass ve custom loader (Go/C/C#/Nim/Rust).",
+      "EDR/AV geçişi için dosyasız/bellek içi payload, çok katmanlı şifreleme, AMSI/ETW atlatma ve özel yükleyici (Go/C/C#/Nim/Rust).",
   },
   {
     icon: Activity,
-    title: "DAST & IAST Dinamik Test",
+    title: "DAST ve IAST Dinamik Test",
     description:
-      "OWASP ZAP entegrasyonu, HTTP fuzzing (SQLi/XSS/Path Traversal/Command Injection/SSRF), API güvenlik testi ve form fuzzing.",
+      "OWASP ZAP bağlantısı, HTTP fuzzing (SQLi/XSS/Path Traversal/Command Injection/SSRF), API güvenlik denemesi ve form fuzzing.",
   },
   {
     icon: Building2,
-    title: "Active Directory & Post-Exploit",
+    title: "Active Directory ve Sömürü Sonrası",
     description:
-      "AD enumerasyon, BloodHound attack path, Kerberos testi, LDAP dump ve post-exploit: hashdump, lateral movement, persistence.",
+      "AD enumerasyonu, BloodHound saldırı yolu, Kerberos denemesi, LDAP dump ve sömürü sonrası: hashdump, yanal hareket, kalıcılık.",
   },
   {
     icon: Target,
-    title: "Akıllı Scoping",
+    title: "Kademeli Kapsam Yönetimi",
     description:
-      "Safe/Normal/Aggressive seviye yönetimi. SCADA/ICS fazlarında otomatik safe mode ile kritik altyapı koruması.",
+      "Safe/Normal/Aggressive kademeleri. SCADA/ICS adımlarında güvenli mod otomatik açılarak hassas altyapı korunur.",
   },
 ];
 
@@ -182,59 +182,59 @@ const playbooks = [
   {
     name: "EternalBlue",
     description:
-      "MS17-010 exploit ile Windows SMB üzerinden SYSTEM seviyesinde erişim; paylaşımlı klasörler ve admin yetkisi.",
+      "MS17-010 açığıyla Windows SMB üstünden SYSTEM düzeyinde giriş; paylaşılan klasörlere ve yönetici yetkisine ulaşım.",
   },
   {
     name: "Log4Shell",
     description:
-      "CVE-2021-44228 RCE. HTTP header'ları üzerinden Log4j kullanan Java uygulamalarına sızma.",
+      "CVE-2021-44228 RCE. HTTP başlıkları aracılığıyla Log4j kullanan Java uygulamalarına giriş.",
   },
   {
     name: "Tomcat Deploy",
     description:
-      "Tomcat Manager authenticated WAR deployment. JSP shell yükleme ve komut çalıştırma.",
+      "Tomcat Manager üzerinden kimlikli WAR dağıtımı. JSP shell bırakma ve komut yürütme.",
   },
   {
     name: "SSH Brute Force",
     description:
-      "SSH brute force ile zayıf kullanıcı/şifre tespiti; ortak kullanıcı adı ve parola listeleri.",
+      "SSH brute force ile güçsüz kullanıcı/parola eşleşmelerinin bulunması; yaygın kullanıcı adı ve parola listeleri.",
   },
   {
     name: "SNMP Crack",
     description:
-      "SNMP community string brute force. Ağ cihazlarında default SNMP credential tespiti.",
+      "SNMP community string için brute force. Ağ cihazlarındaki varsayılan SNMP bilgilerinin saptanması.",
   },
   {
-    name: "Özel Exploit Desteği",
+    name: "Özel Sömürü Desteği",
     description:
-      "msf_exploit ile herhangi bir Metasploit modülünü çağırın, msf_payload ile özel reverse shell üretin.",
+      "msf_exploit ile istediğiniz Metasploit modülünü çağırın, msf_payload ile kendinize özel reverse shell oluşturun.",
   },
 ];
 
 const airGappedSteps = [
   {
     step: "01",
-    title: "İnternetteyken önbelleğe al",
+    title: "Bağlantı varken önbelleğe alın",
     description:
-      "cache_templates ile Nuclei, Semgrep ve Exploit-DB'yi indirin; offline_bundle ile USB paketi oluşturun.",
+      "cache_templates ile Nuclei, Semgrep ve Exploit-DB'yi çekin; offline_bundle ile USB paketini hazırlayın.",
   },
   {
     step: "02",
-    title: "Air-gapped ortama taşı",
+    title: "Air-gapped ortama aktarın",
     description:
-      "USB/DVD ile kapalı ağa aktarın; update_templates source=bundle.tar.gz ile geri yükleyin.",
+      "USB/DVD aracılığıyla kapalı ağa taşıyın; update_templates source=bundle.tar.gz komutuyla içeriği geri yükleyin.",
   },
   {
     step: "03",
-    title: "Tamamen lokal çalış",
+    title: "Tümüyle yerel çalışın",
     description:
-      "Özel Local AI ve önbelleklenmiş template'lerle internet gerekmez; API anahtarı olmadan sınırsız tarama.",
+      "Özel Local AI ve önbelleğe alınmış şablonlarla bağlantı gerekmez; API anahtarı olmadan dilediğiniz kadar tarama yapın.",
   },
 ];
 
 const phaseGroups = [
   {
-    label: "Web Uygulama Fazları (1–22)",
+    label: "Web Uygulaması Adımları (1–22)",
     icon: Globe,
     phases: [
       "Deep Reconnaissance",
@@ -262,7 +262,7 @@ const phaseGroups = [
     ],
   },
   {
-    label: "Network Altyapı Fazları (23–28)",
+    label: "Ağ Altyapısı Adımları (23–28)",
     icon: Network,
     phases: [
       "Network Discovery & Host Enumeration",
@@ -274,7 +274,7 @@ const phaseGroups = [
     ],
   },
   {
-    label: "IoT & OT Güvenlik Fazları (29–33)",
+    label: "IoT ve OT Güvenlik Adımları (29–33)",
     icon: Radio,
     phases: [
       "IoT Device Discovery & Fingerprinting",
@@ -285,7 +285,7 @@ const phaseGroups = [
     ],
   },
   {
-    label: "İleri Seviye & Ön Hazırlık Fazları (0, 34–37)",
+    label: "İleri Düzey ve Hazırlık Adımları (0, 34–37)",
     icon: ShieldAlert,
     phases: [
       "Evasion & Stealth Configuration (Faz 0)",
@@ -373,37 +373,37 @@ const architecture = [
     icon: Brain,
     title: "AI Agent",
     description:
-      "Local AI destekli karar motoru. 38 fazlı metodolojiyi takip eder; araç çağırma, sonuç analizi, exploit doğrulama, WAF evasion ve payload obfuscation.",
+      "Local AI ile çalışan karar motoru. 38 adımlık akışı izler; araç çağırma, sonuç yorumlama, sömürü teyidi, WAF atlatma ve payload gizleme.",
   },
   {
     icon: Layers,
     title: "Tool Registry",
     description:
-      "130+ aracın kayıtlı olduğu merkezi sistem. Circuit breaker, timeout, auto-install ve rate limit yönetimi.",
+      "130'u aşkın aracın tanımlı olduğu merkezî yapı. Circuit breaker, zaman aşımı, otomatik kurulum ve hız sınırı denetimi.",
   },
   {
     icon: RefreshCw,
     title: "WebSocket Telemetry",
     description:
-      "Canlı ajan takibi: düşünce zinciri, araç çağrıları, bulgular, HTTP trafiği ve Local AI aktivitesi.",
+      "Ajanın anlık izlenmesi: düşünce zinciri, araç çağrıları, bulgular, HTTP trafiği ve Local AI etkinliği.",
   },
   {
     icon: Monitor,
     title: "Web UI",
     description:
-      "React dashboard. Tarama yönetimi, canlı izleme, CVSS puanlama, PDF rapor ve logo yükleme.",
+      "React tabanlı panel. Tarama yönetimi, canlı izleme, CVSS puanlama, PDF rapor ve logo ekleme.",
   },
   {
     icon: Boxes,
     title: "Scan Context",
     description:
-      "Her tarama için izole durum yönetimi: vuln store, note store, terminal state ve browser state.",
+      "Her tarama ayrı bir durum alanında tutulur: vuln store, note store, terminal state ve browser state.",
   },
   {
     icon: Cpu,
     title: "Özel Local AI",
     description:
-      "Tam lokal model desteği. Kendi modelinizi kullanın; internet gerekmez.",
+      "Baştan sona yerel model desteği. Kendi modelinizi bağlayın; bağlantı gerekmez.",
   },
 ];
 
@@ -426,15 +426,15 @@ export default function Page() {
             <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
               {product.name}{" "}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
-                Otonom AI pentest platformu
+                Kendi kendine çalışan AI sızma testi platformu
               </span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.12}>
             <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
-              Web uygulamalarından network altyapısına, IoT cihazlardan SCADA sistemlerine, kaynak
-              kod analizinden otomatik exploitasyona kadar tam kapsamlı güvenlik testi. Özel Local
-              AI ile air-gapped ortamlarda, internet olmadan çalışır.
+              Web uygulamaları, ağ altyapısı, IoT cihazları, SCADA sistemleri, kaynak kodu ve
+              otomatik sömürü; hepsi tek bir uçtan uca güvenlik testinde toplanır. Özel Local AI
+              sayesinde air-gapped ortamlarda, hiçbir internet bağlantısı olmadan iş görür.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.16} className="mt-6 flex flex-wrap gap-2">
@@ -471,8 +471,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Neden PentForce"
-            title="Bir uzman ekibin metodolojisini otonom bir ajana devredin."
-            description="Keşif, zafiyet doğrulama, exploit ve raporlama tek bir yapay zekâ ajanı tarafından, tanımladığınız sınırlar içinde ve internete kapalı ağlarda yürütülür."
+            title="Deneyimli bir ekibin çalışma biçimini kendi kendine karar veren bir ajana bırakın."
+            description="Keşif, açık teyidi, sömürü ve raporlama; tek bir yapay zekâ ajanının, sizin belirlediğiniz sınırlar dahilinde ve dış bağlantısı olmayan ağlarda yürüttüğü işlerdir."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -501,8 +501,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Yetenekler"
-            title="Web güvenliğinden SCADA sistemlerine geniş yelpaze."
-            description="On beş ana test alanı; her biri kendi araç setiyle ve AI ajanının otonom kararlarıyla çalışır."
+            title="Web güvenliğinden SCADA sistemlerine uzanan geniş kapsam."
+            description="On beş ayrı test alanı; her biri kendi araç kümesiyle ve AI ajanının bağımsız kararlarıyla işler."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((cap) => (
@@ -535,9 +535,9 @@ export default function Page() {
         <Container className="relative">
           <SectionHeading
             tone="dark"
-            eyebrow="Exploit Motoru"
-            title="Zafiyet bulunduğunda sömürü otomatik tetiklenir."
-            description="AI ajan, tespit ettiği zafiyete uygun exploit playbook'unu seçer ve sömürüyü tanımladığınız güvenlik seviyesinde gerçekleştirir."
+            eyebrow="Sömürü Motoru"
+            title="Bir açık yakalandığı anda sömürü kendiliğinden başlar."
+            description="AI ajan, bulduğu açığa karşılık gelen sömürü playbook'unu seçer ve işlemi sizin belirlediğiniz güvenlik kademesinde yürütür."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {playbooks.map((pb) => (
@@ -565,9 +565,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Offline Operasyon"
-            title="Air-gapped ortamlar için tasarlandı."
-            description="Askeri tesis, banka ve fabrika gibi internete kapalı ağlarda çalışmak için üç adımlık offline altyapı."
+            eyebrow="Çevrimdışı Operasyon"
+            title="Air-gapped ortamlar düşünülerek geliştirildi."
+            description="Askeri tesis, banka ve üretim tesisi gibi dışa kapalı ağlarda iş görmek için üç adımlık çevrimdışı kurulum."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {airGappedSteps.map((s) => (
@@ -590,9 +590,9 @@ export default function Page() {
             <div className="mt-6 flex items-start gap-3 rounded-card border border-gold-500/30 bg-gold-500/5 p-4">
               <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-gold-800" aria-hidden="true" />
               <p className="text-sm leading-relaxed text-slate-600">
-                <strong className="text-gold-800">Not:</strong> Air-gapped ortamda güncel kalmak
-                için periyodik olarak (3 ayda bir) cache_templates + offline_bundle ile yeni USB
-                paketi oluşturup kapalı ağa aktarmanız gerekir.
+                <strong className="text-gold-800">Not:</strong> Air-gapped ortamın güncel kalması
+                için belirli aralıklarla (3 ayda bir) cache_templates + offline_bundle çalıştırıp
+                yeni USB paketini hazırlamanız ve kapalı ağa taşımanız gerekir.
               </p>
             </div>
           </MotionReveal>
@@ -603,8 +603,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Metodoloji"
-            title="38 fazlı, sekiz kategoriye ayrılmış test süreci."
-            description="Evasion (0), web uygulama (1–22), network altyapı (23–28), IoT/OT (29–33), SAST (34), exploit/payload (35), CSPM (36) ve scoping (37) fazları sırayla yürütülür."
+            title="Sekiz başlık altında toplanan 38 adımlık test süreci."
+            description="Atlatma (0), web uygulaması (1–22), ağ altyapısı (23–28), IoT/OT (29–33), SAST (34), sömürü/payload (35), CSPM (36) ve kapsam (37) adımları sırayla işletilir."
           />
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {phaseGroups.map((group) => (
@@ -639,8 +639,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="Araç Seti"
-            title="130'dan fazla güvenlik aracı, tek çatı altında."
-            description="Go wrapper'larla tümleşik, auto-install destekli araçlar; her biri AI ajan tarafından otomatik çağrılır."
+            title="130'u aşkın güvenlik aracı, tek bir yapıda toplanır."
+            description="Go wrapper'larıyla bütünleşik, otomatik kurulum destekli araçlar; her biri AI ajan tarafından gerektiğinde çağrılır."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {toolCategories.map((cat) => (
@@ -673,8 +673,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Mimari"
-            title="Go backend, React arayüz ve local AI ajan."
-            description="AI ajan, 130+ aracı otonom yönetirken tüm süreç WebSocket telemetriyle canlı izlenir; her tarama kendi izole bağlamında çalışır."
+            title="Go tabanlı sunucu, React arayüzü ve yerel AI ajanı."
+            description="AI ajan 130'u aşkın aracı kendi başına yönetirken bütün süreç WebSocket telemetrisiyle anlık izlenir; her tarama kendine ayrılmış bir bağlamda yürür."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {architecture.map((item) => (
@@ -706,8 +706,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="PentForce'u kendi ortamınızda deneyin."
-            description="Air-gapped kurulumdan raporlamaya kadar tüm adımlarda yanınızdayız."
+            title="PentForce'u kendi ortamınızda görün."
+            description="Air-gapped kurulumundan rapor aşamasına kadar her adımda yanınızda oluruz."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="PentForce" tone="dark" align="center" />
@@ -717,7 +717,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizdeki öteki çözümler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

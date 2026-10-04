@@ -34,57 +34,63 @@ export const servicePagesContent: ServicePageContent[] = [
     slug: "iso-27001-bilgi-guvenligi-danismanligi",
     title: "ISO 27001 Bilgi Güvenliği Danışmanlığı",
     metaDescription:
-      "ISO 27001 Bilgi Güvenliği Yönetim Sistemi kurulumu, risk analizi, dokümantasyon ve sertifikasyon denetimine hazırlık.",
-    content: `ISO 27001 danışmanlığımız, kurumunuzda yalnızca sertifika almayı değil, işleyen bir Bilgi Güvenliği Yönetim Sistemi (BGYS) kurmayı hedefler. Denetimde sorulan şey belgelerin varlığı değil, bilgi güvenliğini nasıl yönettiğinizdir.
+      "ISO 27001 danışmanlığı: BGYS kapsamı, varlık envanteri, risk analizi, SoA, politika seti, iç denetim ve belgelendirme denetimine eşlik. Baş denetçi deneyimi.",
+    content: `ISO 27001 belgesini duvara asmak kolaydır; zor olan, denetçi masaya oturduğunda bilgi güvenliğini gerçekten nasıl yönettiğinizi gösterebilmektir. ISO 27001 bilgi güvenliği danışmanlığımızda amaç, kurumunuzun kendi ekibiyle yaşatabileceği bir Bilgi Güvenliği Yönetim Sistemi (BGYS) kurmaktır. Çalışmayı ISO 27001 baş denetçi deneyimiyle, denetimde hangi kanıtın aranacağını bilerek yürütürüz.
 
-## ISO 27001 nedir?
+## Standart size ne getirir?
 
-ISO 27001, bilgi varlıklarınızı gizlilik, bütünlük ve erişilebilirlik açısından koruyan bir yönetim sistemi standardıdır. Bir ürün değil, bir işletim biçimidir: riski tanımlar, kontrolleri uygular, kanıt üretir ve düzenli olarak gözden geçirirsiniz.
+ISO 27001, bilgi varlıklarınızın gizliliğini, bütünlüğünü ve erişilebilirliğini korumak için uluslararası kabul görmüş bir çerçevedir. Bir yazılım ya da cihaz değildir; riskleri belirleyip kontrolleri seçtiğiniz, bunların işlediğini kayıtla gösterdiğiniz ve düzenli aralıklarla gözden geçirdiğiniz bir yönetim döngüsüdür.
 
-## Kapsamımız
+## Danışmanlık kapsamı
 
-- BGYS kapsamının belirlenmesi ve bağlam analizi
-- Bilgi varlıkları envanteri ve sınıflandırması
-- Risk değerlendirme metodolojisi ve risk işleme planı
-- Ek A kontrollerinin uygulanması ve Uygulanabilirlik Bildirgesi (SoA)
-- Politika, prosedür ve kayıt setinin kurumunuza göre hazırlanması
-- Farkındalık eğitimi ve iç denetim
-- Yönetimin gözden geçirmesi ve belgelendirme denetimine eşlik
+- Kurumun bağlamı, ilgili taraflar ve BGYS kapsamının çizilmesi
+- Bilgi varlıklarının listelenmesi ve sınıflandırılması
+- Risk değerlendirme yöntemi, risk kaydı ve risk işleme planı
+- Ek A kontrollerinin seçimi ve Uygulanabilirlik Bildirgesi (SoA)
+- Kurumunuzun gerçek işleyişine göre yazılmış politika, prosedür ve kayıt şablonları
+- Çalışan farkındalık eğitimi ve iç denetim
+- Yönetimin gözden geçirmesi; aşama 1 ve aşama 2 belgelendirme denetimlerine eşlik
 
-## Nasıl çalışıyoruz?
+## Proje akışı
 
-1. **Boşluk analizi** — Mevcut durumunuz standardın gereklilikleriyle karşılaştırılır.
-2. **Kurulum** — Kapsam, risk analizi ve dokümantasyon birlikte oluşturulur.
-3. **Uygulama** — Kontroller sahaya yerleştirilir, kayıtlar üretilmeye başlanır.
-4. **Denetime hazırlık** — İç denetim ve yönetim gözden geçirmesi yapılır, aşama 1 ve aşama 2 denetimlerine eşlik edilir.
+1. **Mevcut durum analizi** — Bugünkü uygulamalarınızı standardın maddeleriyle karşılaştırır, eksikleri listeleriz.
+2. **Sistem tasarımı** — Kapsamı, risk analizini ve doküman setini ekibinizle birlikte hazırlarız.
+3. **Hayata geçirme** — Kontroller işletmeye alınır, kayıtlar düzenli üretilmeye başlar.
+4. **Belgelendirmeye hazırlık** — İç denetim ve yönetim gözden geçirmesini tamamlar, belgelendirme kuruluşunun denetimlerinde yanınızda oluruz.
 
-## Sık yapılan hatalar
+## Kaçınmanız gereken tuzaklar
 
-Kapsamı ilk sertifikasyonda tüm kuruma yaymak, risk analizini tamamen dışarıya bırakmak ve kimsenin okumadığı otuz sayfalık politikalar yazmak en yaygın hatalardır. KVKK uyumuyla karıştırılması da bunlardan biri; ikisinin farkı için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) sayfamıza bakabilirsiniz. Teknik kontrollerin kurulumu için [ISO 27001 teknik güvenlik çözümlerimizle](/siber-guvenlik/iso-27001-teknik-guvenlik-cozumleri/) birlikte ilerleyebiliriz.
+İlk belgelendirmede kapsamı tüm şirkete yaymak süreci gereksiz uzatır; kritik birimlerle başlamak daha gerçekçidir. Risk analizini tamamen danışmana bırakmak, sistemi sahiplenilmeyen bir belgeye dönüştürür. Kimsenin okumadığı uzun politikalar da denetimde değil, günlük işte başarısız olur. KVKK uyumu ile ISO 27001 sık karıştırılır; farkları ve ortak noktaları için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) sayfamıza bakabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Teknik tarafı kim kuracak?
 
-- Müşteri ve ihale şartnamelerindeki bilgi güvenliği koşullarının karşılanması
-- Veri ihlali riskinin ölçülüp yönetilir hâle gelmesi
-- KVKK teknik ve idari tedbirleriyle örtüşen bir kontrol seti
-- Denetimlerde savunulabilir, kanıta dayalı bir sistem
+Erişim yönetimi, loglama, şifreleme ve yedekleme gibi Ek A'nın teknik kontrollerini sistemlerinize uygulamak için [ISO 27001 teknik güvenlik çözümlerimizle](/siber-guvenlik/iso-27001-teknik-guvenlik-cozumleri/) aynı projede ilerleyebiliriz. Böylece doküman ile sahadaki uygulama birbirinden kopmaz.
 
-Belgelendirme hedefinizi ve takviminizi konuşmak için [bizimle iletişime geçin.](/iletisim/)`,
+## Elde ettikleriniz
+
+Müşteri ve ihale şartnamelerindeki bilgi güvenliği koşullarını karşılayan, KVKK tedbirleriyle örtüşen, riskleri ölçülebilir hâle getiren ve denetimde kanıtla savunulabilen bir sistem.
+
+Hedeflediğiniz belgelendirme tarihini ve kapsamı ücretsiz ilk görüşmede konuşalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "ISO 27001 belgesini siz mi veriyorsunuz?",
+        question: "Belgeyi sizden mi alacağız?",
         answer:
-          "Hayır. Belgeyi akredite bir belgelendirme kuruluşu verir. Biz sistemi kurar, dokümantasyonu hazırlar, iç denetimi yapar ve belgelendirme denetimine sizinle birlikte gireriz.",
+          "Hayır, ISO 27001 belgesini akredite bir belgelendirme kuruluşu düzenler. Biz sistemi kurar, dokümanları hazırlar, iç denetimi yapar ve belgelendirme denetimlerinde sizinle birlikte bulunuruz.",
       },
       {
-        question: "Kurulum ne kadar sürer?",
+        question: "Kurulum süresini ne belirler?",
         answer:
-          "Kurumun büyüklüğüne ve mevcut olgunluğuna göre genellikle 3-6 ay. Kapsamı dar tutup kritik birimlerle başlamak süreci belirgin biçimde kısaltır.",
+          "Kurumun büyüklüğü, kapsamdaki lokasyon ve süreç sayısı ve mevcut güvenlik uygulamalarınızın olgunluğu belirleyicidir. Kapsamı dar tutup kritik birimlerle başlamak süreyi belirgin biçimde kısaltır; mevcut durum analizinden sonra size bir takvim sunarız.",
       },
       {
-        question: "KVKK uyumumuz varsa ISO 27001 daha mı kolay olur?",
+        question: "KVKK çalışmamız ISO 27001'i kolaylaştırır mı?",
         answer:
-          "Evet. KVKK için aldığınız teknik ve idari tedbirlerin büyük kısmı ISO 27001 Ek A kontrolleriyle örtüşür; iki süreci birlikte yürütmek tekrar eden işi azaltır.",
+          "Evet. KVKK için aldığınız teknik ve idari tedbirlerin önemli kısmı Ek A kontrolleriyle örtüşür. İki çalışmayı birlikte yürütmek aynı işin iki kez yapılmasını önler.",
+      },
+      {
+        question: "Belge aldıktan sonra ne olacak?",
+        answer:
+          "Belgelendirme kuruluşu her yıl gözetim denetimi yapar. Sistemin canlı kalması için iç denetim, risk güncellemesi ve yönetim gözden geçirmesini düzenli sürdürmeniz gerekir; isterseniz bu dönemde de destek veririz.",
       },
     ],
   },
@@ -94,64 +100,64 @@ Belgelendirme hedefinizi ve takviminizi konuşmak için [bizimle iletişime geç
     slug: "kvkk-danismanligi",
     title: "KVKK Danışmanlığı",
     metaDescription:
-      "Kişisel veri envanteri, aydınlatma ve açık rıza metinleri, VERBİS kaydı ve ihlal müdahale süreciyle KVKK uyumunu işleyen bir sürece dönüştürün.",
-    content: `KVKK danışmanlığımız, uyumu tek seferlik bir metin yazma işi olmaktan çıkarıp işleyen bir sürece dönüştürür. Denetimde sorulan şey aydınlatma metninin varlığı değil, kişisel veriyi uçtan uca nasıl yönettiğinizdir.
+      "KVKK danışmanlığı: kişisel veri envanteri, hukuki sebep analizi, aydınlatma ve açık rıza metinleri, VERBİS kaydı, saklama-imha politikası ve ihlal müdahalesi.",
+    content: `Web sitenize bir aydınlatma metni koymak KVKK uyumu demek değildir. Kurul ya da bir veri sahibi soru sorduğunda, hangi kişisel veriyi hangi amaçla topladığınızı, kimlerle paylaştığınızı ve ne zaman sildiğinizi gösterebilmeniz gerekir. KVKK danışmanlığımız bu soruların cevabını departman departman çıkarır ve uyumu, ekibinizin sürdürebileceği bir çalışma düzenine dönüştürür.
 
-## KVKK uyumu neden bir süreçtir?
+## Uyum neden bir kez yapılıp bitmez?
 
-Yeni bir yazılım, yeni bir tedarikçi ya da yeni bir kampanya, veri işleme envanterinizi değiştirir. Bu nedenle uyum, bir kez kurulup bırakılan değil; yılda en az bir kez gözden geçirilen canlı bir yapıdır. Sürecin ilk ve en görünür adımı, veri işleme faaliyetlerinizi doğru anlatan bir aydınlatma metnidir.
+Yeni bir İK yazılımı, değişen bir kargo firması ya da başlatılan bir pazarlama kampanyası veri akışlarınızı değiştirir. Bu yüzden envanter ve metinler en az yılda bir gözden geçirilmeli, her yeni süreçte güncellenmelidir. Aydınlatma metni bu çalışmanın sonucudur; başlangıç noktası veri envanteridir.
 
-## Kapsamımız
+## Çalışmanın kapsamı
 
-- Departman bazında kişisel veri işleme envanterinin çıkarılması
-- Her işleme faaliyeti için hukuki sebebin belirlenmesi
-- Aydınlatma metinleri ve gerekli yerlerde açık rıza metinlerinin hazırlanması
+- Her departman için kişisel veri işleme envanteri ve her faaliyetin dayandığı hukuki sebep
+- Aydınlatma metinleri; gerekli durumlarda açık rıza metinleri
 - Saklama ve imha politikası ile periyodik imha takvimi
-- VERBİS kayıt ve güncelleme desteği
-- Veri işleyen sözleşmelerine KVKK eklerinin eklenmesi
-- Veri ihlali müdahale prosedürü ve 72 saatlik bildirim akışı
+- VERBİS kaydı ve güncelleme desteği
+- Tedarikçi ve veri işleyen sözleşmelerine KVKK maddeleri
+- Veri ihlali müdahale prosedürü ve Kurul'a 72 saat içinde bildirim akışı
 - İlgili kişi başvuru kanalı ve 30 günlük yanıt süreci
 - Çalışan farkındalık eğitimi
 
-## Kimler için?
+## Kimler öncelikli?
 
-- Müşteri, personel veya hasta verisi işleyen her ölçekte işletme
-- VERBİS kaydı, aydınlatma metni ve açık rıza süreçlerini netleştirmek isteyen kurumlar
-- Kişisel veriyi bulutta veya üçüncü taraf yazılımlarda saklayan şirketler
-- Bir veri ihlali sonrasında süreçlerini yeniden kurgulaması gereken ekipler
+Müşteri, personel veya hasta verisi işleyen her ölçekteki işletme; kişisel veriyi bulutta veya üçüncü taraf yazılımlarda tutan şirketler; VERBİS ve açık rıza süreçlerini netleştirmek isteyen kurumlar ve bir ihlal yaşadıktan sonra düzenini yeniden kurması gereken ekipler.
 
-## Nasıl çalışıyoruz?
+## Proje adımları
 
-1. **Envanter ve mevcut durum** — Hangi veriyi, neden, nerede ve ne kadar süre işlediğiniz haritalanır.
-2. **Politika ve metinler** — Süreçlerinize uygun politika seti ve bilgilendirme metinleri hazırlanır.
-3. **Teknik ve idari tedbirler** — Yetki matrisi, loglama, yedekleme ve erişim kontrolleri gözden geçirilir.
-4. **Farkındalık ve tatbikat** — Ekipler eğitilir, ihlal müdahale prosedürü masabaşı tatbikatla denenir.
+1. **Haritalama** — Hangi veriyi, hangi amaçla, nerede ve ne süreyle işlediğinizi birim yöneticileriyle görüşerek çıkarırız.
+2. **Metinler ve politikalar** — Envantere dayanarak aydınlatma metinlerini, rıza formlarını ve politika setini hazırlarız.
+3. **Teknik ve idari tedbirler** — Yetki matrisi, loglama, yedekleme ve erişim kontrollerini gözden geçiririz.
+4. **Eğitim ve tatbikat** — Çalışanları bilgilendirir, ihlal prosedürünü masa başı bir senaryoyla deneriz.
 
-## Kurumunuza kazandırdıkları
+## Teknik tarafı tamamlayan hizmetler
 
-- İdari para cezası riskinin azaltılması
-- İlgili kişi başvurularına düzenli, süresinde yanıt
-- Tedarikçi ve iş ortağı sözleşmelerinde net veri sorumluluğu
-- ISO 27001 kontrolleriyle örtüşen, denetime hazır bir yapı
+KVKK'nın teknik tedbirlerini ağ, sunucu ve yedekleme altyapınıza uygulamak için [IT danışmanlık hizmetlerimiz](/danismanlik/it-danismanlik-hizmetleri/), kurumsal bilgi güvenliğini standarda bağlamak için [ISO 27001 danışmanlığı](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/), kişisel verinin e-posta veya USB ile dışarı çıkmasını engellemek için [DLP çözümleri](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) bu çalışmayla birlikte planlanabilir.
 
-KVKK'nın teknik tedbirlerini altyapınıza uygulamak için [IT danışmanlık hizmetlerimizden](/danismanlik/it-danismanlik-hizmetleri/), bilgi güvenliği yönetim sistemi için [ISO 27001 danışmanlığından](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/), veri sızıntısını önlemek için [DLP çözümlerinden](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) yararlanabilirsiniz.
+## Ne kazanırsınız?
 
-Kurumunuzun uyum düzeyini bir saatlik bir değerlendirme görüşmesinde birlikte çıkarabiliriz. [İletişime geçin.](/iletisim/)`,
+İdari para cezası riskinin azalması, veri sahibi başvurularına süresinde verilen cevaplar, tedarikçilerle sorumlulukların yazılı olarak netleşmesi ve ISO 27001 ile örtüşen, denetime hazır bir yapı.
+
+Mevcut uyum düzeyinizi ücretsiz bir ön görüşmede birlikte değerlendirelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Sadece aydınlatma metni hazırlatsak yeterli olmaz mı?",
+        question: "Yalnızca aydınlatma metni hazırlatmak yeterli mi?",
         answer:
-          "Hayır. Metin, arkasında bir veri envanteri ve saklama/imha düzeni yoksa denetimde ilk turda anlaşılır. Aydınlatma metni sürecin çıktısıdır, başlangıcı değil.",
+          "Yeterli değildir. Arkasında bir veri envanteri ve saklama-imha düzeni olmayan metin, ilk incelemede tutarsızlık gösterir. Aydınlatma metni envanterden türetilmelidir.",
       },
       {
-        question: "VERBİS'e kayıt olmak zorunda mıyız?",
+        question: "VERBİS kaydı bizim için zorunlu mu?",
         answer:
-          "Zorunluluk, yıllık çalışan sayısı, mali bilanço büyüklüğü ve işlenen verinin niteliğine göre değişir. Değerlendirme sırasında kurumunuzun kayıt yükümlülüğü olup olmadığını netleştiririz.",
+          "Yükümlülük çalışan sayısına, yıllık mali bilanço büyüklüğüne ve işlenen verinin niteliğine göre değişir. Ön değerlendirmede kurumunuzun kayıt yükümlülüğü olup olmadığını netleştiririz.",
       },
       {
-        question: "Uyum sürecini ne kadar sürede tamamlarız?",
+        question: "Uyum projesi ne kadar sürer?",
         answer:
-          "Temel envanter, metinler ve politikalar genellikle 8-12 haftada devreye girer. Farkındalık eğitimi ve ihlal tatbikatı bu sürenin son ayında yapılır.",
+          "Süre birim sayısına, veri akışlarının karmaşıklığına ve mevcut dokümanlarınıza bağlıdır. Haritalama aşamasından sonra adım adım bir takvim çıkarır, eğitimi ve ihlal tatbikatını projenin sonuna planlarız.",
+      },
+      {
+        question: "Veri ihlali yaşarsak ne yapmalıyız?",
+        answer:
+          "İhlalin kapsamını belirleyip yayılmasını durdurmanız ve Kurul'a bildirim için yasal süreyi kaçırmamanız gerekir. Hazırladığımız müdahale prosedürü kimin neyi, hangi sırayla yapacağını önceden tanımlar.",
       },
     ],
   },
@@ -361,58 +367,60 @@ IT altyapınızı birlikte değerlendirelim; ilk görüşme ve keşif ücretsizd
     slug: "logo-erp-destek-ve-danismanlik",
     title: "Logo ERP Destek ve Danışmanlık",
     metaDescription:
-      "Logo Tiger, GO ve j-Platform için kurulum, sürüm geçişi, süreç optimizasyonu, entegrasyon ve kullanıcı eğitimi. BTM Bilişim ile Logo ERP'nizden tam verim alın.",
-    content: `Logo ERP destek ve danışmanlık hizmetimiz; Logo Tiger, GO ve j-Platform kullanan kurumların sistemlerini doğru kurgulaması, güncel tutması ve iş süreçleriyle hizalamasına odaklanır.
+      "Logo ERP destek ve danışmanlık: Logo Tiger, GO ve j-Platform kurulumu, sürüm yükseltme, parametre düzenleme, entegrasyon, özel rapor ve kullanıcı eğitimi.",
+    content: `Logo Tiger, GO veya j-Platform kullanıyor ama raporları hâlâ Excel'de hazırlıyorsanız, programdan aldığınız verim olması gerekenin altındadır. Logo ERP destek ve danışmanlık hizmetimiz, mevcut kurulumunuzu iş süreçlerinizle yeniden hizalar, sürümünüzü güncel tutar ve kullanıcılarınızın sistemi doğru kullanmasını sağlar. Kendi yazılım ekibimiz olduğu için entegrasyon ve özel geliştirme ihtiyaçlarını da aynı ekip karşılar.
 
-## Yaygın Logo ERP sorunları
+## Sahada en sık karşılaştıklarımız
 
-Çoğu kurumda Logo, kurulduğu günkü ayarlarla çalışmaya devam eder: kullanılmayan modüller, elle yapılan tekrar işler, Excel'e alınıp dışarıda hesaplanan raporlar ve sürüm geçişi ertelendiği için alınamayan yeni özellikler. Bunların her biri hem zaman hem de veri güvenilirliği kaybıdır.
+Birçok firmada Logo, ilk kurulduğu günün ayarlarıyla yıllarca çalışır. Satın alınmış ama kullanılmayan modüller, aynı bilginin iki farklı ekranda elle girilmesi, dışarı aktarılıp başka bir dosyada hesaplanan raporlar ve sürekli ertelenen sürüm geçişi yüzünden kullanılamayan yeni özellikler. Her biri zaman kaybına ve rakamların güvenilirliğinin sorgulanmasına yol açar. Sorunların çoğu yeni bir program gerektirmez; doğru parametreler, sade bir yetki yapısı ve iyi eğitilmiş kilit kullanıcılarla çözülür.
 
-## Kapsamımız
+## Destek kapsamı
 
-- Logo Tiger / GO / j-Platform kurulumu ve sürüm yükseltme (upgrade)
+- Logo Tiger, GO ve j-Platform kurulumu ve sürüm yükseltmesi
 - Firma, dönem, ambar ve hesap planı yapılandırması
-- Malzeme, cari ve muhasebe entegrasyon parametrelerinin gözden geçirilmesi
-- Elle yürütülen işlerin modül içi süreçlere taşınması
-- Özel rapor, Logo Object ve dış uygulama entegrasyonları
-- Kullanıcı yetkilendirme ve rol düzeninin kurulması
-- Son kullanıcı ve kilit kullanıcı eğitimleri
-- Dönemsel bakım ve öncelikli destek
+- Malzeme, cari ve muhasebe bağlantı parametrelerinin kontrolü
+- Elle yürütülen işlerin ilgili modüllere taşınması
+- Özel raporlar, Logo Object ile geliştirmeler ve dış uygulama bağlantıları
+- Kullanıcı yetkileri ve rol yapısının düzenlenmesi
+- Kilit kullanıcı ve son kullanıcı eğitimleri
+- Periyodik bakım ve öncelikli destek
 
-## Nasıl çalışıyoruz?
+## Çalışma sıramız
 
-1. **Sistem incelemesi** — Mevcut kurulum, sürüm, kullanılan modüller ve manuel işler çıkarılır.
-2. **İyileştirme planı** — Hızlı kazanımlar ve orta vadeli düzenlemeler önceliklendirilir.
-3. **Uygulama** — Yapılandırma, entegrasyon ve raporlar test ortamında kurulur, sonra canlıya alınır.
-4. **Eğitim ve destek** — Kullanıcılar eğitilir, geçiş sonrası destek verilir.
+1. **İnceleme** — Kurulumu, sürümü, kullanılan modülleri ve dışarıda yürüyen işleri listeleriz.
+2. **Öncelik listesi** — Hemen yapılabilecek düzeltmeleri ve planlama gerektiren değişiklikleri ayırırız.
+3. **Uygulama** — Ayar, entegrasyon ve raporları önce test ortamında kurar, onayınızdan sonra canlıya alırız.
+4. **Eğitim ve geçiş sonrası destek** — Kullanıcıları yeni düzene göre eğitir, ilk dönemde yakından takip ederiz.
 
-## Entegrasyon ve raporlama
+## Logo verinizi raporlamaya taşımak
 
-Logo verinizi bütçe ve yönetim raporlaması için kullanmak istiyorsanız, [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) Logo ile entegre çalışarak bütçe–gerçekleşme sapmasını hesap kalemi düzeyinde gösterir. Daha geniş sistem entegrasyonları için [ERP entegrasyonları hizmetimize](/yazilim-dijital/erp-entegrasyonlari/) bakabilirsiniz.
+Bütçe ile gerçekleşeni hesap kalemi düzeyinde karşılaştırmak istiyorsanız, kendi geliştirdiğimiz [Atlas bütçe ve raporlama yazılımı](/yazilim-urunlerimiz/atlas/) Logo ile entegre çalışır. Logo'yu e-ticaret, üretim, depo ya da CRM sistemlerine bağlamak için [ERP entegrasyonları](/yazilim-dijital/erp-entegrasyonlari/) hizmetimizden yararlanabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Sonuçta ne değişir?
 
-- Tekrar eden manuel işlerin azalması
-- Güncel sürümle gelen özelliklerin kullanılabilmesi
-- Raporların sistemden, tek doğrulukla alınması
-- Yetki karmaşasının ve veri hatalarının düşmesi
+Tekrar eden elle girişler azalır, güncel sürümün özellikleri kullanılabilir hâle gelir, yönetim raporları tek kaynaktan ve aynı rakamlarla alınır, yetki karmaşasından doğan veri hataları düşer. Kocaeli ve İstanbul Anadolu yakasında yerinde, diğer illerde uzaktan destek veriyoruz.
 
-Mevcut Logo kurulumunuzu kısa bir değerlendirmeyle gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Logo kurulumunuzu ücretsiz bir ön incelemeyle birlikte değerlendirelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Logo çözüm ortağı mısınız, lisans da satıyor musunuz?",
+        question: "Logo lisansı da satıyor musunuz?",
         answer:
-          "Odağımız kurulum, danışmanlık, entegrasyon ve destektir. Lisans tedarikinde mevcut Logo iş ortağınızla çalışmaya devam edebilir ya da tedarik için sizi doğru kanala yönlendirebiliriz.",
+          "Odağımız kurulum, danışmanlık, entegrasyon ve destektir. Lisans tarafında mevcut Logo iş ortağınızla çalışmaya devam edebilir ya da tedarik için sizi uygun kanala yönlendirebiliriz.",
       },
       {
-        question: "Eski bir Logo sürümündeyiz, geçiş riskli mi?",
+        question: "Eski bir sürümden geçiş verilerimizi riske atar mı?",
         answer:
-          "Sürüm geçişi test ortamında prova edilerek yapılır; veri, özel raporlar ve entegrasyonlar önceden kontrol edilir. Canlıya geçiş genellikle mesai dışında, geri dönüş planıyla uygulanır.",
+          "Geçişi önce test ortamında prova ederiz; veri, özel raporlar ve entegrasyonlar bu aşamada kontrol edilir. Canlı geçiş genellikle mesai dışında ve geri dönüş planıyla yapılır.",
       },
       {
-        question: "Sadece kullanıcı eğitimi alabilir miyiz?",
+        question: "Sadece eğitim hizmeti alabilir miyiz?",
         answer:
-          "Evet. Kilit kullanıcı ve son kullanıcı eğitimlerini bağımsız bir hizmet olarak, kurumunuzun kullandığı modüllere göre planlıyoruz.",
+          "Evet. Kilit kullanıcı ve son kullanıcı eğitimlerini, kullandığınız modüllere göre ayrı bir hizmet olarak planlayabiliriz.",
+      },
+      {
+        question: "Logo'ya özel rapor veya ekran geliştirebiliyor musunuz?",
+        answer:
+          "Evet. Yazılım ekibimiz özel raporlar, Logo Object ile geliştirmeler ve diğer uygulamalarla bağlantılar hazırlar. İhtiyacı önce birlikte tanımlar, test ortamında onayınıza sunarız.",
       },
     ],
   },
@@ -422,57 +430,59 @@ Mevcut Logo kurulumunuzu kısa bir değerlendirmeyle gözden geçirelim. [İleti
     slug: "yazilim-ve-dijital-donusum-danismanligi",
     title: "Yazılım ve Dijital Dönüşüm Danışmanlığı",
     metaDescription:
-      "Süreç dijitalleştirme, yazılım mimarisi, satın al/geliştir kararı ve dönüşüm yol haritasıyla dijital dönüşümü planlı bir programa dönüştürün.",
-    content: `Yazılım ve dijital dönüşüm danışmanlığımız, "dijitalleşelim" hedefini ölçülebilir bir programa çevirir. Hangi sürecin, hangi sırayla, hangi araçla dijitalleştirileceğine iş etkisine göre karar veririz.
+      "Yazılım ve dijital dönüşüm danışmanlığı: süreç haritalama, satın al ya da geliştir kararı, entegrasyon mimarisi, tedarikçi seçimi ve fazlı yol haritası.",
+    content: `Dijital dönüşüm projelerinin önemli bir kısmı yazılım yetersiz olduğu için değil, yanlış sırayla ilerlendiği için sonuç vermez. Yazılım ve dijital dönüşüm danışmanlığımızda önce hangi sürecin size en çok zaman ve para kaybettirdiğini bulur, sonra bunun için hazır bir ürün mü alınmalı, mevcut sistem mi uyarlanmalı yoksa yazılım mı geliştirilmeli sorusunu gerekçeleriyle cevaplarız. Satıcıdan bağımsız olduğumuz için öneri, belirli bir ürünü satma kaygısı taşımaz.
 
-## Dijital dönüşüm nerede tıkanır?
+## Projeler genelde nerede yarım kalır?
 
-Dönüşüm çoğu zaman araç alarak başlar, süreç tasarlanmadan uygulanır ve kullanıcı benimsemesi sağlanamadığı için yarım kalır. Doğru sıralama tersidir: önce süreç ve veri, sonra araç, en sonda ölçüm ve yaygınlaştırma.
+Tipik senaryo şöyledir: bir yazılım satın alınır, mevcut iş akışı hiç sorgulanmadan ekrana taşınır, kullanıcılar eski alışkanlıklarına döner ve sistem yarı kullanılır hâlde kalır. Sağlıklı sıra bunun tersidir: önce süreç ve veri netleşir, araç bundan sonra seçilir, en sonda ölçülerek yaygınlaştırılır. Kullanıcıları tasarım aşamasına dahil etmek, benimsemeyi en çok artıran adımdır; bu yüzden her sürecin sahibiyle ayrı görüşür, gerçek iş akışını onların anlatımıyla kayda geçiririz.
 
-## Kapsamımız
+## Danışmanlığın kapsamı
 
-- Mevcut süreçlerin haritalanması ve dijitalleşme önceliklendirmesi
-- Satın al / geliştir / uyarlama kararı için değerlendirme
-- Yazılım mimarisi ve entegrasyon stratejisi
-- Veri modeli ve raporlama ihtiyaçlarının tanımlanması
-- Tedarikçi seçimi ve teklif değerlendirme desteği
+- Mevcut iş süreçlerinin haritalanması ve dijitalleşme önceliklerinin belirlenmesi
+- Satın alma, uyarlama veya geliştirme seçeneklerinin karşılaştırılması
+- Yazılım mimarisi ve sistemler arası entegrasyon planı
+- Veri modeli ve raporlama ihtiyaçlarının tanımı
+- Tedarikçi seçimi ve gelen tekliflerin teknik değerlendirmesi
 - Pilot uygulama, başarı ölçütleri ve yaygınlaştırma planı
-- Değişim yönetimi ve kullanıcı benimseme desteği
+- Kullanıcıların yeni düzene geçişi için değişim yönetimi
 
-## Nasıl çalışıyoruz?
+## Nasıl ilerliyoruz?
 
-1. **Keşif** — İş hedefleri, mevcut süreçler ve sistemler incelenir.
-2. **Fırsat haritası** — Dijitalleşecek süreçler etki/efor matrisine yerleştirilir.
-3. **Yol haritası** — Fazlara bölünmüş, sahiplenmesi net bir program çıkarılır.
-4. **Uygulama gözetimi** — Tedarikçi ve iç ekiplerle birlikte pilot ve yaygınlaştırma yönetilir.
+1. **Keşif** — İş hedeflerinizi, mevcut süreçleri ve kullandığınız sistemleri yerinde inceleriz.
+2. **Fırsat listesi** — Dijitalleşmeye aday süreçleri beklenen etki ve gereken emeğe göre sıralarız.
+3. **Yol haritası** — Fazlara bölünmüş, her fazın sorumlusu ve ölçütü belli bir program çıkarırız.
+4. **Uygulama gözetimi** — Pilotu ve yaygınlaştırmayı tedarikçiniz ya da kendi ekiplerinizle birlikte yönetiriz.
 
-## Uygulama tarafı
+## Karar verildikten sonra
 
-Karar aşamasından sonra geliştirme ihtiyacında [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/), [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/) ve [raporlama ve dashboard çözümleri](/yazilim-dijital/raporlama-ve-dashboard-cozumleri/) hizmetlerimizle devam edilebilir.
+Hazır ürün ihtiyacı karşılamıyorsa, kendi yazılım ekibimizle [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/) tarafına geçebiliriz. Onay, talep ve bildirim gibi tekrar eden adımlar için [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/), yönetimin aynı rakamlara bakması için [raporlama ve dashboard çözümleri](/yazilim-dijital/raporlama-ve-dashboard-cozumleri/) bu programın tipik parçalarıdır. Atlas, Orbit ve Otium gibi kendi ürünlerimiz de uygun olduğu yerde seçenekler arasında değerlendirilir.
 
-## Kurumunuza kazandırdıkları
+## Size kazandırdıkları
 
-- Yatırımların iş etkisine göre sıralanması
-- "Araç aldık ama kullanılmıyor" tablosunun önlenmesi
-- Sistemler arası entegrasyonun baştan planlanması
-- Dönüşümün ölçülebilir hedeflerle takip edilmesi
+Yatırımların iş etkisine göre sıralanması, alınıp kullanılmayan yazılımların önlenmesi, entegrasyonun baştan planlanması ve dönüşümün ölçülebilir hedeflerle izlenmesi.
 
-Dijital dönüşüm önceliklerinizi birlikte netleştirmek için [bizimle iletişime geçin.](/iletisim/)`,
+Dijitalleştirmek istediğiniz süreçleri ücretsiz ilk görüşmede konuşalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Dijital dönüşüm sadece büyük şirketler için mi?",
+        question: "Dijital dönüşüm yalnızca büyük şirketlere mi uygun?",
         answer:
-          "Hayır. Ölçek küçüldükçe kapsam daralır ama mantık aynıdır: en çok zaman kaybettiren birkaç süreci seçip dijitalleştirmek, küçük ekiplerde bile hızlı geri dönüş sağlar.",
+          "Hayır. Ölçek küçüldükçe kapsam daralır ama yöntem aynıdır. En çok zaman kaybettiren birkaç süreci seçip dijitalleştirmek küçük ekiplerde de kısa sürede fark yaratır.",
       },
       {
-        question: "Yazılımı siz mi geliştiriyorsunuz?",
+        question: "Yazılımı siz mi geliştireceksiniz?",
         answer:
-          "Danışmanlık aşamasında bağımsız kalırız; satın alma da geçerli bir seçenektir. Geliştirme gerekiyorsa yazılım ekibimizle uçtan uca üstlenebilir ya da seçtiğiniz tedarikçiyi yönetebiliriz.",
+          "Danışmanlık aşamasında tarafsız kalırız; hazır ürün almak da geçerli bir sonuçtur. Geliştirme gerekirse yazılım ekibimizle işi baştan sona üstlenebilir ya da seçtiğiniz tedarikçiyi sizin adınıza yönetebiliriz.",
       },
       {
-        question: "İlk çıktı ne olur?",
+        question: "Çalışmanın ilk çıktısı nedir?",
         answer:
-          "Süreç haritası, önceliklendirilmiş fırsat listesi ve fazlara bölünmüş bir dönüşüm yol haritası. Genellikle 4-6 haftada teslim edilir.",
+          "Süreç haritası, önceliklendirilmiş fırsat listesi ve fazlara ayrılmış bir dönüşüm yol haritası. Teslim süresi incelenecek süreç ve birim sayısına göre keşif görüşmesinde netleşir.",
+      },
+      {
+        question: "Maliyeti neler etkiler?",
+        answer:
+          "İncelenecek süreç ve departman sayısı, mevcut sistemlerin çeşitliliği ve uygulama aşamasında gözetim isteyip istemediğiniz belirleyicidir. İlk görüşme ve keşif ücretsizdir, teklif bunun ardından hazırlanır.",
       },
     ],
   },
@@ -486,59 +496,59 @@ Dijital dönüşüm önceliklerinizi birlikte netleştirmek için [bizimle ileti
     slug: "siber-guvenlik-danismanligi",
     title: "Siber Güvenlik Danışmanlığı",
     metaDescription:
-      "Güvenlik olgunluk değerlendirmesi, risk analizi ve önceliklendirilmiş yol haritası. BTM Bilişim ile siber güvenlik yatırımlarınızı doğru sıraya koyun.",
-    content: `Siber güvenlik danışmanlığımız, kurumunuzun güvenlik olgunluğunu tarafsız biçimde değerlendirir ve bütçenizi en çok riski azaltacak yerden başlayarak harcamanız için önceliklendirilmiş bir yol haritası çıkarır.
+      "Siber güvenlik danışmanlığı: NIST CSF ve ISO 27001 temelli olgunluk ölçümü, risk sıralaması ve bütçeli 12 aylık güvenlik planı. Gebze merkezli, 2010'dan beri.",
+    content: `Hangi güvenlik ürününü almanız gerektiğini konuşmadan önce, kurumunuzun bugün nerede durduğunu bilmeniz gerekir. Siber güvenlik danışmanlığında BTM Bilişim olarak mevcut kontrollerinizi bağımsız bir gözle ölçer, açıkları iş etkisine göre sıralar ve sınırlı bütçenin önce en tehlikeli boşluğa gitmesini sağlayan bir plan hazırlarız. ISO 27001 baş denetçi deneyimimiz, değerlendirmeyi denetçinin soracağı sorularla yapmamızı sağlar.
 
-## Neden önce değerlendirme?
+## Tipik başlangıç noktası
 
-Güvenlik yatırımları çoğu zaman en son duyulan tehdide göre yapılır; oysa kurumun gerçek zayıf noktası başka yerdedir. Bir olgunluk değerlendirmesi, "neyimiz var, neyimiz eksik, en kritik açık nerede?" sorularına kanıtla cevap verir.
+Çoğu firmada güvenlik harcaması o hafta haberlerde çıkan saldırıya göre şekillenir. Yeni bir cihaz alınır ama yedekler aynı ağda, yönetici parolaları ortak, eski bir sunucu internete açık kalır. Ölçmeden yapılan yatırım, asıl riski yerinde bırakır. Danışmanlığın ilk işi bu tabloyu kanıtlarla görünür kılmaktır.
 
-## Kapsamımız
+## Değerlendirmenin kapsamı
 
-- NIST CSF / ISO 27001 çerçevesine göre güvenlik olgunluk değerlendirmesi
-- Varlık envanteri ve saldırı yüzeyinin çıkarılması
-- Teknik kontrollerin (firewall, EDR, e-posta, yedekleme, kimlik) gözden geçirilmesi
-- Politika, süreç ve yetkilendirme incelemesi
-- Risklerin iş etkisine göre önceliklendirilmesi
-- 12 aylık güvenlik yol haritası ve bütçe önerisi
-- Yönetim ve teknik ekip için ayrı raporlama
+- NIST CSF veya ISO 27001 maddelerine göre olgunluk puanlaması
+- Donanım, yazılım, hesap ve bulut servislerinden oluşan varlık listesi; dışarıdan görünen saldırı yüzeyi
+- Güvenlik duvarı, uç nokta koruması, e-posta güvenliği, kimlik yönetimi ve yedekleme ayarlarının incelenmesi
+- Yetki dağılımı, parola ve erişim politikaları ile süreçlerin gözden geçirilmesi
+- Her bulgu için olasılık ve iş etkisine dayalı risk derecesi
+- Bütçe tahminli, 12 aylık güvenlik planı
+- Yönetim kurulu için kısa özet, BT ekibi için teknik ek
 
-## Nasıl çalışıyoruz?
+## Çalışma adımları
 
-1. **Keşif** — Mevcut kontroller, mimari ve süreçler incelenir; ekiplerle görüşülür.
-2. **Boşluk analizi** — Bulgular çerçeveyle eşleştirilir, risk seviyeleri belirlenir.
-3. **Yol haritası** — Hızlı kazanımlar ve orta vadeli projeler ayrı ayrı planlanır.
-4. **Takip** — Belirli aralıklarla ilerleme yeniden değerlendirilir.
+1. **Görüşme ve inceleme** — BT sorumlusu ve birim yöneticileriyle konuşur, mimariyi ve ayarları yerinde ya da uzaktan inceleriz.
+2. **Eşleştirme** — Bulgular seçilen çerçeveye işlenir, eksik kalan kontroller derecelendirilir.
+3. **Plan** — Birkaç haftada bitecek hızlı düzeltmeler ile bütçe isteyen projeler ayrı listelenir.
+4. **Ara kontrol** — Belirlenen dönemlerde ilerleme yeniden puanlanır.
 
-## Sonraki adımlar
+## Plan sonrasında hangi hizmetler gelir?
 
-Bulgulara göre [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/), [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/), [EDR](/siber-guvenlik/edr-antivirus-cozumleri/) veya [DLP](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) çözümleriyle devam edilir. Sürekli izleme ihtiyacı için [CyberWare](/yazilim-urunlerimiz/cyberware/) değerlendirilebilir.
+Bulguların yönüne göre dış ve iç ağ için [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/), olay görünürlüğü için [merkezi log ve SIEM](/siber-guvenlik/siem-ve-log-yonetimi/), uç noktalar için [EDR ve kurumsal antivirüs](/siber-guvenlik/edr-antivirus-cozumleri/), veri sızıntısı riski için [DLP](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) gündeme gelir. Sürekli izleme isteyen kurumlar kendi geliştirdiğimiz [CyberWare](/yazilim-urunlerimiz/cyberware/) ürününü inceleyebilir. Güvenliği ağ, sunucu ve bulut yatırımlarıyla tek bir takvimde ele almak isterseniz [IT danışmanlık hizmetlerimiz](/danismanlik/it-danismanlik-hizmetleri/) bu çalışmayı kapsar.
 
-## Kurumunuza kazandırdıkları
+## Elinize geçenler
 
-- Güvenlik bütçesinin en yüksek riskten başlayarak kullanılması
-- Yönetime anlaşılır bir risk tablosu
-- Denetim ve müşteri sorularına hazır kanıt
-- Tek tedarikçiye bağımlı olmayan, gerekçeli kararlar
+Satıcıdan bağımsız hazırlanmış bir risk tablosu, gerekçesi yazılı öneriler ve müşteri ya da denetçi güvenlik anketlerine verebileceğiniz kanıtlar. Hangi adımı kiminle uygulayacağınız tamamen sizin kararınızdır.
 
-Güvenlik önceliklerini tüm teknoloji yatırımlarınızla birlikte planlamak için [kurumsal IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) hizmetimizle çalışabilirsiniz.
-
-Güvenlik olgunluğunuzu ölçmek için [bizimle iletişime geçin.](/iletisim/)`,
+İlk görüşme ve keşif ücretsizdir. [Güvenlik değerlendirmesi için bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Danışmanlık sonunda ürün satışı mı geliyor?",
+        question: "Değerlendirme sonunda bize ürün mü satıyorsunuz?",
         answer:
-          "Değerlendirme üründen bağımsızdır. Yol haritası bazen mevcut araçların doğru yapılandırılmasını, bazen yeni bir çözümü önerir; kararı gerekçeleriyle size bırakırız.",
+          "Hayır. Rapor satıcıdan bağımsız hazırlanır; çoğu zaman öneri, elinizdeki aracı doğru ayarlamaktır. Yeni bir çözüm gerekiyorsa alternatifleri gerekçeleriyle sunar, seçimi size bırakırız.",
       },
       {
-        question: "KOBİ için de anlamlı mı?",
+        question: "Küçük bir işletme için bu çalışma fazla değil mi?",
         answer:
-          "Evet. Küçük kurumlarda kapsam daralır, değerlendirme birkaç gün sürer ve çıktı genellikle birkaç yüksek etkili, düşük maliyetli adıma odaklanır.",
+          "Kapsam işletmenin büyüklüğüne göre daraltılır. Küçük ekiplerde çıktı genellikle az sayıda, maliyeti düşük ama riski belirgin azaltan adımdan oluşur.",
       },
       {
-        question: "Ne sıklıkla tekrarlanmalı?",
+        question: "Değerlendirmeyi hangi sıklıkla yenilemeliyiz?",
         answer:
-          "Yılda bir kez ve önemli bir altyapı, uygulama ya da organizasyon değişikliğinden sonra yeniden değerlendirme öneririz.",
+          "Yılda bir kez yenilemenizi öneririz. Yeni bir uygulamaya geçiş, taşınma ya da birleşme gibi büyük değişikliklerden sonra ara değerlendirme yapmak da yararlıdır.",
+      },
+      {
+        question: "Çalışma sırasında sistemlerimiz etkilenir mi?",
+        answer:
+          "Değerlendirme inceleme ve görüşmeye dayanır, üretim sistemlerine müdahale içermez. Aktif test gerekiyorsa bu ayrı bir sızma testi olarak planlanır.",
       },
     ],
   },
@@ -549,77 +559,65 @@ Güvenlik olgunluğunuzu ölçmek için [bizimle iletişime geçin.](/iletisim/)
     title: "Sızma Testi (Penetrasyon Testi)",
     metaTitle: "Sızma Testi (Penetrasyon Testi) Hizmeti | BTM Bilişim",
     metaDescription:
-      "Web, mobil, ağ ve dış/iç altyapı sızma testleri. BTM Bilişim ile zafiyetleri gerçek saldırgan bakışıyla tespit edin, kanıtlı raporla kapatın, yeniden test edin.",
-    content: `Sızma testi hizmetimiz, sistemlerinizi gerçek bir saldırganın bakış açısıyla, açıkları zincirleyerek hedefe ulaşmaya çalışan uzmanlarca test eder. Amaç açık saymak değil, iş etkisini göstermektir.
+      "Sızma testi (penetrasyon testi): dış ve iç ağ, web, mobil, API ve Wi-Fi için manuel test, CVSS puanlı kanıtlı rapor ve düzeltme sonrası yeniden test.",
+    content: `Bir zafiyet listesi, saldırganın sizden ne alabileceğini söylemez. Penetrasyon testinde uzmanlarımız sistemlerinize yetkili bir saldırgan gibi yaklaşır, bulduğu küçük açıkları birbirine bağlayarak kritik veriye ya da yönetici hesabına ulaşıp ulaşamadığını dener. Sonuçta elinize "kaç açık var" değil, "hangi yoldan nereye kadar girilebiliyor" sorusunun kanıtlı cevabı geçer.
 
-## Tarama mı, test mi?
+## Otomatik tarama ile manuel test arasındaki fark
 
-Zafiyet taraması otomatik araçlarla bilinen açıkları listeler; hızlı ve geniştir ama bağlamı yoktur. Sızma testi ise bir uzmanın manuel çalışmasıdır: hangi açığın gerçekten sömürülebilir olduğunu ve nereye kadar gidilebildiğini gösterir. Yıllık tek seferlik testin yetersiz kaldığı durumlar için [PentForce otonom sızma testi platformumuza](/yazilim-urunlerimiz/pentforce/) göz atabilirsiniz.
+Tarayıcı yazılımlar bilinen açıkları hızla listeler ama hangisinin gerçekten kullanılabildiğini ve birleşince ne doğurduğunu bilemez. Manuel testte uzman yanlış alarmları ayıklar, iş mantığındaki hataları arar ve etkiyi gösterir. Geniş ve sık kontrol için [zafiyet taraması ve güvenlik açığı analizi](/siber-guvenlik/guvenlik-acigi-ve-zafiyet-analizi/), derin doğrulama için sızma testi birbirini tamamlar.
 
-## Test kapsamları
+## Test türleri ve kapsam
 
-- **Dış ağ sızma testi** — İnternete açık servisler ve saldırı yüzeyi
-- **İç ağ sızma testi** — İçeri sızmış bir saldırganın yanal hareketi
-- **Web uygulaması testi** — OWASP Top 10 ve iş mantığı zafiyetleri
-- **Mobil uygulama testi** — Android/iOS istemci ve API katmanı
-- **API testi** — Kimlik doğrulama, yetkilendirme ve veri sızıntısı
-- **Kablosuz ağ testi** — Wi-Fi yapılandırması ve erişim kontrolü
-- **Sosyal mühendislik / kimlik avı simülasyonu** — Kullanıcı farkındalığı
+- **Dış ağ** — İnternetten erişilen servisler, VPN ve e-posta sunucuları
+- **İç ağ** — İçeride bir cihazı ele geçirmiş saldırganın yetki yükseltme ve yayılma imkânları
+- **Web uygulaması** — OWASP Top 10 maddeleri, oturum yönetimi ve iş akışı hataları
+- **Mobil uygulama** — Android ve iOS istemcisi ile arkasındaki servisler
+- **API** — Yetki kontrolü, kimlik doğrulama ve gereğinden fazla veri dönmesi
+- **Kablosuz ağ** — Wi-Fi şifreleme, misafir ağı ayrımı ve erişim politikası
+- **Kimlik avı simülasyonu** — Çalışanların sahte e-postalara tepkisinin ölçülmesi
 
-## Kimler için?
+## Kimler yaptırmalı?
 
-- Müşteri veya denetim (ISO 27001, KVKK, PCI DSS) gereği yıllık sızma testi yaptırması gereken kurumlar
-- İnternete açık web uygulaması, portal veya API işleten işletmeler
-- Yeni bir sistemi canlıya almadan önce güvenliğini doğrulamak isteyen ekipler
-- Fidye yazılımı riskini somut bulgularla görmek isteyen yöneticiler
+ISO 27001, KVKK veya PCI DSS gereği ya da müşteri şartnamesi nedeniyle düzenli test yaptırması gereken kurumlar; müşteri portalı, e-ticaret sitesi veya API yayınlayan firmalar; yeni bir sistemi canlıya almadan önce güvence isteyen ekipler ve fidye yazılımı riskini somut olarak görmek isteyen yöneticiler.
 
-## Nasıl çalışıyoruz?
+## Testin akışı
 
-1. **Kapsam ve yetkilendirme** — Hedefler, zaman penceresi ve kurallar yazılı olarak belirlenir.
-2. **Keşif ve zafiyet tespiti** — Bilgi toplama, tarama ve manuel doğrulama yapılır.
-3. **Sömürü ve zincirleme** — Doğrulanan açıklar kontrollü biçimde istismar edilir.
-4. **Raporlama** — Bulgular CVSS ile önceliklendirilir, kanıt (ekran görüntüsü/log) ve çözüm önerisiyle sunulur.
-5. **Yeniden test** — Kapatılan bulgular ücretsiz retest ile doğrulanır.
+1. **Yazılı yetki** — Hedef adresler, test saatleri ve yasak işlemler imzalı bir belgeyle belirlenir.
+2. **Bilgi toplama ve doğrulama** — Otomatik araçların bulguları elle teyit edilir.
+3. **İstismar** — Doğrulanan açıklar kontrollü biçimde kullanılır, mümkünse zincirlenir.
+4. **Rapor** — Her bulgu CVSS puanı, ekran görüntüsü veya log kanıtı ve çözüm adımıyla yazılır.
+5. **Yeniden test** — Düzelttiğiniz bulgular ücretsiz olarak tekrar kontrol edilir.
 
-## Sürekli test yaklaşımı
+## Yılda bir testin ötesi
 
-Yılda bir testin yanında sürekli bir program için yapay zekâ destekli otonom pentest platformu [PentForce](/yazilim-urunlerimiz/pentforce/) ile dış yüzeyi düzenli tarayabilir, kritik yayınlarda hedefli test yaptırabilirsiniz.
+Sık yayın yapan ekipler için kendi geliştirdiğimiz yapay zekâ destekli otonom test platformu [PentForce](/yazilim-urunlerimiz/pentforce/), dış yüzeyi düzenli aralıklarla kontrol eder; manuel test kritik sürümlere ayrılır. Bulguların kalıcı çözümü ve önceliklendirilmesi için [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) ile ilerleyebilirsiniz.
 
-## Kurumunuza kazandırdıkları
-
-- Gerçekten sömürülebilir açıkların önce kapatılması
-- Müşteri ve ihale şartnamelerindeki pentest koşulunun karşılanması
-- Yönetime iş diliyle yazılmış risk özeti
-- Düzeltmelerin retest ile kanıtlanması
-
-Testten önce geniş bir tarama için [zafiyet taraması ve güvenlik açığı analizi](/siber-guvenlik/guvenlik-acigi-ve-zafiyet-analizi/), bulguların kalıcı olarak kapatılması için [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) hizmetlerimizle devam edebilirsiniz.
-
-Test kapsamınızı ve takviminizi konuşmak için [bizimle iletişime geçin.](/iletisim/)`,
+Hedeflerinizi ve uygun test penceresini birlikte belirleyelim. [Kapsam görüşmesi için bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Sızma testi ne sıklıkla yapılmalı?",
+        question: "Penetrasyon testini ne zaman ve ne sıklıkla yaptırmalıyız?",
         answer:
-          "En az yılda bir kez ve her büyük değişiklikten (yeni uygulama, altyapı geçişi, birleşme) sonra yapılmasını öneriyoruz. Denetim veya müşteri şartı varsa sıklık bu gereksinime göre belirlenir.",
+          "Genel öneri yılda en az bir kez ve yeni uygulama yayını, altyapı taşıma ya da şirket birleşmesi gibi büyük değişikliklerden sonradır. Bir denetim ya da müşteri sözleşmesi sıklık belirliyorsa ona uyulur.",
       },
       {
-        question: "Sızma testi ücreti neye göre belirlenir?",
+        question: "Fiyatı hangi etkenler belirliyor?",
         answer:
-          "Ücret; test edilecek IP, uygulama ve API sayısına, test türüne (dış ağ, iç ağ, web, mobil), kara/gri kutu yaklaşımına ve kapsamın genişliğine göre belirlenir. Kapsam görüşmesinden sonra kalem kalem teklif sunarız.",
+          "Test edilecek IP adresi, uygulama ve API sayısı, test türleri, size verilecek bilgi düzeyi (kara veya gri kutu) ve rapor beklentisi fiyatı belirler. Kapsam görüşmesinden sonra kalemleri ayrı ayrı gösteren bir teklif hazırlarız.",
       },
       {
-        question: "Test sistemlerimize zarar verir mi?",
+        question: "Test sırasında sistemlerimiz çöker mi?",
         answer:
-          "Test, önceden yazılı olarak belirlenen kurallar ve zaman penceresi içinde yapılır. Servis kesintisi riski olan adımlar mesai dışına alınır veya test ortamında yürütülür.",
+          "Testi yazılı kurallar ve onaylanmış saat aralığında yürütürüz. Kesinti riski taşıyan adımlar mesai dışına alınır ya da test ortamında denenir.",
       },
       {
-        question: "Kara kutu mu, gri kutu mu test yapıyorsunuz?",
+        question: "Kara kutu mu gri kutu mu seçmeliyiz?",
         answer:
-          "Her ikisi de mümkün. Gri kutu (kısmi bilgi/hesap verilmesi) genellikle aynı sürede daha derin kapsam sağladığı için önerilir; ihtiyaca göre kara kutu da yaparız.",
+          "Gri kutuda size ait bir kullanıcı hesabı veya kısmi bilgi verilir; aynı sürede daha derine inildiği için çoğu kuruma bunu öneririz. Gerçek bir dış saldırganı taklit etmek istiyorsanız kara kutu test de yapılır.",
       },
       {
-        question: "Rapor kimin için yazılıyor?",
+        question: "Raporu kim okuyacak?",
         answer:
-          "Raporda hem yönetime yönelik bir yönetici özeti hem de teknik ekibe yönelik, adım adım yeniden üretim ve çözüm talimatı bulunur.",
+          "Rapor iki bölümden oluşur. Yönetim için iş riskini anlatan kısa bir özet, BT ekibi için her bulgunun nasıl tekrar üretileceğini ve nasıl kapatılacağını gösteren teknik ayrıntı bulunur.",
       },
     ],
   },
@@ -629,57 +627,59 @@ Test kapsamınızı ve takviminizi konuşmak için [bizimle iletişime geçin.](
     slug: "guvenlik-acigi-ve-zafiyet-analizi",
     title: "Zafiyet Taraması ve Güvenlik Açığı Analizi",
     metaDescription:
-      "Düzenli zafiyet taraması, kimlik doğrulamalı analiz ve önceliklendirilmiş bulgu raporlama. BTM Bilişim ile açıkları büyümeden görün ve kapatma sürecini yönetin.",
-    content: `Güvenlik açığı ve zafiyet analizi hizmetimiz, sistemlerinizdeki bilinen açıkları düzenli olarak tarar, doğrular ve iş etkisine göre önceliklendirilmiş raporlarla kapatma sürecinizi besler.
+      "Zafiyet taraması ve güvenlik açığı analizi: dış ve iç ağda düzenli, kimlik doğrulamalı tarama, yanlış pozitif ayıklama, CVSS sıralaması ve kapatma takibi.",
+    content: `Yazılım üreticileri her ay yeni güvenlik açıkları duyurur; geçen ay temiz çıkan bir sunucu bu ay saldırıya açık olabilir. Zafiyet taraması ve güvenlik açığı analizi hizmetimiz, ağınızdaki bilinen açıkları planlı aralıklarla bulur, gerçek olanları ayıklar ve ekibinizin önce neyi yamalaması gerektiğini açıkça yazar.
 
-## Zafiyet yönetimi neden süreklidir?
+## Tek tarama neden yetmez?
 
-Her hafta yeni zafiyetler yayımlanır; dün güvenli olan bir sunucu bugün açık hâle gelebilir. Tek seferlik tarama bir fotoğraftır. Değer, taramanın düzenli tekrarlanması ve bulguların gerçekten kapatılıp doğrulanmasındadır.
+Bir kez yapılan tarama yalnızca o günün durumunu gösterir. Fayda, taramanın bir takvime bağlanmasından ve her bulgunun kapatılıp kapatılmadığının bir sonraki turda kontrol edilmesinden gelir. Bu döngü kurulmadığında aynı açık aylarca raporda kalır. Yeni eklenen sunucular, unutulan test makineleri ve süresi dolan sertifikalar da ancak düzenli taramayla fark edilir; bu yüzden her turda varlık listesini de güncelleriz.
 
-## Kapsamımız
+## Hizmetin kapsamı
 
-- Dış ve iç ağ zafiyet taraması
-- Kimlik doğrulamalı (authenticated) tarama ile derin tespit
-- Sunucu, ağ cihazı, uç nokta ve uygulama kapsamı
-- Yanlış pozitiflerin manuel elenmesi
-- CVSS ve iş bağlamına göre önceliklendirme
-- Yama ve sıkılaştırma önerileriyle bulgu raporu
-- Dönemsel kıyas (trend) raporlaması ve kapatma takibi
+- İnternete açık adresler ve iç ağ segmentleri için periyodik tarama
+- Sunuculara yetkili hesapla bağlanarak yapılan (authenticated) derin tarama
+- Sunucu, ağ cihazı, kullanıcı bilgisayarı ve web uygulamalarının dahil edilmesi
+- Yanlış pozitiflerin uzman tarafından elle ayıklanması
+- CVSS puanı ve varlığın iş için önemine göre sıralama
+- Her açık için yama veya yapılandırma önerisi
+- Dönemden döneme açık sayısını gösteren eğilim raporu ve kapatma listesi
 
-## Nasıl çalışıyoruz?
+## Süreç nasıl işler?
 
-1. **Kapsam belirleme** — Taranacak varlıklar ve tarama sıklığı tanımlanır.
-2. **Tarama** — Otomatik araçlarla dış ve iç kapsam taranır.
-3. **Doğrulama** — Kritik bulgular manuel olarak teyit edilir, yanlış pozitifler elenir.
-4. **Raporlama ve takip** — Önceliklendirilmiş bulgular paylaşılır, sonraki taramada kapanma kontrol edilir.
+1. **Varlık listesi** — Hangi IP aralıkları ve sistemlerin hangi sıklıkla taranacağına birlikte karar veririz.
+2. **Tarama** — Dış ve iç tarafı ayrı profillerle tararız; hassas sistemler için düşük yoğunluk kullanırız.
+3. **Ayıklama** — Kritik ve yüksek bulguları elle teyit ederiz.
+4. **Rapor ve takip** — Sıralı listeyi paylaşırız, sonraki turda kapanan ve açık kalan maddeleri işaretleriz.
 
-## Sızma testinden farkı
+## Sızma testiyle nasıl birlikte kullanılır?
 
-Zafiyet analizi geniş ve sıktır, bilinen açıkları bulur. [Sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ise dar ve derindir, açıkları zincirleyerek iş etkisini gösterir. Sağlıklı bir program ikisini birlikte içerir; [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) ile doğru dengeyi kurarız.
+Tarama geniş bir alanı sık aralıklarla kontrol eder ve bilinen açıkları yakalar. [Sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) daha dar bir hedefe odaklanır ve açıkları birleştirerek bir saldırganın gerçekte ne elde edeceğini gösterir. İkisinin oranını, bütçenize ve risk profilinize göre [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/) kapsamında belirleriz.
 
-## Kurumunuza kazandırdıkları
+## Ne kazanırsınız?
 
-- Kritik açıkların istismar edilmeden önce görülmesi
-- Yama önceliğinin tahminle değil veriyle belirlenmesi
-- Denetimler için düzenli tarama kaydı
-- Zamanla azalan bir zafiyet trendi
+Kritik açıkları kötüye kullanılmadan görürsünüz, yama sırası tahmine değil veriye dayanır, ISO 27001 ve müşteri denetimlerinde düzenli tarama kaydı sunabilirsiniz. Eğilim raporu, BT ekibinin emeğinin yönetime ölçülebilir biçimde yansımasını da sağlar. Kapatma işini kendi ekibinize bırakabilir ya da sistem ekibimize devredebilirsiniz.
 
-Kapsamınızı ve tarama sıklığınızı planlamak için [bizimle iletişime geçin.](/iletisim/)`,
+Kaç varlığın hangi aralıkla taranacağını birlikte planlayalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Ne sıklıkla taramalıyız?",
+        question: "Taramayı hangi aralıkla yapmalıyız?",
         answer:
-          "İnternete açık varlıklar için aylık, iç ağ için üç aylık tarama yaygın bir başlangıçtır. Kritik değişikliklerden sonra ek tarama yapılır.",
+          "Birçok kurum internete açık sistemleri ayda bir, iç ağı üç ayda bir tarayarak başlar. Önemli bir güncelleme ya da yeni sistem kurulumundan sonra ek tarama yapılır.",
       },
       {
-        question: "Tarama üretim sistemlerini yavaşlatır mı?",
+        question: "Tarama canlı sistemleri yavaşlatır mı?",
         answer:
-          "Tarama yoğunluğu ayarlanabilir ve hassas sistemler için düşük etkili profillerle ya da mesai dışında çalıştırılır. Kapsam belirlerken bunu birlikte planlarız.",
+          "Tarama yoğunluğu ayarlanabilir. Hassas sistemleri düşük etkili profillerle veya mesai dışında tararız; bunu kapsam belirlerken sizinle netleştiririz.",
       },
       {
-        question: "Bulguları biz mi kapatıyoruz?",
+        question: "Açıkları kim kapatacak?",
         answer:
-          "Kapatma işini ekibiniz ya da bizim sistem/network ekibimiz üstlenebilir. Her bulgu için somut yama ve sıkılaştırma adımları rapora eklenir.",
+          "Kendi BT ekibiniz kapatabilir ya da sistem ve network ekibimiz bu işi üstlenebilir. Raporda her açık için uygulanacak yama veya ayar adımı yazılıdır.",
+      },
+      {
+        question: "Zafiyet taraması ile sızma testinin farkı nedir?",
+        answer:
+          "Tarama otomatik araçlarla bilinen açıkları geniş bir alanda bulur. Sızma testinde bir uzman bu açıkları elle kullanarak ne kadar ilerleyebildiğini gösterir; ikisi birbirinin yerine geçmez.",
       },
     ],
   },
@@ -689,57 +689,59 @@ Kapsamınızı ve tarama sıklığınızı planlamak için [bizimle iletişime g
     slug: "firewall-ve-ag-guvenligi",
     title: "Firewall ve Ağ Güvenliği",
     metaDescription:
-      "Yeni nesil güvenlik duvarı kurulumu, kural optimizasyonu, segmentasyon ve ağ trafiği izleme. Ağ sınırınızı ve iç trafiğinizi kontrol altına alın.",
-    content: `Firewall ve ağ güvenliği hizmetimiz, kurumsal ağınızın sınırını ve iç trafiğini kontrol altına alır. Yeni nesil güvenlik duvarlarını doğru kurgular, kural setinizi sadeleştirir ve trafiği sürekli izleriz.
+      "Firewall ve ağ güvenliği: yeni nesil güvenlik duvarı kurulumu, kural temizliği, VLAN segmentasyonu, IPS, güvenli VPN ve log entegrasyonu. Marka bağımsız.",
+    content: `Güvenlik duvarınız, ağınıza neyin girip çıkabileceğine karar veren tek noktadır; yıllar içinde biriken gelişigüzel kurallarla bu nokta işlevini kaybeder. Firewall ve ağ güvenliği hizmetinde yeni nesil güvenlik duvarınızı kurar ya da mevcut cihazınızı elden geçirir, kural tablosunu anlaşılır hâle getirir ve iç ağınızı bölümlere ayırırız. Satıcıdan bağımsız çalıştığımız için önde gelen markaların tümüyle uyumluyuz.
 
-## Yaygın sorunlar
+## Sahada sık gördüğümüz tablo
 
-Güvenlik duvarları zamanla "any-any" kurallarıyla dolar, kullanılmayan kurallar kalır ve gerçek trafik görünmez hâle gelir. İç ağ genellikle düzdür: bir cihaz ele geçince saldırgan yanal olarak her yere ulaşır. Segmentasyon ve kural hijyeni bu iki sorunu çözer.
+Kimin, neden açtığı bilinmeyen "her yerden her yere izin ver" kuralları, kapatılan projelerden kalan erişimler ve hiç bakılmayan loglar. İç ağ çoğu zaman tek parçadır; misafir telefonu, muhasebe bilgisayarı ve üretim makinesi aynı segmenttedir. Böyle bir ağda tek bir cihazın ele geçirilmesi bütün şirkete yayılmak için yeterlidir. Çözüm genellikle yeni cihaz değil, kural hijyeni ve doğru bölümlemedir.
 
-## Kapsamımız
+## Hizmet kapsamı
 
-- Yeni nesil güvenlik duvarı (NGFW) kurulumu ve yapılandırması
-- Kural seti denetimi, sadeleştirme ve gereksiz kuralların kaldırılması
-- Ağ segmentasyonu ve VLAN tasarımı (kullanıcı, sunucu, misafir, OT/IoT)
-- IPS/IDS, uygulama kontrolü ve web filtreleme politikaları
-- Uzaktan erişim için güvenli VPN yapılandırması
-- Loglama ve SIEM entegrasyonu
-- Yüksek erişilebilirlik (HA) ve yedeklilik kurgusu
+- Yeni nesil güvenlik duvarı (NGFW) seçimi, kurulumu ve yapılandırması
+- Mevcut kural tablosunun denetimi; kullanılmayan ve fazla geniş kuralların temizlenmesi
+- VLAN tasarımı ile kullanıcı, sunucu, misafir ve OT/IoT ağlarının ayrılması
+- Saldırı önleme (IPS), uygulama kontrolü ve web filtreleme politikaları
+- Uzaktan çalışanlar ve şubeler için güvenli VPN
+- Logların merkezi sisteme ve SIEM'e aktarılması
+- Kritik lokasyonlarda yüksek erişilebilirlik (HA) kurgusu
 
-## Nasıl çalışıyoruz?
+## Uygulama yaklaşımımız
 
-1. **Mevcut durum analizi** — Topoloji, kural setleri ve trafik akışları incelenir.
-2. **Tasarım** — Segmentasyon planı ve politika seti hazırlanır.
-3. **Uygulama** — Değişiklikler bakım penceresinde, geri dönüş planıyla devreye alınır.
-4. **İzleme** — Trafik ve olaylar izlenir, kurallar dönemsel olarak gözden geçirilir.
+1. **İnceleme** — Topolojiyi, kural tablosunu ve gerçek trafik akışlarını çıkarırız.
+2. **Tasarım** — Segment planını ve hedef politika setini yazılı olarak hazırlarız.
+3. **Geçiş** — Değişiklikleri önceden belirlenmiş bakım penceresinde, geri alma planı hazır şekilde devreye alırız.
+4. **Sürekli kontrol** — Trafiği ve olayları izler, kuralları belirli aralıklarla gözden geçiririz.
 
-## İlgili çözümler
+## Güvenlik duvarı tek başına yeterli mi?
 
-Uç nokta tarafında [EDR / antivirüs çözümleri](/siber-guvenlik/edr-antivirus-cozumleri/), merkezi görünürlük için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) ile birlikte konumlandırılır. Ağ tasarımının tamamı için [sistem ve network çözümlerimize](/sistem-network/) bakabilirsiniz.
+Ağ sınırı korumasını uç noktalarda [EDR ve antivirüs çözümleri](/siber-guvenlik/edr-antivirus-cozumleri/), olayları tek ekranda görmek için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) tamamlar. Kablolama, anahtarlar ve kablosuz ağ dahil altyapının tamamı için [sistem ve network hizmetlerimize](/sistem-network/) göz atabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Sonuçta neye sahip olursunuz?
 
-- Ağ sınırında net, denetlenebilir bir kural seti
-- Segmentasyonla sınırlanan yanal hareket riski
-- Trafik ve tehditlerde görünürlük
-- Uzaktan erişimin güvenli ve izlenebilir olması
+Her kuralın sahibinin ve gerekçesinin bilindiği, denetime gösterilebilir bir yapılandırma; bir cihaz ele geçirilse bile sınırlı kalan bir iç ağ; uzaktan erişimin kim tarafından, ne zaman yapıldığını gösteren kayıtlar. Kocaeli ve İstanbul Anadolu yakasında yerinde, diğer illerde uzaktan çalışıyoruz.
 
-Mevcut güvenlik duvarı kurulumunuzu birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Mevcut güvenlik duvarınızın yapılandırmasını ücretsiz keşifle birlikte inceleyelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut güvenlik duvarımızı değiştirmemiz gerekir mi?",
+        question: "Elimizdeki güvenlik duvarını yenilemek zorunda mıyız?",
         answer:
-          "Zorunlu değil. Önce mevcut cihazın sürümü, kapasitesi ve lisansları değerlendirilir; çoğu zaman doğru yapılandırma ve kural hijyeni belirgin iyileşme sağlar.",
+          "Her zaman değil. Önce cihazın yazılım sürümüne, kapasitesine ve lisans durumuna bakarız. Çoğu durumda kural temizliği ve doğru yapılandırma belirgin bir iyileşme sağlar.",
       },
       {
-        question: "Segmentasyon operasyonu böler mi?",
+        question: "Ağı bölümlere ayırmak işleri aksatır mı?",
         answer:
-          "Segmentasyon kademeli uygulanır; önce izleme modunda trafik gözlemlenir, sonra kurallar sıkılaştırılır. Böylece kesinti riski en aza iner.",
+          "Segmentasyonu aşamalı uygularız. Önce kurallar yalnızca izleme modunda çalışır ve gerçek trafik gözlemlenir, ardından sıkılaştırılır; böylece beklenmedik kesinti olasılığı düşer.",
       },
       {
-        question: "Hangi markalarla çalışıyorsunuz?",
+        question: "Hangi firewall markalarıyla çalışıyorsunuz?",
         answer:
-          "Yaygın kurumsal NGFW ailelerinin çoğuyla çalışıyoruz. Marka bağımsız yaklaşır, mevcut yatırımınız ve ihtiyacınıza göre öneride bulunuruz.",
+          "Satıcıdan bağımsızız ve yaygın kurumsal NGFW markalarının tümüyle çalışabiliyoruz. Öneriyi mevcut yatırımınıza, kullanıcı sayınıza ve bütçenize göre yaparız.",
+      },
+      {
+        question: "Sorun çıkarsa destek alabilir miyiz?",
+        answer:
+          "Evet. Sözleşmeli müşterilerimize 7/24 teknik destek veriyoruz; arızaya önce uzaktan, gerekirse yerinde müdahale ediyoruz.",
       },
     ],
   },
@@ -749,59 +751,56 @@ Mevcut güvenlik duvarı kurulumunuzu birlikte gözden geçirelim. [İletişime 
     slug: "edr-antivirus-cozumleri",
     title: "Kurumsal Antivirüs ve EDR Çözümleri",
     metaDescription:
-      "Uç nokta tehdit tespiti ve müdahale (EDR), merkezi antivirüs yönetimi ve fidye yazılımı koruması. Uç noktalarınızı görünür ve savunulabilir kılın.",
-    content: `EDR ve antivirüs çözümlerimiz, kullanıcı bilgisayarları ve sunucularınızı yalnızca bilinen zararlılara karşı değil, davranışsal olarak yeni ve hedefli saldırılara karşı da korur.
+      "Kurumsal antivirüs ve EDR çözümleri: davranış tabanlı tehdit tespiti, fidye yazılımı koruması ve geri alma, merkezi politika yönetimi. Marka bağımsız öneri.",
+    content: `Fidye yazılımı çeteleri, imza veritabanında henüz olmayan araçlar ve Windows'un kendi komutlarıyla çalışır; klasik antivirüs bu tür saldırıları çoğu zaman görmez. Kurumsal antivirüs ve EDR çözümlerimiz, bilgisayar ve sunucularınızda neler olduğunu davranış düzeyinde izler, şüpheli bir zinciri erken yakalar ve gerekirse cihazı otomatik olarak ağdan ayırır.
 
-Tek bir markaya bağlı değiliz: tüm önde gelen antivirüs ve EDR markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
+## Neden yalnızca antivirüs değil?
 
-## Antivirüs neden tek başına yetmez?
+İmza tabanlı koruma, daha önce tanımlanmış zararlıları durdurur. Dosya bırakmadan bellekte çalışan saldırılar, çalınan parolalarla yapılan girişler ya da meşru yönetim araçlarının kötüye kullanımı bu modele uymaz. EDR; süreçleri, komut satırlarını ve ağ bağlantılarını birlikte değerlendirir, olayın hangi bilgisayarda nasıl başladığını geriye dönük olarak gösterir. Bir uyarı geldiğinde ekibiniz yalnızca "zararlı bulundu" bilgisini değil, öncesinde ve sonrasında çalışan süreçleri de görür; bu da müdahale süresini kısaltır.
 
-Klasik antivirüs imza tabanlıdır: bilmediği zararlıyı kaçırır. Fidye yazılımları ve "dosyasız" saldırılar tam olarak bunu hedefler. EDR, uç noktadaki süreç, komut ve ağ davranışını izleyerek şüpheli zinciri yakalar ve otomatik yanıt verebilir.
+## Bu hizmet neleri kapsar? Kapsam
 
-## Kapsamımız
+- Kurumunuzun büyüklüğüne ve altyapısına uygun EDR/EPP ürününün seçimi
+- Engelleme, karantina ve otomatik yanıt politikalarının yazılması
+- Fidye yazılımına karşı davranış koruması ve değişen dosyaları geri alma (rollback)
+- Sunucular ve kritik iş istasyonları için ek sıkılaştırma
+- Uyarı önceliklendirme ve olay müdahale akışının kurulması
+- SIEM ile entegrasyon ve merkezi raporlama
+- Ajan dağıtımı, sürüm güncellemesi ve sağlık kontrolü
 
-- EDR/EPP çözümünün kurumsal yapıya uygun seçimi ve kurulumu
-- Politika tasarımı: engelleme, karantina ve otomatik yanıt kuralları
-- Fidye yazılımına karşı davranışsal koruma ve geri alma (rollback)
-- Sunucu ve kritik iş istasyonları için sıkılaştırma
-- Uyarıların önceliklendirilmesi ve olay müdahale akışı
-- SIEM entegrasyonu ve merkezi raporlama
-- Dağıtım, güncelleme ve sağlık kontrolünün yönetimi
+Hiçbir markanın bayisi değiliz; önde gelen antivirüs ve EDR ürünlerinin tümüyle çalışır, karşılaştırmayı ihtiyacınıza ve bütçenize göre yaparız.
 
-## Nasıl çalışıyoruz?
+## Geçiş adım adım
 
-1. **Değerlendirme** — Uç nokta envanteri, mevcut koruma ve riskli senaryolar çıkarılır.
-2. **Pilot** — Seçilen çözüm bir grup cihazda izleme modunda denenir.
-3. **Yaygınlaştırma** — Politikalar kademeli sıkılaştırılarak tüm filoya dağıtılır.
-4. **Operasyon** — Uyarılar izlenir, aylık sağlık ve tehdit raporu paylaşılır.
+1. **Envanter** — Korunacak cihazları, mevcut koruma ürününü ve riskli kullanım senaryolarını listeleriz.
+2. **Deneme grubu** — Seçilen ürünü sınırlı sayıda cihazda yalnızca izleme modunda çalıştırır, performansı ölçeriz.
+3. **Yaygınlaştırma** — Eski ajanı kaldırıp yenisini tüm cihazlara dağıtır, politikaları kademeli sıkılaştırırız.
+4. **İşletme** — Uyarıları takip eder, aylık sağlık ve tehdit özeti paylaşırız.
 
-## İlgili çözümler
+## Uç nokta korumasının yanında
 
-Veri sızıntısı tarafında [DLP çözümleri](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/), merkezi olay görünürlüğü için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) ile birlikte kullanılır. Uçtan uca izleme için [CyberWare](/yazilim-urunlerimiz/cyberware/) değerlendirilebilir.
+Hassas verinin dışarı çıkışını denetlemek için [DLP çözümleri](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/), EDR uyarılarını diğer kaynaklarla ilişkilendirmek için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) kullanılır. Kendi geliştirdiğimiz [CyberWare](/yazilim-urunlerimiz/cyberware/) ise uçtan uca izleme için bir seçenektir.
 
-## Kurumunuza kazandırdıkları
+## Kazanımlar
 
-- Bilinmeyen ve hedefli saldırılara karşı davranışsal koruma
-- Fidye yazılımı olaylarında hızlı tespit ve geri alma
-- Uç noktalarda tek panelden görünürlük
-- Olaylara dair kanıt ve raporlama
+Bilinmeyen zararlılara karşı davranış tabanlı koruma, fidye yazılımı olayında hızlı tespit ve dosyaların geri alınabilmesi, tüm cihazları tek konsoldan görme ve bir olay sonrası neyin nasıl olduğunu gösteren kanıt.
 
-Uç nokta koruma ihtiyacınızı konuşmak için [bizimle iletişime geçin.](/iletisim/)`,
+Kaç cihazı, hangi ürünle korumanın mantıklı olduğunu birlikte değerlendirelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "EDR bilgisayarları yavaşlatır mı?",
+        question: "EDR ajanı bilgisayarları yavaşlatır mı?",
         answer:
-          "Modern EDR ajanları düşük kaynak kullanır. Pilot aşamasında performans etkisi ölçülür ve politikalar buna göre ayarlanır.",
+          "Güncel EDR ajanları az kaynak tüketir. Deneme grubunda performans etkisini ölçer, gerekirse tarama ve istisna ayarlarını buna göre düzenleriz.",
       },
       {
-        question: "Mevcut antivirüsümüzü kaldırmamız gerekir mi?",
+        question: "Mevcut antivirüsü kaldırmamız gerekiyor mu?",
         answer:
-          "Genellikle evet; iki gerçek zamanlı koruma ajanı çakışabilir. Geçiş, eski ajanın kaldırılıp yenisinin dağıtılmasıyla planlı yapılır.",
+          "Çoğu durumda evet, çünkü iki gerçek zamanlı koruma ajanı birbirini engelleyebilir. Eski ürünü kaldırıp yenisini dağıtma işini planlı ve korumasız an bırakmadan yaparız.",
       },
       {
-        question: "7/24 izleme sağlıyor musunuz?",
+        question: "Uyarıları kim takip edecek?",
         answer:
-          "Uyarı önceliklendirme ve olay müdahale akışını kurarız. Sürekli izleme ihtiyacınız varsa yönetilen hizmet modelini birlikte tasarlarız.",
+          "Uyarı önceliklendirme ve müdahale akışını kurar, ekibinize devrederiz. Sürekli takip isterseniz yönetilen hizmet modelini birlikte tasarlarız; sözleşmeli müşterilerimize 7/24 teknik destek veriyoruz.",
       },
     ],
   },
@@ -811,59 +810,56 @@ Uç nokta koruma ihtiyacınızı konuşmak için [bizimle iletişime geçin.](/i
     slug: "dlp-veri-kaybi-onleme-cozumleri",
     title: "DLP – Veri Kaybı Önleme Çözümleri",
     metaDescription:
-      "Hassas verinin e-posta, USB, bulut ve web kanallarından sızmasını engelleyen DLP politikaları. Veri sınıflandırma ve kaçak önleme birlikte.",
-    content: `DLP (Data Loss Prevention) çözümlerimiz, kurumunuzun hassas verisinin izinsiz biçimde dışarı çıkmasını engeller. Finansal bilgi, müşteri verisi, sözleşme ve fikri mülkiyet gibi içeriklerin kanallarını politika ile kontrol altına alırız.
+      "DLP veri kaybı önleme: e-posta, USB, bulut ve web kanallarından hassas veri sızıntısını izleyen ve engelleyen politikalar, veri sınıflandırma ve raporlama.",
+    content: `Müşteri listesinin kişisel bir bulut hesabına yüklenmesi, teklif dosyasının yanlış alıcıya gitmesi ya da ayrılan bir çalışanın USB belleğe aldığı sözleşmeler: veri kayıplarının önemli bir kısmı dışarıdan değil, içeriden ve çoğu zaman dikkatsizlikten doğar. DLP (Data Loss Prevention) çözümlerimiz, hassas verinin hangi kanaldan çıkmaya çalıştığını görür, kullanıcıyı uyarır ve gerektiğinde aktarımı durdurur.
 
-Tek bir markaya bağlı değiliz: tüm önde gelen DLP markalarıyla uyumlu çalışıyor, ihtiyacınıza, bütçenize ve mevcut altyapınıza göre ürün bağımsız öneri yapıyoruz.
+## Hangi veriyi korumalısınız?
 
-## DLP hangi sorunu çözer?
+Kişisel veriler (TCKN, iletişim bilgisi), kart ve IBAN gibi finansal bilgiler, sözleşmeler, fiyat listeleri, teknik çizimler ve kaynak kod. İlk adım, bu verinin nerede tutulduğunu ve kimlerin elinde dolaştığını bilmektir. Ne olduğu bilinmeyen veri korunamaz. Keşif aşamasında genellikle beklenmedik yerler çıkar: paylaşılan klasörlerde unutulmuş personel dosyaları, e-posta eklerinde dolaşan müşteri listeleri, kişisel cihazlara senkronize edilen belgeler.
 
-Veri sızıntılarının büyük kısmı dış saldırı değil, iç kaynaklıdır: yanlış alıcıya giden e-posta, kişisel buluta yüklenen dosya, USB'ye kopyalanan müşteri listesi. DLP bu kanalları izler, uyarır ve gerektiğinde durdurur.
+## Çözüm kapsamı
 
-## Kapsamımız
+- Veri sınıflandırma şeması ve etiketleme kuralları
+- E-posta, web yükleme, bulut depolama ve USB/uç nokta için kanal politikaları
+- KVKK kişisel verisi, kart numarası, IBAN, TCKN gibi hazır şablonlar ve kuruma özel desenler
+- Olay akışı: kullanıcıyı bilgilendirme, yönetici onayına gönderme veya engelleme
+- İş gerekçesi girilerek istisna talep edilmesi
+- Denetim ve uyum raporları
+- Kullanıcıya anlık farkındalık bildirimleri
 
-- Veri sınıflandırma şeması ve etiketleme politikası
-- E-posta, web, bulut depolama ve USB/uç nokta kanallarında DLP kuralları
-- Hazır şablonlar (KVKK kişisel verisi, kart verisi, IBAN, TCKN vb.) ve özel desenler
-- Olay iş akışı: bilgilendirme, onaya gönderme, engelleme
-- İstisna ve iş gerekçesi (justification) yönetimi
-- Uyum ve denetim raporlaması
-- Kullanıcı farkındalık bildirimleri
+Belirli bir markaya bağlı değiliz; önde gelen DLP ürünlerinin tümüyle çalışabildiğimiz için seçimi mevcut altyapınıza ve bütçenize göre yaparız.
 
-## Nasıl çalışıyoruz?
+## Devreye alma
 
-1. **Veri keşfi** — Hassas verinin nerede durduğu ve nasıl hareket ettiği belirlenir.
-2. **Politika tasarımı** — Sınıflandırma ve kanal kuralları önce izleme modunda kurulur.
-3. **Ayarlama** — Yanlış pozitifler azaltılır, kritik kurallar engellemeye alınır.
-4. **Operasyon** — Olaylar incelenir, politika ve istisnalar dönemsel güncellenir.
+1. **Keşif** — Hassas verinin bulunduğu klasörleri, uygulamaları ve olağan akışları tespit ederiz.
+2. **İzleme modu** — Politikaları önce yalnızca kayıt tutacak şekilde açar, gerçek kullanımı görürüz.
+3. **İnce ayar** — Yanlış alarmları azaltır, kritik kuralları engelleme moduna alırız.
+4. **İşletme** — Olayları inceler, istisnaları ve kuralları belirli aralıklarla güncelleriz.
 
-## İlgili çözümler
+## DLP ile birlikte düşünülmesi gerekenler
 
-Personel aktivitesiyle birlikte DLP için [CyberQuan](/yazilim-urunlerimiz/cyberquan/), KVKK uyum süreciyle bütünleşik ilerlemek için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) ile birlikte konumlandırılır.
+Personel aktivitesi takibiyle veri koruma aynı panelde olsun istiyorsanız kendi ürünümüz [CyberQuan](/yazilim-urunlerimiz/cyberquan/) uygun bir seçenektir. KVKK'nın teknik tedbir yükümlülüklerini ve veri envanterini birlikte ele almak için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) ile paralel ilerlemenizi öneririz.
 
-## Kurumunuza kazandırdıkları
+## Ne elde edersiniz?
 
-- Kişisel ve ticari verinin kanal bazında kontrolü
-- Kaza kaynaklı sızıntıların erken durdurulması
-- KVKK ve sözleşmesel veri koruma yükümlülüklerine kanıt
-- Hangi verinin nereye gittiğine dair görünürlük
+Hassas verinin hangi kanaldan, kim tarafından, nereye gönderildiğini gösteren kayıt; kazayla yapılan paylaşımların daha gerçekleşmeden durdurulması ve KVKK ile müşteri sözleşmelerindeki veri koruma maddeleri için sunabileceğiniz kanıt. Kurallar sizin iş akışınıza göre yazıldığı için çalışanlar meşru işlerini yapmaya devam eder.
 
-Veri sızıntısı risklerinizi birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Verinizin en çok hangi kanaldan risk altında olduğunu birlikte çıkaralım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "DLP çalışanları rahatsız eder mi?",
+        question: "DLP çalışanların işini zorlaştırır mı?",
         answer:
-          "İyi tasarlanmış DLP çoğunlukla sessizdir; yalnızca tanımlı hassas veri, tanımlı kanaldan çıkmaya çalışınca devreye girer. İzleme modunda başlayıp kuralları kademeli sıkılaştırırız.",
+          "Doğru ayarlanmış bir DLP günlük işte fark edilmez; yalnızca tanımlı hassas veri, tanımlı bir kanaldan çıkarken devreye girer. İzleme moduyla başlayıp kuralları aşamalı sıkılaştırdığımız için kullanıcılar ani bir engelle karşılaşmaz.",
       },
       {
-        question: "Bulut uygulamalarındaki veriyi de kapsar mı?",
+        question: "Microsoft 365 gibi bulut servislerini de kapsar mı?",
         answer:
-          "Evet. Microsoft 365, web yükleme ve senkronizasyon istemcileri kapsanabilir. Kapsam, kullandığınız servislere göre planlanır.",
+          "Evet. Microsoft 365, tarayıcı üzerinden yüklemeler ve dosya senkronizasyon istemcileri kapsama alınabilir. Hangi servislerin dahil olacağını kullandığınız uygulamalara göre belirleriz.",
       },
       {
-        question: "Önce veri sınıflandırması şart mı?",
+        question: "Önce veri sınıflandırması yapmak zorunlu mu?",
         answer:
-          "Şart değil ama çok yardımcı olur. Hazır desenlerle hızlı başlayıp, sınıflandırma/etiketleme ile zamanla isabeti artırmak yaygın bir yoldur.",
+          "Zorunlu değil ama isabeti artırır. Hazır şablonlarla hızlı bir başlangıç yapıp, sınıflandırma ve etiketlemeyi zamanla ekleyerek yanlış alarmları azaltmak sık tercih edilen yoldur.",
       },
     ],
   },
@@ -873,58 +869,60 @@ Veri sızıntısı risklerinizi birlikte değerlendirelim. [İletişime geçin.]
     slug: "siem-ve-log-yonetimi",
     title: "SIEM ve 5651 Log Yönetimi",
     metaDescription:
-      "5651 uyumlu log saklama ve zaman damgası, merkezi SIEM, korelasyon ve alarm. BTM Bilişim ile olayları erken görün, denetim kaydını eksiksiz tutun.",
-    content: `SIEM ve log yönetimi hizmetimiz, dağınık sistemlerinizin kayıtlarını tek merkezde toplar, ilişkilendirir ve anlamlı alarmlara dönüştürür. Böylece bir saldırıyı olduktan sonra değil, gelişirken fark edersiniz.
+      "SIEM ve 5651 log yönetimi: yasal log saklama ve zaman damgası, merkezi toplama, korelasyon kuralları, anlamlı alarmlar ve ISO 27001, KVKK uyum raporları.",
+    content: `Bir saldırgan çoğu zaman ağınızda günlerce dolaşır; izleri güvenlik duvarında, kimlik sunucusunda ve kullanıcı bilgisayarında ayrı ayrı durur ama kimse bunları yan yana koymaz. SIEM ve log yönetimi hizmetimiz bu kayıtları tek bir platformda toplar, birbiriyle ilişkilendirir ve yalnızca gerçekten bakılması gereken olaylar için alarm üretir. 5651 sayılı Kanun'un log saklama yükümlülüğünü de aynı çalışmada karşılarız.
 
-## Neden merkezi log?
+## Dağınık loglar neden yetersiz?
 
-Sunucu, güvenlik duvarı, EDR, kimlik sistemi ve uygulamalar ayrı ayrı log tutar. Bir olayın izini bu adaların hepsinde tek tek aramak yavaş ve eksiktir. SIEM, olayları birleştirip "şu kullanıcı, şu saatte, şu IP'den başarısız girişten sonra şu sunucuya erişti" gibi bir zinciri tek ekranda gösterir.
+Her sistem kendi kaydını tutar; bir olay sonrasında beş ayrı konsolda saat eşleştirmeye çalışmak hem uzun sürer hem de parçaları kaçırır. SIEM bu zinciri tek ekranda gösterir: örneğin art arda başarısız girişlerin ardından aynı hesabın gece saatinde bir dosya sunucusuna bağlanması. Bir olay yaşandığında da "ne oldu, ne zaman başladı, hangi sistemlere dokunuldu" sorularını saatler yerine dakikalar içinde cevaplayabilirsiniz.
 
-## Kapsamımız
+## Kapsam
 
-- 5651 sayılı Kanun kapsamında internet erişim loglarının saklanması ve zaman damgalı imzalanması
-- Log kaynaklarının envanteri ve entegrasyonu (sunucu, ağ, güvenlik, kimlik, uygulama)
-- Merkezi toplama, normalize etme ve saklama politikası
-- Korelasyon kuralları ve önceliklendirilmiş alarm setinin kurulması
-- Use-case kütüphanesi: kaba kuvvet, ayrıcalık yükseltme, veri çıkışı, imkânsız seyahat vb.
-- Panolar ve dönemsel güvenlik raporları
-- Uyum raporlaması (ISO 27001, KVKK, denetim izi)
-- Alarm bakımı ve yanlış pozitif azaltma
+- 5651 uyumlu internet erişim kayıtlarının saklanması ve zaman damgasıyla imzalanması
+- Sunucu, ağ cihazı, güvenlik ürünü, kimlik sistemi ve uygulama loglarının bağlanması
+- Toplama, normalize etme ve saklama süresi politikası
+- Kuruma özel korelasyon kuralları ve önem derecesine göre alarm seti
+- Kaba kuvvet denemesi, yetki yükseltme, olağandışı veri çıkışı, imkânsız seyahat gibi senaryolar
+- Yönetim panoları ve dönemsel güvenlik raporları
+- ISO 27001, KVKK ve denetim izi raporları
+- Alarm bakımı ve yanlış pozitiflerin azaltılması
 
-## Nasıl çalışıyoruz?
+## Kurulumdan işletmeye
 
-1. **Tasarım** — Hangi kaynakların, ne kadar süre ve hangi amaçla toplanacağı belirlenir.
-2. **Entegrasyon** — Kaynaklar bağlanır, log formatları normalize edilir.
-3. **Kural geliştirme** — Kuruma özel korelasyon kuralları ve alarm eşikleri yazılır.
-4. **Operasyon** — Alarmlar izlenir, kurallar sürekli iyileştirilir.
+1. **Planlama** — Hangi kaynağın, hangi amaçla ve ne kadar süre saklanacağını belirleriz.
+2. **Bağlantı** — Kaynakları entegre eder, farklı log formatlarını ortak yapıya çeviririz.
+3. **Kural yazımı** — Altyapınıza uygun senaryoları ve eşikleri tanımlarız.
+4. **İzleme ve iyileştirme** — Alarmları takip eder, gürültü yapan kuralları düzenleriz.
 
-## İlgili çözümler
+## Hangi kaynaklar en değerli?
 
-Uç nokta telemetrisi için [EDR çözümleri](/siber-guvenlik/edr-antivirus-cozumleri/), sınır trafiği için [firewall ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/) ana besleyen kaynaklardır. Hazır bir olay panosu için [CyberWare](/yazilim-urunlerimiz/cyberware/) değerlendirilebilir.
+Uç noktalardaki süreç ve komut verisi için [EDR çözümleri](/siber-guvenlik/edr-antivirus-cozumleri/), ağ sınırındaki trafik için [firewall ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/) SIEM'i en çok besleyen iki kaynaktır. Hazır olay panosu arayan kurumlar kendi geliştirdiğimiz [CyberWare](/yazilim-urunlerimiz/cyberware/) ürününü inceleyebilir.
 
-## Kurumunuza kazandırdıkları
+## Getirileri
 
-- Olayların erken aşamada tespiti
-- Adli inceleme için eksiksiz, merkezi kayıt
-- Denetim ve uyum süreçlerinde hazır raporlar
-- Gürültü yerine önceliklendirilmiş, az sayıda anlamlı alarm
+Olayları erken aşamada görmek, adli inceleme gerektiğinde eksiksiz ve merkezi bir kayda sahip olmak, denetçiye hazır rapor sunmak ve ekibinizin yüzlerce gereksiz uyarı yerine az sayıda anlamlı alarma odaklanması. 5651 kayıtları da ayrı bir cihaza gerek kalmadan aynı yapı içinde tutulur.
 
-Log yönetimi ve SIEM ihtiyacınızı konuşmak için [bizimle iletişime geçin.](/iletisim/)`,
+Hangi sistemlerin loglanması gerektiğini birlikte belirleyelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "SIEM çok fazla alarm üretmez mi?",
+        question: "SIEM bizi alarm yağmuruna boğar mı?",
         answer:
-          "Kötü ayarlanmış SIEM üretir. Biz az sayıda, yüksek isabetli use-case ile başlar, yanlış pozitifleri düzenli olarak eleyerek alarm kalitesini yüksek tutarız.",
+          "Kötü ayarlanmış bir SIEM bunu yapar. Az sayıda, isabeti yüksek senaryoyla başlar ve yanlış pozitifleri düzenli olarak ayıklayarak alarm kalitesini koruruz.",
       },
       {
-        question: "Logları ne kadar süre saklamalıyız?",
+        question: "Logları ne kadar süre saklamamız gerekiyor?",
         answer:
-          "İhtiyaç ve mevzuata göre değişir; sık erişilen sıcak veri için birkaç ay, denetim için daha uzun arşiv yaygın bir modeldir. Saklama politikasını birlikte belirleriz.",
+          "5651 gibi mevzuat bazı kayıtlar için asgari süre belirler; geri kalanı iş ihtiyacınıza bağlıdır. Sık sorgulanan veriyi kısa süre hızlı depoda, denetim için gerekenleri daha uzun süre arşivde tutan bir politika hazırlarız.",
       },
       {
-        question: "Bulut ve şirket içi kaynakları birlikte toplayabilir miyiz?",
+        question: "Bulut ve şirket içi sistemler aynı yerde toplanabilir mi?",
         answer:
-          "Evet. Microsoft 365, Azure/AWS ve şirket içi sistemler aynı SIEM'de birleştirilebilir; korelasyon kuralları her iki tarafı da kapsayacak şekilde yazılır.",
+          "Evet. Microsoft 365, Azure, AWS ve şirket içi sunucular tek bir SIEM'e bağlanabilir. Korelasyon kurallarını her iki ortamı birlikte kapsayacak şekilde yazarız.",
+      },
+      {
+        question: "5651 kapsamında yükümlü müyüz?",
+        answer:
+          "Çalışanlarına veya misafirlerine internet erişimi sağlayan birçok kurum bu kapsamdadır. Keşif görüşmesinde durumunuzu birlikte değerlendirir, gerekli kayıt ve imzalama düzenini kurarız.",
       },
     ],
   },
@@ -934,60 +932,60 @@ Log yönetimi ve SIEM ihtiyacınızı konuşmak için [bizimle iletişime geçin
     slug: "iso-27001-teknik-guvenlik-cozumleri",
     title: "ISO 27001 Teknik Güvenlik Çözümleri",
     metaDescription:
-      "ISO 27001 Ek A kontrollerinin teknik uygulaması: erişim yönetimi, loglama, şifreleme, yedekleme ve sıkılaştırma. BTM Bilişim ile belgeyi sahada çalışır kılın.",
-    content: `ISO 27001 teknik güvenlik çözümlerimiz, standardın Ek A kontrollerini kâğıt üzerinde değil sistemlerinizde hayata geçirir. Danışmanlık BGYS'yi tasarlar; bu hizmet o tasarımın teknik kısmını kurar.
+      "ISO 27001 teknik güvenlik çözümleri: Ek A kontrollerinin sistemlerde uygulanması; erişim yönetimi, MFA, loglama, şifreleme, yedekleme ve kanıt üretimi.",
+    content: `Politika belgeleri hazırdır, Uygulanabilirlik Bildirgesi imzalanmıştır; ama denetçi bir yönetici hesabının son erişim gözden geçirmesini ya da yedekten geri dönüş testinin raporunu istediğinde cevap yoktur. ISO 27001 teknik güvenlik çözümlerimiz, standardın Ek A'sındaki teknik kontrolleri sistemlerinizde fiilen kurar ve her biri için denetime gösterilebilir kayıt bırakır. Yönetim sistemi tasarımı danışmanlığın işidir; bu hizmet o tasarımın sahadaki karşılığıdır. ISO 27001 baş denetçi deneyimimiz, kontrolü denetçinin bakacağı yerden kurmamızı sağlar.
 
-## Hangi kontrolleri kapsar?
+## Teknik kontrollerin kapsamı
 
-Ek A'nın teknik ağırlıklı maddeleri: erişim denetimi, ayrıcalıklı hesap yönetimi, loglama ve izleme, kriptografi, yedekleme, ağ güvenliği, zararlıya karşı koruma, zafiyet yönetimi ve güvenli yapılandırma. Bu hizmet bu maddelerin her biri için kanıt üretilebilir bir uygulama bırakır.
+- Rol bazlı yetkilendirme, kimlik ve erişim yönetimi, çok faktörlü doğrulama (MFA)
+- Yönetici hesaplarının ayrılması ve dönemsel erişim gözden geçirme süreci
+- Merkezi loglama ve izleme; ayrıntısı için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/)
+- Disk ve veri aktarımı şifreleme, anahtar yönetimi
+- Yedekleme kurgusu ve belgelenmiş geri yükleme testleri
+- Sunucu, uç nokta ve ağ cihazları için sıkılaştırma standartları
+- Tarama, önceliklendirme ve kapatmadan oluşan zafiyet yönetimi döngüsü
+- Her kontrol için kayıt ve kanıt dosyası
 
-## Kapsamımız
+## Uygulama sırası
 
-- Kimlik ve erişim yönetimi, rol bazlı yetkilendirme, MFA
-- Ayrıcalıklı hesap (admin) yönetimi ve erişim gözden geçirme süreci
-- Merkezi loglama ve izleme (bkz. [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/))
-- Disk/aktarım şifreleme ve anahtar yönetimi
-- Yedekleme ve geri yükleme testleri
-- Sunucu, uç nokta ve ağ cihazı sıkılaştırma (hardening) standartları
-- Zafiyet yönetimi döngüsünün kurulması
-- Kontrollere ait kayıt ve kanıt setinin oluşturulması
+1. **Bildirge eşlemesi** — SoA'daki teknik kontrolleri tek tek listeleriz.
+2. **Eksik tespiti** — Her kontrol için bugünkü durumu ve eksik kalan kısmı yazarız.
+3. **Kurulum** — Kontrolleri yapılandırır, düzenli kayıt üretecek şekilde işletmeye alırız.
+4. **Denetime hazırlık** — İç denetim bulgularını kapatır, belgelendirme denetiminde teknik sorulara sizinle birlikte cevap veririz.
 
-## Nasıl çalışıyoruz?
+## Kâğıttaki kontrol ile çalışan kontrol
 
-1. **SoA eşlemesi** — Uygulanabilirlik Bildirgesi'ndeki teknik kontroller listelenir.
-2. **Boşluk tespiti** — Her kontrol için mevcut durum ve eksik belirlenir.
-3. **Uygulama** — Kontroller kurulur, yapılandırılır ve kanıt üretecek şekilde işletilir.
-4. **Denetime hazırlık** — İç denetim bulguları kapatılır, denetime teknik olarak eşlik edilir.
+"Erişimler yılda bir gözden geçirilir" cümlesi politikada yazıyorsa, denetçi bu gözden geçirmenin tarihli kaydını görmek ister. Bizim hedefimiz her teknik maddenin böyle somut bir çıktısı olmasıdır: erişim listesi onayı, geri yükleme test raporu, log örneği, sıkılaştırma kontrol listesi.
 
-## İlgili hizmetler
+## Birlikte yürütülen hizmetler
 
-Yönetim sistemi tarafı için [ISO 27001 bilgi güvenliği danışmanlığı](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/), örtüşen yükümlülükler için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) ile birlikte yürütülür.
+BGYS kapsamı, risk analizi ve dokümantasyon için [ISO 27001 bilgi güvenliği danışmanlığı](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/), kişisel veriye ilişkin teknik tedbirler için [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) aynı takvimde ilerleyebilir. Kurulan kontrolleri teslim öncesinde [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile sınayabiliriz.
 
-## Kurumunuza kazandırdıkları
+## Kazanımlarınız
 
-- Ek A kontrollerinin "yazıldı" değil "çalışıyor" seviyesine gelmesi
-- Denetimde savunulabilir, kanıta dayalı teknik kayıt
-- KVKK teknik tedbirleriyle tek seferde örtüşme
-- Belgelendirme sonrası da sürdürülebilir bir kontrol seti
+Ek A maddelerinin yalnızca yazılı değil işler durumda olması, denetimde savunulabilir teknik kayıtlar, KVKK teknik tedbirleriyle örtüşen tek bir kontrol seti ve belge alındıktan sonra da kendi kendine işleyen bir düzen. Gözetim denetimlerinde aynı kanıtları her yıl yeniden üretmek için ayrı bir proje başlatmanız gerekmez.
 
-Teslim öncesinde güvenliği [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile doğrulayabiliriz.
-
-Teknik kontrol boşluklarınızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
+Teknik kontrollerdeki eksiklerinizi ücretsiz keşifle birlikte çıkaralım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Danışmanlık almadan sadece teknik uygulama alabilir miyiz?",
+        question: "Yalnızca teknik uygulama hizmeti alabilir miyiz?",
         answer:
-          "Evet, mevcut bir SoA'nız ve BGYS'niz varsa doğrudan teknik uygulamayla ilerleyebiliriz. SoA yoksa önce kapsam ve kontrol seçiminin netleşmesi gerekir.",
+          "Evet. Elinizde kapsamı belirlenmiş bir BGYS ve SoA varsa doğrudan teknik kurulumla başlarız. SoA henüz yoksa önce kapsamın ve kontrol seçiminin netleşmesi gerekir.",
       },
       {
-        question: "Mevcut araçlarımız yeterli mi?",
+        question: "Mevcut araçlarımızı kullanabilir miyiz?",
         answer:
-          "Çoğu zaman kısmen. Boşluk tespitinde mevcut güvenlik duvarı, yedekleme, kimlik ve log altyapınız değerlendirilir; eksik kalan kontroller için ekleme önerilir.",
+          "Çoğu zaman büyük kısmını kullanabilirsiniz. Eksik tespitinde güvenlik duvarı, yedekleme, kimlik ve log altyapınızı değerlendirir, yalnızca karşılanmayan kontroller için ekleme öneririz.",
       },
       {
-        question: "Kanıt üretimi ne demek?",
+        question: "Denetçi teknik tarafta neler ister?",
         answer:
-          "Her kontrolün denetçiye gösterilebilir bir çıktısı olması: erişim gözden geçirme kaydı, yedek geri yükleme test raporu, log örneği, sıkılaştırma kontrol listesi gibi.",
+          "Kontrolün yazılı olmasının yanında çalıştığını gösteren kayıt ister. Erişim gözden geçirme tutanağı, yedek geri yükleme test raporu, log örnekleri ve sıkılaştırma kontrol listeleri tipik örneklerdir.",
+      },
+      {
+        question: "Bu çalışma ne kadar sürer?",
+        answer:
+          "Süre, kapsamdaki sistem sayısına ve mevcut kontrollerin olgunluğuna bağlıdır. Eksik tespitinden sonra kontrol bazında bir iş planı ve takvim çıkarırız.",
       },
     ],
   },
@@ -1001,60 +999,57 @@ Teknik kontrol boşluklarınızı birlikte çıkaralım. [İletişime geçin.](/
     slug: "sistem-ve-network-danismanligi",
     title: "Sistem ve Network Danışmanlığı",
     metaDescription:
-      "Altyapı değerlendirmesi, kapasite planlaması ve büyümeye uygun ağ/sunucu mimarisi. BTM Bilişim ile teknoloji operasyonunuzun temelini sağlam kurun.",
-    content: `Sistem ve network danışmanlığımız, mevcut altyapınızın fotoğrafını çeker ve önümüzdeki 2-3 yıllık büyümeyi kaldıracak bir mimari önerir. Amaç, her yeni ihtiyaçta acil ve pahalı çözümlere başvurmak zorunda kalmamaktır.
+      "Sistem ve network danışmanlığı: sunucu ve ağ envanteri, darboğaz analizi, bulut ya da yerinde mimari kararı ve bütçeli, fazlara bölünmüş yol haritası.",
+    content: `Altyapınız yıllar içinde parça parça büyüdüyse, hangi sunucunun neyi çalıştırdığını, hangi switch'in kritik olduğunu ve bir arızanın kaç kişiyi etkileyeceğini çoğu zaman kimse tam bilemez. Sistem ve network danışmanlığında bu tabloyu netleştiriyor, ardından şirketinizin büyüme planına uyan bir hedef mimari ve uygulanabilir bir yatırım sırası öneriyoruz. 2010'dan beri Gebze merkezli çalışan ekibimiz Kocaeli ve İstanbul Anadolu yakasında sahaya gelir, diğer illerde uzaktan çalışır.
 
-## Ne zaman gerekir?
+## Danışmanlığa ihtiyaç duyduğunuzu gösteren belirtiler
 
-Sık yaşanan kesintiler, yavaşlayan uygulamalar, dolan disk ve lisans sınırları, belgelenmemiş bir ağ ve "bunu kuran arkadaş ayrıldı" durumu tipik işaretlerdir. Bağımsız bir değerlendirme, nereye yatırım yapılacağını netleştirir.
+Her ay tekrar eden kesintiler, sabahları yavaş açılan ERP ekranları, sürekli dolan diskler ve lisans sınırına dayanan sunucular ilk işaretlerdir. Ağ şemasının olmaması ya da altyapıyı kuran kişinin işten ayrılmış olması da riski büyütür. Bu durumda yeni donanım almadan önce bağımsız bir gözle bakmak, paranın doğru yere harcanmasını sağlar.
 
-## Kapsamımız
+## Değerlendirme kapsamı
 
-- Ağ topolojisi, sunucu envanteri ve bağımlılıkların çıkarılması
-- Kapasite ve performans analizi (CPU, bellek, disk, bant genişliği)
-- Yüksek erişilebilirlik ve yedeklilik değerlendirmesi
-- Bulut / şirket içi / hibrit mimari kararı
-- Sanallaştırma ve konsolidasyon fırsatları
-- Ağ ve sistem güvenliği olgunluğu
-- Belgeleme, isimlendirme ve yönetişim standartları
-- Önceliklendirilmiş yol haritası ve bütçe
+- Sunucu, ağ cihazı ve uygulama bağımlılıklarının çıkarıldığı güncel envanter
+- İşlemci, bellek, disk ve hat kullanımına dayalı kapasite ölçümü
+- Tek noktadan arıza riski taşıyan bileşenlerin ve yedeklilik açıklarının tespiti
+- Şirket içi, bulut veya hibrit seçenekleri için gerekçeli karşılaştırma
+- Sanallaştırma ile sunucu sayısını azaltma imkânlarının incelenmesi
+- Ağ ve sistem güvenliğinin, ISO 27001 baş denetçi deneyimiyle gözden geçirilmesi
+- İsimlendirme, belgeleme ve değişiklik yönetimi için kurallar
+- Maliyet tahminiyle önceliklendirilmiş, aşamalı uygulama planı
 
-## Nasıl çalışıyoruz?
+## Çalışmanın akışı
 
-1. **Envanter ve keşif** — Altyapı taranır, ekiplerle görüşülür, mevcut belgeler incelenir.
-2. **Analiz** — Darboğazlar, tekil hata noktaları ve riskler belirlenir.
-3. **Mimari önerisi** — Hedef durum ve oraya giden fazlar tanımlanır.
-4. **Uygulama desteği** — İsteğe bağlı olarak geçiş projeleri yönetilir.
+İlk görüşme ve ön keşif ücretsizdir. Sonrasında altyapınızı tarar, IT sorumlunuz ve kilit kullanıcılarla konuşur, mevcut dokümanları okuruz. Bulguları darboğazlar ve riskler başlığında toplar, hedef mimariyi ve oraya hangi adımlarla gidileceğini bir rapor halinde sunarız. İsterseniz geçiş projelerini de biz yürütürüz; isterseniz plan kendi ekibinize ya da başka bir tedarikçiye devredilir. Önerilerimiz satıcıdan bağımsızdır, belirli bir markaya yönlendirme yapmayız.
 
-## Sonraki adımlar
+## Rapordan uygulamaya geçiş
 
-Önerilere göre [ağ altyapısı kurulumu](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/), [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), [sanallaştırma](/sistem-network/sanallastirma-cozumleri/) veya [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/) ile devam edilir. Envanteri kalıcı tutmak için [Orbit](/yazilim-urunlerimiz/orbit/) kullanılabilir.
+Plan netleştiğinde işler genellikle [kurumsal ağ kurulumu](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/), [sunucuların yenilenmesi ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), [sanallaştırma projeleri](/sistem-network/sanallastirma-cozumleri/) ya da [bulut geçişi](/bulut-yedekleme/bulut-cozumleri/) olarak ayrı projelere bölünür. Envanterin sonraki yıllarda da güncel kalması için kendi geliştirdiğimiz IT operasyon platformu [Orbit](/yazilim-urunlerimiz/orbit/) kullanılabilir. Altyapı kararlarının güvenlik ve bütçe planlamasıyla birlikte ele alınması gerekiyorsa çalışmayı daha geniş [IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) kapsamına taşırız.
 
-## Kurumunuza kazandırdıkları
+## Sonunda elinizde ne olur?
 
-- Yatırımların plana dayanması, panik alımlarının azalması
-- Tekil hata noktalarının görünür olması
-- Belgelenmiş, devredilebilir bir altyapı
-- Büyümeye hazır bir mimari
+Hangi bileşenin ne zaman yenileneceğini gösteren bir takvim, kritik risklerin listesi, belgelenmiş bir altyapı ve yönetim kuruluna sunulabilecek gerekçeli bir bütçe. Böylece acil durumda yapılan pahalı alımlar yerini planlı yatırımlara bırakır.
 
-Altyapı kararlarınızı güvenlik ve bütçeyle birlikte ele almak isterseniz kapsamlı [IT danışmanlık hizmetlerimiz](/danismanlik/it-danismanlik-hizmetleri/) ile bütünsel bir yol haritası çıkarıyoruz.
-
-Altyapınızı birlikte gözden geçirmek için [iletişime geçin.](/iletisim/)`,
+Mevcut altyapınızı birlikte inceleyelim. [Ücretsiz keşif için bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Değerlendirme ne kadar sürer?",
+        question: "Bu çalışma iş akışımızı aksatır mı?",
         answer:
-          "Orta ölçekli bir kurumda saha keşfi ve analiz genellikle 1-2 hafta, raporlama ve yol haritası bir hafta daha sürer.",
+          "Hayır. Tarama ve ölçümler çalışan sistemlere müdahale etmeden yapılır; görüşmeler ekibinizin uygun olduğu saatlere planlanır. Kesinti gerektiren bir test varsa önceden sizinle konuşulur.",
       },
       {
-        question: "Bize belirli bir marka mı önereceksiniz?",
+        question: "Değerlendirme süresi neye bağlı?",
         answer:
-          "Hayır. Öneriler marka bağımsızdır; mevcut yatırımınız, ekip yetkinliğiniz ve bütçenize göre alternatifler karşılaştırılır.",
+          "Lokasyon sayısı, sunucu ve ağ cihazı adedi ile mevcut belgelerin durumu süreyi belirler. Keşif görüşmesinden sonra size net bir takvim veririz.",
       },
       {
-        question: "Bulut mu yoksa şirket içi mi kararını nasıl veriyorsunuz?",
+        question: "Önerdiğiniz ürünleri sizden almak zorunda mıyız?",
         answer:
-          "Veri hassasiyeti, gecikme ihtiyacı, maliyet yapısı ve büyüme planına bakarız. Sonuç çoğu zaman hibrit bir modeldir; kritik veriler içeride, esnek yükler bulutta.",
+          "Hayır. Satıcıdan bağımsız çalışırız; rapordaki seçenekler mevcut yatırımınız, ekibinizin bilgi birikimi ve bütçenize göre karşılaştırılır. Uygulamayı kimin yapacağına siz karar verirsiniz.",
+      },
+      {
+        question: "Bulut ile şirket içi arasında nasıl seçim yapıyorsunuz?",
+        answer:
+          "Verinin hassasiyetine, uygulamaların gecikmeye duyarlılığına, maliyetin zaman içindeki seyrine ve büyüme beklentinize bakarız. Pek çok kurumda sonuç, kritik verinin içeride kaldığı karma bir yapı olur.",
       },
     ],
   },
@@ -1065,60 +1060,57 @@ Altyapınızı birlikte gözden geçirmek için [iletişime geçin.](/iletisim/)
     title: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
     metaTitle: "Network Kurulumu ve Ağ Altyapısı | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
-      "Kurumsal LAN/WAN tasarımı, switch ve router yapılandırması, VLAN, SD-WAN ve sürekli ağ yönetimi. BTM Bilişim ile hızlı, kararlı ve yönetilebilir bir ağ kurun.",
-    content: `Ağ altyapısı kurulum ve yönetimi hizmetimiz, kurumsal ağınızı baştan tasarlar veya mevcut ağınızı kararlı, güvenli ve yönetilebilir bir yapıya taşır.
+      "Ağ altyapısı kurulum ve yönetimi: LAN/WAN tasarımı, switch ve router yapılandırması, VLAN ayrımı, şube bağlantıları, izleme ve değişiklik yönetimi.",
+    content: `Kurumsal ağ, her şeyin üzerinde koştuğu zemindir; zayıf olduğunda ERP, telefon, kamera ve bulut uygulamaları aynı anda etkilenir. Ağ altyapısı kurulum ve yönetimi hizmetinde yeni bir ağı sıfırdan tasarlıyor ya da yıllar içinde karmaşıklaşmış mevcut ağınızı düzenli, ölçülebilir ve kolay yönetilen bir yapıya dönüştürüyoruz.
 
-## Sağlıklı bir ağın özellikleri
+## Ağ sorunları nereden kaynaklanır?
 
-İyi bir ağ; segmentlere ayrılmış, belgelenmiş, izlenen ve tekil hata noktası olmayan bir ağdır. Kötü bir ağ ise "çalışıyor ama neden çalıştığını kimse bilmiyor" durumundadır. Hedefimiz birincisidir.
+Sahada en sık gördüğümüz tablo, tüm cihazların tek bir düz ağda çalıştığı, hangi portun nereye gittiğinin bilinmediği ve yapılandırma yedeğinin alınmadığı ağlardır. Böyle bir ağda bir döngü ya da arızalı bir cihaz bütün ofisi durdurabilir, saldırgan da içeri girdiğinde her şeye ulaşır. Doğru tasarım; segmentlere ayrılmış, belgelenmiş ve sürekli izlenen bir ağ demektir. Ofis büyüdükçe eklenen ucuz, yönetilemeyen switch'ler, yanlış bağlanmış bir kablonun yarattığı döngüler ve kapasitesi dolmuş tek bir internet hattı da yavaşlığın tipik sebepleri arasındadır. Bunları ölçmeden yeni cihaz almak, sorunu çoğu zaman sadece başka bir yere taşır.
 
-## Kapsamımız
+## Kurulum ve yönetim kapsamı
 
-- LAN/WAN tasarımı ve yeniden yapılandırma
-- Switch, router ve kablosuz denetleyici kurulumu ve yapılandırması
-- VLAN segmentasyonu, QoS ve trafik önceliklendirme
-- Çok lokasyonlu bağlantılar, VPN ve SD-WAN
-- DHCP, DNS ve IP adres planı (IPAM)
-- Ağ izleme, alarm ve kapasite raporlaması
-- Yapılandırma yedeği ve değişiklik yönetimi
-- Kablolama ve saha kurulum koordinasyonu
+- LAN ve WAN mimarisinin tasarlanması veya yeniden düzenlenmesi
+- Switch, router ve kablosuz denetleyicilerin kurulup yapılandırılması
+- VLAN ile bölümlendirme, QoS ve ses/görüntü trafiğine öncelik
+- Şubeler arası VPN veya SD-WAN bağlantıları
+- IP adres planı, DHCP ve DNS düzeni
+- Sürekli izleme, alarm ve kapasite raporları
+- Yapılandırma yedekleri ve kayıt altına alınan değişiklikler
+- Yapısal kablolama ve saha işlerinin koordinasyonu
 
-## Nasıl çalışıyoruz?
+## Projeyi nasıl yürütüyoruz?
 
-1. **Tasarım** — İhtiyaçlar, lokasyonlar ve büyüme öngörüsüne göre ağ mimarisi çıkarılır.
-2. **Kurulum** — Cihazlar yapılandırılır, segmentasyon ve politikalar uygulanır.
-3. **Geçiş** — Değişiklikler bakım penceresinde, geri dönüş planıyla devreye alınır.
-4. **Yönetim** — Ağ izlenir, yapılandırmalar yedeklenir, dönemsel sağlık raporu verilir.
+Önce lokasyonlarınızı, kullanıcı sayınızı ve önümüzdeki dönemdeki büyüme beklentinizi dinleriz; buna göre bir mimari çizilir. Cihazlar yapılandırılırken bölümlendirme ve erişim politikaları da uygulanır. Canlı ortama geçiş, mesai dışındaki bakım penceresinde ve her adım için bir geri alma planıyla yapılır. Kurulumdan sonra ağı izlemeye devam eder, yapılandırmaları düzenli yedekler ve belirli aralıklarla durum raporu paylaşırız. 7/24 teknik destek hattımız arıza anında ulaşılabilir durumdadır.
 
-## İlgili çözümler
+## Birlikte planlanan diğer katmanlar
 
-Ağ sınırı güvenliği için [firewall ve VPN çözümleri](/sistem-network/firewall-ve-vpn-cozumleri/), kablosuz taraf için [Wi-Fi ve kablosuz ağ çözümleri](/sistem-network/wifi-ve-kablosuz-ag-cozumleri/) ile birlikte planlanır. Misafir ağı yönetimi için [CyberHost](/yazilim-urunlerimiz/cyberhost/) kullanılabilir.
+İnternet çıkışının ve şube bağlantılarının korunması için [güvenlik duvarı ve VPN çözümleri](/sistem-network/firewall-ve-vpn-cozumleri/), kablosuz kullanıcılar için [kurumsal Wi-Fi çözümleri](/sistem-network/wifi-ve-kablosuz-ag-cozumleri/) aynı tasarımın parçası olarak ele alınır. Misafirlerin internet erişimini kayıt altına almak için kendi ürünümüz [CyberHost](/yazilim-urunlerimiz/cyberhost/) kullanılabilir. Güvenlik kameraları için ayrı segment ve PoE gücü gerekiyorsa [IP kamera sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) projesiyle birlikte kurgularız.
 
-## Kurumunuza kazandırdıkları
+## Teslimde size bıraktıklarımız
 
-- Kararlı, öngörülebilir ağ performansı
-- Segmentasyonla azalan güvenlik riski
-- Belgelenmiş, devredilebilir yapılandırma
-- Sorunların kullanıcıdan önce alarmla fark edilmesi
+Güncel ağ şeması, IP planı, port ve cihaz listesi, yedeklenmiş yapılandırmalar ve izleme panelinin erişimi. Böylece ağınız tek bir kişiye bağımlı kalmaz; sorunlar da çoğu zaman kullanıcılar fark etmeden alarmla görülür. Markadan bağımsız çalıştığımız için mevcut cihaz yatırımınızı mümkün olduğunca koruruz.
 
-Güvenlik kameraları için ayrı bir ağ segmenti ve PoE altyapısı gerekiyorsa [IP kamera ve güvenlik kamerası sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) hizmetimizle birlikte planlıyoruz.
-
-Ağ altyapınızı planlamak için [bizimle iletişime geçin.](/iletisim/)`,
+Ağınızı birlikte planlayalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut ağ cihazlarımız kullanılabilir mi?",
+        question: "Elimizdeki switch ve router'lar yeni tasarımda kullanılabilir mi?",
         answer:
-          "Genellikle evet. Cihazların yaşı, kapasitesi ve desteklenme durumu değerlendirilir; yeterli olanlar yeniden yapılandırılarak korunur.",
+          "Çoğu durumda evet. Cihazların yaşı, port kapasitesi ve üreticinin güncelleme desteği incelenir; yeterli olanlar yeniden yapılandırılarak tasarıma dahil edilir.",
       },
       {
-        question: "Birden fazla şubemiz var, hepsini bağlayabilir misiniz?",
+        question: "Farklı şehirlerdeki şubelerimizi tek ağda toplayabilir misiniz?",
         answer:
-          "Evet. Site-to-site VPN ya da SD-WAN ile çok lokasyonlu bir omurga kurar, trafiği merkezi politikalarla yönetiriz.",
+          "Evet. Lokasyonları site-to-site VPN ya da SD-WAN ile merkeze bağlar, erişim ve trafik kurallarını tek noktadan yönetiriz. Yerinde iş gereken şubeler için uzaktan yönlendirmeli kurulum planlanır.",
       },
       {
-        question: "Kurulum sırasında ağımız kesilir mi?",
+        question: "Geçiş günü çalışanlarımız internetsiz kalır mı?",
         answer:
-          "Kritik geçişler mesai dışına planlanır ve geri dönüş adımları önceden hazırlanır. Mümkün olan yerlerde değişiklikler kademeli uygulanır.",
+          "Kritik değişiklikleri mesai dışına alır ve her adımın geri alma yolunu önceden hazırlarız. Mümkün olan yerlerde geçiş bölüm bölüm yapılır, böylece etki sınırlı kalır.",
+      },
+      {
+        question: "Kurulumdan sonra ağı kim yönetecek?",
+        answer:
+          "Tercih sizin. Yönetimi sürekli hizmet olarak üstlenebilir ya da belgeleri ve yetkileri kendi IT ekibinize devredip yalnızca gerektiğinde destek verebiliriz.",
       },
     ],
   },
@@ -1128,65 +1120,64 @@ Ağ altyapınızı planlamak için [bizimle iletişime geçin.](/iletisim/)`,
     slug: "sunucu-kurulum-ve-yonetimi",
     title: "Sunucu Kurulumu ve Yönetimi",
     metaDescription:
-      "Fiziksel ve sanal sunucu kurulumu, Windows/Linux yönetimi, Active Directory, yamalama ve izleme. BTM Bilişim ile sunucu ortamınızı kararlı ve güncel tutun.",
-    content: `Sunucu kurulum ve yönetimi hizmetimiz, fiziksel ve sanal sunucu ortamınızı kurar, sıkılaştırır ve sürekli işletir. Windows ve Linux tarafında kurulumdan yamaya, yedekten izlemeye kadar operasyonu üstleniriz.
+      "Sunucu kurulum ve yönetimi: Windows Server ve Linux kurulumu, Active Directory, güvenlik sıkılaştırması, yama takvimi, izleme ve test edilen yedekler.",
+    content: `Sunucular dosyalarınızı, ERP veritabanınızı ve kullanıcı hesaplarınızı taşır; biri durduğunda işin bir bölümü de durur. Sunucu kurulum ve yönetimi hizmetinde fiziksel ve sanal sunucularınızı ortak bir standarda göre kuruyor, güvenlik ayarlarını sıkılaştırıyor ve günlük işletimini üstleniyoruz. Windows Server ve Linux ortamlarında aynı disiplinle çalışırız.
 
-## Yaygın sorunlar
+## Sık karşılaştığımız tablo
 
-Elle kurulmuş, birbirinden farklı yapılandırılmış sunucular; ertelenen güncellemeler; izlenmeyen disk ve servisler; belgelenmemiş bağımlılıklar. Bunlar hem güvenlik hem de erişilebilirlik riskidir.
+Her biri farklı zamanda, farklı kişi tarafından kurulmuş sunucular; aylarca ertelenmiş güncellemeler; kimsenin izlemediği diskler ve servisler; bir sunucu kapanınca hangi uygulamanın etkileneceğini bilmeyen bir ekip. Bu durum hem saldırılara açık kapı bırakır hem de beklenmedik kesintilere yol açar. Garantisi bitmiş disklerin RAID uyarı verdiğini kimsenin görmemesi, Active Directory'de yıllar önce ayrılmış çalışanların hesaplarının hâlâ açık durması ve yönetici parolasının herkesçe bilinmesi de denetimlerde sık rastladığımız bulgulardır.
 
-## Kapsamımız
+## Kimlere uygun?
+
+- Yeni sunucu almayı ya da eskiyen sunucusunu yenilemeyi düşünen işletmeler
+- ERP, veritabanı ve dosya paylaşımını kendi binasında çalıştıran kurumlar
+- Fiziksel sunucularını sanal ortama taşımak isteyen firmalar
+- Sunucu odası, yedekleme ve UPS düzenini toparlamak isteyen IT ekipleri
+
+## Hizmet kapsamı
 
 - Fiziksel sunucu ve hipervizör kurulumu
-- Windows Server ve Linux (RHEL/Ubuntu/Debian) kurulumu ve sıkılaştırma
-- Active Directory, DNS, DHCP, dosya ve yazdırma servisleri
-- Rol bazlı yetkilendirme ve ayrıcalıklı erişim düzeni
-- Yamalama takvimi ve değişiklik yönetimi
-- İzleme, alarm ve kapasite raporlaması
-- Yedekleme entegrasyonu ve geri yükleme testleri
-- Standart kurulum şablonları ve belgeleme
+- Windows Server ile RHEL, Ubuntu ve Debian kurulumu, güvenlik sıkılaştırması
+- Active Directory, DNS, DHCP, dosya ve yazıcı servisleri
+- Yetki rollerinin ve yönetici hesaplarının düzenlenmesi
+- Planlı yama takvimi ve kayıt altına alınan değişiklikler
+- Disk, servis ve performans izleme, alarm
+- Yedekleme yazılımıyla entegrasyon ve periyodik geri yükleme denemesi
+- Tekrar kullanılabilir kurulum şablonları ve belgeler
 
-## Kimler için?
+## Çalışma yöntemimiz
 
-- Yeni sunucu alımı veya mevcut sunucusunu yenilemeyi planlayan işletmeler
-- ERP, dosya paylaşımı ve veritabanı gibi kritik uygulamaları yerinde çalıştıran kurumlar
-- Eskiyen fiziksel sunucularını sanallaştırmaya taşımak isteyenler
-- Sunucu odası, yedekleme ve kesintisiz güç altyapısını düzene sokmak isteyen ekipler
+İşe mevcut sunucuları, üzerlerindeki rolleri ve birbirleriyle bağımlılıklarını listeleyerek başlarız. Ardından kurumunuza özel bir kurulum ve güvenlik standardı yazılır; ISO 27001 baş denetçi deneyimimiz bu standardın denetime hazır olmasına yardımcı olur. Yeni sunucular şablondan kurulur, eskiler adım adım bu standarda çekilir. İşletme döneminde yamalar takvime göre uygulanır, alarmlar 7/24 takip edilir ve yedeklerin gerçekten geri dönüp dönmediği düzenli olarak denenir.
 
-## Nasıl çalışıyoruz?
+## Yanında düşünülmesi gerekenler
 
-1. **Envanter** — Mevcut sunucular, roller ve bağımlılıklar çıkarılır.
-2. **Standart** — Kurumunuza özel kurulum ve sıkılaştırma standardı tanımlanır.
-3. **Uygulama** — Yeni sunucular şablonla kurulur, mevcutlar standarda çekilir.
-4. **İşletme** — Yamalama, izleme ve yedek testleri düzenli olarak yürütülür.
+Donanım sayısını azaltmak ve esneklik kazanmak için [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/) değerlendirilir. Sunuculardaki verinin korunması için [veri yedekleme](/bulut-yedekleme/veri-yedekleme-cozumleri/), büyük bir arızada işin ne kadar sürede ayağa kalkacağı için de [felaket kurtarma planı](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) aynı projede ele alınır.
 
-## İlgili çözümler
+## Elde ettiğiniz sonuç
 
-Kaynak verimliliği için [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/), veri güvenliği için [veri yedekleme çözümleri](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) ile birlikte kurgulanır.
+Belgelenmiş, birbirinin aynı kurulmuş sunucular; güncel yamalarla daralan saldırı yüzeyi; disk dolmadan gelen uyarılar ve denenmiş, güvenilir yedekler.
 
-## Kurumunuza kazandırdıkları
-
-- Standart, tekrarlanabilir ve belgeli sunucu kurulumları
-- Güncel yamalarla azalan zafiyet yüzeyi
-- Disk/servis sorunlarının alarmla erken görülmesi
-- Test edilmiş, gerçekten çalışan yedekler
-
-Sunucu ortamınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Sunucu ortamınızı birlikte gözden geçirelim. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "Yönetimi tamamen siz mi üstleniyorsunuz?",
+        question: "Sunucu yönetimini tamamen size devredebilir miyiz?",
         answer:
-          "İhtiyaca göre. Tüm operasyonu yönetilen hizmet olarak devralabilir ya da ekibinize belirli alanlarda (yamalama, izleme, olay desteği) destek verebiliriz.",
+          "Evet. Tüm işletimi yönetilen hizmet olarak üstlenebiliriz. İç IT ekibiniz varsa yalnızca yama, izleme veya arıza desteği gibi belirli alanlarda da çalışabiliriz.",
       },
       {
-        question: "Windows ve Linux'u birlikte yönetebilir misiniz?",
+        question: "Hem Windows hem Linux sunucularımız var, sorun olur mu?",
         answer:
-          "Evet. Karma ortamlar yaygındır; her iki tarafta da kurulum, sıkılaştırma, yamalama ve izleme sağlıyoruz.",
+          "Olmaz. Karma ortamlar çok yaygındır; iki tarafta da kurulum, sıkılaştırma, güncelleme ve izleme hizmeti veriyoruz.",
       },
       {
-        question: "Eski sunuculardan yeni ortama geçiş yapıyor musunuz?",
+        question: "Eski sunucudan yenisine geçişte veri kaybı riski var mı?",
         answer:
-          "Evet. Fiziksel-sanal (P2V) ve sanal-sanal (V2V) taşımalar ile sürüm yükseltmelerini test ortamında prova ederek, geri dönüş planıyla yürütürüz.",
+          "Taşımalar önce test ortamında prova edilir, geçiş öncesinde yedek alınır ve eski sunucu bir süre kapatılmadan bekletilir. Bir sorun çıkarsa geri dönüş planı hazırdır.",
+      },
+      {
+        question: "Güncellemeler mesai saatinde mi yapılıyor?",
+        answer:
+          "Yeniden başlatma gerektiren güncellemeler sizinle belirlenen bakım pencerelerinde uygulanır. Kritik bir güvenlik açığı çıktığında acil uygulama için önce sizinle iletişime geçeriz.",
       },
     ],
   },
@@ -1196,57 +1187,51 @@ Sunucu ortamınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/
     slug: "veri-merkezi-cozumleri",
     title: "Veri Merkezi Çözümleri",
     metaDescription:
-      "Veri merkezi tasarımı, kabinet ve enerji/soğutma planlaması, yapılandırılmış kablolama ve taşıma projeleri. BTM Bilişim ile veri merkezinizi doğru kurgulayın.",
-    content: `Veri merkezi çözümlerimiz; sunucu odanızın ya da hazır veri merkezindeki alanınızın tasarımı, kurulumu ve taşınmasında uçtan uca danışmanlık ve uygulama sağlar.
+      "Veri merkezi çözümleri: sunucu odası tasarımı, kabinet yerleşimi, UPS ve soğutma planı, yapısal kablolama, çevre izleme ve colocation taşıma projeleri.",
+    content: `Sunucu odası çoğu işletmede zamanla büyüyen bir depoya dönüşür: kablolar birbirine karışır, klima tek başına yük taşır, UPS'in hangi cihazı beslediği bilinmez. Veri merkezi çözümlerimizde kendi binanızdaki sunucu odasını ya da bir veri merkezinde kiraladığınız alanı baştan planlıyor, kuruyor veya yeni bir yere taşıyoruz.
 
-## Neden planlı bir veri merkezi?
+## Plansız sunucu odasının riskleri
 
-Plansız büyüyen sunucu odaları; yetersiz soğutma, dağınık kablolama, tekil enerji hattı ve erişim kontrolü eksikliğiyle malulüdür. Bunların her biri erişilebilirlik ve güvenlik riskidir. Doğru tasarım bu riskleri baştan azaltır.
+Tek bir enerji hattına bağlı kabinetler, yetersiz ya da yedeksiz soğutma, etiketsiz kablolar ve kapısı herkese açık bir oda; bunların her biri bir gün kesintiye dönüşebilir. Isınan bir oda donanım ömrünü kısaltır, karışık kablolama da arıza anında müdahaleyi uzatır. Tasarım aşamasında alınan önlemler bu riskleri kurulumdan önce ortadan kaldırır. Örneğin UPS'in gerçekte kaç dakika dayandığı, klima arızalandığında odanın ne kadar sürede kritik sıcaklığa çıktığı ve jeneratör devreye girene kadar hangi cihazların ayakta kalacağı, bir kesinti yaşanmadan önce bilinmelidir. Bu hesapları projenin başında yapar, sonuçları sizinle paylaşırız.
 
-## Kapsamımız
+## Proje kapsamı
 
-- Sunucu odası / veri merkezi alanı tasarımı ve kapasite planlaması
-- Kabinet düzeni, güç dağıtımı (PDU) ve topraklama
-- Enerji yedekliliği: UPS, jeneratör devreye alma senaryoları
-- Soğutma ve sıcak/soğuk koridor planlaması
-- Yapılandırılmış kablolama ve etiketleme standardı
-- Fiziksel erişim kontrolü, [kamera ve çevre izleme](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) (sıcaklık, nem, sızıntı)
-- Colocation seçimi ve veri merkezi taşıma projeleri
+- Alanın ve kabinetlerin kapasiteye göre yerleşim planı
+- Güç dağıtımı (PDU), topraklama ve hat ayrımı
+- UPS ve jeneratör senaryolarıyla enerji yedekliliği
+- Klima kapasitesi ve sıcak/soğuk koridor düzeni
+- Etiketlemesi standart hale getirilmiş yapısal kablolama
+- Kartlı giriş, [kamera ile izleme](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) ve sıcaklık, nem, su kaçağı sensörleri
+- Colocation alternatiflerinin karşılaştırılması ve taşıma yönetimi
 
-## Nasıl çalışıyoruz?
+## Uygulama adımları
 
-1. **İhtiyaç analizi** — Mevcut ve hedef kapasite, kritiklik seviyesi ve kısıtlar belirlenir.
-2. **Tasarım** — Yerleşim, enerji, soğutma ve kablolama planı hazırlanır.
-3. **Uygulama** — Kurulum ve göç, hizmet kesintisini en aza indirecek şekilde planlanır.
-4. **Devreye alma** — İzleme kurulur, belgeler ve işletim prosedürleri teslim edilir.
+İlk olarak bugünkü ve birkaç yıl sonraki kapasite ihtiyacınızı, sistemlerinizin ne kadar kritik olduğunu ve binanın kısıtlarını belirleriz. Ardından yerleşim, enerji, soğutma ve kablolama planı çizilir. Kurulum ya da taşıma, iş akışınızı en az etkileyecek saatlere bölünerek yapılır. Proje sonunda izleme sistemi devreye alınır; yerleşim planı, kablolama listesi ve işletim talimatları size teslim edilir.
 
-## İlgili çözümler
+## Kendi alanınız mı, kiralık alan mı?
 
-Sunucu tarafında [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), süreklilik tarafında [iş sürekliliği çözümleri](/bulut-yedekleme/is-surekliligi-cozumleri/) ile bütünleşir. Bulut alternatifleri için [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/) değerlendirilebilir.
+Her kurum için kendi veri merkezini işletmek mantıklı değildir. Büyüme hızınız, IT ekibinizin büyüklüğü ve toplam maliyet birlikte değerlendirildiğinde bazen colocation, bazen [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/), bazen de ikisinin karışımı daha uygun çıkar. Satıcıdan bağımsız olduğumuz için seçenekleri tarafsız karşılaştırırız. Kabinetlere yerleşecek sunucuların kurulumu için [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), ikinci lokasyon ve kesintisiz çalışma ihtiyacı için [iş sürekliliği çözümleri](/bulut-yedekleme/is-surekliligi-cozumleri/) ile birlikte planlama yaparız.
 
-## Kurumunuza kazandırdıkları
+## Proje sonunda kazandıklarınız
 
-- Enerji ve soğutmada yedeklilik, azalan kesinti riski
-- Düzenli, izlenebilir ve büyütülebilir bir yerleşim
-- Fiziksel güvenlik ve çevre izleme
-- Taşıma projelerinde kontrollü, planlı geçiş
+Yedekli enerji ve soğutmaya sahip, büyümeye yer bırakan düzenli bir yerleşim; yetkisiz girişe kapalı ve sensörlerle izlenen bir oda; arıza anında dakikalar içinde bulunabilen kablolar.
 
-Veri merkezi ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
+Sunucu odanızı ya da taşıma projenizi konuşalım. [Ücretsiz keşif isteyin](/#teklif) ya da sorularınız için [bize yazın](/iletisim/).`,
     faq: [
       {
-        question: "Küçük bir sunucu odamız var, bu hizmet bize göre mi?",
+        question: "Birkaç kabinetlik küçük bir odamız var, bu hizmet bize uygun mu?",
         answer:
-          "Evet. Ölçek küçük olsa da enerji yedekliliği, soğutma, kablolama düzeni ve çevre izleme aynı prensiplerle, daha dar kapsamda uygulanır.",
+          "Evet. Enerji yedekliliği, soğutma, kablolama düzeni ve çevre izleme küçük odalarda da aynı mantıkla uygulanır; sadece kapsam daha dardır.",
       },
       {
-        question: "Kendi veri merkezimiz mi olmalı, colocation mu?",
+        question: "Taşıma sırasında sistemlerimiz ne kadar kapalı kalır?",
         answer:
-          "Kapasite, büyüme hızı, uzman ekip ve maliyet yapısına bakarız. Çoğu orta ölçekli kurum için colocation ya da hibrit model daha ekonomiktir.",
+          "Bu, sistem sayısına ve bağımlılıklara göre değişir. Taşıma sırasını ve kesinti pencerelerini önceden planlar, kritik sistemleri mesai dışına alır ve her adım için geri dönüş senaryosu hazırlarız.",
       },
       {
-        question: "Veri merkezi taşımasını yönetiyor musunuz?",
+        question: "Elektrik ve klima işlerini de siz mi yapıyorsunuz?",
         answer:
-          "Evet. Envanter, bağımlılık haritası, taşıma sırası, kesinti planı ve geri dönüş senaryosuyla taşımayı uçtan uca yönetiriz.",
+          "Kapasite hesabını, yerleşimi ve teknik şartnameyi biz hazırlarız; elektrik ve mekanik uygulamayı yapan ekiplerle koordinasyonu üstleniriz. Böylece IT ihtiyaçlarıyla bina altyapısı birbirine uyar.",
       },
     ],
   },
@@ -1256,57 +1241,56 @@ Veri merkezi ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/ileti
     slug: "sanallastirma-cozumleri",
     title: "Sanallaştırma Çözümleri",
     metaDescription:
-      "Sunucu ve masaüstü sanallaştırma (VMware, Hyper-V, Proxmox), konsolidasyon, HA ve yönetim. BTM Bilişim ile donanımdan tasarruf edin, esnekliği artırın.",
-    content: `Sanallaştırma çözümlerimiz, fiziksel sunucu sayısını azaltıp kaynak kullanımını artırır; ortamınızı daha esnek, yedekli ve yönetilebilir hâle getirir.
+      "Sanallaştırma çözümleri: VMware vSphere, Hyper-V ve Proxmox kurulumu, P2V taşıma, yüksek erişilebilirlik, VDI ve kapasite ile lisans optimizasyonu.",
+    content: `Her uygulama için ayrı bir fiziksel sunucu almak; donanım, elektrik, soğutma ve bakım masrafını katlar. Sanallaştırma çözümlerimizle iş yüklerinizi daha az sayıda güçlü sunucuya topluyor, arıza ve bakım anlarında çalışmaya devam edebilen esnek bir altyapı kuruyoruz.
 
-## Sanallaştırma ne kazandırır?
+## Sanal ortama geçmenin pratik faydaları
 
-Az sayıda güçlü sunucu üzerinde çok sayıda sanal makine çalıştırmak; donanım, enerji ve yer maliyetini düşürür. Anlık görüntü (snapshot), canlı göç ve otomatik yük dengeleme ile bakım ve arıza yönetimi kolaylaşır.
+Bir sanal makine dakikalar içinde oluşturulabilir, güncelleme öncesinde anlık görüntüsü alınabilir ve bakım gerektiğinde başka bir fiziksel sunucuya çalışırken taşınabilir. Donanım arızasında sanal makineler kümedeki diğer sunucuda yeniden başlatılır. Test ortamı kurmak için ayrı makine almanız gerekmez. Yeni bir ERP sürümünü canlıya almadan önce kopyası üzerinde denemek ya da eski bir uygulamayı ayrı bir sanal makinede izole şekilde çalıştırmak da bu sayede kolaylaşır. Donanım yenileme döneminde ise sanal makineler yeni sunuculara kesinti olmadan taşınabilir, işletim sistemlerini yeniden kurmanız gerekmez.
 
-## Kapsamımız
+## Hizmetin kapsamı
 
-- Hipervizör kurulumu ve yapılandırması (VMware vSphere, Microsoft Hyper-V, Proxmox VE)
-- Fiziksel sunucuların sanala taşınması (P2V) ve konsolidasyon
-- Yüksek erişilebilirlik (HA), canlı göç ve yük dengeleme
-- Depolama entegrasyonu (SAN/NAS, hiper yakınsak altyapı)
-- Masaüstü sanallaştırma (VDI) ve uzaktan çalışma senaryoları
-- Yedekleme ve felaket kurtarma entegrasyonu
-- Kaynak izleme, kapasite planlama ve lisans optimizasyonu
+- VMware vSphere, Microsoft Hyper-V veya Proxmox VE kurulumu ve ayarları
+- Fiziksel sunucuların sanala taşınması (P2V) ve birleştirme
+- Yüksek erişilebilirlik, canlı taşıma ve kaynak dengeleme
+- SAN, NAS veya hiper yakınsak depolama entegrasyonu
+- Uzaktan çalışma için masaüstü sanallaştırma (VDI)
+- Yedekleme ve felaket kurtarma araçlarıyla bağlantı
+- Kaynak izleme, kapasite planlaması ve lisans optimizasyonu
 
-## Nasıl çalışıyoruz?
+## Platform seçimini neye göre yapıyoruz?
 
-1. **Değerlendirme** — İş yükleri, kaynak kullanımı ve lisans durumu analiz edilir.
-2. **Tasarım** — Küme boyutu, depolama ve yedeklilik mimarisi belirlenir.
-3. **Uygulama** — Ortam kurulur, iş yükleri kademeli olarak taşınır.
-4. **Optimizasyon** — Kaynaklar izlenir, aşırı/yetersiz tahsis düzeltilir.
+Satıcıdan bağımsız çalıştığımız için tek bir ürünü öne çıkarmayız. VMware geniş ekosistemi ve olgunluğuyla öne çıkar; ancak son dönemdeki lisans değişiklikleri maliyet hesabını değiştirdi. Windows ağırlıklı ortamlarda Hyper-V ekonomik olabilir, Proxmox ise açık kaynak bir seçenek sunar. Mevcut lisanslarınız, ekibinizin hangi platformu bildiği ve yedekleme yazılımınızın desteği karar sürecine birlikte girer. Lisans tarafında [VMware lisanslama](/lisanslama/vmware-lisanslama/) desteği de veririz.
 
-## İlgili çözümler
+## Geçiş nasıl ilerliyor?
 
-Lisans tarafında [VMware lisanslama](/lisanslama/vmware-lisanslama/), koruma tarafında [veri yedekleme](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) ile birlikte kurgulanır.
+İlk adımda sunucularınızın gerçek kaynak kullanımını ölçer, lisans durumunu çıkarırız. Bu verilere göre küme büyüklüğü, depolama ve yedeklilik yapısı belirlenir. Ortam kurulduktan sonra iş yükleri, önce kritik olmayanlardan başlayarak kademeli olarak taşınır. Geçişten sonra kaynak tahsisleri izlenir; gereğinden fazla ya da az kaynak verilmiş makineler düzeltilir.
 
-## Kurumunuza kazandırdıkları
+## Korumayı unutmayın
 
-- Daha az fiziksel sunucu, düşen enerji ve bakım maliyeti
-- Bakım ve arızada kesintisiz iş yükü göçü
-- Hızlı sunucu oluşturma ve test ortamları
-- Kapasite ve lisansta görünürlük
+Sanallaştırma, tek bir depolama veya küme sorununun çok sayıda sunucuyu birden etkileyebileceği anlamına da gelir. Bu yüzden projeye [veri yedekleme çözümleri](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) planını baştan dahil ederiz. Sonuçta daha az donanım, daha düşük enerji tüketimi ve kapasiteyi açıkça gösteren bir yönetim paneli elde edersiniz.
 
-Sanallaştırma yol haritanızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
+Mevcut sunucularınızın sanallaştırmaya uygunluğunu birlikte değerlendirelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Hangi platformu önerirsiniz?",
+        question: "Hangi sanallaştırma platformunu seçmeliyiz?",
         answer:
-          "Mevcut yatırımınıza, ekip yetkinliğinize ve bütçeye bakarız. VMware olgun ve yaygındır; Hyper-V Windows ağırlıklı ortamlarda ekonomik olabilir; Proxmox açık kaynak bir alternatiftir.",
+          "Tek doğru cevap yoktur. Mevcut lisanslarınızı, ekibinizin deneyimini, bütçenizi ve yedekleme yazılımınızın desteklediği platformları karşılaştırıp gerekçeli bir öneri sunarız.",
       },
       {
-        question: "Tüm sunucularımız sanallaştırılabilir mi?",
+        question: "Her sunucu sanallaştırılabilir mi?",
         answer:
-          "Çoğu sanallaştırılabilir. Özel donanım anahtarı gerektiren ya da çok yüksek G/Ç isteyen birkaç istisna için fiziksel ya da geçişli bir model önerilir.",
+          "Büyük çoğunluğu evet. Donanım kilidi kullanan yazılımlar veya çok yüksek disk performansı isteyen birkaç sistem için fiziksel kalma ya da özel bir yapılandırma önerebiliriz.",
       },
       {
-        question: "Taşıma sırasında kesinti olur mu?",
+        question: "VMware'den başka bir platforma geçiş yapıyor musunuz?",
         answer:
-          "P2V taşımaların çoğu kısa bir kesme penceresiyle yapılır; kritik sistemler mesai dışına planlanır ve geri dönüş için kaynak sunucu bir süre korunur.",
+          "Evet. Lisans maliyeti nedeniyle platform değiştirmek isteyen kurumlar için sanal makinelerin taşınmasını, yedekleme uyumluluğunu ve geçiş takvimini planlıyoruz.",
+      },
+      {
+        question: "Taşıma sırasında iş durur mu?",
+        answer:
+          "Çoğu taşıma kısa bir kesinti penceresinde tamamlanır ve kritik sistemler mesai dışına planlanır. Kaynak sunucu bir süre korunur, böylece gerekirse geri dönülebilir.",
       },
     ],
   },
@@ -1316,58 +1300,52 @@ Sanallaştırma yol haritanızı birlikte çıkaralım. [İletişime geçin.](/i
     slug: "wifi-ve-kablosuz-ag-cozumleri",
     title: "Wi-Fi ve Kablosuz Ağ Çözümleri",
     metaDescription:
-      "Kurumsal Wi-Fi tasarımı, kapsama (site survey) ölçümü, denetleyici tabanlı yönetim, misafir ağı ve 802.1X güvenlik.",
-    content: `Wi-Fi ve kablosuz ağ çözümlerimiz, ofis, depo, üretim alanı ve kampüs ortamlarında kesintisiz, güvenli ve yönetilebilir bir kablosuz ağ kurar.
+      "Wi-Fi ve kablosuz ağ çözümleri: kapsama ölçümü, erişim noktası yerleşimi, merkezi yönetim, ayrı misafir ağı ve 802.1X ile WPA3-Enterprise güvenliği.",
+    content: `Toplantı odasında kopan görüntülü görüşmeler, depoda el terminallerinin bağlantıyı kaybetmesi, misafirlerin şirket ağına bağlanması; bunların çoğu Wi-Fi cihazının kalitesinden değil, kablosuz ağın planlanmamış olmasından kaynaklanır. Wi-Fi ve kablosuz ağ çözümlerimizle ofis, üretim alanı, depo ve kampüslerde ölçüme dayalı, güvenli ve tek panelden yönetilen bir kablosuz ağ kuruyoruz.
 
-## Kötü Wi-Fi'nin nedeni genellikle plansızlıktır
+## Kablosuz ağ neden sorun çıkarır?
 
-Rastgele konumlandırılmış erişim noktaları, kanal çakışmaları, kör noktalar ve tek bir SSID'de toplanmış misafir + kurumsal trafik. Doğru bir kapsama tasarımı ve segmentasyon bunların hepsini çözer.
+Göz kararı konumlandırılmış erişim noktaları birbirinin kanalına girer, metal raflar ve beton duvarlar kör noktalar yaratır. Misafir, çalışan ve IoT cihazlarının aynı ağda olması hem performansı düşürür hem de güvenlik açığı oluşturur. Kurulum öncesi yapılan ölçüm ve doğru ağ ayrımı bu sorunları baştan engeller. Erişim noktası sayısını artırmak her zaman çözüm değildir; fazla ve yüksek güçte çalışan cihazlar birbirini bozarak performansı daha da düşürebilir. Depolarda raf dolulukları, üretim alanlarında ise makinelerin yaydığı parazit sinyali değiştirdiği için tasarımın bu koşullara göre yapılması gerekir.
 
-## Kapsamımız
+## Kurulum kapsamı
 
-- Kapsama ve girişim ölçümü (site survey) — kurulum öncesi ve sonrası
-- Erişim noktası konumlandırma, kanal ve güç planı
-- Denetleyici tabanlı (on-prem veya bulut) merkezi yönetim
-- SSID ayrımı: kurumsal, misafir, cihaz/IoT
-- 802.1X / WPA3-Enterprise ile kimlik doğrulamalı erişim
-- Misafir portalı, kullanım koşulları ve zaman/bant sınırı
-- Yoğun ortam (toplantı salonu, etkinlik alanı) optimizasyonu
-- Performans izleme ve sorun giderme
+- Kurulum öncesi ve sonrası sinyal ile girişim ölçümü (site survey)
+- Erişim noktası sayısı, yeri, kanal ve güç planı
+- Yerinde veya bulut tabanlı denetleyiciyle merkezi yönetim
+- Çalışan, misafir ve IoT cihazları için ayrı ağlar
+- 802.1X ve WPA3-Enterprise ile kullanıcı bazlı kimlik doğrulama
+- Misafir giriş sayfası, süre ve bant genişliği sınırları
+- Toplantı salonu gibi kalabalık alanlar için ayar
+- Performans izleme ve arıza giderme
 
-## Nasıl çalışıyoruz?
+## Projenin adımları
 
-1. **Keşif ve ölçüm** — Alanın planı çıkarılır, sinyal ve girişim ölçülür.
-2. **Tasarım** — Erişim noktası sayısı, konumu ve yapılandırması belirlenir.
-3. **Kurulum** — Cihazlar monte edilir, politikalar ve SSID'ler yapılandırılır.
-4. **Doğrulama** — Kurulum sonrası ölçümle kapsama teyit edilir, ince ayar yapılır.
+Önce kat planlarınız üzerinden alanı inceler, yerinde sinyal ve parazit ölçümü yaparız. Bu ölçümlere göre kaç erişim noktası gerektiği ve nereye yerleşeceği belirlenir. Montaj ve yapılandırmadan sonra ikinci bir ölçüm yapılır; kapsama hedeflere ulaşmıyorsa konum ve güç ayarları düzeltilir. Kocaeli ve İstanbul Anadolu yakasındaki lokasyonlarda ölçümü ekibimiz yerinde yapar.
 
-## İlgili çözümler
+## Misafir erişimi ve kablolu omurga
 
-Misafir erişimi ve hotspot yönetimi için [CyberHost](/yazilim-urunlerimiz/cyberhost/), kablolu omurga için [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) ile birlikte planlanır.
+Misafirlerin internet kullanımını kayıt altına almak ve yasal yükümlülükleri karşılamak için kendi geliştirdiğimiz hotspot yazılımı [CyberHost](/yazilim-urunlerimiz/cyberhost/) kullanılabilir. Kablosuz ağın performansı arkasındaki switch ve kablolamaya bağlı olduğu için tasarımı [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) hizmetimizle birlikte ele alırız. Markadan bağımsız çalıştığımız için cihaz seçimi bütçenize ve ihtiyacınıza göre yapılır.
 
-## Kurumunuza kazandırdıkları
+## Sonuçta neler değişir?
 
-- Tüm çalışma alanlarında kararlı kapsama
-- Misafir trafiğinin kurumsal ağdan izole olması
-- Kimlik doğrulamalı, izlenebilir kablosuz erişim
-- Sorunların merkezi panelden hızlı çözümü
+Tüm çalışma alanlarında tutarlı sinyal, kurumsal ağdan tamamen ayrılmış misafir trafiği, kimin hangi cihazla bağlandığını gösteren kayıtlar ve sorunları uzaktan çözmeye imkân veren merkezi bir panel.
 
-Kablosuz ağ ihtiyacınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
+Kablosuz ağınızı ölçümle planlayalım. [Ücretsiz keşif isteyin](/#teklif) veya [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Site survey şart mı?",
+        question: "Kapsama ölçümü yapılmadan kurulum olmaz mı?",
         answer:
-          "Küçük, tek katlı ofislerde tahmine dayalı tasarım yeterli olabilir. Depo, üretim ve çok katlı binalarda ölçüm, doğru erişim noktası sayısı ve konumu için gereklidir.",
+          "Tek katlı, küçük ofislerde tahmine dayalı bir plan yeterli olabilir. Depo, üretim alanı ve çok katlı binalarda ise doğru sayıda erişim noktasını doğru yere koymak için ölçüm yapılmalıdır.",
       },
       {
-        question: "Misafir ağı kurumsal ağı riske atar mı?",
+        question: "Misafir Wi-Fi şirket ağımızı tehlikeye atar mı?",
         answer:
-          "Doğru kurgulandığında hayır. Misafir trafiği ayrı VLAN'da tutulur, kurumsal kaynaklara erişemez ve internet çıkışı politika ile sınırlandırılır.",
+          "Doğru kurulduğunda atmaz. Misafir trafiği ayrı bir VLAN'da tutulur, şirket sunucularına ve cihazlarına erişemez, internet çıkışı da kurallarla sınırlandırılır.",
       },
       {
-        question: "Mevcut erişim noktalarımız kullanılabilir mi?",
+        question: "Eski erişim noktalarımızı kullanmaya devam edebilir miyiz?",
         answer:
-          "Model ve yaşlarına bağlı. Yeni standartları (Wi-Fi 6/6E) desteklemeyen ya da denetleyiciye alınamayan cihazlar için değişim önerilir.",
+          "Modeline ve yaşına bağlıdır. Güncel standartları desteklemeyen ya da merkezi yönetime alınamayan cihazlar için değişim öneririz; uygun olanlar yeni yapıya dahil edilir.",
       },
     ],
   },
@@ -1464,60 +1442,57 @@ Kamera sisteminizi birlikte planlayalım; keşif ve teklif ücretsizdir. [Teklif
     slug: "firewall-ve-vpn-cozumleri",
     title: "Kurumsal VPN ve Uzaktan Erişim Çözümleri",
     metaDescription:
-      "Güvenlik duvarı kurulumu, site-to-site ve uzaktan erişim VPN, ZTNA ve çok faktörlü kimlik doğrulama. Güvenli ve yönetilebilir uzaktan erişim.",
-    content: `Firewall ve VPN çözümlerimiz, kurumsal ağınızın sınır güvenliğini ve uzaktan erişimini birlikte kurgular. Şubeler arası bağlantılar ve dışarıdan çalışan kullanıcılar için güvenli, izlenebilir erişim sağlarız.
+      "Firewall ve VPN çözümleri: güvenlik duvarı kurulumu, şubeler arası VPN, uzaktan erişim, ZTNA, çok faktörlü kimlik doğrulama ve erişim kayıtlarının izlenmesi.",
+    content: `Evden çalışan personel, sahadaki ekipler ve farklı illerdeki şubeler şirket sistemlerine her gün dışarıdan bağlanıyor. Firewall ve VPN çözümlerimizde ağınızın internet sınırını ve bu uzaktan bağlantıları tek bir güvenlik kurgusu içinde tasarlıyor; kimin, nereden, hangi sisteme eriştiğini görünür ve denetlenebilir hale getiriyoruz.
 
-## Uzaktan erişim neden dikkatli kurgulanmalı?
+## Hızlı açılan VPN'in gizli riski
 
-Aceleyle açılan VPN'ler çoğu zaman "içeri girildiğinde her yere erişim" anlamına gelir. Bu, bir hesap ele geçtiğinde tüm ağı riske atar. Doğru kurgu; en az ayrıcalık, çok faktörlü doğrulama ve erişimin kaynak/hedef bazında sınırlanmasıdır.
+Acil bir ihtiyaçla kurulan VPN'ler genellikle bağlanan kullanıcıya tüm ağı açar. Tek bir parola çalındığında saldırgan muhasebe sunucusundan kamera kayıtlarına kadar her şeye ulaşabilir. Güvenli bir yapı; her kullanıcıya yalnızca işi için gereken sistemleri açar, girişte ikinci bir doğrulama ister ve her bağlantıyı kayda alır. Güncellenmeyen güvenlik duvarı yazılımları da son yıllarda saldırganların en çok kullandığı giriş noktalarından biri oldu; bu nedenle cihaz yazılımlarının takibi kurgunun ayrılmaz parçasıdır.
 
-## Kapsamımız
+## Çözüm kapsamı
 
-- Yeni nesil güvenlik duvarı kurulumu ve politika tasarımı
-- Site-to-site VPN ile şube ve veri merkezi bağlantıları
-- Uzaktan erişim VPN (istemci tabanlı ve SSL)
-- Sıfır güven ağ erişimi (ZTNA) yaklaşımı ve uygulamaya özel erişim
+- Yeni nesil güvenlik duvarı kurulumu ve kural tasarımı
+- Şube ve veri merkezi arasında site-to-site VPN
+- İstemci tabanlı veya SSL uzaktan erişim VPN'i
+- Uygulama bazlı erişim için sıfır güven (ZTNA) yaklaşımı
 - Çok faktörlü kimlik doğrulama (MFA) entegrasyonu
-- Erişim loglama ve SIEM entegrasyonu
-- Yüksek erişilebilirlik ve yük devretme
-- Dönemsel kural ve erişim gözden geçirmesi
+- Erişim kayıtlarının toplanması ve SIEM'e aktarılması
+- Yedek hat ve otomatik yük devretme
+- Kuralların ve kullanıcı yetkilerinin dönemsel gözden geçirilmesi
 
-## Nasıl çalışıyoruz?
+## Tasarım ve uygulama süreci
 
-1. **Analiz** — Kim, nereden, hangi kaynağa erişmeli sorusu netleştirilir.
-2. **Tasarım** — Segment bazlı erişim politikaları ve VPN topolojisi hazırlanır.
-3. **Uygulama** — Bağlantılar kurulur, MFA ve loglama devreye alınır.
-4. **Gözden geçirme** — Kurallar ve kullanıcı erişimleri dönemsel olarak denetlenir.
+İlk soru basittir: kim, hangi konumdan, hangi kaynağa erişmeli? Bu sorunun cevabı kullanıcı grupları ve sistemler bazında bir erişim matrisine dönüştürülür. Ardından ağ segmentleri ve VPN topolojisi tasarlanır, bağlantılar kurulur, MFA ve kayıt tutma devreye alınır. ISO 27001 baş denetçi deneyimimiz sayesinde kurallar, denetimde sorulacak sorulara cevap verecek şekilde belgelenir. Satıcıdan bağımsız çalıştığımız için cihaz seçimi ihtiyacınıza göre yapılır.
 
-## İlgili çözümler
+## Güvenliğin diğer katmanları
 
-Tehdit önleme ve trafik görünürlüğü için [firewall ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/), erişim kayıtlarının izlenmesi için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) ile birlikte konumlandırılır.
+Saldırı önleme, uygulama kontrolü ve trafik görünürlüğü gibi daha derin koruma ihtiyaçları için [firewall ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/) hizmetimiz devreye girer. VPN ve güvenlik duvarı kayıtlarının merkezi olarak saklanıp şüpheli girişlerin fark edilmesi için [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) ile birlikte çalışırız. Kamera kayıtlarına dışarıdan izleme gerekiyorsa [IP kamera sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) cihazları internete doğrudan açılmadan, VPN üzerinden erişilecek şekilde kurulur.
 
-## Kurumunuza kazandırdıkları
+## Elde ettiğiniz yapı
 
-- Uzaktan erişimde en az ayrıcalık ve MFA
-- Şubeler arası şifreli, kararlı bağlantı
-- Erişim olaylarında tam kayıt
-- Kullanılmayan kuralların ve hesapların temizlenmesi
+Şifreli ve kesintiye dayanıklı şube bağlantıları, ikinci doğrulama olmadan açılmayan uzaktan erişim, her oturum için kayıt ve kullanılmayan kurallardan arındırılmış bir güvenlik duvarı. Arıza ya da şüpheli bir durumda 7/24 teknik destek hattımıza ulaşabilirsiniz.
 
-Kamera kayıtlarına uzaktan güvenli erişim için [IP kamera sistemlerini](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) VPN altyapısıyla birlikte kuruyoruz.
-
-Uzaktan erişim ve sınır güvenliği kurgunuzu birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Uzaktan erişim yapınızı birlikte değerlendirelim. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "VPN yerine ZTNA'ya mı geçmeliyiz?",
+        question: "VPN'i bırakıp ZTNA'ya geçmemiz gerekir mi?",
         answer:
-          "Duruma göre. ZTNA, uygulamaya özel erişim ve daha iyi denetim sağlar; ancak mevcut VPN'i MFA ve segmentasyonla güçlendirmek de birçok kurum için yeterli bir ilk adımdır.",
+          "Her kurum için şart değildir. ZTNA uygulama bazında daha ince kontrol sağlar; ancak mevcut VPN'i MFA ve segmentasyonla güçlendirmek pek çok işletme için iyi bir başlangıçtır. Seçimi kullanıcı profilinize göre birlikte yaparız.",
       },
       {
-        question: "MFA'yı mevcut hesaplarımıza bağlayabilir misiniz?",
+        question: "MFA'yı mevcut kullanıcı hesaplarımızla kullanabilir miyiz?",
         answer:
-          "Evet. Active Directory / Entra ID ve yaygın MFA sağlayıcılarıyla entegrasyon yaparız; kullanıcı deneyimi ve yedek erişim senaryoları birlikte planlanır.",
+          "Evet. Active Directory veya Entra ID ile yaygın MFA uygulamalarını entegre ederiz. Telefonu kaybolan kullanıcı gibi durumlar için yedek giriş yöntemleri de planlanır.",
       },
       {
-        question: "Şube bağlantılarında hat kesilirse ne olur?",
+        question: "Şubenin internet hattı kesilirse bağlantı kopar mı?",
         answer:
-          "Yüksek erişilebilirlik kurgusunda ikincil hat ya da 4G/5G yedeği tanımlanır; birincil hat düştüğünde trafik otomatik olarak yedeğe geçer.",
+          "Yedek hat ya da 4G/5G modem tanımlandığında birincil hat düştüğünde trafik otomatik olarak yedeğe geçer. Hangi şubede yedek hat gerektiğini iş kritikliğine göre birlikte belirleriz.",
+      },
+      {
+        question: "Mevcut güvenlik duvarımızın kurallarını denetleyebilir misiniz?",
+        answer:
+          "Evet. Kural tabanını inceler, gereksiz veya fazla geniş tanımlanmış kuralları ve kullanılmayan hesapları raporlarız. Düzeltmeler sizin onayınızla ve planlı şekilde uygulanır.",
       },
     ],
   },
@@ -1527,57 +1502,51 @@ Uzaktan erişim ve sınır güvenliği kurgunuzu birlikte gözden geçirelim. [�
     slug: "sistem-entegrasyonu",
     title: "Sistem Entegrasyonu",
     metaDescription:
-      "Sunucu, depolama, ağ, yedekleme ve uygulama katmanlarını uyumlu çalıştıran uçtan uca sistem entegrasyonu projeleriyle parçaları tek bütün yapın.",
-    content: `Sistem entegrasyonu hizmetimiz; farklı üreticilerin sunucu, depolama, ağ, sanallaştırma, yedekleme ve uygulama bileşenlerini birbiriyle uyumlu, yönetilebilir ve belgelenmiş tek bir altyapı hâline getirir.
+      "Sistem entegrasyonu: farklı markaların sunucu, depolama, ağ, sanallaştırma ve yedekleme bileşenlerini test edilmiş, belgelenmiş tek altyapıda birleştirir.",
+    content: `Sunucuyu bir firmadan, depolamayı başka birinden, ağ cihazlarını üçüncü bir tedarikçiden aldığınızda sorun çıktığında herkes topu bir diğerine atar. Sistem entegrasyonu hizmetinde bu bileşenleri tek bir tasarım altında topluyor, birbiriyle uyumlu çalıştığını test ediyor ve tek bir sorumluluk noktası olarak projeyi uçtan uca yürütüyoruz.
 
-## Entegrasyon projesi ne zaman gerekir?
+## Hangi durumlarda entegrasyon projesi gerekir?
 
-Yeni bir veri merkezi ya da şube kurulumu, büyük bir donanım yenileme, sanallaştırma ya da depolama yatırımı, iki kurumun birleşmesi veya birbirinden bağımsız kurulmuş sistemlerin tek yönetime alınması ihtiyacı — bunların hepsi birden çok bileşenin birlikte planlanmasını gerektirir.
+Yeni bir şube ya da sunucu odası açılması, toplu donanım yenilemesi, depolama veya sanallaştırma yatırımı, iki şirketin birleşmesi ya da ayrı ayrı kurulmuş sistemlerin tek yönetime alınması gibi durumlarda bileşenleri tek tek değil, birlikte planlamak gerekir. Aksi halde sürüm uyumsuzlukları, performans sorunları ve sorumluluk boşlukları ortaya çıkar. Sık gördüğümüz bir örnek, yeni alınan depolama ünitesinin mevcut switch'lerin desteklemediği bir bağlantı hızı gerektirmesi ya da yedekleme yazılımının kurulan hipervizör sürümünü henüz desteklememesidir. Bu tür sürprizler sipariş verilmeden önce yapılan bir uyumluluk kontrolüyle önlenir ve bütçeniz plansız ek alımlara harcanmaz.
 
-## Kapsamımız
+## Entegrasyon kapsamı
 
-- Uçtan uca çözüm tasarımı: sunucu, depolama (SAN/NAS), ağ, sanallaştırma, yedekleme
-- Donanım tedarik koordinasyonu ve kurulum
-- Bileşenler arası uyumluluk (firmware, sürüm, protokol) kontrolü
-- Kimlik, DNS, zaman senkronizasyonu ve izleme entegrasyonu
-- Mevcut sistemden yeni ortama veri ve iş yükü göçü
+- Sunucu, SAN/NAS depolama, ağ, sanallaştırma ve yedeklemeyi kapsayan çözüm tasarımı
+- Donanım tedarikinin koordinasyonu ve kurulum
+- Firmware, sürüm ve protokol uyumluluk kontrolü
+- Kimlik yönetimi, DNS, zaman senkronizasyonu ve izleme bağlantıları
+- Eski sistemden yeni ortama veri ve iş yükü taşıma
 - Test senaryoları, devreye alma ve kabul süreci
-- As-built dokümantasyon, işletim prosedürleri ve bilgi aktarımı
+- Kurulmuş haliyle dokümantasyon ve ekibinize bilgi aktarımı
 
-## Nasıl çalışıyoruz?
+## Projenin aşamaları
 
-1. **Tasarım** — İhtiyaçlar, kısıtlar ve hedef mimari netleştirilir; bileşenler seçilir.
-2. **Hazırlık** — Tedarik, saha hazırlığı ve göç planı yapılır.
-3. **Kurulum ve entegrasyon** — Bileşenler kurulur, birbirine bağlanır ve uçtan uca test edilir.
-4. **Devreye alma** — Kabul testleri geçilir, belgeler ve işletim bilgisi teslim edilir.
+Tasarım aşamasında ihtiyaçlarınız, mevcut kısıtlar ve hedef mimari netleşir; bileşenler satıcıdan bağımsız olarak, uyumluluk listeleri kontrol edilerek seçilir. Hazırlıkta tedarik takvimi, saha hazırlığı ve taşıma planı oluşturulur. Kurulumda bileşenler birbirine bağlanır ve senaryolarla uçtan uca test edilir; örneğin bir depolama yolu koptuğunda sanal makinelerin çalışmaya devam edip etmediği denenir. Son aşamada kabul testleri sizinle birlikte yapılır ve belgeler teslim edilir.
 
-## İlgili hizmetler
+## Alt bileşenlerde derinleşmek
 
-Kapsamdaki alt bileşenler için [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/), [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) ve [veri merkezi çözümleri](/sistem-network/veri-merkezi-cozumleri/). Uygulama düzeyinde bağlantılar için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/).
+Projenin her katmanı için ayrı hizmetlerimiz de vardır: [sunucu kurulum ve yönetimi](/sistem-network/sunucu-kurulum-ve-yonetimi/), [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/), [kurumsal ağ altyapısı](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) ve [veri merkezi çözümleri](/sistem-network/veri-merkezi-cozumleri/). Altyapının üzerindeki uygulamaların birbirine veri aktarması gerekiyorsa yazılım ekibimiz [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) ile bu katmanı da üstlenir.
 
-## Kurumunuza kazandırdıkları
+## Teslim edilen sonuç
 
-- Tek elden tasarlanmış, birbiriyle uyumlu bir altyapı
-- Bileşen sınırlarında sorumluluk boşluğunun olmaması
-- Belgelenmiş, devredilebilir bir kurulum
-- Devreye almanın kabul testleriyle güvence altına alınması
+Tek elden tasarlanmış ve test edilmiş bir altyapı, bileşenler arasında sorumluluk boşluğu kalmaması, kabul testi sonuçları ve ekibinizin devralabileceği eksiksiz belgeler. Devreye almadan sonra 7/24 teknik destekle yanınızda oluruz.
 
-Planladığınız altyapı projesini birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Planladığınız altyapı projesini konuşalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Donanımı sizden mi almamız gerekiyor?",
+        question: "Donanımı sizden satın almak zorunda mıyız?",
         answer:
-          "Zorunlu değil. Tedariki koordine edebilir ya da sizin aldığınız donanımla çalışabiliriz. Önemli olan bileşenlerin baştan uyumlu seçilmesidir.",
+          "Hayır. Tedariki biz koordine edebiliriz ya da sizin aldığınız donanımla çalışırız. Önemli olan, bileşenlerin sipariş öncesinde uyumluluk açısından kontrol edilmesidir.",
       },
       {
-        question: "Farklı markaların ürünlerini bir arada kullanabilir miyiz?",
+        question: "Farklı markaların ürünleri birlikte sorunsuz çalışır mı?",
         answer:
-          "Genellikle evet. Tasarım aşamasında firmware ve protokol uyumluluğu kontrol edilir; desteklenen kombinasyonlar seçilir ve riskli noktalar önceden belirtilir.",
+          "Çoğu zaman evet. Tasarımda üreticilerin uyumluluk listeleri ve firmware sürümleri kontrol edilir; riskli kombinasyonlar önceden size bildirilir ve alternatif sunulur.",
       },
       {
-        question: "Proje sonunda ne teslim ediliyor?",
+        question: "Proje bitince elimize hangi belgeler geçiyor?",
         answer:
-          "Kabul testi sonuçları, as-built (kurulmuş hâliyle) mimari dokümantasyon, yapılandırma kayıtları ve işletim prosedürleri ile ekibinize bilgi aktarımı.",
+          "Kurulmuş haliyle mimari çizimler, yapılandırma kayıtları, kabul testi sonuçları ve işletim talimatları teslim edilir. Ekibinize de sistemi nasıl yöneteceklerine dair bilgi aktarımı yapılır.",
       },
     ],
   },
@@ -1587,75 +1556,60 @@ Planladığınız altyapı projesini birlikte değerlendirelim. [İletişime ge�
     slug: "it-bakim-ve-destek-hizmetleri",
     title: "IT Destek ve Bakım Hizmetleri",
     metaDescription:
-      "SLA'lı yerinde ve uzaktan IT desteği, proaktif izleme, yamalama ve envanter yönetimi. BTM Bilişim ile IT operasyonunuzu dışarıya güvenle emanet edin.",
-    content: `IT bakım ve destek hizmetlerimiz, kurumsal altyapınızın günlük operasyonunu üstlenir: kullanıcı destek taleplerinden sunucu bakımına, izlemeden yamaya kadar. Tanımlı hizmet seviyeleri (SLA) ile çalışırız.
+      "IT bakım ve destek hizmetleri: SLA'lı yerinde ve uzaktan kullanıcı desteği, 7/24 izleme, yama yönetimi, yedek kontrolü, envanter takibi ve aylık rapor.",
+    content: `Yazıcının çalışmaması, e-postanın gitmemesi, sunucunun bir sabah açılmaması; küçük görünen her arıza, çalışanlarınızın zamanından ve müşterilerinize verdiğiniz hizmetten çalar. IT bakım ve destek hizmetlerimizle kullanıcı taleplerinden sunucu bakımına kadar günlük IT işlerini üstleniyor, yanıt sürelerini sözleşmede tanımlanan hizmet seviyelerine (SLA) bağlıyoruz.
 
-## Ne kapsar?
+## Arızayı beklemek neden pahalıya gelir?
 
-Reaktif "bir şey bozulunca ara" modeli pahalıdır; kesintiler iş kaybına dönüşür. Proaktif bakım, sorunları kullanıcı fark etmeden yakalar ve kapatır.
+Yalnızca bir şey bozulduğunda destek çağırmak ilk bakışta ucuz görünür. Ancak dolan bir disk, süresi geçen bir sertifika ya da hiç denenmemiş bir yedek, en yoğun gününüzde kesintiye dönüşür. Düzenli bakım ve izleme bu sorunları kullanıcılar fark etmeden yakalar. Ayrıca her talebin kayda girmesi, hangi bilgisayarın ya da uygulamanın en çok sorun çıkardığını gösterir; yenileme bütçesini tahmine değil bu verilere göre planlayabilirsiniz.
 
-## Kapsamımız
+## Kimler için uygun?
 
-- Kullanıcı destek masası (helpdesk) — uzaktan ve yerinde
-- Sunucu, ağ ve uç nokta için proaktif izleme ve alarm
-- Yamalama, güncelleme ve yapılandırma yönetimi
-- Yedekleme kontrolü ve düzenli geri yükleme testleri
-- Donanım, yazılım ve lisans envanterinin takibi
-- Yeni personel kurulumu ve ayrılan personel erişim kaldırma
-- Aylık hizmet ve sağlık raporu, düzenli gözden geçirme toplantısı
-- Tedarikçi ve garanti süreçlerinin yönetimi
+- Kendi IT personeli olmayan veya tek kişilik IT ekibiyle çalışan KOBİ'ler
+- Fabrika, depo ve çok şubeli yapısı nedeniyle kesintiye tahammülü olmayan işletmeler
+- Arıza odaklı destekten planlı bakıma geçmek isteyen kurumlar
+- Mesai dışında da ulaşılabilecek 7/24 teknik destek ihtiyacı olanlar
 
-## Hizmet modelleri
+## Destek kapsamı
 
-| Model | İçerik | Uygun olduğu durum |
-| --- | --- | --- |
-| Tam yönetilen | Tüm IT operasyonu bizde | İç IT ekibi olmayan kurumlar |
-| Yardımcı ekip | Mevcut ekibe destek ve nöbet | Küçük IT ekibi olanlar |
-| Proje + destek | Kurulum sonrası bakım | Belirli bir sistem için |
+- Uzaktan ve yerinde kullanıcı destek masası
+- Sunucu, ağ ve bilgisayarlar için sürekli izleme ve alarm
+- Yama, güncelleme ve yapılandırma yönetimi
+- Yedeklerin kontrolü ve düzenli geri yükleme denemeleri
+- Donanım, yazılım ve lisans envanteri takibi
+- İşe başlayan personelin kurulumu, ayrılanın erişimlerinin kapatılması
+- Aylık hizmet raporu ve gözden geçirme toplantısı
+- Üretici, garanti ve servis süreçlerinin takibi
 
-## Kimler için?
+## Size uyan çalışma modeli
 
-- Kendi IT personeli olmayan ya da tek kişilik IT ekibiyle çalışan KOBİ'ler
-- Fabrika, depo ve çok şubeli yapılarda kesintisiz çalışması gereken işletmeler
-- Arıza oldukça çözüm arayan, düzenli bakıma geçmek isteyen kurumlar
-- Mesai dışında da ulaşılabilir 7/24 teknik destek hattına ihtiyaç duyanlar
+İç IT ekibi olmayan kurumlar için tüm operasyonu biz yönetiriz. Küçük bir IT ekibiniz varsa onların yanında yardımcı ekip olarak çalışır, izin ve yoğunluk dönemlerini ve uzmanlık isteyen konuları kapatırız. Belirli bir sistemi biz kurduysak, kurulum sonrası bakımını ayrı bir sözleşmeyle sürdürebiliriz. Kocaeli ve İstanbul Anadolu yakasında yerinde, diğer bölgelerde uzaktan hizmet veriyoruz.
 
-## Nasıl çalışıyoruz?
+## İşleyiş ve raporlama
 
-1. **Devralma** — Envanter, erişimler ve mevcut sorunlar dökümante edilir.
-2. **Stabilizasyon** — Bilinen arızalar ve riskler kapatılır, izleme kurulur.
-3. **Operasyon** — Talepler SLA içinde karşılanır, bakımlar takvime bağlanır.
-4. **İyileştirme** — Aylık raporla tekrarlayan sorunlar kök nedeniyle ele alınır.
+Başlangıçta envanter, erişim bilgileri ve bilinen sorunlar kayda geçirilir. İlk haftalarda biriken arızalar ve riskler kapatılır, izleme kurulur. Sonrasında talepler SLA içinde karşılanır, bakım işleri takvime bağlanır ve aylık raporla tekrarlayan sorunların kök nedenine inilir. Talep ve envanter kayıtlarını şeffaf tutmak için kendi geliştirdiğimiz [Orbit IT operasyon platformu](/yazilim-urunlerimiz/orbit/) kullanılabilir. Altyapıda köklü bir yenileme gerekirse [sistem ve network danışmanlığı](/sistem-network/sistem-ve-network-danismanligi/) ile planlama yapılır; uzun vadeli teknoloji ve bütçe kararları için de [IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) desteği veririz.
 
-## İlgili çözümler
-
-Talep ve envanter yönetimini şeffaflaştırmak için [Orbit IT operasyon platformu](/yazilim-urunlerimiz/orbit/) kullanılabilir. Altyapı yenileme ihtiyacı çıkarsa [sistem ve network danışmanlığı](/sistem-network/sistem-ve-network-danismanligi/) devreye girer.
-
-## Kurumunuza kazandırdıkları
-
-- Öngörülebilir IT maliyeti ve tanımlı yanıt süreleri
-- Kesintilerin azalması, sorunların kök nedenle çözülmesi
-- Personel giriş/çıkışında düzenli erişim yönetimi
-- Yönetim için aylık, ölçülebilir hizmet raporu
-
-Günlük desteğin ötesinde teknoloji yol haritası ve bütçe planlaması için [IT danışmanlık firması](/danismanlik/it-danismanlik-hizmetleri/) olarak da yanınızdayız.
-
-Destek ihtiyacınızı ve mevcut kapsamınızı birlikte konuşalım. [İletişime geçin.](/iletisim/)`,
+Destek ihtiyacınızı ve mevcut durumunuzu konuşalım. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "Yanıt süreniz nedir?",
+        question: "Bir arıza bildirdiğimizde ne kadar sürede dönüş yapıyorsunuz?",
         answer:
-          "SLA'ya göre belirlenir. Tipik olarak kritik arızalarda hızlı müdahale, düşük öncelikli taleplerde aynı iş günü hedeflenir; kapsam sözleşmede netleştirilir.",
+          "Yanıt ve çözüm süreleri arızanın önceliğine göre sözleşmede tanımlanır. Kritik arızalar öncelikli ele alınır; düşük öncelikli talepler için hedef süreler birlikte belirlenir.",
       },
       {
-        question: "Kendi IT personelimiz var, yine de anlamlı mı?",
+        question: "Kendi IT çalışanımız var, bu hizmet yine de işimize yarar mı?",
         answer:
-          "Evet. Yardımcı ekip modelinde izin/yoğunluk dönemlerini kapatır, uzmanlık gerektiren konularda destek verir ve 7/24 nöbet ihtiyacını karşılarız.",
+          "Evet. Yardımcı ekip modelinde mevcut çalışanınızın yerine geçmez, onu destekleriz: izin dönemlerini, mesai dışı nöbeti ve uzmanlık gerektiren konuları üstleniriz.",
       },
       {
-        question: "Sözleşme süresi ne kadar?",
+        question: "Sözleşme hangi süreyle yapılıyor?",
         answer:
-          "Genellikle yıllık, aylık raporlama ve dönemsel gözden geçirmeyle. İhtiyaç değiştikçe kapsam güncellenebilir.",
+          "Genellikle yıllık yapılır ve aylık raporlarla takip edilir. İhtiyaçlarınız değiştikçe kapsam ve kullanıcı sayısı dönem içinde güncellenebilir.",
+      },
+      {
+        question: "Ücreti ne belirler?",
+        answer:
+          "Kullanıcı ve cihaz sayısı, sunucu adedi, lokasyon sayısı, yerinde destek ihtiyacı ve istenen yanıt süreleri fiyatı belirler. Ücretsiz keşiften sonra kapsamı netleştirip teklif hazırlarız.",
       },
     ],
   },
@@ -1669,59 +1623,56 @@ Destek ihtiyacınızı ve mevcut kapsamınızı birlikte konuşalım. [İletişi
     slug: "bulut-cozumleri",
     title: "Bulut Bilişim Çözümleri",
     metaDescription:
-      "Bulut mimarisi tasarımı, göç planlaması, maliyet optimizasyonu ve hibrit kurgu. BTM Bilişim ile buluta plansız değil, ölçülü ve geri dönüşü hesaplanmış geçin.",
-    content: `Bulut çözümlerimiz, iş yüklerinizi buluta taşımanın gerçekten mantıklı olduğu yerlerde, doğru mimariyle ve maliyeti kontrol altında tutarak taşınmanıza yardımcı olur.
+      "Bulut çözümleri: iş yükü analizi, hibrit mimari, göç planı ve maliyet yönetişimi. Hangi sistemin buluta uygun olduğuna verilerle karar verin.",
+    content: `Bulut projeleri genellikle tek bir cümleyle başlar: "Sunucuları buluta alalım." Oysa bazı uygulamalar bulutta daha esnek ve ekonomik çalışırken bazıları içeride kaldığında daha az sorun çıkarır. Biz önce envanterinize bakar, her sistem için ayrı bir karar çıkarır, ardından seçilen platformda güvenli bir temel kurup taşımayı adım adım yürütürüz.
 
-## "Buluta geçelim" yeterli bir hedef değil
+## Karar neye göre verilir?
 
-Her iş yükü buluta uygun değildir; bazıları taşındığında daha pahalıya çalışır. Doğru soru "hangi iş yükü, hangi bulut modelinde, hangi maliyetle daha iyi?" sorusudur. Bu hizmet o kararı veriye dayandırır.
+Bir iş yükünü taşımadan önce şu sorulara yanıt ararız: Uygulama hangi veritabanlarına ve servislere bağlı? Lisansı bulutta kullanılabiliyor mu? Gecikmeye ne kadar duyarlı? Aylık trafiği ve depolama büyümesi ne kadar? Bu yanıtlar her sistemi üç gruptan birine yerleştirir: olduğu gibi taşınacaklar, yeniden tasarlanması gerekenler ve şirket içinde kalmaya devam edecekler. Çoğu kurumda sonuç hibrit bir yapıdır: örneğin e-posta ve dosya paylaşımı bulutta, üretim hattına bağlı yazılımlar fabrikada kalır.
 
-## Kapsamımız
+## Hizmet kapsamı
 
-- Bulut hazırlık ve iş yükü değerlendirmesi (taşı / yeniden mimarile / yerinde bırak)
-- Genel, özel ve hibrit bulut mimarisi tasarımı
-- Göç planı, dalgalar hâlinde taşıma ve geri dönüş senaryoları
-- Kimlik, ağ ve güvenlik temeli (landing zone)
-- Maliyet modelleme ve optimizasyon (ölçeklendirme, rezervasyon, kapatma politikaları)
-- İzleme, yedekleme ve felaket kurtarmanın bulutta kurulması
-- Yönetişim: etiketleme, bütçe alarmı, erişim politikaları
+- Envanter, bağımlılık haritası ve buluta hazırlık değerlendirmesi
+- Genel, özel veya hibrit model için hedef mimari
+- Kimlik, ağ ve erişim kurallarını içeren başlangıç ortamı (landing zone)
+- Önceliklere göre gruplanmış taşıma takvimi ve her grup için geri alma adımları
+- Kaynak boyutlandırma, rezervasyon ve kullanılmayan kaynakların kapatılması
+- Etiket standardı, bütçe uyarıları ve yetki politikaları
+- Bulutta izleme, yedek ve felaket kurtarma kurgusu
 
-## Nasıl çalışıyoruz?
+## Taşıma süreci nasıl ilerler?
 
-1. **Değerlendirme** — İş yükleri, bağımlılıklar ve mevcut maliyet çıkarılır.
-2. **Mimari** — Hedef bulut modeli, ağ ve güvenlik temeli tasarlanır.
-3. **Göç** — İş yükleri önceliğe göre dalgalar hâlinde taşınır ve doğrulanır.
-4. **Optimizasyon** — Kaynak boyutu ve maliyet düzenli olarak gözden geçirilir.
+İlk aşamada mevcut maliyetinizi ve sistemler arası bağımlılıkları çıkarırız. İkinci aşamada hedef modeli, ağ bağlantısını ve güvenlik temelini tasarlarız. Taşıma, riski düşük sistemlerle başlar; her grup test edilip kullanıcı onayı alındıktan sonra bir sonrakine geçilir. Canlıya alımın ardından kaynak kullanımı ve fatura belirli aralıklarla incelenir, gereksiz kapasite küçültülür.
 
-## Platforma özel hizmetler
+## Platform ve lisans tarafı
 
-Platform seçildiğinde [Microsoft Azure çözümleri](/bulut-yedekleme/microsoft-azure-cozumleri/), [AWS bulut çözümleri](/bulut-yedekleme/aws-bulut-cozumleri/) ve [Microsoft 365 çözümleri](/bulut-yedekleme/microsoft-365-cozumleri/) ile derinleşiriz. Lisans tarafı için [Microsoft lisanslama](/lisanslama/microsoft-lisanslama/) devreye girer.
+Platform netleştiğinde ayrıntıya [Azure üzerinde kurulum ve göç](/bulut-yedekleme/microsoft-azure-cozumleri/), [AWS altyapı hizmetimiz](/bulut-yedekleme/aws-bulut-cozumleri/) ya da [Microsoft 365 kurulum ve göç](/bulut-yedekleme/microsoft-365-cozumleri/) sayfalarında ineriz. Bulutta kullanılacak sunucu ve kullanıcı lisanslarının doğru kurgulanması için [Microsoft lisans danışmanlığı](/lisanslama/microsoft-lisanslama/) aynı planın parçası olur.
 
-## Kurumunuza kazandırdıkları
+## Elinize ne geçer?
 
-- Taşınacak ve taşınmayacak iş yüklerinin gerekçeli ayrımı
-- Sürprizsiz, alarmlı bir bulut maliyeti
-- Kimlik ve güvenliğin baştan doğru kurulması
-- Esnek kapasite ve hızlı ortam oluşturma
+Her sistem için gerekçesiyle yazılmış bir taşı ya da bırak kararı, faturası önceden tahmin edilebilen ve uyarılarla izlenen bir bulut ortamı, ilk günden doğru kurulmuş kimlik ve ağ katmanı ve ihtiyaç anında dakikalar içinde yeni test ortamı açabilme esnekliği. Bu çalışmayı 2010'dan beri sürdürdüğümüz [IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) yaklaşımıyla yürütürüz: önce ihtiyaç ve risk, sonra uygulama, sonra bakım. Satıcıdan bağımsız olduğumuz için tek bir platformu öne çıkarmayız.
 
-Hangi iş yükünün buluta taşınacağına karar vermeden önce [IT danışmanlık](/danismanlik/it-danismanlik-hizmetleri/) kapsamında maliyet, performans ve güvenlik değerlendirmesi yapıyoruz.
-
-Bulut yol haritanızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
+Bulut yol haritanızı birlikte çizmek için [ücretsiz keşif görüşmesi isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Her şeyi buluta taşımalı mıyız?",
+        question: "Tüm sunucularımızı buluta taşımak zorunda mıyız?",
         answer:
-          "Hayır. Değerlendirme sonunda genellikle hibrit bir tablo çıkar: bazı sistemler bulutta daha esnek ve ucuz, bazıları içeride kalmaya devam eder.",
+          "Hayır. Değerlendirme çoğu zaman karma bir tablo ortaya koyar. Esneklikten fayda gören sistemler buluta geçer, bulutta daha pahalıya çalışacak olanlar şirket içinde kalır.",
       },
       {
-        question: "Bulut maliyeti kontrolden çıkar mı?",
+        question: "Bulut faturasının beklenmedik şekilde büyümesini nasıl önlersiniz?",
         answer:
-          "Yönetişim kurulmazsa çıkabilir. Etiketleme, bütçe alarmı, otomatik kapatma ve doğru kaynak boyutlandırma ile maliyet öngörülebilir tutulur.",
+          "Kaynaklara etiket verir, bütçe eşikleri için uyarı tanımlar ve mesai dışında gerekmeyen ortamları otomatik kapatırız. Kapasite de gerçek kullanıma göre periyodik olarak yeniden boyutlandırılır.",
       },
       {
-        question: "Göç sırasında kesinti olur mu?",
+        question: "Taşıma sırasında kullanıcılar etkilenir mi?",
         answer:
-          "İş yükleri dalgalar hâlinde taşınır; her dalga test edilip doğrulanır. Kritik sistemler için mesai dışı geçiş ve geri dönüş planı hazırlanır.",
+          "Sistemler küçük gruplar hâlinde taşınır ve her grup ayrı ayrı test edilir. Kritik uygulamaların geçişi mesai dışına planlanır ve sorun çıkarsa eski ortama dönüş adımları hazır bekler.",
+      },
+      {
+        question: "Maliyeti neler belirler?",
+        answer:
+          "Taşınacak sistem sayısı, uygulamaların yeniden tasarım gerektirip gerektirmediği ve hibrit bağlantı ihtiyacı çalışmanın süresini ve kapsamını belirler. İlk görüşme ve keşif ücretsizdir; teklif bu keşfin çıktısına göre hazırlanır.",
       },
     ],
   },
@@ -1731,58 +1682,57 @@ Bulut yol haritanızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`
     slug: "microsoft-365-cozumleri",
     title: "Microsoft 365 Çözümleri",
     metaDescription:
-      "Microsoft 365 kurulumu, e-posta göçü, Teams/SharePoint yapılandırması, güvenlik ve yedekleme. BTM Bilişim ile M365 ortamınızı güvenli ve verimli kullanın.",
-    content: `Microsoft 365 çözümlerimiz; kurulum, e-posta göçü, iş birliği araçlarının yapılandırılması ve güvenlik sıkılaştırmasıyla M365 yatırımınızdan tam verim almanızı sağlar.
+      "Microsoft 365 kurulumu, Exchange ve Google Workspace göçü, Teams ve SharePoint düzeni, MFA, Intune ve yedekleme ile lisansınızın tamamını kullanın.",
+    content: `Pek çok şirket Microsoft 365 aboneliğini yıllardır ödüyor ama yalnızca Outlook ve Word kullanıyor. Teams kanalları dağınık, dosyalar hâlâ ortak klasörde, kullanıcılar tek parolayla giriş yapıyor ve cihazlar kimsenin kontrolünde değil. Biz ortamınızı devralır, eksik yapılandırmaları tamamlar ve aboneliğinizde zaten bulunan özellikleri iş akışınıza uygun biçimde devreye alırız.
 
-## M365 sadece e-posta değildir
+## En sık karşılaştığımız tablo
 
-Birçok kurum M365'i yalnızca Outlook için kullanır; Teams, SharePoint, OneDrive, Intune ve güvenlik özellikleri atıl kalır. Doğru yapılandırma, zaten ödediğiniz lisansın karşılığını almanızı sağlar.
+Alan adı kayıtları yarım bırakılmış, SPF ve DKIM tanımlanmamış, eski sunucudan kalan posta kutuları taşınmamış. SharePoint siteleri izin karmaşasına dönmüş, dış paylaşım herkese açık. Yönetici hesaplarında çok faktörlü doğrulama yok. Bu sorunların büyük kısmı ek lisans almadan, doğru ayarlarla çözülür. Ayrıldığı hâlde hesabı açık kalan eski çalışanlar ve kimseye atanmamış ama faturalanan lisanslar da ilk incelemede sıkça çıkan bulgulardır; bunları listeleyip temizlemek hem güvenliği hem maliyeti hemen iyileştirir.
 
-## Kapsamımız
+## Kurulum ve göç kapsamı
 
-- Tenant kurulumu, alan adı ve DNS yapılandırması
-- E-posta göçü (Exchange, Google Workspace, IMAP) — kesintisiz geçiş planı
-- Exchange Online, kurallar, paylaşımlı kutular ve dağıtım grupları
-- Teams, SharePoint ve OneDrive bilgi mimarisi ve paylaşım politikaları
-- Kimlik güvenliği: MFA, koşullu erişim, parolasız oturum
-- Intune ile cihaz yönetimi ve uygulama dağıtımı
-- Defender for Office 365 ile e-posta tehdit koruması
-- Üçüncü parti yedekleme ile M365 verisinin korunması
+- Tenant açılışı, alan adı doğrulama, SPF/DKIM/DMARC kayıtları
+- Exchange sunucusu, Google Workspace ya da IMAP kaynaklı posta taşıma
+- Paylaşımlı posta kutuları, dağıtım listeleri ve posta akış kuralları
+- Teams ekip yapısı, SharePoint site düzeni ve OneDrive paylaşım sınırları
+- MFA, koşullu erişim ve parolasız oturum açma
+- Intune ile dizüstü ve mobil cihaz kaydı, uygulama dağıtımı
+- Defender for Office 365 ile kimlik avı ve zararlı ek filtrelemesi
+- Posta kutusu, OneDrive ve SharePoint verisi için ayrı yedek
 
-## Nasıl çalışıyoruz?
+## Proje adımları
 
-1. **Değerlendirme** — Mevcut e-posta, lisanslar ve güvenlik ayarları incelenir.
-2. **Tasarım** — Göç planı, güvenlik temeli ve iş birliği yapısı hazırlanır.
-3. **Uygulama** — Göç pilot grupla başlar, doğrulanır, kademeli tamamlanır.
-4. **Sıkılaştırma ve eğitim** — Güvenlik politikaları uygulanır, kullanıcılar bilgilendirilir.
+Önce mevcut posta altyapınızı, lisans dağılımınızı ve güvenlik ayarlarınızı inceleriz. Ardından göç takvimini, klasör ve site yapısını, kimlik kurallarını içeren bir tasarım belgesi hazırlarız. Taşıma küçük bir pilot kullanıcı grubuyla başlar; sorunsuz geçtiği doğrulandıktan sonra kalan kullanıcılar dalgalar hâlinde aktarılır. Son aşamada güvenlik politikaları sıkılaştırılır ve çalışanlara kısa bir kullanım rehberi verilir.
 
-## İlgili hizmetler
+## Lisans ve veri sızıntısı tarafı
 
-Lisans planlaması için [Microsoft 365 lisanslama](/lisanslama/microsoft-365-lisanslama/), e-posta ve dosya sızıntısı kontrolü için [DLP çözümleri](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) ile birlikte konumlandırılır.
+Hangi kullanıcının hangi plana ihtiyaç duyduğu [Microsoft 365 lisans planlaması](/lisanslama/microsoft-365-lisanslama/) çalışmasında netleşir. Hassas belgelerin e-posta veya paylaşım bağlantısıyla dışarı çıkmasını sınırlamak istiyorsanız [veri kaybı önleme (DLP)](/siber-guvenlik/dlp-veri-kaybi-onleme-cozumleri/) kurallarını aynı projede kurgularız.
 
-## Kurumunuza kazandırdıkları
+## Proje sonunda
 
-- Kesintisiz, planlı e-posta göçü
-- Zaten sahip olduğunuz özelliklerin devreye alınması
-- MFA ve koşullu erişimle güçlenen kimlik güvenliği
-- M365 verisinin (Exchange, OneDrive, SharePoint) yedeklenmesi
+Posta kaybı yaşanmadan tamamlanmış bir geçiş, rolüne göre yetkilendirilmiş kullanıcılar, MFA ile korunan hesaplar ve geri yüklenebilir bir M365 yedeği. Kurulum sonrasında 7/24 teknik destek ekibimiz ortamınızı izlemeye devam eder.
 
-Microsoft 365 kurulumunuzu ya da göç planınızı birlikte konuşalım. [İletişime geçin.](/iletisim/)`,
+Mevcut tenantınızı birlikte gözden geçirmek için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Microsoft 365 verisi zaten yedekli değil mi?",
+        question: "Microsoft verilerimizi zaten yedeklemiyor mu?",
         answer:
-          "Microsoft altyapı düzeyinde dayanıklılık sağlar ama kullanıcı silmesi, fidye yazılımı ya da uzun süreli geri dönüş için ayrı bir yedekleme çözümü önerilir; paylaşılan sorumluluk modeli budur.",
+          "Microsoft altyapının ayakta kalmasından sorumludur, verinin geri getirilmesinden değil. Yanlışlıkla silinen bir klasör, fidye yazılımıyla şifrelenen dosyalar ya da uzun süre önceki bir sürüme dönme ihtiyacı için ayrı bir yedekleme ürünü kullanmanızı öneririz.",
       },
       {
-        question: "E-posta göçünde posta kaybı olur mu?",
+        question: "Posta taşıma sırasında e-postalar kaybolur mu?",
         answer:
-          "Doğru planlanan göçte hayır. Geçiş öncesi tam senkron yapılır, kayıtlar doğrulanır ve DNS geçişi düşük trafikli saatte yapılır.",
+          "Planlı bir göçte kaybolmaz. Kesme gününden önce eski ve yeni kutular senkronize edilir, öğe sayıları karşılaştırılır ve MX kaydı trafiğin en düşük olduğu saatte değiştirilir.",
       },
       {
-        question: "Google Workspace'ten geçiş yapıyor musunuz?",
+        question: "Google Workspace kullanıyoruz, geçiş mümkün mü?",
         answer:
-          "Evet. E-posta, takvim, kişiler ve Drive içerikleri planlı biçimde taşınır; kullanıcılar için geçiş rehberi hazırlanır.",
+          "Evet. Gmail, takvim, kişi listeleri ve Drive dosyaları Microsoft 365 tarafına aktarılır. Kullanıcılara ilk günler için kısa bir geçiş rehberi hazırlarız.",
+      },
+      {
+        question: "Proje ne kadar sürer?",
+        answer:
+          "Süre kullanıcı sayısına, taşınacak veri hacmine ve kaynak sistemin türüne bağlıdır. Keşif sonrası her dalganın tarihini gösteren bir takvim paylaşırız.",
       },
     ],
   },
@@ -1792,58 +1742,52 @@ Microsoft 365 kurulumunuzu ya da göç planınızı birlikte konuşalım. [İlet
     slug: "microsoft-azure-cozumleri",
     title: "Microsoft Azure Çözümleri",
     metaDescription:
-      "Azure landing zone kurulumu, sunucu ve uygulama göçü, ağ/kimlik güvenliği ve maliyet yönetimi. BTM Bilişim ile Azure'u kontrollü ve güvenli işletin.",
-    content: `Microsoft Azure çözümlerimiz; Azure ortamınızın temelini doğru kurar, iş yüklerinizi taşır ve maliyeti kontrol altında tutarak işletmenize yardımcı olur.
+      "Microsoft Azure çözümleri: landing zone, Azure Migrate ile sunucu göçü, Entra ID kimlik güvenliği, Site Recovery ve maliyet takibi tek planda.",
+    content: `Azure'da ilk sanal makineyi açmak birkaç dakika sürer; asıl zorluk, altı ay sonra kimin neyi açtığını, faturanın neden büyüdüğünü ve hangi kaynağın internete açık olduğunu bilmektir. Azure hizmetimiz bu yüzden temelden başlar: abonelik düzenini, ağı ve kimliği kurar, ardından sunucularınızı taşır ve ortamı maliyet ile güvenlik açısından düzenli olarak gözden geçiririz.
 
-## Sağlam bir Azure kurulumunun temeli
+## Temel kurulmazsa ne olur?
 
-Abonelik yapısı, ağ, kimlik ve politika katmanı (landing zone) baştan doğru kurulmazsa; ilerleyen aşamada güvenlik açıkları, maliyet kaçakları ve yönetilemez bir kaynak yığını ortaya çıkar.
+Tek abonelikte biriken test ve üretim kaynakları, adlandırma kuralı olmayan disklerin unutulup ödenmeye devam etmesi, herkesin Owner rolüyle çalışması, şirket ağıyla güvensiz bağlantılar. Bunları sonradan toparlamak, baştan doğru kurmaktan çok daha zahmetlidir. Örneğin sanal ağ adres aralıkları şirket ağınızla çakışacak şekilde seçildiyse, VPN kurmak için çalışan sunucuların IP adreslerini değiştirmek gerekebilir; bu da planlı bir kesinti demektir.
 
-## Kapsamımız
+## Azure hizmet kapsamı
 
-- Azure landing zone: abonelik, yönetim grupları, adlandırma ve etiketleme
-- Sanal ağ, hibrit bağlantı (VPN/ExpressRoute) ve ağ güvenliği
-- Microsoft Entra ID, koşullu erişim ve rol bazlı yetkilendirme (RBAC)
-- Sunucu göçü (Azure Migrate) ve yeniden platformlama
-- Azure Backup ve Azure Site Recovery ile koruma
-- İzleme (Azure Monitor, Log Analytics) ve alarm
-- Maliyet yönetimi: bütçe, öneri, rezervasyon ve otomatik kapatma
-- Güvenlik duruşu (Defender for Cloud) değerlendirmesi
+- Yönetim grupları, abonelik ayrımı, adlandırma ve etiket kuralları
+- Sanal ağlar, site-to-site VPN veya ExpressRoute ile şirket bağlantısı
+- Microsoft Entra ID, koşullu erişim ve rol tabanlı yetki (RBAC)
+- Azure Migrate ile değerlendirme, sunucu taşıma ve gerekirse PaaS servislerine geçiş
+- Azure Backup ile yedek, Site Recovery ile ikincil bölgeye kopya
+- Azure Monitor ve Log Analytics üzerinde uyarı kuralları
+- Bütçe uyarıları, Advisor önerileri, rezervasyon ve zamanlı kapatma
+- Defender for Cloud ile güvenlik puanının incelenmesi
 
-## Nasıl çalışıyoruz?
+## Çalışma sırası
 
-1. **Değerlendirme** — Mevcut ortam, iş yükleri ve hedefler belirlenir.
-2. **Temel kurulum** — Landing zone, kimlik ve ağ güvenliği oluşturulur.
-3. **Göç** — İş yükleri dalgalar hâlinde taşınır, test edilir.
-4. **Optimizasyon** — Maliyet, performans ve güvenlik düzenli gözden geçirilir.
+Önce mevcut sunucularınızı, uygulama bağımlılıklarını ve hedeflerinizi çıkarırız. Ardından landing zone, kimlik ve ağ katmanını kurarız. Sunucular küçük gruplar hâlinde taşınır; her grup test edilip onaylandıktan sonra bir sonrakine geçilir. Canlıya geçişten sonra kaynak boyutları, fatura ve güvenlik puanı periyodik olarak gözden geçirilir.
 
-## İlgili hizmetler
+## Diğer hizmetlerle bağlantısı
 
-Genel bulut stratejisi için [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/), lisans/EA tarafı için [Microsoft lisanslama](/lisanslama/microsoft-lisanslama/) ile birlikte yürütülür. Felaket kurtarma için [Disaster Recovery hizmetimiz](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) Azure Site Recovery üzerine kurgulanabilir.
+Hangi sistemlerin Azure'a gideceğine karar vermediyseniz önce [bulut stratejisi çalışması](/bulut-yedekleme/bulut-cozumleri/) yaparız. Windows Server ve SQL lisanslarınızın Azure'da yeniden kullanımı ve kurumsal sözleşme seçenekleri [Microsoft lisans danışmanlığı](/lisanslama/microsoft-lisanslama/) ile netleşir. Şirket içindeki sunucularınız için Site Recovery tabanlı bir [felaket kurtarma kurgusu](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) da kurabiliriz.
 
-## Kurumunuza kazandırdıkları
+## Size bıraktığımız ortam
 
-- Yönetilebilir, denetlenebilir bir Azure yapısı
-- Kimlik ve ağ güvenliğinin baştan doğru olması
-- Bütçe alarmı ve önerilerle kontrol altında maliyet
-- Yerinde sunuculara bulut tabanlı yedek ve DR
+Denetçiye gösterilebilir, kimin neye yetkili olduğu belli bir yapı; bütçe aşımında haber veren uyarılar; doğru kurulmuş kimlik ve ağ güvenliği; ve şirket içi sunucularınız için bulutta duran bir yedek ve kurtarma seçeneği. ISO 27001 baş denetçi deneyimimiz, yetki ve kayıt tasarımında denetim gözüyle bakmamızı sağlar.
 
-Azure ortamınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Azure aboneliğinizi birlikte incelemek için [ücretsiz keşif isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut Azure aboneliğimizi düzeltebilir misiniz?",
+        question: "Başkasının kurduğu Azure ortamını düzenleyebilir misiniz?",
         answer:
-          "Evet. Mevcut ortam için bir değerlendirme yapar, landing zone, güvenlik ve maliyet açısından bir iyileştirme planı çıkarır ve kademeli olarak uygularız.",
+          "Evet. Önce ortamı yetki, ağ, maliyet ve güvenlik açısından inceleriz. Ardından önceliklendirilmiş bir düzeltme listesi hazırlar ve çalışan sistemleri kesmeden adım adım uygularız.",
       },
       {
-        question: "Yerinde sunucularımızı Azure'a yedekleyebilir miyiz?",
+        question: "Şirketteki sunucuları Azure'a yedekleyebilir miyiz?",
         answer:
-          "Evet. Azure Backup ile yedek, Azure Site Recovery ile felaket kurtarma senaryosu kurulabilir; RPO/RTO hedeflerine göre yapılandırılır.",
+          "Evet. Azure Backup ile düzenli yedek, Site Recovery ile ikincil bölgede çalışmaya hazır kopya kurulabilir. Ne kadar veri kaybını ve ne kadar beklemeyi kabul edebileceğiniz yapılandırmayı belirler.",
       },
       {
-        question: "Maliyet tahmini alabilir miyiz?",
+        question: "Taşımadan önce aylık maliyeti görebilir miyiz?",
         answer:
-          "Değerlendirme çıktısında iş yükü bazında aylık maliyet tahmini ve optimizasyon fırsatları (boyutlandırma, rezervasyon) yer alır.",
+          "Değerlendirme raporunda her iş yükü için tahmini aylık tutar ve boyut küçültme ya da rezervasyonla elde edilebilecek tasarruf seçenekleri yer alır.",
       },
     ],
   },
@@ -1853,58 +1797,52 @@ Azure ortamınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/)
     slug: "aws-bulut-cozumleri",
     title: "AWS Bulut Çözümleri",
     metaDescription:
-      "AWS hesap yapısı (Organizations), VPC tasarımı, iş yükü göçü, yedekleme ve maliyet optimizasyonu. BTM Bilişim ile AWS altyapınızı güvenli ve ölçülü kurun.",
-    content: `AWS bulut çözümlerimiz; AWS üzerinde güvenli bir hesap yapısı kurar, iş yüklerinizi taşır ve maliyet ile güvenliği sürekli gözeterek ortamı işletir.
+      "AWS bulut çözümleri: Organizations ile hesap düzeni, VPC ve hibrit bağlantı, IAM Identity Center, AWS Backup ve maliyet anomali uyarıları.",
+    content: `AWS'de tek bir hesapla başlamak kolaydır, ancak ortam büyüdükçe üretim ve test kaynakları birbirine karışır, kimin hangi anahtarla eriştiği izlenemez hâle gelir ve fatura kalemleri anlamını yitirir. AWS hizmetimiz, iş yüklerinizi taşımadan önce hesap düzenini, ağ tasarımını ve erişim modelini oturtur; taşıma sonrasında ise maliyet ve güvenlik bulgularını düzenli olarak takip eder.
 
-## İyi bir AWS temelinin bileşenleri
+## Baştan kurulması gerekenler
 
-Çok hesaplı yapı (AWS Organizations), merkezi kimlik, VPC ve ağ tasarımı, günlük kayıt (CloudTrail) ve maliyet görünürlüğü baştan kurulmalıdır. Sonradan düzeltmek hem riskli hem pahalıdır.
+Ayrı hesaplara bölünmüş ortamlar ve bunları yöneten Organizations yapısı, tek noktadan kimlik yönetimi, planlı IP aralıklarıyla VPC tasarımı, tüm hesaplarda açık CloudTrail kaydı ve faturanın hesap bazında görünmesi. Bu katmanlar sonradan eklenmeye çalışıldığında çalışan sistemlere dokunmak gerekir. Sık rastladığımız bir risk de geliştiricilerin bilgisayarlarında duran, süresi olmayan erişim anahtarlarıdır; merkezi kimliğe geçişle bu anahtarlar kısa ömürlü oturumlarla değiştirilir.
 
-## Kapsamımız
+## AWS hizmet kapsamı
 
-- AWS Organizations ile çok hesaplı yapı ve guardrail'ler
-- VPC tasarımı, alt ağlar, VPN/Direct Connect ile hibrit bağlantı
-- IAM Identity Center ile merkezi erişim ve en az ayrıcalık
-- EC2, RDS, S3 ve konteyner iş yüklerinin kurulması ve göçü
-- AWS Backup ile merkezi yedekleme, bölgeler arası kopya
-- İzleme (CloudWatch) ve günlük kayıt (CloudTrail) kurulumu
-- Maliyet yönetimi: bütçe, anomali tespiti, Savings Plans
-- Güvenlik değerlendirmesi (Security Hub, GuardDuty)
+- Organizations ile hesap ayrımı ve servis kontrol politikaları (SCP)
+- VPC, alt ağ planı, site-to-site VPN veya Direct Connect bağlantısı
+- IAM Identity Center ile tek giriş ve en düşük yetki ilkesi
+- EC2, RDS, S3 ve konteyner tabanlı uygulamaların kurulumu ya da taşınması
+- AWS Backup ile politika tabanlı yedek ve başka bölgeye kopya
+- CloudWatch metrikleri, alarmlar ve CloudTrail kayıtlarının merkezde toplanması
+- Budgets, Cost Anomaly Detection ve Savings Plans ile maliyet kontrolü
+- Security Hub ve GuardDuty bulgularının incelenmesi
 
-## Nasıl çalışıyoruz?
+## Projeyi nasıl yürütürüz?
 
-1. **Değerlendirme** — İş yükleri, bağımlılıklar ve hedefler belirlenir.
-2. **Temel** — Hesap yapısı, ağ ve kimlik güvenliği kurulur.
-3. **Göç** — İş yükleri taşınır ve doğrulanır.
-4. **Optimizasyon** — Maliyet ve güvenlik düzenli olarak gözden geçirilir.
+Uygulamalarınızı, bağımlılıklarını ve iş hedeflerini çıkarmakla başlarız. Ardından hesap yapısını, ağı ve kimlik katmanını kurarız. Taşınan her sistem test edilir, performansı ve erişimi doğrulandıktan sonra trafik yeni ortama yönlendirilir. İşletme döneminde maliyet raporları ve güvenlik bulguları belirli aralıklarla sizinle birlikte değerlendirilir.
 
-## İlgili hizmetler
+## Tamamlayıcı hizmetler
 
-Bulut stratejisi için [bulut çözümleri](/bulut-yedekleme/bulut-cozumleri/), veri koruma için [veri yedekleme](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) ile birlikte kurgulanır.
+AWS'in sizin için doğru platform olup olmadığını henüz bilmiyorsanız [bulut stratejisi ve iş yükü değerlendirmesi](/bulut-yedekleme/bulut-cozumleri/) ile başlarız. Verilerin korunması için [yedekleme mimarisi](/bulut-yedekleme/veri-yedekleme-cozumleri/), bölge çapında bir sorun için [felaket kurtarma planı](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) aynı projeye dahil edilebilir.
 
-## Kurumunuza kazandırdıkları
+## Sonuçta sahip olduğunuz yapı
 
-- İzole, denetlenebilir hesap yapısı
-- Merkezi kimlik ve en az ayrıcalık
-- Bölgeler arası kopyalı, merkezi yedekleme
-- Anomali alarmlarıyla kontrol altında maliyet
+Birbirinden izole, kayıtları denetlenebilir hesaplar; tek noktadan yönetilen ve gereğinden fazla yetki vermeyen erişim; başka bölgeye kopyalanan merkezi yedekler; olağan dışı harcamada sizi uyaran bir maliyet düzeni. Satıcıdan bağımsız çalıştığımız için gerekirse AWS ile Azure'u birlikte kullanan bir yapı da tasarlarız.
 
-AWS ortamınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
+AWS ortamınızı planlamak için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Tek hesabımız var, çok hesaba geçmeli miyiz?",
+        question: "Tek AWS hesabıyla çalışıyoruz, ayırmamız gerekir mi?",
         answer:
-          "Ortam büyüdükçe evet. Üretim, test ve paylaşılan servisleri ayrı hesaplara koymak; yarıçapı sınırlar, maliyet takibini ve erişim yönetimini kolaylaştırır.",
+          "Ortam büyüdükçe önerilir. Üretim, test ve ortak servisleri ayrı hesaplara almak bir hatanın etkisini sınırlar, yetkileri sadeleştirir ve faturayı daha okunur kılar.",
       },
       {
-        question: "Azure yerine neden AWS?",
+        question: "AWS mi Azure mı seçmeliyiz?",
         answer:
-          "İkisi de olgun platformlardır. Seçim; mevcut yetkinliğe, kullanılan servislere, iş ortağı ilişkilerine ve maliyet modeline göre yapılır. Gerekirse çoklu bulut da mümkündür.",
+          "İki platform da olgundur. Ekibinizin deneyimi, kullandığınız uygulamalar, mevcut Microsoft lisanslarınız ve maliyet modeli kararı belirler. Bazı kurumlar için ikisini birlikte kullanmak da mantıklı olabilir.",
       },
       {
-        question: "Yerinde sistemlerle bağlantı kurulabilir mi?",
+        question: "Şirket içindeki sistemlerle bağlantı kurulur mu?",
         answer:
-          "Evet. Site-to-site VPN ya da Direct Connect ile hibrit bağlantı kurulur; DNS ve kimlik entegrasyonu birlikte planlanır.",
+          "Evet. Site-to-site VPN veya Direct Connect ile ofisiniz ve veri merkeziniz AWS'e bağlanır. İsim çözümleme ve Active Directory entegrasyonu bağlantıyla birlikte planlanır.",
       },
     ],
   },
@@ -1914,58 +1852,56 @@ AWS ortamınızı birlikte planlayalım. [İletişime geçin.](/iletisim/)`,
     slug: "veri-yedekleme-cozumleri",
     title: "Veri Yedekleme (Backup) Çözümleri",
     metaDescription:
-      "3-2-1 yedekleme kurgusu, sunucu/uygulama/M365 yedeği, değiştirilemez (immutable) kopya ve düzenli geri yükleme testi.",
-    content: `Veri yedekleme çözümlerimiz, verinizin yalnızca alınmasını değil; doğru saklanmasını, korunmasını ve geri yüklenebilir olduğunun düzenli olarak kanıtlanmasını sağlar.
+      "Veri yedekleme çözümleri: 3-2-1 kurgusu, sunucu ve Microsoft 365 yedeği, immutable kopya, bulut nüshası ve düzenli geri yükleme testleriyle güvence.",
+    content: `Yedeğin değeri, ona ihtiyaç duyduğunuz gün ortaya çıkar. Sık gördüğümüz durum şudur: yazılım her gece "başarılı" raporu gönderir ama kimse son bir yılda tek bir sunucuyu geri yüklemeyi denememiştir. Fidye yazılımları da önce yedek sunucusunu bulup siler. Bu hizmet; verinizi doğru sıklıkla almayı, saldırgan erişemeyeceği bir yerde saklamayı ve geri dönebildiğinizi düzenli testlerle göstermeyi kapsar.
 
-## "Yedeğimiz var" yeterli değil
+## İyi bir yedekleme kurgusunun özellikleri
 
-Birçok kurum yedek aldığını düşünür ama geri yükleme testi hiç yapılmamıştır. Fidye yazılımı saldırılarında yedekler ilk hedeftir. Sağlam bir kurgu; birden çok kopya, kurum dışında bir nüsha ve değiştirilemez (immutable) depolama içerir.
+En az üç kopya, iki farklı ortam ve bir nüshanın şirket dışında durması; buna ek olarak değiştirilemeyen ya da ağdan tamamen ayrılmış bir kopya ve hatasız tamamlandığı doğrulanmış işler. Bunun yanında her sistem için iki sorunun yanıtı yazılı olmalıdır: En fazla kaç saatlik veri kaybı kabul edilebilir (RPO) ve sistem ne kadar sürede geri gelmelidir (RTO)? Muhasebe veritabanı için bu yanıt birkaç saat olabilirken arşiv dosya sunucusu için bir gün de kabul edilebilir; yedekleme sıklığı ve depolama maliyeti bu farka göre ayarlanır.
 
-## Kapsamımız
+## Yedekleme kapsamı
 
-- 3-2-1(-1-0) stratejisinin kurumunuza uyarlanması
-- Sunucu, sanal makine, veritabanı ve dosya yedekleme
-- Microsoft 365 ve SaaS uygulama yedeği
-- Kurum dışı / bulut kopya ve bölgeler arası çoğaltma
-- Fidye yazılımına karşı değiştirilemez (immutable) ve hava boşluklu (air-gapped) kopya
-- Saklama politikaları ve yasal saklama süreleri
-- Otomatik doğrulama ve düzenli geri yükleme testleri
-- Yedekleme başarısızlıklarında alarm ve raporlama
+- 3-2-1-1-0 kuralının altyapınıza göre uyarlanması
+- Fiziksel sunucu, sanal makine, veritabanı ve dosya paylaşımı yedeği
+- Microsoft 365 posta kutuları, OneDrive, SharePoint ve diğer SaaS verileri
+- Bulut veya ikinci lokasyonda kopya, bölgeler arası çoğaltma
+- Immutable depolama ve ağdan ayrılmış (air-gapped) nüsha
+- Yasal gerekliliklere uygun saklama süreleri
+- Otomatik doğrulama, periyodik geri yükleme testi, hata alarmları ve raporlar
 
-## Nasıl çalışıyoruz?
+## Uygulama adımları
 
-1. **Analiz** — Kritik veri, kabul edilebilir veri kaybı (RPO) ve geri dönüş süresi (RTO) belirlenir.
-2. **Tasarım** — Yedekleme topolojisi, saklama ve kopya stratejisi hazırlanır.
-3. **Kurulum** — Çözüm devreye alınır, işler zamanlanır, izleme kurulur.
-4. **Kanıtlama** — Geri yükleme testleri planlı olarak yapılır ve raporlanır.
+Önce hangi verinin kritik olduğunu ve her sistem için RPO/RTO hedefini sizinle birlikte belirleriz. Ardından yedekleme topolojisini, depolama hedeflerini ve saklama kurallarını tasarlarız. Kurulumda işler zamanlanır, başarısız iş olduğunda e-posta veya mesajla uyarı gelecek şekilde izleme bağlanır. Son ve en önemli adım testtir: seçilen sistemler izole bir ağda geri yüklenir ve sonuç raporlanır.
 
-## İlgili çözümler
+## Bağlantılı hizmetler
 
-Kesinti senaryoları için [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/), Veeam lisansı için [Veeam lisanslama](/lisanslama/veeam-lisanslama/), silinmiş/bozulmuş veri için [veri kurtarma hizmetleri](/bulut-yedekleme/veri-kurtarma-hizmetleri/) ile birlikte konumlandırılır.
+Bir sunucunun değil tüm merkezin çalışamaz hâle geldiği durumlar için [felaket kurtarma planı](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) gerekir. Veeam kullanıyorsanız doğru sürüm ve adet için [Veeam lisans hesaplaması](/lisanslama/veeam-lisanslama/) yaparız. Yedeği olmayan ya da bozulmuş veriler için [veri kurtarma hizmetimiz](/bulut-yedekleme/veri-kurtarma-hizmetleri/) devreye girer.
 
-## Kurumunuza kazandırdıkları
+## Teslim ettiklerimiz
 
-- Fidye yazılımına dayanıklı, değiştirilemez kopyalar
-- Test edilmiş, güvenilir geri yükleme
-- Net RPO/RTO hedefleri
-- Yedek başarısızlıklarının alarmla anında görülmesi
+Fidye yazılımının silemeyeceği kopyalar, sistem bazında yazılı kurtarma hedefleri, test edilmiş ve raporlanmış geri yükleme senaryoları ve başarısız işleri aynı gün fark etmenizi sağlayan uyarılar. Satıcıdan bağımsız olduğumuz için mevcut yazılımınızla da çalışabiliriz.
 
-Mevcut yedekleme kurgunuzu birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Yedekleme düzeninizi birlikte incelemek için [ücretsiz keşif isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Yedeklerimizin çalıştığından nasıl emin oluruz?",
+        question: "Yedeklerin gerçekten çalıştığını nasıl anlarız?",
         answer:
-          "Otomatik doğrulama ve planlı geri yükleme testleriyle. Belirli aralıklarla örnek sistemler izole bir ortama geri yüklenir ve sonuç raporlanır.",
+          "Otomatik doğrulamanın yanında planlı geri yükleme testi yaparız. Örnek sunucular üretimden ayrı bir ortamda açılır, uygulamanın çalıştığı kontrol edilir ve sonuç size raporlanır.",
       },
       {
-        question: "Immutable yedek ne işe yarar?",
+        question: "Immutable yedek neden önemli?",
         answer:
-          "Belirlenen süre boyunca değiştirilemeyen ve silinemeyen kopyadır. Bir saldırgan yönetici erişimi elde etse bile bu kopyayı bozamaz; geri dönüş garantisi sağlar.",
+          "Tanımlanan süre dolana kadar bu kopya değiştirilemez ve silinemez. Saldırgan yönetici yetkisi ele geçirse bile bu nüshayı bozamaz, bu da fidye yazılımı sonrasında temiz bir noktaya dönmenizi mümkün kılar.",
       },
       {
-        question: "Mevcut yedekleme yazılımımızı kullanabilir miyiz?",
+        question: "Kullandığımız yedekleme yazılımını değiştirmemiz gerekir mi?",
         answer:
-          "Genellikle evet. Mevcut çözüm değerlendirilir; eksikler (kurum dışı kopya, immutable depolama, test) tamamlanır. Gerekirse alternatif önerilir.",
+          "Çoğu durumda gerekmez. Mevcut ürünü inceler, eksik kalan kısımları (şirket dışı kopya, değiştirilemez depolama, test) tamamlarız. Ürün ihtiyacı karşılamıyorsa gerekçesiyle alternatif öneririz.",
+      },
+      {
+        question: "Maliyeti ne belirler?",
+        answer:
+          "Korunan sunucu ve kullanıcı sayısı, toplam veri hacmi, saklama süresi ve kopyanın tutulacağı yer başlıca etkenlerdir. Keşif sonrasında bu kalemleri ayrı ayrı gösteren bir teklif hazırlarız.",
       },
     ],
   },
@@ -1975,57 +1911,51 @@ Mevcut yedekleme kurgunuzu birlikte gözden geçirelim. [İletişime geçin.](/i
     slug: "felaket-kurtarma-disaster-recovery",
     title: "Felaket Kurtarma (Disaster Recovery)",
     metaDescription:
-      "RPO/RTO hedefli DR planı, yedek site/bulut replikasyonu, otomatik yük devretme ve düzenli DR tatbikatıyla ciddi kesintide geri dönüşünüz öngörülebilir olsun.",
-    content: `Felaket kurtarma hizmetimiz, ciddi bir kesinti (donanım kaybı, yangın, fidye yazılımı, veri merkezi arızası) durumunda operasyonunuzu tanımlı bir sürede ayağa kaldıracak planı ve altyapıyı kurar.
+      "Felaket kurtarma (disaster recovery): RPO/RTO hedefleri, ikincil site veya buluta replikasyon, failover runbook'ları ve izole ortamda DR tatbikatları.",
+    content: `Sunucu odasında yangın, tüm sanal makineleri şifreleyen bir fidye yazılımı ya da veri merkezinde uzun süren bir elektrik kesintisi. Böyle bir günde asıl soru "verimiz var mı?" değil, "işimiz ne zaman tekrar çalışır?" olur. Felaket kurtarma hizmetimiz, kritik sistemlerinizin önceden belirlenmiş bir sürede başka bir ortamda ayağa kalkmasını sağlayan altyapıyı ve yazılı prosedürleri kurar.
 
-## Yedekleme ile DR farkı
+## Yedek varken neden DR gerekir?
 
-Yedekleme veriyi korur; felaket kurtarma ise çalışır sistemi geri getirir. Yedeğiniz olsa bile, sıfırdan sunucu kurup yapılandırma ve veriyi yükleme günler alabilir. DR bu süreyi saatlere, hatta dakikalara indirir.
+Yedek, verinin bir kopyasıdır. Yalnızca yedekten dönmeye kalktığınızda önce donanım bulmanız, işletim sistemini kurmanız, ağı yapılandırmanız ve terabaytlarca veriyi geri yüklemeniz gerekir; bu günler sürebilir. DR ortamında sistemler sürekli kopyalanır ve hazırda bekler, geçiş saatler ya da dakikalar içinde yapılabilir. Her sistemi aynı hızda geri getirmek pahalıdır; bu nedenle ERP veya üretim planlama gibi uygulamalar için sıcak bekleyen bir kopya, ikincil sistemler için daha ekonomik bir yöntem seçmek çoğu zaman en dengeli çözümdür.
 
-## Kapsamımız
+## DR projesinin kapsamı
 
-- İş etki analizi (BIA) ve kritik sistemlerin önceliklendirilmesi
-- Her sistem için RPO (kabul edilebilir veri kaybı) ve RTO (geri dönüş süresi) hedefleri
-- İkincil site ya da buluta (Azure Site Recovery, replikasyon) yük devretme kurgusu
-- Otomatik/planlı failover ve failback prosedürleri
-- DNS, kimlik ve ağ geçiş senaryoları
-- DR runbook'ları ve rol/sorumluluk tanımları
-- Düzenli DR tatbikatı ve sonuç raporlaması
+- İş etki analizi ile hangi uygulamanın önce döneceğinin belirlenmesi
+- Her sistem için kabul edilebilir veri kaybı (RPO) ve dönüş süresi (RTO)
+- İkincil veri merkezine veya Azure Site Recovery gibi bulut hedeflerine replikasyon
+- Planlı ve acil failover, ardından ana merkeze failback adımları
+- DNS, Active Directory ve ağ yönlendirmesinin geçiş senaryoları
+- Kimin hangi adımı atacağını gösteren runbook'lar
+- Periyodik tatbikat ve yönetime sunulacak sonuç raporu
 
-## Nasıl çalışıyoruz?
+## Kurulum aşamaları
 
-1. **Analiz** — Kritik süreçler, bağımlılıklar ve hedef süreler belirlenir.
-2. **Tasarım** — Replikasyon yöntemi, ikincil ortam ve failover akışı kurgulanır.
-3. **Kurulum** — Replikasyon devreye alınır, runbook'lar yazılır.
-4. **Tatbikat** — Planlı senaryolarla failover denenir, eksikler kapatılır.
+Önce iş birimlerinizle görüşerek kritik süreçleri, aralarındaki bağımlılıkları ve hedef süreleri çıkarırız. Ardından replikasyon teknolojisini, ikincil ortamın kapasitesini ve geçiş sırasını tasarlarız. Kurulumda kopyalama başlatılır ve her uygulama için adım adım runbook yazılır. Son olarak üretimi etkilemeyen bir tatbikatla geçiş denenir; ölçülen süreler hedeflerle karşılaştırılır, eksikler kapatılır.
 
-## İlgili çözümler
+## Yedekleme ve süreklilikle ilişkisi
 
-Veri koruma temeli için [veri yedekleme çözümleri](/bulut-yedekleme/veri-yedekleme-cozumleri/), süreç ve organizasyon tarafı için [iş sürekliliği çözümleri](/bulut-yedekleme/is-surekliligi-cozumleri/) ile bütünleşir.
+DR'nin altında sağlam bir [yedekleme mimarisi](/bulut-yedekleme/veri-yedekleme-cozumleri/) olmalıdır; fidye yazılımında temiz bir noktaya dönmek ancak böyle mümkündür. Teknoloji dışındaki konular, yani personelin nerede çalışacağı ve müşteriye nasıl haber verileceği, [iş sürekliliği planı](/bulut-yedekleme/is-surekliligi-cozumleri/) kapsamında ele alınır.
 
-## Kurumunuza kazandırdıkları
+## Proje sonunda elinizde olanlar
 
-- Kesinti senaryolarında öngörülebilir geri dönüş süresi
-- Fidye yazılımı sonrası temiz noktadan ayağa kalkabilme
-- Denenmiş, belgelenmiş kurtarma prosedürleri
-- Yönetime raporlanabilir DR tatbikat sonuçları
+Sistem bazında yazılı ve ölçülmüş dönüş süreleri, şifrelenme olayından sonra temiz bir kopyadan açılabilen sunucular, kişiye bağlı kalmayan belgelenmiş prosedürler ve yönetim kuruluna ya da denetçiye sunulabilecek tatbikat raporları.
 
-Felaket kurtarma hedeflerinizi birlikte belirleyelim. [İletişime geçin.](/iletisim/)`,
+Kurtarma hedeflerinizi birlikte belirlemek için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "RPO ve RTO'yu kim belirler?",
+        question: "RPO ve RTO değerlerine kim karar verir?",
         answer:
-          "İş birimleriyle birlikte belirlenir. Her sistemin işe etkisi farklıdır; kritik uygulamalar için düşük RPO/RTO, ikincil sistemler için daha geniş hedefler tanımlanır.",
+          "Bu değerler iş birimleriyle birlikte belirlenir, çünkü her sistemin kesintisi işi farklı etkiler. Muhasebe veya üretim planlama gibi kritik uygulamalara dar hedefler, arşiv gibi sistemlere daha geniş hedefler verilir.",
       },
       {
-        question: "İkincil bir veri merkezimiz yok, DR mümkün mü?",
+        question: "İkinci bir veri merkezimiz yok, yine de DR kurulabilir mi?",
         answer:
-          "Evet. Buluta replikasyon (ör. Azure Site Recovery) ile ayrı bir fiziksel site kurmadan felaket kurtarma senaryosu oluşturulabilir.",
+          "Evet. Sunucular Azure Site Recovery gibi bir hizmetle buluta kopyalanabilir. Böylece ayrı bir fiziksel lokasyon kiralamadan felaket anında çalışacak bir ortamınız olur.",
       },
       {
-        question: "Tatbikat operasyonu böler mi?",
+        question: "Tatbikat yaparken sistemler durur mu?",
         answer:
-          "Hayır. Tatbikatlar izole bir ağda ya da planlı bir pencerede yapılır; üretim etkilenmeden failover süreci ve süreler ölçülür.",
+          "Durmaz. Tatbikat üretimden yalıtılmış bir ağda ya da önceden duyurulmuş bir bakım penceresinde yapılır. Bu sırada geçişin kaç dakika sürdüğü ölçülür ve kayda geçirilir.",
       },
     ],
   },
@@ -2035,58 +1965,52 @@ Felaket kurtarma hedeflerinizi birlikte belirleyelim. [İletişime geçin.](/ile
     slug: "is-surekliligi-cozumleri",
     title: "İş Sürekliliği Çözümleri",
     metaDescription:
-      "İş etki analizi, süreklilik planları (BCP), kriz yönetimi ve tatbikat. BTM Bilişim ile kesinti anında ne yapılacağını herkesin bildiği bir organizasyon kurun.",
-    content: `İş sürekliliği çözümlerimiz, teknolojinin ötesine geçer: bir kesinti anında hangi sürecin nasıl, kimin tarafından ve hangi öncelikle yürütüleceğini tanımlayan bir organizasyon kurar.
+      "İş sürekliliği çözümleri: iş etki analizi, BCP planları, kriz ekibi, iletişim planı ve tatbikatla kesinti anında kimin ne yapacağı önceden belli olsun.",
+    content: `Bir kesinti yalnızca sunucuları değil, insanları da etkiler. Sistemler kapalıyken siparişler nasıl alınacak, maaş ödemesi geciktirilecek mi, müşteriye kim ve hangi cümlelerle bilgi verecek? Bu soruların yanıtı kriz anında aranırsa, kararlar aceleyle ve çoğu zaman yanlış verilir. İş sürekliliği hizmetimiz bu yanıtları önceden yazılı hâle getirir ve ekibinizin bunları uygulayabildiğini tatbikatla sınar.
 
-## İş sürekliliği neden sadece IT işi değil?
+## Teknolojiden fazlası
 
-Felaket kurtarma sistemleri geri getirir; iş sürekliliği ise sistemler yokken bile işin nasıl devam edeceğini planlar: alternatif çalışma yöntemleri, manuel süreçler, iletişim akışı ve karar yetkileri.
+Felaket kurtarma sistemleri yeniden çalıştırmaya odaklanır. İş sürekliliği ise sistemler henüz dönmemişken işin nasıl süreceğini planlar: kâğıt formlarla geçici sipariş alma, başka bir ofisten veya evden çalışma, kritik tedarikçiye alternatif bulma, karar yetkisinin kimde olduğu. Bu yüzden çalışmaya IT ekibinin yanında operasyon, finans ve insan kaynakları da katılır. Basit bir örnek: kriz ekibinin telefon listesi yalnızca e-posta sunucusunda duruyorsa, o sunucu kapandığında kimse kimseye ulaşamaz. Planın basılı ve çevrim dışı bir kopyası bu yüzden önemlidir.
 
-## Kapsamımız
+## Çalışmanın kapsamı
 
-- İş etki analizi (BIA): kritik süreçler, bağımlılıklar, kesinti maliyeti
-- Süreklilik stratejileri ve senaryo bazlı planlar (BCP)
-- Kriz yönetimi organizasyonu, roller ve karar akışları
-- İletişim planı: çalışan, müşteri, tedarikçi ve kamu
-- Alternatif çalışma alanı ve uzaktan çalışma hazırlığı
-- Tedarikçi ve kritik hizmet bağımlılıklarının yönetimi
-- Masabaşı ve saha tatbikatları, plan bakımı
-- ISO 22301 uyumlu dokümantasyon (isteğe bağlı)
+- İş etki analizi: kritik süreçler, bağımlılıklar ve kesintinin saatlik maliyeti
+- Yangın, siber saldırı, tedarikçi kaybı gibi senaryolara göre süreklilik planları (BCP)
+- Kriz ekibi, roller, karar yetkileri ve toplanma akışı
+- Çalışanlar, müşteriler, tedarikçiler ve gerekirse kamu kurumları için iletişim şablonları
+- Alternatif çalışma yeri ve uzaktan çalışma hazırlığı
+- Kritik tedarikçi ve hizmet sağlayıcı bağımlılıklarının yönetimi
+- Masa başı ve sahada tatbikat, planın güncel tutulması
+- İsteğe bağlı olarak ISO 22301 yapısına uygun dokümantasyon
 
-## Nasıl çalışıyoruz?
+## Adım adım ilerleyiş
 
-1. **Analiz** — Süreçler haritalanır, kesinti etkileri ve hedef süreler belirlenir.
-2. **Plan** — Senaryolara göre süreklilik ve kriz yönetimi planları yazılır.
-3. **Hazırlık** — Roller atanır, iletişim şablonları ve alternatif yöntemler hazırlanır.
-4. **Tatbikat** — Planlar denenir, bulgular plana işlenir.
+İlk olarak süreçlerinizi haritalar, her birinin ne kadar süre durabileceğini birlikte belirleriz. Sonra senaryo bazlı süreklilik ve kriz yönetimi planlarını yazarız. Hazırlık aşamasında roller kişilere atanır, iletişim listeleri ve şablonlar hazırlanır. Son olarak bir tatbikat düzenlenir; aksayan noktalar plana işlenir.
 
-## İlgili çözümler
+## Diğer çalışmalarla bağlantısı
 
-Teknik geri dönüş için [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/), bilgi güvenliği süreçleriyle örtüşme için [ISO 27001 danışmanlığı](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/) ile birlikte yürütülür.
+Sistemlerin teknik olarak geri getirilmesi [felaket kurtarma (DR) hizmetimizin](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) konusudur ve iki plan birbirine referans verir. Bilgi güvenliği yönetim sistemi kuruyorsanız süreklilik kontrollerini [ISO 27001 danışmanlığı](/danismanlik/iso-27001-bilgi-guvenligi-danismanligi/) ile aynı çatı altında ele alırız; ISO 27001 baş denetçi deneyimimiz burada doğrudan işe yarar.
 
-## Kurumunuza kazandırdıkları
+## Hazırlığın size kazandırdıkları
 
-- Kesinti anında belirsizliğin ve panik kararların azalması
-- Herkesin rolünü ve önceliğini bildiği bir organizasyon
-- Müşteri ve tedarikçilere karşı hazırlıklı iletişim
-- İhale ve denetimlerde talep edilen süreklilik kanıtı
+Kriz anında daha az doğaçlama, rolünü bilen bir ekip, müşteri ve tedarikçilere tutarlı mesajlar ve ihale ya da müşteri denetimlerinde gösterebileceğiniz yazılı süreklilik kanıtı.
 
-İş sürekliliği hazırlığınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Hazırlık seviyenizi değerlendirmek için [ücretsiz ön görüşme isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Küçük bir kurumuz, bu bize fazla mı?",
+        question: "Küçük bir şirketiz, bu çalışma bize ağır gelmez mi?",
         answer:
-          "Kapsam ölçeğe göre daralır. Küçük kurumlarda bile en kritik 3-5 sürecin planı, iletişim listesi ve basit bir kriz akışı büyük fark yaratır.",
+          "Kapsam şirketin büyüklüğüne göre küçültülür. Küçük bir işletmede bile en kritik birkaç sürecin yazılı planı, güncel bir telefon listesi ve basit bir kriz akışı büyük fark yaratır.",
       },
       {
-        question: "ISO 22301 belgesi almak zorunda mıyız?",
+        question: "ISO 22301 belgesi almak şart mı?",
         answer:
-          "Hayır. Belgelendirme isteğe bağlıdır. Çoğu kurum için işleyen bir plan ve düzenli tatbikat yeterlidir; belge yalnızca sözleşmesel bir zorunluluksa hedeflenir.",
+          "Şart değil. Çoğu şirket için uygulanan bir plan ve düzenli tatbikat yeterlidir. Belgelendirmeyi yalnızca bir müşteri sözleşmesi veya ihale şartı gerektiriyorsa hedefleriz.",
       },
       {
-        question: "Planı kim güncel tutacak?",
+        question: "Plan hazırlandıktan sonra eskimez mi?",
         answer:
-          "Plan bakımı için basit bir takvim ve sahiplik tanımlarız. Organizasyon ya da süreç değiştikçe güncelleme yapılır; yıllık tatbikat bunu tetikler.",
+          "Eskimemesi için her bölümün bir sahibi olur ve gözden geçirme takvimi belirlenir. Organizasyon, tedarikçi ya da sistem değiştiğinde plan güncellenir; tatbikatlar da güncelleme ihtiyacını ortaya çıkarır.",
       },
     ],
   },
@@ -2096,57 +2020,56 @@ Teknik geri dönüş için [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-
     slug: "veri-kurtarma-hizmetleri",
     title: "Veri Kurtarma Hizmetleri",
     metaDescription:
-      "Silinen, bozulan veya erişilemeyen verinin kurtarılması: disk, RAID, sunucu, veritabanı ve sanal makine. Veri kaybında hızlı müdahale.",
-    content: `Veri kurtarma hizmetimiz; kaza sonucu silinen, bozulan ya da erişilemez hâle gelen verinin kurtarılması için kontrollü, önceliklendirilmiş bir müdahale sağlar.
+      "Veri kurtarma hizmetleri: silinen dosyalar, bozulan RAID, NAS, SQL veritabanı ve sanal makine diskleri için imaj alarak kontrollü kurtarma çalışması.",
+    content: `Bir RAID dizisi çöktüğünde, önemli bir klasör yanlışlıkla silindiğinde ya da veritabanı açılmaz hâle geldiğinde atılan ilk adımlar sonucu belirler. Veri kurtarma hizmetimiz, aygıta daha fazla zarar vermeden durumu tespit eder, mümkünse birebir kopya alır ve verinizi bu kopya üzerinden kontrollü biçimde geri çıkarır.
 
-## İlk adım: durumu kötüleştirmemek
+## Şu anda veri kaybı yaşıyorsanız
 
-Veri kaybında en sık yapılan hata, panikle yapılan müdahalelerdir: aygıta yazmaya devam etmek, yanlış onarım araçları çalıştırmak, RAID'i yeniden kurmak. İlk yapılması gereken sistemi durdurmak ve mevcut durumu korumaktır.
+Diske yazmayı hemen bırakın, sistemi kapatın. Onarım aracı çalıştırmayın, RAID'i yeniden oluşturmaya ya da diskleri farklı sırayla takmaya çalışmayın, dosya sistemini biçimlendirmeyin. Bu müdahaleler, kurtarılabilir durumdaki veriyi kalıcı olarak kaybettirebilir. Ardından bize ulaşın; ilk değerlendirmeyi birlikte yapalım. Görüşmede olayın nasıl başladığını, aygıtın marka ve modelini, RAID seviyesini ve kayıptan sonra yapılan işlemleri sorarız; bu bilgiler kurtarma şansını tahmin etmenin temelidir.
 
-## Kapsamımız
+## Kurtarma kapsamı
 
-- Sabit disk ve SSD kurtarma (mantıksal hatalar)
-- RAID dizisi yeniden yapılandırma ve kurtarma
-- Sunucu ve NAS/SAN üzerindeki bölüm ve dosya sistemi kurtarma
-- Veritabanı (SQL Server, MySQL, PostgreSQL) tutarlılık onarımı ve kurtarma
-- Sanal makine (VMDK/VHDX) ve anlık görüntü kurtarma
-- Yanlışlıkla silme, biçimlendirme ve şifreleme sonrası kurtarma
-- Kurtarma sonrası bütünlük doğrulama ve güvenli teslim
+- Mantıksal hata yaşayan HDD ve SSD'lerden veri çıkarma
+- Çöken RAID dizilerinin parametrelerini bulup yapıyı yeniden kurma
+- Sunucu, NAS ve SAN üzerinde silinen bölüm ve bozulan dosya sistemi kurtarma
+- SQL Server, MySQL ve PostgreSQL veritabanlarında tutarlılık onarımı
+- VMDK ve VHDX sanal diskleri ile snapshot zincirlerinin kurtarılması
+- Yanlışlıkla silme, biçimlendirme ve şifreleme sonrası dosya kurtarma
+- Kurtarılan verinin bütünlük kontrolü ve güvenli teslimi
 
-## Nasıl çalışıyoruz?
+## Müdahale sırası
 
-1. **Değerlendirme** — Kayıp senaryosu, aygıt durumu ve kurtarma olasılığı belirlenir.
-2. **Koruma** — Mümkünse birebir imaj alınır, çalışma kopya üzerinde yapılır.
-3. **Kurtarma** — Uygun yöntemle veri çıkarılır ve yapı yeniden oluşturulur.
-4. **Doğrulama ve teslim** — Kurtarılan veri kontrol edilir, güvenli biçimde teslim edilir.
+Önce ne olduğunu dinler, aygıtın durumunu inceler ve verinin hangi ölçüde geri alınabileceğini size açıkça söyleriz. İkinci adımda, mümkün olan her durumda aygıtın birebir imajını alırız; tüm çalışma bu kopya üzerinde yapılır, orijinal diske dokunulmaz. Ardından duruma uygun araç ve yöntemle veri çıkarılır, klasör ya da veritabanı yapısı yeniden oluşturulur. Son olarak dosyaların açılabildiği kontrol edilir ve veri yalnızca yetkili kişiye teslim edilir.
 
-## Kalıcı çözüm
+## Bir daha yaşamamak için
 
-Veri kurtarma acil bir müdahaledir; tekrarını önlemek için [veri yedekleme çözümleri](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve kritik sistemlerde [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) kurulmalıdır.
+Kurtarma bir acil durum müdahalesidir ve her zaman sonuç vermeyebilir. Kalıcı çözüm, test edilmiş bir [yedekleme düzeni](/bulut-yedekleme/veri-yedekleme-cozumleri/) ve kritik sistemler için bir [felaket kurtarma planıdır](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/). Kurtarma tamamlandığında olayın nedenine yönelik önerilerimizi de yazılı olarak paylaşırız.
 
-## Kurumunuza kazandırdıkları
+## Bizden bekleyebilecekleriniz
 
-- Kritik veri kaybında hızlı, kontrollü müdahale
-- Durumu kötüleştirmeyen, kanıt koruyan bir yaklaşım
-- Kurtarma olasılığının baştan dürüst değerlendirilmesi
-- Tekrarı önleyecek yedekleme önerileri
+Kritik bir kayıpta hızlı ve sakin bir müdahale, delili ve orijinal aygıtı koruyan bir çalışma yöntemi, kurtarma şansının baştan dürüstçe söylenmesi ve benzer bir olayı önlemek için somut adımlar. 7/24 teknik destek hattımız acil durumlarda da ulaşılabilir.
 
-Bir veri kaybı durumundaysanız aygıtı kullanmayı durdurun ve [hemen bizimle iletişime geçin.](/iletisim/)`,
+Veri kaybı yaşıyorsanız aygıtı kullanmayı bırakın ve [hemen bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Her veri kurtarılabilir mi?",
+        question: "Kaybolan her veri geri getirilebilir mi?",
         answer:
-          "Hayır. Fiziksel hasarın derecesine, üzerine yazılıp yazılmadığına ve şifreleme durumuna göre değişir. Değerlendirmede kurtarma olasılığını ve kapsamını açıkça belirtiriz.",
+          "Hayır. Sonuç; verinin üzerine yazılıp yazılmadığına, aygıttaki hasarın türüne ve şifreleme olup olmadığına bağlıdır. İlk değerlendirmede neyin kurtarılabileceğini ve neyin zor olduğunu açıkça söyleriz.",
       },
       {
-        question: "Kurtarma ne kadar sürer?",
+        question: "Kurtarma işlemi ne kadar sürer?",
         answer:
-          "Mantıksal hatalarda çoğu zaman birkaç gün; RAID ve veritabanı senaryolarında daha uzun sürebilir. Aciliyet durumunda öncelikli çalışma planlanabilir.",
+          "Basit silme ve mantıksal hatalar genellikle birkaç gün içinde sonuçlanır. Çok diskli RAID ve büyük veritabanlarında süre uzayabilir; acil durumlarda öncelikli çalışma planlanabilir.",
       },
       {
-        question: "Verimizin gizliliği korunur mu?",
+        question: "Verilerimizin gizliliği nasıl korunur?",
         answer:
-          "Evet. Kurtarma sürecinde gizlilik taahhüdü verilir, veri yalnızca yetkili kişilere teslim edilir ve çalışma kopyaları iş sonunda güvenli biçimde imha edilir.",
+          "Çalışma öncesinde gizlilik taahhüdü verilir. Kurtarılan veri yalnızca sizin belirlediğiniz kişilere teslim edilir ve iş bittiğinde elimizdeki çalışma kopyaları güvenli biçimde imha edilir.",
+      },
+      {
+        question: "Fiziksel olarak hasar görmüş diskle de ilgileniyor musunuz?",
+        answer:
+          "Hizmetimiz mantıksal hatalar, RAID, dosya sistemi ve veritabanı senaryolarına odaklanır. Fiziksel hasar şüphesi varsa ilk değerlendirmede bunu belirtir ve aygıtı açmadan nasıl ilerlenebileceğini sizinle konuşuruz.",
       },
     ],
   },
@@ -2160,67 +2083,57 @@ Bir veri kaybı durumundaysanız aygıtı kullanmayı durdurun ve [hemen bizimle
     slug: "ozel-yazilim-gelistirme",
     title: "Özel Yazılım Geliştirme",
     metaDescription:
-      "İş süreçlerinize birebir uyan, entegre ve ölçeklenebilir özel yazılım geliştirme. Paket çözümlerin karşılamadığı ihtiyaçlar için.",
-    content: `Özel yazılım geliştirme hizmetimiz; hazır paketlerin karşılamadığı, kurumunuza özgü iş süreçlerini uçtan uca bir yazılıma dönüştürür. Analizden devreye almaya ve sonrasındaki bakıma kadar tek sorumlulukla çalışırız.
+      "Özel yazılım geliştirme: hazır paketlerin karşılamadığı iş süreçleriniz için analiz, arayüz tasarımı, entegrasyon, test ve bakımı kapsayan kurumsal yazılım.",
+    content: `Bazı süreçler hiçbir hazır programa tam oturmaz: teklif hazırlama kuralları size özeldir, onay zinciri birkaç departmanı dolaşır ya da veriler üç farklı sistemden toplanır. Özel yazılım geliştirme hizmetimizde bu süreçleri sizin işleyişinize göre tasarlanmış bir uygulamaya dönüştürüyoruz. İhtiyaç analizinden canlıya almaya ve sonrasındaki bakıma kadar tek bir ekip sorumluluk alır.
 
-## Ne zaman özel yazılım?
+## Hazır paket mi, size özel yazılım mı?
 
-Süreciniz hazır bir üründe "yaklaşık" karşılanıyor ama her ay çok sayıda manuel işlem, Excel dosyası ve e-posta ile yamanıyorsa; ya da rekabet avantajınız tam olarak bu süreçteyse, özel yazılım yatırımı geri döner.
+Kullandığınız program işin büyük kısmını görüyor ama aradaki boşluklar her ay Excel dosyaları, e-posta zincirleri ve elle veri girişiyle kapatılıyorsa, ya da rakiplerinizden ayrıştığınız nokta tam da bu süreçse, özel yazılım mantıklı bir yatırımdır. Tersine, sektörünüzde standart hale gelmiş bir işi yeniden yazmak çoğu zaman gereksizdir; bunu ilk görüşmede açıkça söyleriz.
 
-## Kapsamımız
+## Geliştirme kapsamı
 
-- İş analizi, süreç modelleme ve gereksinim dokümantasyonu
-- Kullanıcı deneyimi (UX) ve arayüz tasarımı
-- Web tabanlı uygulama geliştirme (modern, güvenli mimari)
-- Mevcut sistemlerle API entegrasyonu (ERP, muhasebe, e-posta, ödeme)
-- Rol bazlı yetkilendirme ve denetim izi
-- Test, kullanıcı kabul süreci ve devreye alma
-- Bakım, geliştirme ve ikinci/üçüncü seviye destek
-- KVKK uyumlu veri işleme ve güvenlik önlemleri
+- İş analizi, süreç haritası ve yazılı gereksinim dokümanı
+- Kullanıcı deneyimi ve ekran tasarımı
+- Güvenli mimariyle web tabanlı uygulama geliştirme
+- ERP, muhasebe, e-posta ve ödeme sistemleriyle API bağlantıları
+- Rol bazlı yetkilendirme ve kim, neyi, ne zaman değiştirdi kaydı
+- Test, kullanıcı kabulü ve devreye alma
+- KVKK'ya uygun veri işleme ve saklama kuralları
+- Bakım, yeni özellik geliştirme ve teknik destek
 
-## Nasıl çalışıyoruz?
+## Projeyi nasıl ilerletiyoruz?
 
-1. **Keşif** — Süreç, kullanıcılar ve entegrasyon ihtiyaçları netleştirilir; kapsam ve öncelikler belirlenir.
-2. **Tasarım** — Veri modeli, mimari ve arayüz akışları çıkarılır.
-3. **Geliştirme** — İş, kısa döngülerle (sprint) geliştirilir; her döngüde çalışır bir parça gösterilir.
-4. **Devreye alma ve destek** — Test ve kabul sonrası canlıya alınır, bakım sözleşmesiyle sürdürülür.
+Keşif aşamasında süreci, kullanıcıları ve bağlanılacak sistemleri birlikte çıkarır, ilk sürümde olması gerekenlerle sonraya kalabilecekleri ayırırız. Tasarımda veri modeli, mimari ve ekran akışları netleşir. Geliştirme kısa döngülerle yapılır; her döngünün sonunda çalışan bir bölümü size gösterir, geri bildiriminizi bir sonraki adıma yansıtırız. Testler ve kabulün ardından uygulama canlıya alınır, bakım sözleşmesiyle geliştirilmeye devam eder.
 
-## Örnekler
+## BTM Bilişim'i farklı kılan noktalar
 
-Geliştirdiğimiz ürünler arasında çok firmalı İK izin platformu [Otium](/yazilim-urunlerimiz/otium/) ve IT operasyon platformu [Orbit](/yazilim-urunlerimiz/orbit/) yer alır. Yaklaşımı [dijital dönüşüm danışmanlığı](/danismanlik/yazilim-ve-dijital-donusum-danismanligi/) ile birlikte planlıyoruz.
+Analiz, kodlama, test ve bakımı dışarıya devretmeden kendi yazılım ekibimizle yaparız; proje boyunca muhatabınız değişmez. Güvenlik sonradan eklenen bir katman değil, ilk günden tasarımın parçasıdır: yetki kontrolleri, kayıt tutma ve OWASP önerileri baştan uygulanır, teslim öncesinde uygulama [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile sınanabilir. 2010'dan beri sürdürdüğümüz altyapı ve IT danışmanlığı deneyimi sayesinde yazılımın çalışacağı sunucu, ağ ve yedekleme tarafını da aynı planda düşünürüz.
 
-## Kurumunuza kazandırdıkları
+## Kendi ürünlerimizden örnekler
 
-- Sürece "yaklaşık" değil "birebir" uyan bir araç
-- Manuel işlerin ve kopuk Excel'lerin ortadan kalkması
-- Sistemler arası otomatik veri akışı
-- Kaynak kodun ve verinin sizde kalması
+Aynı ekip; çok firmalı İK izin yönetimi platformu [Otium](/yazilim-urunlerimiz/otium/), IT operasyon platformu [Orbit](/yazilim-urunlerimiz/orbit/) ve Atlas, PentForce gibi toplam 9 kurumsal ürünü geliştirdi ve hâlâ geliştiriyor. Yazılımın şirketinizin genel dijitalleşme planına nasıl oturacağını [dijital dönüşüm danışmanlığı](/danismanlik/yazilim-ve-dijital-donusum-danismanligi/) ile birlikte ele alırız.
 
-## Neden BTM Bilişim ile yazılım?
-
-- **Kendi yazılım ekibimiz:** Analiz, geliştirme, test ve bakım tek ekipte; muhatabınız değişmez.
-- **Sahayı bilen yazılım:** IT danışmanlığı ve altyapı deneyimimiz sayesinde yazılım; sunucu, ağ, yedekleme ve güvenlik tarafıyla birlikte planlanır.
-- **Güvenli geliştirme:** OWASP kontrolleri, yetkilendirme ve loglama tasarımın parçasıdır; gerekirse sızma testiyle doğrularız.
-- **Kanıtlanmış ürünler:** Atlas, Orbit ve PentForce gibi kendi kurumsal ürünlerimizi geliştiren ekip, projenizde de çalışır.
-
-Teslim öncesinde güvenliği [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) ile doğrulayabiliriz.
-
-Fikrinizi ya da mevcut sürecinizi birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+Fikrinizi ya da yazılıma dökmek istediğiniz süreci anlatın, birlikte değerlendirelim. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "Proje sabit fiyat mı, zaman-malzeme mi?",
+        question: "Fiyatlandırma nasıl yapılıyor?",
         answer:
-          "İkisi de mümkün. Kapsamı net projelerde sabit fiyatlı fazlar; kapsamın gelişebileceği ürünlerde iki haftalık döngülerle ilerleyen bir model öneririz.",
+          "Kapsamı net projelerde aşamalara bölünmüş sabit fiyat; ihtiyaçların zamanla şekilleneceği ürünlerde kısa döngüler üzerinden ilerleyen bir model öneririz. Fiyatı ekran ve süreç sayısı, entegrasyonlar ve yetki yapısının karmaşıklığı belirler.",
       },
       {
-        question: "Kaynak kod bize ait olacak mı?",
+        question: "Kaynak kodun sahibi kim olacak?",
         answer:
-          "Evet. Sözleşmede aksi kararlaştırılmadıkça kaynak kod ve veri size aittir; teslimatın parçası olarak depo erişimi ve dokümantasyon verilir.",
+          "Sözleşmede aksi belirtilmedikçe kaynak kod ve veriler size aittir. Teslimatla birlikte kod deposuna erişim ve teknik dokümantasyon verilir.",
       },
       {
-        question: "Geliştirme ne kadar sürer?",
+        question: "İlk sürümü ne zaman kullanmaya başlarız?",
         answer:
-          "Kapsama bağlı. İlk kullanılabilir sürüm (MVP) genellikle 2-4 ay içinde devreye girer; sonrasında öncelik sırasına göre geliştirilir.",
+          "Süre, ilk sürüme alınan özelliklere bağlıdır. Keşif aşamasının sonunda kapsamı ve takvimi birlikte netleştirir, en çok değer üreten bölümü öne alırız.",
+      },
+      {
+        question: "Yazılım bittikten sonra destek veriyor musunuz?",
+        answer:
+          "Evet. Bakım sözleşmesiyle hata düzeltmeleri, güvenlik güncellemeleri ve yeni özellik talepleri aynı ekip tarafından karşılanır.",
       },
     ],
   },
@@ -2230,58 +2143,57 @@ Fikrinizi ya da mevcut sürecinizi birlikte değerlendirelim. [İletişime geçi
     slug: "web-uygulama-gelistirme",
     title: "Web Uygulama Geliştirme",
     metaDescription:
-      "Kurumsal portallar, müşteri panelleri, B2B sipariş ve bayi sistemleri. BTM Bilişim ile tarayıcıdan çalışan, güvenli ve entegre web uygulamaları geliştirin.",
-    content: `Web uygulama geliştirme hizmetimiz; kurum içi portallardan müşteri ve bayi panellerine kadar, tarayıcıdan çalışan iş uygulamalarını modern ve güvenli bir mimariyle hayata geçirir.
+      "Web uygulama geliştirme: bayi ve müşteri portalları, B2B sipariş sistemleri, onay akışları ve ERP entegrasyonlu, tarayıcıdan çalışan güvenli iş uygulamaları.",
+    content: `Bayileriniz siparişlerini telefonla, müşterileriniz servis taleplerini e-postayla, çalışanlarınız izin ve satın alma onaylarını kâğıt formlarla iletiyorsa, bu işlerin her biri tarayıcıdan çalışan bir uygulamaya taşınabilir. Web uygulama geliştirme hizmetimizde kurulum gerektirmeyen, her cihazdan güvenle erişilen ve mevcut sistemlerinizle konuşan iş uygulamaları geliştiriyoruz.
 
-## Web uygulaması ne zaman doğru seçim?
+## Web uygulaması hangi işler için uygundur?
 
-Birden çok lokasyondan erişilmesi gereken, sık güncellenen ve kurulum gerektirmemesi istenen iş süreçleri için web uygulaması idealdir: bayi sipariş sistemleri, servis takip portalları, onay akışları, müşteri self-servis panelleri.
+Farklı şehirlerden ve cihazlardan kullanılan, sık güncellenen ve kullanıcının bilgisayarına program kurulmasını istemediğiniz süreçler için web uygulaması en pratik yoldur. Güncelleme tek bir sunucuda yapılır ve herkes aynı anda yeni sürüme geçer. Kamera, çevrimdışı çalışma veya cihaz donanımına derin erişim gerektiren durumlarda ise ayrı bir mobil uygulama gündeme gelebilir. Karar verirken kullanıcı sayısına, hangi cihazlardan bağlanılacağına ve verinin şirket dışına ne ölçüde açılacağına birlikte bakarız; dışarıya açılan her ekran için oturum güvenliği, parola politikası ve gerekirse ikinci doğrulama adımı planlanır.
 
-## Kapsamımız
+## Hangi uygulamaları geliştiriyoruz? — kapsam
 
-- Kurumsal portal ve intranet uygulamaları
-- Müşteri / bayi / tedarikçi self-servis panelleri
+- Kurum içi portal ve intranet uygulamaları
+- Müşteri, bayi ve tedarikçi self-servis panelleri
 - B2B sipariş, teklif ve servis takip sistemleri
-- Onay akışları ve form tabanlı süreç uygulamaları
-- ERP, muhasebe ve CRM entegrasyonları
-- Rol bazlı erişim, çok kiracılı (multi-tenant) yapı
-- Mobil uyumlu (responsive) arayüz
-- Performans, güvenlik ve KVKK uyumu
+- Form ve onay akışına dayalı süreç uygulamaları
+- ERP, muhasebe ve CRM ile çift yönlü veri bağlantısı
+- Rol bazlı erişim ve birden çok firmayı ayıran (multi-tenant) yapı
+- Telefon, tablet ve masaüstüne uyum sağlayan arayüz
+- Performans, güvenlik ve KVKK gereklilikleri
 
-## Nasıl çalışıyoruz?
+## Geliştirme süreci
 
-1. **Analiz** — Kullanıcı rolleri, ekranlar ve entegrasyonlar tanımlanır.
-2. **Tasarım** — Akışlar ve arayüz prototipi hazırlanıp doğrulanır.
-3. **Geliştirme** — Kısa döngülerle geliştirilir, her döngüde test edilir.
-4. **Yayın ve bakım** — Canlıya alınır, izleme kurulur, geliştirme sürdürülür.
+İlk adımda kullanıcı rollerini, ekranları ve bağlanılacak sistemleri listeleriz. Ardından tıklanabilir bir prototip hazırlanır; böylece kodlamaya başlamadan önce akışın sizin ve kullanıcılarınızın beklentisine uyduğunu görürsünüz. Geliştirme kısa döngülerle ilerler ve her döngü test edilir. Yayına alındıktan sonra uygulamanın hızı ve hataları izlenir, yeni ihtiyaçlar sırayla eklenir. Uygulamayı kendi sunucunuzda, bulut hesabınızda ya da bizim yönettiğimiz bir ortamda barındırabilirsiniz.
 
-## İlgili hizmetler
+## Neden kendi yazılım ekibimizle?
 
-Daha geniş kapsamlı ihtiyaçlarda [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/), sistemler arası bağlantı için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) ile birlikte yürütülür.
+Uygulamayı geliştiren ekip, altyapı ve güvenlik tarafında da 2010'dan beri sahada çalışan bir şirketin parçasıdır. Bu yüzden yetkilendirme, kayıt tutma, yedekleme ve sunucu güvenliği sonradan düşünülmez. Kapsam büyüyüp birden çok sistemi kapsayan bir projeye dönüşürse [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/) yaklaşımıyla, farklı uygulamalar arasında veri taşınması gerekiyorsa [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) ile birlikte ilerleriz.
 
-## Kurumunuza kazandırdıkları
+## İşinize yansıyan sonuçlar
 
-- Kurulum gerektirmeyen, her yerden erişilebilir uygulamalar
-- Bayi/müşteri işlemlerinin self-servise kayması, telefon/e-posta yükünün azalması
-- ERP ve muhasebeyle otomatik veri akışı
-- Mobil uyumlu, güvenli erişim
+Telefon ve e-posta ile gelen taleplerin kendi kendine işlem yapılan bir panele taşınması, siparişlerin ERP'ye elle girilmeden düşmesi, her işlemin kim tarafından yapıldığının kayıt altında olması ve kullanıcıların herhangi bir cihazdan güvenle bağlanabilmesi.
 
-Web uygulaması ihtiyacınızı birlikte konuşalım. [İletişime geçin.](/iletisim/)`,
+Aklınızdaki web uygulamasını konuşalım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut ERP'mizle konuşabilir mi?",
+        question: "Uygulama mevcut ERP sistemimizle veri alışverişi yapabilir mi?",
         answer:
-          "Evet. SAP, Logo, Mikro, Netsis ve diğer sistemlerle API ya da veri tabanı entegrasyonu kurarak sipariş, stok ve cari verisini çift yönlü akıtabiliriz.",
+          "Evet. Logo, SAP, Mikro, Netsis gibi sistemlerle API ya da veritabanı üzerinden bağlantı kurarak sipariş, stok ve cari bilgisinin iki yönlü akmasını sağlarız.",
       },
       {
-        question: "Uygulamayı biz mi barındıracağız?",
+        question: "Uygulama nerede çalışacak?",
         answer:
-          "Tercihe göre. Kendi sunucunuzda, bulut hesabınızda ya da bizim yöneteceğimiz bir ortamda barındırılabilir; yedekleme ve izleme kurgusu buna göre planlanır.",
+          "Kendi sunucunuzda, kendi bulut hesabınızda ya da bizim yönettiğimiz bir ortamda barındırılabilir. Yedekleme ve izleme düzeni seçtiğiniz ortama göre kurulur.",
       },
       {
-        question: "Mobil uygulama da gerekir mi?",
+        question: "Ayrıca mobil uygulama yaptırmamız gerekir mi?",
         answer:
-          "Çoğu senaryoda mobil uyumlu web arayüzü yeterlidir. Cihaz kamerası, çevrimdışı çalışma gibi ihtiyaçlar varsa ayrı bir mobil uygulama değerlendirilir.",
+          "Çoğu iş uygulamasında telefona uyumlu web arayüzü yeterlidir. Çevrimdışı çalışma, barkod okuma veya kamera kullanımı gibi ihtiyaçlar varsa mobil uygulama seçeneğini birlikte değerlendiririz.",
+      },
+      {
+        question: "Maliyeti hangi unsurlar belirler?",
+        answer:
+          "Kullanıcı rolleri ve ekran sayısı, entegre edilecek sistemler, yetki yapısının karmaşıklığı ve barındırma tercihi maliyeti belirler. Keşif görüşmesinden sonra kapsamı yazılı hale getirip teklif sunarız.",
       },
     ],
   },
@@ -2292,66 +2204,57 @@ Web uygulaması ihtiyacınızı birlikte konuşalım. [İletişime geçin.](/ile
     title: "Kurumsal Web Tasarım",
     metaTitle: "Web Tasarım Hizmetleri | Gebze, Kocaeli | BTM Bilişim",
     metaDescription:
-      "Kurumsal kimliğinize uygun, hızlı, SEO uyumlu ve yönetilebilir web sitesi tasarımı ve geliştirmesi. Siteniz bir vitrin değil, kazanım kanalı olsun.",
-    content: `Web tasarım ve kurumsal web sitesi hizmetimiz; markanızı doğru anlatan, arama motorlarında bulunan, hızlı açılan ve içeriğini kendiniz yönetebileceğiniz bir site kurar.
+      "Kurumsal web sitesi tasarımı: mobil öncelikli, hızlı açılan, teknik SEO altyapısı hazır, KVKK uyumlu ve içeriğini kendinizin yönetebileceği web siteleri.",
+    content: `Size bir tavsiye üzerine ulaşan potansiyel müşteri bile aramadan önce çoğu zaman telefonundan web sitenize bakar. Sayfa geç açılıyorsa, hizmetlerinizi anlatmıyorsa ya da teklif isteyecek bir buton bulamıyorsa o fırsat sessizce kaybolur. Web tasarım ve kurumsal web sitesi hizmetimizde markanızı net anlatan, arama motorlarında bulunabilen ve size gerçek talep getiren bir site kuruyoruz.
 
-## İyi bir kurumsal site neye benzer?
+## İyi bir kurumsal sitenin ölçütleri
 
-Hızlı açılır (Core Web Vitals), mobilde kusursuz çalışır, arama motoru için teknik olarak temizdir, dönüşüm noktaları (teklif, iletişim, demo) nettir ve içerik güncellemesi için ajansa bağımlı bırakmaz.
+Telefonda birkaç saniye içinde açılır, Core Web Vitals değerleri iyidir. Ziyaretçi ne iş yaptığınızı ilk ekranda anlar ve teklif, arama veya WhatsApp gibi iletişim yollarına tek dokunuşla ulaşır. Sayfa yapısı arama motorlarının anlayacağı şekilde temizdir. Yeni bir hizmet ya da haber eklemek için ajansa yazmanız gerekmez.
 
-## Kapsamımız
+## Web sitesi projesinin kapsamı
 
-- Bilgi mimarisi, sayfa planı ve içerik yapısı
-- Kurumsal kimliğe uygun arayüz tasarımı (UI/UX)
-- Performans odaklı geliştirme (hızlı yükleme, iyi Core Web Vitals)
-- Teknik SEO temeli: semantik yapı, meta veriler, site haritası, yapısal veri (schema.org)
-- İçerik yönetimi: blog, hizmet ve proje sayfalarını panelden düzenleme
-- Çok dilli yapı (isteğe bağlı)
-- İletişim formu, harita, WhatsApp ve dönüşüm entegrasyonları
-- Analitik ve arama konsolu kurulumu
+- Bilgi mimarisi, sayfa planı ve içerik kurgusu
+- Kurumsal kimliğinize uygun arayüz ve kullanıcı deneyimi tasarımı
+- Hızlı yüklenen, performans odaklı kodlama
+- Teknik SEO: başlık yapısı, meta veriler, site haritası ve schema.org yapısal verisi
+- Blog, hizmet ve referans sayfalarını düzenleyebileceğiniz yönetim paneli
+- İsteğe bağlı çok dilli yapı
+- Teklif formu, harita, WhatsApp ve dönüşüm takibi entegrasyonları
+- Google Analytics ve Search Console kurulumu
 
-## Nasıl çalışıyoruz?
+## Bizimle çalışmanın farkı
 
-1. **Keşif** — Hedef kitle, rakipler, mesaj ve dönüşüm hedefleri belirlenir.
-2. **Tasarım** — Sayfa şablonları ve arayüz tasarlanıp onaylanır.
-3. **Geliştirme** — Site hızlı ve SEO uyumlu biçimde kodlanır, içerik girilir.
-4. **Yayın ve ölçüm** — Site yayınlanır, analitik ve arama konsolu kurulur, ilk optimizasyonlar yapılır.
+Tasarım, kodlama, yayın ve bakımı dışarıya iş vermeden kendi yazılım ekibimizle yaparız; sitenizi yapan ekiple sonra konuşan ekip aynıdır. Siber güvenlik tarafındaki deneyimimiz siteye doğrudan yansır: güvenlik başlıkları ayarlanır, bileşenler güncel tutulur, yönetim paneli korunur; dilerseniz yayın öncesinde [sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) de yapılır. Ziyaretçilerin büyük bölümü mobilden geldiği için tasarıma telefon ekranından başlar, ardından tablet ve masaüstüne genişletir, her ekranda test ederiz. Çerez onayı, aydınlatma metni ve form verilerinin güvenli saklanması gibi KVKK gereklilikleri de projenin başında kurgulanır.
 
-## Neden BTM Bilişim ile web sitesi?
+## Proje adımları
 
-- **Kendi yazılım ekibimiz:** Tasarımdan kodlamaya, yayından bakıma işi dışarı vermeden kendimiz yaparız.
-- **Güvenlik önce:** [Sızma testi](/siber-guvenlik/sizma-testi-penetrasyon-testi/) deneyimimizle siteyi güvenlik başlıkları, güncel bileşenler ve korumalı yönetim paneliyle teslim ederiz.
-- **Mobil öncelikli:** Ziyaretçilerin çoğu telefondan gelir; tasarımı önce mobil için kurgular, tüm ekranlarda test ederiz.
-- **KVKK uyumlu:** Çerez onayı, aydınlatma metni ve form verilerinin güvenli işlenmesi baştan kurgulanır.
-- **Doğrudan iletişim:** Telefon, WhatsApp ve teklif formu ziyaretçinin her sayfada tek dokunuşla ulaşabileceği yerde olur.
+Önce hedef kitlenizi, rakiplerinizi ve sitenin hangi eylemi doğurması gerektiğini konuşuruz. Sayfa şablonları tasarlanıp onayınıza sunulur. Onaydan sonra site kodlanır, içerikler girilir ve eski siteden gelen adresler için yönlendirmeler kurulur. Yayından sonra analitik veriler izlenir ve ilk iyileştirmeler yapılır.
 
-## İlgili hizmetler
+## Siteyi büyütmek istediğinizde
 
-Panelden yönetilecek özel modüller için [web uygulama geliştirme](/yazilim-dijital/web-uygulama-gelistirme/), form verisinin sistemlere akması için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) ile birleşir.
+Bayi girişi veya müşteri paneli gibi özel modüller gerektiğinde [web uygulama geliştirme](/yazilim-dijital/web-uygulama-gelistirme/) ile siteyi genişletiriz. Formlardan gelen taleplerin CRM veya ERP'ye kendiliğinden aktarılması için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) devreye girer.
 
-## Kurumunuza kazandırdıkları
-
-- Arama motorlarında bulunur, teknik olarak temiz bir site
-- Hızlı açılan, mobilde sorunsuz bir deneyim
-- İçeriği kendiniz güncelleyebilme
-- Ölçülebilir teklif/iletişim dönüşümleri
-
-Sitenizin yenilenmesi ya da sıfırdan kurulması için [bizimle iletişime geçin.](/iletisim/)`,
+Mevcut sitenizi yenilemek ya da sıfırdan başlamak için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut içeriğimizi taşıyacak mısınız?",
+        question: "Eski sitemizdeki içerikler ve Google sıralamamız ne olacak?",
         answer:
-          "Evet. Mevcut metin, görsel ve sayfalar gözden geçirilip yeni yapıya taşınır; gerekli yerlerde SEO'yu koruyacak yönlendirmeler (301) kurulur.",
+          "Mevcut metin, görsel ve sayfalar gözden geçirilerek yeni yapıya aktarılır. Değişen adresler için 301 yönlendirmeleri kurulur, böylece arama motorlarındaki birikim mümkün olduğunca korunur.",
       },
       {
-        question: "Siteyi güncellemek için size mi bağımlı olacağız?",
+        question: "Sitede değişiklik yapmak için size bağımlı kalır mıyız?",
         answer:
-          "Hayır. Blog, hizmet ve proje içerikleri için bir yönetim paneli teslim edilir; günlük güncellemeleri kendi ekibiniz yapabilir.",
+          "Hayır. Blog, hizmet ve referans içeriklerini düzenleyebileceğiniz bir yönetim paneli teslim edilir ve ekibinize kısa bir kullanım eğitimi verilir.",
       },
       {
-        question: "SEO garantisi veriyor musunuz?",
+        question: "Google'da ilk sıraya çıkacağımızı garanti ediyor musunuz?",
         answer:
-          "Sıralama garantisi kimse veremez. Biz teknik SEO temelini (hız, yapı, meta veriler, yapısal veri, site haritası) doğru kurar ve ölçüm altyapısını hazır teslim ederiz.",
+          "Hayır, sıralama garantisi kimse veremez. Biz hız, sayfa yapısı, meta veriler, yapısal veri ve site haritası gibi teknik temeli doğru kurar, ölçüm araçlarını hazır şekilde teslim ederiz.",
+      },
+      {
+        question: "Web sitesi fiyatını ne belirler?",
+        answer:
+          "Sayfa sayısı, özel tasarım ihtiyacı, çok dilli yapı, entegrasyonlar ve içeriklerin kimin tarafından hazırlanacağı fiyatı belirler. İlk görüşme ücretsizdir; ihtiyaçlarınızı dinledikten sonra teklif hazırlarız.",
       },
     ],
   },
@@ -2361,58 +2264,52 @@ Sitenizin yenilenmesi ya da sıfırdan kurulması için [bizimle iletişime geç
     slug: "api-ve-sistem-entegrasyonlari",
     title: "API Entegrasyon Hizmetleri",
     metaDescription:
-      "Sistemleriniz arasında güvenli, izlenebilir veri akışı: REST/SOAP API, webhook, ETL ve entegrasyon katmanı. BTM Bilişim ile kopuk sistemleri birbirine bağlayın.",
-    content: `API ve sistem entegrasyonları hizmetimiz, birbirinden habersiz çalışan sistemlerinizi güvenli ve izlenebilir bir veri akışıyla birbirine bağlar. Manuel veri kopyalama ve mutabakat işleri ortadan kalkar.
+      "API ve sistem entegrasyonları: REST/SOAP API, webhook ve zamanlanmış veri aktarımıyla ERP, CRM, e-ticaret ve banka sistemleriniz arasında izlenen veri akışı.",
+    content: `E-ticaret sitenize gelen sipariş muhasebeye elle giriliyor, CRM'deki müşteri bilgisi ERP'deki cari kartla tutmuyor, banka hareketleri her sabah Excel'e aktarılıyorsa, sistemleriniz birbiriyle konuşmuyor demektir. API ve sistem entegrasyonları hizmetimizde bu uygulamalar arasında güvenli, kayıt altında ve hata durumunda haber veren bir veri akışı kuruyoruz.
 
-## Entegrasyon eksikliğinin maliyeti
+## Bağlantısız sistemlerin bedeli
 
-Aynı veriyi iki sisteme elle girmek; hem zaman kaybı hem de hata kaynağıdır. Sipariş, cari, stok ve fatura verisinin sistemler arasında elle taşındığı her nokta, bir mutabakat toplantısı ve bir "hangisi doğru?" tartışması demektir.
+Aynı bilgiyi iki ayrı ekrana yazmak hem personelin zamanını alır hem de yazım hatalarına kapı açar. Ay sonunda rakamlar tutmadığında hangi sistemin doğru olduğunu bulmak için saatler harcanır. Stok bilgisinin geç güncellenmesi ise elde olmayan ürünün satılmasına yol açabilir. Entegrasyon kurulmadan yapılan geçici çözümler de zamanla sorun yaratır: bir personelin bilgisayarında çalışan makrolar, kimsenin sahiplenmediği aktarım dosyaları ve o kişi ayrıldığında duran süreçler. Doğru kurulmuş bir entegrasyon belgelenir, izlenir ve kişiden bağımsız çalışır.
 
-## Kapsamımız
+## Entegrasyon kapsamı
 
-- REST ve SOAP API tasarımı, geliştirme ve dokümantasyonu
-- Mevcut sistemlerin API'leriyle entegrasyon (ERP, CRM, e-ticaret, banka, kargo, e-fatura)
-- Webhook ve olay tabanlı entegrasyonlar
-- Toplu veri aktarımı (ETL) ve zamanlanmış senkronizasyon
-- Merkezi entegrasyon katmanı / servis veri yolu yaklaşımı
-- Kimlik doğrulama, yetkilendirme ve hız sınırlama
-- Hata yönetimi, yeniden deneme ve izleme/alarm
-- Veri eşleme (mapping) ve dönüşüm kuralları
+- REST ve SOAP API tasarımı, geliştirilmesi ve dokümantasyonu
+- ERP, CRM, e-ticaret, banka, kargo ve e-fatura sistemlerinin API'lerine bağlantı
+- Webhook ile olay anında tetiklenen akışlar
+- Zamanlanmış toplu veri aktarımı ve senkronizasyon
+- Tüm bağlantıları tek merkezden yöneten entegrasyon katmanı
+- Kimlik doğrulama, yetkilendirme ve istek sınırlama
+- Alan eşleştirme ve veri dönüştürme kuralları
+- Hatalı aktarımlar için yeniden deneme, alarm ve raporlama
 
-## Nasıl çalışıyoruz?
+## Çalışma şeklimiz
 
-1. **Analiz** — Hangi veri, hangi yönde, hangi sıklıkta akmalı belirlenir.
-2. **Tasarım** — Arayüz sözleşmeleri, eşleme kuralları ve hata senaryoları tanımlanır.
-3. **Geliştirme** — Entegrasyon kurulur, test ortamında uçtan uca doğrulanır.
-4. **İzleme** — Canlıda akış izlenir, hatalar alarm üretir ve raporlanır.
+Önce hangi verinin, hangi sistemden hangisine, hangi sıklıkla gitmesi gerektiğini birlikte belirleriz. Ardından iki tarafın alanları eşleştirilir, hata senaryoları yazılır: karşı sistem yanıt vermezse ne olacak, aynı kayıt iki kez gelirse nasıl ayıklanacak gibi. Entegrasyon önce test ortamında uçtan uca denenir, sonra canlıya alınır. Canlıda her akış izlenir; başarısız bir aktarım olduğunda sorumlu kişiye bildirim gider. Entegrasyonun teknik dokümanı ve akış şeması da size teslim edilir.
 
-## İlgili hizmetler
+## API'si olmayan sistemler ne olacak?
 
-ERP'ye özel akışlar için [ERP entegrasyonları](/yazilim-dijital/erp-entegrasyonlari/), süreç otomasyonu için [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/) ile birlikte kurgulanır.
+Her yazılımın hazır bir API'si yoktur. Bu durumda veritabanı görünümleri, dosya tabanlı aktarım ya da güvenli bir ara servis gibi alternatif yollar kullanılır. Her yöntemin riskini ve bakım ihtiyacını başlamadan önce açıkça paylaşırız. Kendi yazılım ekibimiz bu bağlantıları geliştirirken, sistemlerin çalıştığı sunucu ve ağ tarafını da bildiği için güvenlik duvarı ve erişim kurallarını da aynı projede düzenler.
 
-## Kurumunuza kazandırdıkları
+## İlgili çalışmalar
 
-- Aynı veriyi iki kez girme işinin bitmesi
-- Sistemler arası tutarlılık ve azalan mutabakat yükü
-- Hataların alarm ile anında görülmesi
-- Yeni sistem eklendiğinde hazır bir entegrasyon deseni
+ERP merkezli bağlantılar için [ERP entegrasyonları](/yazilim-dijital/erp-entegrasyonlari/), veri akışının üzerine onay ve görev kuralları eklenecekse [iş süreci otomasyonları](/yazilim-dijital/is-sureci-otomasyonlari/) ile birlikte çalışırız.
 
-Entegrasyon ihtiyaçlarınızı birlikte haritalayalım. [İletişime geçin.](/iletisim/)`,
+Sistemleriniz arasındaki veri akışını birlikte haritalayalım. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "Sistemimizin API'si yok, yine de entegre olur mu?",
+        question: "Kullandığımız programın API'si yok, entegrasyon yine de mümkün mü?",
         answer:
-          "Genellikle evet. API yoksa veri tabanı görünümleri, dosya tabanlı aktarım ya da ekran/servis otomasyonu gibi alternatif yöntemlerle güvenli bir akış kurulabilir.",
+          "Çoğu zaman mümkündür. Veritabanı görünümleri, dosya aktarımı veya ara servis gibi alternatif yöntemlerle güvenli bir akış kurulabilir; yöntemin sınırlarını baştan konuşuruz.",
       },
       {
-        question: "Entegrasyon bozulursa nasıl anlarız?",
+        question: "Bir aktarım hata verirse bundan nasıl haberimiz olur?",
         answer:
-          "Her akış izlenir; başarısız aktarım, gecikme ya da veri uyuşmazlığı durumunda alarm üretilir ve tekrar deneme mantığı devreye girer.",
+          "Her akış izlenir. Aktarım başarısız olduğunda, geciktiğinde ya da veriler uyuşmadığında belirlenen kişilere bildirim gider ve sistem işlemi otomatik olarak yeniden dener.",
       },
       {
-        question: "Gerçek zamanlı mı olmalı?",
+        question: "Verinin anlık mı aktarılması gerekir?",
         answer:
-          "İhtiyaca göre. Stok ve fiyat gibi kritik veriler için anlık; muhasebe kayıtları için saatlik ya da günlük toplu senkronizasyon çoğu zaman yeterli ve daha dayanıklıdır.",
+          "İhtiyaca bağlıdır. Stok ve fiyat gibi bilgilerde anlık aktarım önemlidir; muhasebe kayıtlarında saatlik veya günlük toplu aktarım genellikle yeterlidir ve daha az sorun çıkarır.",
       },
     ],
   },
@@ -2422,58 +2319,57 @@ Entegrasyon ihtiyaçlarınızı birlikte haritalayalım. [İletişime geçin.](/
     slug: "erp-entegrasyonlari",
     title: "ERP Entegrasyonları",
     metaDescription:
-      "SAP, Logo, Mikro, Netsis ve Dynamics için e-ticaret, CRM, banka, e-fatura ve özel uygulama entegrasyonlarıyla ERP'nizi tüm iş sistemlerinize bağlayın.",
-    content: `ERP entegrasyonları hizmetimiz, ERP sisteminizi diğer iş uygulamalarınızla (e-ticaret, CRM, banka, e-fatura, lojistik, özel yazılımlar) çift yönlü ve güvenilir biçimde konuşturur.
+      "ERP entegrasyonları: SAP, Logo, Mikro, Netsis ve Dynamics'i e-ticaret, pazaryeri, CRM, banka, POS ve e-fatura sistemlerine çift yönlü bağlayan çözümler.",
+    content: `ERP, şirketin muhasebe, stok ve satış kayıtlarının toplandığı merkezdir; ancak çevresindeki uygulamalarla bağlantısı yoksa bu merkez yalnız kalır. ERP entegrasyonları hizmetimizde ERP'nizi e-ticaret siteniz, pazaryerleri, CRM, banka, e-belge ve depo sistemleriyle çift yönlü ve izlenebilir şekilde konuşturuyoruz.
 
-## ERP genellikle bir ada olarak kalır
+## Tipik tablo: ERP var ama veriler elle taşınıyor
 
-ERP kurulur ama e-ticaret siparişleri elle girilir, banka hareketleri Excel'den aktarılır, CRM ile cari bilgisi eşleşmez. Bu kopukluklar hem iş gücü hem de veri güvenilirliği kaybıdır.
+Pazaryerinden gelen siparişler her gün bir personel tarafından ERP'ye yazılıyor, banka ekstreleri tahsilatlarla elle eşleştiriliyor, satış ekibi CRM'de güncel bakiyeyi göremiyor. Bu düzen hem iş gücü tüketir hem de raporların güvenilirliğini zayıflatır; yoğun dönemlerde ise siparişlerin gecikmesine yol açar. Kampanya günlerinde pazaryerine giden stok bilgisinin saatlerce güncellenmemesi, iptal edilen siparişler ve olumsuz mağaza puanı olarak geri döner. Muhasebe ekibi de ay sonunda farkları kapatmakla uğraşırken asıl işi olan analiz ve kontrol geri planda kalır.
 
-## Kapsamımız
+## Çalıştığımız sistemler ve kapsam
 
-- **Desteklenen ERP'ler:** SAP, Logo (Tiger/GO/j-Platform), Mikro, Netsis, Microsoft Dynamics, DİA, Nebim ve diğerleri
-- E-ticaret ve pazaryeri entegrasyonu (sipariş, stok, fiyat, kargo, iade)
-- CRM entegrasyonu (cari, teklif, sipariş, bakiye)
-- Banka ve POS mutabakatı, otomatik tahsilat eşleme
-- e-Fatura / e-İrsaliye / e-Arşiv entegrasyonu
-- Üretim, depo ve el terminali (WMS) entegrasyonları
-- Bütçe ve raporlama sistemlerine veri aktarımı
-- Eşleme kuralları, hata yönetimi ve izleme
+- SAP, Logo (Tiger, GO, j-Platform), Mikro, Netsis, Microsoft Dynamics, DİA, Nebim ve benzeri ERP'ler
+- E-ticaret ve pazaryeri bağlantıları: sipariş, stok, fiyat, kargo ve iade
+- CRM tarafında cari, teklif, sipariş ve bakiye senkronizasyonu
+- Banka ve POS hareketlerinin tahsilatlarla otomatik eşleştirilmesi
+- e-Fatura, e-İrsaliye ve e-Arşiv süreçleri
+- Üretim, depo ve el terminali (WMS) sistemleri
+- Bütçe ve raporlama araçlarına veri aktarımı
+- Eşleştirme kuralları, hata yönetimi ve izleme
 
-## Nasıl çalışıyoruz?
+## Projenin adımları
 
-1. **Analiz** — ERP tarafındaki nesneler ve karşı sistemdeki alanlar eşlenir.
-2. **Tasarım** — Akış yönü, sıklık, tetikleyici ve hata senaryoları belirlenir.
-3. **Geliştirme** — Entegrasyon test firması/dönemi üzerinde kurulur ve doğrulanır.
-4. **Canlı geçiş** — Kontrollü açılır, ilk günler yakın izlenir.
+Önce ERP tarafındaki stok kartı, cari, sipariş ve fatura gibi nesnelerin karşı sistemdeki alanlarla nasıl eşleşeceğini belirleriz. Ardından akışın yönü, sıklığı, neyin tetikleyeceği ve hata durumunda ne olacağı yazılır. Geliştirme ERP'nin test firması veya test dönemi üzerinde yapılır, böylece canlı kayıtlarınız etkilenmez. Canlıya geçiş kontrollü yapılır ve ilk günler yakından izlenir. Ağır işlemler ERP'yi yavaşlatmaması için mesai dışına planlanır.
 
-## İlgili hizmetler
+## Logo ve raporlama tarafı
 
-Logo tarafında derinlemesine ihtiyaçlar için [Logo ERP destek ve danışmanlık](/danismanlik/logo-erp-destek-ve-danismanlik/), bütçe–gerçekleşme raporlaması için [Atlas](/yazilim-urunlerimiz/atlas/) ile entegre çalışılır.
+Logo kullanan şirketler için entegrasyonun ötesinde parametre, kullanıcı ve performans konularında [Logo ERP destek ve danışmanlık](/danismanlik/logo-erp-destek-ve-danismanlik/) hizmeti veriyoruz. ERP'deki gerçekleşen rakamları bütçeyle karşılaştırmak isteyen yöneticiler için kendi geliştirdiğimiz bütçe ve raporlama yazılımı [Atlas](/yazilim-urunlerimiz/atlas/) ERP'den doğrudan veri alarak çalışır.
 
-## Kurumunuza kazandırdıkları
+## Entegrasyon sonrası değişenler
 
-- E-ticaret ve pazaryeri siparişlerinin ERP'ye otomatik düşmesi
-- Banka ve POS mutabakatının otomatikleşmesi
-- Stok ve fiyatın tüm kanallarda tutarlı olması
-- e-Belge süreçlerinin ERP içinden yürümesi
+Siparişler ERP'ye kendiliğinden düşer, banka mutabakatı dakikalar içinde tamamlanır, stok ve fiyat bilgisi tüm satış kanallarında aynı olur, e-belgeler ERP içinden kesilir. Personeliniz veri taşımak yerine istisnai durumlarla ilgilenir.
 
-Mevcut ERP entegrasyon ihtiyaçlarınızı birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
+ERP'nizin hangi sistemlere bağlanması gerektiğini birlikte çıkaralım. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "ERP'mizin sürümü eski, sorun olur mu?",
+        question: "ERP sürümümüz eski, entegrasyon yapılabilir mi?",
         answer:
-          "Genellikle çözülebilir. Eski sürümlerde API kısıtlıysa veri tabanı ya da dosya tabanlı yöntemlerle güvenli bir akış kurarız; riskler önceden belirtilir.",
+          "Çoğu durumda yapılabilir. Eski sürümlerde API desteği sınırlıysa veritabanı veya dosya tabanlı güvenli yöntemler kullanılır; bu yöntemlerin riskleri ve sürüm yükseltme seçeneği önceden konuşulur.",
       },
       {
-        question: "Entegrasyon ERP'yi yavaşlatır mı?",
+        question: "Entegrasyon ERP'nin performansını düşürür mü?",
         answer:
-          "Doğru tasarlandığında hayır. Yoğun işlemler mesai dışına ya da toplu pencerelere alınır, canlı sorgular sınırlandırılır ve ERP üzerindeki yük izlenir.",
+          "Doğru kurgulandığında düşürmez. Toplu işlemler mesai dışına veya belirli zaman aralıklarına alınır, anlık sorgular sınırlanır ve ERP üzerindeki yük izlenir.",
       },
       {
-        question: "Birden fazla sistemi aynı anda bağlayabilir misiniz?",
+        question: "ERP'yi aynı anda birçok sisteme bağlayabilir misiniz?",
         answer:
-          "Evet. Merkezi bir entegrasyon katmanı ile ERP'yi tek noktadan birden çok sisteme bağlamak, her biri için ayrı ikili entegrasyondan daha sürdürülebilirdir.",
+          "Evet. Her sistem için ayrı ayrı bağlantı yazmak yerine merkezi bir entegrasyon katmanı kurmak, bakımı kolaylaştırır ve yeni bir sistem eklemeyi hızlandırır.",
+      },
+      {
+        question: "Proje süresi ve maliyeti neye bağlı?",
+        answer:
+          "Bağlanacak sistem sayısı, aktarılacak veri türleri, karşı sistemlerin API olgunluğu ve özel iş kurallarının sayısı belirleyicidir. Analizden sonra kapsamı yazılı hale getirip takvim ve teklif sunarız.",
       },
     ],
   },
@@ -2483,58 +2379,52 @@ Mevcut ERP entegrasyon ihtiyaçlarınızı birlikte çıkaralım. [İletişime g
     slug: "is-sureci-otomasyonlari",
     title: "İş Süreci Otomasyonları",
     metaDescription:
-      "Onay akışları, veri aktarımı, raporlama ve tekrarlayan görevlerin otomasyonu (workflow, RPA, entegrasyon). Manuel emeği ve hata payını azaltın.",
-    content: `İş süreci otomasyonları hizmetimiz; tekrarlayan, kural bazlı ve manuel emek gerektiren işleri yazılıma devrederek ekiplerinizin zamanını katma değerli işlere ayırmasını sağlar.
+      "İş süreci otomasyonları: onay akışları, sistemler arası veri aktarımı, otomatik raporlama ve RPA ile tekrarlayan manuel işleri yazılıma devredin.",
+    content: `Her ay aynı raporu farklı sistemlerden toplayıp hazırlayan, faturaları tek tek kontrol edip başka bir ekrana aktaran ya da onay için e-posta zincirlerini takip eden çalışanlarınız varsa, bu işlerin önemli bölümü yazılıma bırakılabilir. İş süreci otomasyonları hizmetimizde kuralı belli, sık tekrarlanan işleri otomatik hale getiriyor; ekibinizin zamanını karar ve müşteri ilişkisi gerektiren işlere açıyoruz.
 
-## Hangi süreçler otomasyona uygun?
+## Otomasyon için iyi adaylar
 
-En iyi adaylar; sık tekrarlanan, net kuralları olan, birden çok sistem ya da kişi arasında gidip gelen süreçlerdir: onay akışları, veri girişi ve aktarımı, rapor hazırlama ve dağıtma, mutabakat, bildirim gönderme, dosya işleme.
+Sık tekrarlanan, kuralları açık ve birden çok kişi ya da sistem arasında gidip gelen işler en hızlı sonucu verir: satın alma ve izin onayları, veri girişi ve aktarımı, periyodik raporların hazırlanıp gönderilmesi, mutabakat kontrolleri, belge ve form işleme, hatırlatma bildirimleri. Her seferinde farklı yorum gerektiren işler ise otomasyona uygun değildir; bunları baştan ayırırız. Bozuk bir süreci olduğu gibi otomatikleştirmek de hatayı sadece hızlandırır, bu yüzden gerekirse önce adımları sadeleştiririz.
 
-## Kapsamımız
+## Otomasyon kapsamı
 
-- Süreç keşfi ve otomasyon fırsatlarının önceliklendirilmesi (etki/efor)
-- Onay ve iş akışı (workflow) uygulamaları
-- Sistemler arası veri aktarımı ve senkronizasyon
-- Robotik süreç otomasyonu (RPA) — API'si olmayan uygulamalar için
-- Otomatik raporlama ve dağıtım
-- E-posta, belge ve form tabanlı süreçlerin otomasyonu
-- İzleme, istisna yönetimi ve insan onayı noktaları
+- Süreçlerin incelenmesi, fayda ve zorluk dengesine göre önceliklendirme
+- Onay ve iş akışı uygulamaları
+- Sistemler arasında veri aktarımı ve senkronizasyon
+- API'si olmayan uygulamalar için robotik süreç otomasyonu (RPA)
+- Raporların otomatik üretilmesi ve dağıtılması
+- E-posta, belge ve form kaynaklı süreçlerin otomasyonu
+- İstisnaların yönetimi ve insan onayı gereken noktalar
 - Otomasyon envanteri ve bakımı
 
-## Nasıl çalışıyoruz?
+## Uygulama adımları
 
-1. **Keşif** — Süreçler haritalanır, süre ve hacim ölçülür, adaylar seçilir.
-2. **Tasarım** — Akış, kurallar, istisnalar ve insan onay noktaları tanımlanır.
-3. **Uygulama** — Otomasyon kurulur, gölge modda gerçek veriyle test edilir.
-4. **Devreye alma** — Canlıya alınır, izlenir; kazanılan süre raporlanır.
+İşe süreçleri haritalayarak başlarız: her adım ne kadar sürüyor, ayda kaç kez tekrarlanıyor, nerede hata çıkıyor. Bu verilerle önce en kolay ve en faydalı süreç seçilir. Tasarımda kurallar, istisnalar ve bir insanın onay vermesi gereken noktalar yazılır. Otomasyon kurulduktan sonra bir süre mevcut yöntemle yan yana, gerçek veriyle çalıştırılır; sonuçlar tutarlı olduğunda devreye alınır ve kazanılan süre raporlanır.
 
-## İlgili hizmetler
+## RPA mı, entegrasyon mu?
 
-Sistemler arası bağlantı için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/), daha kapsamlı ihtiyaçlar için [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/) ile birlikte yürütülür. Programın bütünü için [dijital dönüşüm danışmanlığı](/danismanlik/yazilim-ve-dijital-donusum-danismanligi/).
+Bir sistemin API'si varsa doğrudan entegrasyon daha dayanıklı bir çözümdür; ekran değiştiğinde bozulmaz. RPA ise değiştirilemeyen eski uygulamalar için pratik bir köprüdür. Çoğu projede ikisi birlikte kullanılır. Sistemler arası bağlantılar için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/), otomasyonun ötesine geçen ihtiyaçlar için [özel yazılım geliştirme](/yazilim-dijital/ozel-yazilim-gelistirme/) hizmetlerimizle çalışırız. Otomasyonları daha geniş bir dijitalleşme planının parçası olarak ele almak isterseniz [dijital dönüşüm danışmanlığı](/danismanlik/yazilim-ve-dijital-donusum-danismanligi/) ile başlayabiliriz.
 
-## Kurumunuza kazandırdıkları
+## Ekibinize etkisi
 
-- Tekrarlayan işlerde belirgin zaman tasarrufu
-- İnsan hatası kaynaklı düzeltmelerin azalması
-- Süreçlerin denetlenebilir ve izlenebilir olması
-- Yoğunluk dönemlerinde kapasitenin esnemesi
+Tekrarlayan işlere harcanan saatler azalır, elle veri girişinden kaynaklanan düzeltmeler seyrekleşir, her adım kayıt altına alındığı için süreç denetlenebilir hale gelir ve yoğun dönemlerde ek personel almadan işler yetişir.
 
-Otomasyona uygun süreçlerinizi birlikte tespit edelim. [İletişime geçin.](/iletisim/)`,
+Otomasyona uygun süreçlerinizi birlikte belirleyelim. [İletişime geçin](/iletisim/).`,
     faq: [
       {
-        question: "Otomasyon çalışan yerine mi geçiyor?",
+        question: "Otomasyon çalışanlarımızın yerini mi alacak?",
         answer:
-          "Amaç kişileri değil, kişilerin zamanını yiyen tekrar işleri devralmaktır. Ekipler genellikle aynı sürede daha fazla ve daha nitelikli işe odaklanır.",
+          "Hedef kişilerin yerini almak değil, zamanlarını tüketen tekrar işleri üstlenmektir. Ekipler genellikle bu sayede daha nitelikli işlere ve müşteriye ayırdıkları zamana odaklanır.",
       },
       {
-        question: "RPA mı, entegrasyon mu daha iyi?",
+        question: "Hangi süreçle başlamalıyız?",
         answer:
-          "Sistemde API varsa entegrasyon daha dayanıklıdır. RPA, API'si olmayan ya da değiştirilemeyen eski uygulamalar için pratik bir köprüdür; ikisi birlikte de kullanılır.",
+          "Sık tekrarlanan, kuralları net ve hatası maliyetli olan bir süreçle başlamak en doğrusudur. Keşif aşamasında süreçlerinizi ölçüp size önceliklendirilmiş bir liste sunarız.",
       },
       {
-        question: "İlk sonucu ne kadar sürede görürüz?",
+        question: "Otomasyon hata yaparsa ne olur?",
         answer:
-          "Küçük ve net bir süreç genellikle 2-4 haftada devreye girer. İlk otomasyonun kazandırdığı süre, sonraki adayların önceliklendirmesine veri sağlar.",
+          "Kurallara uymayan durumlar otomatik olarak işlenmez, bir kişinin onayına düşer. Tüm adımlar kayıt altında tutulur ve beklenmeyen bir durumda sorumlu kişiye bildirim gider.",
       },
     ],
   },
@@ -2544,58 +2434,57 @@ Otomasyona uygun süreçlerinizi birlikte tespit edelim. [İletişime geçin.](/
     slug: "raporlama-ve-dashboard-cozumleri",
     title: "Raporlama ve Dashboard Çözümleri",
     metaDescription:
-      "Farklı kaynaklardan gelen veriyi tek panelde toplayan, gerçek zamanlı yönetim panoları ve otomatik raporlar. BTM Bilişim ile kararlarınızı canlı veriyle alın.",
-    content: `Raporlama ve dashboard çözümlerimiz; ERP, muhasebe, CRM, e-ticaret ve operasyon sistemlerinizdeki dağınık veriyi tek bir yerde toplar ve yönetimin karar alabileceği canlı panolara dönüştürür.
+      "Raporlama ve dashboard çözümleri: ERP, muhasebe, CRM ve e-ticaret verisini tek veri modelinde toplayan yönetim panoları ve otomatik zamanlanmış raporlar.",
+    content: `Yönetim toplantısına gelen satış raporu bir kişinin hazırladığı Excel dosyasıysa, o kişi izindeyken rapor da gelmez; aynı rakamı iki departman farklı hesapladığında toplantı veriyi tartışmakla geçer. Raporlama ve dashboard çözümlerimizde ERP, muhasebe, CRM, e-ticaret ve üretim sistemlerinizdeki veriyi tek bir modelde topluyor, yöneticilerin dönem kapanışını beklemeden bakabileceği panolara dönüştürüyoruz.
 
-## Excel raporlamanın sınırı
+## Elle hazırlanan raporların üç sorunu
 
-Ay sonunda elle hazırlanan raporlar; geç gelir, kişiye bağımlıdır ve iki kişi aynı raporu farklı sonuçlarla üretebilir. Panelde toplanan canlı veri bu üç sorunu birden çözer. [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) bu işi canlı veriyle tek panelde yapar.
+Geç gelirler, çünkü ay kapanmadan hazırlanamazlar. Kişiye bağlıdırlar, çünkü formülleri ve kaynakları yalnızca hazırlayan bilir. Tutarsızdırlar, çünkü net satış veya tahsilat gibi kavramlar herkes tarafından farklı tanımlanır. Ortak bir veri modeli üzerinde çalışan panolar bu üç sorunu birlikte çözer. Excel dosyalarının e-postayla dolaşması bir güvenlik sorunudur da; maaş veya müşteri bazlı kârlılık gibi hassas rakamlar yanlış kişiye gidebilir. Panolarda ise her kullanıcı yalnızca kendi yetkisindeki veriyi görür ve kimin neye baktığı kayıt altında tutulur.
 
-## Kapsamımız
+## Çözüm kapsamı
 
-- Veri kaynaklarının bağlanması (ERP, muhasebe, CRM, e-ticaret, üretim, Excel)
-- Veri ambarı / veri modeli kurulumu ve tek doğruluk kaynağı
-- Yönetim panoları: satış, tahsilat, nakit, stok, üretim, İK
-- KPI tanımları ve hedef/gerçekleşen karşılaştırmaları
-- Otomatik zamanlanmış raporlar (PDF/Excel) ve e-posta dağıtımı
-- Rol bazlı erişim ile veri güvenliği
-- Mobil uyumlu görünümler
-- Uyarı eşikleri ve anomali bildirimleri
+- ERP, muhasebe, CRM, e-ticaret, üretim ve Excel kaynaklarının bağlanması
+- Tek doğruluk kaynağı olacak veri modeli veya veri ambarı
+- Satış, tahsilat, nakit, stok, üretim ve İK panoları
+- KPI tanımları ve hedef ile gerçekleşenin karşılaştırılması
+- Zamanlanmış PDF ve Excel raporlarının e-postayla dağıtımı
+- Kullanıcının yalnızca yetkili olduğu veriyi gördüğü rol bazlı erişim
+- Telefon ve tablette okunabilen görünümler
+- Eşik aşıldığında uyarı gönderen bildirimler
 
-## Nasıl çalışıyoruz?
+## Proje nasıl ilerler?
 
-1. **İhtiyaç analizi** — Hangi kararlar, hangi metriklerle alınıyor belirlenir.
-2. **Veri modeli** — Kaynaklar bağlanır, tanımlar ortaklaştırılır, tek doğruluk kaynağı kurulur.
-3. **Pano tasarımı** — Panolar hazırlanır, kullanıcılarla doğrulanır.
-4. **Devreye alma** — Yenileme sıklığı, erişim ve otomatik dağıtım kurulur.
+İlk soru hangi grafiğin çizileceği değil, hangi kararın hangi rakama bakılarak alındığıdır. Bunu netleştirdikten sonra veri kaynaklarını bağlar, departmanlarla birlikte ortak tanımları yazarız. Panolar hazırlanır ve gerçek kullanıcılarla gözden geçirilir; okunmayan grafikler çıkarılır, eksik olanlar eklenir. Son aşamada verinin ne sıklıkla yenileneceği, kimin neyi göreceği ve hangi raporların otomatik gönderileceği ayarlanır. Araç seçimi veri hacmine, kullanıcı sayısına ve lisans maliyetine göre yapılır; belirli bir ürüne bağlı değiliz.
 
-## İlgili hizmetler
+## Hazır ürün seçeneği: Atlas
 
-Bütçe–gerçekleşme özelinde hazır bir ürün olarak [Atlas](/yazilim-urunlerimiz/atlas/), veri akışı için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) ile birlikte konumlandırılır.
+Bütçe hazırlama ve bütçe ile gerçekleşenin karşılaştırılması ihtiyacınız ağır basıyorsa, kendi yazılım ekibimizin geliştirdiği [Atlas Bütçe ve Raporlama Yazılımı](/yazilim-urunlerimiz/atlas/) bu işi ERP'den gelen canlı veriyle tek panelde yapar ve sıfırdan proje gerektirmez. Farklı sistemlerden verinin düzenli akması için [API ve sistem entegrasyonları](/yazilim-dijital/api-ve-sistem-entegrasyonlari/) altyapısını birlikte kurarız.
 
-## Kurumunuza kazandırdıkları
+## Yönetime kazandırdıkları
 
-- Raporların kişiye değil sisteme bağlı olması
-- Aynı metriğin herkeste aynı sonucu vermesi
-- Kapanışı beklemeden, dönem içinde görünürlük
-- Yönetim toplantılarının veriyle başlaması
+Raporlar kişiye değil sisteme bağlı hale gelir, aynı metrik herkese aynı sonucu verir, dönem içinde sapmalar zamanında görülür ve toplantılar rakamları doğrulamakla değil kararlarla geçer.
 
-Raporlama ihtiyaçlarınızı birlikte netleştirelim. [İletişime geçin.](/iletisim/)`,
+Raporlama ihtiyacınızı birlikte netleştirelim. [Bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Hangi raporlama aracını kullanıyorsunuz?",
+        question: "Hangi raporlama araçlarıyla çalışıyorsunuz?",
         answer:
-          "İhtiyaca göre yaygın iş zekâsı araçları ya da web tabanlı özel panolar. Seçim; veri hacmi, kullanıcı sayısı, lisans maliyeti ve mevcut altyapıya göre yapılır.",
+          "Yaygın iş zekâsı araçlarıyla ya da web tabanlı özel panolarla çalışıyoruz. Seçimi veri hacmi, kullanıcı sayısı, lisans maliyeti ve mevcut altyapınıza göre birlikte yaparız.",
       },
       {
-        question: "Veriler gerçek zamanlı mı olacak?",
+        question: "Panolardaki veriler ne sıklıkla güncellenir?",
         answer:
-          "Metrik bazında ayarlanır. Operasyonel panolar için sık yenileme; finansal raporlar için günlük ya da kapanış bazlı yenileme çoğu zaman yeterlidir.",
+          "Her metrik için ayrı belirlenir. Operasyon panoları sık yenilenirken finansal raporlarda günlük veya kapanış bazlı güncelleme çoğu zaman yeterlidir.",
       },
       {
-        question: "Farklı sistemlerdeki tanımlar tutmuyor, bu sorun olur mu?",
+        question: "Departmanlarımız aynı kavramı farklı hesaplıyor, bu engel olur mu?",
         answer:
-          "Bu, projenin ilk işidir. Ortak tanımlar (ör. 'net satış' neyi kapsar) netleştirilir ve tek doğruluk kaynağı bu tanımlar üzerine kurulur.",
+          "Engel değil, projenin ilk işidir. Net satış gibi kavramların neyi kapsadığı birlikte yazılır ve tüm panolar bu ortak tanımların üzerine kurulur.",
+      },
+      {
+        question: "Atlas ile özel dashboard projesi arasındaki fark nedir?",
+        answer:
+          "Atlas bütçe ve gerçekleşen takibi için hazır bir üründür ve hızlı devreye girer. Birçok farklı kaynağı ve departmana özel metrikleri kapsayan ihtiyaçlarda ise size özel bir pano projesi daha uygundur.",
       },
     ],
   },
@@ -2609,57 +2498,56 @@ Raporlama ihtiyaçlarınızı birlikte netleştirelim. [İletişime geçin.](/il
     slug: "microsoft-lisanslama",
     title: "Microsoft Lisanslama",
     metaDescription:
-      "Microsoft ürünleri için doğru lisans modeli, CSP/EA tedariki, uyumluluk (SAM) ve yenileme yönetimiyle fazla ödemeden eksiksiz lisanslayın.",
-    content: `Microsoft lisanslama hizmetimiz; kurumunuzun gerçek ihtiyacına göre doğru lisans modelini belirler, tedarik eder ve yenileme takvimini yönetir. Amaç, ne eksik (uyumsuzluk riski) ne de fazla (gereksiz maliyet) lisanslamaktır.
+      "Microsoft lisanslama: CSP, EA ve MPSA kanal seçimi, envanter ve SAM uyumluluk kontrolü, denetim hazırlığı ve yenileme takibiyle doğru adette lisans.",
+    content: `Microsoft lisanslarında iki tür hata sık görülür: bazı kurumlar kullanmadıkları ürünler için yıllarca ödeme yapar, bazıları ise farkında olmadan eksik lisansla çalışır ve bunu ancak bir denetim mektubu geldiğinde öğrenir. Microsoft lisanslama hizmetimiz elinizdekini fiili kullanımla karşılaştırır, size uygun modeli ve satın alma kanalını belirler, ardından yenileme tarihlerini sizin yerinize takip eder.
 
-## Microsoft lisanslama neden karmaşık?
+## Karmaşıklık nereden geliyor?
 
-Kullanıcı bazlı, cihaz bazlı ve çekirdek (core) bazlı modeller; CSP, Enterprise Agreement ve açık lisans kanalları; Software Assurance hakları; bulut ve şirket içi karışımı… Doğru kurgu ciddi tasarruf, yanlış kurgu hem para hem denetim riski demektir.
+Aynı ürün kullanıcı başına, cihaz başına ya da işlemci çekirdeği başına lisanslanabilir. Satın alma CSP, Enterprise Agreement veya MPSA üzerinden yapılabilir ve her kanalın taahhüt süresi, esnekliği ve fiyatlaması farklıdır. Software Assurance bazı hakları ancak sözleşme sürdükçe verir. Bulut abonelikleri ile şirket içi kalıcı lisanslar aynı ortamda karıştığında hangi hakkın nerede geçerli olduğunu izlemek uzmanlık ister. Örneğin şirket içindeki bir SQL Server lisansını Azure'a taşımak ancak belirli koşullar sağlanıyorsa mümkündür; bu ayrıntı gözden kaçarsa aynı lisans iki kez ödenir.
 
-## Kapsamımız
+## Danışmanlık kapsamı
 
-- Mevcut lisans envanteri ve kullanım analizi
-- İhtiyaca göre doğru model ve kanal seçimi (CSP, EA, MPSA)
-- Microsoft 365, Windows, Windows Server, SQL Server, Azure için lisans planı
+- Sahip olunan lisansların ve gerçek kullanımın envanteri
+- CSP, EA ve MPSA arasında ihtiyaca uygun kanal seçimi
+- Microsoft 365, Windows, Windows Server, SQL Server ve Azure için lisans planı
 - Yazılım varlık yönetimi (SAM) ve uyumluluk kontrolü
-- Denetim (audit) hazırlığı ve boşluk kapatma
-- Yenileme takvimi ve büyüme/azalma senaryoları
-- Maliyet optimizasyonu ve alternatif model karşılaştırması
+- Üretici denetimine hazırlık ve eksiklerin önceden kapatılması
+- Kullanıcı sayısı artış ve azalışlarına göre yenileme senaryoları
+- Alternatif modellerin maliyet karşılaştırması
 
-## Nasıl çalışıyoruz?
+## Çalışmanın adımları
 
-1. **Envanter** — Sahip olunan lisanslar ve fiili kullanım karşılaştırılır.
-2. **Analiz** — Eksik, fazla ve yanlış modelde olan kalemler tespit edilir.
-3. **Plan** — Doğru model ve kanalla tedarik/geçiş planı hazırlanır.
-4. **Yönetim** — Yenileme tarihleri izlenir, değişiklikler önceden planlanır.
+Önce satın alma kayıtlarınızı, üretici portalındaki hakları ve kurulu yazılımları bir araya getiririz. Bu veriyle hangi kalemlerin eksik, hangilerinin fazla ya da yanlış modelde olduğunu gösteren bir rapor hazırlarız. Raporun ardından doğru model ve kanala geçiş için bir tedarik planı öneririz. Sonrasında yenileme tarihleri takvimimizde izlenir; kullanıcı sayınız değişmeden önce size seçenekleri sunarız.
 
-## İlgili hizmetler
+## Ürün bazında ayrıntı
 
-Ürün bazında derinleşmek için [Microsoft 365 lisanslama](/lisanslama/microsoft-365-lisanslama/) ve [Windows Server & SQL Server lisanslama](/lisanslama/windows-server-sql-server-lisanslama/); teknik kurulum için [Microsoft 365 çözümleri](/bulut-yedekleme/microsoft-365-cozumleri/) ve [Azure çözümleri](/bulut-yedekleme/microsoft-azure-cozumleri/).
+Kullanıcı planları için [Microsoft 365 lisans optimizasyonu](/lisanslama/microsoft-365-lisanslama/), sunucu ve veritabanı tarafında [Windows Server ve SQL Server lisans hesabı](/lisanslama/windows-server-sql-server-lisanslama/) sayfalarımıza bakabilirsiniz. Lisansın teknik karşılığı olan kurulum ve göç işleri [Microsoft 365 kurulum hizmetimiz](/bulut-yedekleme/microsoft-365-cozumleri/) ve [Azure altyapı hizmetimiz](/bulut-yedekleme/microsoft-azure-cozumleri/) ile yürür.
 
-## Kurumunuza kazandırdıkları
+## Somut çıktılar
 
-- Gereksiz lisans maliyetinin ortadan kalkması
-- Denetimde uyumsuzluk sürprizinin önlenmesi
-- Yenileme tarihlerinin kaçırılmaması
-- Bulut/şirket içi geçişlerde lisans haklarının doğru kullanılması
+Gereksiz kalemlerden arındırılmış bir lisans listesi, denetimde savunabileceğiniz belgeli bir uyumluluk durumu, kaçırılmayan yenileme tarihleri ve şirket içinden buluta geçerken mevcut haklarınızın boşa gitmemesi. Satıcıdan bağımsız çalıştığımız için öneri yaparken tek bir kanalı zorlamayız.
 
-Lisans yapınızı bir envanter çalışmasıyla birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Lisans durumunuzu bir envanter çalışmasıyla netleştirmek için [ücretsiz ön görüşme isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut tedarikçimizi değiştirmeden çalışabilir miyiz?",
+        question: "Şu anki bayimizle çalışmaya devam edebilir miyiz?",
         answer:
-          "Evet. İsterseniz yalnızca doğru model belirleme ve uyumluluk danışmanlığı alır, tedariki mevcut kanalınızdan sürdürürsünüz; isterseniz tedariki de biz üstleniriz.",
+          "Evet. İsterseniz yalnızca model belirleme ve uyumluluk danışmanlığını bizden alır, satın almayı mevcut kanalınızdan sürdürürsünüz. Tedarik sürecini de bize devretmek isterseniz onu da üstlenebiliriz.",
       },
       {
-        question: "Fazla lisansımız varsa ne olur?",
+        question: "Kullanmadığımız lisanslar varsa ne yapılır?",
         answer:
-          "Yenileme döneminde kullanılmayan kalemler kapsamdan çıkarılır ya da ihtiyaç duyulan başka ürünlere kaydırılır. Analiz, bu fırsatları net biçimde ortaya koyar.",
+          "Yenileme döneminde bu kalemler sözleşmeden düşürülür ya da ihtiyaç duyduğunuz başka bir ürüne kaydırılır. Envanter raporu hangi kalemlerin atıl olduğunu tek tek gösterir.",
       },
       {
-        question: "Microsoft denetimi geldi, yardımcı olur musunuz?",
+        question: "Microsoft'tan denetim yazısı aldık, ne yapmalıyız?",
         answer:
-          "Evet. Denetim öncesi bir iç değerlendirme yapar, boşlukları önceden kapatır ve süreç boyunca sizinle birlikte çalışırız.",
+          "Önce acele etmeden iç bir değerlendirme yaparız. Eksikleri denetim verisi paylaşılmadan önce belirler, kapatılması gerekenleri planlar ve süreç boyunca yanınızda oluruz.",
+      },
+      {
+        question: "Hangi kanalın bize uygun olduğunu nasıl anlarız?",
+        answer:
+          "Kullanıcı sayınız, sayının ne kadar dalgalandığı, uzun süreli taahhüde hazır olup olmadığınız ve bulut kullanım planınız belirleyicidir. Envanter sonrası seçenekleri yan yana koyarak karar vermenize yardımcı oluruz.",
       },
     ],
   },
@@ -2670,57 +2558,51 @@ Lisans yapınızı bir envanter çalışmasıyla birlikte gözden geçirelim. [�
     title: "Microsoft 365 Lisanslama",
     metaTitle: "Microsoft 365 Lisans Satın Alma ve Plan Seçimi | BTM Bilişim",
     metaDescription:
-      "Business ve Enterprise planları, E3/E5 ve eklenti kararları, kullanıcı bazlı optimizasyon ve CSP tedariki. BTM Bilişim ile Microsoft 365'te doğru planı seçin.",
-    content: `Microsoft 365 lisanslama hizmetimiz; kullanıcı profillerinize göre doğru plan karmasını belirler, gereksiz üst paketleri ayıklar ve tedarik ile yenilemeyi yönetir.
+      "Microsoft 365 lisanslama: Business, E3, E5 ve F3 planlarını kullanıcı profiline göre eşleştirin, atıl lisansları bulun, CSP ile esnek tedarik edin.",
+    content: `Microsoft 365'te en yaygın tasarruf fırsatı, herkese aynı planı vermekten vazgeçmektir. Muhasebe müdürü, depo sorumlusu ve satış temsilcisinin ihtiyaçları birbirinden çok farklıdır; buna rağmen çoğu şirkette tüm kullanıcılar en pahalı pakette durur ya da tam tersi, güvenlik gerektiren kullanıcılar temel planda kalır. Bu hizmet, kullanıcılarınızı gerçek kullanıma göre gruplar ve her gruba uygun planı belirler.
 
-## Herkes aynı planda olmak zorunda değil
+## Kullanım verisi ne söylüyor?
 
-Bir üretim çalışanı, bir yönetici ve bir bilgi işçisi aynı Microsoft 365 özelliklerine ihtiyaç duymaz. Kullanıcıları profillerine göre farklı planlara yerleştirmek çoğu kurumda belirgin tasarruf sağlar.
+Microsoft 365 yönetim merkezi, kimin hangi uygulamayı ne sıklıkla açtığını gösterir. Bu veriye bakınca genellikle üç şey ortaya çıkar: masaüstü Office'i hiç açmayan ama tam paket kullanan kişiler, ayrılmış çalışanlara hâlâ atanmış lisanslar ve yalnızca bir güvenlik özelliği için üst pakete taşınmış gruplar. Her üçü de düzeltilebilir. Ters yönde bir risk de vardır: yönetici hesapları veya hassas veriye erişen kullanıcılar, koşullu erişim gibi koruma özelliklerini içermeyen bir planda kalmış olabilir.
 
-## Kapsamımız
+## Plan çalışmasının kapsamı
 
-- Kullanıcı profili çıkarımı ve plan eşleştirmesi (Business Basic/Standard/Premium, E3, E5, F3)
-- E5 yerine hedefli eklenti (güvenlik, uyum, telefon) karşılaştırması
-- Frontline (F serisi) lisanslarıyla saha çalışanı optimizasyonu
-- Mevcut atanmış ama kullanılmayan lisansların tespiti
-- CSP üzerinden esnek aylık/yıllık tedarik
-- Yenileme, taahhüt ve kullanıcı sayısı değişim yönetimi
-- Güvenlik ve uyum ihtiyaçlarının lisans karşılığının netleştirilmesi
+- Kullanıcı profillerinin çıkarılması ve Business Basic, Standard, Premium, E3, E5, F3 eşleştirmesi
+- Tam E5 ile güvenlik, uyum veya telefon eklentilerinin maliyet karşılaştırması
+- Sahada ve üretimde çalışanlar için Frontline (F serisi) planları
+- Atanmış fakat kullanılmayan lisansların bulunması
+- CSP üzerinden aylık veya yıllık esnek satın alma
+- Taahhüt dönemi, yenileme ve kullanıcı sayısı değişikliklerinin yönetimi
+- Güvenlik ve uyum ihtiyacının hangi lisansla karşılandığının netleştirilmesi
 
-## Nasıl çalışıyoruz?
+## İzlediğimiz yol
 
-1. **Kullanım analizi** — Atanan lisanslar ve fiili kullanım (oturum, uygulama, özellik) incelenir.
-2. **Profil eşleştirme** — Kullanıcı grupları tanımlanır, her gruba uygun plan belirlenir.
-3. **Optimizasyon planı** — Yükseltme/düşürme ve eklenti kararları önerilir.
-4. **Tedarik ve takip** — Lisanslar sağlanır, yenileme ve değişiklikler yönetilir.
+İlk olarak atanmış lisansları ve oturum, uygulama ve özellik kullanım raporlarını inceleriz. Ardından kullanıcıları benzer ihtiyaçlara göre gruplar, her grup için önerilen planı gerekçesiyle yazarız. Üçüncü adımda hangi kullanıcının yükseltileceği, hangisinin daha uygun bir plana alınacağı ve hangi eklentinin gerektiği bir eylem listesine dönüşür. Son olarak lisansları sağlar, yenileme ve sayı değişikliklerini takvimimizde izleriz.
 
-## İlgili hizmetler
+## Lisansın ötesi
 
-Teknik kurulum, göç ve güvenlik yapılandırması için [Microsoft 365 çözümleri](/bulut-yedekleme/microsoft-365-cozumleri/); genel Microsoft sözleşmesi için [Microsoft lisanslama](/lisanslama/microsoft-lisanslama/).
+Plan seçimi tek başına yeterli değildir; satın aldığınız özelliklerin açılması ve yapılandırılması gerekir. Kurulum, posta göçü ve güvenlik ayarları için [Microsoft 365 kurulum ve göç hizmetimiz](/bulut-yedekleme/microsoft-365-cozumleri/), Windows Server veya SQL gibi diğer ürünlerle birlikte genel sözleşme kurgusu için [Microsoft lisans danışmanlığı](/lisanslama/microsoft-lisanslama/) sayfalarına göz atabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Çalışmanın sonucu
 
-- Kullanıcı başına doğru plan, azalan toplam maliyet
-- E5 kararının veriyle verilmesi
-- Kullanılmayan lisansların geri kazanılması
-- Esnek, öngörülebilir yenileme
+Her kullanıcının işine uygun planda olduğu bir dağılım, E5 kararının tahmine değil veriye dayanması, boşta kalan lisansların geri kazanılması ve yenileme döneminde sürpriz yaşamamanız.
 
-Microsoft 365 plan yapınızı birlikte gözden geçirelim. [İletişime geçin.](/iletisim/)`,
+Mevcut plan dağılımınızı incelemek için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "E5'e geçmeli miyiz?",
+        question: "Tüm kullanıcıları E5'e taşımalı mıyız?",
         answer:
-          "Duruma göre. E5'in güvenlik ve uyum bileşenlerini yoğun kullanacaksanız bütünsel olarak ekonomik olabilir; yalnızca birkaç özelliğe ihtiyaç varsa hedefli eklentiler daha uygundur. Analiz bunu netleştirir.",
+          "Her zaman değil. E5'in güvenlik ve uyum bileşenlerini gerçekten kullanacaksanız toplamda ekonomik olabilir. Yalnızca bir iki özelliğe ihtiyacınız varsa hedefli eklentiler genellikle daha uygun düşer; kullanım analizi bunu gösterir.",
       },
       {
-        question: "Saha/üretim çalışanları için ucuz seçenek var mı?",
+        question: "Depo ve üretim çalışanları için daha uygun bir seçenek var mı?",
         answer:
-          "Evet. Frontline (F1/F3) lisansları, paylaşımlı cihaz kullanan ve tam Office masaüstüne ihtiyaç duymayan çalışanlar için tasarlanmıştır.",
+          "Evet. F1 ve F3 gibi Frontline planları, ortak cihaz kullanan ve masaüstü Office uygulamalarına ihtiyaç duymayan çalışanlar için tasarlanmıştır.",
       },
       {
-        question: "Kullanıcı sayımız dönemsel değişiyor, sorun olur mu?",
+        question: "Kullanıcı sayımız mevsime göre değişiyor, bu sorun olur mu?",
         answer:
-          "CSP modelinde aylık esneklik mümkündür. Taahhütlü ve esnek lisansları birlikte kullanarak hem maliyet hem esneklik dengesi kurulur.",
+          "CSP modelinde aylık esneklik seçeneği bulunur. Kalıcı kadro için taahhütlü, geçici kadro için esnek lisans kullanarak maliyet ile esneklik arasında denge kurabilirsiniz.",
       },
     ],
   },
@@ -2730,58 +2612,52 @@ Microsoft 365 plan yapınızı birlikte gözden geçirelim. [İletişime geçin.
     slug: "windows-server-sql-server-lisanslama",
     title: "Windows Server & SQL Server Lisanslama",
     metaDescription:
-      "Çekirdek bazlı lisanslama, CAL gereksinimleri, sanallaştırma ve yüksek erişilebilirlik senaryolarıyla sunucu lisanslarınızı doğru modelleyin.",
-    content: `Windows Server ve SQL Server lisanslama hizmetimiz; çekirdek bazlı lisanslamanın, CAL gereksinimlerinin ve sanallaştırma senaryolarının doğru hesaplanmasını sağlar. Bu iki üründe yanlış model, en sık görülen uyumsuzluk ve maliyet hatasıdır.
+      "Windows Server ve SQL Server lisanslama: çekirdek sayımı, CAL ihtiyacı, Standard veya Datacenter kararı, pasif düğüm hakları ve Azure Hybrid Benefit.",
+    content: `Sunucu lisanslarında hata genellikle kurulum günü değil, altyapı büyüdükçe ortaya çıkar. Yeni bir fiziksel sunucu eklenir, sanal makine sayısı artar, bir SQL kümesi kurulur; ama lisans hesabı ilk günkü hâliyle kalır. Bu hizmet, Windows Server ve SQL Server için çekirdek, CAL ve sanallaştırma kurallarını güncel altyapınıza göre yeniden hesaplar ve eksik ya da fazla kalemleri raporlar.
 
-## Nerede hata yapılıyor?
+## Denetimlerde sık çıkan bulgular
 
-En yaygın hatalar: fiziksel çekirdeklerin eksik lisanslanması, sanal makine yoğunluğu arttığında Datacenter'a geçmemek, SQL Server'da pasif (yüksek erişilebilirlik) düğümün Software Assurance olmadan çalıştırılması ve CAL sayımının unutulması.
+Fiziksel çekirdeklerin tamamının lisanslanmaması, bir host üzerindeki Windows sanal makineleri çoğaldığı hâlde Standard sürümde kalınması, SQL Server'da yüksek erişilebilirlik için bekleyen düğümün Software Assurance olmadan çalıştırılması ve uzak masaüstü kullanıcıları için RDS CAL alınmaması. Bu bulguların çoğu, doğru envanterle önceden tespit edilebilir. Sanal makinelerin hostlar arasında taşınması da hesaba katılmalıdır; bir makinenin geçebileceği her host, lisans açısından ayrıca değerlendirilir.
 
-## Kapsamımız
+## Hesaplama kapsamı
 
-- Fiziksel çekirdek sayımı ve minimum lisans kuralı kontrolü
-- Windows Server Standard vs. Datacenter kararı (sanal makine yoğunluğuna göre)
-- Windows Server / RDS CAL gereksinimlerinin belirlenmesi
-- SQL Server: çekirdek bazlı vs. Server+CAL modeli karşılaştırması
-- Yüksek erişilebilirlik (Always On, failover cluster) ve pasif düğüm hakları
-- Software Assurance değeri ve bulut kullanım hakları (Azure Hybrid Benefit)
-- Sanallaştırma ve konteyner senaryolarında lisans etkisi
-- Denetim hazırlığı ve mevcut kurulumun uyumluluk kontrolü
+- Fiziksel host ve çekirdek sayımı, minimum lisans kurallarının kontrolü
+- Sanal makine yoğunluğuna göre Standard ile Datacenter karşılaştırması
+- Windows Server CAL ve RDS CAL ihtiyacının belirlenmesi
+- SQL Server için çekirdek bazlı model ile Server+CAL modelinin kıyası
+- Always On ve failover cluster yapılarında pasif düğüm hakları
+- Software Assurance'ın değeri ve Azure Hybrid Benefit kullanımı
+- Sanallaştırma ve konteyner ortamlarının lisansa etkisi
+- Mevcut kurulumun uyumluluk kontrolü ve denetime hazırlık
 
-## Nasıl çalışıyoruz?
+## Yöntemimiz
 
-1. **Envanter** — Fiziksel ana bilgisayarlar, çekirdekler, sanal makineler ve SQL örnekleri çıkarılır.
-2. **Modelleme** — Her senaryo için en uygun lisans modeli hesaplanır.
-3. **Boşluk analizi** — Eksik ve fazla lisanslar, SA ihtiyaçları raporlanır.
-4. **Tedarik ve plan** — Doğru lisanslar sağlanır, yenileme ve büyüme senaryosu planlanır.
+Hostları, çekirdek sayılarını, sanal makineleri ve SQL örneklerini çıkararak başlarız. Her senaryo için olası lisans modellerini hesaplar, maliyetleri yan yana koyarız. Ardından eksik ve fazla kalemleri, SA gereken noktaları gösteren bir boşluk raporu hazırlarız. Son olarak doğru lisansları temin eder, önümüzdeki dönemdeki büyüme için bir plan çıkarırız. Yeni bir host veya SQL örneği eklemeyi düşündüğünüzde, satın almadan önce lisans etkisini birlikte hesaplarız.
 
-## İlgili hizmetler
+## Bağlantılı konular
 
-Sanallaştırma tasarımı için [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/), bulut lisans hakları için [Azure çözümleri](/bulut-yedekleme/microsoft-azure-cozumleri/) ve [Microsoft lisanslama](/lisanslama/microsoft-lisanslama/).
+Host ve sanal makine yerleşimi lisans maliyetini doğrudan etkilediği için [sanallaştırma altyapısı](/sistem-network/sanallastirma-cozumleri/) tasarımıyla birlikte düşünülmelidir. Lisanslarınızı bulutta kullanmak istiyorsanız [Azure göç ve kurulum hizmetimiz](/bulut-yedekleme/microsoft-azure-cozumleri/), diğer Microsoft ürünleriyle birlikte genel kurgu için [Microsoft lisans danışmanlığı](/lisanslama/microsoft-lisanslama/) devreye girer.
 
-## Kurumunuza kazandırdıkları
+## Elde edeceğiniz tablo
 
-- Çekirdek ve CAL sayımında hatasız, denetime dayanıklı bir yapı
-- Standard/Datacenter kararının maliyet optimumunda verilmesi
-- Pasif SQL düğümlerinin doğru lisanslanması
-- Azure Hybrid Benefit ile bulutta lisans tasarrufu
+Çekirdek ve CAL hesabı belgelenmiş, denetimde savunulabilir bir lisans durumu; maliyet açısından en uygun noktada verilmiş Standard veya Datacenter kararı; doğru lisanslanmış SQL yedek düğümleri ve bulutta mevcut lisanslarınızdan yararlanarak elde edilen tasarruf.
 
-Sunucu lisans yapınızı bir envanter çalışmasıyla doğrulayalım. [İletişime geçin.](/iletisim/)`,
+Sunucu lisanslarınızı doğrulamak için [ücretsiz keşif isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Standard mı Datacenter mı almalıyız?",
+        question: "Standard mı yoksa Datacenter mı daha uygun?",
         answer:
-          "Bir fiziksel ana bilgisayarda çalıştırdığınız Windows sanal makine sayısı belirleyicidir. Yoğunluk arttıkça, belirli bir eşikten sonra Datacenter tek seferde daha ekonomik hâle gelir.",
+          "Belirleyici olan, bir fiziksel host üzerinde kaç Windows sanal makine çalıştırdığınızdır. Sanal makine sayısı arttıkça belirli bir noktadan sonra Datacenter, birden fazla Standard lisansına göre daha ekonomik hâle gelir.",
       },
       {
-        question: "Yedek (pasif) SQL sunucumuz için lisans gerekir mi?",
+        question: "Bekleyen (pasif) SQL sunucusu için de lisans almalı mıyız?",
         answer:
-          "Software Assurance kapsamında bir adet pasif failover örneği için ek lisans gerekmez. SA yoksa pasif düğüm de lisanslanmalıdır.",
+          "Software Assurance varsa bir pasif failover örneği için ek lisans gerekmez. SA yoksa bekleyen düğüm de lisanslanmalıdır.",
       },
       {
-        question: "Azure Hybrid Benefit nedir?",
+        question: "Azure Hybrid Benefit ne işe yarar?",
         answer:
-          "Software Assurance'lı Windows Server ve SQL Server lisanslarınızı Azure'da kullanarak sanal makine maliyetini önemli ölçüde düşürmenizi sağlayan bir haktır.",
+          "Software Assurance kapsamındaki Windows Server ve SQL Server lisanslarınızı Azure'daki sanal makinelerde kullanmanıza izin veren bir haktır. Bu sayede bulutta lisans bedelini ikinci kez ödemezsiniz.",
       },
     ],
   },
@@ -2791,57 +2667,51 @@ Sunucu lisans yapınızı bir envanter çalışmasıyla doğrulayalım. [İleti�
     slug: "vmware-lisanslama",
     title: "VMware Lisanslama",
     metaDescription:
-      "VMware vSphere ve VCF abonelik modeli, çekirdek bazlı lisanslama, yenileme ve alternatif değerlendirmesi. Sanallaştırma lisanslarınızı planlayın.",
-    content: `VMware lisanslama hizmetimiz; değişen abonelik modeli ve çekirdek bazlı lisanslama kuralları içinde sanallaştırma altyapınızın lisans ihtiyacını doğru hesaplar, yenileme ve alternatif kararlarında yol gösterir.
+      "VMware lisanslama: vSphere Foundation ve Cloud Foundation abonelikleri, çekirdek bazlı hesap, yenileme bütçesi ve Hyper-V veya Proxmox alternatif analizi.",
+    content: `VMware kullanan pek çok kurum, son yenileme teklifini gördüğünde ne olduğunu anlamakta zorlanıyor. Kalıcı lisans ve ayrı ayrı satılan ürünler yerine artık abonelik paketleri ve çekirdek bazlı bir hesap var. VMware lisanslama hizmetimiz, bu yeni modele göre gerçek ihtiyacınızı hesaplar ve yenileme, paket değiştirme ya da başka bir hipervizöre geçme seçeneklerini rakamlarla önünüze koyar.
 
-## VMware lisanslamada son dönem değişiklikleri
+## Model nasıl değişti?
 
-VMware, kalıcı lisans ve çok sayıda ayrı ürün yerine abonelik tabanlı paketlere (ör. VMware vSphere Foundation, VMware Cloud Foundation) ve çekirdek bazlı, çekirdek başına minimumlu bir modele geçti. Bu, mevcut kurulumların yenileme maliyetini önemli ölçüde değiştirebiliyor.
+VMware, ürün yelpazesini VMware vSphere Foundation ve VMware Cloud Foundation gibi abonelik paketlerinde topladı. Lisans artık fiziksel çekirdek başına hesaplanıyor ve işlemci başına bir taban çekirdek sayısı uygulanıyor. Bu, özellikle az çekirdekli sunucularda ve kullanılmayan bileşenleri de içeren paketlerde yenileme maliyetini belirgin biçimde etkileyebiliyor. Bu yüzden yenileme teklifini onaylamadan önce sunucu donanımınızı, hangi bileşenleri gerçekten kullandığınızı ve sözleşme bitiş tarihlerini masaya koymak gerekir.
 
-## Kapsamımız
+## Değerlendirme kapsamı
 
-- Mevcut VMware envanteri, sürüm ve lisans/destek durumu tespiti
-- Fiziksel çekirdek sayımı ve yeni modele göre lisans ihtiyacı hesaplama
-- Paket karşılaştırması ve gereksinime göre doğru abonelik seçimi
-- Yenileme maliyeti projeksiyonu ve bütçe planı
-- Alternatif hipervizör değerlendirmesi (Hyper-V, Proxmox) — teknik ve maliyet karşılaştırması
-- Göç senaryosu ve risk analizi (alternatif seçilirse)
-- Destek ve yenileme takviminin yönetimi
+- Hostlar, sürümler, mevcut lisans ve destek durumunun envanteri
+- Fiziksel çekirdek sayımı ve yeni modele göre ihtiyaç hesabı
+- Paketlerin karşılaştırılması ve size uyan aboneliğin seçimi
+- Önümüzdeki dönemler için yenileme maliyeti ve bütçe planı
+- Hyper-V ve Proxmox gibi alternatiflerin teknik ve maliyet analizi
+- Alternatif seçilirse göç planı ve risk değerlendirmesi
+- Destek ve yenileme tarihlerinin takibi
 
-## Nasıl çalışıyoruz?
+## Karar süreci
 
-1. **Envanter** — Ana bilgisayarlar, çekirdekler, çalışan sürümler ve sözleşme tarihleri çıkarılır.
-2. **Modelleme** — Yeni abonelik modeline göre lisans ihtiyacı ve maliyet hesaplanır.
-3. **Karar** — Yenileme mi, paket değişikliği mi, alternatife göç mü — seçenekler tablolanır.
-4. **Uygulama** — Seçilen yolda tedarik ya da göç planı yürütülür.
+Önce hostlarınızı, çekirdek sayılarını, çalışan sürümleri ve sözleşme bitiş tarihlerini toplarız. Bu veriyle yeni abonelik modelinde ödemeniz gereken tutarı hesaplarız. Ardından üç yolu yan yana koyarız: aynı yapıyla yenilemek, daha uygun bir pakete geçmek ya da alternatif bir hipervizöre taşınmak. Hangi yolu seçerseniz seçin, tedarik veya göç planını birlikte uygularız.
 
-## İlgili hizmetler
+## Göz önünde bulundurulacaklar
 
-Sanallaştırma mimarisi ve olası göç için [sanallaştırma çözümleri](/sistem-network/sanallastirma-cozumleri/); yedekleme entegrasyonu için [Veeam lisanslama](/lisanslama/veeam-lisanslama/).
+Hipervizör değişikliği yalnızca lisans maliyetiyle değerlendirilmemelidir; ekibinizin yeni platforma alışma süresi, yedekleme yazılımının uyumu ve kritik uygulamaların desteklenip desteklenmediği de hesaba katılmalıdır. Mimari ve göç tarafı için [sanallaştırma çözümlerimiz](/sistem-network/sanallastirma-cozumleri/), yedekleme ürününüzün yeni ortamda nasıl lisanslanacağı için [Veeam lisans hizmetimiz](/lisanslama/veeam-lisanslama/) bu çalışmanın parçası olur.
 
-## Kurumunuza kazandırdıkları
+## Çalışmanın size sağladıkları
 
-- Yenileme maliyetinin sürpriz olmaktan çıkması
-- Çekirdek bazlı modelde doğru, fazlasız lisanslama
-- Gerekiyorsa alternatif hipervizör için gerçekçi bir iş senaryosu
-- Destek sürekliliğinin korunması
+Önceden bilinen bir yenileme bütçesi, çekirdek bazlı modelde fazlası olmayan bir lisans adedi, alternatif düşünüyorsanız gerçek verilere dayanan bir karşılaştırma ve destek kesintisi yaşamadan geçen bir dönem. Satıcıdan bağımsız olduğumuz için hangi yolun sizin için uygun olduğunu tarafsız biçimde değerlendiririz.
 
-VMware yenileme ya da alternatif kararınızı birlikte değerlendirelim. [İletişime geçin.](/iletisim/)`,
+VMware yenileme kararınızı birlikte vermek için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Mevcut kalıcı lisanslarımız ne olacak?",
+        question: "Elimizdeki kalıcı VMware lisansları geçersiz mi oldu?",
         answer:
-          "Kalıcı lisanslar çalışmaya devam eder ancak destek yalnızca abonelikle sürer. Envanter çalışmasında destek bitiş tarihlerinizi ve seçeneklerinizi netleştiririz.",
+          "Kalıcı lisanslar çalışmaya devam eder, ancak güncelleme ve destek almak için abonelik gerekir. Envanter çalışmasında destek bitiş tarihlerinizi ve bu tarihten sonraki seçeneklerinizi netleştiririz.",
       },
       {
-        question: "Alternatif hipervizöre geçmek mantıklı mı?",
+        question: "Başka bir hipervizöre geçmek mantıklı mı?",
         answer:
-          "Kuruma göre değişir. Küçük/orta ortamlarda maliyet farkı belirginse ve iş yükleri uyumluysa değerlendirilebilir; göç eforu, ekip yetkinliği ve risk birlikte tartılır.",
+          "Kuruma göre değişir. Maliyet farkı belirginse ve iş yükleriniz uyumluysa değerlendirmeye değer. Göç eforu, ekibin yetkinliği ve operasyonel risk maliyet farkıyla birlikte tartılmalıdır.",
       },
       {
-        question: "Çekirdek başına minimum ne anlama geliyor?",
+        question: "İşlemci başına taban çekirdek kuralı ne demek?",
         answer:
-          "Yeni modelde her fiziksel çekirdek için lisans gerekir ve işlemci başına bir taban çekirdek sayısı uygulanır; az çekirdekli sunucularda etkili maliyet artabilir.",
+          "Yeni modelde her fiziksel çekirdek lisanslanır ve her işlemci için belirli bir en düşük çekirdek sayısı üzerinden hesap yapılır. Bu yüzden az çekirdekli işlemcilerde ödenen tutar, fiili çekirdek sayısının gerektirdiğinden yüksek olabilir.",
       },
     ],
   },
@@ -2851,57 +2721,51 @@ VMware yenileme ya da alternatif kararınızı birlikte değerlendirelim. [İlet
     slug: "veeam-lisanslama",
     title: "Veeam Lisanslama",
     metaDescription:
-      "Veeam Data Platform sürümleri, VUL (Veeam Universal License) instance hesaplama, sözleşme ve yenileme yönetimiyle yedekleme lisanslarınızı doğru boyutlandırın.",
-    content: `Veeam lisanslama hizmetimiz; yedekleme ve kurtarma altyapınızın Veeam lisans ihtiyacını iş yükü türüne göre doğru hesaplar ve yenilemeyi yönetir.
+      "Veeam lisanslama: Veeam Universal License (VUL) instance hesabı, Foundation, Advanced ve Premium sürüm seçimi, soketten geçiş ve yenileme takibi.",
+    content: `Veeam lisansı alırken en sık sorulan soru "kaç adet almalıyız?" olur ve yanıtı, korunan iş yüklerinin türüne göre değişir. Bir sanal makine, fiziksel bir sunucu, bir dizüstü bilgisayar ya da bir Microsoft 365 kullanıcısı lisanstan farklı oranlarda pay alır. Veeam lisanslama hizmetimiz yedeklediğiniz her şeyi listeler, gereken lisans miktarını hesaplar, uygun sürümü belirler ve yenilemeyi takip eder.
 
-## Veeam lisanslama mantığı
+## VUL modelinin temeli
 
-Güncel Veeam, taşınabilir bir birim modeline (Veeam Universal License – VUL) dayanır: lisans "instance" olarak tanımlanır ve korunan iş yükünün türüne göre farklı ağırlıkta tüketilir (ör. sanal makine, fiziksel sunucu, iş istasyonu, bulut/SaaS iş yükü). Sürümler (Foundation, Advanced, Premium) farklı özellik setleri sunar.
+Veeam'in güncel lisansı Veeam Universal License (VUL) adı verilen taşınabilir bir birime dayanır. Lisans "instance" olarak satılır ve korunan iş yükünün türüne göre farklı miktarda tüketilir. Bu esneklik sayesinde aynı lisans havuzu sanal makineden buluttaki bir iş yüküne kaydırılabilir. Foundation, Advanced ve Premium sürümleri ise farklı özellik setleri içerir; doğru sürüm, ihtiyaç duyduğunuz kurtarma ve izleme özelliklerine göre seçilir. Sık yapılan hata, dizüstü bilgisayarları veya dosya paylaşımlarını hesaba katmadan yalnızca sanal makine sayısına göre lisans almaktır.
 
-## Kapsamımız
+## Lisans hesabının kapsamı
 
-- Korunan iş yüklerinin envanteri (VM, fiziksel sunucu, iş istasyonu, NAS, M365, bulut)
-- İş yükü türlerine göre instance tüketiminin hesaplanması
-- Doğru sürüm seçimi (Foundation / Advanced / Premium)
-- Mevcut soket bazlı lisanslardan VUL'a geçişin değerlendirilmesi
-- Microsoft 365 yedeği için ayrı lisans ihtiyacının belirlenmesi
-- Yenileme, büyüme ve production/support senaryoları
-- Lisans kullanımının izlenmesi ve fazla/eksik tespiti
+- Sanal makine, fiziksel sunucu, iş istasyonu, NAS, Microsoft 365 ve bulut iş yüklerinin envanteri
+- Her iş yükü türüne göre instance tüketiminin hesaplanması
+- Foundation, Advanced veya Premium arasından sürüm seçimi
+- Eski soket bazlı lisanslardan VUL'a geçişin değerlendirilmesi
+- Microsoft 365 yedeği için gereken lisansın ayrıca planlanması
+- Yenileme, büyüme ve destek senaryoları
+- Lisans kullanımının izlenmesi, fazla veya eksik adetlerin tespiti
 
-## Nasıl çalışıyoruz?
+## Çalışma düzeni
 
-1. **Envanter** — Yedeklenen tüm iş yükleri ve türleri çıkarılır.
-2. **Hesaplama** — Instance tüketimi hesaplanır, sürüm ihtiyacı belirlenir.
-3. **Plan** — Yeni lisans ya da yenileme için doğru paket ve adet önerilir.
-4. **Yönetim** — Kullanım izlenir, yenileme tarihinden önce ihtiyaç güncellenir.
+Yedeklenen tüm iş yüklerini ve türlerini çıkarmakla başlarız. Bu listeden instance ihtiyacını hesaplar, özellik gereksinimlerinize göre sürümü belirleriz. Ardından yeni alım ya da yenileme için paket ve adet önerisi hazırlarız. Sonrasında kullanım düzenli izlenir; yenileme tarihi yaklaşmadan önce ihtiyacınızı yeniden gözden geçiririz.
 
-## İlgili hizmetler
+## Lisansla birlikte düşünülmesi gerekenler
 
-Yedekleme mimarisi ve immutable kopya kurgusu için [veri yedekleme çözümleri](/bulut-yedekleme/veri-yedekleme-cozumleri/); kesinti senaryoları için [felaket kurtarma](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/).
+Lisans adedi doğru olsa bile yedekleme mimarisi eksikse koruma zayıf kalır. Değiştirilemez kopya, şirket dışı nüsha ve geri yükleme testleri için [yedekleme mimarisi hizmetimize](/bulut-yedekleme/veri-yedekleme-cozumleri/), sistemlerin başka bir lokasyonda ayağa kaldırılması için [felaket kurtarma çalışmamıza](/bulut-yedekleme/felaket-kurtarma-disaster-recovery/) göz atabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Elde ettikleriniz
 
-- İş yükü türüne göre doğru, fazlasız lisans adedi
-- Sürüm seçiminin gerçek özellik ihtiyacına dayanması
-- M365 yedeği gibi ayrı kalemlerin atlanmaması
-- Yenileme öncesi net bir büyüme projeksiyonu
+İş yükü türüne göre hesaplanmış, fazlası olmayan bir lisans adedi; gerçek ihtiyacınıza dayanan bir sürüm seçimi; Microsoft 365 yedeği gibi kolayca unutulan kalemlerin hesaba katılması ve yenileme öncesinde net bir büyüme tahmini.
 
-Veeam lisans ihtiyacınızı bir envanterle netleştirelim. [İletişime geçin.](/iletisim/)`,
+Veeam lisans ihtiyacınızı netleştirmek için [ücretsiz keşif isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Eski soket bazlı lisansımız var, ne yapmalıyız?",
+        question: "Soket bazlı eski lisanslarımızla ne yapmalıyız?",
         answer:
-          "Soket lisansları bir süre destekle taşınabilir ancak yeni satın alma ve genişlemeler VUL üzerinden yapılır. Envanterde geçiş maliyetini ve zamanlamasını birlikte planlarız.",
+          "Soket lisansları destek sürdükçe kullanılmaya devam edebilir, ancak yeni alımlar ve genişlemeler VUL üzerinden yapılır. Envanter sırasında geçişin maliyetini ve zamanlamasını sizinle birlikte planlarız.",
       },
       {
-        question: "Microsoft 365 yedeği aynı lisansa dahil mi?",
+        question: "Microsoft 365 yedeği aynı lisansla mı karşılanıyor?",
         answer:
-          "M365 iş yükleri de VUL instance'ı tüketir ancak kapsamı ayrı planlanır. Kullanıcı sayınıza göre gereken instance miktarını hesaplarız.",
+          "Microsoft 365 iş yükleri de VUL instance tüketir, ancak ihtiyacı ayrıca hesaplanır. Korunacak kullanıcı sayınıza göre gereken miktarı belirleriz.",
       },
       {
-        question: "Hangi sürümü almalıyız?",
+        question: "Hangi Veeam sürümünü seçmeliyiz?",
         answer:
-          "İhtiyacınıza bağlı. Temel yedekleme için Foundation; kurtarma orkestrasyonu, gelişmiş izleme ve güvenlik özellikleri gerekiyorsa Advanced veya Premium değerlendirilir.",
+          "Temel yedekleme ve geri yükleme için Foundation çoğu zaman yeterlidir. Kurtarma orkestrasyonu, gelişmiş izleme ya da ek güvenlik özellikleri gerekiyorsa Advanced veya Premium değerlendirilir.",
       },
     ],
   },
@@ -2911,57 +2775,51 @@ Veeam lisans ihtiyacınızı bir envanterle netleştirelim. [İletişime geçin.
     slug: "siber-guvenlik-urunleri-lisanslama",
     title: "Siber Güvenlik Ürünleri Lisanslama",
     metaDescription:
-      "Güvenlik duvarı, EDR/XDR, e-posta güvenliği, DLP ve SIEM ürünleri için doğru lisans modeli, boyutlandırma ve yenileme yönetimi tek elden.",
-    content: `Siber güvenlik ürünleri lisanslama hizmetimiz; güvenlik duvarından EDR'ye, e-posta güvenliğinden SIEM'e kadar farklı üreticilerin lisans modellerini tek elden yönetmenizi sağlar.
+      "Siber güvenlik ürünleri lisanslama: firewall, EDR/XDR, e-posta güvenliği, DLP ve SIEM için doğru boyutlandırma, tek yenileme takvimi ve paket analizi.",
+    content: `Bir kurumun güvenlik altyapısı genellikle farklı yıllarda, farklı ihtiyaçlarla alınmış ürünlerden oluşur: bir markanın güvenlik duvarı, başka bir markanın uç nokta koruması, ayrı bir e-posta filtresi ve bir log toplama aracı. Her biri farklı tarihte biter ve farklı birimlerle sayılır. Siber güvenlik ürünleri lisanslama hizmetimiz bu dağınık yapıyı tek bir envanterde toplar, her ürünü doğru boyutlandırır ve yenilemeleri sizin yerinize izler.
 
-## Güvenlik lisanslamasının zorluğu
+## Neden bu kadar karışık?
 
-Her üreticinin farklı bir sayım birimi vardır: kullanıcı, uç nokta, korunan posta kutusu, throughput (Mbps), günlük log hacmi (EPS/GB). Abonelikler farklı tarihlerde biter, farklı özellik paketlerine ("bundle") ayrılır. Bu dağınıklık hem maliyet kaçağı hem de koruma boşluğu yaratır.
+Uç nokta koruması cihaz sayısıyla, e-posta güvenliği posta kutusu sayısıyla, güvenlik duvarı bant genişliğiyle, SIEM ise günlük log hacmi veya saniyedeki olay sayısıyla lisanslanır. Üreticiler özellikleri farklı paketlere böler ve aynı işlevi iki ayrı ürüne ödemek kolaylaşır. Bir aboneliğin sessizce sona ermesi ise imza güncellemelerinin durması, yani korumanın fark edilmeden zayıflaması anlamına gelir. Tersine, kapasitesi aşılmış bir güvenlik duvarı da tüm özellikler açıldığında ağı yavaşlatır ve ekipler çözüm olarak korumayı kapatmaya yönelir.
 
-## Kapsamımız
+## Lisans yönetimi kapsamı
 
-- Mevcut güvenlik ürünleri envanteri ve yenileme takvimi
-- Ürün bazında doğru sayım birimi ve boyutlandırma (kullanıcı, uç nokta, Mbps, GB/gün)
-- Özellik paketi karşılaştırması ve ihtiyaç fazlası modüllerin ayıklanması
-- Güvenlik duvarı yenileme (donanım + abonelik + destek) planlaması
-- EDR/XDR, e-posta güvenliği, DLP, SIEM lisans ihtiyacının belirlenmesi
-- Çok yıllı taahhüt ve büyüme senaryolarının maliyet karşılaştırması
-- Yenileme öncesi erken uyarı ve konsolidasyon fırsatları
+- Tüm güvenlik ürünlerinin envanteri ve bitiş tarihlerinin çıkarılması
+- Her ürün için doğru sayım birimiyle boyutlandırma: kullanıcı, uç nokta, Mbps, GB/gün
+- Paket karşılaştırması ve kullanılmayan modüllerin ayıklanması
+- Güvenlik duvarında donanım, abonelik ve destek yenilemesinin birlikte planlanması
+- EDR/XDR, e-posta güvenliği, DLP ve SIEM ihtiyacının belirlenmesi
+- Çok yıllı taahhüt ve büyüme seçeneklerinin maliyet karşılaştırması
+- Yenilemeden önce erken uyarı ve ürün birleştirme fırsatları
 
-## Nasıl çalışıyoruz?
+## İş akışımız
 
-1. **Envanter** — Tüm güvenlik ürünleri, sürümleri, adetleri ve bitiş tarihleri çıkarılır.
-2. **Analiz** — Fazla/eksik lisans, çakışan işlevler ve konsolidasyon fırsatları belirlenir.
-3. **Plan** — Ürün bazında doğru paket, adet ve yenileme takvimi önerilir.
-4. **Yönetim** — Yenileme tarihleri izlenir, değişiklikler önceden planlanır.
+Önce kullandığınız tüm güvenlik ürünlerini, sürümlerini, adetlerini ve bitiş tarihlerini listeleriz. Ardından fazla veya eksik lisansları, aynı işi yapan ürünleri ve birleştirme fırsatlarını belirleriz. Bu bulgulardan ürün bazında paket, adet ve tarih öneren bir plan çıkarırız. Sonrasında yenilemeleri takvimimizde izler, değişiklikleri önceden sizinle planlarız.
 
-## İlgili hizmetler
+## Teknik tarafla bağlantı
 
-Hangi kontrollere ihtiyaç olduğunu belirlemek için [siber güvenlik danışmanlığı](/siber-guvenlik/siber-guvenlik-danismanligi/); teknik kurulum için [EDR](/siber-guvenlik/edr-antivirus-cozumleri/), [firewall ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/) ve [SIEM ve log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/).
+Hangi kontrollere gerçekten ihtiyacınız olduğu [siber güvenlik danışmanlığımızda](/siber-guvenlik/siber-guvenlik-danismanligi/) netleşir; ISO 27001 baş denetçi deneyimimiz bu önceliklendirmede yol gösterir. Ürünlerin kurulumu ve yapılandırması [uç nokta koruması (EDR)](/siber-guvenlik/edr-antivirus-cozumleri/), [güvenlik duvarı ve ağ güvenliği](/siber-guvenlik/firewall-ve-ag-guvenligi/) ve [SIEM ile log yönetimi](/siber-guvenlik/siem-ve-log-yonetimi/) hizmetlerimizle yapılır.
 
-## Kurumunuza kazandırdıkları
+## Kazanımlarınız
 
-- Tüm güvenlik lisanslarının tek bir takvimde toplanması
-- Çakışan/atıl modüllerin ayıklanmasıyla maliyet düşüşü
-- Yenileme kaçırıp korumasız kalma riskinin ortadan kalkması
-- Boyutlandırmanın gerçek trafiğe/log hacmine dayanması
+Bütün güvenlik lisanslarının tek bir takvimde görünmesi, çakışan veya atıl modüllerden kurtulma, yenileme kaçırıp korumasız kalma riskinin ortadan kalkması ve boyutlandırmanın tahmine değil ölçülen trafik ve log hacmine dayanması.
 
-Güvenlik lisans envanterinizi birlikte çıkaralım. [İletişime geçin.](/iletisim/)`,
+Güvenlik lisans envanterinizi çıkarmak için [bize ulaşın](/iletisim/).`,
     faq: [
       {
-        question: "Farklı markaların lisanslarını siz mi yönetiyorsunuz?",
+        question: "Farklı üreticilerin lisanslarını tek elden takip edebilir misiniz?",
         answer:
-          "Evet. Amaç, farklı üreticilerin yenileme ve boyutlandırmasını tek bir noktadan izlenebilir hâle getirmektir; her ürün için tedariki mevcut kanalınızdan ya da bizden yapabilirsiniz.",
+          "Evet. Satıcıdan bağımsız çalıştığımız için farklı markaların yenileme ve boyutlandırmasını tek bir listede izleriz. Her ürünün tedarikini mevcut kanalınızdan ya da bizden yapabilirsiniz.",
       },
       {
-        question: "SIEM lisansını nasıl boyutlandırıyorsunuz?",
+        question: "SIEM lisansının boyutunu nasıl belirliyorsunuz?",
         answer:
-          "Genellikle günlük log hacmi (GB/gün) ya da saniyedeki olay sayısı (EPS) üzerinden. Mevcut kaynakların ürettiği hacmi ölçer, büyüme payı ekleyerek planlarız.",
+          "Çoğu üründe ölçü günlük log hacmi ya da saniyedeki olay sayısıdır. Mevcut kaynaklarınızın ürettiği hacmi bir süre ölçer, beklenen büyümeyi ekleyerek gerekli kapasiteyi hesaplarız.",
       },
       {
-        question: "Güvenlik duvarı yenilemesinde nelere dikkat etmeliyiz?",
+        question: "Güvenlik duvarı yenilerken nelere bakmalıyız?",
         answer:
-          "Donanımın kapasitesi (gelecek 3-5 yıl), abonelik paketinin kapsamı (IPS, AV, web filtreleme, sandbox) ve destek seviyesi birlikte değerlendirilmelidir; sadece cihaz fiyatı yanıltıcıdır.",
+          "Cihazın önümüzdeki yıllardaki trafiği kaldırıp kaldırmayacağına, abonelik paketinin IPS, web filtreleme ve sandbox gibi hangi özellikleri içerdiğine ve destek seviyesine birlikte bakılmalıdır. Yalnızca cihaz fiyatına göre karar vermek yanıltıcı olur.",
       },
     ],
   },
@@ -2971,60 +2829,52 @@ Güvenlik lisans envanterinizi birlikte çıkaralım. [İletişime geçin.](/ile
     slug: "kurumsal-yazilim-lisanslama",
     title: "Kurumsal Yazılım Lisanslama",
     metaDescription:
-      "Tüm yazılım lisanslarınızın tek noktadan yönetimi: envanter, uyumluluk (SAM), yenileme takvimi ve maliyet optimizasyonu.",
-    content: `Kurumsal yazılım lisanslama hizmetimiz; kurumunuzun ihtiyaç duyduğu tüm yazılım lisanslarını (işletim sistemi, üretkenlik, sanallaştırma, yedekleme, güvenlik, veritabanı, tasarım ve sektörel uygulamalar) tek bir envanter ve takvim altında yönetmenizi sağlar.
+      "Kurumsal yazılım lisanslama: tüm lisansların merkezi envanteri, SAM uyumluluk kontrolü, tek yenileme takvimi, denetim hazırlığı ve maliyet sadeleştirme.",
+    content: `"Elimizde hangi yazılımın kaç lisansı var ve hangisi ne zaman bitiyor?" Birçok şirkette bu sorunun tek bir yanıtı yoktur. Lisanslar farklı departmanlar tarafından, farklı bayilerden ve farklı yıllarda alınmıştır; faturalar muhasebede, anahtarlar bir çalışanın e-postasında, yenileme tarihleri kimsenin takviminde değildir. Kurumsal yazılım lisanslama hizmetimiz işletim sisteminden ofis yazılımına, sanallaştırmadan yedeklemeye, güvenlikten veritabanına ve tasarım ya da sektörel uygulamalara kadar tüm lisanslarınızı tek bir envanter ve takvim altında toplar.
 
-## Dağınık lisans yönetiminin bedeli
+## Dağınıklığın maliyeti
 
-Lisanslar farklı kişiler tarafından, farklı zamanlarda, farklı kanallardan alınır. Sonuçta kimse tam olarak "neyimiz var, ne zaman bitiyor, fazlamız var mı?" sorusuna cevap veremez. Bu belirsizlik hem gereksiz maliyet hem de denetim riskidir.
+Kimse neyin fazla olduğunu bilmediği için ayrılan çalışanların lisansları ödenmeye devam eder. Bir ürün yanlışlıkla iki kez alınır. Yenileme tarihi kaçırılır ve yazılım destek dışı kalır. Üretici denetim yazısı geldiğinde ise sahip olunan lisansları kanıtlayacak belge bulunamaz. Bunların hepsi düzenli bir envanterle önlenebilir. İşe başlayan ve ayrılan çalışanlar için lisans atama ve geri alma adımlarının insan kaynakları süreciyle bağlanması da bu düzenin parçasıdır.
 
-## Kapsamımız
+## Hizmet kapsamı
 
 - Tüm yazılım varlıklarının merkezi envanteri
-- Yazılım varlık yönetimi (SAM) süreci ve sorumluluk tanımları
-- Kullanım ile lisans karşılaştırması: fazla, eksik ve atıl lisans tespiti
-- Tek bir yenileme takvimi ve erken uyarı sistemi
-- Üretici denetimlerine (audit) hazırlık ve boşluk kapatma
-- Çok yıllı sözleşme ve taahhüt senaryolarının maliyet analizi
-- Bulut abonelikleriyle şirket içi lisansların birlikte yönetimi
-- Yeni alım ve yenilemelerde tarafsız model önerisi
+- Yazılım varlık yönetimi (SAM) süreci ve sorumluların belirlenmesi
+- Kurulu ve kullanılan yazılımla sahip olunan lisansların karşılaştırılması
+- Tek yenileme takvimi ve tarihten önce uyarı
+- Üretici denetimlerine hazırlık ve eksiklerin kapatılması
+- Çok yıllı sözleşme ve taahhüt seçeneklerinin maliyet analizi
+- Bulut abonelikleri ile şirket içi lisansların birlikte takibi
+- Yeni alımlarda tarafsız model önerisi
 
-## Nasıl çalışıyoruz?
+## Nasıl ilerleriz?
 
-1. **Envanter** — Tüm lisanslar, adetleri, kanalları ve bitiş tarihleri toplanır.
-2. **Uyumluluk analizi** — Kurulu/kullanılan ile sahip olunan karşılaştırılır.
-3. **Optimizasyon** — Fazla lisanslar sadeleştirilir, eksikler kapatılır, yenileme planı çıkarılır.
-4. **Sürekli yönetim** — Takvim izlenir, değişiklikler ve alımlar bu düzen içinde yürür.
+Satın alma kayıtlarından, üretici portallarından ve gerekirse bir keşif aracından tüm lisansları, adetlerini ve bitiş tarihlerini toplarız. Ardından kurulu yazılımları sahip olunan haklarla karşılaştırırız. Fazla lisanslar sadeleştirilir, eksikler kapatılır ve bir yenileme planı hazırlanır. Sonrasında tüm alımlar ve değişiklikler bu düzen içinde yürür, takvim bizim tarafımızdan izlenir.
 
-## İlgili hizmetler
+## Ürün bazında uzmanlık
 
-Ürün bazında derinlik için [Microsoft lisanslama](/lisanslama/microsoft-lisanslama/), [VMware lisanslama](/lisanslama/vmware-lisanslama/), [Veeam lisanslama](/lisanslama/veeam-lisanslama/) ve [siber güvenlik ürünleri lisanslama](/lisanslama/siber-guvenlik-urunleri-lisanslama/). Envanteri kalıcı takip için [Orbit](/yazilim-urunlerimiz/orbit/).
+Ayrıntılı hesap gerektiren ürünler için [Microsoft lisans danışmanlığı](/lisanslama/microsoft-lisanslama/), [VMware abonelik hesabı](/lisanslama/vmware-lisanslama/), [Veeam instance hesabı](/lisanslama/veeam-lisanslama/) ve [güvenlik ürünleri lisans yönetimi](/lisanslama/siber-guvenlik-urunleri-lisanslama/) sayfalarımıza bakabilirsiniz. Envanteri kalıcı olarak izlemek için kendi yazılım ekibimizin geliştirdiği [Orbit](/yazilim-urunlerimiz/orbit/) ürününü kullanabilirsiniz. Lisans kararlarını genel teknoloji planınızla uyumlu vermek için [IT danışmanlığı](/danismanlik/it-danismanlik-hizmetleri/) desteği de alabilirsiniz.
 
-## Kurumunuza kazandırdıkları
+## Ne kazanırsınız?
 
-- "Neyimiz var?" sorusuna anında cevap
-- Yenileme tarihlerinin tek takvimde toplanması
-- Atıl ve mükerrer lisansların maliyetten çıkması
-- Üretici denetimlerine hazırlıklı, savunulabilir bir yapı
+Lisans durumunuzu dakikalar içinde gösterebilen bir envanter, tek bir yerde toplanmış yenileme tarihleri, maliyetten çıkarılmış atıl ve mükerrer lisanslar ve denetimde belgeyle savunulabilir bir yapı.
 
-Lisans kararlarını genel teknoloji planınızla birlikte vermek için [BT danışmanlık hizmetimizden](/danismanlik/it-danismanlik-hizmetleri/) destek alabilirsiniz.
-
-Lisans yönetiminizi düzene sokmak için bir envanter çalışmasıyla başlayalım. [İletişime geçin.](/iletisim/)`,
+Lisans düzeninizi kurmak için [ücretsiz ön görüşme isteyin](/iletisim/).`,
     faq: [
       {
-        question: "Küçük bir kurumuz, bu hizmet bize göre mi?",
+        question: "Küçük bir şirketiz, bu hizmete ihtiyacımız var mı?",
         answer:
-          "Evet. Az sayıda üründe bile yenileme takibi ve uyumluluk kontrolü değerlidir; kapsam ölçeğe göre daralır ve genellikle tek bir envanter çalışması yeterli olur.",
+          "Az sayıda ürün kullanan şirketlerde bile yenileme takibi ve uyumluluk kontrolü işe yarar. Kapsam ölçeğe göre daralır ve çoğu zaman tek bir envanter çalışması ile düzenli takvim takibi yeterli olur.",
       },
       {
-        question: "Envanteri nasıl çıkarıyorsunuz?",
+        question: "Lisans envanterini nasıl çıkarıyorsunuz?",
         answer:
-          "Satın alma kayıtları, üretici portalları ve gerektiğinde bir keşif/discovery aracıyla. Kurulu yazılım ile sahip olunan lisans karşılaştırması bu verinin üzerine kurulur.",
+          "Satın alma kayıtlarını ve üretici portallarını inceleriz, gerektiğinde ağınızdaki kurulu yazılımları tarayan bir keşif aracı kullanırız. Karşılaştırma bu iki verinin üzerine kurulur.",
       },
       {
-        question: "Tedarikçimizi değiştirmemiz gerekir mi?",
+        question: "Mevcut tedarikçilerimizi bırakmamız gerekir mi?",
         answer:
-          "Hayır. Hizmet tarafsızdır; mevcut tedarikçilerinizle çalışmaya devam edebilirsiniz. Biz doğru model, uyumluluk ve yenileme yönetimi katmanını sağlarız.",
+          "Gerekmez. Hizmet tarafsızdır ve mevcut tedarikçilerinizle çalışmaya devam edebilirsiniz. Biz model seçimi, uyumluluk ve yenileme takibi katmanını üstleniriz.",
       },
     ],
   },

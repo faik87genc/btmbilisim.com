@@ -22,9 +22,9 @@ const itemListJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Kurumsal Yazılım Ürünlerimiz | BTM Bilişim",
+  title: "Yazılım Ürünlerimiz: 9 Kurumsal Uygulama | BTM Bilişim",
   description:
-    "Finans, siber güvenlik, insan kaynakları ve bilişim altyapısı alanlarında BTM Bilişim tarafından geliştirilen dokuz kurumsal yazılım ürünü.",
+    "BTM Bilişim yazılım ekibinin geliştirdiği 9 ürün: bütçe ve çek-senet takibi, güvenlik izleme ve pentest, IoT üretim takibi, Wi-Fi, MSP, İK izin ve IT envanteri.",
   alternates: { canonical: "/yazilim-urunlerimiz/" },
 };
 
@@ -42,11 +42,12 @@ export default function Page() {
             Yazılım Ürünlerimiz
           </div>
           <h1 className="text-balance font-display text-4xl font-semibold leading-tight text-paper-50 md:text-5xl">
-            Kendi çatımız altında geliştirdiğimiz dokuz ürün.
+            Sahada gördüğümüz ihtiyaçlardan doğan 9 yazılım.
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
-            Finans operasyonlarından siber güvenliğe kadar, danışmanlık
-            tecrübemizi yazılıma dönüştürdüğümüz ürün ailesi.
+            Müşterilerimizin BT altyapısını yönetirken tekrar tekrar karşılaştığımız
+            sorunlar için kendi ekibimizle yazdığımız uygulamalar: bütçe ve tahsilat
+            takibinden ağ güvenliğine, üretim hattından İK süreçlerine.
           </p>
           </div>
         </Container>
@@ -67,8 +68,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="Ürünlerimizi işletmenize göre uyarlarız."
-            description="Standart sürümden başlayıp, ihtiyaç duyduğunuz entegrasyon ve modüllerle genişletiyoruz."
+            title="Hazır sürümle başlayın, gerekeni birlikte ekleyelim."
+            description="Önce iş akışınızı dinliyoruz; ardından ürünü kullandığınız sistemlere bağlıyor, eksik kalan modülleri sizin için devreye alıyoruz."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="yazılım ürünleriniz" tone="dark" align="center" />

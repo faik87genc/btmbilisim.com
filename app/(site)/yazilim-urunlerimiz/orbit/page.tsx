@@ -34,101 +34,101 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 5, suffix: "", label: "modül tek panelde" },
-  { value: 100, suffix: "%", label: "işlem audit kaydında" },
-  { value: 2, suffix: "+", label: "tenant ile izolasyon testi" },
+  { value: 5, suffix: "", label: "modül, tek arayüzde" },
+  { value: 100, suffix: "%", label: "işlem kayıt altında" },
+  { value: 2, suffix: "+", label: "tenant ile doğrulanan veri ayrımı" },
 ];
 
 const pillars = [
   {
     icon: PackageSearch,
-    title: "Her varlık bir kayıt",
+    title: "Tüm varlıklar tek envanterde",
     description:
-      "Cihaz, lisans, sözleşme ve sarf malzemesi aynı envanterde. Satın almadan hurdaya kadar tüm yaşam döngüsü ve cihaz geçmişi izlenir.",
+      "Donanım, yazılım lisansı, sözleşme ve sarf malzemeleri ortak bir listede tutulur. Bir cihazın satın alındığı günden hurdaya ayrılana kadar geçtiği her aşama, geçmişiyle birlikte görünür.",
   },
   {
     icon: Search,
-    title: "Her işlem iz bırakır",
+    title: "Yapılan her değişiklik kayıtlı",
     description:
-      "Zimmet, iade, stok hareketi ve ayar değişiklikleri denetim kaydına yazılır. Kim, ne zaman, neyi değiştirdi belli.",
+      "Zimmet verme, iade alma, stok giriş-çıkışı ve ayar güncellemeleri denetim kaydına işlenir; bir değişikliği kimin, hangi tarihte yaptığı sorgulanabilir.",
   },
   {
     icon: Building2,
-    title: "Her şirket kendi alanında",
+    title: "Şirketler birbirinden ayrı",
     description:
-      "Kullanıcılar, veriler ve formlar şirket bazında izole. Super Admin platformu, şirket yöneticisi kendi ekibini yönetir.",
+      "Her şirketin kullanıcıları, verileri ve formları yalnızca kendisine aittir. Platformun tamamından Super Admin sorumludur; şirket yöneticisi sadece kendi ekibini yönetir.",
   },
 ];
 
 const modules = [
   {
     icon: PackageSearch,
-    title: "Envanter & Zimmet",
+    title: "Envanter ve Zimmet Yönetimi",
     description:
-      "Envanter yaşam döngüsü ve cihaz geçmişi, zimmet / iade kontrol listeleri, şirkete özel çok sayfalı form tasarımcısı, lisans ve sözleşme takibi.",
+      "Cihaz geçmişi ile yaşam döngüsü takibi, zimmet ve iade kontrol listeleri, her şirkete özel çok sayfalı form tasarlama, lisans ile sözleşmelerin izlenmesi.",
   },
   {
     icon: Plug,
-    title: "Ağ & IPAM",
+    title: "Ağ Yönetimi ve IPAM",
     description:
-      "Ağ cihazları ve port haritası, otomatik düzenli şema / topoloji görünümü, IP adres yönetimi (IPAM), güvenli ping ve kontrollü ağ keşfi.",
+      "Ağ cihazlarının ve portların haritası, kendiliğinden yerleşen şema ve topoloji görünümü, IPAM ile IP adreslerinin yönetimi, güvenli ping ve denetimli ağ taraması.",
   },
   {
     icon: Headset,
-    title: "Servis & Ticket",
+    title: "Servis Masası ve Ticket",
     description:
-      "Ticket, dosya eki ve alt görevler, hazır cevaplar ve süre kaydı, arıza / garanti / bakım yönetimi.",
+      "Dosya eklenebilen ticket'lar ve alt görevler, şablon yanıtlar, harcanan sürenin kaydı; arıza, garanti ve bakım süreçlerinin takibi.",
   },
   {
     icon: Wallet,
-    title: "Tedarik & Stok",
+    title: "Tedarik ve Stok Takibi",
     description:
-      "Stok hareketleri, satın alma onayları, Excel içe aktarma: önizleme, kolon eşleştirme ve geri alma.",
+      "Stok giriş-çıkışları, satın alma onay akışı ve Excel'den veri yükleme: önizleme, sütun eşleştirme, işlemi geri alma.",
   },
   {
     icon: ShieldCheck,
-    title: "Yönetim & Güvenlik",
+    title: "Yönetim ve Güvenlik",
     description:
-      "Çok şirketli (tenant) izolasyon, audit kayıtları ve raporlar, rol bazlı erişim ve Super Admin paneli, S3 / MinIO veya kalıcı yerel dosya depolama.",
+      "Şirketler (tenant) arasında veri ayrımı, denetim kayıtları ve raporlar, rol tabanlı erişim, Super Admin paneli; dosyalar için S3 / MinIO ya da kalıcı yerel disk.",
   },
 ];
 
 const highlights = [
   {
     icon: Building2,
-    title: "Tenant izolasyonu",
+    title: "Şirket bazlı veri ayrımı",
     description:
-      "Her sorgu şirket bazında filtrelenir, yöneticiler ayrıdır. İzolasyon entegrasyon testinde iki şirketle doğrulanır.",
+      "Tüm sorgular şirkete göre süzülür ve her şirketin yöneticisi ayrıdır. Bu ayrım, iki şirketle çalışan bir entegrasyon testiyle doğrulanır.",
   },
   {
     icon: FileText,
-    title: "Zimmet / iade form tasarımcısı",
+    title: "Zimmet ve iade formlarını kendiniz tasarlayın",
     description:
-      "Her şirket kendi çok sayfalı zimmet formunu kurar: kontrol listeleri, özel alanlar ve teslim adımları.",
+      "Şirketler çok sayfalı zimmet formlarını kendi ihtiyaçlarına göre oluşturur; kontrol listeleri, ek alanlar ve teslim adımları eklenebilir.",
   },
   {
     icon: Plug,
-    title: "Topoloji & IPAM",
+    title: "Topoloji ve IP yönetimi",
     description:
-      "Cihazlar, portlar ve IP blokları tek görünümde. Sürükle-bırak topoloji, otomatik düzen ve kaydedilen şema.",
+      "Cihazlar, portlar ve IP blokları aynı ekranda. Topolojiyi sürükleyip bırakarak düzenleyin, otomatik yerleşimden yararlanın, şemayı kaydedin.",
   },
   {
     icon: RefreshCw,
-    title: "Audit & raporlar",
+    title: "Denetim kaydı ve raporlama",
     description:
-      "Her kritik işlem audit kaydına yazılır. Raporlar ekranından envanter, lisans ve ticket kırılımları alınır.",
+      "Kritik işlemlerin tamamı denetim kaydına düşer. Rapor ekranında envanter, lisans ve ticket verilerini istediğiniz kırılımda listeleyebilirsiniz.",
   },
 ];
 
 const security = [
-  "Şirket bazlı veri izolasyonu, iki tenant ile test edilir",
-  "Active Directory / LDAP kaldırıldı — AD parolası veya LDAP ayarı saklanmaz",
-  "Vault alanları uygulama tarafında şifrelenir",
-  "Production'da prisma db push entrypoint tarafından reddedilir",
-  "NEXTAUTH_SECRET, CRON_SECRET ve vault anahtarı ayrı üretilir",
-  "CI'da Gitleaks secret taraması zorunlu adımdır",
-  "Private registry, HTTPS ve internete kapalı PostgreSQL portu",
-  "Yedek alınır ve izole ortamda geri yükleme denenir",
+  "Veriler şirket bazında ayrılır; ayrım iki tenant üzerinde sınanır",
+  "Active Directory / LDAP desteği kaldırıldı; AD parolası ya da LDAP yapılandırması tutulmaz",
+  "Vault alanlarının şifrelemesi uygulama katmanında yapılır",
+  "Production ortamında entrypoint, prisma db push komutuna izin vermez",
+  "NEXTAUTH_SECRET, CRON_SECRET ve vault anahtarı birbirinden bağımsız oluşturulur",
+  "Gitleaks ile secret taraması, CI hattında atlanamayan bir adımdır",
+  "Private registry kullanımı, HTTPS ve dış ağa kapalı PostgreSQL portu",
+  "Yedekler düzenli alınır, geri yükleme ayrı bir ortamda sınanır",
 ];
 
 const techStack = [
@@ -139,9 +139,9 @@ const techStack = [
   "NextAuth.js",
   "React + Tailwind CSS",
   "Docker / Docker Swarm",
-  "S3 / MinIO uyumlu depolama",
+  "S3 / MinIO depolama desteği",
   "SMTP",
-  "Health endpoint'leri + opsiyonel Sentry",
+  "Health endpoint + isteğe bağlı Sentry",
 ];
 
 export default function Page() {
@@ -194,9 +194,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Neden Tek Portal"
-            title="Beş ayrı dosya, üç farklı panel ve arşiv maili tek bir yerde toplanır."
-            description="Modüller ortak bir envanter ve kullanıcı modeli üzerinde çalışır; veri bir kez girilir, her ekranda kullanılır."
+            eyebrow="Tek Portalın Getirdikleri"
+            title="Ayrı ayrı tutulan dosyalar, farklı yönetim panelleri ve e-posta arşivleri tek bir portalda birleşir."
+            description="Bütün modüller aynı envanteri ve aynı kullanıcı yapısını paylaşır; bir kez kaydettiğiniz bilgi her ekranda hazır olur."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -224,8 +224,8 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Modüller"
-            title="Envanterden ağa, ticket'tan tedariğe tek model."
+            eyebrow="Modül Yapısı"
+            title="Envanter, ağ, servis masası ve tedarik aynı veri modelini kullanır."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {modules.map((mod) => (
@@ -258,8 +258,8 @@ export default function Page() {
         <Container className="relative">
           <SectionHeading
             tone="dark"
-            eyebrow="Öne Çıkanlar"
-            title="Portalın üzerine kurulduğu dört sütun."
+            eyebrow="Temel Özellikler"
+            title="Orbit'i ayakta tutan dört yapı taşı."
           />
           <MotionStagger className="mt-10 grid gap-5 sm:grid-cols-2">
             {highlights.map((item) => (
@@ -287,9 +287,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Teknik Mimari"
-            title="Tanıdık, sıkıcı ve dayanıklı bir stack."
-            description="App Router üzerinde TypeScript, PostgreSQL ve Prisma. Production, Docker Swarm ile tek manager node'da ya da S3 destekli çok node'da çalışır; rolling update start-first stratejisiyle yapılır, başarısız deploy'da servis pause olur."
+            eyebrow="Mimari"
+            title="Sürprizsiz, sade ve uzun ömürlü teknolojiler."
+            description="TypeScript ile yazılmış bir App Router uygulaması; veritabanı tarafında PostgreSQL ve Prisma. Canlı ortam Docker Swarm üzerinde tek manager node ile ya da S3 desteğiyle birden çok node üzerinde çalışabilir. Rolling update'ler start-first sırasıyla ilerler; dağıtım başarısız olursa servis pause durumuna alınır."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {techStack.map((tech) => (
@@ -307,8 +307,8 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Güvenlik"
-            title="Kurulum adımları ve CI, üretime çıkmadan önce bunları zorunlu kılar."
+            eyebrow="Güvenlik Önlemleri"
+            title="Canlıya geçmeden önce kurulum ve CI hattı şu kuralları uygular."
           />
           <MotionStagger className="mt-10 grid gap-4 sm:grid-cols-2">
             {security.map((item) => (
@@ -335,20 +335,20 @@ export default function Page() {
               <SectionHeading
                 tone="dark"
                 eyebrow="Kurulum"
-                title="Kendi sunucunuzda, tek komutla."
-                description="Docker Swarm manager sunucuda repoyu alın, ortam dosyasını doldurun ve deploy scriptini çalıştırın. Script image'ı commit SHA ile etiketler, registry'ye push eder, stack'i günceller ve rolling update bitene kadar bekler."
+                title="Sunucunuzda çalışır, tek komutla kurulur."
+                description="Docker Swarm manager sunucusuna repoyu klonlayın, ortam değişkenleri dosyasını düzenleyin ve deploy scriptini başlatın. Script, image'a commit SHA'sını etiket olarak verip registry'ye gönderir, ardından stack'i güncelleyip rolling update tamamlanana kadar bekler."
               />
             </MotionReveal>
             <MotionReveal delay={0.1} direction="left" blur>
               <div className="rounded-card border border-paper-50/10 bg-paper-50/5 p-6">
                 <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-slate-300">
-{`# 1 — repoyu al
+{`# 1 — repoyu klonla
 git clone <repo-adresi> && cd it-portal
 
-# 2 — ortam dosyasını hazırla
+# 2 — .env dosyasını oluştur
 cp .env.production.example .env
 
-# 3 — build + push + stack deploy
+# 3 — derle, registry'ye gönder, stack'i dağıt
 ./deploy-swarm.sh`}
                 </pre>
                 <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-300">
@@ -367,8 +367,8 @@ cp .env.production.example .env
           <SectionHeading
             tone="dark"
             align="center"
-            title="Orbit'i kendi altyapınızda deneyin."
-            description="Kurulumdan çok şirketli yapılandırmaya kadar tüm adımlarda yanınızdayız."
+            title="Orbit'i kendi sunucularınızda çalıştırarak tanıyın."
+            description="Kurulum, şirket tanımları ve ilk yapılandırma boyunca ekibimiz size eşlik eder."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="Orbit" tone="dark" align="center" />
@@ -378,7 +378,7 @@ cp .env.production.example .env
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Yazılımlarımız" title="Yazılım ekibimizin geliştirdiği diğer ürünler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

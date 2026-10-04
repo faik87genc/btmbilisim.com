@@ -40,42 +40,42 @@ export const metadata: Metadata = {
 const overviewFeatures = [
   {
     icon: LayoutDashboard,
-    title: "Tek Ekranda Genel Bakış",
+    title: "Günün Özeti Bir Bakışta",
     description:
-      "Günlük ciro, tahsilat oranı, yeni müşteri sayısı ve çek portföyünüzü tek bir gösterge panelinde anlık olarak izleyin.",
+      "Ciro, tahsilat oranı, yeni kazanılan müşteriler ve çek portföyü aynı gösterge panelinde, güncel değerleriyle karşınızda.",
   },
   {
     icon: TrendingUp,
-    title: "En Çok Satan Ürünler ve Cariler",
+    title: "Öne Çıkan Ürün ve Cari Hesaplar",
     description:
-      "Son dönem satış hacmine göre öne çıkan ürünleri ve en çok ciro yapılan cari hesapları otomatik sıralanmış olarak görün.",
+      "Yakın dönemde en fazla satılan ürünler ve en yüksek ciroyu getiren cariler, siz uğraşmadan sıraya dizilir.",
   },
   {
     icon: Wallet,
-    title: "Nakit ve Çek Pozisyonu",
+    title: "Kasa, Banka ve Çek Durumu",
     description:
-      "Kasa, banka ve tahsile verilen çek tutarlarını tek kartta özetleyerek anlık nakit pozisyonunuzu netleştirin.",
+      "Kasadaki, bankadaki ve tahsile gönderilmiş çeklerdeki tutarlar tek kartta toplanır; elinizdeki nakdi net biçimde görürsünüz.",
   },
   {
     icon: RefreshCw,
-    title: "Canlı Veri Senkronizasyonu",
+    title: "ERP ile Eşzamanlı Veri",
     description:
-      "Panel, kullandığınız ERP veritabanınızla senkronize çalışır; ayrı bir veri aktarımı yapmanıza gerek kalmaz.",
+      "Atlas, ERP veritabanınızla eşzamanlı çalışır; verileri ayrıca dışa aktarıp yeniden yüklemeniz gerekmez.",
   },
 ];
 
 const erpFeatures = [
   {
     icon: PackageSearch,
-    title: "Ürün ve Cari Bazlı Satınalma Raporu",
+    title: "Satınalma Analizi: Ürün ve Cari Kırılımı",
     description:
-      "ERP veritabanınızdan çekilen satınalma hareketlerini ürün, cari ve tarih aralığına göre filtreleyip alım/iade net tutarlarını görün.",
+      "Satınalma hareketleri doğrudan ERP veritabanından okunur; ürüne, cariye ve tarih aralığına göre süzerek alım ve iadelerin net toplamına ulaşırsınız.",
   },
   {
     icon: Building2,
-    title: "Çoklu Firma Desteği",
+    title: "Birden Fazla Firma, Tek Panel",
     description:
-      "ERP tarafında tanımlı birden fazla firmayı tek panelden yönetin, raporlarınızı firma bazında ayırın.",
+      "ERP'de tanımlı bütün firmalarınıza aynı panelden erişin; raporları her firma için ayrı ayrı alın.",
   },
 ];
 
@@ -101,40 +101,40 @@ const supportedErps = [
 const atlasSlides: ProductHeroSlide[] = [
   {
     eyebrow: product.code,
-    titleLead: "Uçtan Uca Akıllı Bütçe Yönetimi:",
-    titleAccent: "Veriden Karara Tek Platform",
+    titleLead: "Bütçe Planından Karara:",
+    titleAccent: "Tüm Süreç Tek Yazılımda",
     description:
-      "Bütçenizi ister manuel girin, ister Excel veya muhasebe sisteminizden (Logo vb.) saniyeler içinde entegre edin. Planlanan ve gerçekleşen verilerinizi anlık karşılaştırın, sapmaları analiz edin ve finansal kararlarınızı veriye dayalı raporlarla güvenle alın.",
-    ctaLabel: "Finansal Kontrolü Ele Al",
+      "Bütçe rakamlarınızı elle yazabilir, Excel'den ya da Logo gibi muhasebe yazılımlarından birkaç saniyede aktarabilirsiniz. Atlas, planladığınız tutarla gerçekleşen arasındaki farkı anında gösterir; sapmaların nedenini raporlarla inceler, finansal kararlarınızı somut rakamlara dayandırırsınız.",
+    ctaLabel: "Atlas'ı Tanıyın",
     ctaHref: "/iletisim",
     image: "/products/atlas/gosterge-paneli.png",
-    imageAlt: "Atlas gösterge paneli",
+    imageAlt: "Atlas ana gösterge paneli ekran görüntüsü",
     imageWidth: 1685,
     imageHeight: 1172,
   },
   {
-    eyebrow: `${product.code} · ANALİZ`,
-    titleLead: "Akıllı Analizler &",
-    titleAccent: "Raporlama",
+    eyebrow: `${product.code} · RAPORLAMA`,
+    titleLead: "Analiz ve",
+    titleAccent: "Raporlama Araçları",
     description:
-      "Planlanan ve gerçekleşen bütçenizi hesap kalemi düzeyinde karşılaştırın, sapma yüzdesini kendiniz belirleyin; esnek rapor kartlarıyla PDF ve Excel çıktısı alın.",
-    ctaLabel: "Raporları Görüntüle",
+      "Bütçe ile gerçekleşmeyi her hesap kalemi için yan yana koyun, size uygun sapma eşiğini tanımlayın; özelleştirilebilir rapor kartlarını PDF veya Excel olarak dışa aktarın.",
+    ctaLabel: "Rapor Örneklerini İnceleyin",
     ctaHref: "/iletisim",
     image: "/products/atlas/finansal-raporlar.png",
-    imageAlt: "Atlas esnek rapor kartları",
+    imageAlt: "Atlas özelleştirilebilir rapor kartları ekranı",
     imageWidth: 1672,
     imageHeight: 951,
   },
   {
-    eyebrow: `${product.code} · GÜVENLİK`,
-    titleLead: "Sistem Yönetimi &",
-    titleAccent: "Güvenlik",
+    eyebrow: `${product.code} · YETKİLENDİRME`,
+    titleLead: "Kullanıcı Yetkileri ve",
+    titleAccent: "Veri Güvenliği",
     description:
-      "Kullanıcı ekleyip rollerini ve erişim yetkilerini düzenleyin; tüm veri alışverişi TLS ile şifrelenir, oturumlar otomatik sonlanarak yetkisiz erişim riskini azaltır.",
-    ctaLabel: "Kontrol Paneline Git",
+      "Yeni kullanıcı tanımlayın, her birine rol ve erişim izni atayın. Veri trafiği TLS şifrelemesiyle korunur; işlem yapılmayan oturumlar kendiliğinden kapanır, yetkisiz erişim olasılığı düşer.",
+    ctaLabel: "Yetkilendirmeyi Görün",
     ctaHref: "/iletisim",
     image: "/products/atlas/kullanici-yonetimi.png",
-    imageAlt: "Atlas kullanıcı yönetimi ekranı",
+    imageAlt: "Atlas kullanıcı ve rol yönetimi ekranı",
     imageWidth: 1701,
     imageHeight: 786,
   },
@@ -146,26 +146,26 @@ const atlasSlides: ProductHeroSlide[] = [
 const atlasBannerSlides: HeroSlide[] = [
   {
     image: "/hero/atlas-alt-1.jpg",
-    imageAlt: "Depo ve ofis ortamında Atlas bütçe panelinin kullanımı",
-    eyebrow: "Atlas · Her Ortamda Kontrol",
-    titleLead: "Sahada da,",
-    titleAccent: "ofiste de aynı kontrol.",
+    imageAlt: "Atlas bütçe panelini depoda ve ofiste kullanan ekip",
+    eyebrow: "Atlas · Saha ve Ofis",
+    titleLead: "Depoda ya da merkezde:",
+    titleAccent: "herkes aynı rakamı görür.",
     description:
-      "Depodan merkez ofise, Atlas'ın gösterge paneli her ekipte aynı güncel veriyi gösterir — kararlarınız hep aynı kaynaktan beslenir.",
-    primaryCta: { label: "Demo İsteyin", href: demoWhatsAppHref("Atlas") },
-    secondaryCta: { label: "Diğer Ürünlerimiz", href: "/yazilim-urunlerimiz/" },
+      "Atlas gösterge paneli depodaki ekibe de merkez ofise de aynı güncel bilgiyi sunar; kararlar tek ve ortak bir kaynağa dayanır.",
+    primaryCta: { label: "Demo Talep Edin", href: demoWhatsAppHref("Atlas") },
+    secondaryCta: { label: "Tüm Ürünler", href: "/yazilim-urunlerimiz/" },
     overlay: "light",
   },
   {
     image: "/hero/atlas-alt-2.jpg",
-    imageAlt: "Yapay zeka destekli finansal karar verme konsepti",
-    eyebrow: "Atlas · Veriye Dayalı Gelecek",
-    titleLead: "Rakamları değil,",
-    titleAccent: "kararları yönetin.",
+    imageAlt: "Yapay zeka temalı finansal karar alma konsept görseli",
+    eyebrow: "Atlas · Veriyle Karar",
+    titleLead: "Tablolarla boğuşmayın,",
+    titleAccent: "kararlara odaklanın.",
     description:
-      "Atlas, ham veriyi otomatik olarak anlamlı bütçe içgörülerine dönüştürür; ekibiniz raporlamayla değil, kararla vakit geçirsin.",
-    primaryCta: { label: "Demo İsteyin", href: demoWhatsAppHref("Atlas") },
-    secondaryCta: { label: "Diğer Ürünlerimiz", href: "/yazilim-urunlerimiz/" },
+      "Atlas ham rakamları kendiliğinden anlamlı bütçe göstergelerine çevirir; ekibinizin zamanı rapor hazırlamaya değil, karar vermeye kalır.",
+    primaryCta: { label: "Demo Talep Edin", href: demoWhatsAppHref("Atlas") },
+    secondaryCta: { label: "Tüm Ürünler", href: "/yazilim-urunlerimiz/" },
     overlay: "light",
   },
 ];
@@ -173,20 +173,20 @@ const atlasBannerSlides: HeroSlide[] = [
 const securityFeatures = [
   {
     icon: ShieldCheck,
-    title: "Şifreli Bağlantı",
-    description: "Tüm veri alışverişi TLS ile şifrelenerek iletilir.",
+    title: "Şifreli Veri İletimi",
+    description: "Sunucu ile kullanıcı arasındaki bütün trafik TLS ile korunur.",
   },
   {
     icon: KeyRound,
-    title: "Oturum Güvenliği",
+    title: "Otomatik Oturum Kapatma",
     description:
-      "Oturumlar belirli bir süre sonunda otomatik sonlanır, yetkisiz erişim riskini azaltır.",
+      "Belirlenen süre dolduğunda oturum kendiliğinden kapanır; açık unutulan ekranlar risk oluşturmaz.",
   },
   {
     icon: Users,
-    title: "Yetki Bazlı Kullanıcı Yönetimi",
+    title: "Rol ve Yetki Yönetimi",
     description:
-      "Kullanıcı ekleyin, rollerini ve erişim yetkilerini düzenleyin, ihtiyaç halinde hesapları pasifleştirin.",
+      "Yeni kullanıcı açın, rol ve erişim izinlerini belirleyin, gerektiğinde hesabı devre dışı bırakın.",
   },
 ];
 
@@ -199,9 +199,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Genel Bakış"
-            title="Kurumunuzun finansal nabzı tek panelde."
-            description="Gösterge paneli, ERP'nizden gelen veriyi anlık olarak işleyerek satış, tahsilat ve nakit pozisyonunuzu özetler."
+            eyebrow="Gösterge Paneli"
+            title="Finansal tablonuzun özeti tek ekranda."
+            description="ERP'den gelen bilgiler anında işlenir; satış, tahsilat ve nakit durumunuz panelde özet hâlinde görünür."
           />
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div className="grid gap-5">
@@ -228,7 +228,7 @@ export default function Page() {
               <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/gosterge-paneli.png"
-                  alt="Atlas gösterge paneli"
+                  alt="Atlas ana gösterge paneli ekran görüntüsü"
                   width={1685}
                   height={1172}
                   priority
@@ -242,9 +242,9 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Bütçe / Gerçekleşme Karşılaştırması"
-            title="Planlanan ile gerçekleşeni hesap kalemi düzeyinde karşılaştırın."
-            description="Gelir ve gider bütçelerinizi hesap grubu bazında aylık ve yıllık olarak karşılaştırın; kabul edilebilir sapma yüzdesini kendiniz belirleyin. Faaliyet grubuna, yıla ve aya göre filtreleyerek istediğiniz kırılımda rapor alın."
+            eyebrow="Plan ve Gerçekleşme"
+            title="Her hesap kaleminde plan ile gerçekleşeni yan yana görün."
+            description="Gelir ve gider bütçelerini hesap grubu düzeyinde, ay ay ya da yıl bazında kıyaslayın; hangi sapma oranının kabul edilebilir olduğuna siz karar verin. Faaliyet grubu, yıl ve ay filtreleriyle raporu ihtiyaç duyduğunuz ayrıntıda hazırlayın."
           />
           <MotionReveal delay={0.05} className="mt-10 mx-auto max-w-2xl">
             <ImageCarousel
@@ -253,31 +253,31 @@ export default function Page() {
               images={[
                 {
                   src: "/products/atlas/gelir-butcesi-yillik.png",
-                  alt: "Atlas gelir bütçesi yıllık raporu",
+                  alt: "Atlas yıllık gelir bütçesi ekranı",
                   width: 1692,
                   height: 1180,
-                  label: "Gelir Bütçesi Yıllık",
+                  label: "Yıllık Gelir Bütçesi",
                 },
                 {
                   src: "/products/atlas/gider-butcesi-yillik.png",
-                  alt: "Atlas gider bütçesi yıllık raporu",
+                  alt: "Atlas yıllık gider bütçesi ekranı",
                   width: 1698,
                   height: 1096,
-                  label: "Gider Bütçesi Yıllık",
+                  label: "Yıllık Gider Bütçesi",
                 },
                 {
                   src: "/products/atlas/gelir-butcesi-aylik.png",
-                  alt: "Atlas gelir bütçesi aylık karşılaştırma raporu",
+                  alt: "Atlas aylık gelir bütçesi kıyaslama ekranı",
                   width: 1693,
                   height: 887,
-                  label: "Gelir Bütçesi Aylık Karşılaştırma",
+                  label: "Aylık Gelir Bütçesi Kıyası",
                 },
                 {
                   src: "/products/atlas/gider-butcesi-aylik.png",
-                  alt: "Atlas gider bütçesi aylık karşılaştırma raporu",
+                  alt: "Atlas aylık gider bütçesi kıyaslama ekranı",
                   width: 1670,
                   height: 1166,
-                  label: "Gider Bütçesi Aylık Karşılaştırma",
+                  label: "Aylık Gider Bütçesi Kıyası",
                 },
               ]}
             />
@@ -289,9 +289,9 @@ export default function Page() {
         <Container>
           <SectionHeading
             tone="dark"
-            eyebrow="ERP Entegrasyonları"
-            title="Kullandığınız ERP ile aynı ekranda çalışın."
-            description="Atlas, kullandığınız ERP'den bağımsız çalışacak şekilde tasarlanmıştır. Aşağıdaki gibi yaygın kurumsal ERP sistemleriyle entegre olabiliriz."
+            eyebrow="ERP Bağlantıları"
+            title="ERP'nizden ayrılmadan bütçenizi izleyin."
+            description="Atlas belirli bir ERP'ye bağlı kalmadan çalışmak üzere geliştirildi. Aşağıdaki yaygın kurumsal sistemler, entegrasyon kurabildiğimiz ERP'lere örnektir."
           />
           <MotionReveal delay={0.05} className="mt-6 flex flex-wrap gap-2">
             {supportedErps.map((erp) => (
@@ -329,13 +329,13 @@ export default function Page() {
                 <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                   <LightboxImage
                     src="/products/atlas/detayli-satinalmalar.png"
-                    alt="Atlas detaylı satınalmalar raporu"
+                    alt="Atlas satınalma detay raporu ekranı"
                     width={1692}
                     height={1177}
                   />
                 </div>
                 <p className="mt-3 text-xs uppercase tracking-wider text-slate-400">
-                  Detaylı Satınalmalar
+                  Satınalma Detayları
                 </p>
               </MotionReveal>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -343,26 +343,26 @@ export default function Page() {
                   <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                     <LightboxImage
                       src="/products/atlas/satinalma-butcesi-karsilastirma.png"
-                      alt="Atlas satınalma bütçesi filtreleri"
+                      alt="Atlas satınalma bütçesi filtre seçenekleri"
                       width={1712}
                       height={456}
                     />
                   </div>
                   <p className="mt-3 text-xs uppercase tracking-wider text-slate-400">
-                    Satınalma Bütçesi Filtreleri
+                    Satınalma Bütçesini Filtreleme
                   </p>
                 </MotionReveal>
                 <MotionReveal delay={0.24}>
                   <div className="overflow-hidden rounded-card border border-paper-50/10 bg-navy-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                     <LightboxImage
                       src="/products/atlas/coklu-firma.png"
-                      alt="Atlas çoklu firma seçimi"
+                      alt="Atlas firma seçim ekranı"
                       width={580}
                       height={340}
                     />
                   </div>
                   <p className="mt-3 text-xs uppercase tracking-wider text-slate-400">
-                    Çoklu Firma Seçimi
+                    Firma Seçimi
                   </p>
                 </MotionReveal>
               </div>
@@ -374,35 +374,35 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Esnek Veri Girişi"
-            title="Verinizi elle girin ya da toplu aktarın."
-            description="Gelir, gider ve satınalma bütçelerinizi tek tek kaydedin; ya da Excel şablonuyla saniyeler içinde toplu olarak içeri aktarın."
+            eyebrow="Veri Girişi Seçenekleri"
+            title="Tek tek kaydedin ya da Excel'den yükleyin."
+            description="Gelir, gider ve satınalma bütçeleri formlar üzerinden tek tek girilebilir; dilerseniz hazır Excel şablonunu doldurup tamamını birkaç saniyede sisteme alabilirsiniz."
           />
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <MotionReveal>
               <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/manuel-veri-girisi.png"
-                  alt="Atlas manuel veri girişi ekranı"
+                  alt="Atlas elle veri giriş formu"
                   width={1699}
                   height={534}
                 />
               </div>
               <p className="mt-3 text-xs uppercase tracking-wider text-slate-500">
-                Manuel Veri Girişi — Gelir, gider ve satınalma bütçesi formları
+                Elle Giriş — Gelir, gider ve satınalma formları
               </p>
             </MotionReveal>
             <MotionReveal delay={0.1}>
               <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/toplu-veri-aktarimi.png"
-                  alt="Atlas toplu veri aktarımı ekranı"
+                  alt="Atlas Excel ile toplu yükleme ekranı"
                   width={1708}
                   height={576}
                 />
               </div>
               <p className="mt-3 text-xs uppercase tracking-wider text-slate-500">
-                Toplu Veri Aktarımı — Excel şablonuyla hızlı içeri aktarım
+                Toplu Yükleme — Hazır Excel şablonu ile aktarım
               </p>
             </MotionReveal>
           </div>
@@ -415,16 +415,16 @@ export default function Page() {
             <MotionReveal>
               <SectionHeading
                 tone="dark"
-                eyebrow="Esnek Rapor Kartları"
-                title="Rakamlarınızı kart halinde, ihtiyacınıza göre düzenleyin."
-                description="Aylık gelir, gider dağılımı ve nakit akışını kart bazlı, özelleştirilebilir bir düzende görüntüleyin; PDF ve Excel çıktısı alın."
+                eyebrow="Rapor Kartları"
+                title="Görmek istediğiniz rakamları kartlarla kendiniz düzenleyin."
+                description="Aylık gelir, giderlerin dağılımı ve nakit akışı kişiselleştirilebilir kartlarda listelenir; her görünümü PDF ya da Excel dosyası olarak indirebilirsiniz."
               />
             </MotionReveal>
             <MotionReveal delay={0.1}>
               <div className="overflow-hidden rounded-card border border-paper-50/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50">
                 <LightboxImage
                   src="/products/atlas/finansal-raporlar.png"
-                  alt="Atlas esnek rapor kartları"
+                  alt="Atlas özelleştirilebilir rapor kartları ekranı"
                   width={1672}
                   height={951}
                 />
@@ -437,8 +437,8 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Kurumsal Güvenlik"
-            title="Verileriniz yetkili ellerde kalır."
+            eyebrow="Güvenlik ve Yetkilendirme"
+            title="Bilgilerinize yalnızca yetki verdiğiniz kişiler ulaşır."
           />
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div className="grid gap-5">
@@ -465,7 +465,7 @@ export default function Page() {
               <div className="overflow-hidden rounded-card border border-navy-950/10 shadow-[0_24px_60px_-30px_rgba(10,18,32,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
                 <LightboxImage
                   src="/products/atlas/kullanici-yonetimi.png"
-                  alt="Atlas kullanıcı yönetimi ekranı"
+                  alt="Atlas kullanıcı ve rol yönetimi ekranı"
                   width={1701}
                   height={786}
                 />
@@ -484,8 +484,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="Atlas'ı kendi ERP veritabanınızla test edin."
-            description="Kurulum sürecinden entegrasyona kadar tüm adımlarda yanınızdayız."
+            title="Atlas'ı kendi verilerinizle deneyin."
+            description="Kurulum, ERP bağlantısı ve ilk raporlar dahil her aşamada ekibimiz sizinle birlikte çalışır."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="Atlas" tone="dark" align="center" />
@@ -495,7 +495,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Yazılımlarımız" title="Yazılım ekibimizin geliştirdiği diğer ürünler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

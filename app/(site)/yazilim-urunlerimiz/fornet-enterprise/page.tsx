@@ -43,9 +43,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: 6, suffix: "+", label: "VPN & güvenlik markası entegrasyonu" },
-  { value: 100, suffix: "%", label: "kiracı mikro-izolasyonu" },
-  { value: 3, suffix: "", label: "protokolle tek tık erişim: SSH/RDP/VNC" },
+  { value: 6, suffix: "+", label: "destekli VPN ve güvenlik markası" },
+  { value: 100, suffix: "%", label: "kiracı bazında mikro-izolasyon" },
+  { value: 3, suffix: "", label: "protokolde tek tıkla erişim: SSH/RDP/VNC" },
 ];
 
 const heroTags = [
@@ -61,69 +61,69 @@ const heroTags = [
 const pillars = [
   {
     icon: Gauge,
-    title: "Binlerce varlık tek ekranda",
+    title: "Binlerce varlığı tek ekrana sığdırın",
     description:
-      "Sistem yöneticileri ve NOC ekipleri için dağınık varlıkları anlık veri akışıyla konsolide eden merkezi gösterge paneli. Kritik alarmlar, aktif tüneller ve donanım sağlığı tek yerde.",
+      "Sistem yöneticileri ve NOC ekipleri için dağınık varlıkları anlık veri akışıyla bir araya getiren merkezî gösterge paneli. Önemli alarmlar, açık tüneller ve donanım durumu aynı yerde görünür.",
   },
   {
     icon: ShieldHalf,
-    title: "Her müşteri kriptografik olarak izole",
+    title: "Her müşteri kriptografik olarak ayrışır",
     description:
-      "Çok kiracılı konteyner mimarisi. Her kurum ayrı Docker ağı ve disk seviyesinde izole volume'da barındırılır; çapraz kiracı sızıntısı yapısal olarak engellenir.",
+      "Çok kiracılı konteyner yapısı. Her kurum kendi Docker ağında ve disk düzeyinde ayrılmış volume içinde tutulur; kiracılar arası sızıntı tasarımdan ötürü gerçekleşemez.",
   },
   {
     icon: KeyRound,
-    title: "Şifreyi görmeden Zero-Trust erişim",
+    title: "Parolayı görmeden Zero-Trust erişim",
     description:
-      "Guacamole + Vault ile tarayıcı üzerinden, yerel bilgisayara hiçbir şey kurmadan SSH/RDP/VNC bağlantısı. Parolalar Vault'ta; oturumlar video kaydı ve komut logu ile denetlenir.",
+      "Guacamole + Vault ile tarayıcıdan, yerel bilgisayara tek bir şey kurmadan SSH/RDP/VNC bağlantısı. Parolalar Vault içinde durur; oturumlar video kaydı ve komut kaydıyla izlenir.",
   },
 ];
 
 const monitoringFeatures = [
   {
     icon: Activity,
-    title: "Anlık Metrik Konsolidasyonu",
+    title: "Anlık Metriklerin Toplanması",
     description:
-      "Ağdaki tüm uç noktalar, aktif VPN oturumları ve yedekleme havuzları dinamik olarak sayısallaştırılır ve tek panelde toplanır.",
+      "Ağdaki bütün uç noktalar, açık VPN oturumları ve yedekleme havuzları canlı olarak sayıya dökülür ve aynı panelde birleştirilir.",
   },
   {
     icon: Radio,
-    title: "Keep-Alive Kontrolü",
+    title: "Bağlantı Canlılığı Denetimi",
     description:
-      "Entegre heartbeat mekanizması, kopan VPN tünellerini saniyeler içinde yakalar ve raporlar.",
+      "Yerleşik heartbeat düzeneği, kopan VPN tünellerini birkaç saniye içinde fark eder ve bildirir.",
   },
   {
     icon: Siren,
-    title: "Kritik Alarmlar",
+    title: "Önemli Alarmlar",
     description:
-      "Eşik değer ihlallerinde anında tetiklenen görsel uyarılarla NOC ekipleri sorunlara hızla müdahale eder.",
+      "Eşik aşımlarında anında beliren görsel uyarılar sayesinde NOC ekipleri sorunlara vakit kaybetmeden el atar.",
   },
   {
     icon: MonitorPlay,
-    title: "Endpoint Takibi",
+    title: "Uç Nokta İzleme",
     description:
-      "Canlı SIEM ve erişim ajanları ile endpoint cihazları sürekli izlenir, sağlık durumu görünür kılınır.",
+      "Canlı SIEM ve erişim ajanları aracılığıyla uç nokta cihazları kesintisiz gözlenir, durumları görünür kalır.",
   },
 ];
 
 const isolationFeatures = [
   {
     icon: Network,
-    title: "Ayrı Docker Ağları",
+    title: "Kiracıya Özel Docker Ağları",
     description:
-      "Her kiracı için izole bir sanal bridge network tahsis edilir; kurumların trafikleri birbirine asla temas etmez.",
+      "Her kiracıya kendine ait bir sanal bridge ağı verilir; kurumların trafiği birbirine hiçbir noktada değmez.",
   },
   {
     icon: HardDrive,
-    title: "İzole Volume Mimarisi",
+    title: "Ayrılmış Volume Düzeni",
     description:
-      "Veritabanları ve kalıcı depolama alanları disk seviyesinde ayrıştırılır; her kurumun verisi kendi katmanında kalır.",
+      "Veritabanları ve kalıcı depolama alanları disk düzeyinde ayrı tutulur; her kurumun verisi yalnızca kendi katmanında yer alır.",
   },
   {
     icon: ShieldBan,
-    title: "Sızıntı Önleme",
+    title: "Sızıntıya Karşı Koruma",
     description:
-      "Bellek veya ağ katmanında çapraz kiracı sızıntısı (cross-tenant leak) yapısal olarak engellenmiştir.",
+      "Bellek ya da ağ katmanındaki kiracılar arası sızıntı (cross-tenant leak) tasarım gereği olanaksız kılınmıştır.",
   },
 ];
 
@@ -141,13 +141,13 @@ const networkFeatures = [
     icon: Boxes,
     title: "Konteyner Tabanlı VPN",
     description:
-      "Her organizasyon için arka planda ayağa kalkan müstakil tünel servisleri. Karmaşık istemci kurulumlarına ve yerel IP çakışmalarına son verir.",
+      "Her kurum için arka planda kendiliğinden başlayan bağımsız tünel servisleri. Zahmetli istemci kurulumlarını ve yerel IP çakışmalarını ortadan kaldırır.",
   },
   {
     icon: Server,
-    title: "Dinamik Proxy Ataması",
+    title: "Dinamik Proxy Dağıtımı",
     description:
-      "Tüneller üzerinden iç ağlara erişim sağlayan özel SOCKS5 ve HTTP proxy kanalları otomatik atanır.",
+      "Tüneller üzerinden iç ağlara ulaşım sağlayan özel SOCKS5 ve HTTP proxy kanalları kendiliğinden tanımlanır.",
   },
 ];
 
@@ -156,25 +156,25 @@ const pamFeatures = [
     icon: Terminal,
     title: "PAM Connect",
     description:
-      "Şifreleri görmeden SSH, RDP ve VNC protokolleriyle tek tıkla canlı bağlantı. Yerel bilgisayara hiçbir yazılım kurulmaz.",
+      "Parolaları görmeden SSH, RDP ve VNC protokolleriyle tek tıkla canlı bağlantı. Yerel bilgisayara hiçbir yazılım yüklenmez.",
   },
   {
     icon: ShieldBan,
-    title: "Anlık Karantina (Isolate)",
+    title: "Anında Karantina (Isolate)",
     description:
-      "Güvenlik ihlali şüphesi duyulan cihazı tek butonla ağdan izole etme gücü; olay anında yayılmayı durdurur.",
+      "Güvenlik ihlalinden kuşkulanılan cihazı tek düğmeyle ağdan koparma yetkisi; olay sırasında yayılmayı durdurur.",
   },
   {
     icon: ScrollText,
-    title: "Kapsamlı Denetim (Audit)",
+    title: "Baştan Sona Denetim (Audit)",
     description:
-      "Oturum video kayıtları, basılan komutların loglanması ve gerçek zamanlı izleme ile tam denetlenebilirlik.",
+      "Oturum video kayıtları, girilen komutların kaydı ve anlık izleme ile eksiksiz denetlenebilirlik.",
   },
   {
     icon: Cctv,
     title: "Cihaz Envanteri",
     description:
-      "Tüm sunucu, firewall, switch ve istemci envanteri tek çatı altında; Zero-Trust kurallarıyla erişim yetkilendirmesi.",
+      "Sunucu, firewall, switch ve istemci envanterinin tamamı tek yapıda toplanır; erişim yetkisi Zero-Trust kurallarına göre verilir.",
   },
 ];
 
@@ -183,28 +183,28 @@ const capacity = [
     icon: KeyRound,
     title: "HashiCorp Vault Entegrasyonu",
     description:
-      "Kritik cihaz parolaları ve VPN anahtarları ana veritabanında asla açık metin tutulmaz. Sadece Vault yolları saklanır; güncellemeler Check-And-Set (CAS) mekanizmasıyla korunur.",
+      "Önemli cihaz parolaları ve VPN anahtarları ana veritabanında hiçbir zaman açık metin olarak durmaz. Yalnızca Vault yolları tutulur; güncellemeler Check-And-Set (CAS) düzeneğiyle güvenceye alınır.",
   },
   {
     icon: DatabaseBackup,
-    title: "Otomatik Yapılandırma & Versiyon Kontrolü",
+    title: "Otomatik Yapılandırma ve Sürüm Takibi",
     description:
-      "Tüm ağ cihazlarının konfigürasyon yedekleri marka bazlı mekanizmalarla düzenli periyotlarla otomatik çekilir, versiyonlanır ve merkezi kalıcı depolamada saklanır.",
+      "Bütün ağ cihazlarının yapılandırma yedekleri markaya özel yöntemlerle belirli aralıklarla kendiliğinden alınır, sürümlenir ve merkezî kalıcı depolamada tutulur.",
   },
   {
     icon: Layers,
     title: "VMware ESXi Entegrasyonu",
     description:
-      "Sanal makinelerin güç döngüsü işlemleri (Power, Reboot), kaynak tüketim grafikleri ve dinamik envanter takibi arayüze gömülüdür.",
+      "Sanal makinelerin güç işlemleri (Power, Reboot), kaynak kullanım grafikleri ve canlı envanter takibi doğrudan arayüze yerleştirilmiştir.",
   },
 ];
 
 const useCases = [
-  "Managed Service Provider (MSP)",
+  "Yönetilen Hizmet Sağlayıcılar (MSP)",
   "NOC / SOC Operasyon Merkezleri",
-  "Sistem Entegratörleri",
+  "Sistem Entegratörü Firmalar",
   "Kurumsal BT Operasyon Ekipleri",
-  "Veri Merkezi Operasyonları",
+  "Veri Merkezi İşletmeleri",
 ];
 
 export default function Page() {
@@ -225,15 +225,15 @@ export default function Page() {
             <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
               {product.name}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
-                MSP merkezi altyapı, erişim ve güvenlik platformu
+                MSP&apos;ler için merkezî altyapı, erişim ve güvenlik platformu
               </span>
             </h1>
           </MotionReveal>
           <MotionReveal delay={0.12}>
             <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
-              Binlerce dağınık varlığı tek panelden izleyen; çok kiracılı konteyner mimarisiyle her
-              müşteriyi kriptografik olarak izole eden, çok markalı VPN otomasyonu ve Zero-Trust
-              yetkili erişim (PAM) sunan üretime hazır MSP platformu.
+              Binlerce dağınık varlığı tek panelden izleyen; çok kiracılı konteyner yapısıyla her
+              müşteriyi kriptografik olarak ayıran; çok markalı VPN otomasyonunu ve Zero-Trust
+              yetkili erişimi (PAM) bir arada sunan, üretime hazır bir MSP platformu.
             </p>
           </MotionReveal>
           <MotionReveal delay={0.16} className="mt-6 flex flex-wrap gap-2">
@@ -270,8 +270,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="Neden FORNET ENTERPRISE"
-            title="İzleme, izolasyon ve yetkili erişim tek platformda birleşir."
-            description="Merkezi gösterge paneli, çok kiracılı güvenlik ve PAM aynı konteyner mimarisi üzerinde çalışır; MSP ve NOC/SOC ekipleri tüm müşteri altyapısını tek yerden yönetir."
+            title="İzleme, ayrıştırma ve yetkili erişim aynı platformda buluşur."
+            description="Merkezî gösterge paneli, çok kiracılı güvenlik ve PAM aynı konteyner yapısı üzerinde işler; MSP ile NOC/SOC ekipleri bütün müşteri altyapısını tek noktadan yönetir."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -299,9 +299,9 @@ export default function Page() {
       <section className="bg-paper-100 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="01 · Merkezi İzleme Mimarisi"
-            title="Binlerce varlık, anlık veri akışıyla tek gösterge panelinde."
-            description="NOC ekiplerinin dağınık varlıkları tek ekrandan izlemesi için tasarlandı; kritik alarmlar, aktif tüneller ve donanım sağlığı konsolide edilir."
+            eyebrow="01 · Merkezî İzleme Yapısı"
+            title="Binlerce varlık, anlık veri akışıyla tek gösterge panelinde toplanır."
+            description="NOC ekiplerinin dağınık varlıkları tek ekrandan takip etmesi için kurgulandı; önemli alarmlar, açık tüneller ve donanım durumu bir araya getirilir."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {monitoringFeatures.map((f) => (
@@ -334,9 +334,9 @@ export default function Page() {
         <Container className="relative">
           <SectionHeading
             tone="dark"
-            eyebrow="02 · Çoklu Kiracı Güvenliği"
-            title="Her kurum, kendine özel kriptografik katmanlarda barındırılır."
-            description="Farklı müşteri veya departmanlara hizmet verirken kesin siber izolasyon kuralları işletilir; yapılandırmalar ve trafikler birbirine asla temas etmez."
+            eyebrow="02 · Çok Kiracılı Güvenlik"
+            title="Her kurum, yalnızca kendisine ait kriptografik katmanlarda tutulur."
+            description="Farklı müşteri ya da departmanlara hizmet verilirken kesin ayrıştırma kuralları uygulanır; yapılandırmalar ve trafik birbirine hiçbir yerde değmez."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {isolationFeatures.map((f) => (
@@ -364,9 +364,9 @@ export default function Page() {
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
           <SectionHeading
-            eyebrow="03 · Gelişmiş Ağ Altyapısı"
-            title="Çok markalı VPN yönetimini tek merkezde otomatikleştirin."
-            description="Farklı lokasyonlardaki heterojen ağ yapılarını birleştiren akıllı tünelleme katmanı; dünyanın en çok tercih edilen güvenlik üreticileriyle yerleşik entegrasyon."
+            eyebrow="03 · İleri Düzey Ağ Altyapısı"
+            title="Çok markalı VPN yönetimini tek merkezden otomatiğe bağlayın."
+            description="Farklı lokasyonlardaki birbirinden farklı ağ yapılarını tek çatıda toplayan akıllı tünelleme katmanı; sektörde en çok yeğlenen güvenlik üreticileriyle yerleşik uyum."
           />
           <MotionReveal delay={0.05} className="mt-8 flex flex-wrap gap-2">
             {vpnBrands.map((brand) => (
@@ -405,8 +405,8 @@ export default function Page() {
         <Container>
           <SectionHeading
             eyebrow="04 · Yetkili Erişim Yönetimi (PAM)"
-            title="Cihaz envanteri ve güvenli oturumlar, tarayıcı üzerinden."
-            description="Tüm envanteri tek çatı altında toplayan; Apache Guacamole ve HashiCorp Vault ile Zero-Trust kurallarına göre erişim yetkilendiren yetkili erişim katmanı."
+            title="Cihaz envanteri ve güvenli oturumlar, doğrudan tarayıcıdan."
+            description="Bütün envanteri tek yapıda toplayan; Apache Guacamole ve HashiCorp Vault ile Zero-Trust kurallarına göre erişim yetkisi veren yetkili erişim katmanı."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {pamFeatures.map((f) => (
@@ -436,7 +436,7 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             eyebrow="05 · Teknik Kapasite"
-            title="Şifre yönetiminden sanallaştırmaya ileri düzey yetenekler."
+            title="Parola yönetiminden sanallaştırmaya uzanan ileri yetenekler."
           />
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {capacity.map((f) => (
@@ -461,7 +461,7 @@ export default function Page() {
 
           <MotionReveal delay={0.1} className="mt-12">
             <h3 className="font-display text-base font-semibold text-paper-50">
-              Hedef Kullanım Alanları
+              Kimler İçin Uygun
             </h3>
             <div className="mt-4 flex flex-wrap gap-3">
               {useCases.map((uc) => (
@@ -485,8 +485,8 @@ export default function Page() {
           <SectionHeading
             tone="dark"
             align="center"
-            title="FORNET ENTERPRISE'ı kendi altyapınızda deneyin."
-            description="Çok kiracılı kurulumdan VPN otomasyonu ve PAM yapılandırmasına kadar tüm adımlarda yanınızdayız."
+            title="FORNET ENTERPRISE'ı kendi altyapınızda görün."
+            description="Çok kiracılı kurulumdan VPN otomasyonuna ve PAM yapılandırmasına kadar her adımda yanınızda oluruz."
           />
           <div className="mt-8 flex justify-center">
             <DemoRequest product="FORNET ENTERPRISE" tone="dark" align="center" />
@@ -496,7 +496,7 @@ export default function Page() {
 
       <section className="bg-paper-50 py-20 md:py-24">
         <Container>
-          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizin geri kalanı" />
+          <SectionHeading eyebrow="Diğer Ürünlerimiz" title="Ürün ailemizdeki öteki çözümler" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 0.08} />

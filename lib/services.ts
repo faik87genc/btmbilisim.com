@@ -15,9 +15,9 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Kurumsal Danışmanlık Hizmetleri",
     shortTitle: "Danışmanlık",
     eyebrow: "01 — Danışmanlık",
-    summary: "IT danışmanlığından ISO 27001 ve KVKK uyumuna, ERP ve dijital dönüşüme kadar yanınızdayız.",
+    summary: "IT danışmanlığı, ISO 27001 ve KVKK uyumu, Logo ERP ve dijital dönüşüm için tek muhatap.",
     intro:
-      "Tüm süreçlerimizin temelinde IT danışmanlığı var. Teknoloji, bilgi güvenliği, KVKK uyumu ve dijital dönüşümde kurumunuzun yanında duran beş uzmanlık alanı.",
+      "Önce ihtiyacı ve riski netleştirir, sonra doğru adımı birlikte seçeriz. IT danışmanlığından bilgi güvenliği ve kişisel veri uyumuna, ERP'den dijital dönüşüme kadar beş alanda kurumunuza eşlik ediyoruz.",
     services: [
       {
         key: "it-danismanlik-hizmetleri",
@@ -29,42 +29,42 @@ export const serviceCategoryList: ServiceCategory[] = [
         key: "iso-27001-bilgi-guvenligi-danismanligi",
         name: "ISO 27001 Bilgi Güvenliği Danışmanlığı",
         description:
-          "Bilgi güvenliği yönetim sistemi kurulumu, risk analizi ve sertifikasyon sürecine hazırlık.",
+          "Bilgi güvenliği yönetim sisteminin kurulması, risk değerlendirmesi ve belgelendirme denetimine hazırlık.",
       },
       {
         key: "kvkk-danismanligi",
         name: "KVKK Danışmanlığı",
         description:
-          "Kişisel veri envanteri çıkarma, aydınlatma metinleri hazırlama ve uyum süreçlerinin yönetimi.",
+          "Veri envanteri, aydınlatma ve rıza metinleri, VERBİS ve teknik tedbirlerle KVKK uyumu.",
       },
       {
         key: "logo-erp-destek-ve-danismanlik",
         name: "Logo ERP Destek ve Danışmanlık",
         description:
-          "Logo ERP sistemlerinde kurulum, entegrasyon, süreç optimizasyonu ve kullanıcı eğitimi.",
+          "Logo Tiger, GO ve j-Platform'da kurulum, sürüm geçişi, entegrasyon ve kullanıcı eğitimi.",
       },
       {
         key: "yazilim-ve-dijital-donusum-danismanligi",
         name: "Yazılım ve Dijital Dönüşüm Danışmanlığı",
         description:
-          "Özel yazılım geliştirme ve dijital dönüşüm süreçlerinde teknik mimari danışmanlığı.",
+          "Hangi süreç dijitalleşmeli, hangi yazılım seçilmeli: tarafsız analiz ve teknik yol haritası.",
       },
     ],
     faq: [
       {
-        question: "Hangi danışmanlık hizmetlerini sunuyorsunuz?",
+        question: "Danışmanlık alanlarınız neler?",
         answer:
-          "IT danışmanlığı, ISO 27001 bilgi güvenliği danışmanlığı, KVKK danışmanlığı, Logo ERP destek ve danışmanlığı ile yazılım ve dijital dönüşüm danışmanlığı veriyoruz. İhtiyacınıza göre tek bir hizmeti ya da birkaçını bir arada alabilirsiniz.",
+          "IT danışmanlığı, ISO 27001 bilgi güvenliği danışmanlığı, KVKK danışmanlığı, Logo ERP destek ve danışmanlığı ile yazılım ve dijital dönüşüm danışmanlığı veriyoruz. Bunları tek tek ya da birlikte planlayabilirsiniz.",
       },
       {
-        question: "Danışmanlık süreci nasıl işliyor?",
+        question: "Bir danışmanlık çalışması nasıl başlar?",
         answer:
-          "İlk görüşmede ihtiyacınızı ve mevcut durumunuzu netleştiririz; ardından kapsamı belirleyip somut bir çalışma planı sunarız. Süreç boyunca ilgili uzmanlık ekibimiz sizinle birebir çalışır.",
+          "Ücretsiz bir ön görüşmeyle mevcut durumunuzu ve beklentinizi dinleriz. Ardından kapsamı, takvimi ve çıktıları yazılı olarak netleştirip çalışmaya başlarız.",
       },
       {
-        question: "ISO 27001 ve KVKK danışmanlığını ayrı ayrı mı almalıyız?",
+        question: "ISO 27001 ve KVKK'yı birlikte ele almak mantıklı mı?",
         answer:
-          "Hayır, ihtiyacınıza göre ayrı ayrı ya da birlikte sunulabilir. Çoğu kurum, bilgi güvenliği yönetim sistemi kurulumu ile KVKK uyum sürecini eş zamanlı yürütmeyi tercih eder.",
+          "Çoğu kurum için evet. İki çerçeve de erişim yönetimi, kayıt tutma ve risk değerlendirmesi gibi ortak kontroller ister; birlikte planlandığında aynı iş iki kez yapılmaz.",
       },
     ],
   },
@@ -73,74 +73,74 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Siber Güvenlik Çözümleri",
     shortTitle: "Siber Güvenlik",
     eyebrow: "02 — Siber Güvenlik",
-    summary: "Sızma testinden SIEM'e, kurumunuzu uçtan uca siber tehditlere karşı koruruz.",
+    summary: "Sızma testinden 5651 log yönetimine, saldırganın göreceği açıkları önce biz buluruz.",
     intro:
-      "Sızma testinden güvenlik operasyon merkezi altyapısına kadar, kurumunuzu uçtan uca siber tehditlere karşı koruyan sekiz çözüm alanı.",
+      "Saldırgan gözüyle test eder, bulduğumuzu önceliklendirir ve kapatırız. Sızma testi, zafiyet taraması, firewall, EDR, DLP ve SIEM dahil sekiz alanda ürün bağımsız güvenlik çözümleri sunuyoruz.",
     services: [
       {
         key: "siber-guvenlik-danismanligi",
         name: "Siber Güvenlik Danışmanlığı",
         description:
-          "Kurumunuzun güvenlik olgunluğunu değerlendirir, önceliklendirilmiş bir yol haritası çıkarırız.",
+          "Güvenlik olgunluğunuzu ölçer, risklere göre sıralanmış ve bütçelenmiş bir iyileştirme planı çıkarırız.",
       },
       {
         key: "sizma-testi-penetrasyon-testi",
         name: "Sızma Testi (Penetrasyon Testi)",
         description:
-          "Uygulama, ağ ve altyapı seviyesinde sızma testleri ile zafiyet tespiti ve raporlama.",
+          "Dış ağ, iç ağ, web uygulaması ve Active Directory testleri; doğrulanmış bulgular ve kapatma önerileri.",
       },
       {
         key: "guvenlik-acigi-ve-zafiyet-analizi",
         name: "Zafiyet Taraması ve Güvenlik Açığı Analizi",
         description:
-          "Sistemlerinizdeki zafiyetleri tarar, önceliklendirilmiş bulgu raporları sunarız.",
+          "Düzenli otomatik taramalar ve uzman doğrulamasıyla yamalanmamış açıkların görünür hale gelmesi.",
       },
       {
         key: "firewall-ve-ag-guvenligi",
         name: "Firewall ve Ağ Güvenliği",
         description:
-          "Güvenlik duvarı yapılandırması ve ağ trafiğinin sürekli izlenmesi.",
+          "Yeni nesil güvenlik duvarı, kural sadeleştirme, ağ segmentasyonu ve trafik izleme.",
       },
       {
         key: "edr-antivirus-cozumleri",
         name: "Kurumsal Antivirüs ve EDR Çözümleri",
         description:
-          "Uç nokta tehdit tespiti ve otomatik müdahale sağlayan koruma çözümleri.",
+          "Fidye yazılımına karşı davranış tabanlı uç nokta koruması ve merkezi yönetim.",
       },
       {
         key: "dlp-veri-kaybi-onleme-cozumleri",
         name: "DLP – Veri Kaybı Önleme Çözümleri",
         description:
-          "Hassas verinizin kurum dışına sızmasını engelleyen politika ve izleme sistemleri.",
+          "E-posta, USB, bulut ve web üzerinden hassas veri çıkışını sınıflandırma ve politikayla durdurma.",
       },
       {
         key: "siem-ve-log-yonetimi",
         name: "SIEM ve 5651 Log Yönetimi",
         description:
-          "Güvenlik olaylarının merkezi toplanması, korelasyonu ve raporlanması.",
+          "Logların merkezde toplanması, olay korelasyonu, alarm ve 5651 uyumlu saklama.",
       },
       {
         key: "iso-27001-teknik-guvenlik-cozumleri",
         name: "ISO 27001 Teknik Güvenlik Çözümleri",
         description:
-          "ISO 27001 uyumluluğu için gerekli teknik kontrollerin kurulumu ve yönetimi.",
+          "Standardın teknik kontrollerinin (erişim, şifreleme, kayıt, yedek) altyapıya uygulanması.",
       },
     ],
     faq: [
       {
-        question: "Sızma testi ne sıklıkla yapılmalı?",
+        question: "Hangi sıklıkla sızma testi yaptırmalıyız?",
         answer:
-          "Genel kabul gören yaklaşım, kritik sistemler için yılda en az bir kez, önemli bir altyapı değişikliği sonrasında ise ayrıca sızma testi yapılmasıdır. Kurumunuzun risk profiline göre bu sıklığı birlikte belirleriz.",
+          "Yılda en az bir kez ve her önemli değişiklikten sonra öneriyoruz: yeni bir uygulamayı yayına almak, altyapı taşımak ya da ağ yapısını değiştirmek gibi. Denetim veya müşteri şartı varsa sıklık ona göre belirlenir.",
       },
       {
-        question: "SIEM ve log yönetimi neden önemli?",
+        question: "Log yönetimine neden ihtiyacımız var?",
         answer:
-          "Güvenlik olaylarını merkezi olarak toplayıp korele etmek, bir saldırıyı erken aşamada fark etmenizi sağlar. SIEM altyapısı hem günlük izleme hem de denetim/uyum süreçleri için kayıt tutar.",
+          "Kayıtlar merkezde toplanıp ilişkilendirilmezse bir saldırı genellikle iş işten geçtikten sonra fark edilir. Ayrıca 5651 sayılı Kanun ve ISO 27001 belirli kayıtların saklanmasını zorunlu tutar.",
       },
       {
-        question: "Mevcut güvenlik altyapımızı değiştirmeden sizinle çalışabilir miyiz?",
+        question: "Kullandığımız güvenlik ürünlerini değiştirmemiz gerekir mi?",
         answer:
-          "Evet, mevcut firewall, EDR veya SIEM yatırımlarınızı değerlendirip üzerine inşa ederiz; sıfırdan değişim şart değildir.",
+          "Hayır. Önce mevcut ürünlerinizi doğru yapılandırıp verimli kullanmanızı sağlarız. Yenisini yalnızca gerçek bir açığı kapatmak için ve gerekçesiyle öneririz.",
       },
     ],
   },
@@ -149,45 +149,45 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Sistem & Network Çözümleri",
     shortTitle: "Sistem & Network",
     eyebrow: "03 — Sistem & Network",
-    summary: "Ağ altyapınızdan sunucularınıza kadar operasyonunuzun temelini kurar ve yönetiriz.",
+    summary: "Ağ, sunucu, sanallaştırma, Wi-Fi ve kamera altyapısını kurar, 7/24 ayakta tutarız.",
     intro:
-      "Ağ altyapısından sunucu ve veri merkezi yönetimine kadar, teknoloji operasyonunuzun temelini oluşturan on çözüm alanı.",
+      "İşinizin üzerinde durduğu altyapıyı projelendirir, kurar ve izleriz. Kablolamadan sunucuya, sanallaştırmadan kurumsal Wi-Fi ve IP kameraya kadar on alanda yerinde ve uzaktan hizmet veriyoruz.",
     services: [
       {
         key: "sistem-ve-network-danismanligi",
         name: "Sistem ve Network Danışmanlığı",
         description:
-          "Altyapınızın mevcut durumunu analiz eder, büyümeye uygun mimari öneririz.",
+          "Mevcut altyapının sağlık kontrolü ve büyümeyi taşıyacak mimarinin birlikte planlanması.",
       },
       {
         key: "ag-altyapisi-kurulum-ve-yonetimi",
         name: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
         description:
-          "Kurumsal ağ altyapısının kurulumu, yapılandırılması ve sürekli yönetimi.",
+          "Yapısal kablolama, switch, VLAN ve şubeler arası bağlantının kurulumu ve izlenmesi.",
       },
       {
         key: "sunucu-kurulum-ve-yonetimi",
         name: "Sunucu Kurulumu ve Yönetimi",
         description:
-          "Fiziksel ve sanal sunucu altyapısının kurulumu ve işletilmesi.",
+          "Fiziksel ve sanal sunucuların kurulumu, güncellemesi, yedeği ve performans takibi.",
       },
       {
         key: "veri-merkezi-cozumleri",
         name: "Veri Merkezi Çözümleri",
         description:
-          "Veri merkezi tasarımı, kapasite planlaması ve işletme danışmanlığı.",
+          "Sistem odası tasarımı, kabinet düzeni, enerji ve soğutma planlaması.",
       },
       {
         key: "sanallastirma-cozumleri",
         name: "Sanallaştırma Çözümleri",
         description:
-          "Sunucu ve masaüstü sanallaştırma altyapısının kurulumu ve yönetimi.",
+          "VMware, Hyper-V veya Proxmox ile sunucu sayısını azaltan, esnek sanal altyapı.",
       },
       {
         key: "wifi-ve-kablosuz-ag-cozumleri",
         name: "Wi-Fi ve Kablosuz Ağ Çözümleri",
         description:
-          "Kurumsal kablosuz ağ planlaması, kurulumu ve güvenliği.",
+          "Kapsama ölçümü, erişim noktası planı, misafir ağı ve kimlik doğrulamalı kablosuz erişim.",
       },
       {
         key: "ip-kamera-guvenlik-kamerasi-sistemleri",
@@ -199,36 +199,36 @@ export const serviceCategoryList: ServiceCategory[] = [
         key: "firewall-ve-vpn-cozumleri",
         name: "Firewall ve VPN Çözümleri",
         description:
-          "Güvenlik duvarı ve uzaktan erişim (VPN) altyapısının kurulumu.",
+          "Şubeler ve uzaktan çalışanlar için çok faktörlü, kayıt altında güvenli bağlantı.",
       },
       {
         key: "sistem-entegrasyonu",
         name: "Sistem Entegrasyonu",
         description:
-          "Farklı sistemlerinizin birbiriyle sorunsuz çalışmasını sağlayan entegrasyon projeleri.",
+          "Ağ, sunucu, yazılım ve güvenlik bileşenlerinin tek bir bütün olarak çalışması.",
       },
       {
         key: "it-bakim-ve-destek-hizmetleri",
         name: "IT Destek ve Bakım Hizmetleri",
         description:
-          "Altyapınız için sürekli izleme, bakım ve teknik destek hizmeti.",
+          "Sözleşmeli periyodik bakım, uzaktan izleme ve 7/24 arıza müdahalesi.",
       },
     ],
     faq: [
       {
-        question: "Sunucu altyapımızı bulutla mı yoksa yerinde mi yönetmeliyiz?",
+        question: "Sunucularımızı yerinde mi tutmalıyız, buluta mı taşımalıyız?",
         answer:
-          "Bu, veri hassasiyetinize, maliyet yapınıza ve büyüme planınıza bağlı. Sistem ve network danışmanlığı kapsamında mevcut altyapınızı analiz edip size uygun mimariyi öneririz.",
+          "Uygulamalarınıza, veri hassasiyetine ve maliyet beklentinize bağlı. Çoğu işletme için en iyi sonuç ikisinin karışımıdır; değerlendirmeyi yapıp hangi sistemin nerede kalacağını gerekçesiyle öneririz.",
       },
       {
-        question: "IT bakım ve destek hizmeti hangi sıklıkla sağlanıyor?",
+        question: "Bakım sözleşmesinde neler var?",
         answer:
-          "Sürekli izleme ve düzenli bakım standart hizmetimizin parçasıdır; kritik arızalarda hızlı müdahale sağlıyoruz. Destek kapsamı ve yanıt süreleri ihtiyacınıza göre netleştirilir.",
+          "Düzenli kontrol ve güncellemeler, uzaktan izleme, yedeklerin doğrulanması ve arıza anında öncelikli müdahale. Kapsamı kullanıcı ve sistem sayınıza göre birlikte belirleriz.",
       },
       {
-        question: "Sanallaştırma altyapısına geçiş operasyonumuzu etkiler mi?",
+        question: "Sanallaştırmaya geçerken işler durur mu?",
         answer:
-          "Geçiş süreci kesintiyi en aza indirecek şekilde planlanır; kritik sistemler için genellikle mesai dışı saatlerde veya kademeli olarak uygulanır.",
+          "Geçişi planlı yapar, kritik sistemleri mesai dışında taşırız. Her adım için bir geri dönüş planı hazırlanır; kullanıcılar çoğu zaman değişikliği fark etmez.",
       },
     ],
   },
@@ -237,74 +237,74 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Bulut, Yedekleme & İş Sürekliliği",
     shortTitle: "Bulut & Yedekleme",
     eyebrow: "04 — Bulut & İş Sürekliliği",
-    summary: "Microsoft 365'ten felaket kurtarmaya, verinizin ve operasyonunuzun sürekliliğini sağlarız.",
+    summary: "Microsoft 365, Azure ve AWS'den 3-2-1 yedeklemeye, verinizi kayba karşı koruruz.",
     intro:
-      "Bulut geçişinden felaket kurtarmaya kadar, verinizin ve operasyonunuzun sürekliliğini garanti altına alan sekiz çözüm alanı.",
+      "Verinizin nerede durduğu kadar, bir arızada ne kadar sürede geri geldiği de önemli. Bulut geçişi, yedekleme, felaket kurtarma ve veri kurtarma dahil sekiz alanda sürekliliği birlikte planlıyoruz.",
     services: [
       {
         key: "bulut-cozumleri",
         name: "Bulut Bilişim Çözümleri",
         description:
-          "İhtiyacınıza uygun bulut mimarisinin planlanması ve geçiş sürecinin yönetimi.",
+          "Hangi iş yükünün buluta uygun olduğunun belirlenmesi ve planlı, kesintisiz geçiş.",
       },
       {
         key: "microsoft-365-cozumleri",
         name: "Microsoft 365 Çözümleri",
         description:
-          "Microsoft 365 kurulumu, lisans yönetimi ve güvenlik yapılandırması.",
+          "E-posta ve Teams geçişi, cihaz yönetimi, güvenlik ayarları ve kullanıcı eğitimi.",
       },
       {
         key: "microsoft-azure-cozumleri",
         name: "Microsoft Azure Çözümleri",
         description:
-          "Azure altyapı kurulumu, maliyet optimizasyonu ve yönetimi.",
+          "Azure'da sanal sunucu, ağ ve yedek kurulumu; aylık maliyetin kontrol altında tutulması.",
       },
       {
         key: "aws-bulut-cozumleri",
         name: "AWS Bulut Çözümleri",
         description:
-          "AWS üzerinde altyapı kurulumu, mimari tasarım ve yönetim.",
+          "AWS'de güvenli mimari, hesap yapısı, yedekleme ve maliyet takibi.",
       },
       {
         key: "veri-yedekleme-cozumleri",
         name: "Veri Yedekleme (Backup) Çözümleri",
         description:
-          "Otomatik, düzenli ve doğrulanabilir yedekleme sistemlerinin kurulumu.",
+          "Şifreli, otomatik ve geri yükleme testi yapılan 3-2-1 yedekleme düzeni.",
       },
       {
         key: "felaket-kurtarma-disaster-recovery",
         name: "Felaket Kurtarma (Disaster Recovery)",
         description:
-          "Kesinti senaryolarına karşı felaket kurtarma planı ve altyapısının kurulumu.",
+          "Kritik sistemler için hedef dönüş süresi, ikinci lokasyon ve tatbikatlı kurtarma planı.",
       },
       {
         key: "is-surekliligi-cozumleri",
         name: "İş Sürekliliği Çözümleri",
         description:
-          "Operasyonlarınızın kesintisiz devam etmesi için süreç ve altyapı planlaması.",
+          "Kesinti anında kimin ne yapacağını ve hangi sistemin önce döneceğini belirleyen plan.",
       },
       {
         key: "veri-kurtarma-hizmetleri",
         name: "Veri Kurtarma Hizmetleri",
         description:
-          "Kayıp veya bozulmuş verilerin kurtarılması için teknik müdahale.",
+          "Arızalı disk, bozulan RAID veya silinen dosyalar için kontrollü kurtarma çalışması.",
       },
     ],
     faq: [
       {
-        question: "Hangi bulut platformlarıyla çalışıyorsunuz?",
+        question: "Hangi bulut ortamlarında çalışıyorsunuz?",
         answer:
-          "Microsoft Azure, AWS ve Microsoft 365 üzerinde kurulum, geçiş ve yönetim hizmeti veriyoruz. İhtiyacınıza uygun platformu birlikte değerlendiririz.",
+          "Microsoft 365, Microsoft Azure ve AWS ile çalışıyoruz. Platformu işinize, mevcut lisanslarınıza ve bütçenize göre birlikte seçeriz.",
       },
       {
-        question: "Yedekleme sistemimiz gerçekten çalışıyor mu, nasıl emin oluruz?",
+        question: "Yedeklerimizin işe yaradığından nasıl emin olabiliriz?",
         answer:
-          "Düzenli, doğrulanabilir yedekleme kurguluyoruz; yani yedekler yalnızca alınmakla kalmaz, geri yükleme testleriyle çalışırlığı periyodik olarak kontrol edilir.",
+          "Yedeği almak yetmez, geri yüklemeyi düzenli olarak denemek gerekir. Kurduğumuz yapılarda periyodik geri yükleme testleri yapar ve sonuçlarını raporlarız.",
       },
       {
-        question: "Felaket kurtarma planı olmadan iş sürekliliği sağlanabilir mi?",
+        question: "Küçük bir işletmenin de felaket kurtarma planına ihtiyacı var mı?",
         answer:
-          "Kısmen sağlanabilir, ancak ciddi bir kesinti senaryosunda geri dönüş süreniz uzar. Felaket kurtarma planı bu süreyi öngörülebilir ve kısa tutmanın temel yoludur.",
+          "Evet, ölçeği küçük olsa da. Hangi verinin ne kadar sürede geri gelmesi gerektiğini bilen sade bir plan, bir fidye yazılımı ya da donanım arızasında günlerce sürecek bir duruşu saatlere indirebilir.",
       },
     ],
   },
@@ -313,65 +313,65 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Yazılım & Dijital Çözümler",
     shortTitle: "Yazılım & Dijital",
     eyebrow: "05 — Yazılım & Dijital",
-    summary: "Özel yazılımdan iş süreci otomasyonuna, ihtiyacınıza özel dijital çözümler geliştiririz.",
+    summary: "Kendi yazılım ekibimizle özel yazılım, web, entegrasyon ve otomasyon geliştiririz.",
     intro:
-      "Özel yazılım geliştirmeden iş süreci otomasyonuna kadar, ihtiyacınıza özel yedi dijital çözüm alanı.",
+      "Hazır paketlerin karşılamadığı ihtiyaçları kendi yazılım ekibimizle koda döküyoruz. Özel yazılımdan kurumsal web sitesine, ERP entegrasyonundan raporlama panolarına kadar yedi alanda geliştirme yapıyoruz.",
     services: [
       {
         key: "ozel-yazilim-gelistirme",
         name: "Özel Yazılım Geliştirme",
-        description: "İhtiyacınıza özel, uçtan uca yazılım geliştirme.",
+        description: "İş akışınıza göre tasarlanan, güvenli ve bakımı kolay kurumsal yazılımlar.",
       },
       {
         key: "web-uygulama-gelistirme",
         name: "Web Uygulama Geliştirme",
-        description: "Kurumsal ihtiyaçlara özel web tabanlı uygulamalar.",
+        description: "Tarayıcıdan çalışan portallar, müşteri ve bayi panelleri, iç süreç uygulamaları.",
       },
       {
         key: "web-tasarim-ve-kurumsal-web-sitesi",
         name: "Kurumsal Web Tasarım",
         description:
-          "Kurumsal kimliğinize uygun, performanslı web sitesi tasarımı ve geliştirmesi.",
+          "Mobil öncelikli, hızlı ve arama motoru dostu kurumsal web siteleri.",
       },
       {
         key: "api-ve-sistem-entegrasyonlari",
         name: "API ve Sistem Entegrasyonları",
         description:
-          "Farklı sistemleriniz arasında güvenli veri akışı sağlayan API entegrasyonları.",
+          "Uygulamalar arasında elle veri taşımayı bitiren, kayıt altında API bağlantıları.",
       },
       {
         key: "erp-entegrasyonlari",
         name: "ERP Entegrasyonları",
-        description: "ERP sisteminizi diğer iş uygulamalarınızla entegre ediyoruz.",
+        description: "ERP'nizin e-ticaret, CRM, banka ve e-fatura sistemleriyle otomatik konuşması.",
       },
       {
         key: "is-sureci-otomasyonlari",
         name: "İş Süreci Otomasyonları",
         description:
-          "Tekrarlayan iş süreçlerini otomatikleştirerek verimliliği artırıyoruz.",
+          "Onay, bildirim ve veri aktarımı gibi tekrar eden işlerin otomatik akışa dönmesi.",
       },
       {
         key: "raporlama-ve-dashboard-cozumleri",
         name: "Raporlama ve Dashboard Çözümleri",
         description:
-          "Yönetim kararlarını destekleyen gerçek zamanlı raporlama panoları.",
+          "Dağınık verinin tek ekranda toplandığı, yönetime hazır gösterge panoları.",
       },
     ],
     faq: [
       {
-        question: "Özel yazılım geliştirme ne kadar sürer?",
+        question: "Bir özel yazılım projesi ne kadar sürer?",
         answer:
-          "Kapsam ve entegrasyon ihtiyacına göre değişir; ilk görüşmede gereksinimlerinizi netleştirip gerçekçi bir zaman çizelgesi sunarız.",
+          "Kapsama göre değişir. İhtiyaç analiziyle ilk sürümün kapsamını küçük tutar, kullanılabilir bir versiyonu erken teslim eder ve sonraki özellikleri aşamalı ekleriz; takvimi analizden sonra netleştiririz.",
       },
       {
-        question: "Mevcut ERP sistemimizle entegrasyon mümkün mü?",
+        question: "Kullandığımız ERP ile entegrasyon yapılabilir mi?",
         answer:
-          "Evet, API ve sistem entegrasyonu hizmetimiz kapsamında mevcut ERP'nizle (SAP, Oracle, LOGO, Mikro ve diğerleri) veri akışı kurabiliriz.",
+          "Çoğu ERP'nin API'si ya da veri aktarım yöntemi vardır. Logo başta olmak üzere mevcut sisteminizi inceleyip en güvenli ve sürdürülebilir entegrasyon yolunu öneririz.",
       },
       {
-        question: "İş süreci otomasyonu hangi süreçler için uygundur?",
+        question: "Hangi işler otomasyona uygun?",
         answer:
-          "Tekrarlayan, kural bazlı ve manuel emek gerektiren süreçler (onay akışları, veri aktarımı, raporlama gibi) otomasyona en uygun olanlardır.",
+          "Kurala bağlı, sık tekrarlanan ve hata yapılmaya açık işler: onay akışları, sistemler arası veri aktarımı, düzenli raporlar ve bildirimler. Önce süreci birlikte çizer, otomasyonun gerçekten kazanç sağlayacağı yerden başlarız.",
       },
     ],
   },
@@ -380,65 +380,65 @@ export const serviceCategoryList: ServiceCategory[] = [
     title: "Lisanslama & Kurumsal Çözümler",
     shortTitle: "Lisanslama",
     eyebrow: "06 — Lisanslama",
-    summary: "Microsoft'tan Veeam'e, kurumsal lisanslarınızı tek noktadan tedarik eder ve yönetiriz.",
+    summary: "Microsoft, VMware, Veeam ve güvenlik ürünlerinde doğru lisans, doğru fiyat, zamanında yenileme.",
     intro:
-      "Microsoft'tan güvenlik ürünlerine kadar, kurumunuzun ihtiyaç duyduğu tüm yazılım lisanslarını tek noktadan tedarik eder ve yönetiriz.",
+      "Eksik lisans yasal risk, fazla lisans gereksiz maliyet demek. Microsoft'tan sanallaştırma ve yedeklemeye, güvenlik ürünlerinden kurumsal yazılımlara kadar lisanslarınızı ihtiyaca göre boyutlandırıp yenilemelerini takip ediyoruz.",
     services: [
       {
         key: "microsoft-lisanslama",
         name: "Microsoft Lisanslama",
         description:
-          "Microsoft ürünleri için uygun lisans modelinin belirlenmesi ve tedariki.",
+          "Windows, Office ve sunucu ürünlerinde kullanıma uygun Microsoft lisans modelinin seçilmesi.",
       },
       {
         key: "microsoft-365-lisanslama",
         name: "Microsoft 365 Lisanslama",
-        description: "İşletmenize uygun Microsoft 365 plan ve lisans yönetimi.",
+        description: "Business ve Enterprise planlarının kullanıcı ihtiyacına göre karşılaştırılması ve tedariki.",
       },
       {
         key: "windows-server-sql-server-lisanslama",
         name: "Windows Server & SQL Server Lisanslama",
         description:
-          "Sunucu ve veritabanı lisanslarının doğru modelde tedariki.",
+          "Çekirdek ve CAL hesaplamasıyla sunucu ve veritabanı lisanslarının doğru boyutlandırılması.",
       },
       {
         key: "vmware-lisanslama",
         name: "VMware Lisanslama",
-        description: "Sanallaştırma altyapınız için VMware lisans tedariki ve yönetimi.",
+        description: "Yeni abonelik modelinde VMware lisans planlaması, yenileme ve alternatif değerlendirmesi.",
       },
       {
         key: "veeam-lisanslama",
         name: "Veeam Lisanslama",
-        description: "Yedekleme ve kurtarma altyapınız için Veeam lisans tedariki.",
+        description: "Korunan sunucu ve iş yükü sayısına göre Veeam yedekleme lisanslarının seçimi.",
       },
       {
         key: "siber-guvenlik-urunleri-lisanslama",
         name: "Siber Güvenlik Ürünleri Lisanslama",
         description:
-          "Güvenlik yazılımlarınız için doğru lisans modelinin belirlenmesi.",
+          "Firewall, EDR, e-posta güvenliği ve SIEM ürünlerinde lisans boyutlandırma ve yenileme.",
       },
       {
         key: "kurumsal-yazilim-lisanslama",
         name: "Kurumsal Yazılım Lisanslama",
         description:
-          "Kurumunuzun ihtiyaç duyduğu tüm yazılım lisanslarının tek noktadan yönetimi.",
+          "Tüm yazılım lisanslarınızın envanteri, yenileme takvimi ve tek noktadan tedariki.",
       },
     ],
     faq: [
       {
-        question: "Lisans tedarikini sadece sizin üzerinizden mi yapmalıyız?",
+        question: "Bütün lisanslarımızı sizden almak zorunda mıyız?",
         answer:
-          "Hayır, mevcut tedarikçinizle çalışmaya devam edebilirsiniz; biz doğru lisans modelini belirleme ve yönetim danışmanlığı sunuyoruz.",
+          "Hayır. Mevcut tedarikçilerinizle çalışmaya devam ederken lisans envanterinizi ve yenileme takviminizi biz de takip edebiliriz. Tek noktadan tedarik ise yönetimi ve maliyet kontrolünü kolaylaştırır.",
       },
       {
-        question: "Microsoft 365 lisans planları arasında nasıl karar veririz?",
+        question: "Microsoft 365'te hangi plan bize uygun?",
         answer:
-          "Kullanıcı sayınız, ihtiyaç duyduğunuz uygulamalar (Teams, SharePoint, güvenlik özellikleri vb.) ve bütçenize göre en uygun planı birlikte belirleriz.",
+          "Kullanıcıların masaüstü Office'e, gelişmiş güvenliğe veya cihaz yönetimine ihtiyacı olup olmadığına bakarız. Herkese aynı planı almak yerine kullanıcı gruplarına göre karışık plan önermek çoğu zaman daha ekonomiktir.",
       },
       {
-        question: "VMware veya Veeam lisanslarımızın yenileme takibini siz mi yapıyorsunuz?",
+        question: "Yenileme tarihlerini kaçırmamak için ne yapıyorsunuz?",
         answer:
-          "Evet, kurumsal yazılım lisanslama hizmetimiz kapsamında yenileme tarihlerini takip eder, süresi dolmadan önce sizi bilgilendiririz.",
+          "Tüm lisanslarınızı bitiş tarihleriyle birlikte listeler, yenilemeden önce sizi bilgilendirir ve kullanımı yeniden değerlendiririz. Böylece hem kesinti yaşanmaz hem de artık kullanılmayan lisanslar yenilenmez.",
       },
     ],
   },
