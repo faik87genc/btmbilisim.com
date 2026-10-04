@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone } from "lucide-react";
 import { AboutTeaser } from "@/components/ensa/AboutTeaser";
 import { Container } from "@/components/ensa/Container";
+import { PartnerLogos } from "@/components/ensa/PartnerLogos";
 import { FaqSection } from "@/components/ensa/FaqSection";
 import { HeroSlider, type HeroSlide } from "@/components/ensa/HeroSlider";
 import { HomeBlogSection } from "@/components/ensa/HomeBlogSection";
@@ -295,6 +296,8 @@ export default function Home() {
         </Container>
       </section>
 
+
+      <PartnerLogos />
 
       <FaqSection items={homeFaq} />
 

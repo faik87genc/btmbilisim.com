@@ -45,7 +45,12 @@ export type TeamMember = {
 
 export const testimonials: Testimonial[] = [];
 
-export const references: Reference[] = [];
+// Onaylı iş ortakları / referanslar (sahibinin onayıyla, 2026-10-04).
+export const references: Reference[] = [
+  { name: "Balorman INT", logo: "/partners/balorman-int.png" },
+  { name: "BLR Balorman", logo: "/partners/blr-balorman.png" },
+  { name: "Palet Global", logo: "/partners/palet-global.png" },
+];
 
 export const team: TeamMember[] = [];
 

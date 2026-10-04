@@ -195,13 +195,13 @@ function initials(name: string) {
 }
 
 /**
- * References + testimonials in one white section. Renders nothing until
+ * References + testimonials in one light-grey section. Renders nothing until
  * lib/data/trust.ts has entries (and testimonials have recorded consent).
  */
 export function TrustSection() {
   if (references.length === 0 && liveTestimonials.length === 0) return null;
   return (
-    <section className="cv-auto bg-white py-20 md:py-24">
+    <section className="cv-auto bg-paper-50 py-20 md:py-24">
       <Container className="max-w-7xl">
         <SectionHeading
           align="center"
@@ -210,9 +210,9 @@ export function TrustSection() {
         />
         {references.length > 0 && (
           <>
-            <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            <ul className="mt-10 flex flex-wrap justify-center gap-4">
               {references.slice(0, 12).map((r) => (
-                <li key={r.name} className="flex h-24 items-center justify-center rounded-card border border-navy-950/10 bg-white p-4">
+                <li key={r.name} className="flex h-24 w-[calc(50%-0.5rem)] items-center justify-center rounded-card border border-navy-950/10 bg-white p-4 sm:w-52 lg:w-60">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain grayscale transition hover:grayscale-0" />
                 </li>
