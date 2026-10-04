@@ -7,6 +7,9 @@ import { Container } from "@/components/ensa/Container";
 import { PageHero } from "@/components/ensa/PageHero";
 import { BlogCard } from "@/components/ensa/BlogCard";
 import { Button } from "@/components/ensa/Button";
+import { SectionHeading } from "@/components/ensa/SectionHeading";
+import { TeamCards } from "@/components/btm/TeamCards";
+import { team } from "@/lib/data/trust";
 import { pageHref, tagSlug } from "@/lib/pages";
 import { site } from "@/lib/site";
 import { IMG_SIZES, imageInfo } from "@/lib/imageVariants";
@@ -236,6 +239,20 @@ function CoreBody({ page, crumbs }: { page: Page; crumbs: ReturnType<typeof brea
           </div>
         </Container>
       </section>
+      {page.slug === "hakkimizda" && team.length > 0 && (
+        <section className="border-t border-navy-950/10 bg-white py-16 md:py-20">
+          <Container>
+            <SectionHeading
+              eyebrow="Ekibimiz"
+              title="Sahada yıllarını geçirmiş bir ekip"
+              description="Danışmanlığını yaptığımız işi kendimiz kurarız; ekibimiz BT operasyonları, altyapı ve bilgi güvenliği tecrübesini bir araya getirir."
+            />
+            <div className="mt-10">
+              <TeamCards members={team} headingLevel={3} />
+            </div>
+          </Container>
+        </section>
+      )}
     </>
   );
 }

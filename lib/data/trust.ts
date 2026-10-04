@@ -37,6 +37,10 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
+  /** Kartın üstündeki kısa etiket, ör. "Kurucumuz" */
+  label?: string;
+  /** Uzmanlık etiketleri */
+  tags?: string[];
   /** /ekip/<dosya>.jpg — yoksa baş harfler gösterilir */
   photo?: string;
   email?: string;
@@ -52,6 +56,23 @@ export const references: Reference[] = [
   { name: "Palet Global", logo: "/partners/palet-global.png" },
 ];
 
-export const team: TeamMember[] = [];
+// Ekip (bilgiler kişilerin kendisinden / sahibinin onayıyla, 2026-10-04).
+export const team: TeamMember[] = [
+  {
+    name: "Oğuzhan Batum",
+    label: "Kurucumuz",
+    role: "Kurucu",
+    bio: "Anadolu Üniversitesi Yönetim Bilişim Sistemleri mezunu olan Batum, Bonna Premium Porcelain, D724 Bilişim Hizmetleri ve SERI Bilgi Teknolojileri'ndeki sistem destek uzmanlığı ve bilgi teknolojileri şefliği görevlerinde edindiği teknik destek, Active Directory ve BT operasyonları deneyimini BTM Bilişim çatısı altında işletmelerin altyapı ve destek süreçlerine aktarıyor.",
+    tags: ["BT Operasyonları", "Teknik Destek", "Active Directory", "Sorun Giderme"],
+    email: "oguzhanbatum@btmbilisim.com",
+  },
+  {
+    name: "Faik Genç",
+    label: "Ekibimiz",
+    role: "Sistem & Network ve Bilgi Güvenliği Danışmanı · ISO 27001 Baş Denetçi",
+    bio: "2010'dan bu yana BT altyapısı, sunucu, sanallaştırma ve ağ yönetiminde çalışan Genç, Yılport Holding ve Balorman'daki sistem/network ve bilgi işlem yöneticiliği görevlerinin ardından bilgi güvenliğine odaklandı. Bağımsız ISO 27001 Baş Denetçisi olarak BGYS kurulumu, risk değerlendirmesi, KVKK uyumu ve denetime hazırlık süreçlerini yürütüyor.",
+    tags: ["ISO 27001 Lead Auditor", "BGYS & KVKK", "Sistem & Network", "CCNA · MCSE"],
+  },
+];
 
 export const liveTestimonials = testimonials.filter((t) => t.consent.trim() && t.text.trim());
