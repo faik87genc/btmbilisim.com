@@ -496,7 +496,7 @@ Dijitalleştirmek istediğiniz süreçleri ücretsiz ilk görüşmede konuşalı
     slug: "siber-guvenlik-danismanligi",
     title: "Siber Güvenlik Danışmanlığı",
     metaDescription:
-      "Siber güvenlik danışmanlığı: NIST CSF ve ISO 27001 temelli olgunluk ölçümü, risk sıralaması ve bütçeli 12 aylık güvenlik planı. Gebze merkezli, 2010'dan beri.",
+      "Siber güvenlik danışmanlığı: NIST CSF ve ISO 27001 temelli olgunluk ölçümü, risk sıralaması ve bütçeli güvenlik planı. 2010'dan beri Gebze.",
     content: `Hangi güvenlik ürününü almanız gerektiğini konuşmadan önce, kurumunuzun bugün nerede durduğunu bilmeniz gerekir. Siber güvenlik danışmanlığında BTM Bilişim olarak mevcut kontrollerinizi bağımsız bir gözle ölçer, açıkları iş etkisine göre sıralar ve sınırlı bütçenin önce en tehlikeli boşluğa gitmesini sağlayan bir plan hazırlarız. ISO 27001 baş denetçi deneyimimiz, değerlendirmeyi denetçinin soracağı sorularla yapmamızı sağlar.
 
 ## Tipik başlangıç noktası
@@ -510,7 +510,7 @@ Dijitalleştirmek istediğiniz süreçleri ücretsiz ilk görüşmede konuşalı
 - Güvenlik duvarı, uç nokta koruması, e-posta güvenliği, kimlik yönetimi ve yedekleme ayarlarının incelenmesi
 - Yetki dağılımı, parola ve erişim politikaları ile süreçlerin gözden geçirilmesi
 - Her bulgu için olasılık ve iş etkisine dayalı risk derecesi
-- Bütçe tahminli, 12 aylık güvenlik planı
+- Bütçe tahminli, önceliklendirilmiş güvenlik planı
 - Yönetim kurulu için kısa özet, BT ekibi için teknik ek
 
 ## Çalışma adımları
@@ -559,7 +559,7 @@ Satıcıdan bağımsız hazırlanmış bir risk tablosu, gerekçesi yazılı ön
     title: "Sızma Testi (Penetrasyon Testi)",
     metaTitle: "Sızma Testi (Penetrasyon Testi) Hizmeti | BTM Bilişim",
     metaDescription:
-      "Sızma testi (penetrasyon testi): dış ve iç ağ, web, mobil, API ve Wi-Fi için manuel test, CVSS puanlı kanıtlı rapor ve düzeltme sonrası yeniden test.",
+      "Sızma testi (penetrasyon testi): dış ve iç ağ, web, mobil, API ve Wi-Fi için manuel test, CVSS puanlı, kanıtlı rapor ve net kapatma önerileri.",
     content: `Bir zafiyet listesi, saldırganın sizden ne alabileceğini söylemez. Penetrasyon testinde uzmanlarımız sistemlerinize yetkili bir saldırgan gibi yaklaşır, bulduğu küçük açıkları birbirine bağlayarak kritik veriye ya da yönetici hesabına ulaşıp ulaşamadığını dener. Sonuçta elinize "kaç açık var" değil, "hangi yoldan nereye kadar girilebiliyor" sorusunun kanıtlı cevabı geçer.
 
 ## Otomatik tarama ile manuel test arasındaki fark
@@ -586,7 +586,6 @@ ISO 27001, KVKK veya PCI DSS gereği ya da müşteri şartnamesi nedeniyle düze
 2. **Bilgi toplama ve doğrulama** — Otomatik araçların bulguları elle teyit edilir.
 3. **İstismar** — Doğrulanan açıklar kontrollü biçimde kullanılır, mümkünse zincirlenir.
 4. **Rapor** — Her bulgu CVSS puanı, ekran görüntüsü veya log kanıtı ve çözüm adımıyla yazılır.
-5. **Yeniden test** — Düzelttiğiniz bulgular ücretsiz olarak tekrar kontrol edilir.
 
 ## Yılda bir testin ötesi
 
