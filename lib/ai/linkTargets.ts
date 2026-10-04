@@ -41,6 +41,9 @@ const NEVER_LINK = new Set([
  */
 export const CODED_PAGES: ReadonlyMap<string, string> = new Map([
   ["hizmetler", "Hizmetlerimiz"],
+  ["risk-skoru-testi", "Siber Güvenlik Risk Skoru Testi"],
+  ["referanslar", "Referanslarımız"],
+  ["ekibimiz", "Ekibimiz"],
   ["yazilim-urunlerimiz", "Yazılım Ürünlerimiz"],
   ...products.map((p) => [`yazilim-urunlerimiz/${p.slug}`, `${p.name} — ${p.tagline}`] as const),
   ...serviceCategoryList.map((c) => [c.slug, c.title] as const),

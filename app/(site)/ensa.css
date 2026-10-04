@@ -327,8 +327,28 @@
   .markdown-content th,
   .markdown-content td {
     border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
-    padding: 0.5rem 0;
+    padding: 0.7rem 0.75rem;
     text-align: left;
+    vertical-align: top;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .markdown-content th {
+    background: var(--paper-50);
+    color: var(--navy-800);
+    font-weight: 600;
+    border-bottom: 2px solid var(--gold-500);
+  }
+  .markdown-content td:first-child {
+    font-weight: 600;
+    color: var(--ink-900);
+  }
+  @media (max-width: 639px) {
+    .markdown-content th,
+    .markdown-content td {
+      padding: 0.6rem 0.5rem;
+      font-size: 0.875rem;
+    }
   }
 }
 
