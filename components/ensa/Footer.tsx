@@ -171,7 +171,9 @@ export function Footer() {
             <button type="button" id="cookie-prefs" className="hover:text-white">
               Çerez Tercihleri
             </button>
-            <a href="https://www.iso27001danismanlik.com/" target="_blank" rel="noopener" className="hover:text-white">
+            {/* Site-wide credit link: nofollow so Google never reads it as a footer link scheme
+                against the sister site; the in-content links (home, about, IT consulting) carry the SEO value. */}
+            <a href="https://www.iso27001danismanlik.com/" target="_blank" rel="noopener nofollow" className="hover:text-white">
               SEO ve Tasarım<span className="visually-hidden"> (yeni sekmede açılır)</span>
             </a>
           </div>
