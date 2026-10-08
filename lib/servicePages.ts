@@ -222,7 +222,7 @@ Microsoft, sanallaştırma, yedekleme ve güvenlik lisanslarınızı gerçek kul
 
 ### 7. ISO 27001 ve KVKK teknik uyum
 
-ISO 27001 baş denetçi bakış açısıyla, standardın ve KVKK'nın teknik kontrollerini (erişim yönetimi, loglama, yedekleme, şifreleme, zafiyet yönetimi) altyapınıza uygularız. Belgelendirme sürecinin tamamı için kardeş kuruluşumuz [iso27001danismanlik.com](https://www.iso27001danismanlik.com/) ile birlikte çalışırız.
+ISO 27001 baş denetçi bakış açısıyla, standardın ve KVKK'nın teknik kontrollerini (erişim yönetimi, loglama, yedekleme, şifreleme, zafiyet yönetimi) altyapınıza uygularız. Belgelendirme sürecinin tamamı için kardeş kuruluşumuzun [ISO 27001 danışmanlığı](https://www.iso27001danismanlik.com/) ekibiyle birlikte çalışırız.
 
 ### 8. Yazılım ve sistem seçimi
 
@@ -357,7 +357,7 @@ IT altyapınızı birlikte değerlendirelim; ilk görüşme ve keşif ücretsizd
       {
         question: "Siber güvenlik ve KVKK de IT danışmanlığın kapsamında mı?",
         answer:
-          "Evet. Güvenlik her değerlendirmenin parçasıdır. KVKK ve ISO 27001'in teknik kontrollerini altyapınıza uygular, gerekirse sızma testiyle doğrularız. Belgelendirme sürecinin tamamı için iso27001danismanlik.com ile birlikte çalışırız.",
+          "Evet. Güvenlik her değerlendirmenin parçasıdır. KVKK ve ISO 27001'in teknik kontrollerini altyapınıza uygular, gerekirse sızma testiyle doğrularız. Belgelendirme sürecinin tamamı için kardeş kuruluşumuzun ISO 27001 danışmanlığı ekibiyle birlikte çalışırız.",
       },
     ],
   },

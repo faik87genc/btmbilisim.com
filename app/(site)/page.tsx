@@ -184,16 +184,16 @@ export default function Home() {
               <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-navy-800" aria-hidden="true" />
               <span>
                 Projelerimiz ISO 27001 baş denetçi deneyimiyle yürütülür; KVKK ve ISO 27001 gereksinimleri her kurulumun
-                parçasıdır. Belgelendirme için{" "}
+                parçasıdır. Belgelendirme sürecinde{" "}
                 <a
                   href="https://www.iso27001danismanlik.com/"
                   target="_blank"
                   rel="noopener"
                   className="font-semibold text-navy-800 underline underline-offset-4 hover:text-navy-700"
                 >
-                  iso27001danismanlik.com<span className="visually-hidden"> (yeni sekmede açılır)</span>
-                </a>
-                .
+                  ISO 27001 danışmanlığı<span className="visually-hidden"> (yeni sekmede açılır)</span>
+                </a>{" "}
+                ekibimizle birlikte çalışırız.
               </span>
             </p>
             <div className="mt-8">
