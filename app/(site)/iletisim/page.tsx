@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 };
 
 const rows = [
-  { icon: Phone, label: "Doğrudan Hat (Ara)", value: site.mobile.display, href: site.mobile.href },
+  { icon: Phone, label: "Telefon", value: site.phone.display, href: site.phone.href },
   { icon: MessageCircle, label: "WhatsApp", value: site.mobile.display, href: site.whatsapp.href, external: true },
-  { icon: Phone, label: "Sabit Hat", value: site.phone.display, href: site.phone.href },
   { icon: Mail, label: "E-Posta", value: site.email, href: `mailto:${site.email}` },
   { icon: Mail, label: "7/24 Teknik Destek", value: site.supportEmail.address, href: `mailto:${site.supportEmail.address}` },
   { icon: MapPin, label: "Adres", value: site.address },

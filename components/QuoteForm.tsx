@@ -214,7 +214,7 @@ export function QuoteForm() {
       <p role="status" aria-live="polite" className="form-note">
         {status === "sent" && "Talebiniz alındı. Aynı gün içinde size dönüş yapacağız."}
         {status === "wa" &&
-          `Talebiniz şu an iletilemedi. Bilgileriniz hazır: aşağıdaki düğmelerden biriyle gönderebilir, ${site.email} adresine yazabilir veya ${site.mobile.display} numarasından bizi arayabilirsiniz.`}
+          `Talebiniz şu an iletilemedi. Bilgileriniz hazır: aşağıdaki düğmelerden biriyle gönderebilir, ${site.email} adresine yazabilir veya ${site.phone.display} numarasından bizi arayabilirsiniz.`}
       </p>
       {status === "wa" && waHref && (
         <div className="form-fallback">

@@ -110,7 +110,7 @@ export function organizationJsonLd() {
         "@type": "ContactPoint",
         contactType: "technical support",
         email: site.supportEmail.address,
-        telephone: site.mobile.href.replace("tel:", ""),
+        telephone: site.phone.href.replace("tel:", ""),
         areaServed: "TR",
         availableLanguage: ["Turkish"],
         hoursAvailable: {

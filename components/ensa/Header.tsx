@@ -231,11 +231,11 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <a
-            href={site.mobile.href}
+            href={site.phone.href}
             className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-3 py-2.5 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 md:inline-flex xl:px-5"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden xl:inline">{site.mobile.display}</span>
+            <span className="hidden xl:inline">{site.phone.display}</span>
             <span className="xl:hidden">Hemen Ara</span>
           </a>
 

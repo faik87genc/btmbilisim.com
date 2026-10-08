@@ -19,10 +19,10 @@ export function ServiceContactButtons({ service, note = true }: { service: strin
           WhatsApp&apos;tan teklif isteyin<span className="visually-hidden"> (yeni sekmede açılır)</span>
         </a>
         <a
-          href={site.mobile.href}
+          href={site.phone.href}
           className="inline-flex w-full items-center justify-center gap-2 rounded-control sm:w-auto bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
         >
-          <Phone className="h-4 w-4" aria-hidden="true" /> {site.mobile.display}
+          <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
         </a>
       </div>
       {note && <p className="mt-3 text-sm text-slate-300">İlk görüşme ve keşif ücretsizdir; doğrudan uzman ekibe ulaşırsınız.</p>}

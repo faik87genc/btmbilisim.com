@@ -216,14 +216,10 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                 <p className="mt-2 text-sm leading-relaxed text-slate-500">
                   Ekibimiz ihtiyacınızı ve uygunluk durumunuzu ilk görüşmede netleştirir.
                 </p>
-                <Button href={site.mobile.href} variant="primary" className="mt-5 w-full">
-                  <Phone className="h-4 w-4" aria-hidden="true" /> {site.mobile.display}
+                <Button href={site.phone.href} variant="primary" className="mt-5 w-full">
+                  <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
                 </Button>
                 <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
-                  <a href={site.phone.href} className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700">
-                    <Phone className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    {site.phone.display} <span className="text-slate-500">(sabit hat)</span>
-                  </a>
                   <a
                     href={serviceWhatsAppHref(page.title)}
                     target="_blank"

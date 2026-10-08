@@ -18,7 +18,7 @@ export function FloatingContact() {
         style={{ bottom: "var(--cb-h, 0px)" }}
       >
         <a
-          href={site.mobile.href}
+          href={site.phone.href}
           className="flex h-16 items-center justify-center gap-2 bg-gold-500 text-sm font-semibold text-navy-950"
         >
           <Phone className="h-5 w-5" aria-hidden="true" /> Hemen Ara
@@ -38,9 +38,9 @@ export function FloatingContact() {
         style={{ bottom: "calc(var(--cb-h, 0px) + 1.5rem)" }}
       >
         <a
-          href={site.mobile.href}
-          aria-label={`Hemen arayın — ${site.mobile.display}`}
-          title={`Hemen arayın — ${site.mobile.display}`}
+          href={site.phone.href}
+          aria-label={`Hemen arayın — ${site.phone.display}`}
+          title={`Hemen arayın — ${site.phone.display}`}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-navy-950 shadow-lg ring-2 ring-navy-800/40 hover:bg-gold-400 transition-transform duration-200 hover:scale-105 focus-visible:scale-105"
         >
           <Phone className="h-5 w-5" />

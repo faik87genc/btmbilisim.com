@@ -137,13 +137,13 @@ export default function Home() {
             <p className="mt-1 text-sm text-slate-600">Arayın veya WhatsApp&apos;tan yazın; ihtiyacınızı uzmanla birlikte netleştirin.</p>
             <div className="mt-5 space-y-3">
               <a
-                href={site.mobile.href}
+                href={site.phone.href}
                 className="flex items-center gap-4 rounded-control bg-gold-500 px-4 py-3.5 text-navy-950 transition-colors hover:bg-gold-400"
               >
                 <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>
                   <span className="block text-xs font-medium">Hemen arayın</span>
-                  <span className="block font-display text-lg font-semibold">{site.mobile.display}</span>
+                  <span className="block font-display text-lg font-semibold">{site.phone.display}</span>
                 </span>
               </a>
               <a
@@ -164,12 +164,6 @@ export default function Home() {
             <p className="mt-4 flex items-center gap-2 text-sm text-slate-600">
               <span className="h-2 w-2 shrink-0 rounded-full bg-[#0f7a40]" aria-hidden="true" />
               7/24 teknik destek · ilk görüşme ücretsiz
-            </p>
-            <p className="mt-1.5 text-sm text-slate-600">
-              Sabit hat:{" "}
-              <a href={site.phone.href} className="font-semibold text-navy-800 hover:text-navy-700">
-                {site.phone.display}
-              </a>
             </p>
           </div>
         </Container>
