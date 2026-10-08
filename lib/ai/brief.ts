@@ -38,7 +38,8 @@ export function parseLinkList(raw: string | string[] | undefined): string[] {
   const out: string[] = [];
   for (const p of parts) {
     const slug = p.trim().replace(/^https?:\/\/[^/]+/i, "").replace(/^\/+|\/+$/g, "");
-    if (!slug || !/^[a-z0-9-]+$/.test(slug)) continue;
+    // Nested service routes ("siber-guvenlik/sizma-testi-penetrasyon-testi") are valid targets.
+    if (!slug || !/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/.test(slug)) continue;
     const href = `/${slug}/`;
     if (!out.includes(href)) out.push(href);
     if (out.length >= 8) break;

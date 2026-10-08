@@ -11,6 +11,7 @@ import type { ArticleDraft } from "./articleDraft";
 import { liveLinkTargets } from "./siteContext";
 import {
   finalizeLinkSuggestions,
+  isKnownSlug,
   linkedSlugs,
   type LinkSuggestion,
   type LinkTarget,
@@ -111,7 +112,7 @@ export async function runArticlePipeline(opts: {
   // article may not be published yet); the planned slug wins over the model's.
   const brief: ContentBrief = { ...opts.brief };
   const wanted = brief.requiredLinks ?? [];
-  brief.requiredLinks = wanted.filter((h) => knownSlugs.has(h.replace(/\//g, "")));
+  brief.requiredLinks = wanted.filter((h) => isKnownSlug(h.replace(/^\/+|\/+$/g, ""), knownSlugs));
   const notYet = wanted.filter((h) => !brief.requiredLinks!.includes(h));
   if (notYet.length) log.push(`henüz yayında olmayan iç link atlandı: ${notYet.join(", ")}`);
   if (brief.slug && knownSlugs.has(brief.slug)) {
@@ -149,7 +150,7 @@ export async function runArticlePipeline(opts: {
   for (let i = 0; i < MAX_REPAIRS; i++) {
     const inBody = linkedSlugs(draft.content);
     const missingReq = (brief.requiredLinks ?? []).filter(
-      (h) => !inBody.has(h.replace(/\//g, "")),
+      (h) => !inBody.has(h.replace(/^\/+|\/+$/g, "")),
     );
     const failings = [
       ...(missingReq.length

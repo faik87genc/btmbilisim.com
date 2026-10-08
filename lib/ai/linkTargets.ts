@@ -125,6 +125,11 @@ export function rankLinkTargets(targets: LinkTarget[], brief: string): LinkTarge
     .map((x) => x.t);
 }
 
+/** A live internal path: a coded route (incl. nested service pages) or a pages-table slug. */
+export function isKnownSlug(slug: string, known: ReadonlySet<string>): boolean {
+  return STATIC_LINKABLE.has(slug) || known.has(slug);
+}
+
 /** Normalise "/foo", "foo/", "https://www.site/foo/" → "foo". */
 export function toSlug(href: string, baseUrl?: string): string | null {
   let h = href.trim();
