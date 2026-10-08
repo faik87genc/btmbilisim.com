@@ -173,6 +173,9 @@ export function Footer() {
             <button type="button" id="cookie-prefs" className="hover:text-white">
               Çerez Tercihleri
             </button>
+            <a href="https://www.iso27001danismanlik.com/" target="_blank" rel="noopener" className="hover:text-white">
+              SEO ve Tasarım<span className="visually-hidden"> (yeni sekmede açılır)</span>
+            </a>
           </div>
         </Container>
       </div>
