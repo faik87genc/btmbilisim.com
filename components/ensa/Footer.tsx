@@ -34,8 +34,6 @@ const corporate = [
   { label: "Risk Skoru Testi", href: "/risk-skoru-testi/" },
   { label: "Blog", href: "/blog/" },
   { label: "İletişim", href: "/iletisim/" },
-  // Sister site: full ISO 27001 certification consulting.
-  { label: "iso27001danismanlik.com", href: "https://www.iso27001danismanlik.com/" },
 ];
 
 const legal = [
