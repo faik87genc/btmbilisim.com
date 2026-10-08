@@ -61,7 +61,7 @@ export const team: TeamMember[] = [
   {
     name: "Oğuzhan Batum",
     label: "Kurucumuz",
-    role: "Kurucu",
+    role: "Kurucu · Genel Müdür",
     bio: "Anadolu Üniversitesi Yönetim Bilişim Sistemleri mezunu olan Batum, Bonna Premium Porcelain, D724 Bilişim Hizmetleri ve SERI Bilgi Teknolojileri'ndeki sistem destek uzmanlığı ve bilgi teknolojileri şefliği görevlerinde edindiği teknik destek, Active Directory ve BT operasyonları deneyimini BTM Bilişim çatısı altında işletmelerin altyapı ve destek süreçlerine aktarıyor.",
     tags: ["BT Operasyonları", "Teknik Destek", "Active Directory", "Sorun Giderme"],
     email: "oguzhanbatum@btmbilisim.com",
