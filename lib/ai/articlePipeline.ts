@@ -24,6 +24,10 @@ const TITLE_SUFFIX = site.titleSuffix;
 
 const TARGET_SCORE = clampInt(process.env.BLOG_AI_TARGET_SCORE, 90, 50, 100);
 const MAX_REPAIRS = clampInt(process.env.BLOG_AI_MAX_REPAIRS, 1, 0, 3);
+// The editor page allows 300 s (maxDuration). A repair round takes about as
+// long as the first draft, so once this much time is gone another round would
+// risk Vercel killing the request and losing the draft we already have.
+const REPAIR_DEADLINE_MS = 140_000;
 
 function clampInt(
   raw: string | undefined,
@@ -103,6 +107,7 @@ export async function runArticlePipeline(opts: {
   const focusKeyword = keywords[0] ?? opts.topic.trim();
   const relevance = [opts.topic, ...keywords].join(" ");
   const log: string[] = [];
+  const startedAt = Date.now();
 
   // One DB read for the whole run (catalogue, link checks, suggestions).
   const linkTargets = await liveLinkTargets();
@@ -166,6 +171,13 @@ export async function runArticlePipeline(opts: {
       break;
     }
     if (failings.length === 0) break;
+    const elapsed = Date.now() - startedAt;
+    if (elapsed > REPAIR_DEADLINE_MS) {
+      log.push(
+        `süre sınırı: ${Math.round(elapsed / 1000)} sn geçti — düzeltme turu atlandı, eksikleri editörde tamamla`,
+      );
+      break;
+    }
 
     const repairResult = await improveArticle({
       focusKeyword,
