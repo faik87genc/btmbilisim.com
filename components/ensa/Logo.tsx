@@ -5,9 +5,12 @@ import Link from "next/link";
 export function Logo({
   variant = "image",
   className = "",
+  imgClassName = "h-11 md:h-14",
 }: {
   variant?: "image" | "light";
   className?: string;
+  /** Height classes for the image (width follows the 375x120 ratio). */
+  imgClassName?: string;
 }) {
   return (
     <Link href="/" className={`inline-flex items-center ${className}`} aria-label="BTM Bilişim — Ana sayfa">
@@ -19,7 +22,7 @@ export function Logo({
         height={120}
         // Top of every page: often the mobile LCP element.
         fetchPriority="high"
-        className="h-11 w-auto md:h-14"
+        className={`w-auto ${imgClassName}`}
       />
     </Link>
   );

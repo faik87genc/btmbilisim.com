@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   ArrowUpRight,
-  Award,
   BookOpen,
   Building2,
   ChevronDown,
@@ -9,12 +8,9 @@ import {
   Cookie,
   FileLock2,
   Gauge,
-  LayoutGrid,
-  Mail,
-  MonitorCog,
-  Newspaper,
   Package,
   Phone,
+  SearchCheck,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -23,7 +19,7 @@ import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
 import { NavActive } from "./NavActive";
 import { categoryIcons, productIcons, serviceIcon } from "@/lib/serviceIcons";
-import { navAreas, navCorporate, navProducts, type CorporateKey } from "@/lib/navigation";
+import { navAreas, navCorporate, navProducts, navReferences, type CorporateKey } from "@/lib/navigation";
 import { site } from "@/lib/site";
 
 // Mega-menu header (layout modelled on invekor.com.tr). Server-rendered: the
@@ -37,7 +33,6 @@ const MEGA_ITEMS = 5;
 const corporateIcons: Record<CorporateKey, LucideIcon> = {
   sirket: Building2,
   ekip: Users,
-  referans: Award,
   risk: Gauge,
   kvkk: FileLock2,
   cerez: Cookie,
@@ -49,12 +44,13 @@ const corporatePrefixes = navCorporate
   .join(" ");
 
 const topLink =
-  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-2 py-2 text-[14.5px] xl:px-3 font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
+  "flex items-center gap-1.5 whitespace-nowrap rounded-sm px-1.5 py-2 text-[14px] xl:px-3 xl:text-[14.5px] font-medium text-slate-500 transition-colors hover:text-navy-800 data-[active]:text-navy-800 data-[active]:underline data-[active]:decoration-gold-500 data-[active]:decoration-2 data-[active]:underline-offset-8";
 
 // Desktop dropdown panel. Open/close timing lives in ensa.css (.mega-panel):
 // a short open delay and a longer close delay, so moving the pointer
 // diagonally from the trigger to a far column of the panel does not close it.
 // Never shown while #site-header has data-menus-off (see NavActive).
+// The panel scales in from its trigger (transform-origin set in ensa.css).
 const panel = "mega-panel absolute top-full z-50 pt-3";
 const panelBox = "rounded-lg border border-navy-950/10 bg-white shadow-[0_28px_60px_-28px_rgba(7,43,85,0.35)]";
 
@@ -62,24 +58,22 @@ const chevron = "h-3.5 w-3.5 transition-transform duration-200 group-hover:-rota
 
 export function Header() {
   return (
-    <header
-      id="site-header"
-      className="sticky top-0 z-50 border-b border-navy-950/10 bg-white shadow-[0_6px_24px_-18px_rgba(7,43,85,0.35)]"
-    >
+    // Translucent material + scroll-edge shadow instead of a hard border: see
+    // .site-header in ensa.css (solid white for reduced transparency / more contrast).
+    <header id="site-header" className="site-header sticky top-0 z-50">
       <NavActive />
-      <Container className="relative flex items-center justify-between gap-6 py-3 lg:max-w-7xl">
-        <Logo className="shrink-0" />
+      <Container className="relative flex items-center justify-between gap-6 py-3 lg:max-w-7xl lg:gap-4 xl:gap-6">
+        {/* 1024–1279px: a slightly smaller logo leaves room for the extra nav item and the CTA pair. */}
+        <Logo className="shrink-0" imgClassName="h-11 md:h-14 lg:h-11 xl:h-14" />
 
         <nav aria-label="Ana menü" className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           <Link href="/danismanlik/it-danismanlik-hizmetleri/" className={topLink} data-nav="/danismanlik/it-danismanlik-hizmetleri/">
-            <MonitorCog className="hidden h-4 w-4 xl:block" aria-hidden="true" />
             IT Danışmanlık
           </Link>
 
           {/* Hizmetler — mega menu */}
           <div className="group" data-menu-group="">
             <Link href="/hizmetler/" className={topLink} data-nav={servicePrefixes}>
-              <LayoutGrid className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Hizmetler
               <ChevronDown className={chevron} aria-hidden="true" />
             </Link>
@@ -154,7 +148,6 @@ export function Header() {
           {/* Ürünler */}
           <div className="group relative" data-menu-group="">
             <Link href="/yazilim-urunlerimiz/" className={topLink} data-nav="/yazilim-urunlerimiz/">
-              <Package className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Ürünler
               <ChevronDown className={chevron} aria-hidden="true" />
             </Link>
@@ -190,14 +183,19 @@ export function Header() {
             </div>
           </div>
 
+          {navReferences && (
+            <Link href={navReferences.href} className={topLink} data-nav={navReferences.href}>
+              {navReferences.label}
+            </Link>
+          )}
+
           {/* Hakkımızda */}
           <div className="group relative" data-menu-group="">
             <Link href="/hakkimizda/" className={topLink} data-nav={corporatePrefixes}>
-              <Building2 className="hidden h-4 w-4 xl:block" aria-hidden="true" />
               Hakkımızda
               <ChevronDown className={chevron} aria-hidden="true" />
             </Link>
-            <div data-menu-panel="" className={`${panel} left-0 w-[320px]`}>
+            <div data-menu-panel="" data-origin="start" className={`${panel} left-0 w-[320px]`}>
               <div className={`${panelBox} p-2`}>
                 {navCorporate.map((c) => {
                   const Icon = corporateIcons[c.key];
@@ -220,29 +218,39 @@ export function Header() {
           </div>
 
           <Link href="/blog/" className={topLink} data-nav="/blog/">
-            <Newspaper className="hidden h-4 w-4 xl:block" aria-hidden="true" />
             Blog
           </Link>
           <Link href="/iletisim/" className={topLink} data-nav="/iletisim/">
-            <Mail className="hidden h-4 w-4 xl:block" aria-hidden="true" />
             İletişim
           </Link>
         </nav>
 
-        <div className="flex items-center gap-1">
+        {/* CTA pair: the written request (free site survey) leads, the phone
+            stays one tap away as a secondary icon button (the number itself
+            is in the TopBar above; at 1024–1279px only the floating call
+            button, for width). Phones use the bottom call bar instead. */}
+        <div className="flex items-center gap-2">
           <a
             href={site.phone.href}
-            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-3 py-2.5 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-colors hover:bg-gold-400 md:inline-flex xl:px-5"
+            aria-label={`Hemen arayın — ${site.phone.display}`}
+            title={`Hemen arayın — ${site.phone.display}`}
+            className="press hidden h-10 w-10 shrink-0 items-center justify-center rounded-control border border-navy-950/15 text-navy-800 transition-[color,background-color,border-color,transform] hover:border-navy-800/50 hover:bg-paper-50 md:inline-flex lg:hidden xl:inline-flex"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden xl:inline">{site.phone.display}</span>
-            <span className="xl:hidden">Hemen Ara</span>
           </a>
+          <Link
+            href="/#teklif"
+            className="press hidden h-10 shrink-0 items-center gap-2 whitespace-nowrap rounded-control bg-gold-500 px-4 text-sm font-semibold text-navy-950 shadow-[0_10px_24px_-12px_rgba(232,129,47,0.9)] transition-[background-color,transform] hover:bg-gold-400 sm:inline-flex xl:px-5"
+          >
+            <SearchCheck className="h-4 w-4" aria-hidden="true" />
+            Ücretsiz Keşif
+          </Link>
 
           <MobileMenu
           areas={navAreas}
           products={navProducts.map(({ slug, name }) => ({ slug, name }))}
           corporate={navCorporate.map(({ label, href }) => ({ label, href }))}
+          references={navReferences}
           />
         </div>
       </Container>

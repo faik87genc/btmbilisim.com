@@ -47,7 +47,46 @@ export type TeamMember = {
   linkedin?: string;
 };
 
+/**
+ * Başarı hikâyesi (/referanslar/). Yalnızca gerçek bir müşteri ve yazılı izinle;
+ * `consent` boşsa kart yayınlanmaz. Sonuç rakamları yalnızca müşterinin
+ * onayladığı ölçümle yazılır — rakam yoksa `outcome` niteliksel kalır ya da boş bırakılır.
+ */
+export type CaseStory = {
+  /** "musteri-adi" (ileride detay sayfası açılırsa) */
+  slug: string;
+  /** Müşterinin resmi / izinli adı */
+  customer: string;
+  /** /referanslar/<dosya>.svg|png — saydam zemin */
+  logo: string;
+  /** Sektör, ör. "Üretim" */
+  sector?: string;
+  /** İlçe / şehir, ör. "Gebze" */
+  city?: string;
+  /** Müşterinin onayladığı başlık cümlesi */
+  headline: string;
+  /** Zorluk (1–3 cümle) */
+  challenge: string;
+  /** BTM'nin yaptığı iş (1–3 cümle) */
+  solution: string;
+  /** Sonuç; rakam yalnızca müşteri onaylıysa */
+  outcome?: string;
+  /** Hizmet anahtarları (lib/services) → etiket + ilgili hizmet sayfasına link */
+  services: string[];
+  /** Alıntı ayrı izin ister; `consent` boşsa gösterilmez. */
+  quote?: { text: string; name: string; role: string; consent: string };
+  /** Müşteri izinli saha / ofis fotoğrafı; `consent` boşsa gösterilmez. */
+  image?: { src: string; alt: string; consent: string };
+  /** Proje yılı, ör. "2025" */
+  year?: string;
+  /** Yazılı iznin tarihi, kanalı ve izni veren kişi, ör. "2026-10-12 e-posta, X Bey". Boşsa YAYINLANMAZ. */
+  consent: string;
+};
+
 export const testimonials: Testimonial[] = [];
+
+// Başarı hikâyeleri — boş başlar; her kayıt gerçek müşteri + yazılı izin ister.
+export const caseStories: CaseStory[] = [];
 
 // Onaylı iş ortakları / referanslar (sahibinin onayıyla, 2026-10-04).
 export const references: Reference[] = [
@@ -76,3 +115,4 @@ export const team: TeamMember[] = [
 ];
 
 export const liveTestimonials = testimonials.filter((t) => t.consent.trim() && t.text.trim());
+export const liveCaseStories = caseStories.filter((s) => s.consent.trim() && s.headline.trim());

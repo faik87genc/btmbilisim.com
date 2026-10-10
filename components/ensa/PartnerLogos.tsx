@@ -1,19 +1,16 @@
 import Image from "next/image";
 import { Container } from "./Container";
 import { MotionReveal } from "./MotionReveal";
+import { references } from "@/lib/data/trust";
 
+// Logolar lib/data/trust.ts → references listesinden gelir (tek kaynak).
 // Her logo 720x240 saydam PNG olarak normalize edildi: kırpma, ölçek ve optik
 // denge dosyaların içine işlendi, bu yüzden hepsi aynı kutuda render edilir.
 const LOGO_WIDTH = 720;
 const LOGO_HEIGHT = 240;
 
-const partners = [
-  { src: "/partners/balorman-int.png", alt: "Balorman INT" },
-  { src: "/partners/blr-balorman.png", alt: "BLR Balorman" },
-  { src: "/partners/palet-global.png", alt: "Palet Global" },
-];
-
 export function PartnerLogos() {
+  if (references.length === 0) return null;
   return (
     <section className="bg-paper-100 py-16 md:py-20">
       <Container>
@@ -26,12 +23,12 @@ export function PartnerLogos() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {partners.map((partner, i) => (
-            <MotionReveal key={partner.src} delay={i * 0.06} className="h-full">
+          {references.map((partner, i) => (
+            <MotionReveal key={partner.logo} delay={i * 0.06} className="h-full">
               <div className="flex h-full items-center justify-center rounded-lg bg-white px-6 py-7 shadow-[0_10px_30px_-20px_rgba(10,18,32,0.15)] transition-shadow duration-300 hover:shadow-[0_16px_40px_-20px_rgba(10,18,32,0.25)] md:px-8 md:py-9">
                 <Image
-                  src={partner.src}
-                  alt={partner.alt}
+                  src={partner.logo}
+                  alt={partner.name}
                   width={LOGO_WIDTH}
                   height={LOGO_HEIGHT}
                   loading="lazy"

@@ -20,16 +20,19 @@ export const navAreas: NavArea[] = serviceCategoryList.map((c) => ({
 
 export const navProducts = products.map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline }));
 
-export type CorporateKey = "sirket" | "ekip" | "referans" | "risk" | "kvkk" | "cerez";
+export type CorporateKey = "sirket" | "ekip" | "risk" | "kvkk" | "cerez";
 
 export const navCorporate: { key: CorporateKey; label: string; href: string; note: string }[] = [
   { key: "sirket", label: "Şirket", href: "/hakkimizda/", note: "BTM Bilişim'i tanıyın" },
-  // Team and references appear once lib/data/trust.ts has real entries.
+  // The team page appears once lib/data/trust.ts has real entries.
   ...(team.length ? [{ key: "ekip" as const, label: "Ekibimiz", href: "/ekibimiz/", note: "Uzman kadromuz" }] : []),
-  ...(references.length
-    ? [{ key: "referans" as const, label: "Referanslar", href: "/referanslar/", note: "Bize güvenen kurumlar" }]
-    : []),
   { key: "risk", label: "Risk Skoru Testi", href: "/risk-skoru-testi/", note: "8 soruda güvenlik risk seviyeniz" },
   { key: "kvkk", label: "KVKK Aydınlatma Metni", href: "/kvkk-aydinlatma-metni/", note: "Kişisel verilerin korunması" },
   { key: "cerez", label: "Çerez Politikası", href: "/cerez-politikasi/", note: "Çerez kullanımı ve tercihler" },
 ];
+
+// References are a top-level item (not under "Hakkımızda") so the trust page
+// is one click away; hidden while lib/data/trust.ts has no references.
+export const navReferences: { label: string; href: string } | null = references.length
+  ? { label: "Referanslar", href: "/referanslar/" }
+  : null;

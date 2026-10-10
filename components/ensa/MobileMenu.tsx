@@ -15,10 +15,13 @@ export function MobileMenu({
   areas,
   products,
   corporate,
+  references,
 }: {
   areas: NavArea[];
   products: { slug: string; name: string }[];
   corporate: { label: string; href: string }[];
+  /** Top-level "Referanslar" item, same as the desktop nav (null while there are none). */
+  references: { label: string; href: string } | null;
 }) {
   const pathname = usePathname();
   // The panel belongs to the page it was opened on, so it closes by itself
@@ -131,6 +134,12 @@ export function MobileMenu({
                   </Link>
                 ))}
               </div>
+            )}
+
+            {references && (
+              <Link onClick={() => setOpen(false)} href={references.href} className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+                {references.label}
+              </Link>
             )}
 
             {group("kurumsal", "Hakkımızda")}

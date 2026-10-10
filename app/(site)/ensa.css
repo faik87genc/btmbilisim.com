@@ -164,12 +164,26 @@
     color: var(--foreground);
     font-family: var(--font-sans);
   }
+  /* Size-specific tracking and leading: the larger the heading, the tighter
+     both get; small headings stay near 0. Utilities (tracking-*, leading-*)
+     on a component still win over these defaults. */
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
+  }
+  h1 {
+    letter-spacing: -0.022em;
+    line-height: 1.1;
+  }
+  h2 {
+    letter-spacing: -0.016em;
+    line-height: 1.2;
+  }
+  h4 {
+    letter-spacing: 0;
   }
   :focus-visible {
     outline: 2px solid var(--navy-800);
@@ -489,6 +503,12 @@
     white-space: nowrap;
   }
 
+  /* Press feedback on pointer-down (not on release): a quick, small scale. */
+  .press:active,
+  .btn:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+  }
   .btn {
     display: inline-flex;
     align-items: center;
@@ -500,7 +520,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s ease-out;
   }
   .btn-primary {
     background: var(--gold-500);
@@ -727,26 +747,28 @@
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+/* Restrained: a short travel, and the section is never fully blank while it
+   waits to be revealed (a fast scroll shows content, not empty space). */
 .reveal-hidden {
-  opacity: 0;
+  opacity: 0.35;
 }
 .reveal-hidden.reveal-up {
-  transform: translateY(24px);
+  transform: translateY(14px);
 }
 .reveal-hidden.reveal-down {
-  transform: translateY(-24px);
+  transform: translateY(-14px);
 }
 .reveal-hidden.reveal-left {
-  transform: translateX(24px);
+  transform: translateX(14px);
 }
 .reveal-hidden.reveal-right {
-  transform: translateX(-24px);
+  transform: translateX(-14px);
 }
 .reveal-hidden.reveal-blur {
   filter: blur(10px);
 }
 .reveal-hover:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 
 /* Pages that end with the ContactCta band do not repeat the footer's strip. */
@@ -774,6 +796,25 @@ body:has([data-contact-cta]) [data-footer-cta] {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.15s ease 0.2s, visibility 0s linear 0.35s;
+}
+/* The panel grows out of its trigger: centred panels from the top middle, the
+   left-aligned one (data-origin="start") from its top-left corner. Scale lives
+   on the inner box: the panel itself is positioned with Tailwind's `translate`. */
+#site-header .mega-panel > * {
+  transform: scale(0.97) translateY(-4px);
+  transform-origin: 50% 0;
+  transition: transform 0.15s cubic-bezier(0.32, 0.72, 0, 1) 0.2s;
+}
+#site-header .mega-panel[data-origin="start"] > * {
+  transform-origin: 2.5rem 0;
+}
+#site-header [data-menu-group]:hover > .mega-panel > *,
+#site-header [data-menu-group]:has(:focus-visible) > .mega-panel > * {
+  transform: none;
+  transition: transform 0.18s cubic-bezier(0.32, 0.72, 0, 1) 0.15s;
+}
+#site-header [data-menu-group]:has(:focus-visible) > .mega-panel > * {
+  transition: none;
 }
 #site-header [data-menu-group]:hover > .mega-panel {
   visibility: visible;
@@ -818,4 +859,76 @@ body:has([data-contact-cta]) [data-footer-cta] {
 .cv-auto {
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
+}
+
+/* Sticky header material (components/ensa/Header.tsx): translucent white with
+   a blur, so content scrolls visibly underneath. No hard border — a soft
+   scroll-edge shadow fades in once the page has scrolled (scroll-driven
+   animation; browsers without it show the edge at all times). White stays at
+   0.9 alpha so slate-500 nav text keeps AA contrast even over the navy hero. */
+.site-header {
+  background: rgb(255 255 255 / 0.9);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  height: 14px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgb(7 43 85 / 0.1), rgb(7 43 85 / 0));
+}
+@supports (animation-timeline: scroll()) {
+  .site-header::after {
+    opacity: 0;
+    animation: scroll-edge linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 48px;
+  }
+  @keyframes scroll-edge {
+    to {
+      opacity: 1;
+    }
+  }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: #fff;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .site-header {
+    background: #fff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-contrast: more) {
+  .site-header {
+    background: #fff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--navy-950);
+  }
+  .site-header::after {
+    display: none;
+  }
+}
+
+/* Reduced motion: no scale/travel at all — menus and presses keep only their
+   opacity / colour change (the global rule above already zeroes durations). */
+@media (prefers-reduced-motion: reduce) {
+  #site-header .mega-panel > *,
+  .press:active,
+  .btn:active,
+  .reveal-hover:hover {
+    transform: none !important;
+  }
+  .reveal-hidden {
+    opacity: 1;
+    transform: none !important;
+    filter: none !important;
+  }
 }

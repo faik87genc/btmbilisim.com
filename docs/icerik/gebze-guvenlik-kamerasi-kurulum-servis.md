@@ -1,0 +1,145 @@
+---
+title: "Gebze güvenlik kamerası kurulumu, bakım ve teknik servis"
+metaTitle: "Gebze Güvenlik Kamerası Kurulum ve Servis"
+metaDescription: "Gebze güvenlik kamerası kurulumu, periyodik bakım ve arıza servisi: işyeri, site ve villa için keşif, yerleşim planı ve test raporu. Ücretsiz keşif isteyin."
+excerpt: "Gebze, Darıca, Çayırova, Dilovası ve Tuzla'da işyeri, mağaza, ofis, apartman ve villalar için güvenlik kamerası kurulumu, periyodik bakım, arıza tespiti ve yükseltme sürecini adım adım anlatıyoruz."
+focusKeyword: "Gebze güvenlik kamerası"
+tags: ["Kamera Sistemleri", "Gebze Kamera Kurulum", "Kamera Bakım ve Servis"]
+---
+
+Gebze güvenlik kamerası sistemi; doğru keşif, kör nokta bırakmayan yerleşim, sağlam kablolama ve düzenli bakımla birlikte işe yarar. BTM Bilişim olarak Gebze, Darıca, Çayırova, Dilovası ve Tuzla'da işyeri, mağaza, ofis, apartman, site ve villalar için kurulum, periyodik bakım, arıza tespiti ve yükseltme hizmeti veriyoruz. Aşağıda sürecin her adımını anlatıyoruz.
+
+Hazır setler genellikle en çok ihtiyaç duyulan anda, yani gece, yağmurda ya da elektrik kesintisinde zayıf kalır. Gebze güvenlik kamerası için gelen servis çağrılarında sorun çoğu zaman kameranın kendisinde değil; yanlış açıda, yetersiz kablolamada ve hiç kontrol edilmeyen kayıt diskindedir. Kamera türleri ve teknolojiler hakkında daha geniş bilgi için [IP kamera ve güvenlik kamerası sistemleri](/sistem-network/ip-kamera-guvenlik-kamerasi-sistemleri/) sayfamıza da göz atabilirsiniz.
+
+## Gebze güvenlik kamerası hizmetleri: kurulum, bakım, arıza, yükseltme
+
+Sahadaki işlerin büyük kısmı dört başlıktan birine girer. Gebze güvenlik kamerası talebinizin hangi başlığa girdiğini bilmek keşif görüşmesini de kısaltır. Aşağıdaki tablo her hizmet türünde ne yaptığımızı ve iş bittiğinde elinize ne geçtiğini özetliyor.
+
+| Hizmet türü | Ne yapılır | Çıktı |
+|---|---|---|
+| Kurulum | Yerinde keşif, risk noktalarının belirlenmesi, yerleşim planı, Cat6 kablolama, PoE switch ve NVR montajı, kayıt ve mobil erişim ayarı, gece ve gündüz testi | Çalışan sistem, kamera yerleşim planı, cihaz ve erişim listesi, kullanıcı eğitimi |
+| Periyodik bakım | Lens ve muhafaza temizliği, açı kontrolü, disk sağlığı ve kayıt sürekliliği kontrolü, firmware güncellemesi, güç kontrolü, kayıttan geri izleme testi | Bakım raporu, tespit edilen riskler ve öneri listesi |
+| Arıza tespiti | Kamera, kablo, switch, güç kaynağı, ağ ve kayıt cihazı sırayla test edilir; arızalı parça onarılır ya da değiştirilir | Arıza kaydı, yapılan müdahalenin özeti, yeniden test sonucu |
+| Yükseltme | Analog veya eski IP kameraların yenilenmesi, H.265 destekli NVR'a geçiş, disk kapasitesinin artırılması, yeni kamera noktası, güvenli uzaktan erişim | Güncel yerleşim planı, yeni kayıt süresi hesabı, eski ve yeni yapının karşılaştırması |
+
+Mevcut bir Gebze güvenlik kamerası sisteminiz varsa çoğu zaman tek başlıkla kalınmaz. Arıza için çağrılan ekip, diskin dolmak üzere olduğunu ya da kayıt cihazının uzun süredir güncellenmediğini de görebilir. Bu durumda tek seferlik onarım ile planlı bakım arasındaki farkı yazılı olarak sunuyoruz; kararı siz veriyorsunuz.
+
+## Mekâna göre kamera planı
+
+Aynı sokaktaki iki bina bile farklı bir plan ister. Gebze güvenlik kamerası projelerinde mekân türüne göre öne çıkan noktalar şunlardır.
+
+### İşyeri ve mağaza
+
+Kasa ve ödeme alanında yüzü ve el hareketini seçebilecek çözünürlük ile uygun odak uzaklığı gerekir; geniş açılı tek bir kamera bu ayrıntıyı çoğu zaman yakalayamaz. Depo ve stok alanında mal giriş-çıkışını ve raf aralarını gören geniş açılı kameralar kullanılır. Cam cepheli mağazalarda karşı ışık sorun yaratır; WDR destekli kamera seçilmezse içeri giren kişinin yüzü siluete döner. Dış cephe için IP66 sınıfı, darbeye açık noktalarda IK10 muhafazalı modeller tercih edilir.
+
+### Ofis
+
+Ofislerde amaç çoğunlukla giriş, resepsiyon, sunucu odası ve arşiv gibi kritik noktaları izlemektir. Çalışma masalarını doğrudan gören, ekranları okunabilir hale getiren açılar hem gereksizdir hem de kişisel veri açısından risk oluşturur. Kameralar genellikle mevcut ofis ağına bağlandığı için kamera trafiğini ayrı bir VLAN'da tutmak önemlidir; bu konuyu [ağ altyapısı kurulum ve yönetimi](/sistem-network/ag-altyapisi-kurulum-ve-yonetimi/) çalışmasıyla birlikte ele alıyoruz.
+
+### Apartman ve site
+
+Toplu yaşam alanlarında öncelik bina girişleri, otopark, asansör, çocuk parkı ve sığınak gibi ortak alanlardır. Asansör içi kamera için hareketli kabinde kablo kopmasını önleyen asansöre özel kablo ya da kablosuz aktarım çözümleri kullanılır. Site girişlerinde plakanın okunabilmesi için açı ve deklanşör ayarı ayrıca planlanır. Site ve apartmanlarda Gebze güvenlik kamerası kararını yönetim verir; kimin hangi kamerayı izleyeceği, kayıtların ne kadar saklanacağı ve aydınlatma levhalarının yeri kurulumdan önce netleşmelidir.
+
+### Villa ve müstakil ev
+
+Bahçeli evlerde bahçe kapısı, araç girişi, arka cephe ve havuz çevresi kör nokta bırakmadan kapatılmalıdır. Sokak aydınlatmasının zayıf kaldığı yerlerde IR aydınlatmalı ya da düşük ışıkta renkli görüntü veren Starlight sınıfı kameralar fark yaratır. Hareket algılandığında telefona bildirim, bazı modellerde siren ve ışıkla uyarı, iki yönlü ses gibi özellikler ev kullanımında işe yarar. Komşu mülkü ve yolu gereğinden fazla gören açılardan kaçınmak gerekir.
+
+Fabrika, büyük depo ve OSB içindeki tesisler farklı bir planlama ister; bu konuyu [Gebze OSB ve fabrika kamera kurulumu](/gebze-osb-fabrika-kamera-kurulumu/) sayfamızda ayrıntılı anlatıyoruz.
+
+## Gebze, Darıca, Çayırova, Dilovası ve Tuzla: bölgeye göre farklar
+
+Gebze güvenlik kamerası hizmeti verdiğimiz ilçelerin yapısı birbirinden farklıdır ve bu fark ekipman seçimine doğrudan yansır. Aşağıdaki notlar genel gözlemlerimizdir; her projede asıl belirleyici olan yerinde keşiftir.
+
+- **Gebze:** Sanayi, ticaret ve yeni konut projeleri iç içedir. Aynı hafta içinde bir çarşı dükkânı, bir ofis katı ve yeni bir site ile çalışmak olağandır. Bu yüzden Gebze güvenlik kamerası keşfinde ilk iş, yapının ticari mi, konut mu yoksa karma mı olduğunu ve ağ altyapısının kime ait olduğunu netleştirmektir.
+- **Darıca:** Sahile yakın kesimlerde nem ve tuzlu hava dış mekân ekipmanını yıpratır; kalitesiz muhafazalarda oksitlenme ve konnektör sorunları erken görülür. IP66 muhafaza, su geçirmez bağlantı kutusu ve sızdırmaz kablo girişi burada vazgeçilmezdir. Müstakil ev ve apartman yoğunluğu nedeniyle konut projeleri öne çıkar.
+- **Çayırova:** Konut siteleri ile sanayi ve lojistik alanları birbirine yakındır. Sitelerde ortak alan ve otopark kapsaması, işletmelerde geniş açık alan ve araç giriş-çıkışı önem kazanır. Bazı sokaklarda gece aydınlatması yetersiz kalabildiği için düşük ışık performansını keşifte ayrıca değerlendiriyoruz.
+- **Dilovası:** Ağır sanayi ve organize sanayi alanlarının yoğun olduğu bir bölgedir. Toz ve kirlilik lens ile muhafaza üzerinde daha hızlı birikir, bu da bakım aralığını kısaltır. Uzun kablo mesafelerinde fiber omurga ve endüstriyel tip switch gündeme gelir.
+- **Tuzla:** İstanbul tarafında, sanayi ve lojistik trafiği yoğun bir bölgedir. İşyeri ve depo projelerinde giriş-çıkış, yükleme rampası ve araç hareketinin kaydı öne çıkar. Uzaktan izleme talebi sık geldiği için güvenli uzaktan erişim yapılandırmasına özellikle dikkat ediyoruz.
+
+## Gebze güvenlik kamerası kurulumu adım adım
+
+Kurulumu her projede aynı sırayla yürütüyoruz. Süre kamera sayısına, kablo güzergâhına ve binanın yapısına göre değişir; iş planını keşiften sonra yazılı olarak paylaşıyoruz.
+
+1. **Yerinde keşif:** Ekibimiz alanı gezer; giriş-çıkışlar, kasa, depo, otopark ve arka cepheler gibi riskli noktaları ve mevcut aydınlatmayı not eder. Gece görüntüsü kritikse akşam saatinde ikinci bir kontrol yapılabilir.
+2. **Yerleşim planı:** Her kamera için konum, açı, lens ve amaç (tanıma, izleme ya da genel görünüm) belirlenir. Kör noktalar plan üzerinde kapatılır.
+3. **Altyapı tasarımı:** Kablo güzergâhı, PoE switch kapasitesi (802.3af/at), bakır Ethernet için tek segmentte 100 metre sınırı, NVR'ın yeri ve UPS ihtiyacı netleşir.
+4. **Kablolama ve montaj:** Cat6 kablolar kanal ya da boru içinde çekilir, dış mekân bağlantıları sızdırmaz kutularla yapılır, kameralar sabitlenir.
+5. **Kayıt ve ağ ayarları:** H.265 sıkıştırma, kayıt modu (sürekli ya da hareketle), saat senkronizasyonu, kullanıcı yetkileri ve varsayılan şifrelerin değiştirilmesi tamamlanır.
+6. **Test:** Gündüz ve gece görüntüsü, kayıttan geri izleme, mobil erişim ve elektrik kesintisi senaryosu denenir.
+7. **Teslim ve eğitim:** Yerleşim planı, cihaz listesi ve erişim bilgileri teslim edilir; geçmiş kaydı bulma ve görüntüyü dışa aktarma gösterilir.
+
+Kayıt süresi ile disk kapasitesinin nasıl hesaplandığını [kamera kayıt sistemleri ve depolama çözümleri](/kamera-kayit-sistemleri-depolama-cozumleri/) sayfamızda ayrıntılı bulabilirsiniz.
+
+Gebze güvenlik kamerası tesliminde şu maddeleri birlikte kontrol etmenizi öneriyoruz:
+
+- [ ] Her kamera gece ve gündüz net görüntü veriyor, planlanan alanda kör nokta kalmadı
+- [ ] Kayıt cihazında geçmiş bir anı bulup izleyebiliyorsunuz
+- [ ] Görüntüyü USB belleğe ya da dosyaya aktarmayı biliyorsunuz
+- [ ] Varsayılan yönetici şifreleri değiştirildi, kullanıcılar ayrı hesaplarla tanımlandı
+- [ ] Mobil uygulamadan canlı ve geçmiş görüntüye erişiliyor
+- [ ] Kayıt cihazı, switch ve modem UPS'e bağlı
+- [ ] Hesaplanan kayıt süresi yazılı olarak teslim edildi
+- [ ] Kamera bulunan alanlara aydınlatma levhaları asıldı
+
+## Periyodik bakım ve arıza tespiti
+
+Bir Gebze güvenlik kamerası sistemi günün her saati çalışır ve zamanla yıpranır. Toz, nem ve sıcaklık değişimleri görüntüyü bozar, disk sessizce yorulur, kayıt cihazının yazılımı eskir. Sorun çoğu zaman bir olay yaşandıktan sonra, kayıt aranırken fark edilir. Periyodik bakımın amacı tam olarak bunu önlemektir.
+
+### Bakım kapsamı
+
+Gebze güvenlik kamerası bakım ziyaretinde lens ve muhafaza temizliği, görüntü netliği ve açı kontrolü, IR performansı, disk sağlığı ve kayıt sürekliliği, depolama doluluğu, firmware güncellemesi, PoE switch ve güç kaynağı kontrolü ile ağ bağlantı testini yapıyoruz. Her ziyaretin sonunda bulguları ve önerileri içeren bir rapor teslim ediyoruz; böylece sistemin durumunu siz de takip edebiliyorsunuz. Bakım aralığını ortam koşuluna göre belirliyoruz: tozlu bir sanayi alanında daha sık, kapalı bir ofiste daha seyrek. Sözleşmeli düzenli destek modelini [IT bakım ve destek hizmetleri](/sistem-network/it-bakim-ve-destek-hizmetleri/) kapsamında da sunuyoruz.
+
+### Arıza tespitinde izlediğimiz yol
+
+Sahada en sık karşılaştığımız şikâyetler; görüntünün hiç gelmemesi, kaydın durması, ağ bağlantısının kopması, diskin dolması ve gece görüşünün zayıflamasıdır. Arızayı tahminle değil, sırayla test ederek buluyoruz: önce kamera ve konnektörler, sonra kablo ve PoE beslemesi, ardından switch ve ağ, en son kayıt cihazı ve yazılım. Bu sıra, sağlam parçaların gereksiz yere değiştirilmesini önler. Onarımdan sonra sistemi yeniden test ediyor, yapılan müdahaleyi yazılı olarak bildiriyoruz.
+
+Çevresel etkiler de hesaba katılmalı. Nem almış bir bağlantı kutusu, gevşemiş bir montaj aparatı ya da kameranın önüne doğru uzayan bir ağaç dalı zamanla görüntüyü bozar. Bu tür sorunlar genellikle bakım ziyaretinde, arızaya dönüşmeden yakalanır.
+
+## Sık Yapılan Hatalar
+
+Gebze güvenlik kamerası projelerinde sahada en sık gördüğümüz hatalar ve önlemleri şunlardır:
+
+- **Yanlış açı ve yükseklik:** Kamera çok yükseğe takılınca kişilerin yalnızca başının üstü görünür, yüz seçilemez. Önlem: amaç (tanıma mı, genel izleme mi) belirlenip yükseklik buna göre seçilmeli.
+- **Yetersiz kamera sayısı:** Bütçe için nokta azaltılınca giriş ya da arka cephe açıkta kalır. Önlem: yerleşim planında her kritik noktanın hangi kamerayla kapsandığı gösterilmeli.
+- **Kalitesiz kablolama:** Ucuz kablo ve açıkta bırakılan konnektörler kopma ve görüntü kaybı yaratır. Önlem: Cat6 kablo, kanal içinde güzergâh ve sızdırmaz dış bağlantı.
+- **Kayıt kontrolünün unutulması:** Kayıt uzun süre durmuş olabilir ve bu ancak olaydan sonra anlaşılır. Önlem: periyodik bakımda geri izleme testi ve disk sağlığı kontrolü.
+- **Varsayılan şifre ve açık port:** Değiştirilmeyen şifreler ve gelişigüzel açılan portlar kameraları dışarıdan erişilebilir hale getirir. Önlem: güçlü şifre, güncel firmware ve güvenli uzaktan erişim yapılandırması.
+- **KVKK yükümlülüklerinin atlanması:** Kamera kaydı kişisel veridir; levha asılmaması ve kayda kimin eriştiğinin belirsiz olması hukuki risk doğurur. Önlem: aydınlatma levhası, saklama süresi politikası ve yetki listesi; gerekirse [KVKK danışmanlığı](/danismanlik/kvkk-danismanligi/) desteği.
+
+## Sıkça Sorulan Sorular
+
+### Gebze dışındaki ilçelere de hizmet veriyor musunuz?
+
+Evet. Gebze güvenlik kamerası kurulumunun yanı sıra Darıca, Çayırova, Dilovası ve Tuzla'da kurulum, bakım ve arıza servisi veriyoruz. Kocaeli'nin diğer ilçeleri ile İstanbul Anadolu Yakası'ndaki talepleri proje kapsamına göre değerlendiriyoruz. Keşif tarihini ilk görüşmede birlikte belirliyoruz; arıza durumlarında müdahale zamanı ekip yoğunluğuna ve mesafeye göre değişebilir.
+
+### İnternet kesilirse kameralar kayıt yapmaya devam eder mi?
+
+Kameralar ve kayıt cihazı aynı yerel ağda çalıştığı için internet kesildiğinde kayıt devam eder. Etkilenen yalnızca telefondan uzaktan izlemedir; bağlantı geri geldiğinde geçmiş kayıtları uygulama üzerinden izleyebilirsiniz. Elektrik kesintisi ise farklı bir konudur: kayıt cihazı ve switch UPS'e bağlı değilse sistem tamamen durur. Bu nedenle kurulumda UPS ihtiyacını ayrıca hesaplıyoruz.
+
+### Kamera kayıtları kaç gün saklanmalı?
+
+Tek bir doğru süre yoktur; işletmenin ihtiyacı ve kişisel veri saklama politikası belirler. Süre uzadıkça disk ihtiyacı artar. Kamera sayısı, çözünürlük, kare hızı, H.265 kullanımı ve hareketle kayıt ayarı bu hesabı doğrudan etkiler. Keşiften sonra hedeflediğiniz süreye göre disk kapasitesini hesaplıyor, süresi dolan kayıtların otomatik olarak silinmesini ayarlıyoruz.
+
+### Eski analog kameralarımı IP sisteme geçirebilir miyim?
+
+Çoğu durumda evet. Mevcut koaksiyel kablolar sağlamsa hibrit kayıt cihazıyla bir süre birlikte kullanılabilir ve geçiş aşamalı yapılabilir. Yeni noktalar ve görüntü kalitesinin kritik olduğu alanlar için Cat6 kablo ve PoE beslemeli IP kameraya geçmek daha sağlıklıdır. Keşifte hangi kabloların korunabileceğini test ediyor, seçenekleri karşılaştırmalı olarak sunuyoruz.
+
+### Periyodik bakım ne sıklıkla yapılmalı?
+
+Gebze güvenlik kamerası sistemlerinde bakım aralığı ortam koşullarına ve sistemin önemine göre belirlenir. Toz ve nemin yoğun olduğu sanayi alanlarında ya da sahile yakın dış mekân kameralarında daha sık kontrol gerekir; kapalı ve temiz bir ofiste aralık uzayabilir. Her ziyarette lens temizliği, disk ve kayıt kontrolü, firmware güncellemesi ve geri izleme testi yapıyor, bulguları raporla paylaşıyoruz.
+
+### Apartmanda her daire sakini kameraları izleyebilir mi?
+
+Bu karar apartman ya da site yönetimine aittir ve kişisel verilerin korunması açısından dikkatle ele alınmalıdır. Teknik olarak sakinlere yalnızca belirli kameraların canlı görüntüsünü gösteren sınırlı yetkiler tanımlanabilir. Geçmiş kayıtlara erişimi ise yönetimin belirlediği az sayıda yetkiliyle sınırlamak daha doğrudur. Erişim kararlarını yazılı hale getirmenizi öneriyoruz.
+
+## Kaynaklar
+
+- [Kişisel Verileri Koruma Kurumu (KVKK)](https://www.kvkk.gov.tr/)
+- [USOM - Ulusal Siber Olaylara Müdahale Merkezi](https://www.usom.gov.tr/)
+- [CISA - Cybersecurity and Infrastructure Security Agency](https://www.cisa.gov/)
+
+## Gebze güvenlik kamerası için ilk adım
+
+İyi kurulmuş bir Gebze güvenlik kamerası sistemi, doğru keşif ve düzenli bakımla uzun yıllar işini yapar. BTM Bilişim olarak 2010'dan bu yana Gebze ve çevresinde çalışıyor, kurulumdan sonra da bakım ve servisle yanınızda oluyoruz. Ücretsiz keşif ve teklif için [formu doldurun](/#teklif).
+
+*Hazırlayan: BTM Bilişim teknik ekibi.*
