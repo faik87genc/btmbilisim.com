@@ -35,6 +35,16 @@ export function MobileMenu({
     setOpenOn(next ? pathname : null);
   };
 
+  // Lock the page behind the open panel so only the menu scrolls.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    return () => {
+      document.documentElement.style.overflow = prev;
+    };
+  }, [open]);
+
   // Escape closes the panel.
   useEffect(() => {
     if (!open) return;
