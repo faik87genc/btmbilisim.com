@@ -8,8 +8,7 @@ import { absoluteUrl } from "@/lib/siteView";
 import { DEFAULT_OG_IMAGE, organizationJsonLd } from "@/lib/structuredData";
 import { JsonLd } from "@/components/site/Parts";
 import { Container } from "@/components/ensa/Container";
-import { PageHero } from "@/components/ensa/PageHero";
-import { BlogCard } from "@/components/ensa/BlogCard";
+import { CtaBand, LightHero, PostGrid, TagFilters } from "@/components/site/ui";
 
 // Blog index: 9 posts per page, page 1 at /blog/, later pages at
 // /blog/sayfa-N/ (the old site's paging URLs).
@@ -50,94 +49,101 @@ export function Pager({ page, total, hrefFor }: { page: number; total: number; h
   if (total <= 1) return null;
   const keep = new Set([1, total, page - 1, page, page + 1].filter((p) => p >= 1 && p <= total));
   const pages = [...keep].sort((a, b) => a - b);
+  const box =
+    "inline-flex h-10 min-w-10 items-center justify-center rounded-[10px] border px-3 text-sm font-semibold tabular-nums transition-colors";
+  const idle = "border-slate-200 bg-white text-ink-900 hover:border-gold-600/40 hover:text-gold-700";
   const arrow = (disabled: boolean) =>
-    `flex h-9 w-9 items-center justify-center rounded-full border border-navy-950/10 text-slate-600 transition-colors hover:border-gold-500/40 hover:text-ink-900 ${
-      disabled ? "pointer-events-none opacity-40" : ""
-    }`;
+    `${box} gap-1.5 ${idle} ${disabled ? "pointer-events-none opacity-40" : ""}`;
   return (
-    <nav aria-label="Sayfalar" className="mt-12 flex items-center justify-center gap-2">
-      <Link href={hrefFor(Math.max(1, page - 1))} className={arrow(page <= 1)} aria-label="Önceki sayfa" aria-disabled={page <= 1}>
+    <nav aria-label="Sayfalar" className="mt-14 flex flex-wrap items-center justify-center gap-2">
+      <Link href={hrefFor(Math.max(1, page - 1))} className={arrow(page <= 1)} aria-disabled={page <= 1} tabIndex={page <= 1 ? -1 : undefined}>
         <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+        <span className="hidden sm:inline">Önceki</span>
+        <span className="visually-hidden sm:hidden">Önceki sayfa</span>
       </Link>
-      {pages.map((p, i) => (
-        <span key={p} className="flex items-center gap-2">
-          {i > 0 && pages[i - 1] !== p - 1 && (
-            <span className="px-0.5 text-slate-500" aria-hidden="true">
-              …
-            </span>
-          )}
-          <Link
-            href={hrefFor(p)}
-            aria-current={p === page ? "page" : undefined}
-            className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-colors ${
-              p === page
-                ? "bg-gold-500 text-navy-950"
-                : "border border-navy-950/10 text-slate-600 hover:border-gold-500/40 hover:text-ink-900"
-            }`}
-          >
-            {p}
-          </Link>
-        </span>
-      ))}
+      <ol className="flex items-center gap-2">
+        {pages.map((p, i) => (
+          <li key={p} className="flex items-center gap-2">
+            {i > 0 && pages[i - 1] !== p - 1 && (
+              <span className="px-0.5 text-slate-500" aria-hidden="true">
+                …
+              </span>
+            )}
+            <Link
+              href={hrefFor(p)}
+              aria-current={p === page ? "page" : undefined}
+              aria-label={`Sayfa ${p}`}
+              className={`${box} ${p === page ? "border-gold-600 bg-gold-600 text-white" : idle}`}
+            >
+              {p}
+            </Link>
+          </li>
+        ))}
+      </ol>
       <Link
         href={hrefFor(Math.min(total, page + 1))}
         className={arrow(page >= total)}
-        aria-label="Sonraki sayfa"
         aria-disabled={page >= total}
+        tabIndex={page >= total ? -1 : undefined}
       >
+        <span className="hidden sm:inline">Sonraki</span>
+        <span className="visually-hidden sm:hidden">Sonraki sayfa</span>
         <ChevronRight className="h-4 w-4" aria-hidden="true" />
       </Link>
     </nav>
   );
 }
 
+/** The tag filter row: tags that group several posts, most used first. */
+export function blogFilterTags(posts: Page[]) {
+  return getAllTags(posts)
+    .filter((t) => t.count >= MIN_TAG_COUNT)
+    .slice(0, MAX_TAG_CHIPS);
+}
+
 export async function BlogIndex({ pageNum }: { pageNum: number }) {
   const posts = await allPosts();
   const total = Math.max(1, Math.ceil(posts.length / PER_PAGE));
   const chunk = posts.slice((pageNum - 1) * PER_PAGE, pageNum * PER_PAGE);
-  const tags = getAllTags(posts)
-    .filter((t) => t.count >= MIN_TAG_COUNT)
-    .slice(0, MAX_TAG_CHIPS);
+  const tags = blogFilterTags(posts);
 
   return (
     <>
       <JsonLd data={organizationJsonLd()} />
-      <PageHero
+      <LightHero
         title="Bilişim ve güvenlik rehberi"
-        eyebrow="Blog"
+        eyebrow="Kaynaklar · Blog"
         lead="Siber güvenlik, ağ ve sistem altyapısı, yedekleme ve kamera sistemleri üzerine sahadan uygulamalı yazılar."
         crumbs={pageNum > 1 ? [{ text: "Blog", href: "/blog/" }, { text: `Sayfa ${pageNum}` }] : [{ text: "Blog" }]}
-      />
+      >
+        {tags.length > 0 && <TagFilters tags={tags} current={null} allIsPage={pageNum === 1} />}
+      </LightHero>
 
-      <section className="bg-paper-50 py-16 md:py-20">
+      <section className="bg-white py-14 md:py-20" aria-labelledby="blog-list-title">
         <Container>
-          {pageNum === 1 && tags.length > 0 && (
-            <div className="-mx-6 mb-10 flex gap-2 overflow-x-auto px-6 pb-2 md:mx-0 md:flex-wrap md:overflow-visible md:px-0 md:pb-0">
-              {tags.map((t) => (
-                <Link
-                  key={t.slug}
-                  href={`/blog/etiket/${t.slug}/`}
-                  className="shrink-0 whitespace-nowrap rounded-full border border-navy-950/10 bg-white px-3 py-1 text-sm text-slate-600 transition-colors hover:border-gold-500/40 hover:text-ink-900"
-                >
-                  {t.tag} <span className="text-slate-500">{t.count}</span>
-                </Link>
-              ))}
-            </div>
-          )}
-
+          <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 id="blog-list-title" className="font-display text-xl font-semibold tracking-[-0.01em] text-navy-950">
+              {pageNum > 1 ? `Tüm yazılar · Sayfa ${pageNum}` : "En güncel yazılar"}
+            </h2>
+            <p className="text-sm tabular-nums text-slate-500">
+              {posts.length} yazı · Sayfa {pageNum}/{total}
+            </p>
+          </div>
           {chunk.length === 0 ? (
             <p className="text-sm text-slate-500">Henüz yayınlanmış yazı yok.</p>
           ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {chunk.map((p, i) => (
-                <BlogCard key={p.id} post={p} delay={(i % 3) * 0.05} priority={i < 3} />
-              ))}
-            </div>
+            <PostGrid posts={chunk} priorityCount={3} />
           )}
 
           <Pager page={pageNum} total={total} hrefFor={pageHrefFor} />
         </Container>
       </section>
+
+      <CtaBand
+        title="Altyapınız için bir yol haritası mı arıyorsunuz?"
+        lead="Yazılarda anlattıklarımızı sahada uyguluyoruz. Mevcut durumunuzu birlikte inceleyelim; ilk görüşme ve keşif ücretsizdir."
+        secondary={{ label: "Hizmetlerimiz", href: "/hizmetler/" }}
+      />
     </>
   );
 }

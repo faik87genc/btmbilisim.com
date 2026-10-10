@@ -9,6 +9,36 @@
 //   file under public/referanslar/ (PNG/SVG, transparent background).
 // - Team members only with their consent; a photo is optional.
 // - No unverifiable figures ("100+ müşteri", "%100 başarı", "garanti").
+//   The one exception is `companyFacts` → `customers` below: the owner's own
+//   figure (20+, 2026-10-10). Change only that line; never above what the owner
+//   can document, and never repeat it by hand elsewhere (copy, meta, JSON-LD) —
+//   read it from `companyFacts`.
+
+/** One line of the stat rows (homepage ProofStrip, about page panel). */
+export type CompanyFact = {
+  key: "since" | "customers" | "support" | "iso";
+  /** "2010", "20+" — only a value already on the site or given by the owner */
+  value: string;
+  /** "yılından beri sahada" */
+  label: string;
+  /** Where the value comes from; an empty source hides the line. */
+  source: string;
+};
+
+export const companyFacts: CompanyFact[] = [
+  { key: "since", value: "2010", label: "yılından beri sahada", source: "site" },
+  // Owner-provided figure (2026-10-10); update here
+  { key: "customers", value: "20+", label: "kurumsal müşteri", source: "Sahip beyanı, 2026-10-10" },
+  { key: "support", value: "7/24", label: "teknik destek", source: "site.supportEmail" },
+  { key: "iso", value: "ISO 27001", label: "baş denetçi deneyimi", source: "Ekip: Faik Genç, ISO 27001 LA" },
+];
+
+export const liveFacts = companyFacts.filter((f) => f.source.trim() && f.value.trim());
+
+/** The live facts for `keys`, in that order (a page picks its own set). */
+export function factsFor(keys: CompanyFact["key"][]): CompanyFact[] {
+  return keys.flatMap((k) => liveFacts.filter((f) => f.key === k));
+}
 
 export type Testimonial = {
   text: string;

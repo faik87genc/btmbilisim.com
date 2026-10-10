@@ -55,7 +55,7 @@ export function MobileMenu({
       onClick={() => toggle(name)}
       aria-expanded={section === name}
       aria-controls={`mm-${name}`}
-      className="flex items-center justify-between rounded-sm px-2 py-3 text-base font-medium text-ink-900"
+      className="flex items-center justify-between rounded-md px-2 py-3 text-base font-medium text-ink-900"
     >
       {label}
       <ChevronDown className={`h-4 w-4 transition-transform ${section === name ? "rotate-180" : ""}`} aria-hidden="true" />
@@ -67,7 +67,7 @@ export function MobileMenu({
       <button
         ref={toggleRef}
         type="button"
-        className="inline-flex items-center justify-center rounded-sm p-2 text-ink-900 lg:hidden"
+        className="inline-flex items-center justify-center rounded-control p-2 text-navy-950 lg:hidden"
         aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
         aria-expanded={open}
         aria-controls="mobil-menu"
@@ -79,25 +79,25 @@ export function MobileMenu({
       {open && (
         <div
           id="mobil-menu"
-          className="absolute inset-x-0 top-full max-h-[calc(100dvh-72px)] overflow-y-auto border-t border-navy-950/10 bg-white shadow-[0_24px_40px_-24px_rgba(7,43,85,0.35)] lg:hidden"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-white shadow-lift lg:hidden"
         >
           {/* Bottom padding clears the fixed "Hemen Ara / WhatsApp" bar so the last CTA stays tappable. */}
           <Container className="flex flex-col gap-1 pt-4 pb-24">
-            <Link onClick={() => setOpen(false)} href="/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/" className="rounded-md px-2 py-3 text-base font-medium text-ink-900">
               Ana Sayfa
             </Link>
-            <Link onClick={() => setOpen(false)} href="/danismanlik/it-danismanlik-hizmetleri/" className="rounded-sm px-2 py-3 text-base font-semibold text-navy-800">
+            <Link onClick={() => setOpen(false)} href="/danismanlik/it-danismanlik-hizmetleri/" className="rounded-md px-2 py-3 text-base font-semibold text-gold-700">
               IT Danışmanlık
             </Link>
 
             {group("hizmetler", "Hizmetler")}
             {section === "hizmetler" && (
-              <div id="mm-hizmetler" className="mb-2 space-y-3 border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-hizmetler" className="mb-2 space-y-3 border-l border-line pl-3">
                 {areas.map((a) => {
                   const Icon = categoryIcons[a.slug];
                   return (
                     <details key={a.slug} className="group">
-                      <summary className="flex cursor-pointer list-none items-center justify-between py-1.5 text-sm font-semibold text-navy-800">
+                      <summary className="flex cursor-pointer list-none items-center justify-between py-1.5 text-sm font-semibold text-navy-950">
                         <span className="flex items-center gap-2">
                           {Icon && <Icon className="h-4 w-4" aria-hidden="true" />}
                           {a.title}
@@ -117,7 +117,7 @@ export function MobileMenu({
                     </details>
                   );
                 })}
-                <Link onClick={() => setOpen(false)} href="/hizmetler/" className="block py-1.5 text-sm font-semibold text-navy-800">
+                <Link onClick={() => setOpen(false)} href="/hizmetler/" className="block py-1.5 text-sm font-semibold text-navy-950">
                   Tüm Hizmetler
                 </Link>
               </div>
@@ -125,7 +125,7 @@ export function MobileMenu({
 
             {group("urunler", "Ürünler")}
             {section === "urunler" && (
-              <div id="mm-urunler" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-urunler" className="mb-2 flex flex-col border-l border-line pl-3">
                 <Link onClick={() => setOpen(false)} href="/yazilim-urunlerimiz/" className="px-2 py-2 text-sm font-medium text-gold-700">
                   Tüm ürünler
                 </Link>
@@ -138,14 +138,14 @@ export function MobileMenu({
             )}
 
             {references && (
-              <Link onClick={() => setOpen(false)} href={references.href} className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+              <Link onClick={() => setOpen(false)} href={references.href} className="rounded-md px-2 py-3 text-base font-medium text-ink-900">
                 {references.label}
               </Link>
             )}
 
             {group("kurumsal", "Hakkımızda")}
             {section === "kurumsal" && (
-              <div id="mm-kurumsal" className="mb-2 flex flex-col border-l-2 border-gold-500/40 pl-3">
+              <div id="mm-kurumsal" className="mb-2 flex flex-col border-l border-line pl-3">
                 {corporate.map((c) => (
                   <Link key={c.href} onClick={() => setOpen(false)} href={c.href} className="px-2 py-2 text-sm text-slate-600">
                     {c.label}
@@ -154,16 +154,16 @@ export function MobileMenu({
               </div>
             )}
 
-            <Link onClick={() => setOpen(false)} href="/blog/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/blog/" className="rounded-md px-2 py-3 text-base font-medium text-ink-900">
               Blog
             </Link>
-            <Link onClick={() => setOpen(false)} href="/iletisim/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
+            <Link onClick={() => setOpen(false)} href="/iletisim/" className="rounded-md px-2 py-3 text-base font-medium text-ink-900">
               İletişim
             </Link>
             <Link
               href="/#teklif"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-control bg-gold-500 px-5 py-3 text-sm font-semibold text-white"
             >
               <Send className="h-4 w-4" aria-hidden="true" />
               Ücretsiz Keşif İsteyin

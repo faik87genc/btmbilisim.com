@@ -277,7 +277,7 @@ export default function Home() {
               <SectionHeading
                 tone="dark"
                 eyebrow="Hızlı Teklif"
-                title="İhtiyacınızı anlatın, aynı gün dönelim."
+                title="İhtiyacınızı anlatın, en geç bir iş günü içinde dönelim."
                 description="Birkaç bilgiyle kapsamınızı anlayalım; keşif randevusu ve teklif için en kısa sürede sizinle iletişime geçelim."
               />
               <p className="mt-6 text-sm text-slate-300">

@@ -18,39 +18,39 @@ export function TeamCards({ members, headingLevel = 2 }: { members: TeamMember[]
   return (
     <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
       {members.map((m) => (
-        <li key={m.name} className="flex flex-col rounded-card border border-navy-950/10 bg-white p-6 shadow-card md:p-7">
-          {m.label && <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">{m.label}</p>}
+        <li key={m.name} className="card flex flex-col p-6 md:p-8">
+          {m.label && <p className="eyebrow">{m.label}</p>}
           <div className="mt-3 flex items-center gap-4">
             {m.photo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={m.photo} alt={m.name} className="h-16 w-16 rounded-full object-cover" loading="lazy" />
+              <img src={m.photo} alt={m.name} className="h-20 w-20 shrink-0 rounded-card object-cover" loading="lazy" />
             ) : (
               <span
-                className="inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy-800 font-display text-lg font-bold text-white"
+                className="inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-card bg-gold-100 font-display text-xl font-bold text-gold-700"
                 aria-hidden="true"
               >
                 {initials(m.name)}
               </span>
             )}
             <div>
-              <Name className="font-display text-xl font-semibold text-ink-900">{m.name}</Name>
-              <p className="mt-0.5 text-sm font-semibold text-navy-700">{m.role}</p>
+              <Name className="font-display text-[1.375rem] font-semibold leading-[1.3] tracking-[-0.01em] text-navy-950">{m.name}</Name>
+              <p className="mt-0.5 text-sm font-semibold text-gold-700">{m.role}</p>
             </div>
           </div>
-          <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600">{m.bio}</p>
+          <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-slate-500">{m.bio}</p>
           {m.tags && m.tags.length > 0 && (
             <ul className="mt-5 flex flex-wrap gap-2" aria-label="Uzmanlık alanları">
               {m.tags.map((t) => (
-                <li key={t} className="rounded-control bg-paper-50 px-2.5 py-1 text-xs font-medium text-navy-800 ring-1 ring-navy-950/10">
+                <li key={t} className="rounded-md bg-paper-50 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-line">
                   {t}
                 </li>
               ))}
             </ul>
           )}
           {(m.email || m.linkedin) && (
-            <div className="mt-5 flex gap-4 border-t border-navy-950/10 pt-4 text-sm">
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-4 text-sm">
               {m.email && (
-                <a href={`mailto:${m.email}`} className="inline-flex items-center gap-1.5 font-semibold text-navy-800 hover:text-navy-700">
+                <a href={`mailto:${m.email}`} className="inline-flex items-center gap-1.5 font-semibold text-gold-700 hover:text-gold-800">
                   <Mail className="h-4 w-4" aria-hidden="true" /> {m.email}
                 </a>
               )}
@@ -59,7 +59,7 @@ export function TeamCards({ members, headingLevel = 2 }: { members: TeamMember[]
                   href={m.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-semibold text-navy-800 hover:text-navy-700"
+                  className="inline-flex items-center gap-1.5 font-semibold text-gold-700 hover:text-gold-800"
                 >
                   <ExternalLink className="h-4 w-4" aria-hidden="true" /> LinkedIn<span className="visually-hidden"> (yeni sekmede açılır)</span>
                 </a>

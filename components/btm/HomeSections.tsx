@@ -11,33 +11,70 @@ import {
   Fish,
   Gauge,
   Globe2,
+  Headphones,
   KeyRound,
   LockKeyhole,
   MailWarning,
   MonitorCheck,
   Network,
   Quote,
+  Route,
   ScanSearch,
+  SearchCheck,
   Server,
   ShieldCheck,
   Usb,
   Users,
   Wifi,
+  Wrench,
 } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
+import { IconTile } from "@/components/ensa/IconTile";
 import { Button } from "@/components/ensa/Button";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
-import { liveTestimonials, references } from "@/lib/data/trust";
+import { CaseStoryCard } from "@/components/btm/CaseStoryCard";
+import { liveCaseStories, liveTestimonials, references } from "@/lib/data/trust";
 
-// Home/landing sections, filled with BTM's own services. Layout rules (design
-// review): one card radius (rounded-card), one heading (SectionHeading), one
-// button (Button); orange only for primary actions and arrows; dotted texture
-// on the hero only. Testimonials and references render nothing until real
-// entries exist in lib/data/trust.ts.
+// Home/landing sections, filled with BTM's own services. Layout rules
+// (identity v2, docs/kurumsal-kimlik-v2.md): one card (.card), one icon shape
+// (IconTile), one heading (SectionHeading), one button (Button); brand blue is
+// a signal, not decoration. Testimonials and references render nothing until
+// real entries exist in lib/data/trust.ts.
 
-const CARD = "rounded-card border border-navy-950/10 bg-white shadow-card";
-const CARD_ON_WHITE = "rounded-card border border-navy-950/10 bg-paper-50";
+const CARD = "card";
+
+/** How an engagement runs — shared by the homepage and the about page. */
+export const APPROACH_STEPS = [
+  { icon: SearchCheck, title: "Keşif ve analiz", text: "Altyapınızı, güvenliğinizi ve IT maliyetlerinizi yerinde inceliyoruz." },
+  { icon: Route, title: "Yol haritası", text: "Önceliklendirilmiş, kalem kalem bütçelenmiş bir eylem planı sunuyoruz." },
+  { icon: Wrench, title: "Uygulama", text: "Kurulum ve geçişleri kendi ekibimizle, minimum kesintiyle yapıyoruz." },
+  { icon: Headphones, title: "Sürekli destek", text: "İzleme, bakım ve dış kaynak IT müdürü hizmetiyle sistemi ayakta tutuyoruz." },
+];
+
+/** Numbered step cards (01–04) in one row from lg up. */
+export function ApproachSteps({ headingLevel = 3 }: { headingLevel?: 3 | 4 }) {
+  const H = headingLevel === 3 ? "h3" : "h4";
+  return (
+    <ol className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+      {APPROACH_STEPS.map((s, i) => (
+        <li key={s.title} className="card relative flex h-full flex-col p-6 md:p-7">
+          <span className="flex items-center justify-between gap-3">
+            <IconTile icon={s.icon} />
+            <span className="font-display text-sm font-bold tabular-nums tracking-[0.04em] text-slate-500">
+              <span className="visually-hidden">Adım </span>
+              {String(i + 1).padStart(2, "0")}
+            </span>
+          </span>
+          <H className="mt-5 font-display text-[1.1875rem] font-semibold leading-[1.3] tracking-[-0.01em] text-navy-950">
+            {s.title}
+          </H>
+          <p className="mt-2 text-[0.9375rem] leading-relaxed text-slate-500">{s.text}</p>
+        </li>
+      ))}
+    </ol>
+  );
+}
 
 const SHOWCASE = [
   {
@@ -92,11 +129,9 @@ export function SecurityShowcase() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {SHOWCASE.map((s, i) => (
             <MotionReveal key={s.title} delay={i * 0.08} className="h-full">
-              <div className={`${CARD_ON_WHITE} flex h-full flex-col p-6 md:p-7`}>
+              <div className={`card flex h-full flex-col p-6 md:p-7`}>
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
-                    <s.icon className="h-6 w-6" aria-hidden="true" />
-                  </span>
+                  <IconTile icon={s.icon} size="lg" />
                   <div>
                     <h3 className="font-display text-xl font-semibold text-ink-900">{s.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.text}</p>
@@ -104,15 +139,15 @@ export function SecurityShowcase() {
                 </div>
                 <ul className="mb-7 mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {s.chips.map((c) => (
-                    <li key={c.label} className="flex items-center gap-2 rounded-control bg-white px-3 py-2 text-xs font-medium text-slate-700">
-                      <c.icon className="h-3.5 w-3.5 shrink-0 text-navy-700" aria-hidden="true" />
+                    <li key={c.label} className="flex items-center gap-2 rounded-control bg-paper-50 px-3 py-2 text-xs font-medium text-slate-700 ring-1 ring-line">
+                      <c.icon className="h-3.5 w-3.5 shrink-0 text-gold-600" aria-hidden="true" />
                       {c.label}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={s.href}
-                  className="mt-auto flex items-center justify-between rounded-control bg-white px-4 py-3 text-sm font-semibold text-navy-800 ring-1 ring-navy-950/10 transition-colors hover:bg-paper-100"
+                  className="mt-auto flex items-center justify-between rounded-control bg-white px-4 py-3 text-sm font-semibold text-navy-950 ring-1 ring-line transition-colors hover:text-gold-700 hover:ring-gold-600/40"
                 >
                   {s.cta} <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
                 </Link>
@@ -122,12 +157,10 @@ export function SecurityShowcase() {
 
           {/* Social-engineering demo (was a dark band of its own) */}
           <MotionReveal className="md:col-span-2">
-            <div className={`${CARD_ON_WHITE} grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center`}>
+            <div className={`card grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center`}>
               <div>
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-navy-800 text-white">
-                    <Fish className="h-6 w-6" aria-hidden="true" />
-                  </span>
+                  <IconTile icon={Fish} size="lg" />
                   <div>
                     <h3 className="font-display text-xl font-semibold text-ink-900">Sosyal mühendislik testi demosu</h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -143,8 +176,8 @@ export function SecurityShowcase() {
                     { icon: Gauge, label: "Farkındalık skoru" },
                     { icon: ShieldCheck, label: "Sonuç ve eğitim önerisi" },
                   ].map((c) => (
-                    <li key={c.label} className="inline-flex items-center gap-1.5 rounded-control bg-white px-3 py-1.5">
-                      <c.icon className="h-3.5 w-3.5 text-navy-700" aria-hidden="true" /> {c.label}
+                    <li key={c.label} className="inline-flex items-center gap-1.5 rounded-control bg-paper-50 px-3 py-1.5 ring-1 ring-line">
+                      <c.icon className="h-3.5 w-3.5 text-gold-600" aria-hidden="true" /> {c.label}
                     </li>
                   ))}
                 </ul>
@@ -157,19 +190,19 @@ export function SecurityShowcase() {
                   </Button>
                 </div>
               </div>
-              <figure className="rounded-card border border-navy-950/10 bg-white p-5">
-                <figcaption className="flex items-center justify-between gap-3 border-b border-navy-950/10 pb-3">
-                  <span className="flex items-center gap-2 font-display text-sm font-semibold text-navy-800">
+              <figure className="rounded-card bg-paper-50 p-5 ring-1 ring-line">
+                <figcaption className="flex items-center justify-between gap-3 border-b border-line pb-3">
+                  <span className="flex items-center gap-2 font-display text-sm font-semibold text-navy-950">
                     <FileText className="h-4 w-4" aria-hidden="true" /> Rapor içeriği
                   </span>
-                  <span className="rounded-control bg-paper-50 px-2 py-0.5 text-[11px] font-medium text-slate-600 ring-1 ring-navy-950/10">
+                  <span className="rounded-md bg-white px-2 py-0.5 text-[11px] font-medium text-slate-600 ring-1 ring-line">
                     Örnek başlıklar
                   </span>
                 </figcaption>
                 <ol className="mt-3 space-y-2 text-sm text-slate-700">
                   {PHISHING_REPORT.map((r, i) => (
                     <li key={r} className="flex items-start gap-3">
-                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-800 text-[11px] font-semibold text-white">
+                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-gold-100 font-display text-[11px] font-bold text-gold-700">
                         {i + 1}
                       </span>
                       {r}
@@ -194,52 +227,92 @@ function initials(name: string) {
     .toLocaleUpperCase("tr");
 }
 
-/**
- * References + testimonials in one light-grey section. Renders nothing until
- * lib/data/trust.ts has entries (and testimonials have recorded consent).
- */
-export function TrustSection() {
-  if (references.length === 0 && liveTestimonials.length === 0) return null;
+/** Reference logos in colour (same as /referanslar/), white bordered cards. */
+function ReferenceLogos() {
   return (
-    <section className="cv-auto bg-paper-50 py-20 md:py-24">
-      <Container className="max-w-7xl">
-        <SectionHeading
-          align="center"
-          eyebrow={liveTestimonials.length ? "Müşteri Yorumları" : "Referanslarımız"}
-          title={liveTestimonials.length ? "Müşterilerimiz ne diyor?" : "Bize güvenenler"}
-        />
-        {references.length > 0 && (
-          <>
-            <ul className="mt-10 flex flex-wrap justify-center gap-4">
-              {references.slice(0, 12).map((r) => (
-                <li key={r.name} className="flex h-24 w-[calc(50%-0.5rem)] items-center justify-center rounded-card border border-navy-950/10 bg-white p-4 sm:w-52 lg:w-60">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain grayscale transition hover:grayscale-0" />
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 text-center">
+    <ul className="flex flex-wrap gap-4">
+      {references.slice(0, 12).map((r) => (
+        <li
+          key={r.name}
+          className="card flex h-24 w-[calc(50%-0.5rem)] items-center justify-center p-4 sm:w-52 lg:w-60"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain" />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * References + testimonials on the one cool ground (tint-50). Renders nothing
+ * until lib/data/trust.ts has entries (and testimonials / case stories have
+ * recorded consent). `variant="strip"` is the logos only, with a link — for
+ * pages that already have their own headings (about page): no extra <h2>.
+ */
+export function TrustSection({ variant = "full" }: { variant?: "full" | "strip" }) {
+  if (variant === "strip") {
+    if (references.length === 0) return null;
+    return (
+      <section aria-label="Referanslarımız" className="cv-auto bg-tint-50 py-16 md:py-20">
+        <Container className="max-w-7xl">
+          <MotionReveal>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <p className="eyebrow">Referanslarımız</p>
               <Button href="/referanslar/" variant="ghost-light">
-                Tüm referansları inceleyin <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
+                Tüm referanslar <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
-          </>
+            <div className="mt-8">
+              <ReferenceLogos />
+            </div>
+          </MotionReveal>
+        </Container>
+      </section>
+    );
+  }
+
+  if (references.length === 0 && liveTestimonials.length === 0 && liveCaseStories.length === 0) return null;
+  const story = liveCaseStories[0];
+  return (
+    <section className="cv-auto bg-tint-50 py-20 md:py-24">
+      <Container className="max-w-7xl">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading
+            eyebrow={liveTestimonials.length ? "Müşteri Yorumları" : "Referanslarımız"}
+            title={liveTestimonials.length ? "Müşterilerimiz ne diyor?" : "Bize güvenenler"}
+          />
+          {references.length > 0 && (
+            <Button href="/referanslar/" variant="ghost-light">
+              Tüm referanslar <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Button>
+          )}
+        </div>
+        {story && (
+          <MotionReveal className="mt-12">
+            <CaseStoryCard story={story} />
+          </MotionReveal>
+        )}
+        {references.length > 0 && (
+          <MotionReveal className={story ? "mt-8" : "mt-12"}>
+            <ReferenceLogos />
+          </MotionReveal>
         )}
         {liveTestimonials.length > 0 && (
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {liveTestimonials.map((t, i) => (
-              <MotionReveal key={t.name + t.consent} delay={(i % 3) * 0.06} className="h-full">
+              <MotionReveal key={t.name + t.consent} delay={(i % 3) * 0.05} className="h-full">
                 <figure className={`${CARD} flex h-full flex-col p-7`}>
-                  <Quote className="h-7 w-7 text-navy-800/40" aria-hidden="true" />
+                  <Quote className="h-7 w-7 text-gold-600/40" aria-hidden="true" />
                   <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-700">{t.text}</blockquote>
-                  <figcaption className="mt-6 flex items-center gap-3 border-t border-navy-950/10 pt-5">
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy-800 text-sm font-bold text-white">
+                  <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold-100 font-display text-sm font-bold text-gold-700">
                       {initials(t.name)}
                     </span>
                     <span>
                       <span className="block font-semibold text-ink-900">{t.name}</span>
                       <span className="block text-xs text-slate-600">{t.role}</span>
-                      <span className="block text-xs font-semibold text-navy-700">{t.company ?? t.sector}</span>
+                      <span className="block text-xs font-semibold text-gold-700">{t.company ?? t.sector}</span>
                     </span>
                   </figcaption>
                 </figure>
@@ -282,17 +355,15 @@ export function PentestScope() {
         <ul className="mt-12 grid gap-px overflow-hidden rounded-card bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {PENTEST_SCOPE.map((p) => (
             <li key={p.title} className="bg-navy-950 p-6 transition-colors hover:bg-navy-900">
-              <p.icon className="h-7 w-7 text-gold-300" aria-hidden="true" />
+              <IconTile icon={p.icon} tone="dark" />
               <h3 className="mt-4 font-display text-base font-semibold text-white">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{p.text}</p>
             </li>
           ))}
         </ul>
-        <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-card bg-white/5 p-6 ring-1 ring-white/15 md:flex-row md:items-center md:p-7">
+        <div className="card-dark mt-8 flex flex-col items-start justify-between gap-5 p-6 md:flex-row md:items-center md:p-7">
           <div className="flex items-start gap-4">
-            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-white/10 text-white ring-1 ring-white/20">
-              <Gauge className="h-6 w-6" aria-hidden="true" />
-            </span>
+            <IconTile icon={Gauge} tone="dark" size="lg" />
             <div>
               <h3 className="font-display text-xl font-semibold text-white">Bilgi güvenliği risk skorunuzu öğrenin</h3>
               <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-300">
@@ -300,7 +371,7 @@ export function PentestScope() {
               </p>
             </div>
           </div>
-          <Button href="/risk-skoru-testi/" className="shrink-0">
+          <Button href="/risk-skoru-testi/" variant="inverse" className="shrink-0">
             Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
         </div>

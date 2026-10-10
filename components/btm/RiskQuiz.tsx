@@ -104,8 +104,8 @@ export function RiskQuiz() {
 
   if (done) {
     return (
-      <div className="rounded-card border border-navy-950/10 bg-white p-6 shadow-lift md:p-8">
-        <h2 ref={resultHeading} tabIndex={-1} className="mb-5 font-display text-2xl font-semibold text-navy-800 outline-none">
+      <div className="card-v2 p-6 md:p-8">
+        <h2 ref={resultHeading} tabIndex={-1} className="mb-5 font-display text-2xl font-bold tracking-[-0.02em] text-navy-950 outline-none">
           Risk skorunuz: {score} / 100
         </h2>
         <div className="flex flex-wrap items-center gap-5">
@@ -126,7 +126,7 @@ export function RiskQuiz() {
             <span className="font-display text-3xl font-bold text-ink-900">{score}</span>
           </div>
           <div className="min-w-0 flex-1">
-            <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold ring-1 ${result.tone}`}>
+            <span className={`inline-flex items-center gap-1.5 rounded-[8px] px-3 py-1 text-sm font-semibold ring-1 ${result.tone}`}>
               <result.icon className="h-4 w-4" aria-hidden="true" /> {result.label}
             </span>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">{result.text}</p>
@@ -143,7 +143,7 @@ export function RiskQuiz() {
               {gaps.map((g) => (
                 <li key={g.q} className="flex flex-wrap items-center justify-between gap-3 py-3">
                   <span className="text-sm text-slate-600">{g.q}</span>
-                  <Link href={g.fix.href} className="inline-flex items-center gap-1 text-sm font-semibold text-navy-800 hover:text-gold-700">
+                  <Link href={g.fix.href} className="inline-flex items-center gap-1 text-sm font-semibold text-gold-700 hover:text-navy-950">
                     {g.fix.label} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                   </Link>
                 </li>
@@ -155,7 +155,7 @@ export function RiskQuiz() {
         <div className="mt-7 flex flex-wrap gap-3">
           <Link
             href="/#teklif"
-            className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-950 hover:bg-gold-400"
+            className="press inline-flex h-12 items-center gap-2 rounded-[10px] bg-gold-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-gold-700"
           >
             Ücretsiz keşif talep edin <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
@@ -167,7 +167,7 @@ export function RiskQuiz() {
               setMissing([]);
               setDone(false);
             }}
-            className="inline-flex items-center gap-2 rounded-full border border-navy-950/15 px-6 py-3 text-sm font-semibold text-ink-900 hover:border-navy-950/40"
+            className="press inline-flex h-12 items-center gap-2 rounded-[10px] border border-slate-200 bg-white px-6 text-sm font-semibold text-navy-950 transition-colors hover:border-gold-600/40"
           >
             <RotateCcw className="h-4 w-4" aria-hidden="true" /> Testi tekrarla
           </button>
@@ -180,7 +180,7 @@ export function RiskQuiz() {
     <form
       ref={formRef}
       noValidate
-      className="rounded-card border border-navy-950/10 bg-white p-6 shadow-lift md:p-8"
+      className="card-v2 p-6 md:p-8"
       onSubmit={(e) => {
         e.preventDefault();
         const empty = answers.flatMap((a, i) => (a === null ? [i] : []));
@@ -193,11 +193,11 @@ export function RiskQuiz() {
       }}
     >
       <div className="mb-6 flex items-center justify-between gap-4">
-        <span className="text-sm font-semibold text-navy-800">
+        <span className="text-sm font-semibold tabular-nums text-navy-950">
           {answered} / {QUESTIONS.length} soru yanıtlandı
         </span>
         <span className="h-2 w-40 overflow-hidden rounded-full bg-paper-100" aria-hidden="true">
-          <span className="block h-full rounded-full bg-gold-500 transition-all" style={{ width: `${(answered / QUESTIONS.length) * 100}%` }} />
+          <span className="block h-full rounded-full bg-gold-600 transition-[width] duration-300 motion-reduce:transition-none" style={{ width: `${(answered / QUESTIONS.length) * 100}%` }} />
         </span>
       </div>
       <ol className="space-y-6">
@@ -215,7 +215,7 @@ export function RiskQuiz() {
                 {CHOICES.map((c) => (
                   <label
                     key={c.value}
-                    className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-navy-950/15 px-4 py-2 text-sm text-ink-900 transition-colors has-[:checked]:border-navy-800 has-[:checked]:bg-navy-800 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-navy-800"
+                    className="inline-flex min-h-10 cursor-pointer items-center gap-2 rounded-[10px] border border-slate-200 bg-white px-4 py-2 text-sm text-ink-900 transition-colors hover:border-gold-600/40 has-[:checked]:border-gold-600 has-[:checked]:bg-gold-600 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-navy-800"
                   >
                     <input
                       type="radio"
@@ -236,13 +236,13 @@ export function RiskQuiz() {
         ))}
       </ol>
       {missing.length > 0 && (
-        <p role="alert" className="mt-6 rounded-control border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+        <p role="alert" className="mt-6 rounded-[10px] border border-red-200 bg-red-50 px-4 py-3 text-sm text-[#B42318]">
           Lütfen şu soruları yanıtlayın: {missing.map((i) => i + 1).join(", ")}.
         </p>
       )}
       <button
         type="submit"
-        className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3.5 text-sm font-bold text-navy-950 hover:bg-gold-400 sm:w-auto"
+        className="press mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-[10px] bg-gold-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-gold-700 sm:w-auto"
       >
         Risk skorumu hesapla <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </button>

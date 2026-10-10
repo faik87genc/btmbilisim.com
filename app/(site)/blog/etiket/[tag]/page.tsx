@@ -5,8 +5,8 @@ import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/siteView";
 import { DEFAULT_OG_IMAGE } from "@/lib/structuredData";
 import { Container } from "@/components/ensa/Container";
-import { PageHero } from "@/components/ensa/PageHero";
-import { BlogCard } from "@/components/ensa/BlogCard";
+import { blogFilterTags } from "@/components/site/BlogIndex";
+import { CtaBand, LightHero, PostGrid, TagFilters } from "@/components/site/ui";
 
 export const revalidate = 300;
 
@@ -38,26 +38,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TagArchivePage({ params }: Props) {
   const { tag: slug } = await params;
-  const { tag, pages: matched } = getPagesByTagSlug(postLikePages(await getPublishedPages()), slug);
+  const posts = postLikePages(await getPublishedPages());
+  const { tag, pages: matched } = getPagesByTagSlug(posts, slug);
   if (matched.length === 0) notFound();
+
+  // The filter row of the blog index; the current tag joins it when it is
+  // not one of the most used ones, so the active filter is always visible.
+  const filters = blogFilterTags(posts);
+  if (!filters.some((t) => t.slug === slug)) filters.push({ tag, slug, count: matched.length });
 
   return (
     <>
-      <PageHero
+      <LightHero
         title={`${tag} yazıları`}
-        eyebrow="Etiket"
+        eyebrow="Kaynaklar · Etiket"
         lead={`${matched.length} yazı`}
         crumbs={[{ text: "Blog", href: "/blog/" }, { text: tag }]}
-      />
-      <section className="bg-paper-50 py-16 md:py-20">
+      >
+        <TagFilters tags={filters} current={slug} />
+      </LightHero>
+      <section className="bg-white py-14 md:py-20">
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {matched.map((p, i) => (
-              <BlogCard key={p.id} post={p} delay={(i % 3) * 0.05} priority={i < 3} />
-            ))}
-          </div>
+          <PostGrid posts={matched} priorityCount={3} />
         </Container>
       </section>
+      <CtaBand
+        title="Bu konuda yerinde destek ister misiniz?"
+        lead="Altyapınızı birlikte inceleyelim, önceliklendirilmiş bir eylem planı çıkaralım. İlk görüşme ve keşif ücretsizdir."
+        secondary={{ label: "Tüm yazılar", href: "/blog/" }}
+      />
     </>
   );
 }

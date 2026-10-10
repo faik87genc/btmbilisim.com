@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
+import { IconTile } from "@/components/ensa/IconTile";
 
 // /yazilim-dijital/: the two things the in-house software team delivers,
 // as feature panels — custom software and web design.
@@ -58,28 +59,33 @@ const PANELS: Panel[] = [
 export function SoftwareShowcase() {
   return (
     <section className="bg-white py-20 md:py-24">
-      <Container className="max-w-7xl space-y-8">
-        {PANELS.map((p, pi) => (
+      <Container className="max-w-7xl space-y-6">
+        {PANELS.map((p) => (
           <MotionReveal key={p.title}>
-            <div className={`overflow-hidden rounded-card p-7 text-white md:p-10 ${pi === 0 ? "bg-brand-gradient" : "bg-navy-950"}`}>
-              <h2 className="font-display text-3xl font-semibold md:text-4xl">{p.title}</h2>
-              <p className="mt-2 font-mono text-xs uppercase tracking-[0.18em] text-gold-300">{p.subtitle}</p>
-              <p className="mt-5 max-w-3xl border-l-2 border-gold-300/60 pl-4 text-sm leading-relaxed text-slate-200 md:text-base">
-                {p.text}
-              </p>
-              <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {p.items.map((it) => (
-                  <li key={it.title}>
-                    <it.icon className="h-8 w-8 text-gold-300" aria-hidden="true" />
-                    <h3 className="mt-3 font-display text-lg font-semibold">{it.title}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-slate-300">{it.text}</p>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 border-t border-white/15 pt-6">
-                <Link href={p.href} className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-gold-300">
-                  {p.cta} <ArrowRight className="h-4 w-4 text-gold-300" aria-hidden="true" />
-                </Link>
+            <div className="card-v2 overflow-hidden p-7 md:p-10">
+              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
+                <div>
+                  <p className="eyebrow-v2">{p.subtitle}</p>
+                  <h2 className="mt-2 font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] text-navy-950 md:text-[2.5rem]">{p.title}</h2>
+                  <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">{p.text}</p>
+                  <Link
+                    href={p.href}
+                    className="press mt-6 inline-flex h-11 items-center gap-2 rounded-[10px] border border-slate-200 px-5 text-sm font-semibold text-navy-950 transition-colors hover:border-gold-600/40 hover:text-gold-700"
+                  >
+                    {p.cta} <ArrowRight className="h-4 w-4 text-gold-600" aria-hidden="true" />
+                  </Link>
+                </div>
+                <ul className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                  {p.items.map((it) => (
+                    <li key={it.title} className="flex gap-4">
+                      <IconTile icon={it.icon} />
+                      <div>
+                        <h3 className="font-display text-base font-semibold text-navy-950">{it.title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-slate-500">{it.text}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </MotionReveal>

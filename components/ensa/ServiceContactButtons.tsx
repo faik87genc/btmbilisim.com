@@ -22,7 +22,7 @@ export function ServiceContactButtons({ service, note = true }: { service: strin
         </a>
         <a
           href={site.phone.href}
-          className="press hidden w-full items-center justify-center gap-2 rounded-control sm:w-auto md:inline-flex bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
+          className="press hidden w-full items-center justify-center gap-2 rounded-control sm:w-auto md:inline-flex bg-gold-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold-700"
         >
           <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
         </a>

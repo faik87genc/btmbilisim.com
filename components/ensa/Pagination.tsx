@@ -28,7 +28,7 @@ export function Pagination({
   const pages = [...keep].sort((a, b) => a - b);
 
   const arrowClasses = (disabled: boolean) =>
-    `flex h-9 w-9 items-center justify-center rounded-full border border-navy-950/10 text-slate-600 transition-colors hover:border-gold-500/40 hover:text-ink-900 ${
+    `flex h-10 w-10 items-center justify-center rounded-control border border-line bg-white text-slate-600 transition-colors hover:border-gold-600/50 hover:text-gold-700 ${
       disabled ? "pointer-events-none opacity-40" : ""
     }`;
 
@@ -51,10 +51,10 @@ export function Pagination({
           <Link
             href={hrefFor(p)}
             aria-current={p === page ? "page" : undefined}
-            className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-colors ${
+            className={`flex h-10 w-10 items-center justify-center rounded-control text-sm font-semibold tabular-nums transition-colors ${
               p === page
-                ? "bg-gold-500 text-navy-950"
-                : "border border-navy-950/10 text-slate-600 hover:border-gold-500/40 hover:text-ink-900"
+                ? "bg-gold-500 text-white"
+                : "border border-line bg-white text-slate-600 hover:border-gold-600/50 hover:text-gold-700"
             }`}
           >
             {p}

@@ -149,7 +149,7 @@ export function ContactForm() {
         {status === "sending" ? "Gönderiliyor…" : "Mesajı Gönder"}
       </button>
       <p role="status" aria-live="polite" className="form-note">
-        {status === "sent" && "Mesajınız iletildi. 24 saat içinde size dönüş yapılacak."}
+        {status === "sent" && "Mesajınız iletildi. En geç bir iş günü içinde size dönüş yapılacak."}
         {status === "fallback" &&
           `Mesajınız şu an iletilemedi. Bilgileriniz hazır: aşağıdaki düğmelerden biriyle gönderebilir, ${site.email} adresine yazabilir veya bizi arayabilirsiniz.`}
       </p>

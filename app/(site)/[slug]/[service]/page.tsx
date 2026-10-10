@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowUpRight, Check, ChevronRight, Headphones, Mail, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Headphones, Mail, MessageCircle, Phone } from "lucide-react";
 import { Container } from "@/components/ensa/Container";
-import { GlobeBands } from "@/components/ensa/GlobeBands";
-import { MarkdownRenderer } from "@/components/ensa/MarkdownRenderer";
 import { FaqSection } from "@/components/ensa/FaqSection";
-import { Button } from "@/components/ensa/Button";
+import { WhyBtm } from "@/components/ensa/WhyBtm";
 import { JsonLd } from "@/components/site/Parts";
+import { SiteMarkdown } from "@/components/site/SiteMarkdown";
+import { CtaBand, PostGrid, SectionHead } from "@/components/site/ui";
+import { HeroPanel, InkHero, LinkCard, ProcessSteps, ScopeCards } from "@/components/site/ServiceParts";
+import { serviceBlocks } from "@/components/site/serviceContent";
 import { serviceCategories } from "@/lib/services";
+import { serviceIcon } from "@/lib/serviceIcons";
 import { getServicePageContent, servicePageParams, servicePagesContent } from "@/lib/servicePages";
-import { getPublishedPages, pageHref, postLikePages } from "@/lib/pages";
+import { getPublishedPages, postLikePages } from "@/lib/pages";
+import { extractHeadings } from "@/lib/markdownStructure";
 import { slugifyTr } from "@/lib/slug";
 import { absoluteUrl, ogMeta } from "@/lib/siteView";
 import { site } from "@/lib/site";
 import type { Page } from "@/lib/db/schema";
-import { ContactCta } from "@/components/ensa/ContactCta";
-import { WhyBtm } from "@/components/ensa/WhyBtm";
-import { ServiceContactButtons } from "@/components/ensa/ServiceContactButtons";
 import { serviceWhatsAppHref } from "@/lib/contact";
 
 // Sub-service detail pages (/{category}/{service}/), content from
@@ -78,7 +79,7 @@ function scopeItems(md: string, limit = 5): string[] {
 }
 
 /** Posts that share the most words with the service title (at least one). */
-function relatedPostsFor(posts: Page[], title: string, limit = 4): Page[] {
+function relatedPostsFor(posts: Page[], title: string, limit = 3): Page[] {
   const want = tokens(title);
   return posts
     .map((p) => {
@@ -149,141 +150,115 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
     category: categoryInfo.shortTitle,
   };
 
+  // Body blocks: the scope section as cards, the process as numbered steps,
+  // the rest as the reading column — headings and text unchanged, same order.
+  const blocks = serviceBlocks(page.content);
+  const h2s = extractHeadings(page.content).filter((h) => h.level === 2);
+  const h2Ids = new Map(h2s.map((h) => [h.text, h.id]));
+  const idFor = (heading: string) =>
+    h2Ids.get(
+      heading
+        .replace(/\*\*|__|`/g, "")
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+        .trim(),
+    ) ?? slugifyTr(heading);
+
   return (
     <>
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={serviceJsonLd} />
 
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
-        <div className="bg-dots pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
-        <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
-        <Container className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-14">
-          <div>
-          <nav
-            aria-label="İçerik yolu"
-            className="mb-6 flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-gold-300"
-          >
-            <Link href="/" className="hover:text-gold-100">
-              Ana Sayfa
-            </Link>
-            <ChevronRight className="h-3 w-3 text-gold-300/50" aria-hidden="true" />
-            <Link href={`/${category}/`} className="hover:text-gold-100">
-              {categoryInfo.shortTitle}
-            </Link>
-            <ChevronRight className="h-3 w-3 text-gold-300/50" aria-hidden="true" />
-            <span className="text-slate-300">{page.title}</span>
-          </nav>
-          <h1 className="text-balance font-display text-4xl font-semibold leading-tight text-paper-50 md:text-5xl">
-            {page.title}
-          </h1>
-          <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">{page.metaDescription}</p>
-          <div className="mt-8">
-            <ServiceContactButtons service={page.title} />
-          </div>
-          </div>
+      <InkHero
+        crumbs={[{ text: categoryInfo.shortTitle, href: `/${category}/` }, { text: page.title }]}
+        eyebrow={categoryInfo.shortTitle}
+        title={page.title}
+        lead={page.metaDescription}
+        service={page.title}
+        aside={
+          scope.length > 0 ? (
+            <HeroPanel
+              label="Hizmet kapsamı"
+              items={scope.map((text) => ({ text }))}
+              footer={<>Ücretsiz keşif · 7/24 teknik destek · {site.areaLabel}</>}
+            />
+          ) : undefined
+        }
+      />
 
-          {scope.length > 0 && (
-            <div className="rounded-card bg-white/5 p-6 ring-1 ring-white/15 md:p-7">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Hizmet kapsamı</p>
-              <ul className="mt-4 space-y-3">
-                {scope.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-slate-200">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 border-t border-white/15 pt-4 text-xs text-slate-300">
-                Ücretsiz keşif · 7/24 teknik destek · {site.areaLabel}
-              </p>
-            </div>
-          )}
-        </Container>
-      </section>
-
-      <section className="bg-paper-50 py-20 md:py-24">
+      <section className="bg-white py-16 md:py-20">
         <Container>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
-            <div className="min-w-0 max-w-3xl">
-              <MarkdownRenderer content={page.content} />
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+            <div className="min-w-0">
+              {blocks.map((b, i) =>
+                b.kind === "prose" ? (
+                  <div key={i} className={`markdown-content prose-v2 ${i > 0 ? "mt-14 [&>h2:first-child]:mt-0" : ""}`}>
+                    <SiteMarkdown content={b.md} />
+                  </div>
+                ) : b.kind === "scope" ? (
+                  <ScopeCards key={i} id={idFor(b.heading)} heading={b.heading} lead={b.lead} items={b.items} />
+                ) : (
+                  <ProcessSteps key={i} id={idFor(b.heading)} heading={b.heading} lead={b.lead} items={b.items} />
+                ),
+              )}
             </div>
 
             <aside className="space-y-6 lg:sticky lg:top-28 lg:h-fit">
-              <div className="rounded-card border border-navy-950/10 bg-white p-6">
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Hemen Başlayalım</p>
-                <h2 className="mt-3 font-display text-xl font-semibold text-ink-900">Bu hizmeti konuşalım</h2>
+              {h2s.length >= 3 && (
+                <nav aria-label="Bu sayfada" className="hidden lg:block">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Bu sayfada</p>
+                  <ol className="toc-v2 max-h-[40vh] space-y-0.5 overflow-y-auto pr-1">
+                    {h2s.map((h) => (
+                      <li key={h.id}>
+                        <a href={`#${h.id}`}>{h.text}</a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              )}
+              <div className="card-v2 p-6">
+                <p className="eyebrow-v2">Hemen başlayalım</p>
+                <h2 className="mt-2 font-display text-lg font-semibold text-navy-950">Bu hizmeti konuşalım</h2>
                 <p className="mt-2 text-sm leading-relaxed text-slate-500">
                   Ekibimiz ihtiyacınızı ve uygunluk durumunuzu ilk görüşmede netleştirir.
                 </p>
-                <Button href={site.phone.href} variant="primary" className="mt-5 w-full">
+                <a
+                  href={site.phone.href}
+                  className="press mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-gold-600 px-5 text-sm font-semibold text-white transition-colors hover:bg-gold-700"
+                >
                   <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
-                </Button>
-                <div className="mt-6 space-y-3 border-t border-navy-950/10 pt-5 text-sm">
-                  <a
-                    href={serviceWhatsAppHref(page.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-ink-900 transition-colors hover:text-gold-700"
-                  >
-                    <MessageCircle className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
-                  </a>
-                  <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
-                    <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    {site.email}
-                  </a>
-                  <a href={`mailto:${site.supportEmail.address}`} className="flex items-start gap-3 break-all text-ink-900 transition-colors hover:text-gold-700">
-                    <Headphones className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
-                    <span>
-                      {site.supportEmail.address}
-                      <span className="block text-xs text-slate-500">{site.supportEmail.label}</span>
-                    </span>
-                  </a>
-                </div>
+                </a>
+                <ul className="mt-5 space-y-2.5 border-t border-slate-200 pt-4 text-sm">
+                  <li>
+                    <a
+                      href={serviceWhatsAppHref(page.title)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2.5 text-ink-900 transition-colors hover:text-gold-700"
+                    >
+                      <MessageCircle className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
+                      WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={`mailto:${site.email}`} className="flex items-center gap-2.5 break-all text-ink-900 transition-colors hover:text-gold-700">
+                      <Mail className="h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
+                      {site.email}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={`mailto:${site.supportEmail.address}`}
+                      className="flex items-start gap-2.5 break-all text-ink-900 transition-colors hover:text-gold-700"
+                    >
+                      <Headphones className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" aria-hidden="true" />
+                      <span>
+                        {site.supportEmail.address}
+                        <span className="block text-xs text-slate-500">{site.supportEmail.label}</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-
-              {relatedServices.length > 0 && (
-                <div className="rounded-card border border-navy-950/10 bg-white p-6">
-                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">{categoryInfo.shortTitle}</p>
-                  <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili hizmetler</h2>
-                  <ul className="mt-4 space-y-3">
-                    {relatedServices.map((s) => (
-                      <li key={s.key}>
-                        <Link href={s.href} className="group flex items-center justify-between gap-3">
-                          <span className="text-sm text-slate-600 transition-colors group-hover:text-ink-900">{s.name}</span>
-                          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={`/${category}/`}
-                    className="mt-5 inline-block text-xs font-medium uppercase tracking-wider text-gold-800 hover:text-gold-600"
-                  >
-                    Tüm {categoryInfo.shortTitle} Hizmetleri →
-                  </Link>
-                </div>
-              )}
-
-              {relatedPosts.length > 0 && (
-                <div className="rounded-card border border-navy-950/10 bg-white p-6">
-                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold-800">Blog</p>
-                  <h2 className="mt-3 font-display text-base font-semibold text-ink-900">İlgili yazılar</h2>
-                  <ul className="mt-4 space-y-3">
-                    {relatedPosts.map((p) => (
-                      <li key={p.id}>
-                        <Link href={pageHref(p)} className="group flex items-start justify-between gap-3">
-                          <span className="text-sm leading-snug text-slate-600 transition-colors group-hover:text-ink-900">{p.title}</span>
-                          <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/blog/" className="mt-5 inline-block text-xs font-medium uppercase tracking-wider text-gold-800 hover:text-gold-600">
-                    Tüm Yazıları Gör →
-                  </Link>
-                </div>
-              )}
             </aside>
           </div>
         </Container>
@@ -293,7 +268,47 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
 
       {page.faq.length > 0 && <FaqSection items={page.faq} />}
 
-      <ContactCta title="Bu hizmeti kurumunuz için değerlendirelim." />
+      {relatedServices.length > 0 && (
+        <section className="bg-white py-16 md:py-20" aria-labelledby="related-services-title">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <SectionHead id="related-services-title" eyebrow={categoryInfo.shortTitle} title="İlgili hizmetler" />
+              <Link href={`/${category}/`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-700 hover:text-navy-950">
+                Tüm {categoryInfo.shortTitle} hizmetleri <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedServices.slice(0, 6).map((s) => (
+                <li key={s.href}>
+                  <LinkCard href={s.href} icon={serviceIcon(s.key)} title={s.name} text={s.description} />
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+      )}
+
+      {relatedPosts.length > 0 && (
+        <section className="border-t border-slate-200 bg-paper-50 py-16 md:py-20" aria-labelledby="related-posts-title">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <SectionHead id="related-posts-title" eyebrow="Kaynaklar" title="İlgili yazılar" />
+              <Link href="/blog/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-700 hover:text-navy-950">
+                Tüm yazılar <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="mt-10">
+              <PostGrid posts={relatedPosts} />
+            </div>
+          </Container>
+        </section>
+      )}
+
+      <CtaBand
+        title="Bu hizmeti kurumunuz için değerlendirelim."
+        lead="Arayın, WhatsApp'tan yazın ya da keşif formunu doldurun; çağrı merkezi yok, doğrudan uzman ekibe ulaşırsınız. İlk görüşme ve keşif ücretsizdir."
+        secondary={{ label: `Tüm ${categoryInfo.shortTitle} hizmetleri`, href: `/${category}/` }}
+      />
     </>
   );
 }

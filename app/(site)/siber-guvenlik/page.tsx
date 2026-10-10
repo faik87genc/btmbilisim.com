@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CategoryPage } from "@/components/ensa/CategoryPage";
+import { CategoryView } from "@/components/site/CategoryView";
 import { PentestScope, SecurityShowcase } from "@/components/btm/HomeSections";
 import { serviceCategories } from "@/lib/services";
 import { ogMeta } from "@/lib/siteView";
@@ -22,9 +22,9 @@ export default function Page() {
   // DLP/EDR showcase, phishing demo and the pentest scope (moved here from
   // the homepage to keep it short).
   return (
-    <CategoryPage category={category}>
+    <CategoryView category={category}>
       <SecurityShowcase />
       <PentestScope />
-    </CategoryPage>
+    </CategoryView>
   );
 }

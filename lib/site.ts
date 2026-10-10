@@ -41,6 +41,16 @@ export const site = {
     { type: "City", name: "İstanbul" },
     { type: "Country", name: "Türkiye" },
   ],
+  // Footer'daki yasal kimlik satırı. Boş alanlar gösterilmez (social ile aynı
+  // mantık); yalnızca şirketin resmi belgelerindeki değerler yazılır.
+  legal: {
+    tradeName: "", // Tam ticari unvan (ör. "… Ltd. Şti."); boşsa legalName gösterilir
+    mersis: "",
+    tradeRegistry: "", // Ticaret sicil no + müdürlük
+    taxOffice: "",
+    taxNumber: "",
+    kep: "", // KEP adresi
+  },
   // Boş bırakılan hesaplar footer'da gösterilmez.
   social: {
     instagram: "",

@@ -1,5 +1,7 @@
 import { MotionReveal } from "./MotionReveal";
 
+// The one section heading (identity v2): eyebrow → H2 → lead. Eyebrow 12px
+// caps in brand blue, H2 28→40px Plus Jakarta Sans, lead 17px muted.
 export function SectionHeading({
   eyebrow,
   title,
@@ -17,33 +19,18 @@ export function SectionHeading({
   const isCenter = align === "center";
 
   return (
-    <MotionReveal
-      className={`max-w-2xl ${isCenter ? "mx-auto text-center" : ""}`}
-    >
-      {eyebrow && (
-        <div
-          className={`mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] ${
-            isCenter ? "justify-center" : ""
-          } ${isDark ? "text-gold-300" : "text-gold-800"}`}
-        >
-          <span
-            className={`h-px w-8 ${isDark ? "bg-gold-300" : "bg-gold-500"}`}
-          />
-          {eyebrow}
-        </div>
-      )}
+    <MotionReveal className={`max-w-2xl ${isCenter ? "mx-auto text-center" : ""}`}>
+      {eyebrow && <p className={`eyebrow mb-4 ${isDark ? "eyebrow-dark" : ""}`}>{eyebrow}</p>}
       <h2
-        className={`text-balance font-display text-3xl font-semibold leading-[1.1] tracking-tight md:text-[2.75rem] ${
-          isDark ? "text-white" : "text-navy-800"
+        className={`text-balance font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] md:text-[2.5rem] ${
+          isDark ? "text-white" : "text-navy-950"
         }`}
       >
         {title}
       </h2>
       {description && (
         <p
-          className={`mt-4 text-balance text-base leading-relaxed ${
-            isDark ? "text-slate-300" : "text-slate-500"
-          }`}
+          className={`mt-4 text-pretty text-[1.0625rem] leading-[1.65] ${isDark ? "text-slate-300" : "text-slate-500"}`}
         >
           {description}
         </p>

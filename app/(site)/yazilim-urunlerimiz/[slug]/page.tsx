@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ogMeta } from "@/lib/siteView";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
-import { GlobeBands } from "@/components/ensa/GlobeBands";
 import { Container } from "@/components/ensa/Container";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
@@ -62,13 +61,13 @@ export default async function Page({
     <>
       <ProductJsonLd product={product} />
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
-        <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
+        <div className="bg-blueprint pointer-events-none absolute inset-0 [mask-image:linear-gradient(180deg,black,transparent_85%)]" aria-hidden="true" />
         <Container className="relative">
           <div className="max-w-3xl">
-          <span className="inline-block rounded-sm bg-paper-50/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-gold-300">
+          <span className="inline-block rounded-[6px] bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-300">
             {product.code}
           </span>
-          <h1 className="mt-5 text-balance font-display text-4xl font-semibold leading-tight text-paper-50 md:text-5xl">
+          <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
             {product.name}
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
@@ -90,7 +89,7 @@ export default async function Page({
             {product.features.map((feature) => (
               <li
                 key={feature}
-                className="flex items-start gap-3 rounded-card border border-navy-950/10 bg-white p-4"
+                className="flex items-start gap-3 card-v2 p-4"
               >
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />
                 <span className="text-sm leading-relaxed text-ink-900">
@@ -104,7 +103,7 @@ export default async function Page({
 
       <FaqSection items={product.faq} />
 
-      <section className="bg-paper-100 py-20 md:py-24">
+      <section className="bg-white py-20 md:py-24">
         <Container>
           <SectionHeading eyebrow="Diğer yazılımlarımız" title="Bunlara da göz atın" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

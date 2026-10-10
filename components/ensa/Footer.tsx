@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Mail, MapPin, MessageCircle, Phone, Headphones } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone, Headphones } from "lucide-react";
 import { Container } from "./Container";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
 import { serviceCategoryList } from "@/lib/services";
 import { references, team } from "@/lib/data/trust";
 
-// Corporate footer: contact strip, site map columns (service areas, products,
-// corporate pages) and the legal bar. Logo-blue ground, orange accents.
+// Corporate footer (identity v2): the closing CTA panel, four columns (company
+// + contact, service areas & products, popular services, corporate), the legal
+// identity block (only fields filled in lib/site.ts) and the legal bar.
+// Ink-950 ground; brand-300 is the only accent.
 
 // Sitewide links to the main service pages: they help crawlers reach and
 // weigh these pages (in-content links still matter more).
@@ -41,22 +43,37 @@ const legal = [
   { label: "Çerez Politikası", href: "/cerez-politikasi/" },
 ];
 
+// Legal identity line: only the fields that are filled in lib/site.ts
+// (site.legal); today that is the legal name and the address.
+const L = site.legal as Record<keyof typeof site.legal, string>;
+const legalIdentity = [
+  L.tradeName || site.legalName,
+  L.mersis && `MERSİS: ${L.mersis}`,
+  L.tradeRegistry && `Ticaret Sicil: ${L.tradeRegistry}`,
+  (L.taxOffice || L.taxNumber) && `Vergi: ${[L.taxOffice, L.taxNumber].filter(Boolean).join(" / ")}`,
+  L.kep && `KEP: ${L.kep}`,
+  site.address,
+].filter((x): x is string => Boolean(x));
+
+// Social accounts: only the ones filled in lib/site.ts (all empty today).
+const SOCIAL_LABELS: Record<keyof typeof site.social, string> = { linkedin: "LinkedIn", instagram: "Instagram", x: "X" };
+const social = (Object.keys(site.social) as (keyof typeof site.social)[])
+  .map((k) => ({ label: SOCIAL_LABELS[k], href: site.social[k] as string }))
+  .filter((s) => s.href);
+
 function Heading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="flex items-center gap-2.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">
-      <span className="h-0.5 w-5 rounded-full bg-gold-500" aria-hidden="true" />
-      {children}
-    </h2>
-  );
+  return <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-white">{children}</h2>;
 }
 
-function LinkList({ items }: { items: { label: string; href: string }[] }) {
+function LinkList({ items, className = "mt-5" }: { items: { label: string; href: string }[]; className?: string }) {
   return (
-    <ul className="mt-5 space-y-2.5">
+    <ul className={`${className} space-y-1`}>
       {items.map((l) => (
         <li key={l.href}>
-          <Link href={l.href} className="group flex items-center gap-1.5 text-sm text-slate-300 transition-colors hover:text-white">
-            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-gold-400 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          <Link
+            href={l.href}
+            className="inline-flex min-h-8 items-center rounded-sm text-sm text-slate-300 transition-colors hover:text-white"
+          >
             {l.label}
           </Link>
         </li>
@@ -65,36 +82,48 @@ function LinkList({ items }: { items: { label: string; href: string }[] }) {
   );
 }
 
+const contactLink = "flex items-start gap-3 rounded-sm text-sm text-slate-300 transition-colors hover:text-white";
+const contactIcon = "mt-0.5 h-4 w-4 shrink-0 text-gold-300";
+
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-navy-950 text-slate-300">
-
-      {/* Contact strip */}
-      <div data-footer-cta="" className="relative border-b border-white/10">
-        <Container className="flex flex-col items-start justify-between gap-5 py-8 md:flex-row md:items-center lg:max-w-7xl">
-          <div>
-            <p className="font-display text-2xl font-bold text-white">Projenizi birlikte planlayalım.</p>
-            <p className="mt-1 text-sm text-slate-300">Ücretsiz keşif ve teklif için bize ulaşın; aynı gün dönüş yapalım.</p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/#teklif"
-              className="inline-flex items-center gap-2 rounded-control bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
-            >
-              Teklif Alın <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <a
-              href={site.phone.href}
-              className="inline-flex items-center gap-2 rounded-control border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-gold-300 hover:text-gold-300"
-            >
-              <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
-            </a>
+    <footer className="relative bg-navy-950 text-slate-300">
+      {/* Closing CTA panel (hidden on pages that end with their own ContactCta band) */}
+      <div data-footer-cta="" className="pt-14 md:pt-20">
+        <Container className="lg:max-w-7xl">
+          <div className="card-dark relative overflow-hidden px-6 py-8 md:px-10 md:py-10">
+            <div className="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
+            <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+              <div className="max-w-xl">
+                <p className="eyebrow eyebrow-dark">Ücretsiz keşif</p>
+                <p className="mt-3 text-balance font-display text-2xl font-bold tracking-[-0.02em] text-white md:text-[2rem] md:leading-[1.15]">
+                  Projenizi birlikte planlayalım.
+                </p>
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-slate-300">
+                  Ücretsiz keşif ve teklif için bize ulaşın; en geç bir iş günü içinde dönüş yapalım.
+                </p>
+              </div>
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                <Link
+                  href="/#teklif"
+                  className="press inline-flex min-h-12 items-center justify-center gap-2 rounded-control bg-white px-6 text-[0.9375rem] font-semibold text-navy-950 transition-colors hover:bg-gold-100"
+                >
+                  Teklif Alın <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <a
+                  href={site.phone.href}
+                  className="press inline-flex min-h-12 items-center justify-center gap-2 rounded-control border border-white/30 px-6 text-[0.9375rem] font-semibold tabular-nums text-white transition-colors hover:border-gold-300 hover:text-gold-300"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" /> {site.phone.display}
+                </a>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
 
-      <Container className="relative grid grid-cols-2 gap-x-6 gap-y-10 py-14 lg:max-w-7xl lg:grid-cols-3 xl:grid-cols-[1.3fr_1fr_1.2fr_1fr_1fr]">
-        <div className="col-span-2 lg:col-span-1">
+      <Container className="grid grid-cols-1 gap-x-8 gap-y-12 py-14 sm:grid-cols-2 md:py-16 lg:max-w-7xl lg:grid-cols-[1.35fr_1fr_1.1fr_0.9fr]">
+        <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/img/logo-full-light.webp"
@@ -102,43 +131,68 @@ export function Footer() {
             width={375}
             height={120}
             loading="lazy"
-            className="h-14 w-auto"
+            className="h-12 w-auto"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed">{site.description}</p>
-          <ul className="mt-6 space-y-3 text-sm">
+          <ul className="mt-6 space-y-3">
             <li>
-              <a href={site.phone.href} className="flex items-center gap-3 hover:text-white">
-                <Phone className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.phone.display}
+              <a href={site.phone.href} className={contactLink}>
+                <Phone className={contactIcon} strokeWidth={1.75} aria-hidden="true" />
+                <span className="tabular-nums">{site.phone.display}</span>
               </a>
             </li>
             <li>
-              <a href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white">
-                <MessageCircle className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.mobile.display} (WhatsApp)
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="flex items-center gap-3 break-all hover:text-white">
-                <Mail className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.email}
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${site.supportEmail.address}`} className="flex items-start gap-3 break-all hover:text-white">
-                <Headphones className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
-                <span>
-                  {site.supportEmail.address}
-                  <span className="block text-xs text-slate-400">{site.supportEmail.label}</span>
+              <a href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" className={contactLink}>
+                <MessageCircle className={contactIcon} strokeWidth={1.75} aria-hidden="true" />
+                <span className="tabular-nums">
+                  {site.mobile.display} (WhatsApp)<span className="visually-hidden"> (yeni sekmede açılır)</span>
                 </span>
               </a>
             </li>
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.address}
+            <li>
+              <a href={`mailto:${site.email}`} className={`${contactLink} break-all`}>
+                <Mail className={contactIcon} strokeWidth={1.75} aria-hidden="true" /> {site.email}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${site.supportEmail.address}`} className={`${contactLink} break-all`}>
+                <Headphones className={contactIcon} strokeWidth={1.75} aria-hidden="true" />
+                <span>
+                  {site.supportEmail.address}
+                  <span className="block text-xs text-slate-300/80">{site.supportEmail.label}</span>
+                </span>
+              </a>
+            </li>
+            <li className="flex items-start gap-3 text-sm">
+              <Clock className={contactIcon} strokeWidth={1.75} aria-hidden="true" /> {site.hours.label}
             </li>
           </ul>
+          {social.length > 0 && (
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Sosyal medya">
+              {social.map((s) => (
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-9 items-center rounded-md px-3 text-sm font-medium text-slate-200 ring-1 ring-white/15 hover:text-white hover:ring-gold-300/60"
+                  >
+                    {s.label}
+                    <span className="visually-hidden"> (yeni sekmede açılır)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <div>
           <Heading>Hizmet Alanları</Heading>
           <LinkList items={serviceCategoryList.map((c) => ({ label: c.shortTitle, href: `/${c.slug}/` }))} />
+          <div className="mt-9">
+            <Heading>Yazılım Ürünleri</Heading>
+            <LinkList items={products.map((p) => ({ label: p.name, href: `/yazilim-urunlerimiz/${p.slug}/` }))} />
+          </div>
         </div>
 
         <div>
@@ -147,33 +201,49 @@ export function Footer() {
         </div>
 
         <div>
-          <Heading>Yazılım Ürünleri</Heading>
-          <LinkList items={products.map((p) => ({ label: p.name, href: `/yazilim-urunlerimiz/${p.slug}/` }))} />
-        </div>
-
-        <div>
           <Heading>Kurumsal</Heading>
           <LinkList items={corporate} />
         </div>
       </Container>
 
-      <div className="relative border-t border-white/10">
+      {/* Legal identity: only the fields filled in lib/site.ts → legal */}
+      <div className="border-t border-white/10">
+        <Container className="flex flex-col gap-3 py-6 md:flex-row md:items-start md:gap-6 lg:max-w-7xl">
+          <p className="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-white">
+            <MapPin className="h-3.5 w-3.5 text-gold-300" strokeWidth={1.75} aria-hidden="true" /> Şirket bilgileri
+          </p>
+          <ul className="flex flex-col gap-1.5 text-xs leading-relaxed text-slate-300 md:flex-row md:flex-wrap md:gap-x-2">
+            {legalIdentity.map((item, i) => (
+              <li key={item} className="md:flex md:gap-2">
+                {i > 0 && (
+                  <span className="hidden text-slate-300/50 md:inline" aria-hidden="true">
+                    ·
+                  </span>
+                )}
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </div>
+
+      <div className="border-t border-white/10">
         <Container className="flex flex-col gap-3 py-6 text-xs text-slate-300 md:flex-row md:items-center md:justify-between lg:max-w-7xl">
           <span>
             © {new Date().getFullYear()} {site.name} — {site.legalName}. Tüm hakları saklıdır.
           </span>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             {legal.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-white">
+              <Link key={l.href} href={l.href} className="rounded-sm hover:text-white">
                 {l.label}
               </Link>
             ))}
-            <button type="button" id="cookie-prefs" className="hover:text-white">
+            <button type="button" id="cookie-prefs" className="rounded-sm hover:text-white">
               Çerez Tercihleri
             </button>
             {/* Site-wide credit link: nofollow so Google never reads it as a footer link scheme
                 against the sister site; the in-content links (home, about, IT consulting) carry the SEO value. */}
-            <a href="https://www.iso27001danismanlik.com/" target="_blank" rel="noopener nofollow" className="hover:text-white">
+            <a href="https://www.iso27001danismanlik.com/" target="_blank" rel="noopener nofollow" className="rounded-sm hover:text-white">
               SEO ve Tasarım<span className="visually-hidden"> (yeni sekmede açılır)</span>
             </a>
           </div>

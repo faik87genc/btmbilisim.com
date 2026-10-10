@@ -1,4 +1,5 @@
 import "./ensa.css";
+import "./pages.css";
 import "./content-guard.css";
 import { Analytics } from "@vercel/analytics/next";
 import { TopBar } from "@/components/ensa/TopBar";

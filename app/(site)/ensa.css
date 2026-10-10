@@ -9,61 +9,55 @@
 @source "../../components/FieldErrors.tsx";
 @source "../../lib";
 
-/* Design system from ensakurumsal.com. The "gold" accent scale carries the
-   BTM logo orange (#e8812f = gold-500) and the "navy" scale the logo blue
-   (#0e4a8b = navy-800); swap these values back to
-   Ensa's gold (#6e5714 … #f3e6bb) to restore the original accent.
-   Text tones (600–800) are dark enough for AA contrast on paper/white. */
+/* Corporate identity v2 (docs/kurumsal-kimlik-v2.md): ink surfaces + one
+   corporate blue accent; the scales keep their old names (navy = ink,
+   gold = brand blue) so every component picks the palette up unchanged.
+   Text tones (600–800) stay AA on white and paper. */
 :root {
-  --navy-950: #072b55;
-  --navy-900: #0a3a70;
-  --navy-800: #0e4a8b;
-  --navy-700: #1763b3;
-  --gold-800: #7a3c0b;
-  --gold-700: #8f480f;
-  --gold-600: #a85512;
-  --gold-500: #e8812f;
-  --gold-400: #ee9650;
-  --gold-300: #f4b47e;
-  --gold-100: #fbe3cc;
-  --paper-50: #f6f8fc;
-  --paper-100: #e9eff8;
-  --ink-900: #0f1b2d;
-  --slate-500: #51607a;
-  --slate-300: #c3d1e6;
+  --navy-950: #0b1220;
+  --navy-900: #111b2e;
+  --navy-800: #1b2740;
+  --navy-700: #2251cc;
+  --gold-800: #13307a;
+  --gold-700: #1a3fa3;
+  --gold-600: #2251cc;
+  --gold-500: #2251cc;
+  --gold-400: #3a66db;
+  --gold-300: #8fb0f5;
+  --gold-100: #eef3fe;
+  --paper-50: #f5f7fa;
+  --paper-100: #ebeff5;
+  --ink-900: #111827;
+  --slate-500: #5b6475;
+  --slate-300: #cbd3df;
+  /* Hairline for cards, inputs, dividers on light grounds (v2 "border"). */
+  --line: #e3e8ef;
+  /* Trust signal: check marks and "secure" states only — use sparingly. */
+  --teal-600: #0f766e;
+  /* The one cool section ground (paper-50 merges with white on most screens)
+     and the error colour for the dark form panel (8.3:1 on navy-950). */
+  --tint-50: #f5f7fa;
+  --err-on-dark: #ffb4a8;
 
   --background: var(--paper-50);
   --foreground: var(--ink-900);
 }
 
-/* IBM Plex Sans (variable, 400–500), self-hosted; see app/layout.tsx. */
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-  src: url("/fonts/ibm-plex-sans-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-  src: url("/fonts/ibm-plex-sans-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 @theme inline {
-  --color-slate-200: #dbe4f1;
-  --color-slate-400: #8796b0;
-  --color-slate-600: #3f4d66;
-  --color-slate-700: #2f3b52;
-  /* One card radius, one control radius, two elevation levels (site-wide). */
-  --radius-card: 0.625rem;
-  --radius-control: 0.5rem;
-  --shadow-card: 0 18px 40px -30px rgb(7 43 85 / 0.35);
-  --shadow-lift: 0 24px 50px -28px rgb(7 43 85 / 0.45);
+  --color-slate-200: #e3e8ef;
+  --color-slate-400: #8a94a6;
+  --color-slate-600: #3f4757;
+  --color-slate-700: #2b3242;
+  /* v2 shape: card 14px, control/button 10px (never a pill), panel/media
+     20px; two elevation levels, both soft and cool. */
+  --radius-card: 0.875rem;
+  --radius-control: 0.625rem;
+  --radius-panel: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(11 18 32 / 0.04), 0 12px 32px -16px rgb(11 18 32 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(11 18 32 / 0.04), 0 28px 56px -28px rgb(11 18 32 / 0.28);
+  --color-line: var(--line);
+  --color-teal-600: var(--teal-600);
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
   --color-navy-800: var(--navy-800);
@@ -77,14 +71,15 @@
   --color-gold-100: var(--gold-100);
   --color-paper-50: var(--paper-50);
   --color-paper-100: var(--paper-100);
+  --color-tint-50: var(--tint-50);
   --color-ink-900: var(--ink-900);
   --color-slate-500: var(--slate-500);
   --color-slate-300: var(--slate-300);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-display: var(--font-space-grotesk);
-  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: var(--font-jakarta), "Inter", system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, monospace;
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -154,7 +149,7 @@
 
 @layer base {
   * {
-    border-color: var(--paper-100);
+    border-color: var(--line);
   }
   html {
     scroll-behavior: smooth;
@@ -163,6 +158,9 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
   /* Size-specific tracking and leading: the larger the heading, the tighter
      both get; small headings stay near 0. Utilities (tracking-*, leading-*)
@@ -175,18 +173,18 @@
     letter-spacing: -0.01em;
   }
   h1 {
-    letter-spacing: -0.022em;
-    line-height: 1.1;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
   }
   h2 {
-    letter-spacing: -0.016em;
-    line-height: 1.2;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
   }
   h4 {
     letter-spacing: 0;
   }
   :focus-visible {
-    outline: 2px solid var(--navy-800);
+    outline: 2px solid var(--gold-600);
     outline-offset: 2px;
     box-shadow: 0 0 0 4px #fff;
     border-radius: 2px;
@@ -207,8 +205,8 @@
   :is(.bg-navy-950, .bg-navy-900, .bg-brand-gradient) :focus-visible {
     outline-color: var(--gold-300);
   }
-  :is(.bg-white, .bg-paper-50) :focus-visible {
-    outline-color: var(--navy-800);
+  :is(.bg-white, .bg-paper-50, .bg-tint-50) :focus-visible {
+    outline-color: var(--gold-600);
   }
 }
 
@@ -217,8 +215,8 @@
    the counter-based numbered steps and dot bullets stay readable. */
 @layer components {
   .markdown-content {
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 1.0625rem;
+    line-height: 1.7;
     color: var(--slate-500);
   }
   .markdown-content > * + * {
@@ -237,18 +235,11 @@
     border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
     padding-bottom: 0.75rem;
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     font-weight: 700;
-    color: var(--ink-900);
-  }
-  .markdown-content h2::before {
-    content: "";
-    display: inline-block;
-    height: 0.5rem;
-    width: 0.5rem;
-    flex-shrink: 0;
-    border-radius: 9999px;
-    background: var(--gold-500);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--navy-950);
   }
   .markdown-content h3 {
     margin-top: 2rem;
@@ -304,31 +295,33 @@
     width: 2rem;
     align-items: center;
     justify-content: center;
-    border-radius: 9999px;
-    background: var(--gold-500);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
+    border-radius: var(--radius-control);
+    background: var(--gold-100);
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
     font-weight: 700;
-    color: var(--navy-950);
+    font-variant-numeric: tabular-nums;
+    color: var(--gold-700);
   }
   .markdown-content a {
-    color: var(--navy-800);
+    color: var(--gold-600);
     overflow-wrap: anywhere;
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, var(--gold-500) 70%, transparent);
-    text-decoration-thickness: 2px;
+    text-decoration-color: color-mix(in srgb, var(--gold-500) 45%, transparent);
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
   .markdown-content a:hover {
-    color: var(--ink-900);
+    color: var(--gold-700);
+    text-decoration-color: currentColor;
   }
   .markdown-content blockquote {
     border-left: 2px solid var(--gold-500);
     padding-left: 1rem;
-    font-style: italic;
+    color: var(--ink-900);
   }
   .markdown-content code {
-    border-radius: 2px;
+    border-radius: 0.375rem;
     background: color-mix(in srgb, var(--navy-950) 5%, transparent);
     padding: 0.125rem 0.375rem;
     font-family: var(--font-mono);
@@ -351,7 +344,7 @@
     background: var(--paper-50);
     color: var(--navy-800);
     font-weight: 600;
-    border-bottom: 2px solid var(--gold-500);
+    border-bottom: 1px solid color-mix(in srgb, var(--navy-950) 18%, transparent);
   }
   .markdown-content td:first-child {
     font-weight: 600;
@@ -372,17 +365,20 @@
   }
   .form-input {
     width: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid color-mix(in srgb, var(--navy-950) 15%, transparent);
+    border-radius: var(--radius-control);
+    /* slate-400 border: 3:1 on white, so the field itself is visible (1.4.11). */
+    border: 1px solid #8a94a6;
     background: white;
     padding: 0.65rem 0.85rem;
     font-size: 0.9375rem;
     color: var(--ink-900);
     transition: border-color 0.2s ease;
   }
+  /* gold-500 on white is 2.76:1 — too faint for a focus indicator (1.4.11). */
   .form-input:focus {
-    outline: none;
-    border-color: var(--gold-500);
+    outline: 2px solid var(--gold-600);
+    outline-offset: 1px;
+    border-color: var(--gold-600);
   }
   .bg-grain {
     background-image: radial-gradient(
@@ -419,13 +415,15 @@
         transparent 70%
       );
     filter: blur(28px);
-    animation: aurora-drift 18s ease-in-out infinite;
+    opacity: 0.6;
   }
+  /* v2 is calm: the glow and float helpers are kept for existing markup but
+     no longer loop (no endless motion anywhere on the site). */
   .animate-glow-pulse {
-    animation: glow-pulse 6s ease-in-out infinite;
+    opacity: 0.5;
   }
   .animate-float-y {
-    animation: float-y 7s ease-in-out infinite;
+    transform: none;
   }
 }
 
@@ -514,36 +512,47 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    min-height: 3rem;
     border-radius: var(--radius-control);
     border: 1px solid transparent;
     padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 600;
     cursor: pointer;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s ease-out;
   }
+  /* Primary: brand blue, white text (6.7:1). */
   .btn-primary {
     background: var(--gold-500);
-    color: var(--navy-950);
+    color: #fff;
   }
   .btn-primary:hover {
-    background: var(--gold-400);
+    background: var(--gold-700);
+  }
+  /* On the dark form panel the primary action turns white with ink text. */
+  .form-dark .btn-primary {
+    background: #fff;
+    color: var(--navy-950);
+  }
+  .form-dark .btn-primary:hover {
+    background: var(--gold-100);
   }
   .btn[aria-disabled="true"] {
     cursor: progress;
     opacity: 0.7;
   }
   .btn-ghost {
-    border-color: color-mix(in srgb, var(--navy-950) 15%, transparent);
-    color: var(--ink-900);
+    border-color: #8a94a6;
+    color: var(--navy-950);
     background: white;
   }
   .btn-ghost:hover {
-    border-color: color-mix(in srgb, var(--navy-950) 40%, transparent);
-    color: var(--navy-800);
-    background: var(--paper-50);
+    border-color: var(--gold-600);
+    color: var(--gold-700);
+    background: white;
   }
   .btn-sm {
+    min-height: 2.5rem;
     padding: 0.5rem 1rem;
     font-size: 0.8125rem;
   }
@@ -555,11 +564,17 @@
   }
 
   .form-card {
-    border-radius: 2px;
-    border: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    border-radius: var(--radius-panel);
+    border: 1px solid var(--line);
     background: white;
-    padding: 1.75rem;
+    padding: 1.5rem;
     color: var(--ink-900);
+    box-shadow: var(--shadow-card);
+  }
+  @media (min-width: 768px) {
+    .form-card {
+      padding: 2.25rem;
+    }
   }
   .form-field {
     margin-bottom: 1.1rem;
@@ -567,7 +582,7 @@
   .form-field label {
     display: block;
     margin-bottom: 0.4rem;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--ink-900);
   }
@@ -575,8 +590,10 @@
   .form-field select,
   .form-field textarea {
     width: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid color-mix(in srgb, var(--navy-950) 22%, transparent);
+    min-height: 3rem;
+    border-radius: var(--radius-control);
+    /* slate-400: 3:1 on white, so each field is visible (1.4.11). */
+    border: 1px solid #8a94a6;
     background: white;
     padding: 0.65rem 0.85rem;
     font-size: 1rem;
@@ -586,12 +603,13 @@
   .form-field input:focus,
   .form-field select:focus,
   .form-field textarea:focus {
-    outline: 2px solid var(--navy-800);
+    outline: 2px solid var(--gold-600);
     outline-offset: 1px;
-    border-color: var(--navy-800);
+    border-color: var(--gold-600);
   }
   .form-field [aria-invalid="true"] {
     border-color: #b42318;
+    box-shadow: 0 0 0 1px #b42318;
   }
   .field-err {
     margin-top: 0.35rem;
@@ -603,12 +621,18 @@
     font-size: 0.8125rem;
     color: var(--slate-500);
   }
+  .form-note a {
+    color: var(--gold-700);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
   .req-note {
     margin: 0 0 1rem;
   }
   .form-fallback {
     margin-top: 1rem;
-    border-left: 2px solid var(--gold-500);
+    border-radius: var(--radius-control);
+    border-left: 3px solid var(--gold-500);
     background: var(--paper-50);
     padding: 0.875rem 1rem;
     font-size: 0.875rem;
@@ -638,7 +662,7 @@
   }
   .quote-services legend {
     margin-bottom: 0.5rem;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--ink-900);
   }
@@ -647,20 +671,23 @@
     align-items: center;
     gap: 0.4rem;
     cursor: pointer;
-    border-radius: 9999px;
-    border: 1px solid color-mix(in srgb, var(--navy-950) 18%, transparent);
+    min-height: 2.5rem;
+    border-radius: var(--radius-control);
+    border: 1px solid #8a94a6;
     background: white;
     padding: 0.4rem 0.8rem;
     font-size: 0.8125rem;
     color: var(--ink-900);
   }
   .quote-chip:has(input:checked) {
-    border-color: var(--gold-500);
-    background: color-mix(in srgb, var(--gold-500) 10%, white);
+    border-color: var(--gold-600);
+    background: var(--gold-100);
+    box-shadow: inset 0 0 0 1px var(--gold-600);
     font-weight: 500;
+    color: var(--gold-800);
   }
   .quote-chip:has(input:focus-visible) {
-    outline: 2px solid var(--navy-800);
+    outline: 2px solid var(--gold-600);
     outline-offset: 2px;
   }
   .quote-chip input {
@@ -692,13 +719,162 @@
     gap: 0.5rem;
   }
 
+  /* Eyebrow above every H2 (v2): 12px, 600, uppercase, +0.12em, brand blue;
+     brand-300 on dark grounds (8.7:1 on ink-950). No decorative rule. */
+  .eyebrow {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-600);
+  }
+  .eyebrow-dark {
+    color: var(--gold-300);
+  }
+
+  /* The one card (v2): white, hairline, 14px radius, soft cool shadow.
+     .card-link adds the hover: border toward brand blue and a 2px lift. */
+  .card {
+    border-radius: var(--radius-card);
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: var(--shadow-card);
+  }
+  .card-link {
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease,
+      transform 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .card-link:hover {
+    border-color: color-mix(in srgb, var(--gold-600) 30%, var(--line));
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-2px);
+  }
+  /* The same card on dark grounds. */
+  .card-dark {
+    border-radius: var(--radius-card);
+    border: 1px solid rgb(255 255 255 / 0.1);
+    background: rgb(255 255 255 / 0.04);
+  }
+  .card-dark.card-link:hover {
+    border-color: rgb(143 176 245 / 0.45);
+    background: rgb(255 255 255 / 0.07);
+    box-shadow: none;
+  }
+
+  /* One photo treatment for every section image, so pictures from different
+     sources read as one set: panel radius, a little less saturation and a
+     navy multiply wash that deepens toward the bottom edge. */
+  .photo-tone {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-panel);
+    background: var(--navy-950);
+  }
+  /* v2: a light blue duotone + a touch of contrast, deepening toward the
+     bottom edge. */
+  .photo-tone img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.35) contrast(1.06);
+  }
+  .photo-tone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgb(11 18 32 / 0) 40%, rgb(11 18 32 / 0.4)),
+      rgb(34 81 204 / 0.16);
+    mix-blend-mode: multiply;
+  }
+
+  /* Contact form on the dark panel (app/(site)/iletisim/page.tsx). Scoped from
+     the parent so components/ContactForm.tsx itself stays untouched: labels in
+     slate-200 (11:1), white fields, a gold-300 focus ring (7.9:1) and a light
+     error colour (8.3:1) — all on navy-950. */
+  .form-dark .form-card {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #fff;
+    box-shadow: none;
+  }
+  /* The fallback box stays a light inset: its primary action is brand blue again. */
+  .form-dark .form-fallback .btn-primary {
+    background: var(--gold-500);
+    color: #fff;
+  }
+  .form-dark .form-fallback .btn-primary:hover {
+    background: var(--gold-700);
+  }
+  .form-dark .form-fallback :focus-visible {
+    outline-color: var(--gold-600);
+  }
+  .form-dark .form-field label {
+    color: #dbe4f1;
+  }
+  .form-dark .form-field input,
+  .form-dark .form-field select,
+  .form-dark .form-field textarea {
+    background: #fff;
+    border-color: transparent;
+  }
+  .form-dark .form-field :is(input, select, textarea):focus {
+    outline-color: var(--gold-300);
+    border-color: var(--gold-300);
+  }
+  .form-dark :focus-visible {
+    outline-color: var(--gold-300);
+  }
+  .form-dark .field-err {
+    color: var(--err-on-dark);
+  }
+  .form-dark .form-field [aria-invalid="true"] {
+    border-color: var(--err-on-dark);
+    box-shadow: 0 0 0 1px var(--err-on-dark);
+  }
+  .form-dark .form-note {
+    color: var(--slate-300);
+  }
+  .form-dark .form-note a {
+    color: var(--gold-300);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .form-dark .form-fallback {
+    color: var(--ink-900);
+  }
+  /* From md up: name + company and e-mail + phone side by side (children 2–5
+     after the required-fields note); everything else spans both columns. */
+  @media (min-width: 768px) {
+    .form-dark .form-card {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1rem;
+    }
+    .form-dark .form-card > * {
+      grid-column: 1 / -1;
+    }
+    .form-dark .form-card > .form-field:nth-child(-n + 5) {
+      grid-column: auto;
+    }
+  }
+
   /* Markdown body extras (SiteMarkdown): responsive images, scrollable
      tables, GFM task-list checkboxes. */
   .markdown-content img {
     width: 100%;
     height: auto;
-    border-radius: 2px;
-    border: 1px solid color-mix(in srgb, var(--navy-950) 10%, transparent);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--line);
   }
   .markdown-content .table-wrap {
     overflow-x: auto;
@@ -715,7 +891,7 @@
   }
   .markdown-content pre {
     overflow-x: auto;
-    border-radius: 2px;
+    border-radius: var(--radius-card);
     background: var(--navy-950);
     padding: 1rem;
     color: var(--paper-50);
@@ -731,12 +907,32 @@
 @layer utilities {
   .bg-brand-gradient {
     background:
-      radial-gradient(60% 80% at 100% 0%, rgb(232 129 47 / 0.14), transparent 60%),
-      linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 50%, var(--navy-800) 100%);
+      radial-gradient(60% 80% at 100% 0%, rgb(34 81 204 / 0.18), transparent 60%),
+      linear-gradient(160deg, var(--navy-950) 0%, var(--navy-950) 55%, var(--navy-900) 100%);
+  }
+  /* Light hero ground: an ink hairline grid that fades out away from the
+     top-right corner. */
+  .bg-blueprint-light {
+    background-image:
+      linear-gradient(rgb(11 18 32 / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(11 18 32 / 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(90% 90% at 85% 10%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(90% 90% at 85% 10%, #000 30%, transparent 75%);
   }
   .bg-dots {
     background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);
     background-size: 22px 22px;
+  }
+  /* 1px engineering grid for dark grounds (hero, stat panel). Use instead of
+     .bg-dots, never together with it. */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(80% 100% at 100% 0%, #000 25%, transparent 80%);
+    mask-image: radial-gradient(80% 100% at 100% 0%, #000 25%, transparent 80%);
   }
 }
 
@@ -775,12 +971,15 @@
 body:has([data-contact-cta]) [data-footer-cta] {
   display: none;
 }
-/* About / legal pages: tall photos are capped. */
+/* About / legal pages: tall photos are capped, and get the panel radius and
+   the muted tone of .photo-tone (CSS only, no wrapper around Markdown images). */
 .core-page img {
   max-height: 420px;
   width: 100%;
   object-fit: cover;
   object-position: top;
+  border-radius: var(--radius-panel);
+  filter: grayscale(0.35) contrast(1.06);
 }
 
 /* Header dropdowns (components/ensa/Header.tsx). Hover intent without JS:
@@ -878,7 +1077,7 @@ body:has([data-contact-cta]) [data-footer-cta] {
   top: 100%;
   height: 14px;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgb(7 43 85 / 0.1), rgb(7 43 85 / 0));
+  background: linear-gradient(to bottom, rgb(11 18 32 / 0.1), rgb(11 18 32 / 0));
 }
 @supports (animation-timeline: scroll()) {
   .site-header::after {
@@ -906,6 +1105,17 @@ body:has([data-contact-cta]) [data-footer-cta] {
   }
 }
 @media (prefers-contrast: more) {
+  .photo-tone::after,
+  .bg-blueprint,
+  .bg-blueprint-light {
+    display: none;
+  }
+  .card {
+    border-color: var(--navy-950);
+  }
+  .card-dark {
+    border-color: rgb(255 255 255 / 0.6);
+  }
   .site-header {
     background: #fff;
     -webkit-backdrop-filter: none;
@@ -923,7 +1133,8 @@ body:has([data-contact-cta]) [data-footer-cta] {
   #site-header .mega-panel > *,
   .press:active,
   .btn:active,
-  .reveal-hover:hover {
+  .reveal-hover:hover,
+  .card-link:hover {
     transform: none !important;
   }
   .reveal-hidden {

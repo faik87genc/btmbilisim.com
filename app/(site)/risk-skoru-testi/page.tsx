@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ensa/Container";
-import { PageHero } from "@/components/ensa/PageHero";
+import { LightHero } from "@/components/site/ui";
 import { RiskQuiz } from "@/components/btm/RiskQuiz";
 import { site } from "@/lib/site";
 import { absoluteUrl } from "@/lib/siteView";
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 export default function RiskScorePage() {
   return (
     <>
-      <PageHero
+      <LightHero
         title="Bilgi güvenliği risk skoru"
-        eyebrow="Ücretsiz Analiz Aracı"
+        eyebrow="Ücretsiz analiz aracı"
         lead="Yedekleme, güvenlik duvarı, uç nokta koruması, güncellemeler, MFA, sızma testi, farkındalık ve KVKK: 8 soruda kurumunuzun risk seviyesini görün."
         crumbs={[{ text: "Risk Skoru Testi" }]}
       />
-      <section className="bg-paper-50 py-14 md:py-20">
+      <section className="bg-white py-14 md:py-20">
         <Container className="max-w-3xl">
           <RiskQuiz />
         </Container>

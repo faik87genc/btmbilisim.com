@@ -41,9 +41,9 @@ export function BlogCard({
     <MotionReveal delay={delay} className="h-full">
       <Link
         href={`/${post.slug}/`}
-        className="group flex h-full flex-col overflow-hidden rounded-lg border border-navy-950/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50 hover:shadow-[0_18px_40px_-24px_rgba(10,18,32,0.35)]"
+        className="card card-link group flex h-full flex-col overflow-hidden"
       >
-        <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden bg-navy-900">
+        <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-navy-900">
           {post.coverImageUrl ? (
             <Image
               src={post.coverImageUrl}
@@ -51,22 +51,22 @@ export function BlogCard({
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               priority={priority}
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover [filter:grayscale(0.2)_contrast(1.04)] transition-transform duration-500 group-hover:scale-[1.03]"
             />
           ) : (
             <div className="relative flex h-full w-full flex-col justify-end bg-brand-gradient p-5">
-              <div className="bg-dots pointer-events-none absolute inset-0" aria-hidden="true" />
+              <div className="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
               <Newspaper className="absolute right-5 top-5 h-10 w-10 text-gold-300/60" aria-hidden="true" />
               <span className="relative line-clamp-2 font-display text-lg font-semibold leading-snug text-white" aria-hidden="true">
                 {post.title}
               </span>
-              <span className="relative mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-gold-300" aria-hidden="true">
+              <span className="eyebrow eyebrow-dark relative mt-1.5 !text-[11px]" aria-hidden="true">
                 BTM Bilişim Blog
               </span>
             </div>
           )}
           {primaryTag && (
-            <span className="absolute left-3 top-3 rounded-full bg-navy-950/85 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-gold-300 backdrop-blur-sm">
+            <span className="absolute left-3 top-3 rounded-md bg-white/95 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-gold-700 shadow-sm">
               {primaryTag}
             </span>
           )}
@@ -86,14 +86,14 @@ export function BlogCard({
             </span>
           </div>
 
-          <h3 className="mt-3 line-clamp-2 font-display text-lg font-semibold leading-snug text-ink-900 transition-colors group-hover:text-gold-600">
+          <h3 className="mt-3 line-clamp-2 font-display text-lg font-semibold leading-snug text-navy-950 transition-colors group-hover:text-gold-700">
             {post.title}
           </h3>
           <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-500">
             {post.excerpt}
           </p>
 
-          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-gold-600">
+          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700">
             Devamını oku
             <ArrowUpRight
               className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"

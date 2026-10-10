@@ -14,12 +14,12 @@ export function FloatingContact() {
       <div className="h-16 md:hidden" aria-hidden="true" />
       <nav
         aria-label="Hızlı iletişim"
-        className="fixed inset-x-0 z-50 grid grid-cols-2 border-t border-navy-950/10 bg-white shadow-[0_-10px_24px_-14px_rgba(7,43,85,0.35)] md:hidden"
+        className="fixed inset-x-0 z-50 grid grid-cols-2 border-t border-line bg-white shadow-lift md:hidden"
         style={{ bottom: "var(--cb-h, 0px)" }}
       >
         <a
           href={site.phone.href}
-          className="flex h-16 items-center justify-center gap-2 bg-gold-500 text-sm font-semibold text-navy-950"
+          className="flex h-16 items-center justify-center gap-2 bg-gold-500 text-sm font-semibold text-white"
         >
           <Phone className="h-5 w-5" aria-hidden="true" /> Hemen Ara
         </a>
@@ -27,7 +27,7 @@ export function FloatingContact() {
           href={site.whatsapp.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-16 items-center justify-center gap-2 bg-navy-800 text-sm font-semibold text-white"
+          className="flex h-16 items-center justify-center gap-2 bg-navy-950 text-sm font-semibold text-white"
         >
           <WhatsAppIcon className="h-5 w-5" /> WhatsApp<span className="visually-hidden"> (yeni sekmede açılır)</span>
         </a>
@@ -41,7 +41,7 @@ export function FloatingContact() {
           href={site.phone.href}
           aria-label={`Hemen arayın — ${site.phone.display}`}
           title={`Hemen arayın — ${site.phone.display}`}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-navy-950 shadow-lg ring-2 ring-navy-800/40 hover:bg-gold-400 transition-transform duration-200 hover:scale-105 focus-visible:scale-105"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-white shadow-lift ring-4 ring-white transition-[background-color,transform] duration-200 hover:scale-105 hover:bg-gold-700"
         >
           <Phone className="h-5 w-5" />
         </a>
@@ -51,7 +51,7 @@ export function FloatingContact() {
           rel="noopener noreferrer"
           aria-label="WhatsApp'tan yazın (yeni sekmede açılır)"
           title="WhatsApp'tan yazın"
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#0f7a40] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#0b6434] focus-visible:scale-105"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-teal-600 text-white shadow-lift ring-4 ring-white transition-[background-color,transform] duration-200 hover:scale-105 hover:bg-[#0b5e58]"
         >
           <WhatsAppIcon className="h-6 w-6" />
         </a>

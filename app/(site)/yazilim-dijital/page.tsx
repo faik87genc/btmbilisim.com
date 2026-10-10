@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CategoryPage } from "@/components/ensa/CategoryPage";
+import { CategoryView } from "@/components/site/CategoryView";
 import { SoftwareShowcase } from "@/components/btm/SoftwareShowcase";
 import { serviceCategories } from "@/lib/services";
 import { ogMeta } from "@/lib/siteView";
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <CategoryPage category={category}>
+    <CategoryView category={category}>
       <SoftwareShowcase />
-    </CategoryPage>
+    </CategoryView>
   );
 }

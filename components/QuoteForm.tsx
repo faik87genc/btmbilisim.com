@@ -212,7 +212,7 @@ export function QuoteForm() {
         </button>
       </div>
       <p role="status" aria-live="polite" className="form-note">
-        {status === "sent" && "Talebiniz alındı. Aynı gün içinde size dönüş yapacağız."}
+        {status === "sent" && "Talebiniz alındı. En geç bir iş günü içinde size dönüş yapacağız."}
         {status === "wa" &&
           `Talebiniz şu an iletilemedi. Bilgileriniz hazır: aşağıdaki düğmelerden biriyle gönderebilir, ${site.email} adresine yazabilir veya ${site.phone.display} numarasından bizi arayabilirsiniz.`}
       </p>

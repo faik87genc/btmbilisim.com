@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GlobeBands } from "@/components/ensa/GlobeBands";
 import { Container } from "@/components/ensa/Container";
 import { ProductCard } from "@/components/ensa/ProductCard";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
@@ -34,14 +33,11 @@ export default function Page() {
       <JsonLd data={breadcrumbJsonLd([{ text: "Yazılım Ürünlerimiz" }])} />
       <JsonLd data={itemListJsonLd} />
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
-        <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
+        <div className="bg-blueprint pointer-events-none absolute inset-0 [mask-image:linear-gradient(180deg,black,transparent_85%)]" aria-hidden="true" />
         <Container className="relative">
           <div className="max-w-3xl">
-          <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-gold-300">
-            <span className="h-px w-8 bg-gold-300" />
-            Yazılım Ürünlerimiz
-          </div>
-          <h1 className="text-balance font-display text-4xl font-semibold leading-tight text-paper-50 md:text-5xl">
+          <p className="eyebrow-v2 eyebrow-v2-dark">Yazılım Ürünlerimiz</p>
+          <h1 className="mt-3 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
             Sahada gördüğümüz ihtiyaçlardan doğan 9 yazılım.
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
@@ -53,7 +49,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <section className="bg-paper-50 py-20 md:py-24">
+      <section className="bg-white py-20 md:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (

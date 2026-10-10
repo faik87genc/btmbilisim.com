@@ -12,7 +12,7 @@ const badges = [
 
 export function TopBar() {
   return (
-    <div className="hidden bg-brand-gradient py-2 text-xs font-medium text-paper-50 md:block">
+    <div className="hidden bg-navy-950 py-2 text-xs font-medium text-slate-300 md:block">
       <Container className="flex items-center justify-between gap-6 lg:max-w-7xl">
         <ul className="flex flex-wrap items-center gap-x-6 gap-y-1">
           {badges.map((b) => (
@@ -22,7 +22,7 @@ export function TopBar() {
             </li>
           ))}
         </ul>
-        <a href={site.phone.href} className="flex shrink-0 items-center gap-1.5 hover:text-gold-300">
+        <a href={site.phone.href} className="flex shrink-0 items-center gap-1.5 font-semibold tabular-nums text-white hover:text-gold-300">
           <Phone className="h-3.5 w-3.5 text-gold-300" aria-hidden="true" />
           {site.phone.display}
         </a>

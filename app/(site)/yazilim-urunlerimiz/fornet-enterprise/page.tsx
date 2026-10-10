@@ -23,7 +23,6 @@ import {
 import { Container } from "@/components/ensa/Container";
 import { MotionReveal } from "@/components/ensa/MotionReveal";
 import { MotionStagger, MotionStaggerItem } from "@/components/ensa/MotionStagger";
-import { ParallaxGlobe } from "@/components/ensa/ParallaxGlobe";
 import { CountUp } from "@/components/ensa/CountUp";
 import { SectionHeading } from "@/components/ensa/SectionHeading";
 import { FaqSection } from "@/components/ensa/FaqSection";
@@ -212,17 +211,16 @@ export default function Page() {
     <>
       <ProductJsonLd product={product} />
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
-        <div className="hero-aurora" aria-hidden="true" />
-        <ParallaxGlobe className="pointer-events-none absolute -right-32 -top-24 h-[460px] w-[460px] text-gold-500/15" />
+        <div className="bg-blueprint pointer-events-none absolute inset-0 [mask-image:linear-gradient(180deg,black,transparent_85%)]" aria-hidden="true" />
         <Container className="relative">
           <div className="max-w-3xl">
           <MotionReveal blur>
-            <span className="inline-block rounded-sm bg-paper-50/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-gold-300">
+            <span className="inline-block rounded-[6px] bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-300">
               {product.code}
             </span>
           </MotionReveal>
           <MotionReveal delay={0.05} blur>
-            <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper-50 md:text-5xl">
+            <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
               {product.name}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
                 MSP&apos;ler için merkezî altyapı, erişim ve güvenlik platformu
@@ -240,7 +238,7 @@ export default function Page() {
             {heroTags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block rounded-sm bg-paper-50/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-gold-300"
+                className="inline-block rounded-[6px] bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-300"
               >
                 {tag}
               </span>
@@ -248,7 +246,7 @@ export default function Page() {
           </MotionReveal>
           <MotionReveal delay={0.2}>
             <div className="mt-8">
-              <DemoRequest product="FORNET ENTERPRISE" tone="dark" align="center" />
+              <DemoRequest product="FORNET ENTERPRISE" tone="dark" />
             </div>
           </MotionReveal>
 
@@ -276,13 +274,13 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => (
               <MotionStaggerItem key={pillar.title}>
-                <div className="group/f flex h-full flex-col gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full flex-col gap-4 card-v2 card-v2-link p-6">
                   <pillar.icon
                     className="h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
                   />
                   <div>
-                    <h3 className="font-display text-base font-semibold text-ink-900">
+                    <h3 className="font-display text-base font-semibold text-navy-950">
                       {pillar.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -296,7 +294,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <section className="bg-paper-100 py-20 md:py-24">
+      <section className="bg-white py-20 md:py-24">
         <Container>
           <SectionHeading
             eyebrow="01 · Merkezî İzleme Yapısı"
@@ -306,13 +304,13 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {monitoringFeatures.map((f) => (
               <MotionStaggerItem key={f.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 card-v2 card-v2-link p-6">
                   <f.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
                   />
                   <div>
-                    <h3 className="font-display text-base font-semibold text-ink-900">
+                    <h3 className="font-display text-base font-semibold text-navy-950">
                       {f.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -327,10 +325,6 @@ export default function Page() {
       </section>
 
       <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
-        <div
-          className="animate-glow-pulse pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-gold-500/10 blur-3xl"
-          aria-hidden="true"
-        />
         <Container className="relative">
           <SectionHeading
             tone="dark"
@@ -341,7 +335,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {isolationFeatures.map((f) => (
               <MotionStaggerItem key={f.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-card border border-paper-50/10 bg-paper-50/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+                <div className="group/f flex h-full items-start gap-4 card-v2-dark p-6 transition-colors duration-200 hover:border-gold-300/40">
                   <f.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-300 transition-colors duration-300 group-hover/f:text-paper-50"
                     aria-hidden="true"
@@ -381,13 +375,13 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {networkFeatures.map((f) => (
               <MotionStaggerItem key={f.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 card-v2 card-v2-link p-6">
                   <f.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
                   />
                   <div>
-                    <h3 className="font-display text-base font-semibold text-ink-900">
+                    <h3 className="font-display text-base font-semibold text-navy-950">
                       {f.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -401,7 +395,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <section className="bg-paper-100 py-20 md:py-24">
+      <section className="bg-white py-20 md:py-24">
         <Container>
           <SectionHeading
             eyebrow="04 · Yetkili Erişim Yönetimi (PAM)"
@@ -411,13 +405,13 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-2">
             {pamFeatures.map((f) => (
               <MotionStaggerItem key={f.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-card border border-navy-950/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_16px_40px_-24px_rgba(10,18,32,0.35)]">
+                <div className="group/f flex h-full items-start gap-4 card-v2 card-v2-link p-6">
                   <f.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-500 transition-colors duration-300 group-hover/f:text-gold-300"
                     aria-hidden="true"
                   />
                   <div>
-                    <h3 className="font-display text-base font-semibold text-ink-900">
+                    <h3 className="font-display text-base font-semibold text-navy-950">
                       {f.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-500">
@@ -441,7 +435,7 @@ export default function Page() {
           <MotionStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {capacity.map((f) => (
               <MotionStaggerItem key={f.title}>
-                <div className="group/f flex h-full items-start gap-4 rounded-card border border-paper-50/10 bg-paper-50/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40">
+                <div className="group/f flex h-full items-start gap-4 card-v2-dark p-6 transition-colors duration-200 hover:border-gold-300/40">
                   <f.icon
                     className="mt-0.5 h-5 w-5 shrink-0 text-gold-300 transition-colors duration-300 group-hover/f:text-paper-50"
                     aria-hidden="true"
