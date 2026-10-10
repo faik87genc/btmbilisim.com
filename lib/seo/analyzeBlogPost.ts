@@ -149,18 +149,20 @@ function words(text: string): string[] {
   return t ? t : [];
 }
 
+/**
+ * Keyword hits, tolerant of Turkish suffixes: every keyword word may carry an
+ * ending, so "fidye yazılımı saldırısı" also matches "fidye yazılımı
+ * saldırısında" — the exact phrase rarely fits a natural Turkish sentence.
+ */
 function countOccurrences(haystack: string, needle: string): number {
-  if (!needle) return 0;
-  const h = lc(haystack);
-  const n = lc(needle).trim();
-  if (!n) return 0;
-  let i = 0;
-  let count = 0;
-  while ((i = h.indexOf(n, i)) !== -1) {
-    count++;
-    i += n.length;
-  }
-  return count;
+  const parts = words(lc(needle));
+  if (!parts.length) return 0;
+  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(
+    `(?<![\\p{L}\\p{N}])${parts.map((p) => `${esc(p)}[\\p{L}\\p{N}’']*`).join("\\s+")}`,
+    "gu",
+  );
+  return (lc(haystack).match(re) || []).length;
 }
 
 function extractHeadings(md: string): { level: number; text: string }[] {

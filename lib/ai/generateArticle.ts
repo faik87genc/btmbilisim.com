@@ -29,7 +29,7 @@ ARAMA NİYETİ & GİRİŞ
 - Ardından tek cümlelik yeniden çerçeveleme — bağlacı her yazıda farklı seç.
 
 YAPI
-- Uzunluk = HEDEF UZUNLUK (±%10). Tipik aralıklar: bilgi yazısı 1200–1800, ticari/hizmet rehberi 1500–2200, karşılaştırma 1500–2500, pillar 2500–4000. Uzunluk hedef değildir; tekrar ve dolgu yapma.
+- Uzunluk = HEDEF UZUNLUK (±%10) ve ASLA 1500 kelimenin altı değil (altı "ince içerik" sayılır, taslak reddedilir). Tipik aralıklar: ticari/hizmet rehberi 1500–2200, karşılaştırma 1500–2500, pillar 2500–4000. Uzunluğu dolguyla değil derinlikle sağla: her H2 altında 150–300 kelime; saha bilgisi, seçim ölçütleri, sık hatalar, kontrol listesi ve SSS yanıtları uzunluğun asıl kaynağıdır.
 - 6–10 adet '##' (H2; SSS, Kaynaklar ve kapanış dahil); gerektiğinde '###'. '#' (H1) ASLA. Seviye atlama yok. Odak kelime en az bir H2'de geçer.
 - Önerilen H2 iskeleti (konuya uyarla): a) {konu} nedir / ne işe yarar? b) Neden önemli (iş sürekliliği, güvenlik, maliyet) c) Seçenekler ve karşılaştırma d) Adım adım kurulum / uygulama (numaralı liste) e) Sık yapılan hatalar f) Bakım ve kontrol listesi g) Sıkça Sorulan Sorular.
 - EN AZ 1 Markdown tablo (karşılaştırma, seçenek–avantaj–dezavantaj, adım–sorumlu–çıktı vb.).
@@ -140,13 +140,17 @@ async function generateUserPrompt(opts: GenerateOptions): Promise<string> {
     b.note ? `EDİTÖR NOTU: ${b.note}` : "",
     audienceLine(b.audience),
     opts.angle ? `AÇI / VURGU: ${opts.angle}` : "",
-    `HEDEF UZUNLUK: ~${opts.wordCount} kelime`,
+    `HEDEF UZUNLUK: ~${opts.wordCount} kelime (en az ${Math.max(1500, Math.round(opts.wordCount * 0.9))})`,
     `TON: ${opts.tone}`,
     "",
     "İÇ SAYFA KATALOĞU (dahili linkler ve internalLinkSuggestions yalnızca buradan):",
     await catalogueFor(relevance, opts.linkTargets),
   ];
   return parts.filter(Boolean).join("\n");
+}
+
+function countWords(md: string): number {
+  return (md.match(/[\p{L}\p{N}’'-]+/gu) || []).length;
 }
 
 /** A generated draft plus which provider actually produced it (fallback-aware). */
@@ -209,6 +213,7 @@ export async function improveArticle(opts: {
     "AŞAĞIDAKİ TASLAĞI, ANLAMINI VE SESİNİ KORUYARAK, ŞU EKSİKLERİ GİDERECEK ŞEKİLDE YENİDEN YAZ:",
     ...opts.failing.map((f) => `- ${f}`),
     "",
+    `Mevcut gövde ${countWords(opts.content)} kelime. Metni KISALTMA ve hiçbir bölümü atma; uzunluk eksiği varsa mevcut H2'lerin altını saha bilgisi, örnek ve kontrol adımlarıyla genişlet, SSS'yi 5–6 soruya tamamla ('### …?' başlığı, altında boş satır, sonra 40–80 kelimelik paragraf).`,
     "Yasak ifade uyarısı varsa o cümleleri tamamen yeniden kur (yalnızca kelimeyi silme). Yapıyı bozma, uydurma bilgi/kaynak ekleme, doğal kal. Eksik dahili linkleri kataloğdan ekle (para sayfaları dahil, bağlam içinde, '/slug/' biçiminde). Saha bilgisi eklerken birinci ağızdan vaka/müşteri/sayı uydurma. Tüm alanları (title, metaTitle, metaDescription, slug, excerpt, tags, content, internalLinkSuggestions, imagePrompts) yeniden ver.",
     "",
     "İÇ SAYFA KATALOĞU:",

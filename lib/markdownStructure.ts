@@ -139,7 +139,13 @@ function plainInline(s: string): string {
  * the questions stay in the body where the author put them.
  */
 export function faqPairs(markdown: string): { q: string; a: string }[] {
-  const blocks = markdown.split(/\n\s*\n/).map((b) => b.trim()).filter(Boolean);
+  // A heading is its own block even when the answer starts on the very next
+  // line ("### Soru?\nYanıt…") — Markdown renders that the same way.
+  const blocks = markdown
+    .replace(/^(#{2,4}\s+.*)\n(?=[^\n])/gm, "$1\n\n")
+    .split(/\n\s*\n/)
+    .map((b) => b.trim())
+    .filter(Boolean);
   const pairs: { q: string; a: string }[] = [];
   blocks.forEach((b, i) => {
     const h = /^#{2,4}\s+(.+?)\s*$/.exec(b);
