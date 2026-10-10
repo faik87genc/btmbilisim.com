@@ -79,9 +79,10 @@ export function MobileMenu({
       {open && (
         <div
           id="mobil-menu"
-          className="absolute inset-x-0 top-full max-h-[calc(100vh-72px)] overflow-y-auto border-t border-navy-950/10 bg-white shadow-[0_24px_40px_-24px_rgba(7,43,85,0.35)] lg:hidden"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-72px)] overflow-y-auto border-t border-navy-950/10 bg-white shadow-[0_24px_40px_-24px_rgba(7,43,85,0.35)] lg:hidden"
         >
-          <Container className="flex flex-col gap-1 py-4">
+          {/* Bottom padding clears the fixed "Hemen Ara / WhatsApp" bar so the last CTA stays tappable. */}
+          <Container className="flex flex-col gap-1 pt-4 pb-24">
             <Link onClick={() => setOpen(false)} href="/" className="rounded-sm px-2 py-3 text-base font-medium text-ink-900">
               Ana Sayfa
             </Link>
