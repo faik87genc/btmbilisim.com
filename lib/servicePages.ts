@@ -167,9 +167,9 @@ Mevcut uyum düzeyinizi ücretsiz bir ön görüşmede birlikte değerlendirelim
     slug: "it-danismanlik-hizmetleri",
     title: "IT Danışmanlık Hizmetleri",
     related: ["sistem-network/sistem-ve-network-danismanligi","siber-guvenlik/siber-guvenlik-danismanligi","sistem-network/it-bakim-ve-destek-hizmetleri","danismanlik/iso-27001-bilgi-guvenligi-danismanligi","danismanlik/kvkk-danismanligi"],
-    metaTitle: "IT Danışmanlık Hizmetleri ve Firması | Gebze | BTM Bilişim",
+    metaTitle: "IT Danışmanlık Hizmetleri ve Firması | BTM Bilişim",
     metaDescription:
-      "IT danışmanlık firması BTM Bilişim: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, dış kaynak IT müdürü. 2010'dan beri Gebze ve Kocaeli.",
+      "IT danışmanlık firması BTM Bilişim: teknoloji yol haritası, altyapı ve siber güvenlik değerlendirmesi, dış kaynak IT müdürü. 2010'dan beri Türkiye genelinde.",
     content: `IT danışmanlık hizmetlerimiz, işletmenizin bilgi teknolojilerini (BT) iş hedeflerinize hizmet eden, güvenli ve ölçülebilir bir yapıya dönüştürür. BTM Bilişim'de yaptığımız her işin temelinde IT danışmanlığı vardır: önce ihtiyacı ve riski netleştirir, sonra altyapıyı, güvenliği ve yazılımı buna göre kurar ve yönetiriz. 2010'dan bu yana farklı ölçekte kurumların ağ, sunucu, güvenlik, bulut ve yazılım projelerini sahada bizzat yürütüyoruz.
 
 ## IT danışmanlık nedir?

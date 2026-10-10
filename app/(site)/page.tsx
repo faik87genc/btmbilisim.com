@@ -106,7 +106,7 @@ export default function Home() {
               </li>
             </ul>
             <h1 className="mt-6 text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-[3.5rem]">
-              Gebze ve Kocaeli&apos;de IT danışmanlıktan siber güvenliğe, <span className="text-gold-300">bilişiminizin tek muhatabı.</span>
+              IT danışmanlıktan siber güvenliğe, <span className="text-gold-300">bilişiminizin tek muhatabı.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
               İşletmenizin IT altyapısını planlıyor, kuruyor ve güvence altına alıyoruz.
