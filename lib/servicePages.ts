@@ -496,7 +496,7 @@ Dijitalleştirmek istediğiniz süreçleri ücretsiz ilk görüşmede konuşalı
     slug: "siber-guvenlik-danismanligi",
     title: "Siber Güvenlik Danışmanlığı",
     metaDescription:
-      "Siber güvenlik danışmanlığı: NIST CSF ve ISO 27001 temelli olgunluk ölçümü, risk sıralaması ve bütçeli güvenlik planı. 2010'dan beri Gebze.",
+      "Siber güvenlik danışmanlığı: NIST CSF ve ISO 27001 temelli olgunluk ölçümü, risk sıralaması ve bütçeli güvenlik planı. Kocaeli ve İstanbul'da 2010'dan beri.",
     content: `Hangi güvenlik ürününü almanız gerektiğini konuşmadan önce, kurumunuzun bugün nerede durduğunu bilmeniz gerekir. Siber güvenlik danışmanlığında BTM Bilişim olarak mevcut kontrollerinizi bağımsız bir gözle ölçer, açıkları iş etkisine göre sıralar ve sınırlı bütçenin önce en tehlikeli boşluğa gitmesini sağlayan bir plan hazırlarız. ISO 27001 baş denetçi deneyimimiz, değerlendirmeyi denetçinin soracağı sorularla yapmamızı sağlar.
 
 ## Tipik başlangıç noktası
@@ -1057,7 +1057,7 @@ Mevcut altyapınızı birlikte inceleyelim. [Ücretsiz keşif için bize ulaşı
     serviceKey: "ag-altyapisi-kurulum-ve-yonetimi",
     slug: "ag-altyapisi-kurulum-ve-yonetimi",
     title: "Network (Ağ) Altyapısı Kurulumu ve Yönetimi",
-    metaTitle: "Network Kurulumu ve Ağ Altyapısı | Gebze, Kocaeli | BTM Bilişim",
+    metaTitle: "Network Kurulumu ve Ağ Altyapısı | BTM Bilişim",
     metaDescription:
       "Ağ altyapısı kurulum ve yönetimi: LAN/WAN tasarımı, switch ve router yapılandırması, VLAN ayrımı, şube bağlantıları, izleme ve değişiklik yönetimi.",
     content: `Kurumsal ağ, her şeyin üzerinde koştuğu zemindir; zayıf olduğunda ERP, telefon, kamera ve bulut uygulamaları aynı anda etkilenir. Ağ altyapısı kurulum ve yönetimi hizmetinde yeni bir ağı sıfırdan tasarlıyor ya da yıllar içinde karmaşıklaşmış mevcut ağınızı düzenli, ölçülebilir ve kolay yönetilen bir yapıya dönüştürüyoruz.
@@ -1353,9 +1353,9 @@ Kablosuz ağınızı ölçümle planlayalım. [Ücretsiz keşif isteyin](/#tekli
     serviceKey: "ip-kamera-guvenlik-kamerasi-sistemleri",
     slug: "ip-kamera-guvenlik-kamerasi-sistemleri",
     title: "IP Kamera ve Güvenlik Kamerası Sistemleri",
-    metaTitle: "Güvenlik Kamerası ve IP Kamera Kurulumu | Gebze | BTM Bilişim",
+    metaTitle: "Güvenlik Kamerası ve IP Kamera Kurulumu | BTM Bilişim",
     metaDescription:
-      "Gebze, Kocaeli ve Tuzla'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. Keşif ücretsiz.",
+      "Gebze, Tuzla, Kocaeli ve İstanbul'da fabrika, depo, işyeri ve siteler için IP kamera projelendirme, kurulum, NVR kayıt, uzaktan izleme ve bakım. Keşif ücretsiz.",
     content: `IP kamera ve güvenlik kamerası sistemlerimiz; fabrika, OSB, depo, işyeri, apartman ve siteler için keşiften kuruluma, kayıttan uzaktan izlemeye kadar uçtan uca planlanır. Kamera sistemini ayrı bir cihaz yığını olarak değil, ağ altyapınızın güvenli bir parçası olarak kuruyoruz.
 
 ## Kamera sistemleri neden beklenen faydayı sağlamaz?
@@ -2201,7 +2201,7 @@ Aklınızdaki web uygulamasını konuşalım. [Bize ulaşın](/iletisim/).`,
     serviceKey: "web-tasarim-ve-kurumsal-web-sitesi",
     slug: "web-tasarim-ve-kurumsal-web-sitesi",
     title: "Kurumsal Web Tasarım",
-    metaTitle: "Web Tasarım Hizmetleri | Gebze, Kocaeli | BTM Bilişim",
+    metaTitle: "Web Tasarım Hizmetleri | BTM Bilişim",
     metaDescription:
       "Kurumsal web sitesi tasarımı: mobil öncelikli, hızlı açılan, teknik SEO altyapısı hazır, KVKK uyumlu ve içeriğini kendinizin yönetebileceği web siteleri.",
     content: `Size bir tavsiye üzerine ulaşan potansiyel müşteri bile aramadan önce çoğu zaman telefonundan web sitenize bakar. Sayfa geç açılıyorsa, hizmetlerinizi anlatmıyorsa ya da teklif isteyecek bir buton bulamıyorsa o fırsat sessizce kaybolur. Web tasarım ve kurumsal web sitesi hizmetimizde markanızı net anlatan, arama motorlarında bulunabilen ve size gerçek talep getiren bir site kuruyoruz.

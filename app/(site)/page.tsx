@@ -45,9 +45,9 @@ import home from "@/lib/data/home.json";
 // (paper) · blog (white).
 
 // "IT danışmanlık" itself is left to the pillar page (no cannibalisation).
-const TITLE = "Gebze Bilişim Firması: Siber Güvenlik ve IT Altyapı | BTM Bilişim";
+const TITLE = "Bilişim Firması: Siber Güvenlik ve IT Altyapı | BTM Bilişim";
 const DESCRIPTION =
-  "2010'dan beri IT danışmanlık, siber güvenlik ve sızma testi, ağ ve sunucu altyapısı, bulut yedekleme. Gebze, Kocaeli ve İstanbul'da BTM Bilişim.";
+  "2010'dan beri IT danışmanlık, siber güvenlik ve sızma testi, ağ ve sunucu altyapısı, bulut yedekleme. Gebze, Tuzla, Kocaeli ve İstanbul'da BTM Bilişim.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

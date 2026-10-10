@@ -6,7 +6,7 @@ import { ogMeta } from "@/lib/siteView";
 const category = serviceCategories["bulut-yedekleme"];
 
 const base = {
-  title: "Bulut ve Yedekleme Çözümleri | Gebze, Kocaeli | BTM Bilişim",
+  title: "Bulut ve Yedekleme Çözümleri | BTM Bilişim",
   description:
     "Microsoft 365, Azure ve AWS geçişi, 3-2-1 veri yedekleme, felaket kurtarma ve veri kurtarma. BTM Bilişim ile verinizi ve operasyonunuzun sürekliliğini koruyun.",
   alternates: { canonical: "/bulut-yedekleme/" },

@@ -46,11 +46,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
-// "<Hizmet> | Gebze, Kocaeli | BTM Bilişim" when it fits in ~65 characters
-// (local intent: most searches add the city), else "<Hizmet> | BTM Bilişim".
+// "<Hizmet> | BTM Bilişim": titles name no single district — the service
+// area (Gebze, Tuzla, Kocaeli, İstanbul) lives in descriptions and schema.
 function titleFor(title: string): string {
-  const local = `${title} | Gebze, Kocaeli${site.titleSuffix}`;
-  return local.length <= 65 ? local : `${title}${site.titleSuffix}`;
+  return `${title}${site.titleSuffix}`;
 }
 
 const STOP = new Set(["ve", "ile", "icin", "hizmetleri", "hizmeti", "cozumleri", "danismanligi", "yonetimi"]);

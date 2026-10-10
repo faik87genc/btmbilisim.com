@@ -8,7 +8,7 @@ const category = serviceCategories["danismanlik"];
 const base = {
   title: "Kurumsal Danışmanlık: ISO 27001, KVKK ve ERP | BTM Bilişim",
   description:
-    "ISO 27001 ve KVKK danışmanlığı, Logo ERP desteği ve dijital dönüşüm danışmanlığı; tümü IT danışmanlığı temelinde. 2010'dan beri Gebze ve Kocaeli'de BTM Bilişim.",
+    "ISO 27001 ve KVKK danışmanlığı, Logo ERP desteği ve dijital dönüşüm danışmanlığı; tümü IT danışmanlığı temelinde. Gebze, Tuzla ve İstanbul'da BTM Bilişim.",
   alternates: { canonical: "/danismanlik/" },
 };
 

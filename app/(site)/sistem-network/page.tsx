@@ -8,7 +8,7 @@ const category = serviceCategories["sistem-network"];
 const base = {
   title: "Sistem, Ağ ve Sunucu Altyapı Çözümleri | BTM Bilişim",
   description:
-    "Ağ altyapısı, sunucu ve sanallaştırma, Wi-Fi, IP kamera, firewall/VPN ve 7/24 IT destek: Gebze ve Kocaeli'de 2010'dan beri sistem ve network çözümleri.",
+    "Ağ altyapısı, sunucu ve sanallaştırma, Wi-Fi, IP kamera, firewall/VPN ve 7/24 IT destek: Gebze, Tuzla, Kocaeli ve İstanbul'da sistem ve network çözümleri.",
   alternates: { canonical: "/sistem-network/" },
 };
 
