@@ -23,7 +23,7 @@ Sakin, kesin, mühendislik disiplini. Bol beyaz alan, az renk, güçlü hiyerar�
 | Kenarlık | border | `#E3E8EF` | Kart, input, ayraç |
 | Hata | danger | `#B42318` | Form hatası (koyu zeminde `#FFB4A8`) |
 
-Bölüm ritmi: beyaz → surface → beyaz → ink-950 (en fazla 1–2 koyu bant/sayfa). Turuncu yok (logo görseli hariç — logo dosyası değişmez).
+Bölüm ritmi: beyaz → surface → beyaz → ink-950 (en fazla 1–2 koyu bant/sayfa). Turuncu yok. Logo (2026-10-10): tek renkli işaret + "Bilgi Teknolojileri Merkezi / Dijital Çözümler" — açık zeminde ink `#0B1220` (`/assets/img/logo-full.webp`), koyu zeminde beyaz (`logo-full-light.webp`); favicon ve uygulama ikonları aynı işaretten. `scripts/build-brand-assets.mjs` eski turuncu logoyu üretir — çalıştırma.
 
 ## Tipografi
 - Başlık: **Plus Jakarta Sans** (600/700), `next/font/google`, subsets `latin`, `latin-ext`.
