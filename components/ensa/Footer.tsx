@@ -128,8 +128,8 @@ export function Footer() {
           <img
             src="/assets/img/logo-full-light.webp"
             alt="BTM Bilişim — Bilgi Teknolojileri Merkezi"
-            width={375}
-            height={120}
+            width={805}
+            height={240}
             loading="lazy"
             className="h-12 w-auto"
           />

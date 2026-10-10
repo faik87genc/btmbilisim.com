@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-// logo-full.webp is 375x120 (scripts/build-brand-assets.mjs); the light
-// variant has white text for dark backgrounds.
+// logo-full.webp is 805x240 (ink on transparent, identity v2); the light
+// variant is the same mark in white for dark backgrounds.
 export function Logo({
   variant = "image",
   className = "",
@@ -9,7 +9,7 @@ export function Logo({
 }: {
   variant?: "image" | "light";
   className?: string;
-  /** Height classes for the image (width follows the 375x120 ratio). */
+  /** Height classes for the image (width follows the 805x240 ratio). */
   imgClassName?: string;
 }) {
   return (
@@ -18,8 +18,8 @@ export function Logo({
       <img
         src={variant === "light" ? "/assets/img/logo-full-light.webp" : "/assets/img/logo-full.webp"}
         alt="BTM Bilişim — Bilgi Teknolojileri Merkezi"
-        width={375}
-        height={120}
+        width={805}
+        height={240}
         // Top of every page: often the mobile LCP element.
         fetchPriority="high"
         className={`w-auto ${imgClassName}`}
