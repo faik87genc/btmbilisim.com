@@ -242,6 +242,31 @@ async function fetchImageFollowingSafeRedirects(
   throw new Error("Çok fazla yönlendirme.");
 }
 
+/** The response body, or null as soon as it exceeds `max` bytes. */
+async function readBodyCapped(res: Response, max: number): Promise<Uint8Array | null> {
+  if (!res.body) return new Uint8Array(0);
+  const reader = res.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > max) {
+      await reader.cancel().catch(() => {});
+      return null;
+    }
+    chunks.push(value);
+  }
+  const out = new Uint8Array(total);
+  let offset = 0;
+  for (const c of chunks) {
+    out.set(c, offset);
+    offset += c.byteLength;
+  }
+  return out;
+}
+
 export async function importRemoteImage(
   url: string,
 ): Promise<{ url?: string; error?: string }> {
@@ -279,11 +304,11 @@ export async function importRemoteImage(
     if (Number(res.headers.get("content-length")) > MAX_IMAGE_BYTES) {
       return { error: "Görsel 5 MB sınırını aşıyor." };
     }
-    const buf = new Uint8Array(await res.arrayBuffer());
+    // Content-Length may be absent (chunked) or lie: stop reading at the cap
+    // instead of buffering an unbounded body into memory first.
+    const buf = await readBodyCapped(res, MAX_IMAGE_BYTES);
+    if (!buf) return { error: "Görsel 5 MB sınırını aşıyor." };
     if (buf.byteLength === 0) return { error: "Görsel boş." };
-    if (buf.byteLength > MAX_IMAGE_BYTES) {
-      return { error: "Görsel 5 MB sınırını aşıyor." };
-    }
     // The remote Content-Type is the other server's claim; check the bytes.
     const sniffed = sniffImageType(buf);
     if (!sniffed) {
@@ -330,6 +355,19 @@ function aiUnavailable(): string | null {
   return null;
 }
 
+// Paid-provider calls (text + image). Only a logged-in admin gets here, but a
+// stolen session or a stuck client loop must not be able to run up the AI
+// bill without bound. Deliberately generous for one editor's normal use.
+const AI_CALLS_PER_WINDOW = 60;
+const AI_WINDOW_MS = 10 * 60 * 1000;
+
+async function aiRateLimited(): Promise<string | null> {
+  const limited = await rateLimit("admin-ai:global", AI_CALLS_PER_WINDOW, AI_WINDOW_MS);
+  return limited.ok
+    ? null
+    : `Kısa sürede çok fazla AI isteği yapıldı. ${Math.ceil(limited.retryAfterSeconds / 60)} dakika sonra tekrar dene.`;
+}
+
 function parseKeywords(raw: string[] | string | undefined): string[] {
   const list = Array.isArray(raw) ? raw : (raw ?? "").split(/[,\n]/);
   const seen = new Set<string>();
@@ -358,6 +396,8 @@ export async function generateBlogDraft(input: {
   if (!(await hasValidSession())) return { error: "Oturum sona ermiş." };
   const missing = aiUnavailable();
   if (missing) return { error: missing };
+  const throttled = await aiRateLimited();
+  if (throttled) return { error: throttled };
 
   const topic = (input.topic || "").trim();
   if (topic.length < 3) {
@@ -437,6 +477,8 @@ export async function generateNewsDraft(input: {
   if (!(await hasValidSession())) return { error: "Oturum sona ermiş." };
   const missing = aiUnavailable();
   if (missing) return { error: missing };
+  const throttled = await aiRateLimited();
+  if (throttled) return { error: throttled };
 
   const url = (input.url || "").trim();
   const pasted = (input.sourceText || "").trim();
@@ -523,6 +565,8 @@ export async function generateBlogImage(input: {
   if (!(await hasValidSession())) return { error: "Oturum sona ermiş." };
   const prompt = (input.prompt || "").trim();
   if (prompt.length < 10) return { error: "Görsel istemi çok kısa." };
+  const throttled = await aiRateLimited();
+  if (throttled) return { error: throttled };
   const style = IMAGE_STYLES.includes(input.style as ImageStyle)
     ? (input.style as ImageStyle)
     : undefined;
@@ -598,6 +642,8 @@ export async function improveBlogDraft(input: {
   if (!(await hasValidSession())) return { error: "Oturum sona ermiş." };
   const missing = aiUnavailable();
   if (missing) return { error: missing };
+  const throttled = await aiRateLimited();
+  if (throttled) return { error: throttled };
   if (!input.content?.trim()) return { error: "İyileştirilecek içerik yok." };
   if (!input.failing?.length) return { error: "Giderilecek bir eksik yok." };
 

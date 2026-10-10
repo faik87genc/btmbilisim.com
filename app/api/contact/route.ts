@@ -63,6 +63,9 @@ const MAX_BODY_BYTES = 16 * 1024;
 
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
+// Site-wide ceiling: rotating IPs must not turn the form into a mail cannon
+// against CONTACT_TO_EMAIL (and the SMTP account's sending reputation).
+const GLOBAL_RATE_LIMIT = 60;
 
 function clientIp(request: Request): string {
   return clientIpFrom(request.headers);
@@ -101,7 +104,10 @@ export async function POST(request: Request) {
   }
 
   const ip = clientIp(request);
-  const limited = await rateLimit(`contact:${ip}`, RATE_LIMIT, RATE_WINDOW_MS);
+  const perIp = await rateLimit(`contact:${ip}`, RATE_LIMIT, RATE_WINDOW_MS);
+  const limited = perIp.ok
+    ? await rateLimit("contact:global", GLOBAL_RATE_LIMIT, RATE_WINDOW_MS)
+    : perIp;
   if (!limited.ok) {
     return NextResponse.json(
       { error: "rate-limited" },
