@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { pages, type Page } from "@/lib/db/schema";
 import { slugifyTr } from "@/lib/slug";
 import { fallbackPages } from "@/lib/fallbackPages";
+import { isRetiredSlug } from "@/lib/legacyRedirects";
 
 // Generic/domain words that appear in almost every title on an IT services
 // site — without stripping them, "related" scoring would
@@ -76,7 +77,8 @@ export async function getPublishedByKind(kind: Page["kind"]): Promise<Page[]> {
  */
 export function postLikePages(all: Page[]): Page[] {
   return all
-    .filter((p) => p.kind === "blog" || p.tags.length > 0)
+    // Redirected (consolidated) rows never appear in listings or tag archives.
+    .filter((p) => (p.kind === "blog" || p.tags.length > 0) && !isRetiredSlug(p.slug))
     .sort((a, b) => {
       const at = (a.publishedAt ?? a.createdAt).getTime();
       const bt = (b.publishedAt ?? b.createdAt).getTime();

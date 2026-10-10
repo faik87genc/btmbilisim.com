@@ -6,6 +6,7 @@ import { visit } from "unist-util-visit";
 import { IMG_SIZES, imageInfo } from "@/lib/imageVariants";
 import { rehypeHeadingIds } from "@/lib/rehypeHeadingIds";
 import { site } from "@/lib/site";
+import { resolveLegacyHref } from "@/lib/legacyRedirects";
 
 // Markdown body for public pages. Emits the same bare HTML the static build
 // did (p, h2–h4 with ids, ul/ol, img, table, blockquote) so the static
@@ -28,8 +29,9 @@ function Anchor({ href = "", children, node: _node, ...rest }: WithNode<"a">) {
     );
   }
   if (href.startsWith("/")) {
+    // Older posts still link to consolidated URLs; point straight at the target.
     return (
-      <Link href={href} {...rest}>
+      <Link href={resolveLegacyHref(href)} {...rest}>
         {children}
       </Link>
     );

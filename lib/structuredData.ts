@@ -102,6 +102,9 @@ export function organizationJsonLd() {
     openingHoursSpecification: [OPENING_HOURS],
     areaServed: AREA_SERVED,
     legalName: site.legalName,
+    // "BTM" alone collides with other organisations in search; spell out the
+    // names people actually type.
+    alternateName: ["BTM Bilişim Gebze", "btmbilisim.com"],
     foundingDate: "2010",
     ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
     priceRange: "$$",

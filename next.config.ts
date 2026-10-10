@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { LEGACY_SERVICE_REDIRECTS } from "./lib/legacyRedirects";
+import { SLUG_REDIRECTS } from "./lib/legacyRedirects";
 
 // Content-Security-Policy, in two layers (see node_modules/next/dist/docs/
 // 01-app/02-guides/content-security-policy.md, "Without Nonces"):
@@ -150,9 +150,9 @@ const nextConfig: NextConfig = {
         { source: `/${from}/`, destination: to, permanent: true },
       ]),
       ...LEGACY_WP_PATTERNS.map(([source, destination]) => ({ source, destination, permanent: true })),
-      // Old service pages merged into the new ones: a plain 301, as asked for
+      // Old service pages and consolidated thin posts: a plain 301, as asked for
       // (permanent: true would send 308; search engines treat both alike).
-      ...Object.entries(LEGACY_SERVICE_REDIRECTS).flatMap(([from, to]) => [
+      ...Object.entries(SLUG_REDIRECTS).flatMap(([from, to]) => [
         { source: `/${from}`, destination: to, statusCode: 301 as const },
         { source: `/${from}/`, destination: to, statusCode: 301 as const },
       ]),
