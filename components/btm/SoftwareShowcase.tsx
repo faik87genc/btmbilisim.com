@@ -66,7 +66,7 @@ export function SoftwareShowcase() {
               <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
                 <div>
                   <p className="eyebrow-v2">{p.subtitle}</p>
-                  <h2 className="mt-2 font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] text-navy-950 md:text-[2.5rem]">{p.title}</h2>
+                  <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.02em] text-navy-950 md:text-[2.125rem]">{p.title}</h2>
                   <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">{p.text}</p>
                   <Link
                     href={p.href}

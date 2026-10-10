@@ -67,7 +67,7 @@ export default async function Page({
           <span className="inline-block rounded-[6px] bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-300">
             {product.code}
           </span>
-          <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
+          <h1 className="mt-5 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-white md:text-[2.75rem]">
             {product.name}
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">

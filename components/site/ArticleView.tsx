@@ -167,7 +167,7 @@ async function PostBody({ page, related, crumbs }: { page: Page; related: Page[]
               <Link href={crumbs[0]?.href ?? "/blog/"} className="chip-v2 transition-colors hover:bg-gold-100/70 hover:text-gold-800">
                 {category}
               </Link>
-              <h1 className="mt-4 text-balance font-display text-[2rem] font-bold leading-[1.08] tracking-[-0.025em] text-navy-950 sm:text-4xl lg:text-[2.875rem]">
+              <h1 className="mt-4 text-balance font-display text-[2rem] font-semibold leading-[1.08] tracking-[-0.025em] text-navy-950 sm:text-4xl lg:text-[2.625rem]">
                 {page.title}
               </h1>
               {page.excerpt && page.excerpt !== page.title && (
@@ -225,7 +225,7 @@ async function PostBody({ page, related, crumbs }: { page: Page; related: Page[]
 
               {faqHeading && (
                 <section aria-labelledby={faqHeading.id} className="mt-14 max-w-[72ch]">
-                  <h2 id={faqHeading.id} className="scroll-mt-28 font-display text-[1.75rem] font-bold leading-[1.2] tracking-[-0.02em] text-navy-950 max-sm:text-[1.4375rem]">
+                  <h2 id={faqHeading.id} className="scroll-mt-28 font-display text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em] text-navy-950 max-sm:text-[1.4375rem]">
                     {faqHeading.text}
                   </h2>
                   <ul className="mt-6 space-y-3">

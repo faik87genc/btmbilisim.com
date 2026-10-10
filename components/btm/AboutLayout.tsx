@@ -98,7 +98,7 @@ export function AboutLayout({ page, crumbs }: { page: Page; crumbs: Crumb[] }) {
           <div className="mt-10 grid grid-cols-1 items-center gap-12 md:mt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
             <div>
               <p className="eyebrow">Biz kimiz</p>
-              <h1 className="mt-3 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-navy-950 md:text-[3.5rem]">
+              <h1 className="mt-3 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-navy-950 md:text-[2.75rem]">
                 {page.title}
               </h1>
               <p className="mt-5 max-w-xl text-balance font-display text-2xl font-semibold leading-snug tracking-[-0.015em] text-navy-950 md:text-[1.75rem]">
@@ -118,7 +118,7 @@ export function AboutLayout({ page, crumbs }: { page: Page; crumbs: Crumb[] }) {
             <ul className="grid grid-cols-2 gap-4" aria-label="BTM Bilişim kısaca">
               {FACTS.map((f) => (
                 <li key={f.key} className="card flex flex-col justify-between p-6 md:p-7">
-                  <span className="font-display text-3xl font-bold tabular-nums tracking-[-0.02em] text-navy-950 md:text-[2.5rem]">
+                  <span className="font-display text-3xl font-semibold tabular-nums tracking-[-0.02em] text-navy-950 md:text-[2.125rem]">
                     {f.value}
                   </span>
                   <span className="mt-3 text-xs font-semibold uppercase leading-snug tracking-[0.1em] text-slate-500">
@@ -170,7 +170,7 @@ export function AboutLayout({ page, crumbs }: { page: Page; crumbs: Crumb[] }) {
             </MotionReveal>
             <div>
               <p className="eyebrow">Yaklaşımımız</p>
-              <h2 className="mt-3 text-balance font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] text-navy-950 md:text-[2.5rem]">
+              <h2 className="mt-3 text-balance font-display text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.02em] text-navy-950 md:text-[2.125rem]">
                 Keşiften sürekli desteğe, dört adımda.
               </h2>
               <p className="mt-4 text-pretty text-[1.0625rem] leading-relaxed text-slate-500">

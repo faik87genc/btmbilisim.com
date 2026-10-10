@@ -234,7 +234,7 @@ export function HeroSlider({
             <span className="h-px w-8 bg-gold-300" />
             {slide.eyebrow}
           </div>
-          <Heading className="text-balance font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white [text-shadow:0_2px_18px_rgb(3_7_18_/_0.6)] md:text-[4rem]">
+          <Heading className="text-balance font-display text-[2.5rem] font-semibold leading-[1.05] tracking-tight text-white [text-shadow:0_2px_18px_rgb(3_7_18_/_0.6)] md:text-[4rem]">
             {slide.titleLead}{" "}
             <span className="text-gold-400 [text-shadow:0_2px_18px_rgb(3_7_18_/_0.55)]">
               {slide.titleAccent}

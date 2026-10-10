@@ -22,7 +22,7 @@ export function SectionHeading({
     <MotionReveal className={`max-w-2xl ${isCenter ? "mx-auto text-center" : ""}`}>
       {eyebrow && <p className={`eyebrow mb-4 ${isDark ? "eyebrow-dark" : ""}`}>{eyebrow}</p>}
       <h2
-        className={`text-balance font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] md:text-[2.5rem] ${
+        className={`text-balance font-display text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.02em] md:text-[2.125rem] ${
           isDark ? "text-white" : "text-navy-950"
         }`}
       >
@@ -30,7 +30,7 @@ export function SectionHeading({
       </h2>
       {description && (
         <p
-          className={`mt-4 text-pretty text-[1.0625rem] leading-[1.65] ${isDark ? "text-slate-300" : "text-slate-500"}`}
+          className={`mt-4 text-pretty text-base leading-[1.65] ${isDark ? "text-slate-300" : "text-slate-500"}`}
         >
           {description}
         </p>

@@ -84,7 +84,7 @@ export function OfferingCards() {
                 <span className="h-px w-8 bg-gold-500" />
                 Kurumsal Vizyonumuz
               </div>
-              <h2 className="text-balance font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink-900 md:text-4xl">
+              <h2 className="text-balance font-display text-3xl font-semibold leading-[1.05] tracking-tight text-ink-900 md:text-4xl">
                 Karmaşık olanı netleştiriyoruz.
               </h2>
               <p className="mt-5 max-w-md text-balance leading-relaxed text-slate-500">

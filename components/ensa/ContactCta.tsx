@@ -16,7 +16,7 @@ export function ContactCta({
   description?: string;
 }) {
   return (
-    <section data-contact-cta="" className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+    <section data-contact-cta="" className="bg-ink-gradient relative overflow-hidden bg-navy-950 py-20 md:py-24">
       <div className="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
       <Container className="relative">
         <SectionHeading tone="dark" align="center" eyebrow="İletişim" title={title} description={description} />

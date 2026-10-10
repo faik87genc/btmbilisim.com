@@ -309,7 +309,7 @@ export default function Home() {
               Hemen Başlayalım
               <span className="h-px w-8 bg-gold-300" />
             </div>
-            <h2 className="text-balance font-display text-4xl font-bold leading-tight tracking-tight text-paper-50 md:text-5xl">
+            <h2 className="text-balance font-display text-4xl font-semibold leading-tight tracking-tight text-paper-50 md:text-5xl">
               Altyapınızı konuşalım.
             </h2>
             <p className="mt-4 text-balance text-lg text-slate-300">

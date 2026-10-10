@@ -70,7 +70,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
               <span className="h-px w-8 bg-gold-300" />
               {slide.eyebrow}
             </div>
-            <h1 className="text-balance font-display text-3xl font-bold leading-[1.1] tracking-tight text-paper-50 md:text-4xl">
+            <h1 className="text-balance font-display text-3xl font-semibold leading-[1.1] tracking-tight text-paper-50 md:text-4xl">
               {slide.titleLead}{" "}
               <span className="text-gold-300">{slide.titleAccent}</span>
             </h1>

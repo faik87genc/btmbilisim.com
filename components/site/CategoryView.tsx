@@ -12,7 +12,7 @@ import { serviceWhatsAppHref } from "@/lib/contact";
 
 /**
  * Service area page (/danismanlik/, /siber-guvenlik/, ...) on identity v2:
- * ink hero with the area's services, service cards with icon tiles, how an
+ * light hero (ink side panel) with the area's services, service cards with icon tiles, how an
  * engagement runs, the page's own showcase (`children`), FAQ, the other
  * areas and the blue CTA band. Replaces components/ensa/CategoryPage for
  * these routes; titles, H1 and the FAQ schema are unchanged.

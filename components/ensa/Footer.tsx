@@ -96,7 +96,7 @@ export function Footer() {
             <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
               <div className="max-w-xl">
                 <p className="eyebrow eyebrow-dark">Ücretsiz keşif</p>
-                <p className="mt-3 text-balance font-display text-2xl font-bold tracking-[-0.02em] text-white md:text-[2rem] md:leading-[1.15]">
+                <p className="mt-3 text-balance font-display text-2xl font-semibold tracking-[-0.02em] text-white md:text-[2rem] md:leading-[1.15]">
                   Projenizi birlikte planlayalım.
                 </p>
                 <p className="mt-2 text-[0.9375rem] leading-relaxed text-slate-300">

@@ -21,7 +21,7 @@ export function AboutTeaser() {
               <span className="h-px w-8 bg-gold-500" />
               Hakkımızda
             </div>
-            <h2 className="text-balance font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink-900 md:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold leading-[1.05] tracking-tight text-ink-900 md:text-4xl">
               Altyapıyı, güvenliği ve yazılımı aynı çatı altında birleştiriyoruz.
             </h2>
             <p className="mt-5 text-balance leading-relaxed text-slate-500">
@@ -76,7 +76,7 @@ export function AboutTeaser() {
         <MotionReveal delay={0.1} className="mt-14">
           <div className="grid grid-cols-3 divide-x divide-navy-950/10 rounded-lg border border-navy-950/10 bg-white py-8">
             <div className="text-center">
-              <div className="font-display text-4xl font-bold text-ink-900 md:text-5xl">
+              <div className="font-display text-4xl font-semibold text-ink-900 md:text-5xl">
                 7/24
               </div>
               <div className="mt-1.5 text-xs uppercase tracking-wider text-slate-500">
@@ -84,7 +84,7 @@ export function AboutTeaser() {
               </div>
             </div>
             <div className="text-center">
-              <div className="font-display text-4xl font-bold text-ink-900 md:text-5xl">
+              <div className="font-display text-4xl font-semibold text-ink-900 md:text-5xl">
                 {String(serviceCategoryList.length).padStart(2, "0")}
               </div>
               <div className="mt-1.5 text-xs uppercase tracking-wider text-slate-500">
@@ -92,7 +92,7 @@ export function AboutTeaser() {
               </div>
             </div>
             <div className="text-center">
-              <div className="font-display text-4xl font-bold text-ink-900 md:text-5xl">
+              <div className="font-display text-4xl font-semibold text-ink-900 md:text-5xl">
                 {String(products.length).padStart(2, "0")}
               </div>
               <div className="mt-1.5 text-xs uppercase tracking-wider text-slate-500">

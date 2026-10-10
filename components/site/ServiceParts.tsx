@@ -16,13 +16,13 @@ import type { Crumb } from "@/lib/siteView";
 const H2 =
   "scroll-mt-28 text-balance font-display text-[1.4375rem] font-bold leading-[1.2] tracking-[-0.02em] text-navy-950 sm:text-[1.75rem]";
 
-/** Visual trail on the ink hero; the page emits its own BreadcrumbList. */
+/** Visual trail on the light hero; the page emits its own BreadcrumbList. */
 function HeroTrail({ crumbs }: { crumbs: Crumb[] }) {
   return (
     <nav aria-label="Sayfa yolu" className="text-[13px] leading-5">
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
         <li>
-          <Link href="/" className="rounded-sm text-slate-300 transition-colors hover:text-white">
+          <Link href="/" className="rounded-sm text-slate-500 transition-colors hover:text-gold-700">
             Ana Sayfa
           </Link>
         </li>
@@ -30,13 +30,13 @@ function HeroTrail({ crumbs }: { crumbs: Crumb[] }) {
           const last = i === crumbs.length - 1;
           return (
             <li key={i} className="flex items-center gap-1.5">
-              <ChevronRight className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
+              <ChevronRight className="h-3.5 w-3.5 text-slate-400" aria-hidden="true" />
               {last || !c.href ? (
-                <span className="text-white" aria-current={last ? "page" : undefined}>
+                <span className="font-medium text-ink-900" aria-current={last ? "page" : undefined}>
                   {c.text}
                 </span>
               ) : (
-                <Link href={c.href} className="rounded-sm text-slate-300 transition-colors hover:text-white">
+                <Link href={c.href} className="rounded-sm text-slate-500 transition-colors hover:text-gold-700">
                   {c.text}
                 </Link>
               )}
@@ -48,7 +48,7 @@ function HeroTrail({ crumbs }: { crumbs: Crumb[] }) {
   );
 }
 
-/** Primary "Ücretsiz keşif" (white on ink), WhatsApp with the service named,
+/** Primary "Ücretsiz keşif" (brand blue), WhatsApp with the service named,
  * and the direct line from md up (phones have the fixed call bar). */
 export function HeroActions({ service }: { service: string }) {
   return (
@@ -56,7 +56,7 @@ export function HeroActions({ service }: { service: string }) {
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <Link
           href="/#teklif"
-          className="press inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-white px-6 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-100"
+          className="press inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-gold-500 px-6 text-sm font-semibold text-white transition-colors hover:bg-gold-700"
         >
           Ücretsiz keşif isteyin <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
@@ -64,24 +64,25 @@ export function HeroActions({ service }: { service: string }) {
           href={serviceWhatsAppHref(service)}
           target="_blank"
           rel="noopener noreferrer"
-          className="press inline-flex h-12 items-center justify-center gap-2 rounded-[10px] border border-white/25 px-6 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/5"
+          className="press inline-flex h-12 items-center justify-center gap-2 rounded-[10px] border border-slate-400 bg-white px-6 text-sm font-semibold text-navy-950 transition-colors hover:border-gold-600 hover:text-gold-700"
         >
           <WhatsAppIcon className="h-4 w-4" />
           WhatsApp&apos;tan yazın<span className="visually-hidden"> (yeni sekmede açılır)</span>
         </a>
         <a
           href={site.phone.href}
-          className="press hidden h-12 items-center justify-center gap-2 rounded-[10px] px-3 text-sm font-semibold text-white transition-colors hover:text-gold-300 md:inline-flex"
+          className="press hidden h-12 items-center justify-center gap-2 rounded-[10px] px-3 text-sm font-semibold tabular-nums text-navy-950 transition-colors hover:text-gold-700 md:inline-flex"
         >
-          <Phone className="h-4 w-4 text-gold-300" aria-hidden="true" /> {site.phone.display}
+          <Phone className="h-4 w-4 text-gold-600" aria-hidden="true" /> {site.phone.display}
         </a>
       </div>
-      <p className="mt-4 text-sm text-slate-300">İlk görüşme ve keşif ücretsizdir; doğrudan uzman ekibe ulaşırsınız.</p>
+      <p className="mt-4 text-sm text-slate-500">İlk görüşme ve keşif ücretsizdir; doğrudan uzman ekibe ulaşırsınız.</p>
     </div>
   );
 }
 
-/** Ink page header: trail, eyebrow, the page <h1>, lead, actions | side panel. */
+/** Light page header (identity v2.1: warm paper + soft brand glows): trail,
+ * eyebrow, the page <h1>, lead, actions | the ink side panel. */
 export function InkHero({
   crumbs,
   eyebrow,
@@ -98,17 +99,17 @@ export function InkHero({
   aside?: React.ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-navy-950 pb-16 pt-8 md:pb-24 md:pt-10">
-      <div className="bg-blueprint pointer-events-none absolute inset-0 [mask-image:linear-gradient(180deg,black,transparent_85%)]" aria-hidden="true" />
+    <section className="relative overflow-hidden border-b border-line bg-paper-50 pb-16 pt-8 md:pb-24 md:pt-10">
+      <div className="bg-blueprint-light pointer-events-none absolute inset-0" aria-hidden="true" />
       <Container className="relative">
         <HeroTrail crumbs={crumbs} />
         <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-14 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] lg:gap-14">
           <div className="min-w-0">
-            <p className="eyebrow-v2 eyebrow-v2-dark">{eyebrow}</p>
-            <h1 className="mt-3 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem] xl:text-[3.5rem]">
+            <p className="eyebrow-v2">{eyebrow}</p>
+            <h1 className="mt-3 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-navy-950 md:text-[2.75rem]">
               {title}
             </h1>
-            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-slate-300">{lead}</p>
+            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-slate-500">{lead}</p>
             <div className="mt-8">
               <HeroActions service={service} />
             </div>
@@ -120,7 +121,7 @@ export function InkHero({
   );
 }
 
-/** Ink side panel: a short check list (scope summary / services in the area). */
+/** Ink side panel (gradient card on the light hero): a short check list (scope summary / services in the area). */
 export function HeroPanel({
   label,
   items,
@@ -131,7 +132,7 @@ export function HeroPanel({
   footer?: React.ReactNode;
 }) {
   return (
-    <div className="card-v2-dark p-6 md:p-7">
+    <div className="card-v2-dark bg-ink-gradient p-6 shadow-lift md:p-7">
       <p className="eyebrow-v2 eyebrow-v2-dark">{label}</p>
       <ul className="mt-4 divide-y divide-white/10">
         {items.map((it) => (

@@ -105,7 +105,7 @@ export default function Home() {
                 Gebze · Kocaeli · İstanbul
               </li>
             </ul>
-            <h1 className="mt-6 text-balance font-display text-[2.25rem] font-bold leading-[1.05] tracking-[-0.025em] text-navy-950 sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="mt-6 text-balance font-display text-[2.25rem] font-semibold leading-[1.05] tracking-[-0.025em] text-navy-950 sm:text-[2.5rem] lg:text-[2.625rem]">
               IT danışmanlıktan siber güvenliğe, <span className="text-gold-600">bilişiminizin tek muhatabı.</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-[1.65] text-slate-500">

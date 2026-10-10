@@ -25,8 +25,8 @@
   --gold-400: #3a66db;
   --gold-300: #8fb0f5;
   --gold-100: #eef3fe;
-  --paper-50: #f5f7fa;
-  --paper-100: #ebeff5;
+  --paper-50: #faf8f3;
+  --paper-100: #f2efe7;
   --ink-900: #111827;
   --slate-500: #5b6475;
   --slate-300: #cbd3df;
@@ -36,7 +36,7 @@
   --teal-600: #0f766e;
   /* The one cool section ground (paper-50 merges with white on most screens)
      and the error colour for the dark form panel (8.3:1 on navy-950). */
-  --tint-50: #f5f7fa;
+  --tint-50: #f8f6f0;
   --err-on-dark: #ffb4a8;
 
   --background: var(--paper-50);
@@ -51,11 +51,11 @@
   --color-slate-700: #2b3242;
   /* v2 shape: card 14px, control/button 10px (never a pill), panel/media
      20px; two elevation levels, both soft and cool. */
-  --radius-card: 0.875rem;
+  --radius-card: 1.125rem;
   --radius-control: 0.625rem;
-  --radius-panel: 1.25rem;
-  --shadow-card: 0 1px 2px rgb(11 18 32 / 0.04), 0 12px 32px -16px rgb(11 18 32 / 0.12);
-  --shadow-lift: 0 2px 4px rgb(11 18 32 / 0.04), 0 28px 56px -28px rgb(11 18 32 / 0.28);
+  --radius-panel: 1.5rem;
+  --shadow-card: 0 1px 2px rgb(11 18 32 / 0.03), 0 14px 34px -22px rgb(11 18 32 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(11 18 32 / 0.03), 0 28px 60px -30px rgb(11 18 32 / 0.26);
   --color-line: var(--line);
   --color-teal-600: var(--teal-600);
   --color-navy-950: var(--navy-950);
@@ -158,7 +158,7 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
@@ -913,12 +913,10 @@
   /* Light hero ground: an ink hairline grid that fades out away from the
      top-right corner. */
   .bg-blueprint-light {
-    background-image:
-      linear-gradient(rgb(11 18 32 / 0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(11 18 32 / 0.045) 1px, transparent 1px);
-    background-size: 40px 40px;
-    -webkit-mask-image: radial-gradient(90% 90% at 85% 10%, #000 30%, transparent 75%);
-    mask-image: radial-gradient(90% 90% at 85% 10%, #000 30%, transparent 75%);
+    background:
+      radial-gradient(42% 60% at 92% 8%, rgb(143 176 245 / 0.32), transparent 70%),
+      radial-gradient(36% 55% at 4% 95%, rgb(94 200 186 / 0.16), transparent 70%),
+      radial-gradient(30% 40% at 55% 0%, rgb(255 236 200 / 0.35), transparent 70%);
   }
   .bg-dots {
     background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.12) 1px, transparent 0);
@@ -1142,4 +1140,15 @@ body:has([data-contact-cta]) [data-footer-cta] {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* Deep ink → blue-teal ground for the dark form panel and contact bands
+   (identity v2.1). Unlayered on purpose so it wins over the bg-navy-950
+   utility those elements also carry (that colour stays as the fallback). */
+.bg-ink-gradient,
+.form-dark {
+  background:
+    radial-gradient(60% 70% at 0% 0%, rgb(32 98 120 / 0.45), transparent 70%),
+    radial-gradient(50% 60% at 100% 100%, rgb(34 81 204 / 0.28), transparent 70%),
+    linear-gradient(160deg, #0f2233 0%, #0b1220 100%);
 }

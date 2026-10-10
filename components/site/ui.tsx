@@ -76,7 +76,7 @@ export function LightHero({
         <Crumbs crumbs={crumbs} />
         <div className="mt-10 max-w-3xl md:mt-14">
           {eyebrow && <p className="eyebrow-v2">{eyebrow}</p>}
-          <h1 className="mt-3 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-navy-950 md:text-[3.5rem]">
+          <h1 className="mt-3 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-navy-950 md:text-[2.75rem]">
             {title}
           </h1>
           {lead && <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-slate-500">{lead}</p>}
@@ -109,7 +109,7 @@ export function SectionHead({
       {eyebrow && <p className={`eyebrow-v2 ${dark ? "eyebrow-v2-dark" : ""}`}>{eyebrow}</p>}
       <h2
         id={id}
-        className={`mt-3 text-balance font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] md:text-[2.5rem] ${
+        className={`mt-3 text-balance font-display text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.02em] md:text-[2.125rem] ${
           dark ? "text-white" : "text-navy-950"
         }`}
       >
@@ -272,7 +272,7 @@ export function CtaBand({
           />
           <div className="relative grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-12">
             <div className="max-w-2xl">
-              <h2 className="text-balance font-display text-[1.75rem] font-bold leading-[1.12] tracking-[-0.02em] md:text-[2.25rem]">
+              <h2 className="text-balance font-display text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.02em] md:text-[2.25rem]">
                 {title}
               </h2>
               <p className="mt-3 text-pretty text-base leading-relaxed text-white/90 md:text-[1.0625rem]">{lead}</p>

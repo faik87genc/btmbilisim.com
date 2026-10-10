@@ -15,7 +15,7 @@ export function StatRow({ facts, tone = "dark" }: { facts: Fact[]; tone?: "dark"
         <div key={f.label} className="flex flex-col-reverse px-3 py-6 text-center md:px-6 md:py-9">
           <dt className={`mt-2 text-sm leading-snug ${isDark ? "text-slate-300" : "text-slate-500"}`}>{f.label}</dt>
           <dd
-            className={`font-display text-[1.75rem] font-bold leading-none tracking-[-0.025em] tabular-nums sm:text-[2rem] md:text-[2.5rem] ${
+            className={`font-display text-[1.75rem] font-semibold leading-none tracking-[-0.025em] tabular-nums sm:text-[2rem] md:text-[2.125rem] ${
               isDark ? "text-white" : "text-navy-950"
             }`}
           >

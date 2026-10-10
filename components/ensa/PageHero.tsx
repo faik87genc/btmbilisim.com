@@ -12,8 +12,8 @@ import type { Crumb } from "@/lib/siteView";
  * `compact` shortens the vertical padding (contact page: the form moves up);
  * `overlap` leaves extra room below for a panel pulled up over the hero.
  *
- * Identity v2: ink-950 ground (one soft brand-blue light top right) and a faint
- * engineering grid fading out from that corner — no ornament.
+ * Identity v2.1: warm paper ground with the soft brand light glows
+ * (.bg-blueprint-light) — the same light hero as the home and about pages.
  */
 export function PageHero({
   title,
@@ -36,26 +36,26 @@ export function PageHero({
   const top = compact ? "pt-12 md:pt-16" : "pt-14 md:pt-20";
   const bottom = overlap ? "pb-28 md:pb-36" : compact ? "pb-12 md:pb-16" : "pb-14 md:pb-20";
   return (
-    <section className={`relative overflow-hidden bg-brand-gradient ${top} ${bottom}`}>
-      <div className="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
+    <section className={`relative overflow-hidden bg-paper-50 ${top} ${bottom}`}>
+      <div className="bg-blueprint-light pointer-events-none absolute inset-0" aria-hidden="true" />
       <Container className="relative">
         <div className="max-w-3xl">
           {crumbs && crumbs.length > 0 && (
             <>
               <JsonLd data={breadcrumbJsonLd(crumbs)} />
-              <nav aria-label="Sayfa yolu" className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-300">
-                <Link href="/" className="text-gold-300 hover:text-white">
+              <nav aria-label="Sayfa yolu" className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-500">
+                <Link href="/" className="text-gold-700 hover:text-gold-800">
                   Ana Sayfa
                 </Link>
                 {crumbs.map((c, i) => (
                   <span key={i} className="contents">
-                    <ChevronRight className="h-3.5 w-3.5 text-slate-300/60" aria-hidden="true" />
+                    <ChevronRight className="h-3.5 w-3.5 text-slate-400" aria-hidden="true" />
                     {i === crumbs.length - 1 || !c.href ? (
-                      <span className="text-slate-300" aria-current={i === crumbs.length - 1 ? "page" : undefined}>
+                      <span className="text-ink-900" aria-current={i === crumbs.length - 1 ? "page" : undefined}>
                         {c.text}
                       </span>
                     ) : (
-                      <Link href={c.href} className="text-gold-300 hover:text-white">
+                      <Link href={c.href} className="text-gold-700 hover:text-gold-800">
                         {c.text}
                       </Link>
                     )}
@@ -64,11 +64,11 @@ export function PageHero({
               </nav>
             </>
           )}
-          {eyebrow && <p className="eyebrow eyebrow-dark mb-4">{eyebrow}</p>}
-          <h1 className="text-balance font-display text-4xl font-bold leading-[1.08] tracking-[-0.025em] text-white md:text-5xl lg:text-[3.25rem]">
+          {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
+          <h1 className="text-balance font-display text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-navy-950 md:text-[2.75rem]">
             {title}
           </h1>
-          {lead && <p className="mt-5 max-w-2xl text-pretty text-lg leading-[1.65] text-slate-300">{lead}</p>}
+          {lead && <p className="mt-5 max-w-2xl text-pretty text-lg leading-[1.65] text-slate-500">{lead}</p>}
           {children}
         </div>
       </Container>

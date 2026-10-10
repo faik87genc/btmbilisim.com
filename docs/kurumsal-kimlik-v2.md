@@ -44,3 +44,12 @@ Bölüm ritmi: beyaz → surface → beyaz → ink-950 (en fazla 1–2 koyu bant
 
 ## Ses
 "Biz" dili, kısa cümle, somut fayda. Abartı ("lider", "1 numara") kopyada yazılmaz — liderlik izlenimi tasarım ve kanıtla verilir. İstatistikler yalnızca `lib/data/trust.ts` → `companyFacts` (20+ kurumsal müşteri — sahibin beyanı).
+
+## v2.1 — Uppoint hissi, BTM mavisi (2026-10-10)
+Sahibin seçimi: Uppoint'in sıcak/ferah hissi, vurgu rengi BTM kurumsal mavisi kalır.
+- Zemin sıcak kırık beyaz: paper-50 `#FAF8F3`, paper-100 `#F2EFE7`, bölüm tint `#F8F6F0`.
+- Açık hero'lar (`.bg-blueprint-light`): ızgara yerine yumuşak ışık hareleri (sağ üst mavi, sol alt turkuaz, üstte sıcak).
+- Koyu paneller (`.bg-ink-gradient`, `.form-dark`): ink → koyu mavi-turkuaz degrade.
+- Tipografi daha sakin: başlıklar 600 (semibold), H1 ≈ 44px, H2 ≈ 34px masaüstü; gövde 16px.
+- Kart 18px, panel 24px köşe; gölgeler daha hafif.
+- Tüm sayfa başları açık zemin; hizmet/kategori hero'sunda sağda koyu degrade kart.

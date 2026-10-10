@@ -123,7 +123,7 @@ export function RiskQuiz() {
                 strokeLinecap="round"
               />
             </svg>
-            <span className="font-display text-3xl font-bold text-ink-900">{score}</span>
+            <span className="font-display text-3xl font-semibold text-ink-900">{score}</span>
           </div>
           <div className="min-w-0 flex-1">
             <span className={`inline-flex items-center gap-1.5 rounded-[8px] px-3 py-1 text-sm font-semibold ring-1 ${result.tone}`}>

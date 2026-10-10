@@ -55,7 +55,7 @@ export default function ContactPage() {
         crumbs={[{ text: "İletişim" }]}
         compact
       >
-        <Button href="#iletisim-formu" variant="ghost-dark" className="mt-6 md:hidden">
+        <Button href="#iletisim-formu" variant="ghost-light" className="mt-6 md:hidden">
           Formu doldurun <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Button>
       </PageHero>
@@ -131,7 +131,7 @@ export default function ContactPage() {
               <div className="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
               <div className="relative">
               <p className="eyebrow eyebrow-dark">Mesaj gönderin</p>
-              <h2 className="mt-4 text-balance font-display text-[1.75rem] font-bold leading-[1.15] tracking-[-0.02em] text-white md:text-[2rem]">
+              <h2 className="mt-4 text-balance font-display text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.02em] text-white md:text-[2rem]">
                 Ücretsiz keşif görüşmesi isteyin
               </h2>
               <p className="mt-3 text-base leading-relaxed text-slate-300">En geç bir iş günü içinde dönüş yapıyoruz.</p>

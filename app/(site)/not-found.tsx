@@ -18,7 +18,7 @@ export default function NotFound() {
           404
           <span className="h-px w-8 bg-gold-500" />
         </div>
-        <h1 className="font-display text-4xl font-bold text-ink-900 md:text-5xl">Sayfa bulunamadı</h1>
+        <h1 className="font-display text-4xl font-semibold text-ink-900 md:text-5xl">Sayfa bulunamadı</h1>
         <p className="mt-4 text-slate-500">
           Aradığınız sayfa taşınmış veya kaldırılmış olabilir. Aşağıdaki bağlantılardan devam edebilirsiniz.
         </p>

@@ -220,7 +220,7 @@ export default function Page() {
             </span>
           </MotionReveal>
           <MotionReveal delay={0.05} blur>
-            <h1 className="mt-5 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
+            <h1 className="mt-5 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-white md:text-[2.75rem]">
               {product.name}
               <span className="mt-2 block text-2xl font-medium text-gold-300 md:text-3xl">
                 MSP&apos;ler için merkezî altyapı, erişim ve güvenlik platformu
@@ -253,7 +253,7 @@ export default function Page() {
           <MotionStagger className="mt-14 grid gap-6 border-t border-paper-50/10 pt-8 sm:grid-cols-3">
             {stats.map((s) => (
               <MotionStaggerItem key={s.label}>
-                <div className="font-display text-4xl font-bold text-gold-300">
+                <div className="font-display text-4xl font-semibold text-gold-300">
                   <CountUp to={s.value} suffix={s.suffix} />
                 </div>
                 <div className="mt-1 text-sm text-slate-300">{s.label}</div>

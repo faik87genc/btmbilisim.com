@@ -37,7 +37,7 @@ export default function Page() {
         <Container className="relative">
           <div className="max-w-3xl">
           <p className="eyebrow-v2 eyebrow-v2-dark">Yazılım Ürünlerimiz</p>
-          <h1 className="mt-3 text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-white md:text-[3.25rem]">
+          <h1 className="mt-3 text-balance font-display text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.025em] text-white md:text-[2.75rem]">
             Sahada gördüğümüz ihtiyaçlardan doğan 9 yazılım.
           </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-slate-300">
