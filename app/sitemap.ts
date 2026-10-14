@@ -17,7 +17,7 @@ import { isRetiredSlug } from "@/lib/legacyRedirects";
 // The admin save/delete actions revalidate every public route (including this
 // one) on the spot. This interval only matters for scheduled posts, which go
 // live without a save — keep it short so they reach the sitemap quickly.
-export const revalidate = 600;
+export const revalidate = 18000;
 
 const PER_PAGE = 9;
 

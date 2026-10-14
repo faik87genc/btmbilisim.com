@@ -5,7 +5,7 @@ import { BlogIndex, blogIndexMetadata, blogPageCount } from "@/components/site/B
 import { isAdmin, resolveContent } from "@/lib/pageRoute";
 import { pageHref } from "@/lib/pages";
 
-export const revalidate = 300;
+export const revalidate = 18000;
 
 // ISR on demand (see app/(site)/[slug]/page.tsx): nothing prerendered at
 // build time, every path cached after its first render.

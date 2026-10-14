@@ -5,12 +5,12 @@ import { ArticleView } from "@/components/site/ArticleView";
 import { contentMetadata, draftNote, isAdmin, relatedFor, resolveContent } from "@/lib/pageRoute";
 
 // ISR: every article is rendered on its first request, then served from the
-// cache and re-rendered in the background at most every 5 minutes (admin
+// cache and re-rendered in the background at most every 5 hours (admin
 // saves also call revalidatePath). Reading searchParams or cookies here would
 // make every request a fresh server render (slow TTFB), so draft previews use
 // Draft Mode instead: /api/draft/?slug=… (admin only) sets the bypass cookie,
 // and only those requests render dynamically and see unpublished rows.
-export const revalidate = 300;
+export const revalidate = 18000;
 
 // An empty list = no paths prerendered at build time (no build-time DB load),
 // but every path is cached after its first render.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BlogIndex, blogIndexMetadata } from "@/components/site/BlogIndex";
 
-export const revalidate = 300;
+export const revalidate = 18000;
 
 export const metadata: Metadata = blogIndexMetadata(1);
 

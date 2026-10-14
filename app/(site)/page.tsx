@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 };
 
 // Latest posts are read from the DB (HomeBlogSection); 5-min backstop.
-export const revalidate = 300;
+export const revalidate = 18000;
 
 const IT_CONSULTING = "/danismanlik/it-danismanlik-hizmetleri/";
 
