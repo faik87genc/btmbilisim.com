@@ -230,17 +230,34 @@ function initials(name: string) {
 /** Reference logos in colour (same as /referanslar/), white bordered cards. */
 function ReferenceLogos() {
   return (
-    <ul className="flex flex-wrap gap-4">
-      {references.slice(0, 12).map((r) => (
-        <li
-          key={r.name}
-          className="card flex h-24 w-[calc(50%-0.5rem)] items-center justify-center p-4 sm:w-52 lg:w-60"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={r.logo} alt={r.name} loading="lazy" className="max-h-12 w-auto object-contain" />
-        </li>
-      ))}
-    </ul>
+    // Endless marquee: the list is rendered twice and the track slides by exactly one copy (-50%),
+    // so the loop is seamless. Pauses on hover/focus; with reduced motion it becomes a plain
+    // swipeable row and the duplicate copy is hidden.
+    <div
+      className="group/marquee overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,#000_6%,#000_94%,transparent)] motion-reduce:overflow-x-auto motion-reduce:[mask-image:none]"
+    >
+      <ul className="flex w-max animate-[marquee_45s_linear_infinite] group-hover/marquee:[animation-play-state:paused] motion-reduce:animate-none">
+        {[0, 1].map((copy) =>
+          references.slice(0, 12).map((r) => (
+            <li
+              key={`${copy}-${r.name}`}
+              title={r.name}
+              aria-hidden={copy === 1 ? true : undefined}
+              className={`card group mr-4 flex h-28 w-56 shrink-0 items-center justify-center px-6 py-5 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none md:h-32 md:w-64 ${
+                copy === 1 ? "motion-reduce:hidden" : ""
+              }`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={r.logo}
+                alt={copy === 1 ? "" : r.name}
+                className="max-h-14 w-auto max-w-full object-contain transition duration-300 group-hover:scale-105 motion-reduce:transform-none md:max-h-16"
+              />
+            </li>
+          )),
+        )}
+      </ul>
+    </div>
   );
 }
 
