@@ -123,6 +123,15 @@ export const references: Reference[] = [
   { name: "Balorman INT", logo: "/partners/balorman-int.png" },
   { name: "BLR Balorman", logo: "/partners/blr-balorman.png" },
   { name: "Palet Global", logo: "/partners/palet-global.png" },
+  { name: "ENSA Kurumsal Danışmanlık", logo: "/partners/ensa-kurumsal-danismanlik.png" },
+  { name: "Artı İmalat Makina", logo: "/partners/arti-imalat-makina.png" },
+  { name: "BM Bartek Makine", logo: "/partners/bartek-makine.png" },
+  { name: "Cleco", logo: "/partners/cleco.png" },
+  { name: "Türk Sağlık-Sen", logo: "/partners/turk-saglik-sen.png" },
+  { name: "Teknosem", logo: "/partners/teknosem.png" },
+  { name: "Merkez Kalıp", logo: "/partners/merkez-kalip.png" },
+  { name: "MRK Defence", logo: "/partners/mrk-defence.png" },
+  { name: "Setgom", logo: "/partners/setgom.png" },
 ];
 
 // Ekip (bilgiler kişilerin kendisinden / sahibinin onayıyla, 2026-10-04).
