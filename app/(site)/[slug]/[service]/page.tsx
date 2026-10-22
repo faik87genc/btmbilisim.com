@@ -25,7 +25,7 @@ import { serviceWhatsAppHref } from "@/lib/contact";
 // lib/servicePages.ts. The first segment is named `slug` only because Next
 // requires one dynamic name per level and /[slug]/ already serves pages.
 
-export const revalidate = 18000;
+export const revalidate = 86400;
 export const dynamicParams = false;
 
 export function generateStaticParams() {

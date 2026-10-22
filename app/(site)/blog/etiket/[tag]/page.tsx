@@ -8,7 +8,7 @@ import { Container } from "@/components/ensa/Container";
 import { blogFilterTags } from "@/components/site/BlogIndex";
 import { CtaBand, LightHero, PostGrid, TagFilters } from "@/components/site/ui";
 
-export const revalidate = 18000;
+export const revalidate = 86400;
 
 // ISR on demand: nothing prerendered at build time, each tag page is cached
 // after its first render (without this the route rendered on every request).

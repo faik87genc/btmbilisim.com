@@ -6,7 +6,8 @@ import { Database, TriangleAlert } from "lucide-react";
  * lib/data/fallback-pages.json); `"unreachable"` = it's set but the ping
  * failed (wrong URL, suspended Neon project, network).
  */
-export function DatabaseSetupNotice({ reason }: { reason: "missing" | "unreachable" }) {
+export function DatabaseSetupNotice({ reason }: { reason: "missing" | "unreachable" | "quota" }) {
+  if (reason === "quota") return <QuotaNotice />;
   const missing = reason === "missing";
   return (
     <section
@@ -61,6 +62,36 @@ export function DatabaseSetupNotice({ reason }: { reason: "missing" | "unreachab
       <p className="mt-4 text-xs text-slate-500">
         Ayrıntılı rehber: depodaki <code>docs/ADMIN-KURULUM.md</code>.
       </p>
+    </section>
+  );
+}
+
+function QuotaNotice() {
+  return (
+    <section
+      aria-labelledby="db-quota-title"
+      className="rounded-md border border-amber-300 bg-amber-50 p-6 text-sm text-ink-900"
+    >
+      <div className="flex items-center gap-2">
+        <TriangleAlert className="h-5 w-5 text-amber-600" aria-hidden />
+        <h1 id="db-quota-title" className="font-display text-xl font-semibold">
+          Neon veritabanı kotası dolmuş
+        </h1>
+      </div>
+      <p className="mt-3 text-slate-700">
+        Neon (HTTP 402) bu projenin plan kotasının aşıldığını bildiriyor; bağlantı bilgileri
+        doğru. Genel site etkilenmez: içerik önbellekten ve{" "}
+        <code className="rounded bg-white px-1">lib/data/fallback-pages.json</code> dosyasından
+        sunulmaya devam eder.
+      </p>
+      <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
+        <li>
+          Neon Console &rarr; Billing / Usage bölümünde hangi kotanın (compute saati veya veri
+          aktarımı) dolduğuna bakın; yeni dönemde kota otomatik sıfırlanır.
+        </li>
+        <li>Kalıcı çözüm için planı yükseltin (Launch/Scale) veya kullanım sınırını artırın.</li>
+        <li>Kota açıldığında bu sayfayı yenileyin; ek bir dağıtım gerekmez.</li>
+      </ol>
     </section>
   );
 }

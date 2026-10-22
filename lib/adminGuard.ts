@@ -17,16 +17,32 @@ export async function requireAdminSession(): Promise<void> {
   if (!verifySessionToken(token)) redirect("/admin/login/");
 }
 
-export type DatabaseStatus = "ok" | "missing" | "unreachable";
+export type DatabaseStatus = "ok" | "missing" | "unreachable" | "quota";
 
-/** One cheap `select 1` per request, so every admin screen can gate on it. */
+/**
+ * One cheap `select 1` per request, so every admin screen can gate on it.
+ * Neon suspends idle computes, so a cold start can fail the first ping: retry
+ * a couple of times before giving up. HTTP 402 means the Neon plan quota is
+ * used up — retrying is pointless, so report it as its own status.
+ */
 export const getDatabaseStatus = cache(async (): Promise<DatabaseStatus> => {
   if (!isDatabaseConfigured()) return "missing";
-  try {
-    await db.execute(sql`select 1`);
-    return "ok";
-  } catch (e) {
-    console.error("admin: veritabanına ulaşılamadı", e);
-    return "unreachable";
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      await db.execute(sql`select 1`);
+      return "ok";
+    } catch (e) {
+      const text = `${(e as { message?: string })?.message ?? ""} ${(e as { status?: number })?.status ?? ""}`;
+      if (/402|exceeded the quota/i.test(text)) {
+        console.error("admin: Neon kotası dolmuş (402)", e);
+        return "quota";
+      }
+      if (attempt === 2) {
+        console.error("admin: veritabanına ulaşılamadı", e);
+        return "unreachable";
+      }
+      await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+    }
   }
+  return "unreachable";
 });

@@ -8,7 +8,7 @@ import { pageDates } from "@/lib/structuredData";
 // that poll feeds — pick up a new post from here without waiting for a
 // sitemap recrawl. Admin saves revalidate it immediately; the interval covers
 // scheduled posts going live on their own.
-export const revalidate = 18000;
+export const revalidate = 86400;
 
 const LIMIT = 30;
 
