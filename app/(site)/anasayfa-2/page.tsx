@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 // Latest posts are read from the DB (HomeBlogSection); 5-min backstop.
-export const revalidate = 86400;
+export const revalidate = 604800;
 
 // Product slides use `overlay: "light"` so their panel artwork stays legible;
 // corporate photo slides use the default dark overlay.
