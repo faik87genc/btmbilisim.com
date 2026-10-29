@@ -50,13 +50,34 @@ async function queryPublishedPages(): Promise<Page[] | null> {
   }
 }
 
+// `select()` pulls every column, `content` included, for every published row,
+// and almost every public route calls this. A build renders all of them, so
+// without a shared result each page re-downloaded the whole table (Neon's free
+// plan counts that as network transfer). Callers only filter and sort copies,
+// so one shared array per server process is safe. 30 s keeps a build to a
+// handful of fetches while an admin save shows up almost at once.
+const PUBLISHED_TTL_MS = 30_000;
+let publishedCache: { at: number; rows: Promise<Page[] | null> } | null = null;
+
+function cachedPublishedPages(): Promise<Page[] | null> {
+  const now = Date.now();
+  if (publishedCache && now - publishedCache.at < PUBLISHED_TTL_MS) return publishedCache.rows;
+  const rows = queryPublishedPages();
+  publishedCache = { at: now, rows };
+  // A failed query must not be remembered, or the retry below would just reuse it.
+  void rows.then((r) => {
+    if (r === null && publishedCache?.rows === rows) publishedCache = null;
+  });
+  return rows;
+}
+
 export async function getPublishedPages(): Promise<Page[]> {
   // One retry turns a rare transient DB blip (e.g. during the many-way
   // concurrent hits `generateStaticParams` triggers at build time) into a
   // non-event instead of silently baking an empty page list into a static
   // build — same pattern as the source project's `getPublishedPosts()`.
-  let rows = await queryPublishedPages();
-  if (rows === null) rows = await queryPublishedPages();
+  let rows = await cachedPublishedPages();
+  if (rows === null) rows = await cachedPublishedPages();
   // Still unreachable (or not configured yet): serve the static-site content.
   return rows ?? fallbackPages();
 }
