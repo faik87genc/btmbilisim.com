@@ -37,7 +37,7 @@ import {
 import type { ArticleDraft } from "@/lib/ai/articleDraft";
 import type { NewsDraft } from "@/lib/ai/newsDraft";
 import { fetchArticle, NewsFetchError } from "@/lib/newsSource";
-import { isPageLive, pageHref } from "@/lib/pages";
+import { isPageLive, pageHref, tagSlug } from "@/lib/pages";
 import { assertPublicHost } from "@/lib/publicHost";
 import { submitToIndexNow } from "@/lib/indexNow";
 import { site } from "@/lib/site";
@@ -873,7 +873,7 @@ export async function savePage(
   revalidatePublicSurfaces([
     ...(existing ? [pageHref(existing)] : []),
     pageHref({ kind, slug }),
-  ]);
+  ], [...(existing?.tags ?? []), ...tags]);
   // Ping IndexNow for a page that is live now (a scheduled one is not
   // reachable yet), plus its old URL when the slug moved (now a 301) or when
   // it was just unpublished/noindexed (now gone). No-op without INDEXNOW_KEY.
@@ -890,17 +890,22 @@ export async function savePage(
 }
 
 /**
- * A create/edit/delete can change almost every public surface: the page's own
- * URL(s), the homepage and /blog/ listings, tag archives, the "İlgili Yazılar"
- * block on the neighbouring posts, the sitemap and the RSS feed. Per-path
- * calls missed some of these (a post published on 2026-09-26 was still absent
- * from /sitemap.xml a quarter of an hour later), so invalidate the whole site:
- * with one post a day this is cheap, and each page only re-renders on its
- * next visit.
+ * A create/edit/delete changes the page's own URL(s), the homepage and /blog/
+ * listings, the tag archives the page belongs to, the sitemap and the RSS feed.
+ * Invalidate exactly those. Do NOT use revalidatePath("/", "layout"): that
+ * marks every cached page stale, so each crawl re-renders and re-writes the
+ * whole site to the ISR cache (Vercel free tier: 200k ISR writes/month).
  */
-function revalidatePublicSurfaces(hrefs: string[]) {
-  revalidatePath("/", "layout");
-  for (const href of new Set(hrefs)) revalidatePath(href.replace(/\/+$/, "") || "/");
+function revalidatePublicSurfaces(hrefs: string[], tags: string[] = []) {
+  const paths = new Set<string>([
+    "/",
+    "/blog",
+    "/sitemap.xml",
+    "/feed.xml",
+    ...hrefs.map((h) => h.replace(/\/+$/, "") || "/"),
+    ...tags.map((t) => `/blog/etiket/${tagSlug(t)}`),
+  ]);
+  for (const path of paths) revalidatePath(path);
 }
 
 export async function deletePage(id: string) {
@@ -910,7 +915,7 @@ export async function deletePage(id: string) {
   const [existing] = await db.select().from(pages).where(eq(pages.id, id));
   if (existing) {
     await db.delete(pages).where(eq(pages.id, id));
-    revalidatePublicSurfaces([pageHref(existing)]);
+    revalidatePublicSurfaces([pageHref(existing)], existing.tags);
     if (isPageLive(existing) && !existing.noindex) {
       after(() => submitToIndexNow([`${site.baseUrl}${pageHref(existing)}`]));
     }
