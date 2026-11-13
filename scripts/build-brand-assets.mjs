@@ -42,8 +42,8 @@ const toLight = (px, i) => {
 
 const trimmed = async (s) => sharp(await s.png().toBuffer()).trim();
 
-await (await trimmed(cutout())).resize({ height: 120 }).webp({ quality: 92 }).toFile(join(IMG, "logo-full.webp"));
-await (await trimmed(cutout(toLight))).resize({ height: 120 }).webp({ quality: 92 }).toFile(join(IMG, "logo-full-light.webp"));
+await (await trimmed(cutout())).resize({ height: 240 }).webp({ quality: 92 }).toFile(join(IMG, "logo-full.webp"));
+await (await trimmed(cutout(toLight))).resize({ height: 240 }).webp({ quality: 92 }).toFile(join(IMG, "logo-full-light.webp"));
 await (await trimmed(cutout())).resize({ width: 600 }).png().toFile(join(IMG, "logo.png"));
 
 // Icon = the hexagon mark on the left (~ first 31% of the width).

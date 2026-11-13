@@ -14,17 +14,17 @@
    gold = brand blue) so every component picks the palette up unchanged.
    Text tones (600–800) stay AA on white and paper. */
 :root {
-  --navy-950: #0b1220;
-  --navy-900: #111b2e;
-  --navy-800: #1b2740;
-  --navy-700: #2251cc;
-  --gold-800: #13307a;
-  --gold-700: #1a3fa3;
-  --gold-600: #2251cc;
-  --gold-500: #2251cc;
-  --gold-400: #3a66db;
-  --gold-300: #8fb0f5;
-  --gold-100: #eef3fe;
+  --navy-950: #071a31;
+  --navy-900: #0a2748;
+  --navy-800: #0d3b6e;
+  --navy-700: #0d3b6e;
+  --gold-800: #082748;
+  --gold-700: #0a3160;
+  --gold-600: #0d3b6e;
+  --gold-500: #0d3b6e;
+  --gold-400: #e8812f;
+  --gold-300: #f4a45e;
+  --gold-100: #eaf1f9;
   --paper-50: #faf8f3;
   --paper-100: #f2efe7;
   --ink-900: #111827;
@@ -521,21 +521,20 @@
     cursor: pointer;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s ease-out;
   }
-  /* Primary: brand blue, white text (6.7:1). */
+  /* Primary: logo orange, navy text (5.1:1). */
   .btn-primary {
-    background: var(--gold-500);
-    color: #fff;
+    background: var(--gold-400);
+    color: var(--navy-950);
   }
   .btn-primary:hover {
-    background: var(--gold-700);
+    background: var(--gold-300);
   }
-  /* On the dark form panel the primary action turns white with ink text. */
   .form-dark .btn-primary {
-    background: #fff;
+    background: var(--gold-400);
     color: var(--navy-950);
   }
   .form-dark .btn-primary:hover {
-    background: var(--gold-100);
+    background: var(--gold-300);
   }
   .btn[aria-disabled="true"] {
     cursor: progress;
@@ -907,7 +906,7 @@
 @layer utilities {
   .bg-brand-gradient {
     background:
-      radial-gradient(60% 80% at 100% 0%, rgb(34 81 204 / 0.18), transparent 60%),
+      radial-gradient(60% 80% at 100% 0%, rgb(232 129 47 / 0.16), transparent 60%),
       linear-gradient(160deg, var(--navy-950) 0%, var(--navy-950) 55%, var(--navy-900) 100%);
   }
   /* Light hero ground: an ink hairline grid that fades out away from the
