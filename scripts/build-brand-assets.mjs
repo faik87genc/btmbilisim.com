@@ -46,9 +46,9 @@ await (await trimmed(cutout())).resize({ height: 240 }).webp({ quality: 92 }).to
 await (await trimmed(cutout(toLight))).resize({ height: 240 }).webp({ quality: 92 }).toFile(join(IMG, "logo-full-light.webp"));
 await (await trimmed(cutout())).resize({ width: 600 }).png().toFile(join(IMG, "logo.png"));
 
-// Icon = the hexagon mark on the left (~ first 31% of the width).
+// Icon = the hexagon mark on the left (~ first 37% of the width).
 const markOnly = await sharp(await cutout().png().toBuffer())
-  .extract({ left: 0, top: 0, width: Math.round(width * 0.31), height })
+  .extract({ left: 0, top: 0, width: Math.round(width * 0.37), height })
   .png()
   .toBuffer();
 const mark = await sharp(markOnly).trim().png().toBuffer();
