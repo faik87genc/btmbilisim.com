@@ -20,6 +20,7 @@ import { Button } from "@/components/ensa/Button";
 import { IconTile } from "@/components/ensa/IconTile";
 import { QuoteForm } from "@/components/QuoteForm";
 import { ApproachSteps, TrustSection } from "@/components/btm/HomeSections";
+import { ProductShowcase, ShowcaseAllLink } from "@/components/btm/ProductShowcase";
 import { ProofStrip } from "@/components/ensa/ProofStrip";
 import { WhatsAppIcon } from "@/components/ensa/WhatsAppIcon";
 import { JsonLd } from "@/components/site/Parts";
@@ -290,6 +291,23 @@ export default function Home() {
               Testi başlat <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </span>
           </Link>
+        </Container>
+      </section>
+
+      {/* Product showcase: tabbed, auto-rotating tour of the in-house software products */}
+      <section className="cv-auto bg-white py-20 md:py-28" id="yazilim-urunleri">
+        <Container className="max-w-7xl">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading
+              eyebrow="Yazılım Ürünlerimiz"
+              title="Kendi geliştirdiğimiz yazılımlar, gerçek ekranlarla."
+              description="Finans, güvenlik, üretim ve IT yönetimi için ürünlerimizi tek tek inceleyin; her biri ekibimizin sahada kullandığı çözümlerden doğdu."
+            />
+            <ShowcaseAllLink />
+          </div>
+          <div className="mt-10">
+            <ProductShowcase products={products} />
+          </div>
         </Container>
       </section>
 
