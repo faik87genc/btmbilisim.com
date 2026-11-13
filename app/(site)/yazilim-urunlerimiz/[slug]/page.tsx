@@ -22,6 +22,7 @@ const dedicatedPages = new Set([
   "pentforce",
   "cyberquan",
   "fornet-enterprise",
+  "cek-senet-programi",
 ]);
 
 export function generateStaticParams() {

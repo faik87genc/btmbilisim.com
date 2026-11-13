@@ -319,7 +319,7 @@ export function AiGeneratePanel({
             type="button"
             onClick={run}
             disabled={busy || topic.trim().length < 3}
-            className="flex items-center gap-2 rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
+            className="flex items-center gap-2 rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
           >
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
             {busy ? "Yazılıyor… (1–3 dk)" : "Taslak üret"}

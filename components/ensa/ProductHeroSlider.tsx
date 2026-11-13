@@ -61,7 +61,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
 
   return (
     <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
-      <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-500/15" />
+      <GlobeBands className="pointer-events-none absolute -right-32 -top-24 h-[420px] w-[420px] text-gold-400/15" />
 
       <Container className="relative">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
@@ -88,7 +88,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
                 <button
                   type="button"
                   onClick={() => go(-1)}
-                  className="rounded-full border border-paper-50/15 p-2 text-paper-50 transition-colors hover:border-gold-500/50 hover:text-gold-300"
+                  className="rounded-full border border-paper-50/15 p-2 text-paper-50 transition-colors hover:border-gold-400/50 hover:text-gold-300"
                   aria-label="Önceki"
                 >
                   <ChevronLeft className="h-4 w-4" aria-hidden="true" />
@@ -101,7 +101,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
                       onClick={() => jumpTo(i)}
                       aria-label={`${i + 1}. slayta git`}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
-                        i === index ? "w-7 bg-gold-500" : "w-1.5 bg-paper-50/30 hover:bg-paper-50/50"
+                        i === index ? "w-7 bg-gold-400" : "w-1.5 bg-paper-50/30 hover:bg-paper-50/50"
                       }`}
                     />
                   ))}
@@ -109,7 +109,7 @@ export function ProductHeroSlider({ slides }: { slides: ProductHeroSlide[] }) {
                 <button
                   type="button"
                   onClick={() => go(1)}
-                  className="rounded-full border border-paper-50/15 p-2 text-paper-50 transition-colors hover:border-gold-500/50 hover:text-gold-300"
+                  className="rounded-full border border-paper-50/15 p-2 text-paper-50 transition-colors hover:border-gold-400/50 hover:text-gold-300"
                   aria-label="Sonraki"
                 >
                   <ChevronRight className="h-4 w-4" aria-hidden="true" />

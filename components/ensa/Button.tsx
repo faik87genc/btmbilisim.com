@@ -11,7 +11,7 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 type Variant = "primary" | "inverse" | "navy" | "ghost-light" | "ghost-dark";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-gold-500 text-white hover:bg-gold-700",
+  primary: "bg-gold-400 text-navy-950 hover:bg-gold-300",
   inverse: "bg-white text-navy-950 hover:bg-gold-100",
   navy: "bg-navy-950 text-white hover:bg-navy-800",
   "ghost-light": "border border-slate-400 bg-white text-navy-950 hover:border-gold-600 hover:text-gold-700",

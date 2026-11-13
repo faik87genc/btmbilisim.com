@@ -234,7 +234,7 @@ export function PageForm({
                 onClick={() => setKind(k)}
                 className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
                   kind === k
-                    ? "border-gold-500 bg-gold-500 text-navy-950"
+                    ? "border-gold-400 bg-gold-400 text-navy-950"
                     : "border-navy-950/15 bg-white text-slate-600 hover:border-gold-500/40"
                 }`}
               >
@@ -492,7 +492,7 @@ export function PageForm({
                 onClick={() => setPublishMode(m)}
                 className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
                   publishMode === m
-                    ? "border-gold-500 bg-gold-500 text-navy-950"
+                    ? "border-gold-400 bg-gold-400 text-navy-950"
                     : "border-navy-950/15 bg-white text-slate-600 hover:border-gold-500/40"
                 }`}
               >
@@ -574,7 +574,7 @@ export function PageForm({
           <button
             type="submit"
             disabled={saving}
-            className="rounded-sm bg-gold-500 px-5 py-2.5 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-300 disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-sm bg-gold-400 px-5 py-2.5 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-300 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {saving ? "Kaydediliyor…" : "Kaydet"}
           </button>

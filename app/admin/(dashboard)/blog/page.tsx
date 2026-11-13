@@ -134,7 +134,7 @@ export default async function BlogListPage() {
         <h1 className="font-display text-2xl font-semibold text-ink-900">Blog Yazıları</h1>
         <Link
           href="/admin/blog/new"
-          className="flex items-center gap-2 rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 hover:bg-gold-300"
+          className="flex items-center gap-2 rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950 hover:bg-gold-300"
         >
           <Plus className="h-4 w-4" /> Yeni Yazı
         </Link>

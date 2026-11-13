@@ -60,7 +60,7 @@ export default async function LoginPage({
             ) : null}
             <button
               type="submit"
-              className="w-full rounded-sm bg-gold-500 px-4 py-2.5 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-300"
+              className="w-full rounded-sm bg-gold-400 px-4 py-2.5 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-300"
             >
               Giriş Yap
             </button>

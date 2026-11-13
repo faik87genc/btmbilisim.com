@@ -165,7 +165,7 @@ export function ImportPanel({
                 type="button"
                 onClick={apply}
                 disabled={busy}
-                className="mt-1 flex items-center gap-2 rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
+                className="mt-1 flex items-center gap-2 rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
               >
                 {busy && <Loader2 className="h-4 w-4 animate-spin" />}
                 {busy ? progress || "Aktarılıyor…" : "Forma aktar"}

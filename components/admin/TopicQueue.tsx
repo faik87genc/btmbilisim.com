@@ -116,7 +116,7 @@ export function TopicQueue({
               setEditing(false);
             }}
             disabled={!csv.trim()}
-            className="rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
+            className="rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
           >
             Kuyruğu yükle
           </button>
@@ -147,7 +147,7 @@ export function TopicQueue({
           </p>
           <Link
             href={draftUrl(nextDue, true)}
-            className="mt-3 inline-flex items-center gap-2 rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950"
+            className="mt-3 inline-flex items-center gap-2 rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950"
           >
             <Wand2 className="h-4 w-4" /> Taslağı başlat (AI)
           </Link>

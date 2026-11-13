@@ -178,7 +178,7 @@ export function NewsRewritePanel({
             type="button"
             onClick={run}
             disabled={!canRun}
-            className="flex items-center gap-2 rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
+            className="flex items-center gap-2 rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950 disabled:opacity-50"
           >
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
             {busy ? "Yeniden yazılıyor…" : "Getir & yeniden yaz"}
@@ -224,7 +224,7 @@ export function NewsRewritePanel({
                 <button
                   type="button"
                   onClick={apply}
-                  className="rounded-sm bg-gold-500 px-4 py-2 text-sm font-medium text-navy-950"
+                  className="rounded-sm bg-gold-400 px-4 py-2 text-sm font-medium text-navy-950"
                 >
                   Forma aktar
                 </button>

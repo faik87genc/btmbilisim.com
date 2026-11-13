@@ -49,33 +49,48 @@ export const products: Product[] = [
     slug: "cek-senet-programi",
     code: "BTM / TAHSİLAT",
     name: "Çek Senet Programı",
-    tagline: "Çek, senet ve vade takip yazılımı",
+    tagline: "Çek basım ve Logo entegrasyon yazılımı",
     category: "Finans Yazılımı",
     description:
-      "Elinizdeki ve verdiğiniz çek ile senetleri, yaklaşan vadeleri ve tahsil edilemeyecek kâğıt riskini aynı ekranda izlemenizi sağlayan; vade gelmeden sizi uyaran tahsilat takip yazılımı.",
+      "Kurumsal çek senet programı: Excel listesinden çekleri içe aktarın, kontrol edin ve bankanıza özel tasarımlarla yazdırın. Çoklu firma desteği, Logo ERP entegrasyonu ve tam işlem kaydıyla çek basım sürecini tek ekrandan yönetin.",
     metaDescription:
-      "Çek senet programı: portföydeki her kâğıdın vadesini, ciro geçmişini ve tahsilat riskini tek ekranda izleyin; vade yaklaşınca otomatik uyarı alın.",
+      "Çek senet programı: Excel'den çek aktarma, bankaya özel çek tasarımı, toplu çek yazdırma ve Logo ERP entegrasyonu. Çoklu firma destekli çek basım yazılımı.",
     features: [
-      "Vade takvimi, yaklaşan ödemeler için otomatik uyarılar",
-      "Her kâğıdın ciro ve tahsil hareketlerinin kaydı",
-      "Portföyün risk puanına göre sınıflandırılması",
-      "Banka hesaplarıyla karşılıklı kontrol (mutabakat)",
+      "Excel ile toplu çek aktarımı",
+      "Bankaya özel, sürümlü çek tasarımı",
+      "Logo ERP entegrasyonu ve çoklu firma yönetimi",
+      "Kullanıcı, tarih ve IP bilgisiyle tam işlem kaydı",
     ],
     faq: [
       {
-        question: "Tüm çek ve senetleri tek bir listede görebilir miyiz?",
+        question: "Çek senet programı nedir?",
         answer:
-          "Evet. Vade takvimi, ciro ve tahsil hareketleri ile risk puanına göre ayrılmış portföy aynı ekranda yer alır; ayrı tablolar tutmanız gerekmez.",
+          "Web tabanlı çek senet ve çek basım programıdır. Excel'den çek aktarma, bankaya özel çek yazdırma ve Logo ERP entegrasyonunu tek ekranda toplar.",
       },
       {
-        question: "Vadesi gelen bir kâğıdı gözden kaçırmamak için ne yapıyor?",
+        question: "Çek bilgilerini tek tek mi girmemiz gerekiyor?",
         answer:
-          "Program vade tarihlerini sizin yerinize izler ve tarih yaklaştığında otomatik hatırlatma gönderir. Böylece tahsilatın ya da ödemenin gecikme ihtimali düşer.",
+          "Hayır. Çek numarası, müşteri kodu, tutar ve vade tarihi kolonlarını içeren Excel listesini içe aktarırsınız; liste ekranında kontrol edip basılacak çekleri seçersiniz.",
       },
       {
-        question: "Banka kayıtlarıyla eşleştirme yapılabiliyor mu?",
+        question: "Her bankanın çek formatına uygun yazdırabilir miyiz?",
         answer:
-          "Evet. Mutabakat ekranında programdaki çek ve senet hareketleri banka hesap kayıtlarınızla karşılaştırılır, tutmayan satırlar ayrıca görünür.",
+          "Evet. Her banka ve şube için ayrı çek tasarımı tanımlanır; tasarımlar sürümlü saklanır ve gerektiğinde güncellenir.",
+      },
+      {
+        question: "Birden fazla firmamız var, tek panelden yönetebilir miyiz?",
+        answer:
+          "Evet. Firmalar ayrı tanımlanır, kullanıcılar yalnızca yetkili oldukları firmaların çeklerini görür.",
+      },
+      {
+        question: "Logo ERP ile çalışıyor mu?",
+        answer:
+          "Evet. Müşteri ve çek kayıtları Logo veritabanından okunur, hazırlanan çekler Logo'ya gönderilebilir.",
+      },
+      {
+        question: "Kim ne yaptı takip edilebiliyor mu?",
+        answer:
+          "Evet. Giriş, çek oluşturma, silme, yazdırma ve tasarım değişiklikleri kullanıcı, tarih ve IP bilgisiyle işlem kayıtlarına yazılır.",
       },
     ],
   },

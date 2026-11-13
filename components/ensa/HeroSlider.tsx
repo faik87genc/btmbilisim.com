@@ -215,7 +215,7 @@ export function HeroSlider({
         <>
           {/* Decorative geometric accents */}
           <div className="pointer-events-none absolute -right-16 top-16 hidden h-64 w-64 rounded-full border border-gold-500/20 md:block" />
-          <div className="pointer-events-none absolute right-24 top-40 hidden h-16 w-16 rotate-12 bg-gold-500/25 md:block" />
+          <div className="pointer-events-none absolute right-24 top-40 hidden h-16 w-16 rotate-12 bg-gold-400/25 md:block" />
         </>
       )}
 
@@ -297,7 +297,7 @@ export function HeroSlider({
                 <span
                   className={`block h-1.5 rounded-full transition-all duration-300 ${
                     i === index
-                      ? "w-7 bg-gold-500"
+                      ? "w-7 bg-gold-400"
                       : "w-1.5 bg-paper-50/40 group-hover:bg-paper-50/60"
                   }`}
                 />
