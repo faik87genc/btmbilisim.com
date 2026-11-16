@@ -14,10 +14,12 @@ import { isRetiredSlug } from "@/lib/legacyRedirects";
 // /blog/etiket/<tag>/ archives. Trailing slashes everywhere, like every URL
 // Google has indexed. noindex rows are left out.
 
-// The admin save/delete actions revalidate every public route (including this
-// one) on the spot. This interval only matters for scheduled posts, which go
-// live without a save — keep it short so they reach the sitemap quickly.
-export const revalidate = 86400;
+// Rendered per request. Scheduled posts go live without an admin save, so
+// they relied on time-based ISR — which left production stale for 53+ hours
+// (2026-11-16: Vercel `age` ~193k s; the 2026-11-15 phishing post and
+// /blog/sayfa-4/ were missing). Google fetches this a few times a day, so
+// always-fresh is cheap.
+export const dynamic = "force-dynamic";
 
 const PER_PAGE = 9;
 
